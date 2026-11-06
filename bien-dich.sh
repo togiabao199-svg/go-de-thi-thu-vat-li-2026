@@ -19,7 +19,7 @@ W="$SRC_DIR/bien-dich"
 rm -rf "$W"; mkdir -p "$W/ans"
 NAME=$(basename "$SRC" .tex)
 
-cp "$P"/preamble-eduzy*.tex "$W/"
+cp "$P"/preamble*.tex "$W/"   # preamble-eduzy-v2, preamble-vatli-hinh...
 cp "$P/ex_test.sty" "$W/ex_test.sty"
 
 # esvect: máy biên dịch không có font esvect -> dùng bản thay thế (mũi tên vectơ của amsmath)
