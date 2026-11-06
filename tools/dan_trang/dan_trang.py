@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-DÀN TRANG 40 ĐỀ (bản đề ưu tiên, bản lời giải vẫn ổn).
+DÀN TRANG ĐỀ (bản đề ưu tiên, bản lời giải vẫn ổn). Chép từ dự án 40 đề Toán; dự án Vật lí luôn gọi bằng đường dẫn file .tex.
 
 Các bước (chạy từ gốc repo, XX = số đề 01..40 hoặc đường dẫn file .tex bất kỳ — ví dụ file mã đề sau khi trộn;
 nhiều đề cách nhau dấu cách):
@@ -79,7 +79,7 @@ def duong_dan(xx):
 def chuan_bi(thu_muc):
     os.makedirs(os.path.join(thu_muc, 'ans'), exist_ok=True)
     for f in os.listdir(ROOT):
-        if f.startswith('preamble-eduzy') and f.endswith('.tex'):
+        if f.startswith('preamble') and f.endswith('.tex'):   # preamble-eduzy-v2, preamble-vatli-hinh...
             shutil.copy(os.path.join(ROOT, f), thu_muc)
     shutil.copy(os.path.join(ROOT, 'ex_test.sty'), thu_muc)
     shutil.copy(os.path.join(HERE, 'do_khoi.tex'), thu_muc)
