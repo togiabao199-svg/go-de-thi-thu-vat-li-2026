@@ -339,3 +339,6 @@ trang-*.png
 de/XemThu-*/hinh/
 __pycache__/
 kho/danh-gia/anh-ghep/
+
+## Dự án 40 đề Toán: ảnh hình vẽ Word dựng bằng tools/hinh_word.py (mặc định ghi vào đây)
+kho/ngan-hang/

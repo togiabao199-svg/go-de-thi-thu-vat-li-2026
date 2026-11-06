@@ -9,6 +9,7 @@ Mọi đề sau theo đúng cách trình bày của đề mẫu. Khi viết CLAU
 - Dòng 1 khung tiêu đề viết theo mẫu `ĐỀ THI THỬ THPT SỞ GD\&ĐT CAO BẰNG -- LẦN 1`.
 - Sau khung tiêu đề là khối `\noindent\textbf{Cho biết:} ...` chép từ đề gốc.
 - Bộ macro hình Vật lí (`\VLdienke`, `\VLcoc`, `\VLphich`, `\VLnamcham`, `\VLcham`, `\VLnhan`, `\VLthanhngang`, `\VLthanhdung`, các màu `VLdo`, `VLxanh`, `VLdong`, `VLgo`, `VLla`, các style `VLmui`, `VLgiua`) đang nằm trong file đề mẫu, ngay sau `\input`. Nên chuyển sang file dùng chung `preamble-vatli-hinh.tex`, gọi bằng `\input{preamble-vatli-hinh}`. Tên file bắt đầu bằng "preamble" thì `dong-goi.sh` tự chép vào zip.
+  - Đã làm (06/11/2026, phiên 1a): macro nằm trong `preamble-vatli-hinh.tex` (thêm circuitikz `[european]`), đề gọi `\input{preamble-vatli-hinh}` ngay sau `\input{preamble-eduzy-v2}`; `tools/so_hinh.py` đọc macro từ file này. Quy chuẩn đầy đủ nay ở `CLAUDE.md`.
 
 ## ex_test tự in sẵn, không viết lại
 - Phần I: ex_test tự in dòng "Chọn đáp án X", nên lời giải KHÔNG ghi "Chọn B.".
