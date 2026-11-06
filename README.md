@@ -18,4 +18,5 @@ Dự án của thầy Tô Gia Bảo: gõ lại bằng LaTeX (template Eduzy, gó
 ## Trạng thái
 
 - Giai đoạn 0 (06/11/2026): tạo repo, chép khung và công cụ từ dự án Toán, đưa đề nguồn vào `kho/goc/`.
+- 06/11/2026: đề mẫu chuẩn đã duyệt `de/VatLi2026-CaoBang-SoGD-Lan1/` (thành phẩm trong `thanh-pham/`, điều rút ra ở `tham-khao/bai-hoc-de-mau.md`).
 - Chưa có `CLAUDE.md` cho Vật lí: soạn ở phiên đầu tiên, sau khi thầy chốt quy cách (có đáp án/lời giải hay không, tiêu đề, đặt tên file, cấu trúc đề, quy tắc hình vẽ Vật lí).
