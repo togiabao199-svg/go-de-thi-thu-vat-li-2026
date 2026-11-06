@@ -1,0 +1,804 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Sở GD&ĐT Cao Bằng (mã đề gốc 0202). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Sở GD\&ĐT Cao Bằng -- Lần 1}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+
+%===================== MACRO HÌNH VẬT LÍ =====================
+\definecolor{VLdo}{RGB}{214,72,60}
+\definecolor{VLxanh}{RGB}{60,100,200}
+\definecolor{VLdong}{RGB}{200,128,70}
+\definecolor{VLgo}{RGB}{186,132,84}
+\definecolor{VLla}{RGB}{150,200,150}
+\tikzset{
+	VLmui/.style={-{Stealth[length=4.5pt,width=3.5pt]}},
+	VLgiua/.style={postaction={decorate},decoration={markings,mark=at position #1 with {\arrow{Stealth[length=6.5pt,width=5pt]}}}},
+	VLgiua/.default=0.55
+}
+% cọc nối dây của điện kế: \VLcoc{x}{y}{màu}
+\newcommand{\VLcoc}[3]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\shade[left color=#3!45!black,right color=#3!55!black,middle color=#3!80!white] (-0.17,0) rectangle (0.17,0.28);
+		\shade[left color=#3!55!black,right color=#3!65!black,middle color=#3!60!white] (-0.14,0.28) rectangle (0.14,0.5);
+		\fill[#3!55!black] (0,0.5) ellipse (0.14 and 0.045);
+		\fill[black!85] (0,0.5) ellipse (0.055 and 0.02);
+	\end{scope}}
+% phích cắm có rãnh: \VLphich{x}{y}{màu}
+\newcommand{\VLphich}[3]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\shade[left color=#3!50!black,right color=#3!60!black,middle color=#3!55!white] (-0.12,0) rectangle (0.12,0.62);
+		\draw[#3!45!black,very thin] foreach \y in {0.1,0.18,...,0.5}{(-0.12,\y)--(0.12,\y)};
+		\shade[left color=#3!50!black,right color=#3!60!black,middle color=#3!55!white] (-0.08,0.62) rectangle (0.08,0.85);
+		\fill[#3!45!black] (0,0.85) ellipse (0.08 and 0.03);
+	\end{scope}}
+% điện kế nhìn chính diện, gốc ở góc trái dưới, rộng 4, cao 4: \VLdienke{1: thang số | 2: thang -, +}
+\newcommand{\VLdienke}[1]{%
+	\fill[black!82,rounded corners=2pt] (0,0) rectangle (4,1.35);
+	\fill[black!60] (0.05,1.22) rectangle (3.95,1.35);
+	\fill[VLla,draw=black!60,rounded corners=1pt] (0.28,0.25) rectangle (3.72,1.02);
+	\fill[gray!8,draw=gray!65,rounded corners=1.5pt] (0.08,1.35) rectangle (3.92,4.05);
+	\fill[white,draw=gray!45] (0.28,1.5) rectangle (3.72,3.85);
+	\fill[gray!18] (1.25,1.52) rectangle (2.75,2.05);
+	\draw[gray!40,very thin] foreach \x in {1.3,1.4,...,2.7}{(\x,1.55)--(\x,2.0)};
+	\draw[black!80] (2,1.35) ++(127:1.95) arc[start angle=127,end angle=53,radius=1.95];
+	\foreach \g in {53,55.4667,...,127.1}{\draw[black!80,very thin] (2,1.35)++(\g:1.95)--++(\g:0.12);}
+	\foreach \g in {53,65.3333,...,127.1}{\draw[black!85] (2,1.35)++(\g:1.95)--++(\g:0.22);}
+	\ifnum#1=1
+		\foreach \g/\s in {127/15,114.6667/10,102.3333/5,90/0,77.6667/5,65.3333/10,53/15}{\node[font=\fontsize{5}{5}\selectfont,inner sep=0] at ($(2,1.35)+(\g:2.37)$) {\s};}
+		\node[font=\scriptsize\bfseries] at (2,2.75) {G};
+	\else
+		\node[font=\scriptsize] at ($(2,1.35)+(127:1.7)$) {$-$};
+		\node[font=\scriptsize] at ($(2,1.35)+(53:1.7)$) {$+$};
+	\fi
+	\draw[VLdo,semithick] (2,1.8)--(2,3.42);
+	\fill[black!85] (2,1.8) circle (0.13);
+	\fill[gray!55] (2,1.8) circle (0.045);
+	\draw[white,line width=1.2pt,opacity=0.7] (0.2,3.95)--(0.2,1.6);
+}
+% nam châm thẳng 3D: \VLnamcham{dài}{cao}{màu trái}{màu phải}{chữ trái}{chữ phải}
+\newcommand{\VLnamcham}[6]{%
+	\fill[#3!55!white] (0,#2)--(0.5*#1,#2)--(0.5*#1+0.22,#2+0.13)--(0.22,#2+0.13)--cycle;
+	\fill[#4!55!white] (0.5*#1,#2)--(#1,#2)--(#1+0.22,#2+0.13)--(0.5*#1+0.22,#2+0.13)--cycle;
+	\fill[#4!70!black] (#1,0)--(#1+0.22,0.13)--(#1+0.22,#2+0.13)--(#1,#2)--cycle;
+	\shade[top color=#3!75!white,bottom color=#3!95!black] (0,0) rectangle (0.5*#1,#2);
+	\shade[top color=#4!75!white,bottom color=#4!95!black] (0.5*#1,0) rectangle (#1,#2);
+	\node[white,font=\scriptsize\bfseries] at (0.25*#1,0.5*#2) {#5};
+	\node[white,font=\scriptsize\bfseries] at (0.75*#1,0.5*#2) {#6};
+}
+% lưới chấm (từ trường hướng ra) / lưới dấu nhân (hướng vào)
+\newcommand{\VLcham}[2]{\fill (#1,#2) circle (1.6pt);}
+\newcommand{\VLnhan}[2]{\draw[semithick] (#1,#2)++(-0.06,-0.06)--++(0.12,0.12) (#1,#2)++(-0.06,0.06)--++(0.12,-0.12);}
+% thanh dẫn hình trụ nằm ngang / thẳng đứng (tâm, nửa dài)
+\newcommand{\VLthanhngang}[3]{%
+	\shade[top color=gray!60,bottom color=gray!85,middle color=gray!35,draw=black!85] (#1-#3,#2-0.1) rectangle (#1+#3,#2+0.1);
+	\filldraw[fill=gray!35,draw=black!80] (#1+#3,#2) ellipse (0.04 and 0.1);}
+\newcommand{\VLthanhdung}[3]{%
+	\shade[left color=gray!85,right color=gray!60,middle color=gray!35,draw=black!85] (#1-0.1,#2-#3) rectangle (#1+0.1,#2+#3);
+	\filldraw[fill=gray!35,draw=black!80] (#1,#2+#3) ellipse (0.1 and 0.035);}
+
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT CAO BẰNG -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\noindent\textbf{Cho biết:} $\pi=3{,}14$; $T(\text{K})=t\,(^\circ\text{C})+273$; $R=8{,}31$~J$\cdot$mol$^{-1}\cdot$K$^{-1}$; $N_A=6{,}02\cdot 10^{23}$~hạt/mol.
+
+	\NeedspaceCau{7.8\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-CaoBang-SoGD-Lan1-1]
+
+	\begin{ex}%[VL11-C2-NB]
+		Người ta dùng một loại còi còn gọi là ``còi câm'' để điều khiển, huấn luyện chó nghiệp vụ. Còi câm này phát ra
+		\choice
+		{\True sóng siêu âm}
+		{sóng ánh sáng}
+		{tia X}
+		{tia gamma}
+		\loigiai{
+			Còi câm phát âm có tần số lớn hơn $20\,000$~Hz: tai người không nghe được, chó nghe được. Đó là sóng siêu âm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.7\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Hình vẽ nào sau đây xác định đúng lực từ tác dụng lên đoạn dây dẫn có dòng điện nằm trong vùng không gian có từ trường đều?
+		\begin{center}
+			\begin{tikzpicture}[line join=round,line cap=round,>=stealth,font=\footnotesize]
+				% Hình 1
+				\begin{scope}
+					\foreach \i in {0,...,4}{\foreach \j in {0,...,3}{\VLcham{0.2+0.5*\i}{0.2+0.55*\j}}}
+					\VLthanhngang{1.15}{1.025}{1.1}
+					\draw[VLmui,thick] (0.75,1.025)--(1.55,1.025);
+					\node at (0.95,1.3) {$I$};
+					\draw[VLmui,thick] (1.25,0.925)--(1.25,0.3);
+					\node at (1.48,0.47) {$\vv{F}$};
+					\node at (0.45,0.47) {$\vv{B}$};
+					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 1};
+				\end{scope}
+				% Hình 2
+				\begin{scope}[xshift=3.3cm]
+					\foreach \i in {0,...,4}{\foreach \j in {0,...,3}{\VLnhan{0.2+0.5*\i}{0.2+0.55*\j}}}
+					\VLthanhngang{1.15}{1.025}{1.1}
+					\draw[VLmui,thick] (1.55,1.025)--(0.75,1.025);
+					\node at (0.95,0.75) {$I$};
+					\draw[VLmui,thick] (1.25,1.125)--(1.25,1.75);
+					\node at (1.48,1.58) {$\vv{F}$};
+					\node at (0.45,1.58) {$\vv{B}$};
+					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 2};
+				\end{scope}
+				% Hình 3
+				\begin{scope}[xshift=6.6cm]
+					\foreach \i in {0,1,3,4}{\foreach \j in {0,...,3}{\VLcham{0.2+0.5*\i}{0.2+0.55*\j}}}
+					\VLthanhdung{1.2}{1.0}{1.0}
+					\draw[VLmui,thick] (1.2,0.65)--(1.2,1.35);
+					\node at (1.45,0.85) {$I$};
+					\draw[VLmui,thick] (1.1,1.0)--(0.3,1.0);
+					\node at (0.45,1.25) {$\vv{F}$};
+					\node at (1.95,1.6) {$\vv{B}$};
+					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 3};
+				\end{scope}
+				% Hình 4
+				\begin{scope}[xshift=9.9cm]
+					\foreach \i in {0,1,3,4}{\foreach \j in {0,...,3}{\VLnhan{0.2+0.5*\i}{0.2+0.55*\j}}}
+					\VLthanhdung{1.2}{1.0}{1.0}
+					\draw[VLmui,thick] (1.2,1.35)--(1.2,0.65);
+					\node at (1.45,0.85) {$I$};
+					\draw[VLmui,thick] (1.1,1.0)--(0.3,1.0);
+					\node at (0.45,1.25) {$\vv{F}$};
+					\node at (1.95,1.6) {$\vv{B}$};
+					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 4};
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{Hình 2}
+		{Hình 3}
+		{Hình 4}
+		{\True Hình 1}
+		\loigiai{
+			Chiều lực từ xác định theo quy tắc bàn tay trái. Chỉ Hình 1 vẽ đúng; ở Hình 2, 3, 4 lực từ có chiều ngược với chiều vẽ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Hạt nhân $^{235}_{\phantom{2}92}\text{U}$ có năng lượng liên kết $1784$~MeV. Năng lượng liên kết riêng của hạt nhân này là
+		\choice
+		{$5{,}46$~MeV/nucleon}
+		{$12{,}48$~MeV/nucleon}
+		{\True $7{,}59$~MeV/nucleon}
+		{$19{,}39$~MeV/nucleon}
+		\loigiai{
+			$W_{\text{lkr}}=\dfrac{W_{\text{lk}}}{A}=\dfrac{1784}{235}\approx 7{,}59$~MeV/nucleon.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.7\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Khi nhiệt độ của một lượng khí lí tưởng tăng từ $20\,^\circ\text{C}$ lên đến $40\,^\circ\text{C}$ thì động năng trung bình của phân tử khí lí tưởng tăng lên bao nhiêu lần?
+		\choice
+		{$2{,}5$ lần}
+		{$2$ lần}
+		{\True $1{,}07$ lần}
+		{$1{,}5$ lần}
+		\loigiai{
+			$\overline{E}_{\text{đ}}=\dfrac{3}{2}kT\Rightarrow \dfrac{\overline{E}_{\text{đ}2}}{\overline{E}_{\text{đ}1}}=\dfrac{T_2}{T_1}=\dfrac{313}{293}\approx 1{,}07$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.1\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Hình bên vẽ một bình chứa không khí. Không khí bị giữ lại bởi một giọt dầu trong ống hẹp. Khi bình nóng lên, giọt dầu trong ống dâng lên. Phát biểu nào dưới đây \textbf{không} chính xác?
+		\par\noindent
+		\begin{minipage}[c]{0.64\linewidth}
+		\choice
+		{Các phân tử khí chuyển động ra xa nhau hơn}
+		{Các phân tử khí chuyển động nhanh hơn}
+		{Các phân tử khí va chạm vào bình với một lực lớn hơn}
+		{\True Các phân tử khí trở nên lớn hơn}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.34\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.75,line join=round,line cap=round,font=\footnotesize]
+				\fill[gray!25] (0,-1.33) ellipse (1.05 and 0.11);
+				\shade[inner color=white,outer color=cyan!8!gray!38] (-0.36,1.95)--(-0.36,1.25) arc[start angle=105.5,end angle=434.5,radius=1.3]--(0.36,1.95)--cycle;
+				\foreach \a in {-60,-52,...,36}{\draw[gray!55,very thin] (\a:1.06)--(\a:1.24);}
+				\foreach \a in {196,204,...,252}{\draw[gray!45,very thin] (\a:1.12)--(\a:1.25);}
+				\draw[white,line width=2.2pt,opacity=0.95] (152:1.0) arc[start angle=152,end angle=118,radius=1.0];
+				\draw[white,line width=1.2pt,opacity=0.9] (-35:0.95) arc[start angle=-35,end angle=-55,radius=0.95];
+				\draw[gray!60,thin] (-0.29,1.3)--(-0.29,1.85) (0.29,1.3)--(0.29,1.85);
+				\draw[thick] (-0.36,1.95)--(-0.36,1.25) arc[start angle=105.5,end angle=434.5,radius=1.3]--(0.36,1.95);
+				\draw[thick] (-0.36,1.95)--(-0.43,2.0) (0.36,1.95)--(0.43,2.0);
+				\draw[gray!70] (-0.05,0.95)--(-0.05,1.9) (0.05,0.95)--(0.05,1.9);
+				\shade[top color=black!55,bottom color=black!85,rounded corners=1.5pt] (-0.45,1.85) rectangle (0.45,2.28);
+				\draw[gray!60,very thin] foreach \x in {-0.33,-0.2,...,0.4}{(\x,1.88)--(\x,2.25)};
+				\fill[white] (-0.05,2.28) rectangle (0.05,4.1);
+				\draw (-0.05,2.28)--(-0.05,4.1) (0.05,2.28)--(0.05,4.1);
+				\draw (0,4.1) ellipse (0.05 and 0.016);
+				\fill[black!80,rounded corners=0.6pt] (-0.05,3.0) rectangle (0.05,3.25);
+				\draw[thin] (0.1,3.8)--(0.9,3.8) node[right,inner sep=1.5pt] {Ống thủy tinh};
+				\draw[thin] (0.1,3.12)--(0.9,3.12) node[right,inner sep=1.5pt] {Giọt dầu};
+			\end{tikzpicture}
+		\end{minipage}
+		\loigiai{
+			Khi nóng lên, phân tử khí chuyển động nhanh hơn, va chạm mạnh hơn, khoảng cách giữa chúng tăng; kích thước mỗi phân tử không đổi.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.5\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Từ trường là dạng vật chất tồn tại trong không gian và tác dụng
+		\choice
+		{\True lực từ lên nam châm và dòng điện đặt trong nó}
+		{lực đẩy lên các vật đặt trong nó}
+		{lực hút lên các vật đặt trong nó}
+		{lực điện lên điện tích đứng yên đặt trong nó}
+		\loigiai{
+			Từ trường tác dụng lực từ lên nam châm và dòng điện (điện tích chuyển động) đặt trong nó.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Hạt nhân uranium $^{235}_{\phantom{2}92}\text{U}$ được cấu tạo từ các hạt
+		\choice
+		{neutron}
+		{\True nucleon}
+		{electron}
+		{proton}
+		\loigiai{
+			Hạt nhân được cấu tạo từ các nucleon, gồm proton và neutron.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Nhiệt nóng chảy riêng của nước đá bằng $3{,}34\cdot 10^5$~J/kg. Nhiệt lượng cần thiết để làm nóng chảy hoàn toàn $500$~g nước đá ở $0\,^\circ\text{C}$ là
+		\choice
+		{$1{,}67$~kJ}
+		{$167$~MJ}
+		{\True $167$~kJ}
+		{$167$~J}
+		\loigiai{
+			$Q=\lambda m=3{,}34\cdot 10^5\cdot 0{,}5=1{,}67\cdot 10^5~\text{J}=167$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{15.5\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Hình bên gồm một thanh nam châm (1), cuộn dây (2) có hai đầu nối vào điện kế (3). Khi cho thanh nam châm tịnh tiến lại gần cuộn dây thì thấy kim của điện kế lệch đi. Đây là hiện tượng
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.78,line join=round,line cap=round,font=\footnotesize]
+				% điện kế
+				\begin{scope}[shift={(2.9,1.15)},scale=0.72]
+					\VLdienke{1}
+					\VLcoc{0.75}{0.45}{black}
+					\VLcoc{2.0}{0.45}{VLdo}
+					\VLcoc{3.25}{0.45}{VLdo}
+					\coordinate (Kden) at (0.75,0.95);
+					\coordinate (Kdo) at (2.0,0.95);
+					\coordinate (DK) at (2,4.05);
+				\end{scope}
+				% cuộn dây
+				\begin{scope}[shift={(0.15,0)},scale=0.95]
+					\fill[gray!30] (0.1,-0.05) rectangle (1.75,0.05);
+					\shade[left color=gray!8,right color=gray!30] (0,0) rectangle (1.7,0.28);
+					\shade[top color=VLdong!70!white,bottom color=VLdong!85!black] (0.16,0.28) rectangle (1.54,1.32);
+					\draw[VLdong!55!black,very thin] foreach \y in {0.33,0.38,...,1.3}{(0.16,\y)--(1.54,\y)};
+					\shade[left color=gray!5,right color=gray!25] (0,0.28) rectangle (0.16,1.32);
+					\shade[left color=gray!5,right color=gray!30] (1.54,0.28) rectangle (1.7,1.32);
+					\fill[gray!12] (0,1.32) rectangle (1.7,1.75);
+					\fill[gray!5] (0,1.75)--(1.7,1.75)--(1.95,1.92)--(0.25,1.92)--cycle;
+					\fill[gray!35] (1.7,0)--(1.95,0.17)--(1.95,1.92)--(1.7,1.75)--cycle;
+					\draw[gray!60,thin] (0,0) rectangle (1.7,1.75);
+					\fill[black!80] (0.5,1.83) ellipse (0.11 and 0.05);
+					\fill[black!80] (0.95,1.83) ellipse (0.11 and 0.05);
+					\fill[black!80] (1.4,1.83) ellipse (0.11 and 0.05);
+					\node[font=\fontsize{5}{5}\selectfont] at (0.5,1.5) {0};
+					\node[font=\fontsize{5}{5}\selectfont] at (0.95,1.5) {2};
+					\node[font=\fontsize{5}{5}\selectfont] at (1.4,1.5) {0};
+					\VLphich{0.5}{1.8}{black}
+					\VLphich{0.95}{1.8}{VLdo}
+					\coordinate (Cden) at (0.5,2.65);
+					\coordinate (Cdo) at (0.95,2.65);
+					\coordinate (CD) at (0.9,0);
+				\end{scope}
+				% dây nối
+				\draw[VLxanh,line width=1.1pt] (Cden) .. controls +(-0.2,1.4) and +(-1.3,0.6) .. (1.7,3.2) .. controls +(1.0,-0.4) and +(-0.4,0.3) .. (Kden);
+				\draw[VLdo!90!black,line width=1pt] (Cdo) .. controls +(0.1,0.9) and +(-0.9,-0.3) .. (2.5,2.45) .. controls +(0.6,0.2) and +(-0.3,0.2) .. (Kdo);
+				% nam châm
+				\begin{scope}[shift={(3.4,0.05)}]
+					\VLnamcham{3.4}{0.42}{VLdo}{VLxanh}{N}{S}
+					\coordinate (NC) at (2.2,0);
+				\end{scope}
+				% nhãn
+				\draw[thin] (DK)--++(0,0.3) node[above,inner sep=1pt] {(3)};
+				\draw[thin] (NC)--++(-0.1,-0.35) node[below,inner sep=1pt] {(1)};
+				\draw[thin] (CD)++(0.4,0.08)--++(0.45,-0.35) node[right,inner sep=1pt] {(2)};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{\True cảm ứng điện từ}
+		{siêu dẫn}
+		{nhiễm điện do hưởng ứng}
+		{dẫn điện tự lực}
+		\loigiai{
+			Nam châm dịch chuyển làm từ thông qua cuộn dây biến thiên, trong cuộn dây xuất hiện dòng điện cảm ứng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.6\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Nhiệt kế là thiết bị dùng để đo
+		\choice
+		{chiều dài}
+		{thể tích}
+		{diện tích}
+		{\True nhiệt độ}
+		\loigiai{
+			Nhiệt kế dùng để đo nhiệt độ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{11.6\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một khối khí xác định có thể biến đổi trạng thái để có thể tích và áp suất ứng với các điểm a, b, c, d trong đồ thị $pOV$ như hình bên. Khối khí có nhiệt độ bằng nhau ứng với trạng thái của các điểm
+		\begin{center}
+			\begin{tikzpicture}[x=0.5cm,y=0.36cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[gray!75,densely dashed,thin] (0,0) grid[step=1] (6,6);
+				\draw[VLmui,thick] (0,0)--(7.3,0) node[above left,inner sep=2pt] {$V$};
+				\draw[VLmui,thick] (0,0)--(0,7.1) node[right,inner sep=2pt] {$p$};
+				\fill (0,0) circle (2pt) node[below left,inner sep=2pt] {$O$};
+				\foreach \x/\y/\t in {1/2/a,2/5/b,5/2/c,3/1/d}{
+					\filldraw[fill=white,thick] (\x,\y) circle (2.4pt);
+					\node[above right,inner sep=1.5pt] at (\x,\y) {\t};}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{a, c}
+		{a, d}
+		{\True b, c}
+		{b, d}
+		\loigiai{
+			Khối khí có cùng nhiệt độ khi tích $pV$ bằng nhau. Theo đơn vị ô lưới: $p_aV_a=2$, $p_bV_b=10$, $p_cV_c=10$, $p_dV_d=3$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.8\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Để một tờ giấy ướt ngoài nắng, sau một lúc tờ giấy khô lại. Đây là hiện tượng
+		\choice
+		{\True bay hơi}
+		{nóng chảy}
+		{thăng hoa}
+		{ngưng tụ}
+		\loigiai{
+			Nước trong tờ giấy chuyển từ thể lỏng sang thể hơi ở mặt thoáng: sự bay hơi.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.1\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Cho một khối khí lí tưởng xác định, nếu ta tăng áp suất lên gấp đôi và tăng nhiệt độ tuyệt đối lên gấp bốn thì thể tích khí sẽ
+		\choice
+		{\True tăng lên $2$ lần}
+		{tăng lên $1{,}5$ lần}
+		{giảm xuống $2$ lần}
+		{giảm xuống $1{,}5$ lần}
+		\loigiai{
+			$\dfrac{pV}{T}=\text{hằng số}\Rightarrow \dfrac{V_2}{V_1}=\dfrac{T_2}{T_1}\cdot\dfrac{p_1}{p_2}=4\cdot\dfrac{1}{2}=2$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Khi nước đá đang tan thì nội năng của vật
+		\choice
+		{ban đầu tăng sau đó giảm}
+		{không đổi}
+		{giảm đi}
+		{\True tăng lên}
+		\loigiai{
+			Nước đá nhận nhiệt lượng để nóng chảy nên nội năng tăng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.8\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Từ thông $\Phi$ qua khung dây kín biến đổi theo thời gian được biểu diễn như đồ thị hình bên. Trong khoảng thời gian nào sau đây trong khung có dòng điện cảm ứng với cường độ không đổi?
+		\begin{center}
+			\begin{tikzpicture}[x=0.72cm,y=0.72cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(6.7,0) node[above left,inner sep=2pt] {$t$};
+				\draw[VLmui,thick] (0,0)--(0,2.75) node[right,inner sep=2pt] {$\Phi$};
+				\node[below left,inner sep=2pt] at (0,0) {$O$};
+				\draw[thick] (0,1)--(1.8,1)--(3.1,1.8)--(4.8,1.8)--(5.9,0);
+				\draw[dashed,thin] (1.8,0)--(1.8,1) (3.1,0)--(3.1,1.8) (4.8,0)--(4.8,1.8);
+				\foreach \x/\t in {1.8/t_1,3.1/t_2,4.8/t_3,5.9/t_4}{\node[below,inner sep=2pt] at (\x,0) {$\t$};}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{\True từ $t_1$ đến $t_2$}
+		{từ $0$ đến $t_1$}
+		{từ $0$ đến $t_2$}
+		{từ $t_2$ đến $t_4$}
+		\loigiai{
+			Dòng điện cảm ứng có cường độ không đổi khi $\Phi$ biến thiên đều theo thời gian (đoạn đồ thị là đường xiên thẳng): từ $t_1$ đến $t_2$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{17.5\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Hình bên là mô hình sự lan truyền sóng điện từ hình sin. Trong quá trình lan truyền, tại một điểm, vectơ cường độ điện trường $\vv{E}$ và vectơ cảm ứng từ $\vv{B}$ luôn dao động
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.72,line join=round,line cap=round,font=\footnotesize]
+				\def\ux{0.95}\def\uy{-0.32}\def\bx{-0.85}\def\by{-0.26}\def\AE{1.3}\def\AB{1.1}
+				% mặt phẳng ngang (chứa B)
+				\fill[yellow!30,opacity=0.75,draw=orange!50] ({-0.4*\ux+1.45*\bx},{-0.4*\uy+1.45*\by})--({6.9*\ux+1.45*\bx},{6.9*\uy+1.45*\by})--({6.9*\ux-1.45*\bx},{6.9*\uy-1.45*\by})--({-0.4*\ux-1.45*\bx},{-0.4*\uy-1.45*\by})--cycle;
+				% mặt phẳng đứng (chứa E)
+				\fill[cyan!14,opacity=0.75,draw=cyan!60!blue] ({0.15*\ux},{0.15*\uy+1.9})--({6.5*\ux},{6.5*\uy+1.9})--({6.5*\ux},{6.5*\uy-1.9})--({0.15*\ux},{0.15*\uy-1.9})--cycle;
+				% sóng E
+				\filldraw[fill=VLxanh!22,draw=VLxanh!85,thick] plot[domain=0:6,samples=97] ({\x*\ux},{\x*\uy+\AE*sin(90*\x)});
+				\fill[VLxanh!22,opacity=0.6] plot[domain=0:6,samples=97] ({\x*\ux},{\x*\uy+\AE*sin(90*\x)})--cycle;
+				\foreach \s in {0.25,0.5,...,5.8}{
+					\pgfmathsetmacro{\h}{\AE*sin(90*\s)}
+					\ifdim\h pt>0.2pt\draw[VLxanh!85,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux},{\s*\uy+\h});\fi
+					\ifdim\h pt<-0.2pt\draw[VLxanh!85,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux},{\s*\uy+\h});\fi}
+				% sóng B
+				\filldraw[fill=VLdo!22,draw=VLdo!85,thick,opacity=0.9] plot[domain=0:6,samples=97] ({\x*\ux+\AB*sin(90*\x)*\bx},{\x*\uy+\AB*sin(90*\x)*\by})--cycle;
+				\foreach \s in {0.25,0.5,...,5.8}{
+					\pgfmathsetmacro{\h}{\AB*sin(90*\s)}
+					\ifdim\h pt>0.2pt\draw[VLdo!90,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux+\h*\bx},{\s*\uy+\h*\by});\fi
+					\ifdim\h pt<-0.2pt\draw[VLdo!90,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux+\h*\bx},{\s*\uy+\h*\by});\fi}
+				% các trục
+				\draw[VLmui,thick] (0,0)--({7.4*\ux},{7.4*\uy}) node[below,inner sep=3pt] {Phương truyền sóng};
+				\draw[VLmui,thick] (0,0)--(0,2.35) node[left,inner sep=2pt] {$\vv{E}$};
+				\draw[VLmui,thick] (0,0)--({2.0*\bx},{2.0*\by}) node[left,inner sep=2pt] {$\vv{B}$};
+				% nhãn
+				\draw[thin] ({0.9*\ux},{0.9*\uy+0.95})--(2.5,1.25) node[right,inner sep=1pt] {Điện trường $\vv{E}$};
+				\draw[thin] ({0.8*\ux+0.75*\bx},{0.8*\uy+0.75*\by})--(-0.6,-1.15) node[below,inner sep=1pt] {Từ trường $\vv{B}$};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{cùng pha, vuông góc với nhau và hợp với phương truyền sóng điện từ góc $45^\circ$}
+		{ngược pha, vuông góc với nhau và vuông góc với phương truyền sóng điện từ}
+		{\True cùng pha, vuông góc với nhau và vuông góc với phương truyền sóng điện từ}
+		{ngược pha, vuông góc với nhau và hợp với phương truyền sóng điện từ góc $45^\circ$}
+		\loigiai{
+			Trong sóng điện từ, tại mỗi điểm $\vv{E}$ và $\vv{B}$ dao động cùng pha, vuông góc với nhau và vuông góc với phương truyền sóng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.1\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Máy biến áp lí tưởng có cuộn sơ cấp gồm $N_1$ vòng và được đặt vào một điện áp xoay chiều có giá trị hiệu dụng $U_1=220$~V không đổi, cuộn thứ cấp có $N_2$ vòng thay đổi được nhờ núm vặn để lấy ra các điện áp hiệu dụng $3$~V, $6$~V, $9$~V và $12$~V. Tỉ số $\dfrac{N_1}{N_2}$ lớn nhất là
+		\choice
+		{\True $\dfrac{220}{3}$}
+		{$\dfrac{110}{3}$}
+		{$\dfrac{220}{9}$}
+		{$\dfrac{55}{3}$}
+		\loigiai{
+			$\dfrac{N_1}{N_2}=\dfrac{U_1}{U_2}$ lớn nhất khi $U_2=3$~V: $\dfrac{N_1}{N_2}=\dfrac{220}{3}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Hình bên mô tả một chiếc hộp được dùng để cất trữ chất phóng xạ. Vật liệu nào là thích hợp nhất để làm hộp?
+		\begin{center}
+			\begin{tikzpicture}[scale=0.72,line join=round,line cap=round]
+				\pgfmathsetseed{7}
+				\coordinate (A) at (0,0); \coordinate (B) at (3.4,0); \coordinate (C) at (3.4,1.0); \coordinate (D) at (0,1.0);
+				\coordinate (d) at (1.25,0.95);
+				\fill[gray!12] (D)--(C)--($(C)+(d)$)--($(D)+(d)$)--cycle;
+				\shade[top color=gray!65,bottom color=black!75] (A)--(B)--(C)--(D)--cycle;
+				\shade[left color=gray!35,right color=gray!20] (B)--($(B)+(d)$)--($(C)+(d)$)--(C)--cycle;
+				\foreach \i in {1,...,90}{\pgfmathsetmacro{\xx}{0.05+3.3*rnd}\pgfmathsetmacro{\yy}{0.05+0.68*rnd}\draw[black!88,very thin] (\xx,\yy)--++(0.03+0.08*rnd,0.02*rnd);}
+				\foreach \i in {1,...,70}{\pgfmathsetmacro{\tt}{0.05+0.9*rnd}\pgfmathsetmacro{\ss}{0.05+0.65*rnd}\draw[gray!70,very thin] ($(B)+\tt*(d)+(0,\ss)$)--++(0.05,0.04);}
+				\foreach \i in {1,...,120}{\pgfmathsetmacro{\tt}{0.03+0.94*rnd}\pgfmathsetmacro{\ss}{0.02+0.96*rnd}\fill[gray!55] ($(D)+\ss*(3.4,0)+\tt*(d)$) circle (0.25pt);}
+				\draw[black!75,thin] (0,0.78)--(3.4,0.78)--($(3.4,0.78)+(d)$);
+				\draw[black!80] (A)--(B)--(C)--(D)--cycle (B)--($(B)+(d)$)--($(C)+(d)$)--(C) (D)--($(D)+(d)$)--($(C)+(d)$);
+				\coordinate (O) at ($(D)+(1.7,0)+0.5*(d)$);
+				\fill[black!85] (O) ellipse (0.48 and 0.23);
+				\fill[gray!45] (O) ellipse (0.33 and 0.15);
+				\fill[black!85] (O) ellipse (0.22 and 0.1);
+				\fill[gray!60] ($(O)+(0,0.01)$) ellipse (0.06 and 0.028);
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{\True Chì}
+		{Nhôm}
+		{Thép}
+		{Đồng}
+		\loigiai{
+			Chì có khối lượng riêng lớn, chắn tia phóng xạ tốt nhất trong các vật liệu đã cho.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{23.6\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-CaoBang-SoGD-Lan1-2]
+
+	\begin{ex}%[VL12-C2-TH]
+		Một khối khí lí tưởng đang ở trạng thái (1) có nhiệt độ $780$~K biến đổi trạng thái được mô tả bởi đồ thị áp suất khí $p$ phụ thuộc vào thể tích khí $V$ như hình vẽ. Đường biểu diễn quá trình biến đổi từ trạng thái (1) sang trạng thái (2) là một phần của đường hyperbol.
+		\begin{center}
+			\begin{tikzpicture}[x=0.45cm,y=0.4cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(8.6,0) node[below left,inner sep=2pt,xshift=4pt,yshift=-2pt] {$V$ (lít)};
+				\draw[VLmui,thick] (0,0)--(0,7.8) node[left,inner sep=2pt] {$p$ ($10^5$ Pa)};
+				\draw[dashed,thin] (0,6)--(2,6) (0,2)--(2,2) (2,0)--(2,2) (6,0)--(6,2);
+				\draw[thick,VLgiua=0.55] plot[domain=2:6,samples=60] (\x,{12/\x});
+				\draw[thick,VLgiua=0.5] (6,2)--(2,2);
+				\draw[thick,VLgiua=0.55] (2,2)--(2,6);
+				\fill (2,6) circle (2pt) (6,2) circle (2pt) (2,2) circle (2pt);
+				\node[above,inner sep=2pt] at (2,6) {(1)};
+				\node[right,inner sep=2pt] at (6,2) {(2)};
+				\node[below left,inner sep=1.5pt] at (2,2) {(3)};
+				\node[left,inner sep=2pt] at (0,6) {$6$};
+				\node[left,inner sep=2pt] at (0,2) {$2$};
+				\node[below,inner sep=2pt] at (2,0) {$2$};
+				\node[below,inner sep=2pt] at (6,0) {$V_2$};
+				\node[below left,inner sep=2pt] at (0,0) {$0$};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{8.1\baselineskip}%
+		\choiceTFt
+		{\True Ở trạng thái (2), thể tích của khối khí là $6$ lít}
+		{Quá trình biến đổi từ trạng thái (2) sang trạng thái (3) là quá trình đẳng tích}
+		{Quá trình biến đổi từ trạng thái (1) sang trạng thái (2) là quá trình đẳng áp}
+		{\True Ở trạng thái (1), nhiệt độ của khối khí là $507\,^\circ\text{C}$}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} (1) $\to$ (2) đẳng nhiệt: $p_1V_1=p_2V_2\Rightarrow V_2=\dfrac{6\cdot 2}{2}=6$ lít.
+				\itemch \textbf{Sai.} Từ (2) sang (3) áp suất không đổi: quá trình đẳng áp.
+				\itemch \textbf{Sai.} Từ (1) sang (2) là một phần đường hyperbol: quá trình đẳng nhiệt.
+				\itemch \textbf{Đúng.} $t_1=780-273=507\,^\circ\text{C}$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{11.1\baselineskip}
+	\begin{ex}%[VL12-C4-VD]
+		Người ta sử dụng máy gia tốc để tăng tốc hạt nhân X và bắn vào hạt nhân $^{27}_{13}\text{Al}$ đang đứng yên gây ra phản ứng hạt nhân: $\text{X}+{}^{27}_{13}\text{Al}\to{}^{30}_{15}\text{P}+{}^{1}_{0}\text{n}$, phản ứng thu năng lượng có độ lớn $2{,}64$~MeV. Biết hai hạt sinh ra sau phản ứng có cùng vận tốc.
+		\NeedspaceBang{8.1\baselineskip}%
+		\choiceTFt
+		{Phản ứng hạt nhân trên gọi là phản ứng phân hạch}
+		{\True Hạt nhân X có $2$ proton và $2$ neutron}
+		{Phản ứng hạt nhân tuân theo định luật bảo toàn khối lượng}
+		{\True Động năng của hạt X có giá trị xấp xỉ $3{,}03$~MeV}
+		\loigiai{
+			Bảo toàn số khối và điện tích: $A_\text{X}=30+1-27=4$, $Z_\text{X}=15-13=2$; X là ${}^4_2\text{He}$.
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Đây là phản ứng bắn phá hạt nhân nhẹ, không phải hạt nhân nặng vỡ ra (phân hạch).
+				\itemch \textbf{Đúng.} ${}^4_2\text{He}$ có $2$ proton và $4-2=2$ neutron.
+				\itemch \textbf{Sai.} Phản ứng hạt nhân bảo toàn số khối, điện tích, động lượng và năng lượng toàn phần; khối lượng không bảo toàn.
+				\itemch \textbf{Đúng.} Bảo toàn động lượng: $m_\text{X}v_\text{X}=(m_\text{P}+m_\text{n})v\Rightarrow K_\text{P}+K_\text{n}=\dfrac{m_\text{X}}{m_\text{P}+m_\text{n}}K_\text{X}=\dfrac{4}{31}K_\text{X}$.\\
+				Bảo toàn năng lượng: $K_\text{X}-\dfrac{4}{31}K_\text{X}=2{,}64\Rightarrow K_\text{X}=\dfrac{31\cdot 2{,}64}{27}\approx 3{,}03$~MeV.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[12.6\baselineskip]{21.4\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Cung cấp nhiệt lượng cho một viên nước đá tinh khiết có khối lượng $180$~g ở $0\,^\circ\text{C}$ chuyển từ thể rắn sang thể lỏng và hóa hơi hoàn toàn. Đồ thị biểu diễn nhiệt độ $t$ theo nhiệt lượng cung cấp $Q$ được mô tả như hình vẽ.
+		\begin{center}
+			\begin{tikzpicture}[scale=0.854,x=0.029cm,y=0.026cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[gray!70,dashed,thin] (0,0) grid[xstep=20,ystep=20] (180,140);
+				\draw[VLmui,thick] (0,0)--(198,0) node[below,inner sep=3pt] {$Q$ (kJ)};
+				\draw[VLmui,thick] (0,0)--(0,158) node[left,inner sep=2pt] {$t$ ($^\circ$C)};
+				\draw[very thick] (0,0)--(60,0)--(135,100)--(180,100);
+				\draw[thick] (120,74)--(120,86) (135,94)--(135,106);
+				\draw[thick] (-4,80)--(0,80) node[left,inner sep=2pt] {$80$};
+				\draw[thick] (120,0)--(120,-4) node[below,inner sep=2pt] {$120$};
+				\node[below left,inner sep=2pt] at (0,0) {$0$};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{\True Nhiệt lượng cần cung cấp để nhiệt độ của nước tăng từ $0\,^\circ\text{C}$ đến $100\,^\circ\text{C}$ là $75$~kJ}
+		{Nhiệt lượng cần cung cấp để hóa lỏng hoàn toàn viên nước đá ở $0\,^\circ\text{C}$ là $60$~J}
+		{Nhiệt nóng chảy riêng của nước đá ở $0\,^\circ\text{C}$ là $3{,}33\cdot 10^6$~J/kg}
+		{\True Nhiệt độ sôi của nước là $100\,^\circ\text{C}$}
+		\loigiai{
+			Mỗi ô: $20$~kJ (ngang), $20\,^\circ\text{C}$ (dọc). Nước đá nóng chảy khi $Q$ từ $0$ đến $60$~kJ. Đoạn xiên qua $(60;0)$ và $(120;80)$ nên đạt $100\,^\circ\text{C}$ khi $Q=60+\dfrac{100\cdot 60}{80}=135$~kJ; sau đó nước sôi.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $Q=135-60=75$~kJ.
+				\itemch \textbf{Sai.} $Q=60$~kJ.
+				\itemch \textbf{Sai.} $\lambda=\dfrac{Q}{m}=\dfrac{60\cdot 10^3}{0{,}18}\approx 3{,}33\cdot 10^5$~J/kg.
+				\itemch \textbf{Đúng.} Đoạn nằm ngang cuối ứng với nước sôi ở $100\,^\circ\text{C}$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[19.2\baselineskip]{29.9\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một nhóm học sinh tìm hiểu về hiện tượng cảm ứng điện từ và đã thực hiện các nội dung sau:
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.82,line join=round,line cap=round,font=\footnotesize]
+				% đế gỗ
+				\fill[black!80] (0.35,-0.12) rectangle (0.85,0.05) (5.65,-0.12) rectangle (6.15,0.05);
+				\fill[VLgo!80!white] (0,0.5)--(6.5,0.5)--(6.75,0.75)--(0.25,0.75)--cycle;
+				\shade[top color=VLgo!90!white,bottom color=VLgo!75!black] (0,0) rectangle (6.5,0.5);
+				\fill[VLgo!70!black] (6.5,0)--(6.75,0.25)--(6.75,0.75)--(6.5,0.5)--cycle;
+				\draw[VLgo!55!black,very thin] (0.3,0.32)..controls (1.5,0.38) and (2.8,0.2)..(4,0.3)..controls (5,0.36) and (5.8,0.28)..(6.4,0.33) (0.2,0.15)..controls (1.6,0.1) and (3,0.22)..(4.4,0.14)..controls (5.4,0.1) and (6,0.18)..(6.4,0.12);
+				% điện kế
+				\begin{scope}[shift={(0.15,0.62)},scale=1.02]
+					\VLdienke{2}
+					\VLcoc{0.75}{0.45}{black}
+					\VLcoc{2.0}{0.45}{VLdo}
+					\VLcoc{3.25}{0.45}{VLdo}
+					\node[font=\fontsize{5}{5}\selectfont] at (0.75,0.33) {$-$};
+					\node[font=\fontsize{5}{5}\selectfont] at (3.25,0.33) {G$_1$};
+					\VLphich{0.75}{0.92}{VLxanh}
+					\VLphich{3.25}{0.92}{VLdo}
+					\coordinate (Px) at (0.75,1.77);
+					\coordinate (Pd) at (3.25,1.77);
+				\end{scope}
+				% ống dây
+				\begin{scope}[shift={(4.55,0.75)}]
+					\coordinate (d) at (-0.42,0.38);
+					\fill[black!75,rounded corners=1pt] ($(0,0)+(d)$) rectangle ($(1.75,1.75)+(d)$);
+					\fill[VLdong!80!white] (0.22,1.5)--(1.53,1.5)--($(1.53,1.5)+(d)$)--($(0.22,1.5)+(d)$)--cycle;
+					\fill[VLdong!65!black] (0.22,0.25)--(0.22,1.5)--($(0.22,1.5)+(d)$)--($(0.22,0.25)+(d)$)--cycle;
+					\foreach \t in {0.06,0.12,...,0.95}{\draw[VLdong!45!black,very thin] ($(0.22,1.5)+\t*(d)$)--($(1.53,1.5)+\t*(d)$) ($(0.22,0.25)+\t*(d)$)--($(0.22,1.5)+\t*(d)$);}
+					\shade[left color=black!70,right color=black!85,rounded corners=1pt] (0,0) rectangle (1.75,1.75);
+					\fill[black!55] (0.45,0.42) rectangle (1.3,1.27);
+					\fill[black!75] (0.45,0.42)--(0.6,0.55)--(0.6,1.27)--(0.45,1.27)--cycle;
+					\fill[black!68] (0.45,1.27)--(0.6,1.12)--(1.3,1.12)--(1.3,1.27)--cycle;
+					\fill[green!35!gray!70] (0.55,-0.06) rectangle (1.2,0.04);
+					\coordinate (Ox) at (0.0,0.95);
+					\coordinate (Od) at (0.0,1.3);
+				\end{scope}
+				% dây nối
+				\draw[VLxanh,line width=1pt] (Px) .. controls +(0.35,-0.3) and +(-1.0,0.2) .. (2.4,1.45) .. controls +(1.2,-0.25) and +(-0.5,-0.05) .. (Ox);
+				\draw[VLdo!90!black,line width=1pt] (Pd) .. controls +(0.4,0.25) and +(0.2,0.6) .. (4.35,2.8) .. controls +(-0.15,-0.6) and +(-0.25,0.2) .. (Od);
+				% nam châm
+				\begin{scope}[shift={(0.0,-0.95)}]
+					\VLnamcham{6.4}{0.5}{VLxanh}{VLdo}{N}{S}
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		(1) Chuẩn bị bộ dụng cụ thí nghiệm như hình bên.\\
+		(2) Nhóm học sinh cho rằng: Dòng điện tạo ra từ trường ở không gian xung quanh nó thì từ trường cũng có thể gây ra dòng điện.\\
+		(3) Nhóm học sinh đã tiến hành thí nghiệm nhiều lần để rút ra kết luận về hiện tượng cảm ứng điện từ.\\
+		Trong nội dung (3), ban đầu nhóm học sinh đặt thanh nam châm nằm yên ở gần ống dây, điện kế cho biết không có dòng điện chạy qua ống dây.
+		\NeedspaceBang{10.9\baselineskip}%
+		\choiceTFt
+		{\True Sau đó, nhóm học sinh dịch chuyển thanh nam châm lại gần và ra xa ống dây, điện kế cho biết có dòng điện chạy qua ống dây}
+		{Họ cho rằng từ trường không thể gây ra dòng điện}
+		{Nội dung (2) là bước xác định vấn đề cần nghiên cứu trong phương pháp thực nghiệm}
+		{\True Làm thêm các thí nghiệm, nhóm học sinh rút ra kết luận: từ trường biến thiên có thể gây ra dòng điện}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Nam châm chuyển động so với ống dây, từ thông qua ống dây biến thiên nên xuất hiện dòng điện cảm ứng.
+				\itemch \textbf{Sai.} Nội dung (2) cho thấy họ dự đoán từ trường có thể gây ra dòng điện.
+				\itemch \textbf{Sai.} Nội dung (2) là bước đưa ra dự đoán (giả thuyết), không phải bước xác định vấn đề cần nghiên cứu.
+				\itemch \textbf{Đúng.} Đó là kết luận về hiện tượng cảm ứng điện từ.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{7.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-CaoBang-SoGD-Lan1-3]
+
+	\begin{ex}%[VL12-C1-TH]
+		Cho nhiệt hóa hơi riêng của nước là $2{,}3\cdot 10^6$~J/kg. Nhiệt lượng cần cung cấp để làm bay hơi hoàn toàn $1$~kg nước ở nhiệt độ sôi là bao nhiêu MJ (kết quả làm tròn đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{2{,}3}
+		\loigiai{
+			$Q=Lm=2{,}3\cdot 10^6\cdot 1=2{,}3\cdot 10^6~\text{J}=2{,}3$~MJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{12.1\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một khung dây phẳng có diện tích $25~\text{cm}^2$ gồm $10$ vòng dây, đặt trong từ trường đều, mặt phẳng khung vuông góc với các đường cảm ứng từ. Cảm ứng từ biến thiên theo thời gian như đồ thị hình vẽ. Suất điện động cảm ứng xuất hiện trong khung kể từ $t=0$ đến $t=0{,}4$~s có độ lớn bằng bao nhiêu mV (kết quả làm tròn đến chữ số hàng phần trăm)?
+		\begin{center}
+			\begin{tikzpicture}[x=5cm,y=0.68cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(0.56,0) node[above left,inner sep=2pt] {$t$ (s)};
+				\draw[VLmui,thick] (0,0)--(0,3.15) node[right,inner sep=2pt] {$B$ (mT)};
+				\draw[very thick] (0,2.4)--(0.4,0);
+				\node[left,inner sep=2pt] at (0,2.4) {$2{,}4$};
+				\node[below,inner sep=2pt] at (0.4,0) {$0{,}4$};
+				\node[below left,inner sep=2pt] at (0,0) {$O$};
+			\end{tikzpicture}
+		\end{center}
+		\shortans[oly]{0{,}15}
+		\loigiai{
+			$e=N S\left|\dfrac{\Delta B}{\Delta t}\right|=10\cdot 25\cdot 10^{-4}\cdot\dfrac{2{,}4\cdot 10^{-3}}{0{,}4}=1{,}5\cdot 10^{-4}~\text{V}=0{,}15$~mV.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Một chất phóng xạ có chu kì bán rã là $8$ năm, khối lượng ban đầu $1$~kg. Sau $4$ năm lượng chất phóng xạ còn lại là bao nhiêu kg (kết quả làm tròn đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{0{,}7}
+		\loigiai{
+			$m=m_0\cdot 2^{-\frac{t}{T}}=1\cdot 2^{-\frac{4}{8}}\approx 0{,}707$~kg.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		Cường độ dòng điện xoay chiều qua một đoạn mạch có biểu thức $i=3\cos\omega t$ (A), trong đó $t$ được đo bằng giây (s). Biết rằng trong thời gian $0{,}1$~s thì dòng điện tăng từ giá trị $0$~A đến $3$~A. Tính chu kì của dòng điện xoay chiều qua đoạn mạch ra đơn vị s (kết quả làm tròn đến chữ số hàng phần mười).
+		\par
+		\shortans[oly]{0{,}4}
+		\loigiai{
+			$i$ tăng từ $0$ đến $I_0=3$~A khi pha tăng từ $-\dfrac{\pi}{2}$ đến $0$, mất thời gian $\dfrac{T}{4}$.\\
+			$\dfrac{T}{4}=0{,}1\Rightarrow T=0{,}4$~s.
+		}
+	\end{ex}
+
+	\NeedspaceCau{20.7\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		Hình vẽ bên minh họa một thí nghiệm khảo sát tác dụng của lực từ lên dây dẫn mang dòng điện:
+		\begin{center}
+			\begin{tikzpicture}[scale=0.58,line join=round,line cap=round,font=\footnotesize]
+				% đòn cân
+				\draw[thick] (1.3,2.55)--(1.3,3.3)--(8.0,3.3)--(8.0,2.55);
+				\fill (4.65,3.3)--(4.35,2.75)--(4.95,2.75)--cycle;
+				% đĩa cân
+				\draw[thick] (1.3,2.55)--(0,1.45)--(2.6,1.45)--cycle;
+				\draw[thick] (8.0,2.55)--(6.7,1.45)--(9.3,1.45)--cycle;
+				\fill (0.85,1.45) rectangle (1.35,1.9) (1.45,1.45) rectangle (1.8,1.75);
+				% dây treo, khung dây
+				\draw[thick] (8.0,1.45)--(8.0,0.92);
+				\draw[thick,fill=white] (8.0,0.76) circle (0.16);
+				\fill (8.0,0.76) circle (0.045);
+				% đường sức (vẽ trước khung)
+				\foreach \y in {-0.55,-0.85,-1.15,-1.45}{\draw[VLmui,semithick] (8.6,\y)--(7.4,\y);}
+				\shade[left color=gray!90,right color=gray!65,middle color=gray!45,draw=black] (7.93,0.6) rectangle (8.07,-0.92);
+				\draw[thick,fill=white] (8.0,-1.08) circle (0.16);
+				\draw[thick] (8.0,-1.08)++(-0.113,-0.113)--++(0.226,0.226) (8.0,-1.08)++(-0.113,0.113)--++(0.226,-0.226);
+				% nam châm
+				\draw[thick,fill=gray!10] (6.4,-1.75) rectangle (7.4,-0.3);
+				\draw[thick,fill=gray!10] (8.6,-1.75) rectangle (9.6,-0.3);
+				\node[font=\bfseries] at (6.9,-1.02) {S};
+				\node[font=\bfseries] at (9.1,-1.02) {N};
+			\end{tikzpicture}
+		\end{center}
+		Khung dây dẫn phẳng hình vuông cạnh $a=10$~cm gồm $100$ vòng được treo thẳng đứng dưới một đĩa cân bằng dây cách điện. Cạnh dưới của khung nằm ngang trong từ trường đều của nam châm và vuông góc với đường sức từ, các cạnh còn lại coi như không chịu ảnh hưởng của từ trường. Dòng điện chạy qua cạnh dưới của khung có cường độ $I=0{,}5$~A và có phương vuông góc với mặt phẳng hình vẽ, chiều hướng vào trong. Khoảng cách từ điểm treo hai đĩa cân đến trục quay là bằng nhau. Ban đầu phải đặt quả cân lên đĩa bên trái để đòn cân thăng bằng. Sau đó đảo ngược các cực từ của nam châm để đổi chiều của đường sức từ, để cân thăng bằng trở lại phải thêm vào đĩa cân bên trái một quả cân có khối lượng $150$~g. Cho biết gia tốc trọng trường $g=10~\text{m/s}^2$. Tính độ lớn cảm ứng từ trong lòng của nam châm ra đơn vị tesla (kết quả làm tròn đến chữ số hàng phần trăm).
+		\par
+		\shortans[oly]{0{,}15}
+		\loigiai{
+			Lực từ lên cạnh dưới của khung: $F=NBIa$. Đảo cực nam châm thì lực từ đổi chiều, độ chênh lực tác dụng lên đĩa phải là $2F$:
+			\[mg=2NBIa\Rightarrow B=\dfrac{mg}{2NIa}=\dfrac{0{,}15\cdot 10}{2\cdot 100\cdot 0{,}5\cdot 0{,}1}=0{,}15~\text{T}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.7\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một xilanh một đầu bịt kín chứa khí lí tưởng có áp suất $10^5$~Pa. Ấn pit-tông từ từ để nén khí sao cho nhiệt độ khí trong xilanh không thay đổi. Khi thể tích của khí trong xilanh giảm đi $4$ lần thì áp suất của khí tăng thêm $a\cdot 10^5$~Pa. Giá trị của $a$ là bao nhiêu (kết quả làm tròn đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{3}
+		\loigiai{
+			Đẳng nhiệt: $p_2=\dfrac{p_1V_1}{V_2}=4p_1=4\cdot 10^5$~Pa.\\
+			$\Delta p=p_2-p_1=3\cdot 10^5~\text{Pa}\Rightarrow a=3$.
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-CaoBang-SoGD-Lan1-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-CaoBang-SoGD-Lan1-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-CaoBang-SoGD-Lan1-3}
+\end{document}
