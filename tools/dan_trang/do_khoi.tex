@@ -1,0 +1,28 @@
+%  BỘ ĐO DÀN TRANG (tools/dan_trang/dan_trang.py tự chèn sau \input{preamble-eduzy-v2} trong bản đo; không dùng trong thành phẩm).
+%  Ghi ra .aux/.log: vị trí đầu/cuối mỗi khối câu (môi trường ex), cuối câu dẫn và đầu bảng Đúng/Sai, vị trí tiêu đề phần,
+%  vị trí và kích thước mỗi hình TikZ.
+\usepackage{zref-savepos,zref-abspage}
+\makeatletter
+\zref@addprop{savepos}{abspage}
+\newcounter{EZdo}
+\AddToHook{env/ex/before}{\par\stepcounter{EZdo}\zsavepos{EZa\theEZdo}\typeout{EZKHOI:\theEZdo:\the\inputlineno}}
+\AddToHook{env/ex/end}{\par\zsavepos{EZc\theEZdo}}
+\AddToHook{env/ex/after}{\par\zsavepos{EZb\theEZdo}}
+\newcommand{\EZphan}[1]{\par\zsavepos{EZp#1}}
+\newcommand{\EZbangcuoi}{\par\zsavepos{EZt\theEZdo}}% cuối câu dẫn (+ hình) của câu Đúng/Sai, trước \NeedspaceBang
+\newcommand{\EZbangdau}{\par\zsavepos{EZu\theEZdo}}% đầu bảng Phát biểu, ngay trước \choiceTFt
+\newcount\EZsauhinh
+\gdef\EZhinhdong{}
+\newcommand{\EZhinh}[1]{\ifnum\EZsauhinh=0 \leavevmode\zsavepos{EZh#1}\gdef\EZhinhdong{#1}\fi}
+\tikzset{every picture/.append style={execute at begin picture={\global\advance\EZsauhinh by 1\relax},
+	execute at end picture={%
+	\global\advance\EZsauhinh by -1\relax
+	\ifnum\EZsauhinh=0 \ifx\EZhinhdong\@empty\else
+		\begingroup\pgftransformreset
+		\pgfpointdiff{\pgfpointanchor{current bounding box}{south west}}{\pgfpointanchor{current bounding box}{north east}}%
+		\xdef\EZhinhrong{\the\pgf@x}\xdef\EZhinhcao{\the\pgf@y}\endgroup
+		\typeout{EZHINH:\EZhinhdong:\EZhinhrong:\EZhinhcao}\gdef\EZhinhdong{}%
+	\fi\fi}}}
+\AtBeginDocument{\begingroup\dimen0=1in\advance\dimen0\voffset\advance\dimen0\topmargin\advance\dimen0\headheight\advance\dimen0\headsep
+	\typeout{EZTRANG:\strip@pt\paperheight pt:\strip@pt\dimen0 pt:\strip@pt\textheight pt}\endgroup}
+\makeatother

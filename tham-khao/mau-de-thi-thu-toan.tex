@@ -1,0 +1,717 @@
+%=====================================================================
+% MẪU ĐỀ THI THỬ TỐT NGHIỆP THPT -- EDUZY (đề hoàn chỉnh, đã chốt)
+% - Đầu file: \def\CheDo, \def\tenchuong, \input{preamble-eduzy-v2}
+% - 3 phần, mỗi phần: \setcounter{ex}{0} + \Opensolutionfile{ans}[ans/<tên>-k] ... \Closesolutionfile{ans}
+% - Bảng đáp án để comment cuối file; trộn mã đề bằng tron_de.py
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Thi thử tốt nghiệp THPT năm 2026 -- Lần 1}
+\input{preamble-eduzy-v2}
+\begin{document}
+	\khungtieude{THI THỬ TỐT NGHIỆP THPT NĂM 2026 -- LẦN 1}{Môn Toán}{(Đề thi gồm: 12 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 90 phút (không kể thời gian phát đề).}
+	
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/ThiThu-TN-Lan1-2026-1]
+	
+	\Needspace{18\baselineskip}
+	\begin{ex}
+		Hình vẽ dưới đây là đồ thị của hàm số $y=\dfrac{ax^2+bx+c}{dx+e}$.
+		\begin{center}
+			\begin{tikzpicture}[line join=round,line cap=round,>=stealth,font=\footnotesize]
+				\begin{axis}[x=0.75cm,y=0.7cm,
+					axis lines=middle,axis line style={->},
+					xmin=-2.5,xmax=4.5,ymin=-4.6,ymax=5.6,
+					xtick=\empty,ytick=\empty,
+					xlabel={$x$},ylabel={$y$},
+					xlabel style={anchor=north},ylabel style={anchor=east},
+					clip=false]
+					\addplot[thick,smooth,samples=100,domain=-2.5:0.81]{x+1/(x-1)};
+					\addplot[thick,smooth,samples=100,domain=1.24:4.4]{x+1/(x-1)};
+					\draw[dashed] (1,-4.6)--(1,5.6);
+					\draw[dashed] (-2.5,-2.5)--(4.4,4.4);
+					\draw[dashed] (0,1)--(1,1);
+					\fill (0,0) circle (1.2pt) (1,0) circle (1.2pt) (0,1) circle (1.2pt) (1,1) circle (1.2pt) (0,-1) circle (1.2pt);
+					\node[below right] at (1,0){$1$};
+					\node[left] at (0,1){$1$};
+					\node[right,yshift=4pt] at (0,-1){$-1$};
+					\node[above left] at (0,0){$O$};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		Đường tiệm cận đứng của đồ thị hàm số có phương trình là
+		\choice
+		{\True $x=1$}
+		{$x=-1$}
+		{$y=-1$}
+		{$y=1$}
+		\loigiai{
+			Từ đồ thị, ta thấy khi $x$ dần tới $1$ từ bên phải thì $y\to+\infty$, khi $x$ dần tới $1$ từ bên trái thì $y\to-\infty$.\\
+			Vậy đường tiệm cận đứng của đồ thị hàm số có phương trình là $x=1$.
+		}
+	\end{ex}
+
+	\Needspace{16\baselineskip}
+	\begin{ex}
+		Cho hình hộp $ABCD.A'B'C'D'$ như hình vẽ.
+		\begin{center}
+			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,>=stealth,font=\footnotesize]
+				\definecolor{xamdam}{RGB}{215,215,215}
+				\definecolor{xamnhat}{RGB}{235,235,235}
+				\coordinate (A) at (0,0);
+				\coordinate (D) at (1.88,-0.47);
+				\coordinate (B) at (2.83,0.95);
+				\coordinate (C) at ($(B)+(D)-(A)$);
+				\coordinate (A') at (0,2.83);
+				\coordinate (B') at ($(B)+(A')-(A)$);
+				\coordinate (C') at ($(C)+(A')-(A)$);
+				\coordinate (D') at ($(D)+(A')-(A)$);
+				\fill[xamdam] (A)--(D)--(D')--(A')--cycle;
+				\fill[xamnhat] (D)--(C)--(C')--(D')--cycle;
+				\fill[xamnhat!60] (A')--(D')--(C')--(B')--cycle;
+				\draw[dashed] (A)--(B)--(C) (B)--(B');
+				\draw (A)--(D)--(C)--(C')--(B')--(A')--cycle (A')--(D')--(C') (D)--(D');
+				\foreach \p in {A,B,C,D,A',B',C',D'} \fill (\p) circle (1.2pt);
+				\foreach \p/\pos in {A/below left,B/above right,C/below right,D/below,A'/above left,B'/above right,C'/above right,D'/below right}
+				\node[\pos] at (\p){$\p$};
+			\end{tikzpicture}
+		\end{center}
+		Vectơ tổng $\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{AA'}$ bằng vectơ nào sau đây?
+		\choice
+		{$\overrightarrow{AD'}$}
+		{\True $\overrightarrow{AC'}$}
+		{$\overrightarrow{AC}$}
+		{$\overrightarrow{AB'}$}
+		\loigiai{
+			Theo quy tắc hình hộp, ta có
+			\[
+			\overrightarrow{AB}+\overrightarrow{AD}+\overrightarrow{AA'}=\overrightarrow{AC'}.
+			\]
+			Vậy vectơ tổng cần tìm là $\overrightarrow{AC'}$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Một người thống kê lại thời gian thực hiện các cuộc gọi điện thoại của người đó trong một tuần ở bảng sau.
+		\begin{center}
+			\begin{tabular}{|c|c|c|c|c|c|c|}
+				\hline
+				Thời gian (giây) & $[0;60)$ & $[60;120)$ & $[120;180)$ & $[180;240)$ & $[240;300)$ & $[300;360)$\\
+				\hline
+				Số cuộc gọi & $8$ & $10$ & $7$ & $5$ & $2$ & $1$\\
+				\hline
+			\end{tabular}
+		\end{center}
+		Khoảng tứ phân vị của mẫu số liệu ghép nhóm này gần nhất với số nào?
+		\choice
+		{$100$}
+		{$130$}
+		{$110$}
+		{\True $120$}
+		\loigiai{
+			Cỡ mẫu là $n=8+10+7+5+2+1=33$.\\
+			Ta có $\dfrac{n}{4}=8{,}25$ và $8 < 8{,}25 < 8+10$ nên nhóm chứa tứ phân vị thứ nhất là $[60;120)$. Do đó
+			\[
+			Q_1=60+\dfrac{\dfrac{33}{4}-8}{10}\cdot 60=61{,}5.
+			\]
+			Ta có $\dfrac{3n}{4}=24{,}75$ và $8+10 < 24{,}75 < 8+10+7$ nên nhóm chứa tứ phân vị thứ ba là $[120;180)$. Do đó
+			\[
+			Q_3=120+\dfrac{\dfrac{3\cdot 33}{4}-18}{7}\cdot 60=\dfrac{1245}{7}\approx 177{,}86.
+			\]
+			Khoảng tứ phân vị là $\Delta_Q=Q_3-Q_1\approx 177{,}86-61{,}5=116{,}36$.\\
+			Vậy khoảng tứ phân vị gần nhất với số $120$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Một nguyên hàm $F(x)$ của hàm số $f(x)=3x^2-2x+2025$ là
+		\choice
+		{$F(x)=x^3-x^2$}
+		{\True $F(x)=x^3-x^2+2025x$}
+		{$F(x)=6x-2$}
+		{$F(x)=x^3-x^2+2025$}
+		\loigiai{
+			Ta có
+			\[
+			\displaystyle\int f(x)\,\mathrm{d}x=\displaystyle\int\left(3x^2-2x+2025\right)\mathrm{d}x=x^3-x^2+2025x+C.
+			\]
+			Với $C=0$, ta được một nguyên hàm của $f(x)$ là $F(x)=x^3-x^2+2025x$.\\
+			Vậy chọn $F(x)=x^3-x^2+2025x$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Trong không gian $Oxyz$, cho đường thẳng $d\colon \dfrac{x-1}{2}=\dfrac{y+1}{1}=\dfrac{z}{-3}$. Mặt phẳng $(P)$ đi qua điểm $A(1;0;1)$ và vuông góc với đường thẳng $d$ có phương trình là
+		\choice
+		{\True $2x+y-3z+1=0$}
+		{$2x+y-3z-1=0$}
+		{$x+z+1=0$}
+		{$x+z-1=0$}
+		\loigiai{
+			Đường thẳng $d$ có một vectơ chỉ phương là $\overrightarrow{u}=(2;1;-3)$.\\
+			Vì $(P)\perp d$ nên $(P)$ nhận $\overrightarrow{u}=(2;1;-3)$ làm một vectơ pháp tuyến.\\
+			Mặt phẳng $(P)$ đi qua điểm $A(1;0;1)$ nên có phương trình
+			\[
+			2(x-1)+1(y-0)-3(z-1)=0\Leftrightarrow 2x+y-3z+1=0.
+			\]
+			Vậy $(P)\colon 2x+y-3z+1=0$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Cho hai biến cố $A$, $B$ thỏa mãn $P(A)=0{,}6$, $P(B)=0{,}3$, $P(B\,|\,A)=0{,}2$. Khi đó, $P(A\,|\,B)$ bằng
+		\choice
+		{\True $0{,}4$}
+		{$0{,}25$}
+		{$0{,}5$}
+		{$0{,}45$}
+		\loigiai{
+			Ta có $P(A\cap B)=P(A)\cdot P(B\,|\,A)=0{,}6\cdot 0{,}2=0{,}12$.\\
+			Suy ra
+			\[
+			P(A\,|\,B)=\dfrac{P(A\cap B)}{P(B)}=\dfrac{0{,}12}{0{,}3}=0{,}4.
+			\]
+			Vậy $P(A\,|\,B)=0{,}4$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Nghiệm của phương trình $\cos x=1$ là
+		\choice
+		{$x=k\pi\ (k\in\mathbb{Z})$}
+		{\True $x=k2\pi\ (k\in\mathbb{Z})$}
+		{$x=\dfrac{\pi}{2}+k\pi\ (k\in\mathbb{Z})$}
+		{$x=\dfrac{\pi}{2}+k2\pi\ (k\in\mathbb{Z})$}
+		\loigiai{
+			Ta có $\cos x=1\Leftrightarrow x=k2\pi\ (k\in\mathbb{Z})$.\\
+			Vậy nghiệm của phương trình là $x=k2\pi\ (k\in\mathbb{Z})$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Cho cấp số cộng $(u_n)$ với $u_1=2$, công sai $d=3$. Số hạng $u_4$ của cấp số cộng đã cho bằng
+		\choice
+		{$14$}
+		{$5$}
+		{$54$}
+		{\True $11$}
+		\loigiai{
+			Theo công thức số hạng tổng quát của cấp số cộng, ta có
+			\[
+			u_4=u_1+3d=2+3\cdot 3=11.
+			\]
+			Vậy $u_4=11$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Tập xác định của hàm số $y=\log_2(x-3)$ là
+		\choice
+		{$[3;+\infty)$}
+		{$(-\infty;+\infty)$}
+		{$\mathbb{R}\setminus\{3\}$}
+		{\True $(3;+\infty)$}
+		\loigiai{
+			Hàm số $y=\log_2(x-3)$ xác định khi và chỉ khi $x-3 > 0\Leftrightarrow x > 3$.\\
+			Vậy tập xác định của hàm số là $D=(3;+\infty)$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Cho tứ diện $S.ABC$ có $SA$ vuông góc với mặt phẳng đáy $(ABC)$. Khẳng định nào sau đây là sai?
+		\choice
+		{$SA\perp AC$}
+		{\True $SA\perp SB$}
+		{$SA\perp BC$}
+		{$SA\perp AB$}
+		\loigiai{
+			\begin{center}
+				\begin{tikzpicture}[scale=0.7,line join=round,line cap=round,>=stealth,font=\footnotesize]
+					\coordinate (A) at (0,0);
+					\coordinate (S) at (0,3.55);
+					\coordinate (B) at (1.77,-1.77);
+					\coordinate (C) at (4.72,0);
+					\draw (S)--(A)--(B)--(C)--cycle (S)--(B);
+					\draw[dashed] (A)--(C);
+					\draw ($(A)+(0,0.3)$)--($(A)+(0.3,0.3)$)--($(A)+(0.3,0)$);
+					\draw ($(A)+(0,0.3)$)--($(A)+(0.2,0.1)$)--($(A)+(0.2,-0.2)$);
+					\foreach \p/\pos in {S/above,A/left,B/below,C/right}
+					\fill (\p) circle (1.2pt) node[\pos]{$\p$};
+				\end{tikzpicture}
+			\end{center}
+			Vì $SA\perp(ABC)$ nên $SA$ vuông góc với mọi đường thẳng nằm trong mặt phẳng $(ABC)$.\\
+			Suy ra $SA\perp AB$, $SA\perp AC$ và $SA\perp BC$.\\
+			Tam giác $SAB$ vuông tại $A$ nên $\widehat{ASB} < 90^\circ$, do đó $SA$ không vuông góc với $SB$.\\
+			Vậy khẳng định sai là $SA\perp SB$.
+		}
+	\end{ex}
+
+	\Needspace{16\baselineskip}
+	\begin{ex}
+		Cho khối chóp $S.ABC$ có đáy là tam giác vuông cân tại $A$, $AB=3a$, $SA$ vuông góc với đáy và $SA=2a$ (tham khảo hình vẽ). Thể tích khối chóp đã cho bằng
+		\begin{center}
+			\begin{tikzpicture}[scale=0.7,line join=round,line cap=round,>=stealth,font=\footnotesize]
+				\coordinate (A) at (0,0);
+				\coordinate (S) at (0,3.55);
+				\coordinate (B) at (-1.75,-1.77);
+				\coordinate (C) at (3.55,0);
+				\draw (S)--(B)--(C)--cycle;
+				\draw[dashed] (S)--(A)--(B) (A)--(C);
+				\foreach \p/\pos in {S/above right,A/left,B/below,C/right}
+				\fill (\p) circle (1.2pt) node[\pos]{$\p$};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{\True $3a^3$}
+		{$2a^3$}
+		{$9a^3$}
+		{$6a^3$}
+		\loigiai{
+			Vì tam giác $ABC$ vuông cân tại $A$ nên $AC=AB=3a$.\\
+			Diện tích đáy là $S_{ABC}=\dfrac{1}{2}AB\cdot AC=\dfrac{1}{2}\cdot 3a\cdot 3a=\dfrac{9a^2}{2}$.\\
+			Thể tích khối chóp đã cho là
+			\[
+			V=\dfrac{1}{3}S_{ABC}\cdot SA=\dfrac{1}{3}\cdot\dfrac{9a^2}{2}\cdot 2a=3a^3.
+			\]
+			Vậy thể tích khối chóp đã cho bằng $3a^3$.
+		}
+	\end{ex}
+
+	\begin{ex}
+		Đạo hàm của hàm số $f(x)=\sin x+\cos(3x)$ là
+		\choice
+		{$f'(x)=\cos x+3\sin(3x)$}
+		{\True $f'(x)=\cos x-3\sin(3x)$}
+		{$f'(x)=-\cos x+\sin(3x)$}
+		{$f'(x)=-\cos x+3\sin(3x)$}
+		\loigiai{
+			Ta có $f'(x)=(\sin x)'+\left(\cos(3x)\right)'=\cos x-3\sin(3x)$.\\
+			Vậy $f'(x)=\cos x-3\sin(3x)$.
+		}
+	\end{ex}
+	
+	\Closesolutionfile{ans}
+	
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/ThiThu-TN-Lan1-2026-2]
+	
+	\begin{ex}
+		Cho hàm số $f(x)=\dfrac{4}{x}+x+1$ với $x\neq 0$.
+		\choiceTFt
+		{$f'(-4)=2$}
+		{\True Đạo hàm của hàm số đã cho là $f'(x)=\dfrac{x^2-4}{x^2}$ với $x\neq 0$}
+		{\True Hàm số $f(x)$ có giá trị lớn nhất và giá trị nhỏ nhất trên đoạn $[1;3]$ lần lượt bằng $M$, $m$. Khi đó $M-m=1$}
+		{Tổng các nghiệm của phương trình $f'(x)=0$ bằng $4$}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch {\bf Sai.}\\
+				Tập xác định $D=\mathbb{R}\setminus\{0\}$. Ta có $f'(x)=-\dfrac{4}{x^2}+1=\dfrac{x^2-4}{x^2}$, $\forall x\neq 0$.\\
+				Suy ra $f'(-4)=\dfrac{(-4)^2-4}{(-4)^2}=\dfrac{12}{16}=\dfrac{3}{4}\neq 2$.\\
+				Vậy mệnh đề sai.
+				\itemch {\bf Đúng.}\\
+				Theo ý a), ta có $f'(x)=-\dfrac{4}{x^2}+1=\dfrac{x^2-4}{x^2}$ với $x\neq 0$.\\
+				Vậy mệnh đề đúng.
+				\itemch {\bf Đúng.}\\
+				Hàm số $f(x)$ liên tục trên đoạn $[1;3]$. Trên khoảng $(1;3)$, ta có $f'(x)=0\Leftrightarrow x^2-4=0\Leftrightarrow\left[\begin{aligned}&x=2\in(1;3)\\&x=-2\notin(1;3)\end{aligned}\right.$.\\
+				Ta có $f(1)=6$, $f(2)=5$, $f(3)=\dfrac{16}{3}$.\\
+				Suy ra $M=\max\limits_{[1;3]}f(x)=f(1)=6$ và $m=\min\limits_{[1;3]}f(x)=f(2)=5$.\\
+				Vậy $M-m=1$.
+				\itemch {\bf Sai.}\\
+				Ta có $f'(x)=0\Leftrightarrow\dfrac{x^2-4}{x^2}=0\Leftrightarrow x^2-4=0\Leftrightarrow\left[\begin{aligned}&x=2\\&x=-2\end{aligned}\right.$ (thỏa mãn $x\neq 0$).\\
+				Vậy tổng các nghiệm của phương trình $f'(x)=0$ bằng $2+(-2)=0\neq 4$.
+			\end{itemchoice}
+		}
+	\end{ex}
+	
+	\begin{ex}
+		Tại một phân khu nông nghiệp thông minh, hệ không gian được tham chiếu bởi hệ trục tọa độ $Oxyz$ (đơn vị trên các trục là mét), với mặt đất nằm trên mặt phẳng $(Oxy)$. Một trạm ăng-ten điều khiển được gắn trên đỉnh tháp có tọa độ $A(4;-3;15)$. Một thiết bị bay không người lái (drone) $M$ được lập trình để bay tuần tra ở độ cao ổn định $3$~m so với mặt đất. Để hướng sóng kết nối với tháp luôn đạt mức tối ưu, drone $M$ liên tục di chuyển nhưng luôn giữ khoảng cách thẳng tới ăng-ten $A$ đúng bằng $13$~m. Khu vực có một trạm thu dữ liệu cảm biến được thiết kế ngầm dưới lòng đất tại vị trí $B(16;2;-3)$. Hệ thống truyền kết nối giữa $M$ và $B$ đạt độ ổn định cao nhất khi khoảng cách $MB$ là ngắn nhất.
+		\choiceTFt
+		{\True Mặt phẳng chứa quỹ đạo bay của drone $M$ có phương trình là $z-3=0$}
+		{\True Quỹ đạo di chuyển của drone $M$ là một đường tròn có chu vi bằng $10\pi$~m}
+		{Khoảng cách ngắn nhất từ trạm ngầm $B$ đến mặt phẳng bay của drone là $3$~m}
+		{\True Khi hệ thống truyền kết nối đạt độ ổn định cao nhất, khoảng cách $MB$ bằng $10$~m}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch {\bf Đúng.}\\
+				Drone $M$ bay ở độ cao $3$~m so với mặt đất $(Oxy)$ nên $M$ luôn nằm trên mặt phẳng $(\alpha)\colon z-3=0$.\\
+				Vậy mặt phẳng chứa quỹ đạo bay của drone có phương trình $z-3=0$.
+				\itemch {\bf Đúng.}\\
+				Vì $M\in(\alpha)$ nên $M(x;y;3)$. Theo đề bài, ta có
+				\[
+				AM=13\Leftrightarrow AM^2=13^2\Leftrightarrow (x-4)^2+(y+3)^2+12^2=13^2\Leftrightarrow (x-4)^2+(y+3)^2=25.
+				\]
+				Do đó quỹ đạo của $M$ là đường tròn $(C)$ nằm trong mặt phẳng $(\alpha)$, có tâm $I(4;-3;3)$ và bán kính $R=5$~m.\\
+				Vậy chu vi quỹ đạo là $2\pi R=10\pi$~m.
+				\itemch {\bf Sai.}\\
+				Ta có $d\left(B,(\alpha)\right)=\dfrac{|-3-3|}{\sqrt{0^2+0^2+1^2}}=6$~m.\\
+				Vậy khoảng cách ngắn nhất từ $B$ đến mặt phẳng bay là $6$~m, không phải $3$~m.
+				\itemch {\bf Đúng.}\\
+				\begin{center}
+					\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,>=stealth,font=\footnotesize]
+						\coordinate (P1) at (0,0);
+						\coordinate (P2) at (7,0);
+						\coordinate (P3) at (8.5,1.8);
+						\coordinate (P4) at (1.5,1.8);
+						\coordinate (I) at (5.7,0.9);
+						\coordinate (M) at (4.3,0.9);
+						\coordinate (H) at (2.4,0.9);
+						\coordinate (B) at (2.4,-2.8);
+						\draw (P1)--(P2)--(P3)--(P4)--cycle;
+						\draw (I) ellipse (1.4 and 0.45);
+						\draw (H)--(M)--(I);
+						\draw (B)--(M);
+						\draw[dashed] (B)--($(H)+(0,-0.9)$);
+						\draw ($(H)+(0,-0.9)$)--(H);
+						\draw ($(H)+(0,-0.25)$)--($(H)+(0.25,-0.25)$)--($(H)+(0.25,0)$);
+						\node at (6.9,1.55){$(\alpha)$};
+						\node at (6.5,0.15){$(C)$};
+						\foreach \p/\pos in {I/right,M/above,H/above left,B/below}
+						\fill (\p) circle (1.2pt) node[\pos]{$\p$};
+					\end{tikzpicture}
+				\end{center}
+				Gọi $H$ là hình chiếu vuông góc của $B$ lên mặt phẳng $(\alpha)$. Khi đó $H(16;2;3)$ và $BH=d\left(B,(\alpha)\right)=6$.\\
+				Ta có $IH=\sqrt{12^2+5^2+0^2}=13 > R=5$ nên $H$ nằm ngoài đường tròn $(C)$.\\
+				Với mọi $M\in(C)$, tam giác $MHB$ vuông tại $H$ nên $MB^2=MH^2+BH^2=MH^2+36$.\\
+				Do đó $MB$ ngắn nhất khi và chỉ khi $MH$ ngắn nhất. Vì $MH\geq IH-IM=13-5=8$, dấu bằng xảy ra khi $M$ là giao điểm của đoạn thẳng $IH$ với $(C)$, nên $MH_{\min}=8$.\\
+				Vậy khi kết nối ổn định nhất thì $MB=\sqrt{8^2+6^2}=10$~m.
+			\end{itemchoice}
+		}
+	\end{ex}
+	
+	\begin{ex}
+		Một kho hàng chứa $600$ điện thoại hãng A và $400$ điện thoại hãng B. Tỷ lệ lỗi của điện thoại hãng A là $2\%$, của hãng B là $5\%$. Một nhân viên chọn ngẫu nhiên một chiếc điện thoại để giao cho khách. Trước khi giao, nhân viên đưa điện thoại qua hệ thống AI quét lỗi ngoại quan. Nếu điện thoại thực sự có lỗi, AI sẽ báo ``Có lỗi'' với xác suất $96\%$. Nếu điện thoại không có lỗi, AI vẫn báo ``Có lỗi'' với xác suất $3\%$.
+		\choiceTFt
+		{\True Xác suất nhân viên chọn được điện thoại hãng B là $0{,}4$}
+		{Biết rằng nhân viên đã chọn được điện thoại hãng A, xác suất để chiếc điện thoại đó không bị lỗi là $0{,}8$}
+		{\True Xác suất để nhân viên chọn được một chiếc điện thoại không bị lỗi (trước khi quét AI) là $0{,}968$}
+		{Giả sử hệ thống AI báo ``Có lỗi'', xác suất để chiếc điện thoại đó thực sự bị lỗi lớn hơn $0{,}9$}
+		\loigiai{
+			Gọi $H$ là biến cố ``Chọn được điện thoại hãng A'', khi đó $\overline{H}$ là biến cố ``Chọn được điện thoại hãng B''.\\
+			Gọi $L$ là biến cố ``Điện thoại được chọn bị lỗi'' và $T$ là biến cố ``AI báo có lỗi''.\\
+			Theo đề bài, ta có $P(H)=\dfrac{600}{1000}=0{,}6$, $P(\overline{H})=\dfrac{400}{1000}=0{,}4$, $P(L\,|\,H)=0{,}02$, $P(L\,|\,\overline{H})=0{,}05$, $P(T\,|\,L)=0{,}96$, $P(T\,|\,\overline{L})=0{,}03$.
+			\begin{itemchoice}
+				\itemch {\bf Đúng.}\\
+				Xác suất chọn được điện thoại hãng B là $P(\overline{H})=0{,}4$.
+				\itemch {\bf Sai.}\\
+				Ta có $P(\overline{L}\,|\,H)=1-P(L\,|\,H)=1-0{,}02=0{,}98\neq 0{,}8$.
+				\itemch {\bf Đúng.}\\
+				Theo công thức xác suất toàn phần, ta có
+				\[
+				P(L)=P(H)\cdot P(L\,|\,H)+P(\overline{H})\cdot P(L\,|\,\overline{H})=0{,}6\cdot 0{,}02+0{,}4\cdot 0{,}05=0{,}032.
+				\]
+				Vậy $P(\overline{L})=1-0{,}032=0{,}968$.
+				\itemch {\bf Sai.}\\
+				Theo công thức xác suất toàn phần, ta có
+				\[
+				P(T)=P(L)\cdot P(T\,|\,L)+P(\overline{L})\cdot P(T\,|\,\overline{L})=0{,}032\cdot 0{,}96+0{,}968\cdot 0{,}03=0{,}05976.
+				\]
+				Theo công thức Bayes, ta có
+				\[
+				P(L\,|\,T)=\dfrac{P(L)\cdot P(T\,|\,L)}{P(T)}=\dfrac{0{,}032\cdot 0{,}96}{0{,}05976}=\dfrac{0{,}03072}{0{,}05976}\approx 0{,}514.
+				\]
+				Vậy $P(L\,|\,T)\approx 0{,}514 < 0{,}9$.
+			\end{itemchoice}
+		}
+	\end{ex}
+	
+	\begin{ex}
+		% KIỂM TRA: lời giải gốc Q(30) ≈ 14972 / tính lại Q(30) ≈ 14970,88 ≈ 14971 (kết luận ý c không đổi)
+		Một viên pin xe đạp điện có dung lượng thiết kế $30\,000$~mAh. Tốc độ nạp điện vào pin được mô tả bởi hàm số $I(t)=600\mathrm{e}^{-0{,}01t}$ (mAh/phút) và tốc độ tiêu hao do nhiệt của mạch điện là $n(t)=10\mathrm{e}^{0{,}04t}$ (mAh/phút), với $t\geq 0$ là thời gian tính bằng phút. Gọi $Q(t)$ là lượng điện tích lũy được trong pin tại thời điểm $t$. Biết $Q(t)=\displaystyle\int\left[I(t)-n(t)\right]\mathrm{d}t$ và ban đầu khi pin xe cạn điện thì $Q(0)=0$.
+		\choiceTFt
+		{\True Tốc độ biến thiên của lượng điện tích lũy $Q'(t)$ được xác định bởi công thức $h(t)=600\mathrm{e}^{-0{,}01t}-10\mathrm{e}^{0{,}04t}$}
+		{\True Hàm số $Q(t)$ là một nguyên hàm của hàm số $h(t)$ và có dạng $Q(t)=-60\,000\mathrm{e}^{-0{,}01t}-250\mathrm{e}^{0{,}04t}+C$}
+		{Nếu cắm sạc cho xe liên tục trong $30$ phút thì lượng điện tích lũy được sẽ vượt quá $50\%$ dung lượng thiết kế của pin}
+		{Để đảm bảo tuổi thọ, nhà sản xuất quy định chỉ sạc pin khi tốc độ nạp $I(t)$ lớn hơn ít nhất $2$ lần tốc độ tiêu hao $n(t)$. Theo quy định này, thời gian sạc tối đa là khoảng $60$ phút}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch {\bf Đúng.}\\
+				Tốc độ biến thiên của lượng điện tích lũy là đạo hàm của hàm số $Q(t)$.\\
+				Ta có $Q'(t)=I(t)-n(t)=600\mathrm{e}^{-0{,}01t}-10\mathrm{e}^{0{,}04t}$.\\
+				Vậy $Q'(t)=h(t)=600\mathrm{e}^{-0{,}01t}-10\mathrm{e}^{0{,}04t}$.
+				\itemch {\bf Đúng.}\\
+				Vì $Q'(t)=h(t)$ nên $Q(t)$ là một nguyên hàm của hàm số $h(t)$. Ta có
+				\[
+				\displaystyle\int\left(600\mathrm{e}^{-0{,}01t}-10\mathrm{e}^{0{,}04t}\right)\mathrm{d}t=\dfrac{600}{-0{,}01}\mathrm{e}^{-0{,}01t}-\dfrac{10}{0{,}04}\mathrm{e}^{0{,}04t}+C=-60\,000\mathrm{e}^{-0{,}01t}-250\mathrm{e}^{0{,}04t}+C.
+				\]
+				Vậy $Q(t)=-60\,000\mathrm{e}^{-0{,}01t}-250\mathrm{e}^{0{,}04t}+C$.
+				\itemch {\bf Sai.}\\
+				Theo giả thiết, $Q(0)=0\Leftrightarrow -60\,000-250+C=0\Leftrightarrow C=60\,250$.\\
+				Suy ra $Q(t)=-60\,000\mathrm{e}^{-0{,}01t}-250\mathrm{e}^{0{,}04t}+60\,250$.\\
+				Lượng điện tích lũy được sau $30$ phút sạc liên tục là
+				\[
+				Q(30)=-60\,000\mathrm{e}^{-0{,}3}-250\mathrm{e}^{1{,}2}+60\,250\approx 14\,971~\text{(mAh)}.
+				\]
+				Vì $14\,971 < 50\%\cdot 30\,000=15\,000$ nên lượng điện tích lũy được chưa vượt quá $50\%$ dung lượng thiết kế của pin.
+				\itemch {\bf Sai.}\\
+				Theo quy định, cần có $I(t) > 2n(t)$, tức là
+				\[
+				600\mathrm{e}^{-0{,}01t} > 2\cdot 10\mathrm{e}^{0{,}04t}\Leftrightarrow \mathrm{e}^{0{,}05t} < 30\Leftrightarrow 0{,}05t < \ln 30\Leftrightarrow t < 20\ln 30\approx 68{,}02.
+				\]
+				Vậy thời gian sạc tối đa là khoảng $68$ phút, không phải khoảng $60$ phút.
+			\end{itemchoice}
+		}
+	\end{ex}
+	
+	\Closesolutionfile{ans}
+	
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/ThiThu-TN-Lan1-2026-3]
+	
+	\begin{ex}
+		Một sân vận động có các hàng ghế được sắp xếp theo hình bậc thang. Hàng thứ nhất có $30$ ghế, mỗi hàng phía sau có nhiều hơn hàng liền trước nó $4$ ghế. Sân vận động có tất cả $40$ hàng ghế. Ban tổ chức một buổi hòa nhạc bán vé với mức giá được chia làm hai loại: vé VIP (áp dụng từ hàng $1$ đến hàng $10$) có giá $2\,000\,000$ đồng/vé; vé Thường (áp dụng từ hàng $11$ đến hàng $40$) có giá $800\,000$ đồng/vé. Giả sử ban tổ chức bán hết toàn bộ số vé của buổi hòa nhạc này, tổng số tiền thu được là bao nhiêu triệu đồng?
+		\par
+		\shortans[oly]{4032}
+		\loigiai{
+			Gọi $u_n$ là số ghế ở hàng thứ $n$ ($1\leq n\leq 40$). Theo đề bài, $(u_n)$ là cấp số cộng có số hạng đầu $u_1=30$ và công sai $d=4$, nên
+			\[
+			u_n=u_1+(n-1)d=30+4(n-1)=4n+26.
+			\]
+			Suy ra $u_{10}=66$, $u_{11}=70$, $u_{40}=186$.\\
+			Số ghế VIP (từ hàng $1$ đến hàng $10$) là
+			\[
+			\dfrac{10\left(u_1+u_{10}\right)}{2}=\dfrac{10\cdot(30+66)}{2}=480~\text{(ghế)}.
+			\]
+			Số ghế Thường (từ hàng $11$ đến hàng $40$, gồm $30$ hàng) là
+			\[
+			\dfrac{30\left(u_{11}+u_{40}\right)}{2}=\dfrac{30\cdot(70+186)}{2}=3840~\text{(ghế)}.
+			\]
+			Tổng số tiền thu được là $480\cdot 2+3840\cdot 0{,}8=960+3072=4032$ (triệu đồng).\\
+			Vậy tổng số tiền thu được là $4032$ triệu đồng.
+		}
+	\end{ex}
+	
+	\Needspace{16\baselineskip}
+	\begin{ex}
+		Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình thang vuông tại $A$ và $D$. Biết $AD=3$, $CD=3$ và $AB=6$. Cạnh bên $SA\perp(ABCD)$. Số đo của góc nhị diện $[S,BC,A]$ bằng $60^\circ$. Tính thể tích $V$ của khối chóp $S.ABCD$ (kết quả làm tròn đến hàng đơn vị).
+		\par
+		\shortans[oly]{33}
+		\loigiai{
+			\begin{center}
+				\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,>=stealth,font=\footnotesize]
+					\coordinate (A) at (0,0);
+					\coordinate (B) at (5,0);
+					\coordinate (D) at (-1.4,-1.5);
+					\coordinate (C) at ($(D)+(2.5,0)$);
+					\coordinate (E) at ($(A)!0.5!(B)$);
+					\coordinate (S) at (0,3.6);
+					\draw (S)--(D)--(C)--(B)--cycle (S)--(C);
+					\draw[dashed] (S)--(A)--(B) (A)--(D) (A)--(C) (C)--(E);
+					\draw ($(C)!0.25cm!(S)$)--($(C)!0.25cm!(S)+(C)!0.25cm!(B)-(C)$)--($(C)!0.25cm!(B)$);
+					\foreach \p/\pos in {S/above,A/above left,B/right,C/below,D/below left,E/above}
+					\fill (\p) circle (1.2pt) node[\pos]{$\p$};
+				\end{tikzpicture}
+			\end{center}
+			Gọi $E$ là trung điểm của $AB$, khi đó $AE=EB=3$.\\
+			Tứ giác $ADCE$ có $AE\parallel DC$, $AE=DC=3$ và $\widehat{DAE}=90^\circ$, $AD=DC$ nên $ADCE$ là hình vuông cạnh $3$. Suy ra $CE=3=\dfrac{AB}{2}$, do đó tam giác $ACB$ vuông tại $C$, tức là $BC\perp AC$.\\
+			Mặt khác $BC\perp SA$ (vì $SA\perp(ABCD)$) nên $BC\perp(SAC)$, suy ra $BC\perp SC$.\\
+			Ta có $(SBC)\cap(ABCD)=BC$, $SC\perp BC$, $AC\perp BC$ nên $\widehat{SCA}$ là góc phẳng của góc nhị diện $[S,BC,A]$, suy ra $\widehat{SCA}=60^\circ$.\\
+			Ta có $AC=3\sqrt{2}$ (đường chéo hình vuông $ADCE$). Trong tam giác $SAC$ vuông tại $A$, ta có
+			\[
+			SA=AC\cdot\tan 60^\circ=3\sqrt{2}\cdot\sqrt{3}=3\sqrt{6}.
+			\]
+			Diện tích hình thang $ABCD$ là $S_{ABCD}=\dfrac{(AB+CD)\cdot AD}{2}=\dfrac{(6+3)\cdot 3}{2}=\dfrac{27}{2}$.\\
+			Thể tích khối chóp là
+			\[
+			V=\dfrac{1}{3}S_{ABCD}\cdot SA=\dfrac{1}{3}\cdot\dfrac{27}{2}\cdot 3\sqrt{6}=\dfrac{27\sqrt{6}}{2}\approx 33{,}07.
+			\]
+			Vậy $V\approx 33$.
+		}
+	\end{ex}
+	
+	\begin{ex}
+		Một xe khách đi từ Việt Trì về Hà Nội chở tối đa được $60$ hành khách một chuyến. Nếu một chuyến chở được $m$ hành khách thì giá tiền cho mỗi hành khách được tính là $\left(300-\dfrac{5m}{2}\right)^2$ đồng. Tính số hành khách trên mỗi chuyến xe để nhà xe thu được lợi nhuận mỗi chuyến xe là lớn nhất.
+		\par
+		\shortans[oly]{40}
+		\loigiai{
+			Gọi $x$ là số hành khách trên mỗi chuyến xe ($x\in\mathbb{N}$, $0 < x\leq 60$).\\
+			Số tiền nhà xe thu được mỗi chuyến là
+			\[
+			F(x)=x\left(300-\dfrac{5x}{2}\right)^2~\text{(đồng)}.
+			\]
+			Xét hàm số $F(x)$ trên nửa khoảng $(0;60]$, ta có
+			\[
+			F'(x)=\left(300-\dfrac{5x}{2}\right)^2-5x\left(300-\dfrac{5x}{2}\right)=\left(300-\dfrac{5x}{2}\right)\left(300-\dfrac{15x}{2}\right).
+			\]
+			Với $0 < x\leq 60$ thì $300-\dfrac{5x}{2} > 0$ nên $F'(x)=0\Leftrightarrow 300-\dfrac{15x}{2}=0\Leftrightarrow x=40$.\\
+			Bảng biến thiên:
+			\begin{center}
+				\begin{tikzpicture}
+					\tkzTabInit[lgt=1.5,espcl=3]{$x$/0.8,$F'(x)$/0.8,$F(x)$/2}{$0$,$40$,$60$}
+					\tkzTabLine{,+,z,-,}
+					\tkzTabVar{-/$0$,+/$1\,600\,000$,-/$1\,350\,000$}
+				\end{tikzpicture}
+			\end{center}
+			Từ bảng biến thiên, ta có $\max\limits_{(0;60]}F(x)=F(40)=1\,600\,000$.\\
+			Vậy mỗi chuyến xe chở $40$ hành khách thì nhà xe thu được nhiều tiền nhất.
+		}
+	\end{ex}
+	
+	\begin{ex}
+		Trong không gian với hệ trục tọa độ $Oxyz$ (đơn vị dài: mét), người ta đặt một quả cầu đặc cách âm có tâm $O$ và bán kính bằng $3$~m. Một nguồn phát sóng âm vô hướng được đặt tại điểm $A(0;0;5)$. Một thiết bị thu âm $M$ chuyển động dọc theo một đường ống thẳng có phương trình $\Delta\colon\left\{\begin{aligned}&x=3+4t\\&y=4-3t\\&z=-5\end{aligned}\right.$ $(t\in\mathbb{R})$. Biết rằng thiết bị $M$ sẽ bị mất tín hiệu âm thanh hoàn toàn khi nó di chuyển lọt vào phần không gian bị quả cầu che khuất hoàn toàn tia sóng từ $A$. Tính độ dài đoạn đường ống mà thiết bị $M$ bị mất tín hiệu (không làm tròn các phép tính trung gian và làm tròn kết quả cuối cùng đến hàng phần chục).
+		\par
+		\shortans[oly]{11{,}2}
+		\loigiai{
+			Gọi $(S)$ là quả cầu tâm $O$, bán kính $R=3$. Lấy $M(3+4t;4-3t;-5)\in\Delta$.\\
+			Ta có $OA=5 > 3$ và $OM^2=(3+4t)^2+(4-3t)^2+25=50+25t^2 > 9$ nên $A$, $M$ đều nằm ngoài $(S)$.\\
+			Thiết bị $M$ bị mất tín hiệu khi và chỉ khi đoạn thẳng $AM$ có điểm chung với $(S)$.\\
+			Ta có $\overrightarrow{AO}=(0;0;-5)$, $\overrightarrow{AM}=(3+4t;4-3t;-10)$, $\overrightarrow{MO}=(-3-4t;-4+3t;5)$ nên
+			\[
+			\overrightarrow{AO}\cdot\overrightarrow{AM}=50 > 0,\quad \overrightarrow{MO}\cdot\overrightarrow{MA}=(3+4t)^2+(4-3t)^2+50 > 0.
+			\]
+			Do đó các góc $\widehat{OAM}$, $\widehat{OMA}$ đều nhọn, suy ra hình chiếu vuông góc của $O$ lên đường thẳng $AM$ nằm trên đoạn $AM$. Vì vậy đoạn $AM$ có điểm chung với $(S)$ khi và chỉ khi $d(O,AM)\leq 3$.\\
+			Ta có $\left[\overrightarrow{AO},\overrightarrow{AM}\right]=\left(5(4-3t);-5(3+4t);0\right)$ nên
+			\[
+			\left|\left[\overrightarrow{AO},\overrightarrow{AM}\right]\right|=5\sqrt{(4-3t)^2+(3+4t)^2}=5\sqrt{25+25t^2},\quad \left|\overrightarrow{AM}\right|=\sqrt{25+25t^2+100}.
+			\]
+			Do đó
+			\[
+			\begin{aligned}
+				d(O,AM)\leq 3&\Leftrightarrow\dfrac{5\sqrt{25+25t^2}}{\sqrt{125+25t^2}}\leq 3\Leftrightarrow 25\left(25+25t^2\right)\leq 9\left(125+25t^2\right)\\
+				&\Leftrightarrow t^2\leq\dfrac{5}{4}\Leftrightarrow -\dfrac{\sqrt{5}}{2}\leq t\leq\dfrac{\sqrt{5}}{2}.
+			\end{aligned}
+			\]
+			Đường thẳng $\Delta$ có vectơ chỉ phương $\overrightarrow{u}=(4;-3;0)$ với $\left|\overrightarrow{u}\right|=5$, nên độ dài đoạn đường ống cần tìm là
+			\[
+			L=\left(\dfrac{\sqrt{5}}{2}+\dfrac{\sqrt{5}}{2}\right)\cdot 5=5\sqrt{5}\approx 11{,}18.
+			\]
+			Vậy độ dài đoạn đường ống mà thiết bị bị mất tín hiệu khoảng $11{,}2$~m.
+		}
+	\end{ex}
+	
+	\Needspace{24\baselineskip}
+	\begin{ex}
+		Một quả khế được mô hình hóa cân đối, có chiều dài $18$~cm. Mỗi thiết diện vuông góc với chiều dài quả khế là một hình sao $5$ cánh cân đối: gồm $5$ đỉnh nhọn cách đều quanh tâm và $5$ rãnh xen kẽ, cũng cách đều quanh tâm.
+		\begin{center}
+			% [Ảnh gốc: ảnh chụp quả khế thật, đặt phía trên hình mô hình bên dưới]
+			\begin{tikzpicture}[line cap=round,line join=round,>=stealth,font=\footnotesize]
+				\definecolor{khenhat}{RGB}{240,214,70}
+				\definecolor{khevua}{RGB}{214,172,30}
+				\definecolor{khedam}{RGB}{176,136,14}
+				\definecolor{khecuong}{RGB}{125,90,45}
+				\definecolor{khetim}{RGB}{150,20,90}
+				\pgfmathsetmacro{\a}{3.8}
+				\pgfmathsetmacro{\htren}{1.2}
+				\pgfmathsetmacro{\hduoi}{1.4}
+				\pgfmathsetmacro{\hranhtren}{0.32}
+				\pgfmathsetmacro{\hranhduoi}{0.62}
+				\pgfmathsetmacro{\xcanh}{1.8}
+				\pgfmathsetmacro{\xranh}{-1.6}
+				\tikzset{declare function={
+						canhtren(\x)=\htren*(1-(\x/\a)^2);
+						canhduoi(\x)=-\hduoi*(1-(\x/\a)^2);
+						ranhtren(\x)=\hranhtren*(1-(\x/\a)^2);
+						ranhduoi(\x)=-\hranhduoi*(1-(\x/\a)^2);
+				}}
+				\path (-\a,0) coordinate (Trai) (\a,0) coordinate (Phai)
+				(Trai) ++(-0.43,0.09) coordinate (CuongTren)
+				(Trai) ++(-0.41,-0.1) coordinate (CuongDuoi)
+				(\xcanh,{canhtren(\xcanh)}) coordinate (Canh)
+				(Canh) ++(-0.45,0.8) coordinate (DanCanh)
+				(0,2.08) coordinate (NhanCanh)
+				(\xranh,{ranhduoi(\xranh)}) coordinate (Ranh)
+				(Ranh) ++(0.16,-1.3) coordinate (DanRanh)
+				(0,-2.25) coordinate (NhanRanh);
+				%--- cuống
+				\fill[khecuong] (CuongTren)--(Trai)--(CuongDuoi)--cycle;
+				%--- thân quả: nửa trên sáng, nửa dưới sẫm
+				\shade[top color=khenhat,bottom color=khevua]
+				plot[domain=-\a:\a,samples=100] (\x,{canhtren(\x)})
+				-- plot[domain=\a:-\a,samples=100] (\x,{canhduoi(\x)}) -- cycle;
+				\shade[top color=khevua,bottom color=khedam]
+				plot[domain=-\a:\a,samples=100] (\x,{ranhduoi(\x)})
+				-- plot[domain=\a:-\a,samples=100] (\x,{canhduoi(\x)}) -- cycle;
+				%--- viền, gân sáng và rãnh
+				\draw[khedam!80!black,line width=0.6pt] plot[domain=\a:-\a,samples=100] (\x,{canhduoi(\x)});
+				\draw[white!85!khenhat,line width=0.8pt] plot[domain=-\a:\a,samples=100] (\x,{ranhtren(\x)});
+				\draw[black,line width=0.9pt] plot[domain=-\a:\a,samples=100] (\x,{ranhduoi(\x)});
+				\draw[khetim,line width=0.9pt] plot[domain=-\a:\a,samples=100] (\x,{canhtren(\x)});
+				%--- chú thích
+				\draw[khetim,line width=0.45pt] (Canh)--(DanCanh) (Ranh)--(DanRanh);
+				\node[align=center] at (NhanCanh){Parabol giới hạn cánh của quả khế, tập hợp các điểm $A_n$};
+				\node[align=center] at (NhanRanh){Parabol qua rãnh quả khế, tập hợp các điểm $B_n$};
+				%--- thiết diện hình sao
+				\begin{scope}[shift={(6.6,0)}]
+					\foreach \k in {0,...,4}{
+						\coordinate (P\k) at ({90+72*\k}:1.7);
+					}
+					\draw (P0)--(P2)--(P4)--(P1)--(P3)--cycle;
+					\coordinate (B) at (270:{1.7*cos(72)/cos(36)});
+					\fill (0,0) circle (1.2pt);
+					\fill (P0) circle (1.2pt) node[above]{$A_n$};
+					\fill (B) circle (1.2pt) node[below]{$B_n$};
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		Trên mỗi thiết diện, gọi $A_n$ là một đỉnh nhọn và $B_n$ là rãnh đối diện với đỉnh nhọn đó. Quan sát mặt cắt dọc (chứa trục quả khế) đi qua các điểm $A_n$ và $B_n$: parabol giới hạn cánh quả khế, tức tập hợp các điểm $A_n$, có bề rộng (chiều dài quả khế) gấp $5$ lần chiều cao (khoảng cách từ đỉnh parabol đến trục quả khế); parabol giới hạn rãnh quả khế, tức tập hợp các điểm $B_n$, có bề rộng gấp $8$ lần chiều cao. Hai parabol này cùng đi qua hai đầu quả khế. Tính thể tích quả khế theo mô hình trên. Làm tròn kết quả đến hàng đơn vị của $\mathrm{cm}^3$.
+		\par
+		\shortans[oly]{229}
+		\loigiai{
+			Chọn trục $Ox$ dọc theo trục của quả khế, gốc tọa độ $O$ ở chính giữa quả khế. Khi đó quả khế ứng với đoạn $[-9;9]$ trên trục $Ox$.\\
+			Tại thiết diện có hoành độ $x$, gọi $R(x)$ là khoảng cách từ tâm đến đỉnh nhọn $A_n$ và $r(x)$ là khoảng cách từ tâm đến rãnh $B_n$.\\
+			Parabol tạo bởi các điểm $A_n$ đi qua $(-9;0)$, $(9;0)$ và có chiều cao $\dfrac{18}{5}=3{,}6$ nên
+			\[
+			R(x)=3{,}6\left(1-\dfrac{x^2}{81}\right).
+			\]
+			Parabol tạo bởi các điểm $B_n$ đi qua $(-9;0)$, $(9;0)$ và có chiều cao $\dfrac{18}{8}=2{,}25$ nên
+			\[
+			r(x)=2{,}25\left(1-\dfrac{x^2}{81}\right).
+			\]
+			Thiết diện hình sao $5$ cánh cân đối được chia thành $10$ tam giác bằng nhau, mỗi tam giác có đỉnh là tâm, một đỉnh nhọn và một rãnh liền kề, góc ở tâm bằng $\dfrac{360^\circ}{10}=36^\circ$. Do đó diện tích thiết diện tại hoành độ $x$ là
+			\[
+			S(x)=10\cdot\dfrac{1}{2}R(x)\,r(x)\sin 36^\circ=40{,}5\sin 36^\circ\left(1-\dfrac{x^2}{81}\right)^2.
+			\]
+			Ta có
+			\[
+			\begin{aligned}
+				\int\limits_{-9}^{9}\left(1-\dfrac{x^2}{81}\right)^2\mathrm{d}x&=2\int\limits_{0}^{9}\left(1-\dfrac{2x^2}{81}+\dfrac{x^4}{6561}\right)\mathrm{d}x\\
+				&=2\left(x-\dfrac{2x^3}{243}+\dfrac{x^5}{32\,805}\right)\Bigg|_0^9=2(9-6+1{,}8)=9{,}6.
+			\end{aligned}
+			\]
+			Thể tích quả khế là
+			\[
+			V=\int\limits_{-9}^{9}S(x)\,\mathrm{d}x=40{,}5\cdot 9{,}6\cdot\sin 36^\circ=388{,}8\sin 36^\circ\approx 228{,}53~(\mathrm{cm}^3).
+			\]
+			Vậy thể tích quả khế khoảng $229~\mathrm{cm}^3$.
+		}
+	\end{ex}
+	
+	\begin{ex}
+		% KIỂM TRA: lời giải gốc đặt a=x-8>0 (sai dấu) / sửa thành a=8-x>0; đáp số 0,31 không đổi (đã kiểm bằng liệt kê: 28/91)
+		Trong giờ thực hành, một học sinh được giao một thanh gỗ thẳng dài $15$~cm (có $14$ vạch chia đều trên thanh gỗ). Học sinh đó thực hiện ngẫu nhiên hai nhát cắt tại các vạch chia cm để chia thanh gỗ thành $3$ đoạn. Tính xác suất để $3$ đoạn gỗ thu được có thể ghép thành $3$ cạnh của một tam giác (kết quả làm tròn đến hàng phần trăm).
+		\par
+		\shortans[oly]{0{,}31}
+		\loigiai{
+			Mỗi cách cắt ứng với việc chọn $2$ trong $14$ vạch chia nên $n(\Omega)=\mathrm{C}_{14}^2=91$.\\
+			Gọi $A$ là biến cố ``Ba đoạn gỗ thu được có thể ghép thành ba cạnh của một tam giác''.\\
+			Gọi $x$, $y$, $z$ (cm) là độ dài ba đoạn gỗ, ta có $x$, $y$, $z$ là các số nguyên dương và $x+y+z=15$. Mỗi bộ $(x;y;z)$ như vậy ứng với đúng một cách cắt.\\
+			Ba đoạn gỗ ghép được thành tam giác khi và chỉ khi
+			\[
+			\left\{\begin{aligned}&x+y > z\\&y+z > x\\&z+x > y\end{aligned}\right.\Leftrightarrow\left\{\begin{aligned}&15-z > z\\&15-x > x\\&15-y > y\end{aligned}\right.\Leftrightarrow x,\,y,\,z < 7{,}5.
+			\]
+			Vì $x$, $y$, $z$ là số nguyên dương nên điều kiện trên tương đương với $1\leq x,\,y,\,z\leq 7$.\\
+			Đặt $a=8-x$, $b=8-y$, $c=8-z$, khi đó $a$, $b$, $c$ là các số nguyên dương và
+			\[
+			a+b+c=24-(x+y+z)=9.
+			\]
+			Số nghiệm nguyên dương của phương trình $a+b+c=9$ là $\mathrm{C}_8^2=28$ nên $n(A)=28$.\\
+			Suy ra $P(A)=\dfrac{n(A)}{n(\Omega)}=\dfrac{28}{91}=\dfrac{4}{13}\approx 0{,}31$.\\
+			Vậy xác suất cần tìm xấp xỉ $0{,}31$.
+		}
+	\end{ex}
+	
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+	
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/ThiThu-TN-Lan1-2026-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/ThiThu-TN-Lan1-2026-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/ThiThu-TN-Lan1-2026-3}
+\end{document}

@@ -1,0 +1,879 @@
+%============================================================
+%  PREAMBLE EDUZY v2 - dùng chung cho đề thi, bài học, chuyên đề (gói ex_test)
+%  Khác bản preamble-eduzy.tex ở đầu trang, chân trang: dải nền nâu đồng tràn ngang,
+%  logo + Eduzy.com.vn, ô chữ vàng kem cạnh xiên, chân trang "Trang (số)";
+%  logo Eduzy chìm giữa mọi trang (tắt: \logochimtat, bật lại: \logochimbat).
+%  Cách dùng ở file chính (xem mau-chuan.tex, mau-chuyen-de.tex):
+%      \def\CheDo{loigiai}          % loigiai | dethi | solcolor | color | book
+%      \def\tenchuong{<dòng chữ trên đầu trang>}
+%      \def\thuonghieu{<chữ ở chân trang lẻ>}   % không khai báo thì dùng mặc định
+%      \def\tacgia{<chữ ở chân trang chẵn>}      % không khai báo thì dùng mặc định
+%      \def\khauhieu{<chữ cạnh logo ở đầu trang>}  % tùy chọn, mặc định Eduzy.com.vn
+%      \input{preamble-eduzy-v2}
+%      \TLdapso                      % tài liệu: \TLfull | \TLdapso | \TLan
+%      \begin{document} ... \end{document}
+%  Logo Eduzy vẽ bằng TikZ ngay trong file (\eduzylogo), không cần file ảnh.
+%  Biên dịch: pdfLaTeX (máy có gói vietnam) hoặc XeLaTeX.
+%============================================================
+\documentclass[12pt,a4paper,twoside]{article}%<-- twoside: bat dau trang/chan trang chan-le
+\usepackage{iftex}
+\usepackage{amsmath,amssymb,tikz,mathrsfs,tkz-tab}
+\usepackage{graphicx}
+\usepackage{pgfplots}% đồ thị hàm số
+\pgfplotsset{compat=1.17}
+%\usepackage{mathptmx}
+\usepackage{mathpazo}
+\ifXeTeX% XeLaTeX: font chữ có đủ dấu tiếng Việt, giữ nguyên font toán mathpazo
+	\usepackage[no-math]{fontspec}
+	\setmainfont{TeX Gyre Pagella}
+	\newfontfamily\EZqag{TeX Gyre Adventor}[NFSSFamily=qag,Ligatures=TeX]
+\fi
+\usepackage[many]{tcolorbox}
+\usetikzlibrary{math,through,calc,intersections,angles,quotes,shapes,shapes.geometric,arrows,patterns,matrix,chains,arrows.meta,decorations.shapes,decorations.fractals,decorations.markings,shadows,decorations.pathreplacing}
+\usepackage[top=1.6cm, bottom=1.8cm, left=1.8cm, right=1.8cm]{geometry}% v2: top 1.6cm (bản cũ 1.5cm) để chữ không sát dải đầu trang
+\providecommand{\CheDo}{loigiai}% loigiai | dethi | solcolor | color | book
+\expandafter\usepackage\expandafter[\CheDo]{ex_test}
+% \tenchuong: khai báo ở file chính (trước \input) hoặc \renewcommand sau \input
+%============================================================
+%  [GỘP TỪ eduzy-de.tex] EDUZY - MÀU NÂU ĐỒNG / VÀNG KIM
+%  + ĐẦU TRANG, CHÂN TRANG KIỂU DẢI NGANG (v2), ĐỐI XỨNG TRANG CHẴN / TRANG LẺ.
+%  (không cần file eduzy-de.tex riêng nữa)
+%  Khối này phải đặt SAU \usepackage[...]{ex_test} và SAU \def\tenchuong{...}
+%============================================================
+\usepackage{lastpage}
+\usepackage{needspace}
+%--- DÀN TRANG ĐỀ THI: tách câu (THÊM 05/11/2026; chỉ thêm lệnh mới, KHÔNG đổi hành vi mặc định) ---
+%  Hai công tắc, mặc định tắt (= preamble chạy y như cũ). Bật bằng cách đặt TRƯỚC \input{preamble-eduzy-v2}
+%  trong file đề (tools/dan_trang/dan_trang.py tự ghi khi đặt \NeedspaceCau):
+%    \def\TachCauDS{1}   câu Đúng/Sai được tách: câu dẫn (kèm hình) ở cuối trang, bảng Phát biểu sang trang sau
+%                        (câu dẫn và hình không tách nhau, bảng không tách giữa hai trang)
+%    \def\TachCauLG{1}   bản lời giải (\CheDo khác dethi): phần đề của câu cao hơn 1/3 trang được phép tách
+%  Lệnh dùng trong file đề (giá trị do tools/dan_trang/dan_trang.py đo ở bản dethi):
+%    \NeedspaceCau[<cao câu dẫn + hình>]{<cao cả khối câu>}   ngay trên \begin{ex} (câu đầu phần: trên tiêu đề phần)
+%        công tắc tắt: đúng bằng \Needspace{<cao cả khối câu>} như cũ;
+%        \TachCauDS=1 và có [..] (câu Đúng/Sai được chọn tách): chỉ giữ câu dẫn + hình;
+%        \TachCauLG=1 ở bản lời giải: đòi tối đa 1/3 \textheight.
+%    \NeedspaceBang{<cao bảng Phát biểu>}%   ngay trước \choiceTFt: \TachCauDS=1 thì giữ trọn bảng trên một trang;
+%        công tắc tắt: không làm gì.
+\providecommand{\TachCauDS}{0}
+\providecommand{\TachCauLG}{0}
+\newlength{\EZnsCau}
+\newcommand{\NeedspaceCau}[2][]{%
+	\setlength{\EZnsCau}{#2}%
+	\ifnum\TachCauDS=1 \if\relax\detokenize{#1}\relax\else\setlength{\EZnsCau}{#1}\fi\fi
+	\ifnum\TachCauLG=1 \ifdefstring{\kindOPTN}{dethi}{}{\ifdim\EZnsCau>0.3333\textheight\setlength{\EZnsCau}{0.3333\textheight}\fi}\fi
+	\Needspace{\EZnsCau}}
+\newcommand{\NeedspaceBang}[1]{\ifnum\TachCauDS=1 \Needspace{#1}\fi}
+
+%--- Thang màu: đậm -> nhạt
+\definecolor{gold1}{RGB}{126,96,0}    % nâu đồng đậm  #7E6000
+\definecolor{gold2}{RGB}{192,144,3}   % vàng kim      #C09003
+\definecolor{gold3}{RGB}{255,215,99}  % vàng nhạt     #FFD763
+\definecolor{gold4}{RGB}{255,231,153} % vàng rất nhạt #FFE799
+\definecolor{gold5}{RGB}{255,243,205} % vàng kem      #FFF3CD
+%--- Ghi đè tông xanh/đỏ cũ
+\definecolor{myblue}{RGB}{126,96,0}
+\colorlet{blue}{gold1}
+\colorlet{cyan}{gold2}
+\colorlet{teal}{gold2}
+
+%--- Tên chương mặc định (file đề nên tự khai báo lại)
+\providecommand{\tenchuong}{}
+%--- Chân trang
+\providecommand{\thuonghieu}{TOÁN 12 -- Eduzy.com.vn}
+\providecommand{\tacgia}{Tô Gia Bảo -- 0353703783}
+
+%--- Chữ cạnh logo ở đầu trang
+\providecommand{\khauhieu}{Eduzy.com.vn}
+
+%====================== THÔNG SỐ ĐẦU TRANG, CHÂN TRANG (v2) ======================
+%  Dải nền đậm tràn ngang trang; ô chữ vàng kem có cạnh xiên, kèm 2 vạch xiên chuyển màu.
+%  Đầu trang lẻ : logo + \khauhieu (trái)   | ô chữ \tenchuong (phải)
+%  Chân trang lẻ: ô chữ \thuonghieu (trái)  | Trang (số) (phải)
+%  Trang chẵn soi gương trang lẻ; chân trang chẵn ghi \tacgia.
+%--- Màu: chỉ dùng thang vàng kim Eduzy
+\colorlet{ezNen}{gold1}% dải nền đậm
+\colorlet{ezVach1}{gold3}% vạch xiên sát dải nền (đậm hơn)
+\colorlet{ezVach2}{gold4}% vạch xiên sát ô chữ (nhạt hơn)
+\colorlet{ezO}{gold5}% ô chữ vàng kem
+%--- Kích thước
+\newlength{\EZdai}\setlength{\EZdai}{1.1cm}% chiều cao dải nền
+\newlength{\EZo}\setlength{\EZo}{0.68cm}% chiều cao ô chữ
+\newlength{\EZxien}\setlength{\EZxien}{0.55cm}% độ lệch ngang của cạnh xiên
+\newlength{\EZvach}\setlength{\EZvach}{0.75cm}% bề rộng mỗi vạch xiên
+\newlength{\EZkhe}\setlength{\EZkhe}{0.12cm}% khe trắng giữa vạch và ô chữ
+\newlength{\EZdem}\setlength{\EZdem}{0.4cm}% khoảng đệm từ chữ tới cạnh xiên
+\newlength{\EZle}\setlength{\EZle}{1.8cm}% lề trái/phải của chữ (bằng lề thân bài)
+\newlength{\EZrongmin}\setlength{\EZrongmin}{4.5cm}% ô chữ rộng tối thiểu
+\newlength{\EZrong}% bề rộng chữ trong ô (tính tự động)
+%--- Font
+\newcommand{\EZfontO}{\fontsize{10.5pt}{12pt}\selectfont\bfseries}% chữ trong ô
+\newcommand{\EZfontKH}{\fontfamily{qag}\fontsize{11pt}{12pt}\selectfont\bfseries}% \khauhieu cạnh logo
+\newcommand{\EZfontTrang}{\fontsize{11.5pt}{12pt}\selectfont\bfseries}% chữ "Trang" và số trang
+%--- Đo bề rộng chữ trong ô
+\newcommand{\EZdorong}[1]{%
+	\settowidth{\EZrong}{\EZfontO #1}%
+	\ifdim\EZrong<\EZrongmin\setlength{\EZrong}{\EZrongmin}\fi}
+%--- Logo + chữ trắng \khauhieu (dựng sẵn một lần khi vào \begin{document})
+\newsavebox{\EZlogobox}
+\AtBeginDocument{\sbox{\EZlogobox}{%
+		\raisebox{-0.5\height}{\eduzylogo[1cm]}\hspace{0.15cm}%
+		\raisebox{-0.5\height}{\color{white}\EZfontKH\khauhieu}}}
+%--- Hai vạch xiên + khe trắng. #1: điểm gốc ở mép dưới, #2: hướng (1 sang phải, -1 sang trái),
+%    #3: hướng nghiêng (1 kiểu "/", -1 kiểu "\")
+\newcommand{\EZvachxien}[3]{%
+	\fill[white] (#1) --++({(#3)*\EZxien},\EZo) --++({(#2)*\EZkhe},0) --++({-(#3)*\EZxien},-\EZo) --cycle;
+	\fill[ezVach2] ([xshift=(#2)*\EZkhe]#1) --++({(#3)*\EZxien},\EZo) --++({(#2)*\EZvach},0) --++({-(#3)*\EZxien},-\EZo) --cycle;
+	\fill[ezVach1] ([xshift=(#2)*(\EZkhe+\EZvach)]#1) --++({(#3)*\EZxien},\EZo) --++({(#2)*\EZvach},0) --++({-(#3)*\EZxien},-\EZo) --cycle;
+	\draw[white,line width=0.6pt] ([xshift=(#2)*(\EZkhe+\EZvach)]#1) --++({(#3)*\EZxien},\EZo);
+}
+%--- Chữ trong ô (căn giữa theo chiều cao ô, không lệch vì dấu tiếng Việt)
+\tikzset{ezchu/.style={inner sep=0pt,text=ezNen,text height=0.72em,text depth=0.22em}}
+
+%====================== LOGO CHÌM GIỮA TRANG ======================
+%  Vẽ cùng đầu trang nên nằm dưới chữ của thân bài, có trên mọi trang.
+%  Tắt: \logochimtat (từ trang đó trở đi), bật lại: \logochimbat.
+%  Đổi cỡ, độ đậm: khai báo trước \input, ví dụ \def\EZchimcao{9cm} \def\EZchimdo{0.1}
+\providecommand{\EZchimcao}{10cm}% chiều cao logo chìm
+\providecommand{\EZchimdo}{0.12}% độ đậm (0 = trong suốt, 1 = rõ hẳn)
+\newif\ifEZchim \EZchimtrue
+\newcommand{\logochimtat}{\EZchimfalse}
+\newcommand{\logochimbat}{\EZchimtrue}
+%  Dựng sẵn logo mờ một lần khi vào \begin{document}; transparency group làm mờ cả logo
+%  một lượt nên không lộ vệt ở chỗ các dải màu chồng nhau.
+\newsavebox{\EZchimtho}
+\newsavebox{\EZchimbox}
+\AtBeginDocument{%
+	\sbox{\EZchimtho}{\eduzylogo[\EZchimcao]}%
+	\sbox{\EZchimbox}{\begin{tikzpicture}
+			\begin{scope}[transparency group,opacity=\EZchimdo]
+				\node[inner sep=0pt] {\usebox{\EZchimtho}};
+			\end{scope}
+	\end{tikzpicture}}}
+\newcommand{\EZvechim}{%
+	\ifEZchim
+		\node[inner sep=0pt] at (current page.center) {\usebox{\EZchimbox}};
+	\fi}
+
+%====================== ĐẦU TRANG - TRANG LẺ ======================
+%  (logo bên trái, ô chữ \tenchuong bên phải)
+\newcommand{\myfancyheadOdd}{%
+	\EZdorong{\tenchuong}%
+	\begin{tikzpicture}[remember picture,overlay]
+		\coordinate (T) at (current page.north west);
+		\coordinate (P) at (current page.north east);
+		%--- logo chìm giữa trang
+		\EZvechim
+		%--- dải nền
+		\fill[ezNen] (T) rectangle ([yshift=-\EZdai]P);
+		%--- ô chữ: X là góc dưới bên trái, cạnh trái xiên kiểu "/"
+		\coordinate (X) at ([xshift=-\EZle-\EZrong-\EZdem-\EZxien,yshift=-\EZdai]P);
+		\fill[ezO] (X) --++(\EZxien,\EZo) -- ([yshift=-\EZdai+\EZo]P) -- ([yshift=-\EZdai]P) --cycle;
+		\EZvachxien{X}{-1}{1}
+		\node[ezchu,anchor=east] at ([xshift=-\EZle,yshift=-\EZdai+0.5*\EZo]P) {\EZfontO\tenchuong};
+		%--- logo + tên
+		\node[inner sep=0pt,anchor=west] at ([xshift=\EZle,yshift=-0.5*\EZdai]T) {\usebox{\EZlogobox}};
+	\end{tikzpicture}%
+}
+
+%====================== ĐẦU TRANG - TRANG CHẴN =====================
+%  (soi gương: ô chữ \tenchuong bên trái, logo bên phải)
+\newcommand{\myfancyheadEven}{%
+	\EZdorong{\tenchuong}%
+	\begin{tikzpicture}[remember picture,overlay]
+		\coordinate (T) at (current page.north west);
+		\coordinate (P) at (current page.north east);
+		%--- logo chìm giữa trang
+		\EZvechim
+		%--- dải nền
+		\fill[ezNen] (T) rectangle ([yshift=-\EZdai]P);
+		%--- ô chữ: X là góc dưới bên phải, cạnh phải xiên kiểu "\"
+		\coordinate (X) at ([xshift=\EZle+\EZrong+\EZdem+\EZxien,yshift=-\EZdai]T);
+		\fill[ezO] (X) --++(-\EZxien,\EZo) -- ([yshift=-\EZdai+\EZo]T) -- ([yshift=-\EZdai]T) --cycle;
+		\EZvachxien{X}{1}{-1}
+		\node[ezchu,anchor=west] at ([xshift=\EZle,yshift=-\EZdai+0.5*\EZo]T) {\EZfontO\tenchuong};
+		%--- logo + tên
+		\node[inner sep=0pt,anchor=east] at ([xshift=-\EZle,yshift=-0.5*\EZdai]P) {\usebox{\EZlogobox}};
+	\end{tikzpicture}%
+}
+
+%====================== CHÂN TRANG - TRANG LẺ ======================
+%  (ô chữ \thuonghieu bên trái, "Trang (số)" bên phải)
+\newcommand{\myfancyfootOdd}{%
+	\EZdorong{\thuonghieu}%
+	\begin{tikzpicture}[remember picture,overlay]
+		\coordinate (T) at (current page.south west);
+		\coordinate (P) at (current page.south east);
+		%--- dải nền
+		\fill[ezNen] (T) rectangle ([yshift=\EZdai]P);
+		%--- ô chữ sát mép trên dải: X là góc dưới bên phải, cạnh phải xiên kiểu "/"
+		\coordinate (X) at ([xshift=\EZle+\EZrong+\EZdem,yshift=\EZdai-\EZo]T);
+		\fill[ezO] ([yshift=\EZdai-\EZo]T) -- (X) --++(\EZxien,\EZo) -- ([yshift=\EZdai]T) --cycle;
+		\EZvachxien{X}{1}{1}
+		\node[ezchu,anchor=west] at ([xshift=\EZle,yshift=\EZdai-0.5*\EZo]T) {\EZfontO\thuonghieu};
+		%--- số trang
+		\node[circle,draw=white,line width=0.9pt,text=white,inner sep=0pt,minimum size=0.62cm,anchor=east]
+		(so) at ([xshift=-\EZle,yshift=0.5*\EZdai]P) {\EZfontTrang\thepage};
+		\node[inner sep=0pt,text=white,anchor=base east] (tr) at ([xshift=-0.15cm]so.base west) {\EZfontTrang Trang};
+	\end{tikzpicture}%
+}
+
+%====================== CHÂN TRANG - TRANG CHẴN ====================
+%  (soi gương: "Trang (số)" bên trái, ô chữ \tacgia bên phải)
+\newcommand{\myfancyfootEven}{%
+	\EZdorong{\tacgia}%
+	\begin{tikzpicture}[remember picture,overlay]
+		\coordinate (T) at (current page.south west);
+		\coordinate (P) at (current page.south east);
+		%--- dải nền
+		\fill[ezNen] (T) rectangle ([yshift=\EZdai]P);
+		%--- ô chữ sát mép trên dải: X là góc dưới bên trái, cạnh trái xiên kiểu "\"
+		\coordinate (X) at ([xshift=-\EZle-\EZrong-\EZdem,yshift=\EZdai-\EZo]P);
+		\fill[ezO] ([yshift=\EZdai-\EZo]P) -- (X) --++(-\EZxien,\EZo) -- ([yshift=\EZdai]P) --cycle;
+		\EZvachxien{X}{-1}{-1}
+		\node[ezchu,anchor=east] at ([xshift=-\EZle,yshift=\EZdai-0.5*\EZo]P) {\EZfontO\tacgia};
+		%--- số trang
+		%    (vòng tròn ẩn so0 nằm giữa dải để lấy đường chân chữ, giống trang lẻ)
+		\node[circle,inner sep=0pt,minimum size=0.62cm] (so0) at ([yshift=0.5*\EZdai]T) {\EZfontTrang\phantom{\thepage}};
+		\node[inner sep=0pt,text=white,anchor=base west] (tr) at ($(so0.base -| T)+(\EZle,0)$) {\EZfontTrang Trang};
+		\node[circle,draw=white,line width=0.9pt,text=white,inner sep=0pt,minimum size=0.62cm,anchor=base west]
+		(so) at ([xshift=0.15cm]tr.base east) {\EZfontTrang\thepage};
+	\end{tikzpicture}%
+}
+
+%--- Giữ tương thích với các file cũ đang gọi \myfancyhead, \myfancyfoot
+\newcommand{\myfancyhead}{\myfancyheadOdd}
+\newcommand{\myfancyfoot}{\myfancyfootOdd}
+
+%======================= GẮN VÀO TRANG =============================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LO]{\myfancyheadOdd}
+\fancyhead[RE]{\myfancyheadEven}
+\fancyfoot[LO]{\myfancyfootOdd}
+\fancyfoot[RE]{\myfancyfootEven}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{%
+	\fancyhf{}
+	\fancyhead[LO]{\myfancyheadOdd}
+	\fancyhead[RE]{\myfancyheadEven}
+	\fancyfoot[LO]{\myfancyfootOdd}
+	\fancyfoot[RE]{\myfancyfootEven}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+%=================== HẾT PHẦN GỘP TỪ eduzy-de.tex ===================
+\newcommand{\indam}[1]{
+	{\fontsize{12pt}{9pt}\sffamily \selectfont\bfseries\color{gold1} #1}
+}
+\newcommand{\ind}[1]{
+	{\fontsize{14pt}{9pt}\fontfamily{qag} \selectfont\bfseries\color{gold1} #1}
+}
+\renewcommand{\FalseEX}{\stepcounter{dapan}\textbf{\selectfont\color{gold1}\Alph{dapan}.}\ignorespaces}
+\renewtheorem{ex}{\color{gold1}Câu}
+\renewcommand{\baselinestretch}{1.1}
+\newcommand{\hoac}[1]{
+	\left[\begin{aligned}#1\end{aligned}\right.}
+\newcommand{\heva}[1]{
+	\left\{\begin{aligned}#1\end{aligned}\right.}
+\usepackage{esvect}
+\def\vec{\vv}
+\def\vt{\vv}
+\def\overrightarrow{\vv}
+%====================== LOGO EDUZY VẼ BẰNG TIKZ ======================
+%  Đường viền dò từ logo gốc; dải màu vàng kim đo trực tiếp trên ảnh gốc
+%  (nghiêng 21 độ, tô bằng 80 dải hẹp nên hiển thị giống nhau trên mọi trình xem PDF).
+%  Dùng: \eduzylogo          -> cao 2.4cm (mặc định)
+%        \eduzylogo[1.5cm]   -> cao 1.5cm
+\definecolor{ezText}{RGB}{245,200,46}
+\newcommand{\eduzylogo}[1][2.4cm]{%
+	\resizebox{!}{#1}{%
+		\begin{tikzpicture}[x=0.01cm,y=0.01cm]
+			\path[use as bounding box] (0,0) rectangle (224,-224);
+			% mũ tốt nghiệp + vương miện
+			\begin{scope}
+				\clip
+				(119.4,-176.1)..controls(118.9,-176.1)and(116.8,-176)..(114.6,-176)
+				..controls(101.4,-176)and(85.8,-175.9)..(83.7,-175.7)
+				..controls(81.8,-175.6)and(81,-175.6)..(80.2,-175.7)
+				..controls(78.8,-175.9)and(77.7,-175.9)..(76.2,-175.7)
+				..controls(74.9,-175.5)and(70.8,-175.5)..(64.3,-175.7)
+				..controls(59.1,-175.9)and(58.3,-175.7)..(58.6,-173.7)
+				..controls(58.6,-172.8)and(59.6,-169.6)..(60.3,-168)
+				..controls(60.8,-166.9)and(61.4,-165.8)..(62.3,-165)
+				..controls(63.1,-164.2)and(64.3,-163.4)..(65,-163.2)
+				..controls(65.5,-163.1)and(72.3,-163)..(76.6,-163.1)
+				..controls(77.9,-163.1)and(80.1,-163.1)..(81.4,-163)
+				..controls(82.8,-162.9)and(86.3,-162.9)..(89.2,-162.9)
+				..controls(93,-162.9)and(94.9,-162.8)..(96,-162.7)
+				..controls(97.2,-162.5)and(101,-162.5)..(114,-162.4)
+				..controls(123,-162.3)and(134.9,-162.2)..(140.2,-162.1)
+				..controls(150.1,-162)and(152.2,-162.1)..(153.6,-162.4)
+				..controls(154.4,-162.6)and(157.1,-163.8)..(158.1,-164.4)
+				..controls(158.8,-164.8)and(159.7,-165.7)..(159.9,-166.3)
+				..controls(160,-166.5)and(160.2,-167.1)..(160.2,-167.6)
+				..controls(160.3,-168)and(160.6,-169.4)..(160.9,-170.6)
+				..controls(161.2,-171.7)and(161.5,-173.1)..(161.6,-173.6)
+				..controls(161.8,-174.4)and(161.8,-174.5)..(161.5,-174.9)
+				..controls(161.2,-175.6)and(160.8,-175.9)..(159.9,-176)
+				..controls(159.2,-176.1)and(154.1,-176.2)..(151.5,-176.2)
+				..controls(148.1,-176.1)and(122.6,-176.1)..(121.6,-176.2)
+				..controls(120.8,-176.2)and(119.8,-176.2)..(119.4,-176.1)--cycle
+				(130.4,-160)..controls(129,-160)and(119.8,-160)..(110.1,-159.9)
+				..controls(100.3,-159.8)and(88.5,-159.7)..(83.9,-159.6)
+				..controls(77.8,-159.5)and(75.3,-159.5)..(74.5,-159.6)
+				..controls(73.9,-159.7)and(72.5,-159.8)..(71.3,-159.8)
+				..controls(69.6,-159.8)and(69,-159.8)..(68.5,-159.6)
+				..controls(67.6,-159.3)and(66.8,-158.6)..(66.2,-157.6)
+				..controls(66,-157.3)and(65.6,-156.5)..(65.3,-156.1)
+				..controls(64.6,-155.1)and(64.5,-154.9)..(63.7,-152.9)
+				..controls(63.2,-151.6)and(62.9,-150.9)..(61.8,-149.6)
+				..controls(61.5,-149.2)and(61.1,-148.5)..(60.9,-147.9)
+				..controls(60.7,-147.4)and(60.3,-146.6)..(60.1,-146.1)
+				..controls(59.9,-145.5)and(59.5,-144.9)..(59,-144.3)
+				..controls(58.5,-143.7)and(58.2,-143.2)..(57.9,-142.5)
+				..controls(57.7,-141.9)and(57.3,-141.1)..(57,-140.7)
+				..controls(56.6,-140.3)and(56.1,-139.3)..(55.8,-138.5)
+				..controls(55.5,-137.8)and(55.1,-136.8)..(54.9,-136.5)
+				..controls(54.7,-136.1)and(54.3,-135.2)..(53.9,-134.5)
+				..controls(53.6,-133.8)and(53,-132.7)..(52.6,-132)
+				..controls(51.6,-130.5)and(51.4,-130.2)..(51.1,-129)
+				..controls(50.6,-127.5)and(50.6,-127.4)..(49.7,-126.3)
+				..controls(49.2,-125.7)and(48.6,-124.8)..(48.3,-124.2)
+				..controls(48,-123.6)and(47.5,-122.7)..(47.3,-122.2)
+				..controls(47,-121.8)and(46.5,-120.7)..(46.1,-119.8)
+				..controls(45.8,-118.9)and(45.2,-117.8)..(44.9,-117.2)
+				..controls(44.2,-116.1)and(43.3,-114.4)..(42.3,-112.2)
+				..controls(41.8,-111.3)and(41.3,-110.4)..(41.1,-110.1)
+				..controls(40.5,-109.4)and(40.3,-109)..(40,-107.8)
+				..controls(39.8,-107)and(39.6,-106.5)..(39.2,-106)
+				..controls(38.9,-105.6)and(38.4,-104.7)..(38,-104)
+				..controls(37.7,-103.4)and(37.2,-102.5)..(37,-102.1)
+				..controls(36.7,-101.7)and(36.3,-100.8)..(36,-100.1)
+				..controls(35.6,-98.9)and(35.3,-98.4)..(34.6,-97.6)
+				..controls(34.2,-97.1)and(34.2,-96.3)..(34.6,-96)
+				..controls(35,-95.7)and(35.5,-95.9)..(36.2,-96.7)
+				..controls(36.5,-97)and(37.2,-97.5)..(37.6,-97.7)..controls(38,-98)and(38.6,-98.4)..(39.1,-98.9)
+				..controls(39.6,-99.4)and(40.3,-100)..(40.6,-100.3)
+				..controls(41.3,-100.8)and(42.4,-101.8)..(43.7,-102.9)
+				..controls(44,-103.2)and(44.6,-103.7)..(45,-103.9)
+				..controls(45.4,-104.2)and(45.9,-104.6)..(46.1,-104.8)
+				..controls(47.1,-105.9)and(48.8,-107.1)..(50.5,-107.9)
+				..controls(51.8,-108.6)and(52.3,-109)..(53.4,-110)
+				..controls(54.8,-111.2)and(55.6,-111.6)..(57,-112.1)
+				..controls(57.5,-112.3)and(58.5,-112.8)..(59.4,-113.3)
+				..controls(60.2,-113.7)and(61.3,-114.3)..(61.9,-114.5)
+				..controls(62.4,-114.7)and(63.3,-115.1)..(63.8,-115.3)
+				..controls(64.4,-115.6)and(65.4,-115.9)..(66.2,-116.1)
+				..controls(67,-116.3)and(68.4,-116.6)..(69.2,-116.9)
+				..controls(72.3,-117.9)and(72.8,-118)..(78,-118.1)
+				..controls(84,-118.3)and(86.1,-118.1)..(88.1,-117.1)
+				..controls(89.4,-116.5)and(93,-115)..(93.7,-114.9)
+				..controls(94.8,-114.6)and(95.4,-114.2)..(95.9,-113.4)
+				..controls(96.2,-113)and(96.7,-112.5)..(97.1,-112.2)
+				..controls(98,-111.6)and(101.3,-108.4)..(102.1,-107.2)
+				..controls(102.4,-106.8)and(102.9,-106.2)..(103.2,-105.8)
+				..controls(103.5,-105.5)and(104,-104.8)..(104.2,-104.2)
+				..controls(104.5,-103.6)and(105,-102.8)..(105.3,-102.4)
+				..controls(105.6,-102)and(106.1,-101.2)..(106.5,-100.6)
+				..controls(107.1,-99.5)and(108.6,-97.5)..(109.5,-96.5)
+				..controls(109.9,-96.1)and(110.1,-96)..(110.4,-96)
+				..controls(111.1,-96)and(111.6,-96.5)..(111.8,-97.6)
+				..controls(112,-98.6)and(112.3,-99.3)..(112.8,-99.9)
+				..controls(113.7,-100.9)and(115.2,-103.1)..(115.7,-104.2)
+				..controls(116.1,-105)and(116.5,-105.5)..(116.9,-106)
+				..controls(117.3,-106.4)and(117.8,-106.9)..(118,-107.3)
+				..controls(118.2,-107.6)and(118.6,-108)..(119,-108.3)
+				..controls(119.6,-108.8)and(121.1,-110.3)..(121.8,-111.2)
+				..controls(122.1,-111.7)and(122.5,-112)..(123.4,-112.4)
+				..controls(124.8,-113.2)and(125.8,-113.8)..(127,-114.6)
+				..controls(127.5,-114.9)and(128.1,-115.3)..(128.2,-115.4)
+				..controls(128.4,-115.5)and(129.3,-115.8)..(130.2,-116)
+				..controls(131.1,-116.2)and(132.5,-116.6)..(133.3,-116.9)
+				..controls(135.7,-117.9)and(136.1,-117.9)..(142.5,-117.8)
+				..controls(145.8,-117.8)and(148.4,-117.7)..(148.8,-117.6)
+				..controls(149.2,-117.6)and(150.2,-117.2)..(151,-116.8)
+				..controls(152,-116.4)and(152.8,-116)..(153.6,-115.9)
+				..controls(154.5,-115.7)and(155.2,-115.4)..(156.3,-114.9)
+				..controls(157.1,-114.5)and(158.2,-114)..(158.7,-113.8)
+				..controls(159.1,-113.7)and(159.8,-113.3)..(160.2,-113)
+				..controls(160.6,-112.7)and(161.3,-112.4)..(161.7,-112.2)
+				..controls(162.7,-111.9)and(163.2,-111.7)..(164.1,-111.1)
+				..controls(164.5,-110.8)and(165.3,-110.4)..(165.9,-110)
+				..controls(166.5,-109.7)and(167.3,-109.2)..(167.6,-108.9)
+				..controls(167.9,-108.6)and(168.6,-108.2)..(169,-108)
+				..controls(169.4,-107.8)and(170.2,-107.3)..(170.7,-106.9)
+				..controls(171.2,-106.5)and(172.1,-105.8)..(172.7,-105.4)
+				..controls(173.2,-105)and(174.1,-104.4)..(174.5,-104)
+				..controls(174.9,-103.7)and(175.7,-103.1)..(176.2,-102.6)
+				..controls(176.7,-102.2)and(177.4,-101.5)..(177.9,-101.2)
+				..controls(178.3,-100.8)and(178.8,-100.4)..(179,-100.2)
+				..controls(179.2,-100)and(179.6,-99.6)..(180,-99.3)
+				..controls(180.4,-99.1)and(180.9,-98.6)..(181.2,-98.4)
+				..controls(181.5,-98.1)and(182.1,-97.7)..(182.5,-97.5)
+				..controls(183.2,-97.2)and(183.5,-96.9)..(184.3,-95.9)
+				..controls(184.6,-95.6)and(184.6,-95.6)..(184.8,-95.7)
+				..controls(185,-95.8)and(185.1,-96)..(185.1,-96.2)
+				..controls(185.1,-96.5)and(185,-96.7)..(184.6,-97.2)
+				..controls(184.1,-97.8)and(184,-97.9)..(183.9,-98.8)
+				..controls(183.7,-100.3)and(183.3,-101.3)..(182.9,-101.8)
+				..controls(182.6,-102.1)and(182.3,-102.6)..(182.2,-102.9)
+				..controls(182,-103.3)and(181.6,-104)..(181.2,-104.6)
+				..controls(180.9,-105.2)and(180.5,-106.1)..(180.4,-106.6)
+				..controls(179.9,-108)and(179.7,-108.5)..(179,-109.4)
+				..controls(178.6,-109.8)and(178.2,-110.5)..(177.9,-111)
+				..controls(177.7,-111.5)and(177.3,-112.3)..(177,-112.7)
+				..controls(176.6,-113.2)and(176.4,-113.7)..(176.3,-114.2)
+				..controls(176.2,-114.7)and(175.9,-115.2)..(175.4,-116)
+				..controls(175,-116.6)and(174.4,-117.7)..(174,-118.5)
+				..controls(173.7,-119.2)and(173.3,-120.1)..(173,-120.5)
+				..controls(172.8,-120.9)and(172.4,-121.8)..(172.1,-122.5)
+				..controls(171.8,-123.2)and(171.3,-124.1)..(171,-124.6)
+				..controls(170.8,-125.1)and(170.3,-126)..(169.9,-126.6)
+				..controls(169.6,-127.3)and(169.2,-128.1)..(169,-128.3)
+				..controls(168.8,-128.6)and(168.5,-129.3)..(168.3,-129.8)
+				..controls(168.1,-130.3)and(167.8,-131.1)..(167.5,-131.6)
+				..controls(166.9,-132.5)and(164.2,-137.9)..(164.2,-138.1)
+				..controls(164.2,-138.1)and(163.9,-138.8)..(163.4,-139.7)
+				..controls(162.9,-140.5)and(162.4,-141.5)..(162.3,-141.9)
+				..controls(161.9,-143)and(161.6,-143.4)..(160.9,-144.1)
+				..controls(160.4,-144.6)and(160.3,-144.8)..(160.1,-145.4)
+				..controls(160,-145.8)and(159.6,-146.8)..(159.2,-147.8)
+				..controls(158.7,-148.8)and(158.1,-150)..(157.9,-150.6)
+				..controls(157.6,-151.1)and(157.2,-151.9)..(156.9,-152.4)
+				..controls(156.5,-152.8)and(156.1,-153.7)..(155.8,-154.4)
+				..controls(155.6,-155)and(155.2,-155.9)..(154.9,-156.3)
+				..controls(154.7,-156.7)and(154.4,-157.4)..(154.2,-157.9)
+				..controls(154.1,-158.4)and(153.8,-159)..(153.5,-159.3)
+				..controls(152.8,-160.1)and(153,-160.1)..(142.4,-160.1)
+				..controls(137.2,-160.1)and(131.8,-160.1)..(130.4,-160)--cycle
+				(141.5,-103.7)..controls(140.8,-103)and(139.8,-102.1)..(139.2,-101.6)
+				..controls(138.5,-101.2)and(137.9,-100.6)..(137.8,-100.4)
+				..controls(137,-99.5)and(134,-96.5)..(133.2,-96)
+				..controls(132.7,-95.7)and(131.8,-94.9)..(131.1,-94.3)
+				..controls(129.4,-92.7)and(127.9,-91.6)..(126.6,-91.1)
+				..controls(125.2,-90.5)and(124.1,-90)..(122.9,-89.1)
+				..controls(122.1,-88.6)and(121.3,-88.2)..(119.9,-87.7)
+				..controls(118.8,-87.3)and(117.5,-86.8)..(116.9,-86.5)
+				..controls(114.3,-85.5)and(113.7,-85.4)..(109.7,-85.5)
+				..controls(105.3,-85.7)and(103.9,-85.9)..(101.6,-87)
+				..controls(100.7,-87.4)and(99.4,-87.8)..(97.9,-88)
+				..controls(97,-88.2)and(96.6,-88.3)..(95.8,-88.9)
+				..controls(95.4,-89.2)and(94.7,-89.6)..(94.2,-89.8)
+				..controls(92.9,-90.3)and(92.3,-90.7)..(90.9,-92.1)
+				..controls(90.2,-92.7)and(89.4,-93.3)..(89,-93.5)..controls(87,-94.5)and(85.2,-96)..(83.6,-97.9)
+				..controls(83.3,-98.2)and(82.5,-98.9)..(81.8,-99.4)
+				..controls(80.7,-100.1)and(80.5,-100.3)..(80,-101.1)
+				..controls(78.7,-103.1)and(77.2,-103.9)..(76.4,-103)
+				..controls(75.7,-102.2)and(75.7,-103.2)..(75.7,-83.6)
+				..controls(75.6,-73.6)and(75.6,-64.8)..(75.5,-64)
+				..controls(75.5,-63.2)and(75.5,-61.4)..(75.6,-59.8)--(75.7,-57.1)--(76,-56.8)
+				..controls(76.8,-56.2)and(78,-56.3)..(79.8,-57.2)
+				..controls(80.4,-57.5)and(81.3,-57.8)..(81.8,-57.9)
+				..controls(82.3,-58.1)and(83,-58.4)..(83.6,-58.8)..controls(84.3,-59.2)and(85,-59.5)..(86,-59.8)
+				..controls(86.8,-60.1)and(88,-60.6)..(88.7,-60.9)
+				..controls(89.3,-61.2)and(90.6,-61.7)..(91.4,-62)
+				..controls(92.2,-62.3)and(93.7,-62.9)..(94.6,-63.3)
+				..controls(95.6,-63.7)and(96.8,-64.1)..(97.4,-64.3)
+				..controls(98,-64.5)and(99,-64.9)..(99.7,-65.2)
+				..controls(100.4,-65.6)and(101.5,-66)..(102.3,-66.2)
+				..controls(104.2,-66.8)and(105,-67.1)..(106.2,-67.8)
+				..controls(107.9,-68.7)and(110.2,-69.4)..(111.3,-69.2)
+				..controls(112.5,-69)and(115,-68.2)..(115.6,-67.8)
+				..controls(117.3,-66.7)and(117.6,-66.6)..(119.5,-66.2)
+				..controls(121.9,-65.8)and(122.1,-65.7)..(123,-65.1)
+				..controls(124.1,-64.4)and(124.4,-64.3)..(126,-63.9)
+				..controls(127,-63.7)and(127.7,-63.4)..(128.4,-63.1)
+				..controls(129,-62.8)and(129.7,-62.5)..(130.6,-62.4)
+				..controls(132.1,-62.1)and(134,-61.5)..(135.2,-61)
+				..controls(135.7,-60.8)and(136.7,-60.5)..(137.3,-60.3)
+				..controls(138.4,-60)and(139.3,-59.7)..(141.1,-59)
+				..controls(141.6,-58.7)and(142,-58.6)..(142.5,-58.6)
+				..controls(143.2,-58.6)and(143.3,-58.7)..(143.6,-59)
+				..controls(144,-59.5)and(144.1,-59.9)..(144,-60.8)
+				..controls(144,-61.2)and(144,-71.1)..(144,-82.8)--(143.9,-104.1)--(143.7,-104.5)
+				..controls(143.5,-104.7)and(143.3,-104.8)..(143,-104.9)
+				..controls(142.6,-104.9)and(142.5,-104.8)..(141.5,-103.7)--cycle
+				(27.8,-91.4)..controls(27.1,-90.9)and(26.3,-90)..(26.1,-89.5)
+				..controls(26,-89.2)and(25.8,-88.6)..(25.7,-87.9)
+				..controls(25.4,-86.2)and(25.6,-84.8)..(26.5,-83.5)
+				..controls(27.4,-82.3)and(28.3,-82)..(29.4,-82.3)
+				..controls(31.1,-82.8)and(32.1,-84.9)..(32,-87.4)
+				..controls(31.9,-89.3)and(31.2,-90.6)..(29.9,-91.4)
+				..controls(29.1,-91.9)and(28.6,-91.9)..(27.8,-91.4)--cycle
+				(190.1,-91.3)..controls(189.7,-91.2)and(189.3,-90.9)..(189.1,-90.7)
+				..controls(188.3,-89.8)and(187.6,-87.7)..(187.6,-86.2)
+				..controls(187.6,-85.5)and(187.7,-85.2)..(188.2,-84.4)
+				..controls(189.1,-82.6)and(190.1,-81.8)..(191.3,-82.1)
+				..controls(192,-82.3)and(193.5,-83.7)..(193.8,-84.4)
+				..controls(194.1,-85.1)and(194.2,-87.1)..(194,-88.3)
+				..controls(193.8,-89.8)and(193.3,-90.5)..(192.3,-91.3)
+				..controls(191.7,-91.7)and(190.9,-91.7)..(190.1,-91.3)--cycle
+				(173.7,-83.4)..controls(172.2,-82.5)and(172,-82.5)..(170.6,-82.4)
+				..controls(169.7,-82.4)and(168.8,-82.4)..(168.3,-82.5)
+				..controls(167.2,-82.7)and(166.9,-82.7)..(166.6,-82.2)
+				..controls(166.3,-81.8)and(166.3,-81)..(166.8,-80)
+				..controls(167.2,-78.9)and(167.4,-77.4)..(167.7,-74.1)
+				..controls(167.8,-72.8)and(167.9,-71.8)..(167.9,-71.7)
+				..controls(168,-71.7)and(168,-70.2)..(168,-68.4)..controls(168,-65.4)and(168,-64.9)..(167.7,-63)
+				..controls(167.3,-60.5)and(167.1,-59.9)..(166.4,-58.4)
+				..controls(166.1,-57.7)and(165.8,-56.9)..(165.7,-56.6)
+				..controls(165.7,-56.2)and(165.4,-55.6)..(165.2,-55.2)
+				..controls(164.6,-53.8)and(161.9,-50.7)..(161,-50.3)
+				..controls(159.8,-49.7)and(157.9,-50)..(155.2,-51.2)
+				..controls(154.7,-51.4)and(153.4,-51.8)..(152.2,-52.1)
+				..controls(150.8,-52.4)and(149.4,-52.9)..(148.6,-53.2)
+				..controls(147.8,-53.6)and(146.7,-54)..(146,-54.2)
+				..controls(145.4,-54.4)and(144.5,-54.7)..(144,-54.9)
+				..controls(143.6,-55.2)and(142.7,-55.5)..(141.8,-55.7)
+				..controls(141,-55.9)and(139.6,-56.3)..(138.7,-56.6)
+				..controls(137.8,-57)and(136.3,-57.4)..(135.3,-57.6)
+				..controls(133.8,-57.9)and(133.2,-58.1)..(132.1,-58.7)
+				..controls(131.1,-59.2)and(130.3,-59.4)..(129.4,-59.6)
+				..controls(128.7,-59.8)and(127.8,-60)..(127.4,-60.1)
+				..controls(127,-60.3)and(126,-60.5)..(125.1,-60.7)
+				..controls(123.2,-61.1)and(121.7,-61.5)..(120.2,-62.1)
+				..controls(119.7,-62.3)and(118.1,-62.8)..(116.7,-63.2)
+				..controls(114.6,-63.9)and(114,-64.1)..(113,-64.7)
+				..controls(111.9,-65.4)and(111.8,-65.4)..(111,-65.5)
+				..controls(109.9,-65.5)and(109.3,-65.4)..(107.7,-64.7)
+				..controls(107,-64.4)and(106,-64)..(105.3,-63.9)
+				..controls(103.5,-63.5)and(102.2,-63)..(101.2,-62.5)
+				..controls(100.1,-61.8)and(99.3,-61.5)..(97.8,-61.1)
+				..controls(97.2,-61)and(96.2,-60.7)..(95.7,-60.4)
+				..controls(95.1,-60.1)and(94.2,-59.8)..(93.5,-59.6)
+				..controls(92.9,-59.4)and(91.7,-59)..(91,-58.7)..controls(90.2,-58.4)and(88.9,-58)..(88,-57.7)
+				..controls(87.2,-57.5)and(86.1,-57.1)..(85.5,-56.8)
+				..controls(85,-56.6)and(84.1,-56.2)..(83.5,-56)..controls(82.9,-55.7)and(81.8,-55.2)..(81,-54.9)
+				..controls(80.1,-54.5)and(79.1,-54.2)..(78.7,-54.1)
+				..controls(77.9,-53.8)and(77.3,-53.6)..(76.2,-52.9)
+				..controls(75.7,-52.6)and(75.2,-52.4)..(74.1,-52.2)
+				..controls(72.5,-51.9)and(72.4,-51.8)..(71.3,-51.1)
+				..controls(69.9,-50.1)and(69.4,-49.9)..(67.9,-49.8)
+				..controls(67,-49.7)and(66.6,-49.6)..(66.3,-49.4)
+				..controls(66.1,-49.3)and(65.7,-49)..(65.4,-48.8)
+				..controls(65.1,-48.7)and(64.2,-48.4)..(63.6,-48.2)
+				..controls(62.9,-48)and(61.7,-47.6)..(60.9,-47.2)
+				..controls(60.1,-46.8)and(58.9,-46.4)..(58.2,-46.2)
+				..controls(57.6,-46)and(56.8,-45.7)..(56.5,-45.5)
+				..controls(54.9,-44.6)and(54.6,-44.5)..(53.2,-44.2)
+				..controls(51.7,-43.8)and(51,-43.6)..(49.9,-42.9)
+				..controls(49.5,-42.6)and(48.9,-42.4)..(47.5,-42)
+				..controls(45.7,-41.6)and(45.6,-41.5)..(44.3,-40.6)
+				..controls(43.5,-40.1)and(42.8,-39.6)..(42.7,-39.4)
+				..controls(42.4,-38.7)and(43,-38.1)..(44.5,-37.6)..controls(44.9,-37.5)and(46,-37)..(46.9,-36.6)
+				..controls(47.9,-36.1)and(48.8,-35.8)..(49.6,-35.6)
+				..controls(50.5,-35.4)and(51.3,-35.2)..(52.4,-34.6)
+				..controls(53.3,-34.1)and(54.5,-33.7)..(54.9,-33.5)
+				..controls(55.4,-33.4)and(56.4,-33)..(57.2,-32.6)
+				..controls(58.6,-32)and(60.1,-31.5)..(61.6,-31.2)
+				..controls(62.3,-31.1)and(62.7,-31)..(63.2,-30.7)
+				..controls(64.1,-30)and(64.3,-29.9)..(65.3,-29.7)
+				..controls(65.7,-29.6)and(66.5,-29.2)..(67.1,-28.9)
+				..controls(67.6,-28.6)and(68.8,-28.2)..(69.6,-27.9)
+				..controls(70.5,-27.7)and(71.6,-27.3)..(72.1,-27)
+				..controls(72.6,-26.7)and(73.8,-26.2)..(74.8,-25.9)
+				..controls(75.7,-25.5)and(76.7,-25.1)..(77.1,-25)
+				..controls(77.4,-24.8)and(78.5,-24.4)..(79.6,-24.1)
+				..controls(80.6,-23.8)and(82,-23.2)..(82.8,-22.9)
+				..controls(83.5,-22.5)and(84.8,-22)..(85.8,-21.8)
+				..controls(86.7,-21.5)and(87.8,-21.1)..(88.1,-20.9)
+				..controls(88.4,-20.7)and(89.3,-20.3)..(90.1,-20.1)
+				..controls(90.8,-19.8)and(91.9,-19.4)..(92.4,-19.1)
+				..controls(93.5,-18.5)and(94.4,-18.2)..(95.4,-18.1)
+				..controls(95.7,-18)and(96.4,-17.8)..(96.9,-17.5)
+				..controls(97.5,-17.3)and(98.4,-16.9)..(99,-16.6)
+				..controls(99.7,-16.3)and(100.9,-15.9)..(101.9,-15.6)
+				..controls(102.9,-15.3)and(104.4,-14.7)..(105.3,-14.3)
+				..controls(108.1,-13.2)and(108.5,-13.1)..(110.1,-13.1)
+				..controls(111.4,-13.1)and(111.5,-13.1)..(112.4,-13.5)
+				..controls(113.2,-14)and(115,-14.8)..(116.6,-15.4)
+				..controls(116.9,-15.5)and(117.9,-15.8)..(118.8,-16.1)
+				..controls(120.9,-16.6)and(121.5,-16.9)..(122.6,-17.9)
+				..controls(123,-18.3)and(123.7,-18.8)..(123.9,-18.9)
+				..controls(124.6,-19.4)and(126,-19.8)..(127.9,-20.2)
+				..controls(129.6,-20.5)and(129.8,-20.6)..(131.1,-21.4)
+				..controls(131.5,-21.7)and(132.4,-22.1)..(133.1,-22.3)
+				..controls(136.1,-23.2)and(138.3,-24.1)..(140.2,-25)
+				..controls(141,-25.5)and(141.5,-25.6)..(142.5,-25.8)
+				..controls(145.1,-26.3)and(146,-26.6)..(149.4,-28.1)
+				..controls(151.3,-28.9)and(153.5,-29.8)..(154.3,-30.1)
+				..controls(155.1,-30.4)and(156.2,-30.8)..(156.6,-31)
+				..controls(157.1,-31.2)and(158.2,-31.6)..(159.1,-31.8)
+				..controls(160.6,-32.2)and(160.9,-32.3)..(161.7,-32.9)
+				..controls(162.4,-33.3)and(162.9,-33.6)..(163.7,-33.8)
+				..controls(164.3,-34)and(164.8,-34.1)..(164.9,-34.1)
+				..controls(165,-34.1)and(165.6,-34.4)..(166.4,-34.8)
+				..controls(167.3,-35.2)and(168.1,-35.4)..(169,-35.6)
+				..controls(170,-35.8)and(170.5,-36)..(171.7,-36.6)
+				..controls(172.4,-37)and(173.3,-37.4)..(173.6,-37.4)
+				..controls(175.6,-37.7)and(176.2,-38)..(176.7,-39.1)
+				..controls(176.9,-39.6)and(176.9,-39.7)..(176.7,-40.4)
+				..controls(176.4,-41.6)and(175.8,-42.7)..(175.2,-43.4)
+				..controls(174.5,-44.1)and(172.6,-45.5)..(171.7,-45.8)
+				..controls(170.6,-46.2)and(169.1,-46)..(168.2,-45.4)
+				..controls(167.9,-45.2)and(167.3,-44.8)..(166.9,-44.4)
+				..controls(166.4,-44.1)and(165.8,-43.6)..(165.4,-43.2)
+				..controls(165.1,-42.9)and(164.4,-42.3)..(163.9,-41.9)
+				..controls(163.3,-41.5)and(162.7,-40.9)..(162.4,-40.5)
+				..controls(161.4,-39.2)and(159.9,-38)..(158.8,-37.8)
+				..controls(158.4,-37.8)and(158.3,-37.7)..(158.2,-37.2)
+				..controls(158,-36.8)and(157.4,-36.1)..(157.1,-36.1)
+				..controls(157,-36.1)and(156.7,-36.1)..(156.5,-36)
+				..controls(156.1,-35.9)and(155.9,-35.7)..(155.7,-35.2)
+				..controls(155.3,-34.6)and(155.1,-34.4)..(154,-34.1)
+				..controls(153.6,-34)and(153.2,-33.7)..(152.9,-33.5)
+				..controls(152.4,-32.9)and(151.6,-32.4)..(151.3,-32.4)
+				..controls(150.9,-32.4)and(150.4,-32.6)..(150.4,-32.9)
+				..controls(150.4,-33.2)and(150.8,-33.4)..(151.4,-33.6)
+				..controls(152.1,-33.7)and(152.8,-34.1)..(153.5,-34.9)
+				..controls(154.1,-35.5)and(154.3,-35.6)..(155,-35.8)
+				..controls(155.7,-36)and(155.7,-36)..(156,-36.6)
+				..controls(156.3,-37.3)and(156.7,-37.7)..(157.5,-37.8)
+				..controls(158.1,-37.9)and(158.2,-38)..(158.4,-38.8)
+				..controls(158.5,-39.4)and(158.6,-39.6)..(159.6,-40.4)
+				..controls(160.2,-41)and(160.9,-41.6)..(161.3,-41.8)
+				..controls(161.7,-42)and(161.9,-42.3)..(162.2,-42.8)
+				..controls(162.4,-43.2)and(162.8,-43.8)..(163.1,-44.1)
+				..controls(163.9,-44.8)and(165.1,-46.7)..(165.7,-48)
+				..controls(166.2,-49.3)and(166.4,-49.7)..(167.2,-50.5)
+				..controls(167.5,-50.8)and(167.9,-51.4)..(168.1,-51.8)
+				..controls(168.3,-52.2)and(168.8,-53)..(169.1,-53.6)
+				..controls(169.6,-54.3)and(169.8,-54.9)..(169.9,-55.6)
+				..controls(170.4,-57.8)and(170.5,-58.1)..(171.2,-59.5)
+				..controls(171.6,-60.3)and(172,-61.5)..(172.2,-62.1)
+				..controls(172.3,-62.8)and(172.7,-63.7)..(172.9,-64.1)
+				..controls(173.2,-64.6)and(173.4,-65.3)..(173.4,-65.6)
+				..controls(173.8,-68.8)and(174.2,-70.6)..(174.9,-72.6)
+				..controls(175.5,-74.5)and(175.9,-77.1)..(176.1,-80.2)
+				..controls(176.3,-83.4)and(175.5,-84.4)..(173.7,-83.4)--cycle;
+				\definecolor{ezs}{RGB}{247,179,26}\fill[ezs](-5.7,-156.6)--(-3.4,-157.5)--(61.9,12.7)--(59.7,13.6)--cycle;
+				\definecolor{ezs}{RGB}{247,179,22}\fill[ezs](-3.8,-157.3)--(-1.5,-158.2)--(63.9,12)--(61.6,12.9)--cycle;
+				\definecolor{ezs}{RGB}{248,179,19}\fill[ezs](-1.8,-158.1)--(0.4,-158.9)--(65.8,11.2)--(63.5,12.1)--cycle;
+				\definecolor{ezs}{RGB}{248,178,16}\fill[ezs](0.1,-158.8)--(2.4,-159.7)--(67.7,10.5)--(65.4,11.4)--cycle;
+				\definecolor{ezs}{RGB}{249,178,15}\fill[ezs](2,-159.5)--(4.3,-160.4)--(69.6,9.8)--(67.3,10.7)--cycle;
+				\definecolor{ezs}{RGB}{251,177,17}\fill[ezs](3.9,-160.3)--(6.2,-161.1)--(71.5,9)--(69.2,9.9)--cycle;
+				\definecolor{ezs}{RGB}{252,179,18}\fill[ezs](5.8,-161)--(8.1,-161.9)--(73.4,8.3)--(71.1,9.2)--cycle;
+				\definecolor{ezs}{RGB}{252,182,17}\fill[ezs](7.7,-161.7)--(10,-162.6)--(75.3,7.6)--(73,8.5)--cycle;
+				\definecolor{ezs}{RGB}{252,185,17}\fill[ezs](9.6,-162.5)--(11.9,-163.4)--(77.2,6.8)--(75,7.7)--cycle;
+				\definecolor{ezs}{RGB}{251,189,18}\fill[ezs](11.5,-163.2)--(13.8,-164.1)--(79.2,6.1)--(76.9,7)--cycle;
+				\definecolor{ezs}{RGB}{251,191,22}\fill[ezs](13.4,-163.9)--(15.7,-164.8)--(81.1,5.4)--(78.8,6.2)--cycle;
+				\definecolor{ezs}{RGB}{252,193,25}\fill[ezs](15.4,-164.7)--(17.6,-165.6)--(83,4.6)--(80.7,5.5)--cycle;
+				\definecolor{ezs}{RGB}{253,195,27}\fill[ezs](17.3,-165.4)--(19.6,-166.3)--(84.9,3.9)--(82.6,4.8)--cycle;
+				\definecolor{ezs}{RGB}{253,196,31}\fill[ezs](19.2,-166.1)--(21.5,-167)--(86.8,3.2)--(84.5,4)--cycle;
+				\definecolor{ezs}{RGB}{254,199,35}\fill[ezs](21.1,-166.9)--(23.4,-167.8)--(88.7,2.4)--(86.4,3.3)--cycle;
+				\definecolor{ezs}{RGB}{253,201,38}\fill[ezs](23,-167.6)--(25.3,-168.5)--(90.6,1.7)--(88.3,2.6)--cycle;
+				\definecolor{ezs}{RGB}{253,203,40}\fill[ezs](24.9,-168.3)--(27.2,-169.2)--(92.5,1)--(90.3,1.8)--cycle;
+				\definecolor{ezs}{RGB}{253,205,42}\fill[ezs](26.8,-169.1)--(29.1,-170)--(94.4,0.2)--(92.2,1.1)--cycle;
+				\definecolor{ezs}{RGB}{253,207,45}\fill[ezs](28.7,-169.8)--(31,-170.7)--(96.4,-0.5)--(94.1,0.4)--cycle;
+				\definecolor{ezs}{RGB}{253,210,49}\fill[ezs](30.7,-170.5)--(32.9,-171.4)--(98.3,-1.2)--(96,-0.4)--cycle;
+				\definecolor{ezs}{RGB}{253,212,54}\fill[ezs](32.6,-171.3)--(34.9,-172.2)--(100.2,-2)--(97.9,-1.1)--cycle;
+				\definecolor{ezs}{RGB}{253,214,59}\fill[ezs](34.5,-172)--(36.8,-172.9)--(102.1,-2.7)--(99.8,-1.8)--cycle;
+				\definecolor{ezs}{RGB}{253,216,63}\fill[ezs](36.4,-172.7)--(38.7,-173.6)--(104,-3.4)--(101.7,-2.6)--cycle;
+				\definecolor{ezs}{RGB}{253,218,65}\fill[ezs](38.3,-173.5)--(40.6,-174.4)--(105.9,-4.2)--(103.6,-3.3)--cycle;
+				\definecolor{ezs}{RGB}{254,220,66}\fill[ezs](40.2,-174.2)--(42.5,-175.1)--(107.8,-4.9)--(105.5,-4)--cycle;
+				\definecolor{ezs}{RGB}{254,222,68}\fill[ezs](42.1,-175)--(44.4,-175.8)--(109.7,-5.6)--(107.5,-4.8)--cycle;
+				\definecolor{ezs}{RGB}{254,224,71}\fill[ezs](44,-175.7)--(46.3,-176.6)--(111.7,-6.4)--(109.4,-5.5)--cycle;
+				\definecolor{ezs}{RGB}{254,226,75}\fill[ezs](46,-176.4)--(48.2,-177.3)--(113.6,-7.1)--(111.3,-6.2)--cycle;
+				\definecolor{ezs}{RGB}{254,228,79}\fill[ezs](47.9,-177.2)--(50.1,-178)--(115.5,-7.8)--(113.2,-7)--cycle;
+				\definecolor{ezs}{RGB}{254,230,82}\fill[ezs](49.8,-177.9)--(52.1,-178.8)--(117.4,-8.6)--(115.1,-7.7)--cycle;
+				\definecolor{ezs}{RGB}{254,232,85}\fill[ezs](51.7,-178.6)--(54,-179.5)--(119.3,-9.3)--(117,-8.4)--cycle;
+				\definecolor{ezs}{RGB}{254,234,88}\fill[ezs](53.6,-179.4)--(55.9,-180.2)--(121.2,-10)--(118.9,-9.2)--cycle;
+				\definecolor{ezs}{RGB}{254,237,91}\fill[ezs](55.5,-180.1)--(57.8,-181)--(123.1,-10.8)--(120.8,-9.9)--cycle;
+				\definecolor{ezs}{RGB}{254,239,94}\fill[ezs](57.4,-180.8)--(59.7,-181.7)--(125,-11.5)--(122.8,-10.6)--cycle;
+				\definecolor{ezs}{RGB}{254,241,97}\fill[ezs](59.3,-181.6)--(61.6,-182.4)--(127,-12.2)--(124.7,-11.4)--cycle;
+				\definecolor{ezs}{RGB}{254,243,101}\fill[ezs](61.2,-182.3)--(63.5,-183.2)--(128.9,-13)--(126.6,-12.1)--cycle;
+				\definecolor{ezs}{RGB}{254,245,103}\fill[ezs](63.2,-183)--(65.4,-183.9)--(130.8,-13.7)--(128.5,-12.8)--cycle;
+				\definecolor{ezs}{RGB}{254,245,105}\fill[ezs](65.1,-183.8)--(67.4,-184.6)--(132.7,-14.4)--(130.4,-13.6)--cycle;
+				\definecolor{ezs}{RGB}{254,245,105}\fill[ezs](67,-184.5)--(69.3,-185.4)--(134.6,-15.2)--(132.3,-14.3)--cycle;
+				\definecolor{ezs}{RGB}{254,244,103}\fill[ezs](68.9,-185.2)--(71.2,-186.1)--(136.5,-15.9)--(134.2,-15)--cycle;
+				\definecolor{ezs}{RGB}{253,243,101}\fill[ezs](70.8,-186)--(73.1,-186.8)--(138.4,-16.6)--(136.1,-15.8)--cycle;
+				\definecolor{ezs}{RGB}{253,241,98}\fill[ezs](72.7,-186.7)--(75,-187.6)--(140.3,-17.4)--(138,-16.5)--cycle;
+				\definecolor{ezs}{RGB}{253,239,95}\fill[ezs](74.6,-187.4)--(76.9,-188.3)--(142.2,-18.1)--(140,-17.2)--cycle;
+				\definecolor{ezs}{RGB}{253,236,92}\fill[ezs](76.5,-188.2)--(78.8,-189)--(144.2,-18.8)--(141.9,-18)--cycle;
+				\definecolor{ezs}{RGB}{253,234,88}\fill[ezs](78.5,-188.9)--(80.7,-189.8)--(146.1,-19.6)--(143.8,-18.7)--cycle;
+				\definecolor{ezs}{RGB}{253,232,85}\fill[ezs](80.4,-189.6)--(82.7,-190.5)--(148,-20.3)--(145.7,-19.4)--cycle;
+				\definecolor{ezs}{RGB}{253,230,82}\fill[ezs](82.3,-190.4)--(84.6,-191.2)--(149.9,-21)--(147.6,-20.2)--cycle;
+				\definecolor{ezs}{RGB}{253,228,78}\fill[ezs](84.2,-191.1)--(86.5,-192)--(151.8,-21.8)--(149.5,-20.9)--cycle;
+				\definecolor{ezs}{RGB}{253,226,74}\fill[ezs](86.1,-191.8)--(88.4,-192.7)--(153.7,-22.5)--(151.4,-21.6)--cycle;
+				\definecolor{ezs}{RGB}{253,224,70}\fill[ezs](88,-192.6)--(90.3,-193.4)--(155.6,-23.3)--(153.3,-22.4)--cycle;
+				\definecolor{ezs}{RGB}{253,222,67}\fill[ezs](89.9,-193.3)--(92.2,-194.2)--(157.5,-24)--(155.3,-23.1)--cycle;
+				\definecolor{ezs}{RGB}{253,220,65}\fill[ezs](91.8,-194)--(94.1,-194.9)--(159.5,-24.7)--(157.2,-23.8)--cycle;
+				\definecolor{ezs}{RGB}{253,217,63}\fill[ezs](93.7,-194.8)--(96,-195.6)--(161.4,-25.5)--(159.1,-24.6)--cycle;
+				\definecolor{ezs}{RGB}{253,215,60}\fill[ezs](95.7,-195.5)--(97.9,-196.4)--(163.3,-26.2)--(161,-25.3)--cycle;
+				\definecolor{ezs}{RGB}{253,213,56}\fill[ezs](97.6,-196.2)--(99.9,-197.1)--(165.2,-26.9)--(162.9,-26)--cycle;
+				\definecolor{ezs}{RGB}{252,211,53}\fill[ezs](99.5,-197)--(101.8,-197.8)--(167.1,-27.7)--(164.8,-26.8)--cycle;
+				\definecolor{ezs}{RGB}{252,209,49}\fill[ezs](101.4,-197.7)--(103.7,-198.6)--(169,-28.4)--(166.7,-27.5)--cycle;
+				\definecolor{ezs}{RGB}{252,207,45}\fill[ezs](103.3,-198.4)--(105.6,-199.3)--(170.9,-29.1)--(168.6,-28.2)--cycle;
+				\definecolor{ezs}{RGB}{253,205,42}\fill[ezs](105.2,-199.2)--(107.5,-200)--(172.8,-29.9)--(170.6,-29)--cycle;
+				\definecolor{ezs}{RGB}{253,202,40}\fill[ezs](107.1,-199.9)--(109.4,-200.8)--(174.7,-30.6)--(172.5,-29.7)--cycle;
+				\definecolor{ezs}{RGB}{253,200,38}\fill[ezs](109,-200.6)--(111.3,-201.5)--(176.7,-31.3)--(174.4,-30.4)--cycle;
+				\definecolor{ezs}{RGB}{253,198,35}\fill[ezs](111,-201.4)--(113.2,-202.2)--(178.6,-32.1)--(176.3,-31.2)--cycle;
+				\definecolor{ezs}{RGB}{253,196,31}\fill[ezs](112.9,-202.1)--(115.2,-203)--(180.5,-32.8)--(178.2,-31.9)--cycle;
+				\definecolor{ezs}{RGB}{253,194,28}\fill[ezs](114.8,-202.8)--(117.1,-203.7)--(182.4,-33.5)--(180.1,-32.6)--cycle;
+				\definecolor{ezs}{RGB}{253,192,26}\fill[ezs](116.7,-203.6)--(119,-204.5)--(184.3,-34.3)--(182,-33.4)--cycle;
+				\definecolor{ezs}{RGB}{253,189,24}\fill[ezs](118.6,-204.3)--(120.9,-205.2)--(186.2,-35)--(183.9,-34.1)--cycle;
+				\definecolor{ezs}{RGB}{253,186,20}\fill[ezs](120.5,-205)--(122.8,-205.9)--(188.1,-35.7)--(185.8,-34.8)--cycle;
+				\definecolor{ezs}{RGB}{253,184,17}\fill[ezs](122.4,-205.8)--(124.7,-206.7)--(190,-36.5)--(187.8,-35.6)--cycle;
+				\definecolor{ezs}{RGB}{252,183,15}\fill[ezs](124.3,-206.5)--(126.6,-207.4)--(192,-37.2)--(189.7,-36.3)--cycle;
+				\definecolor{ezs}{RGB}{252,181,14}\fill[ezs](126.3,-207.2)--(128.5,-208.1)--(193.9,-37.9)--(191.6,-37.1)--cycle;
+				\definecolor{ezs}{RGB}{252,179,13}\fill[ezs](128.2,-208)--(130.4,-208.9)--(195.8,-38.7)--(193.5,-37.8)--cycle;
+				\definecolor{ezs}{RGB}{252,178,12}\fill[ezs](130.1,-208.7)--(132.4,-209.6)--(197.7,-39.4)--(195.4,-38.5)--cycle;
+				\definecolor{ezs}{RGB}{251,178,10}\fill[ezs](132,-209.4)--(134.3,-210.3)--(199.6,-40.1)--(197.3,-39.3)--cycle;
+				\definecolor{ezs}{RGB}{251,178,10}\fill[ezs](133.9,-210.2)--(136.2,-211.1)--(201.5,-40.9)--(199.2,-40)--cycle;
+				\definecolor{ezs}{RGB}{250,177,11}\fill[ezs](135.8,-210.9)--(138.1,-211.8)--(203.4,-41.6)--(201.1,-40.7)--cycle;
+				\definecolor{ezs}{RGB}{250,178,11}\fill[ezs](137.7,-211.6)--(140,-212.5)--(205.3,-42.3)--(203.1,-41.5)--cycle;
+				\definecolor{ezs}{RGB}{248,180,10}\fill[ezs](139.6,-212.4)--(141.9,-213.3)--(207.3,-43.1)--(205,-42.2)--cycle;
+				\definecolor{ezs}{RGB}{247,181,9}\fill[ezs](141.5,-213.1)--(143.8,-214)--(209.2,-43.8)--(206.9,-42.9)--cycle;
+				\definecolor{ezs}{RGB}{246,182,9}\fill[ezs](143.5,-213.8)--(145.7,-214.7)--(211.1,-44.5)--(208.8,-43.7)--cycle;
+				\definecolor{ezs}{RGB}{246,182,10}\fill[ezs](145.4,-214.6)--(147.7,-215.5)--(213,-45.3)--(210.7,-44.4)--cycle;
+			\end{scope}
+			% chữ EDUZY (Times đậm, làm dày nét bằng 5 lớp lệch nhẹ; căn đúng khung chữ logo gốc)
+			\foreach \dx/\dy in {-0.7/0,0.7/0,0/-0.3,0/0.3,0/0}
+			\node[anchor=center,inner sep=0pt,outer sep=0pt,text=ezText,align=center] at (109.6+\dx,-193.6+\dy)
+			{\resizebox{1.01cm}{0.22cm}{\fontencoding{T1}\fontfamily{ptm}\fontseries{b}\selectfont EDUZY}};
+		\end{tikzpicture}%
+	}%
+}
+%====================== THIẾT LẬP THÂN ĐỀ ======================
+%--- Môi trường tự luận {bt}: ex_test 3.3.4 chưa khai báo sẵn nên tạo ở đây
+%    (ex_test đã tự móc \fixshowans và \listenumerate cho bt)
+\makeatletter
+\@ifundefined{bt}{\newtheorem{bt}{\color{gold1}\namebt}}{}
+\makeatother
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+%--- Khung tiêu đề (logo + tối đa 4 dòng; dòng 3, 4 để trống {} thì bỏ qua)
+%  Đề thi:    \khungtieude{THI THỬ THPT QUỐC GIA NĂM 2026}{Môn Toán -- Đề số 21}
+%                         {(Đề thi gồm: ...)}{Thời gian làm bài: 90 phút (không kể thời gian phát đề).}
+%  Chuyên đề: \khungtieude{CHUYÊN ĐỀ 3 -- DÃY SỐ VÀ CÔNG THỨC TRUY HỒI}
+%                         {Bồi dưỡng học sinh giỏi Toán THPT}{...}{}
+\newcommand{\khungtieude}[4]{%
+	\begin{tcolorbox}[colframe=gold1,colback=gold5!45,boxrule=0.5mm]
+		\begin{minipage}[c]{3cm}
+			\centerline{\eduzylogo[2.4cm]}
+		\end{minipage}\hspace{0.5cm}
+		\begin{minipage}[c]{12.5cm}
+			\vskip 0.15 cm
+			\centerline{\ind{#1}}
+			\vskip 0.15 cm
+			\centerline{\textbf{#2}}
+			\if\relax\detokenize{#3}\relax\else
+				\vskip 0.15 cm
+				\centerline{\textit{#3}}
+			\fi
+			\if\relax\detokenize{#4}\relax\else
+				\vskip 0.15 cm
+				\centerline{\textit{#4}}
+			\fi
+			\vskip 0.15 cm
+		\end{minipage}
+	\end{tcolorbox}
+}
+%====================== BỔ SUNG CHO BÀI HỌC, CHUYÊN ĐỀ ======================
+\usepackage[shortlabels]{enumitem}
+\usepackage{tabularx}
+%--- Danh sách gọn: \begin{enumerate}[gon] ... \end{enumerate}
+\SetEnumitemKey{gon}{leftmargin=*,itemsep=1pt,parsep=0pt,topsep=3pt}
+%--- Khung lý thuyết: \begin{khung}{} ... \end{khung}; tiêu đề chỉ dùng khi thật ngắn ("Mẹo", "Lỗi thường gặp")
+\newtcolorbox{khung}[1]{breakable,enhanced,colframe=gold1,colback=gold5!45,
+	boxrule=0.4mm,fonttitle=\bfseries\sffamily,coltitle=white,colbacktitle=gold1,
+	attach boxed title to top left={xshift=6mm,yshift=-3mm},
+	boxed title style={arc=1mm,boxrule=0.3mm},title={#1}}
+%--- Tiêu đề mục nhỏ trong một dạng: \muc{Dấu hiệu}, \muc{Phương pháp}, \muc{Bài tự luyện}
+\makeatletter
+\newcommand{\muc}[1]{\par\medskip\noindent\indam{#1}\par\nobreak\smallskip\@afterindentfalse\@afterheading}
+\makeatother
+%--- Ô công thức cần nhớ (căn giữa, viền vàng, vừa khít nội dung)
+%     \begin{center}\congthuc{$Q(n)=(n-1)!$}\end{center}
+\newtcbox{\congthuc}{on line,colframe=gold1,colback=gold5!45,boxrule=0.5pt,arc=2pt,
+	left=8pt,right=8pt,top=4pt,bottom=4pt}
+%--- Công tắc lời giải bài tự luyện (ví dụ mẫu luôn dùng \loigiai)
+%     \loigiaiTL[{đáp số}]{lời giải đầy đủ}
+%     \TLfull -> in lời giải đầy đủ;  \TLdapso -> chỉ in một dòng "Đáp số";  \TLan -> ẩn hoàn toàn
+%     (\CheDo là dethi thì mọi lời giải và đáp số đều ẩn)
+\makeatletter
+\newif\ifTLhien   \TLhientrue
+\newif\ifTLdapso  \TLdapsofalse
+\newcommand{\TLfull}{\TLhientrue\TLdapsofalse}
+\newcommand{\TLdapso}{\TLhientrue\TLdapsotrue}
+\newcommand{\TLan}{\TLhienfalse}
+\newcommand{\loigiaiTL}[2][]{%
+	\ifTLhien
+		\ifTLdapso
+			\def\@tlarg{#1}%
+			\ifx\@tlarg\@empty\else
+				\ifdefstring{\kindOPTN}{dethi}{}{\par\noindent{\bfseries\color{gold1}Đáp số:} #1\par}%
+			\fi
+		\else
+			\loigiai{#2}%
+		\fi
+	\fi}
+\makeatother
+\TLdapso% mặc định: chỉ in đáp số bài tự luyện
+%====================== BẢNG ĐÚNG/SAI (\choiceTFt) ======================
+%  Hàng tiêu đề nền nâu đồng chữ trắng (Phát biểu | Đ | S), các hàng tô xen kẽ kem / trắng,
+%  đường kẻ vàng kim, nhãn a) b) c) d) màu nâu đồng. Bản có đáp án: cột được chọn có vòng tròn
+%  nâu đồng với dấu tích trắng (câu đúng tích ở cột Đúng, câu sai tích ở cột Sai).
+%  Tiêu đề ghi đủ "Đúng | Sai": \OPTN{viettat=0} sau \input (cột Đúng/Sai rộng ra, phát biểu hẹp lại).
+%  Dùng bảng gốc của ex_test: \def\BangDSgoc{1} trước \input{preamble-eduzy-v2}.
+\providecommand{\BangDSgoc}{0}
+\ifnum\BangDSgoc=0
+\usepackage{colortbl,pifont}
+\colorlet{ezDSke}{gold2!60!gold1}% đường kẻ bảng (nét 0,4pt như ex_test để không đổi chiều cao bảng)
+\colorlet{ezDSle}{gold5!60}% hàng a), c)
+\colorlet{ezDSchan}{white}% hàng b), d)
+%--- dấu chọn ở cột Đúng/Sai
+%    (bề rộng 0, căn giữa ô: không làm đổi bề rộng cột của ex_test, không báo tràn lề)
+\newcommand{\EZdauchon}{\makebox[0pt]{\tikz[baseline=-1ex]\node[circle,fill=gold1,inner sep=0pt,
+	minimum size=1.2em,text=white,font=\small]{\ding{51}};}}
+\def\tickT{\EZdauchon}\def\tickF{\EZdauchon}
+\AtBeginDocument{\sbox{\ccTFTab}{\EZdauchon}}
+%--- nhãn a) b) c) d) màu nâu đồng (ở bản lời giải, nhãn câu đúng vẫn đóng khung như ex_test)
+\renewcommand{\FalseTF}{\stepcounter{dapan}\textbf{\color{gold1}\DapAnTF\sepTF}\ignorespaces}
+%--- trước khi dựng bảng: kẻ màu vàng kim (bề rộng cột giữ nguyên như ex_test); sau bảng trả lại màu đen
+\newcount\EZhangTF
+\newcommand{\EZbatdauTF}{%
+	\global\EZhangTF=0\relax
+	\arrayrulecolor{ezDSke}}
+\newcommand{\EZketthucTF}{\arrayrulecolor{black}}
+%--- hàng tiêu đề nền nâu đồng, chữ trắng
+\makeatletter
+\newcommand{\EZo@TF}[1]{\centering\bfseries\color{white}#1}
+\newcommand{\EZtieudeTF}{%
+	\ifcase\cotDS
+		\ifnum\cotSTT=1\relax
+			\def\rowHeader{\hline\rowcolor{gold1}\EZo@TF{TT}&\EZo@TF{\phatbieu}\tabularnewline}%
+		\else
+			\def\rowHeader{\hline\rowcolor{gold1}\EZo@TF{\phatbieu}\tabularnewline}%
+		\fi
+	\or
+		\ifnum\cotSTT=1\relax
+			\def\rowHeader{\hline\rowcolor{gold1}\EZo@TF{TT}&\EZo@TF{\phatbieu}&\EZo@TF{\Dung}\tabularnewline}%
+		\else
+			\def\rowHeader{\hline\rowcolor{gold1}\EZo@TF{\phatbieu}&\EZo@TF{\Dung}\tabularnewline}%
+		\fi
+	\or
+		\ifnum\cotSTT=1\relax
+			\def\rowHeader{\hline\rowcolor{gold1}\EZo@TF{TT}&\EZo@TF{\phatbieu}&\EZo@TF{\Dung}&\EZo@TF{\Sai}\tabularnewline}%
+		\else
+			\def\rowHeader{\hline\rowcolor{gold1}\EZo@TF{\phatbieu}&\EZo@TF{\Dung}&\EZo@TF{\Sai}\tabularnewline}%
+		\fi
+	\fi}
+%--- tô xen kẽ từng hàng (gọi ngay sau \hline đầu mỗi hàng)
+\newcommand{\EZmauhangTF}{%
+	\noalign{\global\advance\EZhangTF\@ne}%
+	\ifodd\EZhangTF\rowcolor{ezDSle}\else\rowcolor{ezDSchan}\fi}
+%--- gắn vào \choiceTFt / \writeChoiceTFt của ex_test
+\xpretocmd{\choiceTFt}{\EZbatdauTF}{}{\typeout{[preamble-eduzy-v2] Không gắn được bảng Đúng/Sai (đầu bảng)}}
+\xpatchcmd{\choiceTFt}{\ifnum\dongPB=0\def\rowHeader{}\fi}{\EZtieudeTF\ifnum\dongPB=0\def\rowHeader{}\fi}
+	{}{\typeout{[preamble-eduzy-v2] Không gắn được bảng Đúng/Sai (hàng tiêu đề)}}
+\xpatchcmd{\writeChoiceTFt}{\hline\xdef\dotEX{\sdotEX}}{\hline\EZmauhangTF\xdef\dotEX{\sdotEX}}
+	{}{\typeout{[preamble-eduzy-v2] Không gắn được bảng Đúng/Sai (tô hàng)}}
+\xpatchcmd{\writeChoiceTFt}{{\end{longtable}}}{{\end{longtable}\EZketthucTF}}
+	{}{\typeout{[preamble-eduzy-v2] Không gắn được bảng Đúng/Sai (cuối longtable)}}
+\xpatchcmd{\writeChoiceTFt}{{\end{xtabular}\end{center}\medskip\noindent}}{{\end{xtabular}\end{center}\EZketthucTF\medskip\noindent}}
+	{}{\typeout{[preamble-eduzy-v2] Không gắn được bảng Đúng/Sai (cuối xtabular)}}
+\fi
+%=====================================================================
+\renewcommand{\parallel}{\mathrel{/\!\!/}}
