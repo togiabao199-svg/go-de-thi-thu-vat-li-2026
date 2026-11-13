@@ -35,4 +35,6 @@ Các phép tính chính:
 - Bỏ "Đáp án: …", "Vì vậy chọn …" của lời giải gốc (ex_test tự in).
 
 ## Hình
-9 hình vẽ lại bằng TikZ, tô màu (so hình ở `so-hinh/`): I.2 (4 đồ thị), I.5 (xilanh, áp kế, khung phóng to mặt đồng hồ; giữ số chỉ 4 vì có trong lời đề), I.15, I.16 (đồ thị $E_\text{lkr}$, số liệu điểm đo từ ảnh gốc), II.2 (máy đo địa chấn; nam châm để xám vì đề không ghi cực), II.3, II.4 (cốc, bình, nhiệt kế; nhiệt kế y tế bằng macro riêng `\VLnhietkeyte`), III.2 (lưới vẽ đều), III.6 (mạch circuitikz, nguồn `battery1` cực dương ở trên).
+9 hình vẽ lại bằng TikZ, tô màu (so hình ở `so-hinh/`): I.2 (4 đồ thị), I.5 (xilanh, pit-tông, núm ấn, bàn tay `\VLtayan`, ống dẫn, áp kế nhỏ, khung phóng to mặt áp kế `\VLapkebar` kèm chân và khớp nối; kim chỉ 4 vì có trong lời đề), I.15, I.16 (đồ thị $E_\text{lkr}$, số liệu điểm đo từ ảnh gốc), II.2 (máy đo địa chấn; nam châm để xám vì đề không ghi cực), II.3, II.4 (cốc, bình thủy tinh có mặt thoáng elip `\VLcocthuytinh`, nhiệt kế thủy tinh chi tiết `\VLnhietkett`, nhiệt kế y tế `\VLnhietkeyte`), III.2 (lưới vẽ đều), III.6 (mạch circuitikz, nguồn `battery1` cực dương ở trên).
+
+Hình thực tiễn I.5, II.4 vẽ lại chi tiết theo yêu cầu bổ sung 13/11/2026 (tô khối, bóng đổ, kính trong, vệt sáng), gắn `% giuhinh`: I.5 rộng 9,2 cm, II.4 rộng 10,1 cm.
