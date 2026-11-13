@@ -53,3 +53,4 @@ Phần III:
 - I.10: bỏ nền mây trời của ảnh gốc; giữ chữ, mặt trời – mây, năm biểu tượng thời tiết.
 - II.2: giữ khung hai ô "Ảnh chụp thí nghiệm | Sơ đồ bố trí thí nghiệm" như bản gốc.
 - II.4: màn hình cân bản gốc hiển thị chồng hai chữ ("60g" đè "0,0g") → vẽ lại ghi "60 g".
+- Tô màu lại hình theo bảng màu 13/11/2026: I.12 dây mạch đen, ampe kế/vôn kế nền nhạt, dây dẫn xuống bình màu đồng, bình nhiệt lượng kế kim loại xám, nước xanh; II.2 cốc nhôm xám; II.4 nước đá, giọt nước xanh, dây nung đỏ; III.4 dây nối lõi đồng, dây điện trở đỏ, nhiệt lượng kế nền nhạt, oát kế nền nhạt, cọc + đỏ. Các hình còn lại (I.1, I.2, I.5, I.10, III.1, III.3, III.5) đã có màu như vật thật, giữ nguyên.

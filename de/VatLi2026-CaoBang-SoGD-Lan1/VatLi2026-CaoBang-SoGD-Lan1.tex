@@ -37,48 +37,49 @@
 		Hình vẽ nào sau đây xác định đúng lực từ tác dụng lên đoạn dây dẫn có dòng điện nằm trong vùng không gian có từ trường đều?
 		\begin{center}
 			\begin{tikzpicture}[line join=round,line cap=round,>=stealth,font=\footnotesize]
+				\foreach \k in {0,...,3}{\fill[VLxanh!8,rounded corners=2pt] ({\k*3.3-0.05},-0.02) rectangle ({\k*3.3+2.45},2.07);}
 				% Hình 1
 				\begin{scope}
 					\foreach \i in {0,...,4}{\foreach \j in {0,...,3}{\VLcham{0.2+0.5*\i}{0.2+0.55*\j}}}
 					\VLthanhngang{1.15}{1.025}{1.1}
-					\draw[VLmui,thick] (0.75,1.025)--(1.55,1.025);
-					\node at (0.95,1.3) {$I$};
-					\draw[VLmui,thick] (1.25,0.925)--(1.25,0.3);
-					\node at (1.48,0.47) {$\vv{F}$};
-					\node at (0.45,0.47) {$\vv{B}$};
+					\draw[VLmui,thick,VLdo] (0.75,1.025)--(1.55,1.025);
+					\node[VLdo] at (0.95,1.3) {$I$};
+					\draw[VLmui,thick,VLluc] (1.25,0.925)--(1.25,0.3);
+					\node[VLluc] at (1.48,0.47) {$\vv{F}$};
+					\node[VLxanh!85!black] at (0.45,0.47) {$\vv{B}$};
 					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 1};
 				\end{scope}
 				% Hình 2
 				\begin{scope}[xshift=3.3cm]
 					\foreach \i in {0,...,4}{\foreach \j in {0,...,3}{\VLnhan{0.2+0.5*\i}{0.2+0.55*\j}}}
 					\VLthanhngang{1.15}{1.025}{1.1}
-					\draw[VLmui,thick] (1.55,1.025)--(0.75,1.025);
-					\node at (0.95,0.75) {$I$};
-					\draw[VLmui,thick] (1.25,1.125)--(1.25,1.75);
-					\node at (1.48,1.58) {$\vv{F}$};
-					\node at (0.45,1.58) {$\vv{B}$};
+					\draw[VLmui,thick,VLdo] (1.55,1.025)--(0.75,1.025);
+					\node[VLdo] at (0.95,0.75) {$I$};
+					\draw[VLmui,thick,VLluc] (1.25,1.125)--(1.25,1.75);
+					\node[VLluc] at (1.48,1.58) {$\vv{F}$};
+					\node[VLxanh!85!black] at (0.45,1.58) {$\vv{B}$};
 					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 2};
 				\end{scope}
 				% Hình 3
 				\begin{scope}[xshift=6.6cm]
 					\foreach \i in {0,1,3,4}{\foreach \j in {0,...,3}{\VLcham{0.2+0.5*\i}{0.2+0.55*\j}}}
 					\VLthanhdung{1.2}{1.0}{1.0}
-					\draw[VLmui,thick] (1.2,0.65)--(1.2,1.35);
-					\node at (1.45,0.85) {$I$};
-					\draw[VLmui,thick] (1.1,1.0)--(0.3,1.0);
-					\node at (0.45,1.25) {$\vv{F}$};
-					\node at (1.95,1.6) {$\vv{B}$};
+					\draw[VLmui,thick,VLdo] (1.2,0.65)--(1.2,1.35);
+					\node[VLdo] at (1.45,0.85) {$I$};
+					\draw[VLmui,thick,VLluc] (1.1,1.0)--(0.3,1.0);
+					\node[VLluc] at (0.45,1.25) {$\vv{F}$};
+					\node[VLxanh!85!black] at (1.95,1.6) {$\vv{B}$};
 					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 3};
 				\end{scope}
 				% Hình 4
 				\begin{scope}[xshift=9.9cm]
 					\foreach \i in {0,1,3,4}{\foreach \j in {0,...,3}{\VLnhan{0.2+0.5*\i}{0.2+0.55*\j}}}
 					\VLthanhdung{1.2}{1.0}{1.0}
-					\draw[VLmui,thick] (1.2,1.35)--(1.2,0.65);
-					\node at (1.45,0.85) {$I$};
-					\draw[VLmui,thick] (1.1,1.0)--(0.3,1.0);
-					\node at (0.45,1.25) {$\vv{F}$};
-					\node at (1.95,1.6) {$\vv{B}$};
+					\draw[VLmui,thick,VLdo] (1.2,1.35)--(1.2,0.65);
+					\node[VLdo] at (1.45,0.85) {$I$};
+					\draw[VLmui,thick,VLluc] (1.1,1.0)--(0.3,1.0);
+					\node[VLluc] at (0.45,1.25) {$\vv{F}$};
+					\node[VLxanh!85!black] at (1.95,1.6) {$\vv{B}$};
 					\node[font=\footnotesize\bfseries] at (1.2,-0.3) {Hình 4};
 				\end{scope}
 			\end{tikzpicture}
@@ -134,7 +135,7 @@
 			\centering
 			\begin{tikzpicture}[scale=0.75,line join=round,line cap=round,font=\footnotesize]
 				\fill[gray!25] (0,-1.33) ellipse (1.05 and 0.11);
-				\shade[inner color=white,outer color=VLxanh!10!gray!38] (-0.36,1.95)--(-0.36,1.25) arc[start angle=105.5,end angle=434.5,radius=1.3]--(0.36,1.95)--cycle;
+				\shade[inner color=white,outer color=VLxanh!22!gray!38] (-0.36,1.95)--(-0.36,1.25) arc[start angle=105.5,end angle=434.5,radius=1.3]--(0.36,1.95)--cycle;
 				\foreach \a in {-60,-52,...,36}{\draw[gray!55,very thin] (\a:1.06)--(\a:1.24);}
 				\foreach \a in {196,204,...,252}{\draw[gray!45,very thin] (\a:1.12)--(\a:1.25);}
 				\draw[white,line width=2.2pt,opacity=0.95] (152:1.0) arc[start angle=152,end angle=118,radius=1.0];
@@ -143,12 +144,12 @@
 				\draw[thick] (-0.36,1.95)--(-0.36,1.25) arc[start angle=105.5,end angle=434.5,radius=1.3]--(0.36,1.95);
 				\draw[thick] (-0.36,1.95)--(-0.43,2.0) (0.36,1.95)--(0.43,2.0);
 				\draw[gray!70] (-0.05,0.95)--(-0.05,1.9) (0.05,0.95)--(0.05,1.9);
-				\shade[top color=black!55,bottom color=black!85,rounded corners=1.5pt] (-0.45,1.85) rectangle (0.45,2.28);
-				\draw[gray!60,very thin] foreach \x in {-0.33,-0.2,...,0.4}{(\x,1.88)--(\x,2.25)};
+				\shade[top color=VLgo!70!black,bottom color=VLgo!45!black,rounded corners=1.5pt] (-0.45,1.85) rectangle (0.45,2.28);
+				\draw[VLgo!35!black,very thin] foreach \x in {-0.33,-0.2,...,0.4}{(\x,1.88)--(\x,2.25)};
 				\fill[white] (-0.05,2.28) rectangle (0.05,4.1);
 				\draw (-0.05,2.28)--(-0.05,4.1) (0.05,2.28)--(0.05,4.1);
 				\draw (0,4.1) ellipse (0.05 and 0.016);
-				\fill[black!80,rounded corners=0.6pt] (-0.05,3.0) rectangle (0.05,3.25);
+				\fill[orange!75!black,rounded corners=0.6pt] (-0.05,3.0) rectangle (0.05,3.25);
 				\draw[thin] (0.1,3.8)--(0.9,3.8) node[right,inner sep=1.5pt] {Ống thủy tinh};
 				\draw[thin] (0.1,3.12)--(0.9,3.12) node[right,inner sep=1.5pt] {Giọt dầu};
 			\end{tikzpicture}
@@ -279,12 +280,12 @@
 		Một khối khí xác định có thể biến đổi trạng thái để có thể tích và áp suất ứng với các điểm a, b, c, d trong đồ thị $pOV$ như hình bên. Khối khí có nhiệt độ bằng nhau ứng với trạng thái của các điểm
 		\begin{center}
 			\begin{tikzpicture}[x=0.5cm,y=0.36cm,line join=round,line cap=round,font=\footnotesize]
-				\draw[gray!75,densely dashed,thin] (0,0) grid[step=1] (6,6);
+				\draw[gray!45,densely dashed,thin] (0,0) grid[step=1] (6,6);
 				\draw[VLmui,thick] (0,0)--(7.3,0) node[above left,inner sep=2pt] {$V$};
 				\draw[VLmui,thick] (0,0)--(0,7.1) node[right,inner sep=2pt] {$p$};
 				\fill (0,0) circle (2pt) node[below left,inner sep=2pt] {$O$};
 				\foreach \x/\y/\t in {1/2/a,2/5/b,5/2/c,3/1/d}{
-					\filldraw[fill=white,thick] (\x,\y) circle (2.4pt);
+					\filldraw[fill=VLla,draw=black,thick] (\x,\y) circle (2.4pt);
 					\node[above right,inner sep=1.5pt] at (\x,\y) {\t};}
 			\end{tikzpicture}
 		\end{center}
@@ -345,8 +346,8 @@
 				\draw[VLmui,thick] (0,0)--(6.7,0) node[above left,inner sep=2pt] {$t$};
 				\draw[VLmui,thick] (0,0)--(0,2.75) node[right,inner sep=2pt] {$\Phi$};
 				\node[below left,inner sep=2pt] at (0,0) {$O$};
-				\draw[thick] (0,1)--(1.8,1)--(3.1,1.8)--(4.8,1.8)--(5.9,0);
-				\draw[dashed,thin] (1.8,0)--(1.8,1) (3.1,0)--(3.1,1.8) (4.8,0)--(4.8,1.8);
+				\draw[very thick,VLxanh] (0,1)--(1.8,1)--(3.1,1.8)--(4.8,1.8)--(5.9,0);
+				\draw[dashed,thin,gray] (1.8,0)--(1.8,1) (3.1,0)--(3.1,1.8) (4.8,0)--(4.8,1.8);
 				\foreach \x/\t in {1.8/t_1,3.1/t_2,4.8/t_3,5.9/t_4}{\node[below,inner sep=2pt] at (\x,0) {$\t$};}
 			\end{tikzpicture}
 		\end{center}
@@ -368,26 +369,26 @@
 			\begin{tikzpicture}[scale=0.72,line join=round,line cap=round,font=\footnotesize]
 				\def\ux{0.95}\def\uy{-0.32}\def\bx{-0.85}\def\by{-0.26}\def\AE{1.3}\def\AB{1.1}
 				% mặt phẳng ngang (chứa B)
-				\fill[yellow!30,opacity=0.75,draw=orange!50] ({-0.4*\ux+1.45*\bx},{-0.4*\uy+1.45*\by})--({6.9*\ux+1.45*\bx},{6.9*\uy+1.45*\by})--({6.9*\ux-1.45*\bx},{6.9*\uy-1.45*\by})--({-0.4*\ux-1.45*\bx},{-0.4*\uy-1.45*\by})--cycle;
+				\fill[VLxanh!8,opacity=0.75,draw=VLxanh!45] ({-0.4*\ux+1.45*\bx},{-0.4*\uy+1.45*\by})--({6.9*\ux+1.45*\bx},{6.9*\uy+1.45*\by})--({6.9*\ux-1.45*\bx},{6.9*\uy-1.45*\by})--({-0.4*\ux-1.45*\bx},{-0.4*\uy-1.45*\by})--cycle;
 				% mặt phẳng đứng (chứa E)
-				\fill[VLxanh!14,opacity=0.75,draw=VLxanh!70] ({0.15*\ux},{0.15*\uy+1.9})--({6.5*\ux},{6.5*\uy+1.9})--({6.5*\ux},{6.5*\uy-1.9})--({0.15*\ux},{0.15*\uy-1.9})--cycle;
+				\fill[VLdo!8,opacity=0.75,draw=VLdo!45] ({0.15*\ux},{0.15*\uy+1.9})--({6.5*\ux},{6.5*\uy+1.9})--({6.5*\ux},{6.5*\uy-1.9})--({0.15*\ux},{0.15*\uy-1.9})--cycle;
 				% sóng E
-				\filldraw[fill=VLxanh!22,draw=VLxanh!85,thick] plot[domain=0:6,samples=97] ({\x*\ux},{\x*\uy+\AE*sin(90*\x)});
-				\fill[VLxanh!22,opacity=0.6] plot[domain=0:6,samples=97] ({\x*\ux},{\x*\uy+\AE*sin(90*\x)})--cycle;
+				\filldraw[fill=VLdo!22,draw=VLdo!85,thick] plot[domain=0:6,samples=97] ({\x*\ux},{\x*\uy+\AE*sin(90*\x)});
+				\fill[VLdo!22,opacity=0.6] plot[domain=0:6,samples=97] ({\x*\ux},{\x*\uy+\AE*sin(90*\x)})--cycle;
 				\foreach \s in {0.25,0.5,...,5.8}{
 					\pgfmathsetmacro{\h}{\AE*sin(90*\s)}
-					\ifdim\h pt>0.2pt\draw[VLxanh!85,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux},{\s*\uy+\h});\fi
-					\ifdim\h pt<-0.2pt\draw[VLxanh!85,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux},{\s*\uy+\h});\fi}
+					\ifdim\h pt>0.2pt\draw[VLdo!90,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux},{\s*\uy+\h});\fi
+					\ifdim\h pt<-0.2pt\draw[VLdo!90,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux},{\s*\uy+\h});\fi}
 				% sóng B
-				\filldraw[fill=VLdo!22,draw=VLdo!85,thick,opacity=0.9] plot[domain=0:6,samples=97] ({\x*\ux+\AB*sin(90*\x)*\bx},{\x*\uy+\AB*sin(90*\x)*\by})--cycle;
+				\filldraw[fill=VLxanh!22,draw=VLxanh!85,thick,opacity=0.9] plot[domain=0:6,samples=97] ({\x*\ux+\AB*sin(90*\x)*\bx},{\x*\uy+\AB*sin(90*\x)*\by})--cycle;
 				\foreach \s in {0.25,0.5,...,5.8}{
 					\pgfmathsetmacro{\h}{\AB*sin(90*\s)}
-					\ifdim\h pt>0.2pt\draw[VLdo!90,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux+\h*\bx},{\s*\uy+\h*\by});\fi
-					\ifdim\h pt<-0.2pt\draw[VLdo!90,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux+\h*\bx},{\s*\uy+\h*\by});\fi}
+					\ifdim\h pt>0.2pt\draw[VLxanh!85,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux+\h*\bx},{\s*\uy+\h*\by});\fi
+					\ifdim\h pt<-0.2pt\draw[VLxanh!85,VLmui,semithick] ({\s*\ux},{\s*\uy})--({\s*\ux+\h*\bx},{\s*\uy+\h*\by});\fi}
 				% các trục
 				\draw[VLmui,thick] (0,0)--({7.4*\ux},{7.4*\uy}) node[below,inner sep=3pt] {Phương truyền sóng};
-				\draw[VLmui,thick] (0,0)--(0,2.35) node[left,inner sep=2pt] {$\vv{E}$};
-				\draw[VLmui,thick] (0,0)--({2.0*\bx},{2.0*\by}) node[left,inner sep=2pt] {$\vv{B}$};
+				\draw[VLmui,thick] (0,0)--(0,2.35) node[left,inner sep=2pt,VLdo] {$\vv{E}$};
+				\draw[VLmui,thick] (0,0)--({2.0*\bx},{2.0*\by}) node[left,inner sep=2pt,VLxanh!85!black] {$\vv{B}$};
 				% nhãn
 				\draw[thin] ({0.9*\ux},{0.9*\uy+0.95})--(2.5,1.25) node[right,inner sep=1pt] {Điện trường $\vv{E}$};
 				\draw[thin] ({0.8*\ux+0.75*\bx},{0.8*\uy+0.75*\by})--(-0.6,-1.15) node[below,inner sep=1pt] {Từ trường $\vv{B}$};
@@ -434,9 +435,9 @@
 				\draw[black!80] (A)--(B)--(C)--(D)--cycle (B)--($(B)+(d)$)--($(C)+(d)$)--(C) (D)--($(D)+(d)$)--($(C)+(d)$);
 				\coordinate (O) at ($(D)+(1.7,0)+0.5*(d)$);
 				\fill[black!85] (O) ellipse (0.48 and 0.23);
-				\fill[gray!45] (O) ellipse (0.33 and 0.15);
+				\fill[yellow!85!orange] (O) ellipse (0.33 and 0.15);
 				\fill[black!85] (O) ellipse (0.22 and 0.1);
-				\fill[gray!60] ($(O)+(0,0.01)$) ellipse (0.06 and 0.028);
+				\fill[yellow!85!orange] ($(O)+(0,0.01)$) ellipse (0.06 and 0.028);
 			\end{tikzpicture}
 		\end{center}
 		\choice
@@ -461,11 +462,12 @@
 			\begin{tikzpicture}[x=0.45cm,y=0.4cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[VLmui,thick] (0,0)--(8.6,0) node[right,inner sep=2pt] {$V$ (lít)};
 				\draw[VLmui,thick] (0,0)--(0,7.8) node[left,inner sep=2pt] {$p$ ($10^5$ Pa)};
-				\draw[dashed,thin] (0,6)--(2,6) (0,2)--(2,2) (2,0)--(2,2) (6,0)--(6,2);
-				\draw[thick,VLgiua=0.55] plot[domain=2:6,samples=60] (\x,{12/\x});
-				\draw[thick,VLgiua=0.5] (6,2)--(2,2);
-				\draw[thick,VLgiua=0.55] (2,2)--(2,6);
-				\fill (2,6) circle (2pt) (6,2) circle (2pt) (2,2) circle (2pt);
+				\fill[VLla!35] plot[domain=2:6,samples=60] (\x,{12/\x}) -- (2,2) -- cycle;
+				\draw[dashed,thin,gray] (0,6)--(2,6) (0,2)--(2,2) (2,0)--(2,2) (6,0)--(6,2);
+				\draw[very thick,VLdo,VLgiua=0.55] plot[domain=2:6,samples=60] (\x,{12/\x});
+				\draw[very thick,VLxanh,VLgiua=0.5] (6,2)--(2,2);
+				\draw[very thick,VLluc,VLgiua=0.55] (2,2)--(2,6);
+				\foreach \p in {(2,6),(6,2),(2,2)}{\filldraw[fill=white,draw=black,thick] \p circle (2.2pt);}
 				\node[above,inner sep=2pt] at (2,6) {(1)};
 				\node[right,inner sep=2pt] at (6,2) {(2)};
 				\node[above left,inner sep=1.5pt] at (2,2) {(3)};
@@ -518,10 +520,10 @@
 		Cung cấp nhiệt lượng cho một viên nước đá tinh khiết có khối lượng $180$~g ở $0\,^\circ\text{C}$ chuyển từ thể rắn sang thể lỏng và hóa hơi hoàn toàn. Đồ thị biểu diễn nhiệt độ $t$ theo nhiệt lượng cung cấp $Q$ được mô tả như hình vẽ.
 		\begin{center}
 			\begin{tikzpicture}[scale=0.854,x=0.029cm,y=0.026cm,line join=round,line cap=round,font=\footnotesize]
-				\draw[gray!70,dashed,thin] (0,0) grid[xstep=20,ystep=20] (180,140);
+				\draw[gray!45,dashed,thin] (0,0) grid[xstep=20,ystep=20] (180,140);
 				\draw[VLmui,thick] (0,0)--(198,0) node[below,inner sep=3pt] {$Q$ (kJ)};
 				\draw[VLmui,thick] (0,0)--(0,158) node[left,inner sep=2pt] {$t$ ($^\circ$C)};
-				\draw[very thick] (0,0)--(60,0)--(135,100)--(180,100);
+				\draw[very thick,VLdo] (0,0)--(60,0)--(135,100)--(180,100);
 				\draw[thick] (120,74)--(120,86) (135,94)--(135,106);
 				\draw[thick] (-4,80)--(0,80) node[left,inner sep=2pt] {$80$};
 				\draw[thick] (120,0)--(120,-4) node[below,inner sep=2pt] {$120$};
@@ -590,7 +592,7 @@
 				\draw[VLdo!90!black,line width=1pt] (Pd) .. controls +(0.4,0.25) and +(0.2,0.6) .. (4.35,2.8) .. controls +(-0.15,-0.6) and +(-0.25,0.2) .. (Od);
 				% nam châm
 				\begin{scope}[shift={(0.0,-0.95)}]
-					\VLnamcham{6.4}{0.5}{VLxanh}{VLdo}{N}{S}
+					\VLnamcham{6.4}{0.5}{VLdo}{VLxanh}{N}{S}
 				\end{scope}
 			\end{tikzpicture}
 		\end{center}
@@ -636,7 +638,7 @@
 			\begin{tikzpicture}[x=5cm,y=0.68cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[VLmui,thick] (0,0)--(0.56,0) node[above left,inner sep=2pt] {$t$ (s)};
 				\draw[VLmui,thick] (0,0)--(0,3.15) node[right,inner sep=2pt] {$B$ (mT)};
-				\draw[very thick] (0,2.4)--(0.4,0);
+				\draw[very thick,VLxanh] (0,2.4)--(0.4,0);
 				\node[left,inner sep=2pt] at (0,2.4) {$2{,}4$};
 				\node[below,inner sep=2pt] at (0.4,0) {$0{,}4$};
 				\node[below left,inner sep=2pt] at (0,0) {$O$};
@@ -675,24 +677,25 @@
 		\begin{center}
 			\begin{tikzpicture}[scale=0.58,line join=round,line cap=round,font=\footnotesize]
 				% đòn cân
-				\draw[thick] (1.3,2.55)--(1.3,3.3)--(8.0,3.3)--(8.0,2.55);
-				\fill (4.65,3.3)--(4.35,2.75)--(4.95,2.75)--cycle;
+				\draw[line width=1.3pt,black!70] (1.3,2.55)--(1.3,3.3)--(8.0,3.3)--(8.0,2.55);
+				\filldraw[fill=gray!55,draw=black] (4.65,3.3)--(4.35,2.75)--(4.95,2.75)--cycle;
 				% đĩa cân
-				\draw[thick] (1.3,2.55)--(0,1.45)--(2.6,1.45)--cycle;
-				\draw[thick] (8.0,2.55)--(6.7,1.45)--(9.3,1.45)--cycle;
-				\fill (0.85,1.45) rectangle (1.35,1.9) (1.45,1.45) rectangle (1.8,1.75);
+				\filldraw[thick,fill=gray!15] (1.3,2.55)--(0,1.45)--(2.6,1.45)--cycle;
+				\filldraw[thick,fill=gray!15] (8.0,2.55)--(6.7,1.45)--(9.3,1.45)--cycle;
+				\shade[top color=VLdong!60!white,bottom color=VLdong!80!black,draw=VLdong!40!black] (0.85,1.45) rectangle (1.35,1.9);
+				\shade[top color=VLdong!60!white,bottom color=VLdong!80!black,draw=VLdong!40!black] (1.45,1.45) rectangle (1.8,1.75);
 				% dây treo, khung dây
 				\draw[thick] (8.0,1.45)--(8.0,0.92);
-				\draw[thick,fill=white] (8.0,0.76) circle (0.16);
-				\fill (8.0,0.76) circle (0.045);
+				\draw[thick,VLdo,fill=white] (8.0,0.76) circle (0.16);
+				\fill[VLdo] (8.0,0.76) circle (0.045);
 				% đường sức (vẽ trước khung)
-				\foreach \y in {-0.55,-0.85,-1.15,-1.45}{\draw[VLmui,semithick] (8.6,\y)--(7.4,\y);}
-				\shade[left color=gray!90,right color=gray!65,middle color=gray!45,draw=black] (7.93,0.6) rectangle (8.07,-0.92);
-				\draw[thick,fill=white] (8.0,-1.08) circle (0.16);
-				\draw[thick] (8.0,-1.08)++(-0.113,-0.113)--++(0.226,0.226) (8.0,-1.08)++(-0.113,0.113)--++(0.226,-0.226);
+				\foreach \y in {-0.55,-0.85,-1.15,-1.45}{\draw[VLmui,semithick,VLxanh] (8.6,\y)--(7.4,\y);}
+				\shade[left color=VLdong!80!black,right color=VLdong!55!white,middle color=VLdong!30!white,draw=VLdong!40!black] (7.93,0.6) rectangle (8.07,-0.92);
+				\draw[thick,VLdo,fill=white] (8.0,-1.08) circle (0.16);
+				\draw[thick,VLdo] (8.0,-1.08)++(-0.113,-0.113)--++(0.226,0.226) (8.0,-1.08)++(-0.113,0.113)--++(0.226,-0.226);
 				% nam châm
-				\draw[thick,fill=gray!10] (6.4,-1.75) rectangle (7.4,-0.3);
-				\draw[thick,fill=gray!10] (8.6,-1.75) rectangle (9.6,-0.3);
+				\shade[top color=VLxanh!30,bottom color=VLxanh!55,draw=black,thick] (6.4,-1.75) rectangle (7.4,-0.3);
+				\shade[top color=VLdo!30,bottom color=VLdo!55,draw=black,thick] (8.6,-1.75) rectangle (9.6,-0.3);
 				\node[font=\bfseries] at (6.9,-1.02) {S};
 				\node[font=\bfseries] at (9.1,-1.02) {N};
 			\end{tikzpicture}

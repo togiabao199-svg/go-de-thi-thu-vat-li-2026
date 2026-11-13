@@ -17,3 +17,6 @@ Mọi câu đã giải lại, các câu có số liệu tính kiểm bằng Pyth
 - II.2: bỏ chữ rác "Nhm" trước ²⁷₁₃Al.
 - III.1: "nhiệt hoá hơi" → "nhiệt hóa hơi riêng" (đúng đơn vị J/kg).
 - III.6: bản gốc mất chữ: "áp suất của khí tăng thêm 10⁵ Pa. Giá trị của a…" → "tăng thêm a·10⁵ Pa. Giá trị của a…" (khớp đáp án gốc a = 3).
+
+## Tô màu
+- Tô màu lại hình theo bảng màu 13/11/2026 (I.2, I.5, I.11, I.15, I.16, I.18, II.1, II.3, II.4, III.2, III.5; I.9 giữ màu cũ). II.4: nam châm đổi thành N đỏ, S xanh theo quy ước (ảnh gốc N xanh, S đỏ).

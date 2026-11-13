@@ -51,3 +51,5 @@
 - I.13: thêm nhãn "Hình a", "Hình b" dưới hai hình (lời đề gọi tên hai hình; ảnh gốc chỉ có dấu nhỏ không rõ).
 - I.15: bỏ dấu chấm cuối các chú thích ("Nhiệt lượng kế." → "Nhiệt lượng kế").
 - II.1: đồ thị giữ lưới 5 phút × 10 °C, các điểm M, N, P, Q đặt theo số liệu đọc trên lưới gốc (M(0; 80), N(8; 45), P(13; 7), Q(40; 27,5)).
+
+- Tô màu lại hình theo bảng màu 13/11/2026: II.1 đường đồ thị VLdo very thick, điểm M, N, P, Q chấm tròn viền đen, lưới xám nhạt; III.5 miếng đồng màu đồng (shade), nước trong cốc VLxanh; II.2 ngọn lửa nguồn nhiệt VLdo; các hình còn lại (I.9, I.11, I.13, I.15, I.16) đã có màu đúng bảng, giữ nguyên.
