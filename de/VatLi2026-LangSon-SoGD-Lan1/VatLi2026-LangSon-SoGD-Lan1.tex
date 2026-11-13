@@ -9,6 +9,23 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
+% --- Macro riêng của đề (có thể gom vào preamble-vatli-hinh.tex) ---
+% màn hình LCD của thiết bị: viền đen, nền xanh nhạt chuyển màu, vệt phản quang mặt kính;
+% tâm (x,y), rộng, cao (vùng hiển thị, chưa kể viền 0,06), chữ hiển thị (để trống {} nếu đề không cho số): \VLmanhinh{x}{y}{rộng}{cao}{chữ}
+\newcommand{\VLmanhinh}[5]{%
+	\filldraw[fill=black!78,draw=black,rounded corners=1.5pt] (#1-0.5*#3-0.06,#2-0.5*#4-0.06) rectangle (#1+0.5*#3+0.06,#2+0.5*#4+0.06);
+	\shade[top color=VLla!20,bottom color=VLla!60] (#1-0.5*#3,#2-0.5*#4) rectangle (#1+0.5*#3,#2+0.5*#4);
+	\node[font=\footnotesize\bfseries,text=black!85] at (#1,#2) {#5};
+	\fill[white,opacity=0.3] (#1-0.5*#3,#2+0.5*#4)--(#1-0.08*#3,#2+0.5*#4)--(#1-0.32*#3,#2-0.5*#4)--(#1-0.5*#3,#2-0.5*#4)--cycle;}
+% ống nước thẳng đứng nối vào đáy thiết bị, có đai ốc ở đầu trên và miệng ống (elip) ở đầu dưới;
+% tâm x, y mép trên đai ốc, y miệng ống, màu ống: \VLongnoi{x}{y trên}{y dưới}{màu}
+\newcommand{\VLongnoi}[4]{%
+	\shade[left color=#4!70!black,right color=#4!75!black,middle color=#4!30!white] (#1-0.12,#3) rectangle (#1+0.12,#2-0.18);
+	\draw[#4!45!black,thin] (#1-0.12,#3)--(#1-0.12,#2-0.18) (#1+0.12,#3)--(#1+0.12,#2-0.18);
+	\fill[white,opacity=0.55] (#1-0.065,#3+0.05) rectangle (#1-0.035,#2-0.22);
+	\shade[left color=gray!75,right color=gray!50,middle color=gray!8,draw=black!70,thin] (#1-0.19,#2-0.2) rectangle (#1+0.19,#2+0.02);
+	\draw[black!45,very thin] (#1-0.07,#2-0.2)--(#1-0.07,#2+0.02) (#1+0.07,#2-0.2)--(#1+0.07,#2+0.02);
+	\filldraw[fill=#4!25,draw=#4!45!black,thin] (#1,#3) ellipse (0.12 and 0.035);}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT LẠNG SƠN -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -274,7 +291,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{26\baselineskip}
+	\NeedspaceCau{27\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-LangSon-SoGD-Lan1-2]
@@ -288,29 +305,41 @@
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.42\linewidth}
 			\centering
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				% dây điện vào
-				\shade[left color=black!75,right color=gray!60] (-0.1,3.25) rectangle (0.1,4.0);
-				% ống nước nóng ra, ống nước lạnh vào
-				\shade[left color=VLdo!75!black,right color=VLdo!45] (-0.55,-0.7) rectangle (-0.3,0.1);
-				\shade[left color=VLxanh!75!black,right color=VLxanh!45] (0.3,-0.7) rectangle (0.55,0.1);
-				% thân máy
-				\shade[left color=gray!8,right color=gray!35] (-0.95,0) [rounded corners=10pt] rectangle (0.95,3.3);
-				\draw[line width=1.2pt,rounded corners=10pt] (-0.95,0) rectangle (0.95,3.3);
-				\filldraw[fill=gray!5,draw=black,line width=1pt,rounded corners=7pt] (-0.75,1.1) rectangle (0.75,3.02);
+			\begin{tikzpicture}[scale=1.1,line join=round,line cap=round,font=\footnotesize]
+				% bóng đổ nhẹ trên tường
+				\fill[black,opacity=0.12,rounded corners=10pt] (-0.86,-0.1) rectangle (1.06,3.2);
+				% dây điện vào (cáp mềm, có đầu chống gập)
+				\draw[line width=2.6pt,black!80] (0,3.42) .. controls (0,3.7) and (-0.04,3.85) .. (-0.02,4.08);
+				\draw[line width=0.6pt,gray!60] (-0.03,3.44) .. controls (-0.03,3.7) and (-0.07,3.85) .. (-0.05,4.06);
+				\shade[left color=black!80,right color=gray!55,middle color=gray!40] (-0.14,3.28)--(0.14,3.28)--(0.08,3.5)--(-0.08,3.5)--cycle;
+				% ống nước nóng ra, ống nước lạnh vào (đai ốc ở đáy máy)
+				\VLongnoi{-0.42}{0.02}{-0.72}{VLdo}
+				\VLongnoi{0.42}{0.02}{-0.72}{VLxanh}
+				% thân máy: sáng từ trái
+				\shade[left color=gray!4,right color=gray!42] (-0.95,0) [rounded corners=10pt] rectangle (0.95,3.3);
+				\fill[white,opacity=0.7,rounded corners=2pt] (-0.86,0.3) rectangle (-0.78,3.0);
+				\draw[gray!55,thin,rounded corners=8pt] (-0.89,0.06) rectangle (0.89,3.24);
+				\draw[black!85,line width=1.2pt,rounded corners=10pt] (-0.95,0) rectangle (0.95,3.3);
+				% bảng điều khiển
+				\shade[top color=white,bottom color=gray!18,rounded corners=7pt] (-0.75,1.1) rectangle (0.75,3.02);
+				\draw[gray!45,thin,rounded corners=6pt] (-0.71,1.14) rectangle (0.71,2.98);
+				\draw[black!85,line width=1pt,rounded corners=7pt] (-0.75,1.1) rectangle (0.75,3.02);
 				% màn hình
-				\filldraw[fill=VLla!30,draw=black,thick] (-0.52,2.2) rectangle (0.52,2.72);
-				\node[font=\footnotesize\bfseries] at (0,2.46) {$70\,^\circ$C};
-				% núm điều chỉnh
-				\VLnumvan{0}{1.6}{0.2}
+				\VLmanhinh{0}{2.46}{0.96}{0.44}{$70\,^\circ$C}
+				% núm điều chỉnh có vạch chia
+				\foreach \a in {-45,-15,...,225}{\draw[gray!65,thin] ($(0,1.6)+(\a:0.27)$)--($(0,1.6)+(\a:0.33)$);}
+				\fill[black,opacity=0.15] (0.03,1.57) circle (0.23);
+				\VLnumvan{0}{1.6}{0.22}
+				\draw[black!85,line width=0.9pt] ($(0,1.6)+(225:0.05)$)--($(0,1.6)+(225:0.19)$);
+				\fill[white,opacity=0.6] (-0.08,1.69) circle (0.035);
 				% nhãn
-				\draw[thin,VLmui] (1.0,3.85)--(0.14,3.68);
+				\draw[thin,VLmui] (1.0,3.85)--(0.08,3.72);
 				\node[align=center,inner sep=1pt] at (1.75,3.85) {Đường đưa\\điện vào};
 				\draw[thin,VLmui] (-3.1,3.2)--(-1.3,3.2)--(-0.54,2.6);
 				\node[align=center,inner sep=1pt] at (-2.05,3.6) {Nhiệt độ nước\\đã làm nóng};
-				\draw[thin,VLmui] (2.5,1.15)--(1.15,1.15)--(0.24,1.56);
+				\draw[thin,VLmui] (2.5,1.15)--(1.15,1.15)--(0.3,1.52);
 				\node[align=center,anchor=south,inner sep=1.5pt] at (1.85,1.15) {Núm điều\\chỉnh};
-				\draw[thin,VLmui] (-1.75,0.3)--(-0.6,-0.42);
+				\draw[thin,VLmui] (-1.75,0.3)--(-0.58,-0.45);
 				\node[align=center,inner sep=1pt] at (-2.2,0.75) {Ống dẫn\\nước nóng ra};
 				\draw[thin,VLmui] (1.35,-0.32)--(0.6,-0.52);
 				\node[align=center,inner sep=1pt] at (2.2,0.12) {Ống dẫn\\nước lạnh vào};

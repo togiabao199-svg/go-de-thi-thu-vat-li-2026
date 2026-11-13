@@ -28,7 +28,7 @@ Không có câu lệch đáp án gốc, không có `% KIỂM TRA`.
 
 ## Hình (4 hình, đều vẽ lại bằng TikZ, so hình trong `so-hinh/`)
 - I.3: đồ thị V–T (ảnh `image2.png`, so với vùng cắt ảnh trang 1), bốn quá trình bốn màu, vùng chu trình tô `VLla!35`.
-- II.1: sơ đồ máy làm nóng nước (shape Word, cắt ảnh trang 3). Nhãn bản gốc "Núm điều…" bị cắt mất chữ trong textbox → gõ "Núm điều chỉnh". Màn hình giữ "70 °C" (dữ kiện có trong lời đề). Ống nước nóng tô đỏ, ống nước lạnh tô xanh (đã ghi rõ trên nhãn, không phải ý suy luận). Hình đặt bên phải phần câu dẫn (hai `minipage`, câu đầu giữ ngoài) như bản gốc, để Phần II bắt đầu trên trang 3, không để trang 3 trống 15,6 cm; câu có `% giuhinh`.
+- II.1: sơ đồ máy làm nóng nước (shape Word, cắt ảnh trang 3). Nhãn bản gốc "Núm điều…" bị cắt mất chữ trong textbox → gõ "Núm điều chỉnh". Màn hình giữ "70 °C" (dữ kiện có trong lời đề). Ống nước nóng tô đỏ, ống nước lạnh tô xanh (đã ghi rõ trên nhãn, không phải ý suy luận). Vẽ lại chi tiết theo yêu cầu hình thực tiễn (13/11/2026): bóng đổ nhẹ, thân máy tô khối sáng từ trái kèm vệt sáng và viền vát, bảng điều khiển chuyển màu, màn hình LCD có viền và vệt phản quang (macro `\VLmanhinh`), núm vặn có vạch chia và kim chỉ, cáp điện mềm có đầu chống gập, hai ống nước có đai ốc và miệng ống (macro `\VLongnoi`). Hình phóng 1,1 lần, đặt bên phải phần câu dẫn (hai `minipage`, câu đầu giữ ngoài) như bản gốc, để Phần II bắt đầu trên trang 3, không để trang 3 trống 15,6 cm; câu có `% giuhinh`.
 - II.2: đồ thị V–T chu trình (1)→(2)→(3) (shape Word, cắt ảnh trang 3). Không ghi nhiệt độ ở (2) (học sinh phải tính).
 - II.4: đồ thị B–t (shape Word, cắt ảnh trang 4), đường màu `VLxanh`.
 
