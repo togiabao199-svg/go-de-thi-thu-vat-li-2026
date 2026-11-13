@@ -81,7 +81,7 @@ Lô P (thêm cho phiên vẽ lại hình): hình thực tiễn gắn `% giuhinh`
 
 ## Số đề
 
-83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề xong, lô W04 + W05 8 đề xong, lô W06 + W07 8 đề xong, lô W08 – W10 13 đề xong, lô P01 – P09 35 đề xong (chờ duyệt) → đủ 78 đề, không còn đề chưa gõ.
+83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề xong, lô W04 + W05 8 đề xong, lô W06 + W07 8 đề xong, lô W08 – W10 13 đề xong, lô P01 – P09 35 đề xong → đủ 78 đề, không còn đề chưa gõ.
 
 ## Kế hoạch lô và trạng thái từng đề
 
