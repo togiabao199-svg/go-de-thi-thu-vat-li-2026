@@ -605,7 +605,7 @@
 					\draw[thin] (2.6,1.35)--(3.45,1.45) node[right,inner sep=1pt,align=left] {Cốc nhôm\\(cốc nhỏ phía trong)};
 				\end{tikzpicture}
 		\end{minipage}\par
-		Kết quả hai lần thí nghiệm:
+		\noindent Kết quả hai lần thí nghiệm:
 		\begin{center}
 			\renewcommand{\arraystretch}{1.2}\setlength{\tabcolsep}{4pt}
 			\begin{tabular}{|c|c|c|c|c|c|}
@@ -673,17 +673,17 @@
 				\draw[VLluc,thick,{Stealth[length=4pt]}-{Stealth[length=4pt]}] (1.25,3.4) arc[start angle=125,end angle=75,radius=0.85];
 				% mạch điện
 				\draw (2.45,0.75)--(2.45,-0.35) to[nos] (3.2,-0.35)--(3.4,-0.35) to[battery1] (4.1,-0.35)--(4.25,-0.35)--(4.25,1.3);
-				\draw[VLdo,thick,VLmui] (4.45,0.2)--(4.45,0.75) node[right,inner sep=1.5pt] {$I$};
+				\draw[VLdo,thick,VLmui] (4.45,0.1)--(4.45,0.65) node[right,inner sep=1.5pt] {$I$};
 				\node[above,inner sep=2pt] at (2.83,-0.25) {K};
 				\node[inner sep=1pt] at (3.55,-0.05) {$+$};
 				\node[inner sep=1pt] at (3.95,-0.05) {$-$};
 				\node[below,inner sep=2pt,align=center,font=\footnotesize\bfseries] at (3.75,-0.55) {Nguồn điện\\một chiều};
 				% lực từ
-				\draw[VLluc,thick,VLmui] (5.15,0.7)--(4.55,1.05);
-				\node[right,inner sep=1pt,font=\footnotesize\bfseries] at (5.15,0.65) {Lực từ kéo hãm};
+				\draw[VLluc,thick,VLmui] (5.15,1.0)--(4.55,1.2);
+				\node[right,inner sep=1pt,font=\footnotesize\bfseries] at (5.15,0.98) {Lực từ kéo hãm};
 				% nhãn
 				\draw[thin] (1.05,3.45)--(0.2,3.75) node[left,inner sep=1pt,align=center] {\textbf{Đĩa kim loại}\\(Gắn đồng trục\\với trục quay)};
-				\draw[thin] (0.45,1.85)--(0.0,1.35) node[below,inner sep=1pt,align=center] {\textbf{Trục quay} (Bánh\\xe cần hãm)};
+				\draw[thin] (0.45,1.85)--(-0.6,1.35) node[below,inner sep=1pt,align=center] {\textbf{Trục quay}\\(Bánh xe\\cần hãm)};
 				\draw[thin] (4.2,3.95)--(4.85,4.3) node[right,inner sep=1pt,align=left] {\textbf{Lõi thép}\\(Có rãnh hẹp\\đặt vào đĩa)};
 				\draw[thin] (4.36,2.4)--(4.85,2.4) node[right,inner sep=1pt,align=left] {\textbf{Cuộn dây}\\\textbf{dẫn điện}};
 			\end{tikzpicture}
@@ -834,7 +834,7 @@
 					\draw (0.9,0) arc[start angle=0,end angle=30,radius=0.9];
 					\node[right,inner sep=1.5pt] at (15:0.9) {$30^\circ$};
 					% trục dọc mặt phẳng nghiêng
-					\draw[VLmui,thin] ($(P)-1.3*(d)$)--($(P)+1.85*(d)$);
+					\draw[VLmui,thin] ($(P)-0.8*(d)$)--($(P)+1.85*(d)$);
 					% ray YY'
 					\draw[gray!55!black,line width=2.6pt] (Yp)--(Y);
 					\draw[gray!15,line width=0.8pt] (Yp)--(Y);
@@ -858,9 +858,9 @@
 					\node[left,inner sep=2pt] at (Xp) {X$'$};
 					\node[below right,inner sep=1.5pt] at (Y) {Y};
 					\node[below left,inner sep=1.5pt] at (Yp) {Y$'$};
-					\node[above left,inner sep=1.5pt] at ($(N)!0.9!(M)$) {M};
-					\node[left,inner sep=3pt] at (N) {N};
-					\node[right,inner sep=1pt] at ($(X)!0.25!(Y)+(0.3,0.05)$) {$R$};
+					\node[inner sep=1pt] at ($(M)+(0.08,0.55)$) {M};
+					\node[inner sep=1pt] at ($(N)+(-0.32,0.12)$) {N};
+					\node[right,inner sep=1pt] at ($(X)!0.25!(Y)+(0.42,0.05)$) {$R$};
 				\end{tikzpicture}
 		\end{minipage}
 		\par
