@@ -339,32 +339,50 @@
 				% ===== hình phối cảnh: hai rotor =====
 				\foreach \m/\ca/\cb in {0/VLdo/VLxanh,1/VLxanh/VLdo}{
 					\begin{scope}[shift={(6.35*\m,0)},xscale={1-2*\m}]
-						% mặt bên ngoài của đĩa
-						\shade[left color=black!75,right color=gray!55] (1.2,0) ellipse (0.45 and 1.45);
-						\draw[black!80] (1.2,0) ellipse (0.45 and 1.45);
-						% mặt trụ
-						\shade[top color=gray!35,bottom color=black!75,middle color=gray!70] (1.2,1.45)--(2.5,1.45) arc[start angle=90,end angle=-90,x radius=0.45,y radius=1.45]--(1.2,-1.45) arc[start angle=-90,end angle=90,x radius=0.45,y radius=1.45]--cycle;
+						% bóng đổ
+						\fill[black,opacity=0.12] (1.5,-1.55) ellipse (1.35 and 0.12);
+						% mặt bên ngoài của đĩa: vành vát, may-ơ, bu lông
+						\shade[inner color=gray!60,outer color=black!85] (1.2,0) ellipse (0.45 and 1.45);
+						\draw[black!85] (1.2,0) ellipse (0.45 and 1.45);
+						\draw[gray!25,opacity=0.8] (1.2,0) ellipse (0.39 and 1.3);
+						\shade[inner color=gray!35,outer color=black!80] (1.2,0) ellipse (0.18 and 0.58);
+						\draw[black!70] (1.2,0) ellipse (0.18 and 0.58);
+						\foreach \g in {50,130,230,310}{\shade[ball color=gray!50] ({1.2+0.3*cos(\g)},{0.95*sin(\g)}) circle (0.035);}
+						% mặt trụ (sáng phía trên)
+						\shade[top color=gray!45,bottom color=black!85,middle color=gray!20] (1.2,1.45)--(2.5,1.45) arc[start angle=90,end angle=-90,x radius=0.45,y radius=1.45]--(1.2,-1.45) arc[start angle=-90,end angle=90,x radius=0.45,y radius=1.45]--cycle;
+						\fill[white,opacity=0.35] (1.2,0.98)--(1.88,0.98)--(1.88,1.06)--(1.2,1.06)--cycle;
+						\draw[gray!25,opacity=0.7] (1.62,1.45)--(1.62,-1.45);
 						% vành nam châm
 						\foreach \ta/\tb/\mau in {70/35/\ca,35/0/\cb,0/-35/\ca,-35/-70/\cb}{
-							\filldraw[fill=\mau!45!gray!80,draw=black!70] ({1.85+0.45*cos(\ta)},{1.45*sin(\ta)}) arc[start angle=\ta,end angle=\tb,x radius=0.45,y radius=1.45]--({2.5+0.45*cos(\tb)},{1.45*sin(\tb)}) arc[start angle=\tb,end angle=\ta,x radius=0.45,y radius=1.45]--cycle;}
-						\filldraw[fill=gray!60!black,draw=black!70] ({1.85+0.45*cos(90)},1.45) arc[start angle=90,end angle=70,x radius=0.45,y radius=1.45]--({2.5+0.45*cos(70)},{1.45*sin(70)}) arc[start angle=70,end angle=90,x radius=0.45,y radius=1.45]--cycle;
-						\filldraw[fill=gray!60!black,draw=black!70] ({1.85+0.45*cos(-70)},{1.45*sin(-70)}) arc[start angle=-70,end angle=-90,x radius=0.45,y radius=1.45]--({2.5},-1.45) arc[start angle=-90,end angle=-70,x radius=0.45,y radius=1.45]--cycle;
-						\draw[black!80] (1.2,1.45)--(2.5,1.45) arc[start angle=90,end angle=-90,x radius=0.45,y radius=1.45]--(1.2,-1.45);
-						% trục
-						\shade[top color=gray!30,bottom color=black!70,middle color=gray!75] (0.15,0.36)--(1.2,0.36)--(1.2,-0.36)--(0.15,-0.36)--cycle;
-						\shade[left color=gray!50,right color=gray!20] (0.15,0) ellipse (0.12 and 0.36);
+							\shade[left color=\mau!35!gray!70!black,right color=\mau!55!gray!80,draw=black!70] ({1.85+0.45*cos(\ta)},{1.45*sin(\ta)}) arc[start angle=\ta,end angle=\tb,x radius=0.45,y radius=1.45]--({2.5+0.45*cos(\tb)},{1.45*sin(\tb)}) arc[start angle=\tb,end angle=\ta,x radius=0.45,y radius=1.45]--cycle;
+							\draw[black!75] ({1.85+0.45*cos(\ta)},{1.45*sin(\ta)}) arc[start angle=\ta,end angle=\tb,x radius=0.45,y radius=1.45]--({2.5+0.45*cos(\tb)},{1.45*sin(\tb)}) arc[start angle=\tb,end angle=\ta,x radius=0.45,y radius=1.45]--cycle;
+							\draw[white,opacity=0.5,very thin] ({1.88+0.45*cos(\ta)},{1.45*sin(\ta)-0.03})--({2.47+0.45*cos(\ta)},{1.45*sin(\ta)-0.03});}
+						\foreach \ta/\tb in {90/70,-70/-90}{
+							\filldraw[fill=black!70,draw=black!80] ({1.85+0.45*cos(\ta)},{1.45*sin(\ta)}) arc[start angle=\ta,end angle=\tb,x radius=0.45,y radius=1.45]--({2.5+0.45*cos(\tb)},{1.45*sin(\tb)}) arc[start angle=\tb,end angle=\ta,x radius=0.45,y radius=1.45]--cycle;}
+						\draw[black!85,semithick] (1.2,1.45)--(2.5,1.45) arc[start angle=90,end angle=-90,x radius=0.45,y radius=1.45]--(1.2,-1.45);
+						\draw[gray!30,opacity=0.8] (2.47,1.42) arc[start angle=90,end angle=-90,x radius=0.43,y radius=1.42];
+						% trục: cổ trục, thân, đầu vát
+						\shade[top color=gray!40,bottom color=black!75,middle color=white] (0.15,0.36)--(1.2,0.36)--(1.2,-0.36)--(0.15,-0.36)--cycle;
+						\fill[white,opacity=0.5] (0.18,0.14) rectangle (1.15,0.2);
+						\shade[top color=gray!40,bottom color=black!80,middle color=gray!85] (0.98,0.45)--(1.2,0.45)--(1.2,-0.45)--(0.98,-0.45)--cycle;
+						\draw[black!75] (0.98,0.45)--(0.98,-0.45);
 						\draw[black!80] (1.2,0.36)--(0.15,0.36) arc[start angle=90,end angle=270,x radius=0.12,y radius=0.36]--(1.2,-0.36);
+						\shade[inner color=gray!15,outer color=gray!55] (0.15,0) ellipse (0.12 and 0.36);
 						\draw[black!70] (0.15,0) ellipse (0.12 and 0.36);
-						% mũi tên quay
-						\draw[gray!40!black,thick] (0.62,0.52) arc[start angle=90,end angle=270,x radius=0.2,y radius=0.52];
-						\draw[gray!40!black,thick,VLmui] (0.62,-0.52) arc[start angle=270,end angle=300,x radius=0.2,y radius=0.52];
+						\draw[gray!45!black] (0.15,0) ellipse (0.08 and 0.25);
+						% mũi tên quay (dải cong)
+						\draw[white,line width=2.8pt] (0.66,0.6) arc[start angle=90,end angle=262,x radius=0.24,y radius=0.6];
+						\draw[gray!45!black,line width=1.5pt] (0.66,0.6) arc[start angle=90,end angle=262,x radius=0.24,y radius=0.6];
+						\draw[gray!45!black,line width=1.5pt,-{Stealth[length=6pt,width=6pt]}] (0.62,-0.6) arc[start angle=262,end angle=300,x radius=0.24,y radius=0.6];
 					\end{scope}}
 				% chữ trên các nam châm
 				\foreach \t/\a in {N/52.5,S/17.5,N/-17.5,S/-52.5}{\node[white,font=\scriptsize\sffamily\bfseries] at ({2.175+0.45*cos(\a)},{1.45*sin(\a)}) {\t};}
 				\foreach \t/\a in {S/52.5,N/17.5,S/-17.5,N/-52.5}{\node[white,font=\scriptsize\sffamily\bfseries] at ({6.35-2.175-0.45*cos(\a)},{1.45*sin(\a)}) {\t};}
 				% vách ngăn
-				\shade[left color=gray!35,right color=gray!60] (3.0,-1.75) rectangle (3.35,1.95);
-				\draw[black!70] (3.0,-1.75) rectangle (3.35,1.95);
+				\fill[gray!25] (3.0,1.95)--(3.12,2.05)--(3.47,2.05)--(3.35,1.95)--cycle;
+				\fill[gray!55!black] (3.35,1.95)--(3.47,2.05)--(3.47,-1.65)--(3.35,-1.75)--cycle;
+				\shade[left color=gray!40,right color=gray!65,middle color=gray!25] (3.0,-1.75) rectangle (3.35,1.95);
+				\draw[black!70] (3.0,-1.75) rectangle (3.35,1.95) (3.0,1.95)--(3.12,2.05)--(3.47,2.05)--(3.47,-1.65)--(3.35,-1.75) (3.35,1.95)--(3.47,2.05);
 				\draw[thin] (3.175,-1.75)--(3.175,-2.05) node[below,inner sep=1.5pt] {vách ngăn kín không nhiễm từ};
 				% nhãn
 				\node[align=center,inner sep=1pt] at (1.3,2.35) {Rotor chủ động\\(gắn với động cơ)};

@@ -91,10 +91,10 @@
 		\draw[white,opacity=0.7,line width=0.5pt] (0.0,#4+0.06)--(#3,#4+0.06);
 	\end{scope}}
 % nhiệt kế y tế thủy ngân nằm nghiêng: đầu kim loại hình nón, thân thủy tinh trụ, dải số 35–42 (37 đỏ, dấu ▼, °C), vạch xanh, nắp kính đầu;
-% gốc ở mũi kim loại, dài 4,85, thân bán kính 0,26. Gọi trong scope có shift: \VLnhietkeyte{góc nghiêng}
+% gốc ở mũi kim loại, dài 4,85, thân bán kính 0,31. Gọi trong scope có shift: \VLnhietkeyte{góc nghiêng}
 % tọa độ có tên (VLyte37) ở vạch 37 hàng dưới (để kẻ đường chú thích)
 \newcommand{\VLnhietkeyte}[1]{%
-	\begin{scope}[rotate=#1]
+	\begin{scope}[rotate=#1,yscale=1.2]
 		\fill[black,opacity=0.1] (0.4,-0.36) .. controls (2,-0.4) and (4,-0.4) .. (4.8,-0.32)--(4.8,-0.27)--(0.4,-0.31)--cycle;
 		% mũi và đầu kim loại
 		\fill[black!80] (0,0) -- (0.3,-0.035) -- (0.3,0.035) -- cycle;
@@ -106,9 +106,9 @@
 		\fill[white] (1.0,-0.2) rectangle (3.75,0.2);
 		\fill[gray!55] (0.72,-0.025) rectangle (3.85,0.025);
 		\foreach \VLk in {0,...,14}{\draw[black!65,line width=0.25pt] ({1.43+0.155*\VLk},-0.025)--++(0,{-0.04-0.05*(\VLk==int(\VLk/2)*2)}) ({1.43+0.155*\VLk},0.025)--++(0,{0.04+0.05*(\VLk==int(\VLk/2)*2)});}
-		\foreach \VLs/\VLx in {35/1.43,37/2.05,39/2.67,41/3.29}{\node[rotate=#1,inner sep=0pt,font=\fontsize{5.5}{5.5}\selectfont\bfseries] at (\VLx+0.15,-0.13) {\VLs};}
-		\foreach \VLs/\VLx in {36/1.74,38/2.36,40/2.98,42/3.6}{\node[rotate=#1,inner sep=0pt,font=\fontsize{5.5}{5.5}\selectfont\bfseries] at (\VLx-0.12,0.13) {\VLs};}
-		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{5.5}{5.5}\selectfont\bfseries] at (2.2,-0.13) {37};
+		\foreach \VLs/\VLx in {35/1.43,39/2.67,41/3.29}{\node[rotate=#1,inner sep=0pt,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (\VLx+0.15,-0.13) {\VLs};}
+		\foreach \VLs/\VLx in {36/1.74,38/2.36,40/2.98,42/3.6}{\node[rotate=#1,inner sep=0pt,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (\VLx-0.12,0.13) {\VLs};}
+		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (2.2,-0.13) {37};
 		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{4.5}{4.5}\selectfont] at (3.65,-0.13) {$^\circ$C};
 		\fill[VLdo] (2.03,0.17)--(2.11,0.17)--(2.07,0.1)--cycle;
 		\coordinate (VLyte37) at (2.12,-0.2);
