@@ -7,7 +7,7 @@
 - **Phiên 1a (06/11/2026) — xong, thầy duyệt 06/11/2026**: `CLAUDE.md` cho Vật lí; bộ macro hình chung `preamble-vatli-hinh.tex` (thêm circuitikz european), `tools/so_hinh.py` đọc macro từ file chung, dựng lại đề mẫu (bản đề 7 trang, lời giải 10 trang, PDF trùng bản cũ); `tools/README.md`; kiểm kê 83 đề `kho/kiem-ke.md`; chia lô (file này).
 - **Lô M (13/11/2026) — xong, thầy duyệt 13/11/2026**: `VatLi2026-LaoCai-CumPhiaBac-Lan2` (mẫu thứ hai: đề PDF không đáp án, tự giải toàn bộ 28 câu, vẽ lại 14 hình). Bản đề 8 trang (ĐẠT), bản lời giải 12 trang. Thành phẩm trong `thanh-pham/`, kiểm chứng ở `de/VatLi2026-LaoCai-CumPhiaBac-Lan2/kiem-chung.md`.
 - **Lô W01 (13/11/2026) — xong, thầy duyệt 13/11/2026**: 4 đề Word (Bắc Ninh ×3, Cà Mau), chạy Opus, 4 agent con song song (thầy cho phép trong phiên), phiên chính soát, thống nhất, gom macro. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
-- **Tô màu lại 6 đề đã xong (13/11/2026) — chờ duyệt**: Cao Bằng, Lào Cai, 4 đề lô W01 (Opus, 6 agent con song song). Số trang bản đề / lời giải không đổi, cả 6 đề `kiem` ĐẠT, thành phẩm xuất lại. Điểm cần thầy quyết ở mục "Chờ thầy quyết".
+- **Tô màu lại 6 đề đã xong (13/11/2026) — xong (PR #5)**: Cao Bằng, Lào Cai, 4 đề lô W01 (Opus, 6 agent con song song). Số trang bản đề / lời giải không đổi, cả 6 đề `kiem` ĐẠT, thành phẩm xuất lại.
 - **Tiếp theo**: lô W02 (Opus, song song): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W02, chạy song song.`
 
 ## Quyết định của thầy
@@ -28,14 +28,11 @@
 
 - 13/11/2026 — tô màu: MỌI hình đều tô màu theo bảng màu trong `CLAUDE.md` (mục HÌNH VẼ, phần Màu; mẫu `tham-khao/to-mau/`). Thêm màu `VLluc`. 6 đề đã xong tô lại trong một phiên riêng (Opus, song song) với prompt: `Đọc CLAUDE.md (mục HÌNH VẼ, phần Màu) và tham-khao/to-mau/ rồi tô màu lại toàn bộ hình của 6 đề đã xong (VatLi2026-CaoBang-SoGD-Lan1, VatLi2026-LaoCai-CumPhiaBac-Lan2 và 4 đề lô W01), chạy song song.`
 
+- 13/11/2026 — chốt các điểm của phiên tô màu (PR #5, đã ghi `CLAUDE.md`): nam châm luôn N `VLdo` / S `VLxanh` kể cả khi ảnh gốc tô ngược (Cao Bằng II.4, Bắc Ninh SGD II.1); đề không ghi cực thì để xám (Cà Mau II.3; micro Lào Cai II.3 giữ như gốc); sóng âm, sóng cơ dùng màu chung `VLtim` (thêm vào `preamble-vatli-hinh.tex`, Lào Cai II.3 đổi `violet` → `VLtim`, hình không đổi); chất khí trong bình `VLxanh!10` hoặc để trắng; ảnh chụp giữ màu thật của vật khi màu không mang thông tin; không tô khác màu những gì học sinh phải suy luận (nước nóng / lạnh, cực, loại tia); `tham-khao/to-mau/mau-to-mau.tex` giữ nguyên, cách gọi macro màu chung theo đề mẫu Cao Bằng.
+
 ## Chờ thầy quyết
 
-Phiên tô màu (13/11/2026):
-- Nam châm theo quy ước N `VLdo` / S `VLxanh` khác màu ảnh gốc: Cao Bằng II.4 (ảnh gốc N xanh, S đỏ), Bắc Ninh SGD Lần 2 II.1 (ảnh gốc đen). Đề không ghi cực thì KHÔNG tô cực (giữ màu gốc/xám để khỏi lộ đáp án): Cà Mau II.3 (nam châm chữ U xám), Lào Cai II.3 (micro, giữ đỏ / xanh lá như gốc).
-- Màu ngoài bảng: Lào Cai II.3 sóng âm tím (`violet`, ảnh gốc xanh dương trùng màu từ trường) — thầy chốt màu chung cho sóng âm? Khí trong bình (Cà Mau III.1) tô `VLxanh!10` — bảng màu chưa quy định chất khí.
-- Giữ màu "thật" của ảnh chụp: dây nối đỏ/xanh ở hình thực tiễn (Lào Cai I.16), màu trang trí (Bắc Ninh SGD III.1 ghế xanh, III.5 tia vàng), cột nhiệt kế "thủy ngân" vàng cam (Cụm HH–NSL–TD1 I.2).
-- Không tô nước nóng / lạnh khác màu khi đó là ý cần suy luận (Cụm HH–NSL–TD1 II.2); các tia X, Y, Z (Lào Cai I.5) và hai vết hạt (I.7) cùng màu `VLdo`.
-- Cao Bằng (đề mẫu) nay gọi thẳng macro chung `\VLcham`, `\VLnhan`, `\VLthanhngang`, `\VLthanhdung` (đã mang màu); `tham-khao/to-mau/mau-to-mau.tex` vẫn dùng scope màu và `\Dngang`/`\Ddung` riêng (cùng kết quả).
+(không còn)
 
 ## Việc đã xong
 
