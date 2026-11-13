@@ -237,19 +237,21 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{9.5\baselineskip}
+	\NeedspaceCau{10.2\baselineskip}
 	\begin{ex}%[VL12-C1-NB]
 		Khoảng $70\%$ bề mặt của Trái Đất được bao phủ bởi nước. Vì có \ldots(1)\ldots\ nên lượng nước này có thể hấp thụ năng lượng nhiệt khổng lồ của năng lượng Mặt Trời mà vẫn giữ cho \ldots(2)\ldots\ của bề mặt Trái Đất tăng không nhanh và không nhiều, tạo điều kiện thuận lợi cho sự sống của con người và các sinh vật khác. Khoảng trống (1) và (2) lần lượt là
 		% giuhinh
 		\par\noindent
-		\begin{minipage}[c]{0.7\linewidth}
+		\begin{minipage}[t]{0.7\linewidth}
+		\vspace{0pt}
 		\choice
 		{\True ``nhiệt dung riêng lớn''; ``nhiệt độ''}
 		{``nhiệt độ sôi lớn''; ``áp suất''}
 		{``nhiệt dung riêng lớn''; ``áp suất''}
 		{``nhiệt độ sôi lớn''; ``nhiệt độ''}
 		\end{minipage}\hfill
-		\begin{minipage}[c]{0.28\linewidth}
+		\begin{minipage}[t]{0.28\linewidth}
+			\vspace{0pt}
 			\centering
 			\begin{tikzpicture}[scale=1.3,line join=round,line cap=round,font=\footnotesize]
 				\path[use as bounding box] (-1.12,-1.12) rectangle (1.12,1.12);
@@ -630,9 +632,9 @@
 				\draw[VLxanh!80!white,line width=1.6pt] (-1.06,0.66) .. controls (-0.5,0.56) and (0.5,0.56) .. (1.06,0.66);
 				% vạch chia
 				\foreach \y/\t in {2.6/MAX\ \ 1.7L,1.95/1.0L,1.3/0.5L\ \ MIN}{\draw[black!70,very thin] (-0.18,\y)--(0.18,\y);}
-				\node[font=\fontsize{4}{4}\selectfont,align=center] at (0,2.72) {MAX\\1.7L};
-				\node[font=\fontsize{4}{4}\selectfont] at (0,2.04) {1.0L};
-				\node[font=\fontsize{4}{4}\selectfont,align=center] at (0,1.21) {0.5L\\MIN};
+				\node[font=\fontsize{4}{4}\selectfont,align=center,anchor=south,inner sep=0.8pt] at (0,2.6) {MAX\\1.7L};
+				\node[font=\fontsize{4}{4}\selectfont,anchor=south,inner sep=0.8pt] at (0,1.95) {1.0L};
+				\node[font=\fontsize{4}{4}\selectfont,anchor=south,inner sep=0.8pt] at (0,1.3) {0.5L};\node[font=\fontsize{4}{4}\selectfont,anchor=north,inner sep=0.8pt] at (0,1.3) {MIN};
 				% cổ thép trên
 				\shade[left color=gray!75,right color=gray!65,middle color=gray!10] (-0.92,3.0) .. controls (-0.86,3.35) .. (-0.72,3.58) -- (0.72,3.58) .. controls (0.86,3.35) .. (0.92,3.0) -- cycle;
 				\draw[gray!50!black,very thin] (-0.92,3.0) .. controls (-0.86,3.35) .. (-0.72,3.58) -- (0.72,3.58) .. controls (0.86,3.35) .. (0.92,3.0) -- cycle;
@@ -723,7 +725,7 @@
 		\shortans[oly]{1{,}1}
 		\loigiai{
 			Lượng khí không đổi: $\dfrac{p_0\cdot 3V_1}{T_0}=\dfrac{pV_1}{T_1}+\dfrac{2pV_1}{T_2}$
-			\[\Rightarrow p=\dfrac{\dfrac{3}{300}}{\dfrac{1}{273}+\dfrac{2}{373}}\cdot 10^5\approx 1{,}1\cdot 10^5~\text{Pa}\Rightarrow x\approx 1{,}1.\]
+			\[\Rightarrow p=\dfrac{3p_0}{T_0\left(\dfrac{1}{T_1}+\dfrac{2}{T_2}\right)}=\dfrac{3\cdot 10^5}{300\left(\dfrac{1}{273}+\dfrac{2}{373}\right)}\approx 1{,}1\cdot 10^5~\text{Pa}\Rightarrow x\approx 1{,}1.\]
 		}
 	\end{ex}
 
@@ -762,7 +764,6 @@
 				\draw[gray!70,thin,rotate around={12:(268,54)}] (268,54) ellipse (50 and 30);
 				\draw[gray!70,thin,rotate around={12:(365,130)}] (365,130) ellipse (72 and 45);
 				% bảng điều khiển
-				\node[VLdo,font=\sffamily\bfseries\scriptsize,rotate=-12] at (230,170) {2000};
 				\foreach \t in {0,0.1,...,1}{\fill[VLdo!80] ({170+140*\t},{158+28*\t}) circle (1.3);}
 			\end{tikzpicture}
 		\end{center}
