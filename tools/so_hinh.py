@@ -66,8 +66,9 @@ doc += [h for _, h in hinh] + ['\\end{document}']
 tex = os.path.join(ra, 'hinh.tex')
 open(tex, 'w', encoding='utf8').write('\n'.join(doc))
 env = dict(os.environ)
-env['TEXINPUTS'] = ROOT + '//:' + env.get('TEXINPUTS', '')
-subprocess.run(['xelatex', '-interaction=nonstopmode', 'hinh.tex'], cwd=ra, capture_output=True, env=env)
+# '.' đứng đầu và gọi ./hinh.tex: khi nhiều đề dựng so hình cùng lúc, ROOT// không được bắt nhầm so-hinh/hinh.tex của đề khác
+env['TEXINPUTS'] = '.:' + ROOT + '//:' + env.get('TEXINPUTS', '')
+subprocess.run(['xelatex', '-interaction=nonstopmode', './hinh.tex'], cwd=ra, capture_output=True, env=env)
 log = open(os.path.join(ra, 'hinh.log'), encoding='utf8', errors='replace').read()
 loi = re.findall(r'^!.*(?:\n.*){0,3}', log, re.M)
 if loi or not os.path.exists(os.path.join(ra, 'hinh.pdf')):
