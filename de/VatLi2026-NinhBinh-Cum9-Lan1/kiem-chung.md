@@ -39,3 +39,5 @@ Nguồn: `kho/goc/Ninh Binh - Cum truong THPT so 9 - Lan 1.docx` (mã đề gố
 - I.6: nam châm tô N đỏ, S xanh theo quy ước (đề ghi cực trên hình).
 - I.11: bốn mũi tên phương án (1)–(4) để màu đen (không gợi đáp án).
 - III.4: đặt hình bên phải câu hỏi để bản đề gọn 6 trang.
+- Hình thực tiễn vẽ lại chi tiết theo yêu cầu bổ sung 13/11/2026 (`% giuhinh`): I.6 tàu đệm từ (thân tàu tô khối, kính lái, đèn, dãy cửa sổ, đệm khí, nam châm dạng trụ nhỏ, ray khối), II.1 (bàn tay `\VLbantay`, tấm ván khối, miếng đồng `\VLdiakimloai`, cốc thủy tinh có nước `\VLcocthuytinh`, hơi nước), III.3 (chai thủy tinh trong suốt, nút bần, khóa dây kim loại, dây buộc nơ, bóng đổ).
+- Macro mới khai báo trong file đề: `\VLmaymua` (biểu tượng mây mưa), `\VLcuonphang` (cuộn dây phẳng nhiều vòng nhìn xiên), `\VLbantay` (bàn tay duỗi ngón trỏ), `\VLcocthuytinh` (cốc thủy tinh có nước, chèn vật trong nước), `\VLdiakimloai` (đĩa kim loại trụ dẹt).
