@@ -132,7 +132,7 @@ Theo đúng đề mẫu (thụt lề bằng tab):
 - Số và đơn vị: `$1784$~MeV`, `$0{,}15$~T`, `$25~\text{cm}^2$`, `$10~\text{m/s}^2$`; đơn vị trong công thức viết `\text{...}` (`$Q=1{,}67\cdot 10^5~\text{J}$`). Nhiệt độ `$100\,^\circ\text{C}$`, `$300$~K`; `$T(\text{K})=t\,(^\circ\text{C})+273$`. Đơn vị ghép `J$\cdot$mol$^{-1}\cdot$K$^{-1}$` hoặc `J/(kg.K)` theo đề gốc nhưng thống nhất trong đề.
 - Vectơ `\vv{B}`, `\vv{F}` (preamble cho `\overrightarrow` = `\vv`). Song song gõ `\parallel` (in ra //).
 - Kí hiệu hạt nhân `$^{235}_{\phantom{2}92}\text{U}$` (canh số) hoặc `${}^{27}_{13}\text{Al}$`; hạt `${}^4_2\text{He}$`, `${}^1_0\text{n}$`; tên hạt, đại lượng có chỉ số chữ dùng `\text{}`: `$W_{\text{lk}}$`, `$\overline{E}_{\text{đ}}$`, `$m_\text{X}$`.
-- Đại lượng biến thiên `\Delta`, trị tuyệt đối `\left|\dfrac{\Delta B}{\Delta t}\right|`; độ `$45^\circ$`; π gõ `\pi`. Dùng thuật ngữ SGK 2018 (neutron, proton, nucleon, xilanh, pit-tông, hyperbol).
+- Đại lượng biến thiên `\Delta`, trị tuyệt đối `\left|\dfrac{\Delta B}{\Delta t}\right|`; độ `$45^\circ$`; π gõ `\pi`. Dùng thuật ngữ SGK 2018 (neutron, proton, nucleon, xilanh, pit-tông, hyperbol); tên nguyên tố, chất khí theo IUPAC như SGK mới: hydrogen, helium, nitrogen, oxygen, carbon, uranium (sửa "nitơ", "heli"... của đề gốc, ghi vào mục sửa lời đề; thầy chốt 14/11/2026).
 - Luôn in đậm từ phủ định trong câu hỏi (`\textbf{không}`, `\textbf{sai}`), kể cả khi đề gốc không in đậm (thầy chốt 13/11/2026); ghi vào mục sửa lời đề của `kiem-chung.md`.
 
 # HÌNH VẼ
