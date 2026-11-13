@@ -220,3 +220,5 @@
 	\end{scope}}
 % dấu ⊗ có vòng tròn (từ trường hướng vào), bán kính 0,11 cm: \VLnhantron{x}{y}
 \newcommand{\VLnhantron}[2]{\draw[VLxanh!85!black,semithick] (#1,#2) circle (0.11) ++(-0.078,-0.078)--++(0.156,0.156) (#1,#2)++(-0.078,0.078)--++(0.156,-0.156);}
+% dấu ⊙ có vòng tròn (từ trường hướng ra), bán kính 0,11 cm, cặp với \VLnhantron: \VLchamtron{x}{y}
+\newcommand{\VLchamtron}[2]{\draw[VLxanh!85!black,semithick] (#1,#2) circle (0.11); \fill[VLxanh!85!black] (#1,#2) circle (0.035);}
