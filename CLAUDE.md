@@ -29,7 +29,7 @@ Quy định trong file này được ưu tiên hơn mọi thiết lập soạn �
 3. Máy đám mây không có font esvect, fontawesome: `bien-dich.sh` và `dan_trang.py` tự tạo gói thay thế trong thư mục biên dịch.
 
 # QUY TRÌNH MỘT LÔ (mỗi lô 4 đề theo `kho/TIEN-DO.md`; mỗi lô một nhánh, một PR)
-Model do thầy chọn khi mở phiên (thầy chốt 13/11/2026): lô W (đề Word có lời giải gốc) chạy Opus, lô P (đề PDF tự giải) chạy Fable. Quy trình và chất lượng như nhau với mọi model.
+Model do thầy chọn khi mở phiên (thầy chốt 14/11/2026): lô W và lô P đều chạy Opus mức Cao (lô P tự giải, kiểm chứng như lô W). Sau các lô P có PHIÊN FABLE riêng: mỗi đề một agent Fable (1) giải lại độc lập đề PDF (đọc đề gốc, tự giải, CHƯA xem đáp án trong file; xong mới so với `\True`, `\shortans`; câu lệch ghi vào `kiem-chung.md` kèm lời giải của Fable, không tự sửa đáp án), (2) vẽ lại hình thực tiễn theo mục HÌNH VẼ — "Vẽ chi tiết, trau chuốt". Ưu tiên 35 đề PDF, rồi hình của 43 đề Word (đề Word đã có đáp án gốc, không giải lại). Quy trình và chất lượng như nhau với mọi model.
 1. **Chuẩn bị**: đọc `kho/TIEN-DO.md`, dòng của từng đề trong `kho/kiem-ke.md` (tên file, dòng 1, `\tenchuong`, ghi chú), đề mẫu nếu chưa đọc trong phiên. Chưa có `thanh-pham/` thì tạo.
 2. **Gõ**: đọc đề gốc (mục ĐỌC ĐỀ GỐC), xuất ảnh trang để đối chiếu; tạo `de/<tên>/<tên>.tex` theo mục KHUNG FILE ĐỀ; gõ đủ câu, `\True`, `\shortans`, mã câu, lời giải.
 3. **Giải, kiểm chứng**: tự giải lại MỌI câu; câu có số liệu tính lại bằng Python; đối chiếu đáp án gốc (nếu có); ghi `de/<tên>/kiem-chung.md` (mục KIỂM CHỨNG ĐÁP ÁN).
