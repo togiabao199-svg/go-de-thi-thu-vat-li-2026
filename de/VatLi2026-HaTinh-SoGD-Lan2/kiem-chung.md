@@ -49,3 +49,8 @@ Nguồn: `kho/goc/Ha Tinh - So GDDT - Lan 2.docx` (Sở GD&ĐT Hà Tĩnh, mã đ
   - III.6 máy đếm Geiger cầm tay + ống đếm, bộ đếm, loa (màn hình để trống; bỏ chữ hiệu "S.E.A.P.", "PM-141A Radiation Detector").
 - Macro riêng khai báo trong file đề: `\VLchamtron` (⊙ có vòng, cặp với `\VLnhantron`), `\VLtiaset`, `\VLpindung`, `\VLbanhrang`, `\VLoto`, `\VLbanhxe`, `\VLrotor`.
 - Ảnh so ở `so-hinh/`.
+
+## Dàn trang
+- Bản đề 7 trang (ĐẠT), bản lời giải 11 trang (trang 2 trống 6,7 cm, trang 5 trống 7,0 cm: trong giới hạn 1/3).
+- II.3: chú thích (1)–(6) đặt cạnh bảng số liệu; II.4 tách câu dẫn (trang 5) / bảng Phát biểu (trang 6).
+- Đã soát bản xám (trang 4–5 bản đề): các đối tượng phân biệt được; cực N/S có chữ.
