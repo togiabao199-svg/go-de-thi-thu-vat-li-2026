@@ -23,7 +23,8 @@ Nguồn: `kho/goc/Nghe An - So GDDT - Lan 2.docx` (Sở GD&ĐT Nghệ An, KSCL k
 
 ## Hình
 - 6 hình gốc: I.2 (4 hình nam châm – vòng dây), I.6 (4 đồ thị p–V), I.8 (bảng thời tiết dạng ảnh → gõ lại thành `tabular`, biểu tượng nhỏ vẽ bằng `\tikz` nội dòng), II.2 (ảnh lưu lượng kế + sơ đồ), II.4 (máy phát điện), III.3 (loa điện động: hình a mặt cắt loa + nam châm hình trụ có cuộn dây; hình b đồ thị i–t).
-- II.2: màn hình đầu hiển thị của ảnh gốc có số (17508.00, 0.00007) không phải dữ kiện ⇒ để trống.
+- II.2: ảnh lưu lượng kế vẽ lại chi tiết theo yêu cầu bổ sung 13/11 (ống thép mạ kẽm có vân, mặt bích, kẹp có bulông, thân cảm biến bóng, thanh đỡ dưới, khung ngang + 6 thanh đứng có đầu tròn, giá chữ U, cổ nối, đầu hiển thị tròn có gờ, kính, 4 nút, hai đầu cáp, bóng đổ, nghiêng 7° như ảnh). Màn hình của ảnh gốc có số (17909.00, 0.00007) không phải dữ kiện ⇒ để trống. Macro riêng trong file đề: `\VLtrudoc`, `\VLgalvan`, `\VLdauhienthi`.
+- III.3 hình a: tô lại nón loa (chuyển màu ngang, viền gân), nam châm hình trụ phóng to, bóng đổ, phản quang lõi N.
 - II.4: nam châm N đỏ, S xanh (ảnh gốc trắng xám); điện trở R tô màu gỗ nhạt (gốc xanh dương, tránh trùng màu từ trường).
 - III.3 hình b: ảnh gốc có hai đoạn đường cong chồng nhau (một đoạn i = 4cos(2πt/15) từ 0 đến 7,5 ms, một đoạn cực tiểu tại ≈ 3 ms, cực đại tại ≈ 10,5 ms, kết thúc tại (16,7; −3)); cả hai đều có chu kì 15 ms. Vẽ lại đúng như gốc (không ảnh hưởng đáp số); thầy có thể muốn gộp thành một đường.
 

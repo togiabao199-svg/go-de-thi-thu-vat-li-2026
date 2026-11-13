@@ -326,7 +326,7 @@
 		Để quan sát chuyển động Brown trong chất khí, một nhóm học sinh đưa một ít khói vào ống thủy tinh kín, chiếu một chùm sáng mạnh ngang qua ống và quan sát vùng sáng bằng kính hiển vi. Trên màn quan sát, các hạt khói nhỏ hiện lên dưới dạng những chấm sáng chuyển động liên tục, không theo một hướng xác định. Khi ghi lại vị trí của một hạt khói sau những khoảng thời gian bằng nhau rồi nối các vị trí liên tiếp, học sinh thu được đường gấp khúc như hình bên.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
 				% khung trái
 				\draw[VLxanh!70,rounded corners=4pt] (-0.55,-0.95) rectangle (6.25,4.55);
 				\begin{scope}[shift={(0.45,0)}]
@@ -413,115 +413,112 @@
 
 	\NeedspaceCau[23.4\baselineskip]{37\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
+		Một nhóm học sinh sử dụng bộ thí nghiệm gồm xilanh chứa khí, áp kế và bình nước ổn nhiệt như hình bên để khảo sát mối liên hệ giữa áp suất và thể tích của một lượng khí xác định trong quá trình đẳng nhiệt. Các dụng cụ đo đều có sai số nhỏ.
 		% giuhinh
-		\begin{minipage}[c]{0.46\linewidth}
-			Một nhóm học sinh sử dụng bộ thí nghiệm gồm xilanh chứa khí, áp kế và bình nước ổn nhiệt như hình bên để khảo sát mối liên hệ giữa áp suất và thể tích của một lượng khí xác định trong quá trình đẳng nhiệt. Các dụng cụ đo đều có sai số nhỏ.\\
-			Họ đã thực hiện thí nghiệm theo trình tự sau:
-		\end{minipage}\hfill
-		\begin{minipage}[c]{0.52\linewidth}
-			\centering
-				\begin{tikzpicture}[scale=0.78,line join=round,line cap=round,font=\footnotesize]
-					% đế nhựa vàng, chân đế, bóng
-					\fill[black!85,rounded corners=1pt] (0.3,-0.12) rectangle (0.75,0.03) (9.85,-0.12) rectangle (10.3,0.03);
-					\shade[top color=yellow!50!orange!40,bottom color=yellow!40!orange!55!black!80] (0,0) rectangle (10.6,0.32);
-					\shade[top color=yellow!30!orange!15,bottom color=yellow!45!orange!30] (0,0.32)--(10.6,0.32)--(10.85,0.56)--(0.25,0.56)--cycle;
-					\fill[yellow!45!orange!50!black!75] (10.6,0)--(10.85,0.24)--(10.85,0.56)--(10.6,0.32)--cycle;
-					\draw[yellow!35!orange!45!black!70,thin] (0,0.32)--(10.6,0.32)--(10.85,0.56);
-					\fill[black,opacity=0.12] (5.85,0.5) ellipse (3.4 and 0.07);
-					\fill[black,opacity=0.15] (9.95,0.52) ellipse (0.45 and 0.05);
-					% trụ đỡ áp kế
-					\fill[black,opacity=0.15] (1.55,0.48) ellipse (0.42 and 0.06);
-					\shade[left color=gray!60,right color=gray!45,middle color=white] (1.18,0.5) rectangle (1.82,2.6);
-					\fill[gray!45] (1.5,0.5) ellipse (0.32 and 0.05);
-					\draw[gray!55,thin] (1.18,0.5)--(1.18,2.6) (1.82,0.5)--(1.82,2.6);
-					\fill[white,opacity=0.6] (1.33,0.6) rectangle (1.38,2.5);
-					% ống nối đồng sang bình (ống, ốc lục giác, ống)
-					\shade[top color=VLdong!30!white,bottom color=VLdong!75!black] (1.82,1.64) rectangle (2.62,1.84);
-					\shade[top color=VLdong!35!white,bottom color=VLdong!80!black] (2.02,1.54) rectangle (2.3,1.94);
-					\draw[VLdong!60!black,very thin] (2.02,1.54) rectangle (2.3,1.94) (2.02,1.67)--(2.3,1.67) (2.02,1.81)--(2.3,1.81);
-					% ốc đồng dưới áp kế
-					\shade[left color=VLdong!80!black,right color=VLdong!70!black,middle color=VLdong!25!white] (1.27,2.6) rectangle (1.73,2.8);
-					\draw[VLdong!55!black,very thin] (1.27,2.6) rectangle (1.73,2.8) (1.42,2.6)--(1.42,2.8) (1.58,2.6)--(1.58,2.8);
-					\shade[left color=VLdong!80!black,right color=VLdong!70!black,middle color=VLdong!30!white] (1.41,2.8) rectangle (1.59,2.97);
-					% áp kế
-					\shade[ball color=black!75] (1.5,3.95) circle (1.02);
-					\shade[inner color=gray!15,outer color=gray!55] (1.5,3.95) circle (0.93);
-					\shade[inner color=white,outer color=violet!12] (1.5,3.95) circle (0.86);
-					\foreach \g in {225,198,...,-45}{\draw[black!85,semithick] ($(1.5,3.95)+(\g:0.68)$)--($(1.5,3.95)+(\g:0.83)$);}
-					\foreach \g in {225,219.6,...,-45}{\draw[black!70,very thin] ($(1.5,3.95)+(\g:0.76)$)--($(1.5,3.95)+(\g:0.83)$);}
-					\draw[black!70,very thin] ($(1.5,3.95)+(225:0.83)$) arc[start angle=225,end angle=-45,radius=0.83];
-					\draw[VLdo,thick] ($(1.5,3.95)+(225:0.8)$) arc[start angle=225,end angle=198,radius=0.8];
-					\node[font=\tiny] at (1.5,3.45) {bar};
-					\fill[gray!60] (1.42,3.66) circle (0.025) (1.58,3.66) circle (0.025);
-					\draw[black,line width=1pt] ($(1.5,3.95)+(8:0.18)$)--($(1.5,3.95)+(188:0.74)$);
-					\fill[black] (1.5,3.95) circle (0.07);
-					\fill[gray!50] (1.48,3.97) circle (0.025);
-					\fill[white,opacity=0.55] ($(1.5,3.95)+(110:0.8)$) arc[start angle=110,end angle=160,radius=0.8]--($(1.5,3.95)+(160:0.7)$) arc[start angle=160,end angle=110,radius=0.7]--cycle;
-					% bình nước: thành sau
-					\draw[gray!50] (2.8,0.72)--(2.8,3.26)--(9.18,3.26)--(9.18,0.72);
-					% nước, mặt thoáng
-					\fill[VLxanh!12,opacity=0.85] (2.62,0.6) rectangle (9.0,2.85);
-					\fill[VLxanh!25,opacity=0.9] (2.62,2.85)--(9.0,2.85)--(9.18,3.01)--(2.8,3.01)--cycle;
-					\draw[VLxanh!45,thin] (2.62,2.85)--(9.0,2.85)--(9.18,3.01);
-					% ống đồng trong nước nối vào xilanh
-					\fill[VLdong!55!white,opacity=0.85] (2.62,1.67) rectangle (3.5,1.81);
-					\draw[VLdong!60!black,thin] (2.62,1.67)--(3.5,1.67) (2.62,1.81)--(3.5,1.81);
-					% khung xilanh: thanh ren, tấm đầu, ốc
-					\foreach \y in {1.08,2.47}{
-						\fill[gray!50] (3.3,\y-0.035) rectangle (7.75,\y+0.035);
-						\foreach \x in {3.32,3.4,...,7.7}{\draw[gray!25!black,very thin] (\x,\y-0.035)--(\x+0.04,\y+0.035);}}
-					\foreach \x in {3.45,7.3}{
-						\shade[left color=gray!50,right color=gray!25,middle color=gray!8] (\x,0.92) rectangle (\x+0.27,2.63);
-						\draw[gray!55,thin] (\x,0.92) rectangle (\x+0.27,2.63);
-						\foreach \y in {1.08,2.47}{\shade[top color=gray!20,bottom color=gray!60] (\x-0.08,\y-0.09) rectangle (\x,\y+0.09); \shade[top color=gray!20,bottom color=gray!60] (\x+0.27,\y-0.09) rectangle (\x+0.35,\y+0.09);}}
-					% xilanh trong suốt, khí bên trong
-					\fill[white,opacity=0.55] (3.72,1.4) rectangle (7.3,2.08);
-					\fill[VLxanh!6] (3.72,1.42) rectangle (5.3,2.06);
-					\draw[gray!65] (3.72,1.4) rectangle (7.3,2.08);
-					\draw[white,line width=1pt,opacity=0.9] (3.8,1.98)--(7.2,1.98);
-					\draw[gray!40,thin] (3.8,1.48)--(7.2,1.48);
-					% thước chia thể tích
-					\filldraw[fill=white,draw=gray!65] (3.9,2.12) rectangle (7.1,2.32);
-					\foreach \x in {4.06,4.12,...,6.8}{\draw[black!75,very thin] (\x,2.32)--(\x,2.26);}
-					\foreach \x in {4.06,4.36,...,6.8}{\draw[black!85,thin] (\x,2.32)--(\x,2.2);}
-					\node[font=\tiny,inner sep=0pt] at (6.92,2.2) {mL};
-					% cán pit-tông trong xilanh, pit-tông cao su
-					\shade[top color=gray!45,bottom color=black!70] (5.56,1.6) rectangle (7.3,1.88);
-					\fill[black!85,rounded corners=1pt] (5.3,1.41) rectangle (5.58,2.07);
-					\draw[gray!55,semithick] (5.37,1.43)--(5.37,2.05) (5.51,1.43)--(5.51,2.05);
-					\fill[white,opacity=0.35] (5.31,1.85) rectangle (5.57,1.95);
-					% trục ren ra tay quay
-					\shade[top color=gray!30,bottom color=gray!70] (7.57,1.67) rectangle (9.6,1.81);
-					\foreach \x in {7.6,7.68,...,9.55}{\draw[gray!25!black,very thin] (\x,1.67)--(\x+0.05,1.81);}
-					% bình nước: thành trước (kính)
-					\draw[gray!60,thick] (2.62,0.6) rectangle (9.0,3.1);
-					\draw[gray!45] (2.62,3.1)--(2.8,3.26) (9.0,3.1)--(9.18,3.26) (9.0,0.6)--(9.18,0.72);
-					\draw[white,line width=1.6pt,opacity=0.8] (8.75,0.8)--(8.75,2.75);
-					\draw[white,line width=0.8pt,opacity=0.8] (2.75,0.72)--(2.75,2.75);
-					\fill[gray!35,opacity=0.6] (2.62,0.6) rectangle (9.0,0.68);
-					% nhiệt kế
-					\filldraw[fill=white,draw=gray!50,rounded corners=1pt] (3.21,0.62) rectangle (3.49,3.45);
-					\VLnhietke{3.35}{0.55}{2.88}{1.45}
-					% tay quay
-					\shade[top color=gray!25,bottom color=gray!65] (9.5,1.62) rectangle (9.78,1.86);
-					\fill[gray!45] (9.95,1.74) ellipse (0.22 and 1.02);
-					\shade[left color=gray!70,right color=gray!40] (9.84,0.72) rectangle (9.95,2.76);
-					\shade[inner color=gray!5,outer color=gray!45] (9.84,1.74) ellipse (0.18 and 0.96);
-					\draw[gray!60,thin] (9.84,1.74) ellipse (0.18 and 0.96);
-					\foreach \g in {0,45,...,315}{\shade[inner color=gray!70,outer color=gray!40] ($(9.84,1.74)+({0.12*cos(\g)},{0.68*sin(\g)})$) ellipse (0.025 and 0.07);}
-					\shade[ball color=gray!40] (9.84,1.74) ellipse (0.05 and 0.15);
-					\fill[gray!55] (9.86,1.0) ellipse (0.03 and 0.07);
-					\shade[top color=black!55,bottom color=black,rounded corners=2pt] (9.9,0.92) rectangle (10.48,1.16);
-					\fill[white,opacity=0.3] (9.98,1.08) rectangle (10.4,1.11);
-					% nhãn
-					\node at (5.8,0.85) {Bình nước};
-					\node[above,inner sep=1.5pt] at (3.55,3.48) {Nhiệt kế};
-					\draw[thin] ($(1.5,3.95)+(40:1.02)$)--(2.85,4.85) node[right,inner sep=1pt] {(1)};
-					\draw[thin] (4.45,1.75)--(5.0,3.9) node[above,inner sep=1pt] {(2)};
-					\draw[thin] (5.43,2.05)--(6.2,3.9) node[above,inner sep=1pt] {(3)};
-					\draw[thin] (9.86,2.76)--(9.86,3.5) node[above,inner sep=1pt] {(4)};
-				\end{tikzpicture}
-		\end{minipage}\par
+		\begin{center}
+			\begin{tikzpicture}[scale=1.0,line join=round,line cap=round,font=\footnotesize]
+				% đế nhựa vàng, chân đế, bóng
+				\fill[black!85,rounded corners=1pt] (0.3,-0.12) rectangle (0.75,0.03) (9.85,-0.12) rectangle (10.3,0.03);
+				\shade[top color=yellow!50!orange!40,bottom color=yellow!40!orange!55!black!80] (0,0) rectangle (10.6,0.32);
+				\shade[top color=yellow!30!orange!15,bottom color=yellow!45!orange!30] (0,0.32)--(10.6,0.32)--(10.85,0.56)--(0.25,0.56)--cycle;
+				\fill[yellow!45!orange!50!black!75] (10.6,0)--(10.85,0.24)--(10.85,0.56)--(10.6,0.32)--cycle;
+				\draw[yellow!35!orange!45!black!70,thin] (0,0.32)--(10.6,0.32)--(10.85,0.56);
+				\fill[black,opacity=0.12] (5.85,0.5) ellipse (3.4 and 0.07);
+				\fill[black,opacity=0.15] (9.95,0.52) ellipse (0.45 and 0.05);
+				% trụ đỡ áp kế
+				\fill[black,opacity=0.15] (1.55,0.48) ellipse (0.42 and 0.06);
+				\shade[left color=gray!60,right color=gray!45,middle color=white] (1.18,0.5) rectangle (1.82,2.6);
+				\fill[gray!45] (1.5,0.5) ellipse (0.32 and 0.05);
+				\draw[gray!55,thin] (1.18,0.5)--(1.18,2.6) (1.82,0.5)--(1.82,2.6);
+				\fill[white,opacity=0.6] (1.33,0.6) rectangle (1.38,2.5);
+				% ống nối đồng sang bình (ống, ốc lục giác, ống)
+				\shade[top color=VLdong!30!white,bottom color=VLdong!75!black] (1.82,1.64) rectangle (2.62,1.84);
+				\shade[top color=VLdong!35!white,bottom color=VLdong!80!black] (2.02,1.54) rectangle (2.3,1.94);
+				\draw[VLdong!60!black,very thin] (2.02,1.54) rectangle (2.3,1.94) (2.02,1.67)--(2.3,1.67) (2.02,1.81)--(2.3,1.81);
+				% ốc đồng dưới áp kế
+				\shade[left color=VLdong!80!black,right color=VLdong!70!black,middle color=VLdong!25!white] (1.27,2.6) rectangle (1.73,2.8);
+				\draw[VLdong!55!black,very thin] (1.27,2.6) rectangle (1.73,2.8) (1.42,2.6)--(1.42,2.8) (1.58,2.6)--(1.58,2.8);
+				\shade[left color=VLdong!80!black,right color=VLdong!70!black,middle color=VLdong!30!white] (1.41,2.8) rectangle (1.59,2.97);
+				% áp kế
+				\shade[ball color=black!75] (1.5,3.95) circle (1.02);
+				\shade[inner color=gray!15,outer color=gray!55] (1.5,3.95) circle (0.93);
+				\shade[inner color=white,outer color=violet!12] (1.5,3.95) circle (0.86);
+				\foreach \g in {225,198,...,-45}{\draw[black!85,semithick] ($(1.5,3.95)+(\g:0.68)$)--($(1.5,3.95)+(\g:0.83)$);}
+				\foreach \g in {225,219.6,...,-45}{\draw[black!70,very thin] ($(1.5,3.95)+(\g:0.76)$)--($(1.5,3.95)+(\g:0.83)$);}
+				\draw[black!70,very thin] ($(1.5,3.95)+(225:0.83)$) arc[start angle=225,end angle=-45,radius=0.83];
+				\draw[VLdo,thick] ($(1.5,3.95)+(225:0.8)$) arc[start angle=225,end angle=198,radius=0.8];
+				\node[font=\tiny] at (1.5,3.45) {bar};
+				\fill[gray!60] (1.42,3.66) circle (0.025) (1.58,3.66) circle (0.025);
+				\draw[black,line width=1pt] ($(1.5,3.95)+(8:0.18)$)--($(1.5,3.95)+(188:0.74)$);
+				\fill[black] (1.5,3.95) circle (0.07);
+				\fill[gray!50] (1.48,3.97) circle (0.025);
+				\fill[white,opacity=0.55] ($(1.5,3.95)+(110:0.8)$) arc[start angle=110,end angle=160,radius=0.8]--($(1.5,3.95)+(160:0.7)$) arc[start angle=160,end angle=110,radius=0.7]--cycle;
+				% bình nước: thành sau
+				\draw[gray!50] (2.8,0.72)--(2.8,3.26)--(9.18,3.26)--(9.18,0.72);
+				% nước, mặt thoáng
+				\fill[VLxanh!12,opacity=0.85] (2.62,0.6) rectangle (9.0,2.85);
+				\fill[VLxanh!25,opacity=0.9] (2.62,2.85)--(9.0,2.85)--(9.18,3.01)--(2.8,3.01)--cycle;
+				\draw[VLxanh!45,thin] (2.62,2.85)--(9.0,2.85)--(9.18,3.01);
+				% ống đồng trong nước nối vào xilanh
+				\fill[VLdong!55!white,opacity=0.85] (2.62,1.67) rectangle (3.5,1.81);
+				\draw[VLdong!60!black,thin] (2.62,1.67)--(3.5,1.67) (2.62,1.81)--(3.5,1.81);
+				% khung xilanh: thanh ren, tấm đầu, ốc
+				\foreach \y in {1.08,2.47}{
+					\fill[gray!50] (3.3,\y-0.035) rectangle (7.75,\y+0.035);
+					\foreach \x in {3.32,3.4,...,7.7}{\draw[gray!25!black,very thin] (\x,\y-0.035)--(\x+0.04,\y+0.035);}}
+				\foreach \x in {3.45,7.3}{
+					\shade[left color=gray!50,right color=gray!25,middle color=gray!8] (\x,0.92) rectangle (\x+0.27,2.63);
+					\draw[gray!55,thin] (\x,0.92) rectangle (\x+0.27,2.63);
+					\foreach \y in {1.08,2.47}{\shade[top color=gray!20,bottom color=gray!60] (\x-0.08,\y-0.09) rectangle (\x,\y+0.09); \shade[top color=gray!20,bottom color=gray!60] (\x+0.27,\y-0.09) rectangle (\x+0.35,\y+0.09);}}
+				% xilanh trong suốt, khí bên trong
+				\fill[white,opacity=0.55] (3.72,1.4) rectangle (7.3,2.08);
+				\fill[VLxanh!6] (3.72,1.42) rectangle (5.3,2.06);
+				\draw[gray!65] (3.72,1.4) rectangle (7.3,2.08);
+				\draw[white,line width=1pt,opacity=0.9] (3.8,1.98)--(7.2,1.98);
+				\draw[gray!40,thin] (3.8,1.48)--(7.2,1.48);
+				% thước chia thể tích
+				\filldraw[fill=white,draw=gray!65] (3.9,2.12) rectangle (7.1,2.32);
+				\foreach \x in {4.06,4.12,...,6.8}{\draw[black!75,very thin] (\x,2.32)--(\x,2.26);}
+				\foreach \x in {4.06,4.36,...,6.8}{\draw[black!85,thin] (\x,2.32)--(\x,2.2);}
+				\node[font=\tiny,inner sep=0pt] at (6.92,2.2) {mL};
+				% cán pit-tông trong xilanh, pit-tông cao su
+				\shade[top color=gray!45,bottom color=black!70] (5.56,1.6) rectangle (7.3,1.88);
+				\fill[black!85,rounded corners=1pt] (5.3,1.41) rectangle (5.58,2.07);
+				\draw[gray!55,semithick] (5.37,1.43)--(5.37,2.05) (5.51,1.43)--(5.51,2.05);
+				\fill[white,opacity=0.35] (5.31,1.85) rectangle (5.57,1.95);
+				% trục ren ra tay quay
+				\shade[top color=gray!30,bottom color=gray!70] (7.57,1.67) rectangle (9.6,1.81);
+				\foreach \x in {7.6,7.68,...,9.55}{\draw[gray!25!black,very thin] (\x,1.67)--(\x+0.05,1.81);}
+				% bình nước: thành trước (kính)
+				\draw[gray!60,thick] (2.62,0.6) rectangle (9.0,3.1);
+				\draw[gray!45] (2.62,3.1)--(2.8,3.26) (9.0,3.1)--(9.18,3.26) (9.0,0.6)--(9.18,0.72);
+				\draw[white,line width=1.6pt,opacity=0.8] (8.75,0.8)--(8.75,2.75);
+				\draw[white,line width=0.8pt,opacity=0.8] (2.75,0.72)--(2.75,2.75);
+				\fill[gray!35,opacity=0.6] (2.62,0.6) rectangle (9.0,0.68);
+				% nhiệt kế
+				\filldraw[fill=white,draw=gray!50,rounded corners=1pt] (3.21,0.62) rectangle (3.49,3.45);
+				\VLnhietke{3.35}{0.55}{2.88}{1.45}
+				% tay quay
+				\shade[top color=gray!25,bottom color=gray!65] (9.5,1.62) rectangle (9.78,1.86);
+				\fill[gray!45] (9.95,1.74) ellipse (0.22 and 1.02);
+				\shade[left color=gray!70,right color=gray!40] (9.84,0.72) rectangle (9.95,2.76);
+				\shade[inner color=gray!5,outer color=gray!45] (9.84,1.74) ellipse (0.18 and 0.96);
+				\draw[gray!60,thin] (9.84,1.74) ellipse (0.18 and 0.96);
+				\foreach \g in {0,45,...,315}{\shade[inner color=gray!70,outer color=gray!40] ($(9.84,1.74)+({0.12*cos(\g)},{0.68*sin(\g)})$) ellipse (0.025 and 0.07);}
+				\shade[ball color=gray!40] (9.84,1.74) ellipse (0.05 and 0.15);
+				\fill[gray!55] (9.86,1.0) ellipse (0.03 and 0.07);
+				\shade[top color=black!55,bottom color=black,rounded corners=2pt] (9.9,0.92) rectangle (10.48,1.16);
+				\fill[white,opacity=0.3] (9.98,1.08) rectangle (10.4,1.11);
+				% nhãn
+				\node at (5.8,0.85) {Bình nước};
+				\node[above,inner sep=1.5pt] at (3.55,3.48) {Nhiệt kế};
+				\draw[thin] ($(1.5,3.95)+(40:1.02)$)--(2.85,4.85) node[right,inner sep=1pt] {(1)};
+				\draw[thin] (4.45,1.75)--(5.0,3.9) node[above,inner sep=1pt] {(2)};
+				\draw[thin] (5.43,2.05)--(6.2,3.9) node[above,inner sep=1pt] {(3)};
+				\draw[thin] (9.86,2.76)--(9.86,3.5) node[above,inner sep=1pt] {(4)};
+			\end{tikzpicture}
+		\end{center}
+		Họ đã thực hiện thí nghiệm theo trình tự sau:\\
 		Bước 1. Nhốt một lượng không khí xác định trong xilanh ở áp suất khí quyển. Đặt xilanh trong bình nước có nhiệt độ $T_1$ không đổi. Thay đổi thể tích khí bằng pit-tông, đo áp suất tương ứng và ghi lại các cặp giá trị $(V,p)$.\\
 		Bước 2. Giữ nguyên lượng khí khảo sát như ở Bước 1. Lặp lại thí nghiệm ở các nhiệt độ không đổi khác nhau của bình nước ($T_2$, $T_3$, \ldots). Thu thập các bộ số liệu $(V,p)$ tương ứng.\\
 		Bước 3. Lặp lại thí nghiệm với các lượng không khí khác nhau (đều được lấy từ môi trường ở áp suất khí quyển), đồng thời giữ nhiệt độ bình nước không đổi bằng $T_1$. Thu thập các bộ số liệu $(V,p)$ tương ứng.
@@ -547,7 +544,7 @@
 		Hình 2a mô tả cấu tạo của cuộn dây phát và cuộn dây nhận. Khi hệ thống sạc hoạt động, dòng điện trong cuộn dây phát có đồ thị phụ thuộc thời gian như Hình 2b. Quy ước chiều dương của dòng điện là chiều dòng điện đi vào đầu $a$ của cuộn dây phát.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
 				% khung
 				\draw[black!70] (0,-0.55) rectangle (15.6,4.0);
 				\draw[black!70] (0,0) -- (15.6,0) (5.5,-0.55)--(5.5,4.0);
@@ -574,18 +571,18 @@
 				\fill[gray!55] (5.1,1.85) rectangle (5.27,1.98);
 				\foreach \x in {1.3,4.2}{\fill[black!85] (\x,1.67) circle (0.42); \draw[black!60,densely dotted] (\x,1.67) circle (0.37); \shade[inner color=gray!10,outer color=gray!50] (\x,1.67) circle (0.24); \foreach \g in {0,72,...,288}{\draw[gray!65,line width=1.2pt] (\x,1.67)--++(\g:0.2);} \fill[gray!60] (\x,1.67) circle (0.06);}
 				% bộ pin, bộ chuyển đổi
-				\draw[black!60,semithick] (1.6,2.3) .. controls (2.0,2.5) and (2.1,2.2) .. (2.3,2.2);
+				\draw[black!60,semithick] (1.6,2.3) .. controls (1.9,2.5) and (2.0,2.2) .. (2.2,2.2);
 				\filldraw[fill=white,draw=black!80] (0.45,2.1) rectangle (1.6,2.5);
 				\node at (1.025,2.3) {Bộ pin};
-				\filldraw[fill=white,draw=black!80] (2.3,1.85) rectangle (4.0,2.65);
+				\filldraw[fill=white,draw=black!80] (2.2,1.85) rectangle (4.1,2.65);
 				\node[align=center] at (3.15,2.25) {Bộ\\chuyển đổi};
 				% cuộn nhận M dưới gầm
 				\fill[gray!55] (2.42,1.68) rectangle (3.38,1.74);
 				\foreach \k in {0,1,2}{\draw[VLdong!70!black,thick] (2.9,{1.5+0.05*\k}) ellipse (0.4 and 0.065);}
 				\node[right,inner sep=2pt] at (3.3,1.45) {M};
 				% Hình 2a
-				\node at (6.2,3.05) {Ô tô};
-				\node at (6.2,1.55) {Đế sạc};
+				\node at (6.15,3.05) {Ô tô};
+				\node at (6.15,1.55) {Đế sạc};
 				\draw[dashed,black!70] (6.75,2.45) rectangle (10.3,3.65);
 				\draw[dashed,black!70] (6.75,0.95) rectangle (10.3,2.15);
 				\node[align=center] at (7.27,3.05) {Cuộn\\nhận};
@@ -634,7 +631,7 @@
 	\begin{ex}%[VL12-C4-VD]
 		Trong công nghiệp thực phẩm, kĩ thuật chiếu xạ sử dụng tia gamma ($\gamma$) phát ra từ đồng vị phóng xạ cobalt-60 (${}^{60}\text{Co}$) là phương pháp hiệu quả để tiêu diệt vi sinh vật, kí sinh trùng, nhằm kéo dài thời gian bảo quản các loại nông sản và trái cây xuất khẩu. Các tia gamma này được phát ra khi hạt nhân ${}^{60}_{27}\text{Co}$ phân rã thành hạt nhân ${}^{60}_{28}\text{Ni}$ rồi chuyển từ trạng thái kích thích về trạng thái bền. Do hiện tượng phân rã phóng xạ tự phát, độ phóng xạ của nguồn ${}^{60}\text{Co}$ giảm dần theo thời gian, làm ảnh hưởng đến liều lượng chiếu xạ quy chuẩn. Để giám sát chất lượng nguồn phóng xạ này, các kĩ sư tại phòng thực nghiệm đã sử dụng máy đếm xung để đo độ phóng xạ $H$ (phân rã/giây) của một mẫu ${}^{60}\text{Co}$ theo thời gian, kết quả trả về là hình vẽ biểu diễn sự phụ thuộc của $\ln H$ theo thời gian $t$ có dạng đoạn thẳng như hình bên.
 		\begin{center}
-			\begin{tikzpicture}[scale=0.723,x=0.056cm,y=7.2cm,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[scale=0.764,x=0.056cm,y=7.0cm,line join=round,line cap=round,font=\footnotesize]
 				\begin{scope}[shift={(-50,-5.87)}]
 					\draw[thick] (50,5.87) rectangle (192,6.35);
 					\foreach \x in {60,80,...,180}{\draw[thick] (\x,5.87)--(\x,5.885); \node[below,inner sep=2pt] at (\x,5.87) {$\pgfmathprintnumber[fixed,fixed zerofill,precision=1,use comma]{\x}$};}
@@ -645,7 +642,7 @@
 					\draw[VLdo,very thick] (61,{6.24+0.24*29/70})--(184,{6.24-0.24*94/70});
 					\foreach \x/\d in {60/-0.03,71/-0.024,82/-0.012,90/0,101/0.012,112/0.02,121/0.022,132/0.014,141/0.019,151/0.016,160/0,169/-0.015,181/-0.03}{
 						\filldraw[fill=black,draw=black] (\x,{6.24-0.24*(\x-90)/70+\d}) circle (1.5pt);}
-					\node[below,inner sep=11pt] at (121,5.87) {Thời gian (ngày)};
+					\node[below,inner sep=9.5pt] at (121,5.87) {Thời gian (ngày)};
 					\node[rotate=90,above,inner sep=30pt] at (50,6.115) {$\ln H$ ($\times 10^{-1}$)};
 				\end{scope}
 			\end{tikzpicture}

@@ -9,6 +9,28 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
+% --- Macro hình riêng của đề (tiền tố VL, có thể gom vào preamble-vatli-hinh.tex) ---
+% bu lông kim loại nhìn nghiêng (đầu lục giác + thân có ren): \VLbulong{x}{y}{góc xoay}{dài thân}
+\newcommand{\VLbulong}[4]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#3]
+		\shade[top color=gray!25,bottom color=gray!70,middle color=gray!10] (0,-0.045) rectangle (#4,0.045);
+		\foreach \VLr in {0.25,0.31,...,#4}{\draw[gray!55!black,very thin] (\VLr,-0.045)--(\VLr+0.03,0.045);}
+		\shade[top color=gray!35,bottom color=gray!75,middle color=gray!15] (-0.1,-0.1) rectangle (0,0.1);
+		\draw[gray!40!black,very thin] (-0.1,-0.1) rectangle (0,0.1) (-0.1,-0.033)--(0,-0.033) (-0.1,0.033)--(0,0.033) (0,-0.045)--(#4,-0.045)--(#4,0.045)--(0,0.045);
+	\end{scope}}
+% đai ốc lục giác kim loại nhìn chính diện: \VLdaioc{x}{y}{bán kính}
+\newcommand{\VLdaioc}[3]{%
+	\shade[top color=gray!20,bottom color=gray!70] (#1,#2)++(0:#3)--++(120:#3)--++(180:#3)--++(240:#3)--++(300:#3)--++(0:#3)--cycle;
+	\draw[gray!40!black,very thin] (#1,#2)++(0:#3)--++(120:#3)--++(180:#3)--++(240:#3)--++(300:#3)--++(0:#3)--cycle;
+	\fill[gray!85!black] (#1,#2) circle (0.45*#3);
+	\draw[gray!20,very thin] (#1,#2) circle (0.45*#3);}
+% túi ni lông / mẩu rác nhàu (đường cong mềm, tô chuyển màu): \VLmaurac{x}{y}{cỡ}{màu}{góc}
+\newcommand{\VLmaurac}[5]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#5,scale=#3]
+		\shade[top color=#4!45!white,bottom color=#4!85!black] (-0.2,-0.08) .. controls (-0.26,0.1) and (-0.1,0.2) .. (0.0,0.14) .. controls (0.08,0.24) and (0.22,0.18) .. (0.22,0.06) .. controls (0.3,-0.02) and (0.2,-0.14) .. (0.08,-0.12) .. controls (0.0,-0.18) and (-0.14,-0.16) .. cycle;
+		\draw[#4!50!black,very thin] (-0.2,-0.08) .. controls (-0.26,0.1) and (-0.1,0.2) .. (0.0,0.14) .. controls (0.08,0.24) and (0.22,0.18) .. (0.22,0.06) .. controls (0.3,-0.02) and (0.2,-0.14) .. (0.08,-0.12) .. controls (0.0,-0.18) and (-0.14,-0.16) .. cycle;
+		\draw[white,opacity=0.7,very thin] (-0.1,0.06) .. controls (-0.02,0.1) and (0.05,0.02) .. (0.12,0.06);
+	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT NGHỆ AN -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -43,60 +65,90 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{13.2\baselineskip}
+	\NeedspaceCau{15.3\baselineskip}
 	\begin{ex}%[VL12-C3-NB]
 		Trong một nhà máy xử lí rác thải rắn, rác được đưa lên băng chuyền đi qua một nam châm điện đặt phía trên để tách riêng các kim loại có từ tính. Các vật liệu bị nam châm giữ lại chủ yếu là hợp chất của kim loại nào sau đây?
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.82,line join=round,line cap=round,font=\footnotesize]
-				% nền
-				\fill[gray!6,rounded corners=3pt] (-0.3,-1.15) rectangle (7.6,3.75);
-				% băng chuyền: mặt bên
-				\shade[top color=gray!55,bottom color=gray!80] (0,0.9)--(7.2,-0.35)--(7.2,-0.85)--(0,0.4)--cycle;
-				\foreach \t in {0.06,0.3,0.54,0.78}{\shade[ball color=gray!50] ($(0,0.62)!\t!(7.2,-0.6)$) circle (0.15);}
-				\foreach \t in {0.18,0.42,0.66,0.9}{\fill[gray!30] ($(0,0.62)!\t!(7.2,-0.6)$) circle (0.09);}
-				\draw[gray!40!black,thin] (0,0.9)--(7.2,-0.35)--(7.2,-0.85)--(0,0.4)--cycle;
-				% chân đỡ
-				\fill[gray!65] (4.6,-0.55) rectangle (4.95,-0.95) (6.8,-0.85) rectangle (7.05,-1.05) (0.4,0.35) rectangle (0.65,0.1);
-				% mặt băng tải
-				\shade[left color=gray!80,right color=gray!60] (0,0.9)--(7.2,-0.35)--(7.5,0.35)--(0.3,1.6)--cycle;
-				\draw[gray!40!black,thin] (0,0.9)--(7.2,-0.35)--(7.5,0.35)--(0.3,1.6)--cycle;
-				\fill[gray!85] (0,0.9) .. controls (-0.2,1.0) and (0.1,1.65) .. (0.3,1.6)--cycle;
-				% rác hỗn hợp (nhựa, giấy, vải)
-				\pgfmathsetseed{11}
-				\foreach \x/\y/\c in {0.55/1.25/VLdo,0.9/1.35/yellow!80!orange,1.2/1.12/VLxanh!70,1.5/1.3/VLla,1.85/1.05/VLdo!70,2.2/1.18/violet!60,2.6/0.95/white,2.9/1.1/VLla!80!black,3.4/0.82/orange!70,3.9/0.95/VLxanh!50,4.4/0.62/white,4.9/0.7/VLdo!80,5.4/0.45/VLla,5.9/0.5/violet!55,6.3/0.25/VLxanh!60,6.7/0.32/white}{
-					\filldraw[fill=\c,draw=black!50,very thin,rotate around={20*rnd:(\x,\y)}] (\x-0.18,\y-0.09) .. controls (\x-0.2,\y+0.16) and (\x+0.07,\y+0.24) .. (\x+0.19,\y+0.07) .. controls (\x+0.24,\y-0.1) and (\x+0.03,\y-0.17) .. cycle;}
+			\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
+				\fill[gray!6,rounded corners=4pt] (-0.4,-1.5) rectangle (7.95,3.95);
+				% ===== băng chuyền
+				% chân đỡ, bóng đổ
+				\fill[black!12] (0.1,-0.25) .. controls (2.5,-0.6) and (5.5,-1.05) .. (7.7,-1.42)--(7.7,-1.12) .. controls (5.5,-0.75) and (2.5,-0.3) .. (0.1,0.05)--cycle;
+				\foreach \x in {0.5,3.0,6.7}{\pgfmathsetmacro{\yt}{0.42-0.1667*\x}\shade[left color=gray!75,right color=gray!40] (\x,\yt-0.55) rectangle (\x+0.22,\yt);}
+				\shade[top color=gray!35,bottom color=gray!65] (3.45,-0.62) rectangle (4.05,-0.24);
+				\draw[gray!40!black,thin] (3.45,-0.62) rectangle (4.05,-0.24);
+				% khung bên (mặt trước)
+				\shade[top color=gray!50,bottom color=gray!80] (0,0.95)--(7.5,-0.3)--(7.5,-0.85)--(0,0.4)--cycle;
+				\draw[gray!35!black,thin] (0,0.95)--(7.5,-0.3)--(7.5,-0.85)--(0,0.4)--cycle;
+				\foreach \t in {0.07,0.33,0.59,0.85}{
+					\coordinate (R) at ($(0,0.67)!\t!(7.5,-0.57)$);
+					\shade[ball color=gray!55] (R) circle (0.2);
+					\draw[gray!30!black,thin] (R) circle (0.2);
+					\fill[gray!25] (R) circle (0.07);
+					\fill[black!70] (R) circle (0.025);}
+				% mặt băng tải (cao su đen)
+				\shade[left color=black!80,right color=black!60,middle color=black!70] (0,0.95)--(7.5,-0.3)--(7.75,0.32)--(0.55,1.72)--cycle;
+				\foreach \t in {0.05,0.1,...,0.96}{\draw[black!50,very thin] ($(0,0.95)!\t!(7.5,-0.3)$)--($(0.55,1.72)!\t!(7.75,0.32)$);}
+				% thành sau và đầu băng tải
+				\shade[top color=gray!45,bottom color=gray!70] (0.55,1.72)--(7.75,0.32)--(7.75,0.48)--(0.55,1.92)--cycle;
+				\shade[left color=gray!80,right color=gray!50] (0,0.95)--(0.55,1.72)--(0.55,1.92) .. controls (0.2,1.85) and (-0.15,1.4) .. (-0.2,0.85)--(-0.2,0.35)--(0,0.4)--cycle;
+				\draw[gray!35!black,thin] (0,0.95)--(0.55,1.72) (0.55,1.92) .. controls (0.2,1.85) and (-0.15,1.4) .. (-0.2,0.85)--(-0.2,0.35)--(0,0.4);
+				% mũi tên chiều chuyển động
+				\draw[VLdo,semithick,VLmui] (6.6,0.95)--(7.8,0.72);
+				% rác hỗn hợp (bên trái băng)
+				\foreach \x/\y/\VLs/\VLc/\VLg in {0.55/1.35/1.3/VLdo/10,0.85/1.5/1.1/yellow/-20,0.75/1.12/1.0/VLxanh/30,1.1/1.25/1.2/VLla/0,1.35/1.45/1.0/white/40,1.45/1.05/1.1/violet/-15,1.75/1.25/1.0/orange/25,1.95/1.0/0.9/magenta/0,2.25/1.15/0.9/VLluc/-30,2.6/0.9/0.8/white/10,3.45/0.8/0.8/VLdo/20,4.55/0.55/0.85/white/-10,5.35/0.42/0.8/VLla/0,6.2/0.35/1.5/VLla/15,6.35/0.18/1.0/VLxanh/-20,5.9/0.12/0.8/white/30}{\VLmaurac{\x}{\y}{\VLs}{\VLc}{\VLg}}
 				% vật kim loại trên băng
-				\foreach \x/\y in {2.5/1.32,3.65/1.05,4.7/0.9,6.0/0.72}{\shade[top color=gray!25,bottom color=gray!70] (\x-0.14,\y-0.05) rectangle (\x+0.14,\y+0.05);}
-				\shade[top color=yellow!50!orange,bottom color=yellow!70!black] (5.2,0.98) rectangle (5.55,1.22);
-				% nam châm điện
-				\draw[gray!60!black,line width=1.6pt] (3.75,3.0)--(3.75,3.7) (5.05,3.0)--(5.05,3.7);
-				\draw[gray!60!black,line width=1.6pt] (3.75,3.35)--(5.05,3.35);
-				\filldraw[fill=gray!55,draw=gray!40!black,thin] (5.25,3.15) rectangle (5.65,3.5);
-				\draw[gray!40!black,thin] (5.05,3.3)--(5.25,3.3);
-				\fill[gray!35] (3.0,2.7)--(5.6,2.7)--(5.85,2.95)--(3.25,2.95)--cycle;
-				\fill[gray!60] (5.6,2.45)--(5.85,2.7)--(5.85,2.95)--(5.6,2.7)--cycle;
-				\shade[top color=gray!30,bottom color=gray!65] (3.0,2.45) rectangle (5.6,2.7);
-				\draw[gray!40!black,thin] (3.0,2.45) rectangle (5.6,2.7) (3.0,2.7)--(3.25,2.95)--(5.85,2.95)--(5.85,2.7)--(5.6,2.45) (5.6,2.7)--(5.85,2.95);
-				\foreach \x in {3.15,3.47,...,5.4}{\shade[top color=orange!70,bottom color=orange!90!black] (\x,2.2) rectangle (\x+0.2,2.45);}
-				\foreach \x in {3.6,3.8,...,5.0}{\draw[VLdong!80!black,line width=1.2pt] (\x,2.75)--(\x+0.12,2.9);}
+				\VLbulong{2.3}{1.45}{-15}{0.35}
+				\VLbulong{3.0}{1.2}{20}{0.3}
+				\VLdaioc{3.95}{1.05}{0.11}
+				\VLbulong{4.9}{0.9}{-10}{0.32}
+				\VLdaioc{5.7}{0.75}{0.1}
+				% lon kim loại
+				\begin{scope}[shift={(4.2,0.55)},rotate=-12]
+					\shade[left color=yellow!60!orange,right color=yellow!80!black,middle color=yellow!40] (-0.25,-0.13) rectangle (0.25,0.13);
+					\filldraw[fill=gray!40,draw=gray!30!black,very thin] (0.25,0) ellipse (0.05 and 0.13);
+					\draw[gray!30!black,very thin] (-0.25,-0.13) rectangle (0.25,0.13);
+				\end{scope}
+				% ===== nam châm điện
+				% ống, hộp nối dây
+				\foreach \x in {3.95,4.85}{\shade[left color=gray!70,right color=gray!45,middle color=gray!10] (\x,2.95) rectangle (\x+0.12,3.55);}
+				\draw[gray!55,line width=2.6pt] (4.01,3.55) .. controls (4.01,3.8) and (4.2,3.82) .. (4.4,3.82)--(5.0,3.82) .. controls (5.2,3.82) and (5.3,3.7) .. (5.4,3.55);
+				\draw[gray!20,line width=0.8pt] (4.01,3.57) .. controls (4.01,3.8) and (4.2,3.82) .. (4.4,3.82)--(5.0,3.82) .. controls (5.2,3.82) and (5.3,3.7) .. (5.4,3.57);
+				\draw[gray!55,line width=2.6pt] (4.91,3.55)--(4.91,3.65) .. controls (4.91,3.72) and (5.0,3.6) .. (5.15,3.45)--(5.5,3.45);
+				\shade[top color=gray!35,bottom color=gray!65,rounded corners=1pt] (5.5,3.25) rectangle (5.95,3.65);
+				\draw[gray!35!black,thin,rounded corners=1pt] (5.5,3.25) rectangle (5.95,3.65);
+				\shade[ball color=orange] (5.85,3.45) circle (0.06);
+				% thân nam châm (hộp kim loại)
+				\fill[gray!30] (3.3,2.6)--(5.8,2.6)--(6.1,2.9)--(3.6,2.9)--cycle;
+				\fill[gray!60] (5.8,2.3)--(6.1,2.6)--(6.1,2.9)--(5.8,2.6)--cycle;
+				\shade[top color=gray!25,bottom color=gray!60] (3.3,2.3) rectangle (5.8,2.6);
+				\draw[gray!35!black,thin] (3.3,2.3) rectangle (5.8,2.6) (3.3,2.6)--(3.6,2.9)--(6.1,2.9)--(6.1,2.6)--(5.8,2.3) (5.8,2.6)--(6.1,2.9);
+				\draw[white,opacity=0.7] (3.35,2.55)--(5.75,2.55);
+				% cuộn dây trên mặt hộp
+				\foreach \x in {4.1,4.2,...,5.1}{\draw[orange!70!black,line width=1.6pt] (\x,2.68) .. controls (\x+0.03,2.82) and (\x+0.1,2.86) .. (\x+0.13,2.78); \draw[orange!40!white,line width=0.5pt] (\x,2.69) .. controls (\x+0.03,2.82) and (\x+0.1,2.86) .. (\x+0.13,2.79);}
+				% các cực từ (màu cam)
+				\foreach \x in {3.42,3.73,...,5.6}{\shade[left color=orange!90!black,right color=orange!60,middle color=orange!40] (\x,2.02) rectangle (\x+0.22,2.3); \draw[orange!40!black,very thin] (\x,2.02) rectangle (\x+0.22,2.3);}
 				% đường sức từ
-				\foreach \x/\a in {3.25/-118,3.6/-108,3.95/-98,4.3/-90,4.65/-82,5.0/-74,5.35/-64}{\draw[VLxanh,densely dashed,thin,VLmui] (\x,2.15)--++(\a:1.0);}
-				% vật kim loại bị hút
-				\shade[top color=gray!20,bottom color=gray!65] (3.6,1.6) rectangle (3.75,1.95);
-				\shade[ball color=gray!50] (4.55,1.7) circle (0.13);
-				\fill[gray!25] (4.55,1.7) circle (0.05);
-				\shade[top color=gray!20,bottom color=gray!65,rotate around={30:(5.25,1.75)}] (5.1,1.7) rectangle (5.4,1.8);
-				\draw[VLdo,thin,VLmui] (5.45,1.55) .. controls (5.6,1.4) and (5.6,1.25) .. (5.5,1.1);
-				% chiều chuyển động băng tải
-				\draw[VLdo,semithick,VLmui] (6.5,0.85)--(7.45,0.67);
-				\draw[VLdo,thin,VLmui] (1.6,0.95)--(1.4,0.45);
-				\draw[VLdo,thin,VLmui] (6.7,0.15)--(6.95,-0.35);
+				\foreach \x/\a in {3.53/-122,3.84/-111,4.15/-100,4.46/-92,4.77/-84,5.08/-76,5.39/-66,5.7/-56}{\draw[VLxanh,densely dashed,thin,VLmui] (\x,1.97)--++(\a:1.15);}
+				% vật kim loại bị hút lên
+				\VLbulong{3.55}{1.45}{60}{0.32}
+				\VLbulong{4.45}{1.2}{-50}{0.3}
+				\VLdaioc{4.15}{1.7}{0.1}
+				\begin{scope}[shift={(5.15,1.45)},rotate=25]
+					\shade[left color=gray!65,right color=gray!40,middle color=gray!10] (-0.18,-0.12) rectangle (0.18,0.12);
+					\filldraw[fill=gray!30,draw=gray!30!black,very thin] (0.18,0) ellipse (0.06 and 0.12);
+					\fill[black!70] (0.18,0) ellipse (0.03 and 0.06);
+					\draw[gray!30!black,very thin] (-0.18,-0.12)--(0.18,-0.12) (-0.18,0.12)--(0.18,0.12) (-0.18,-0.12)--(-0.18,0.12);
+				\end{scope}
+				\draw[VLdo,thin,VLmui] (5.45,1.3) .. controls (5.65,1.15) and (5.65,0.95) .. (5.55,0.8);
+				\draw[VLdo,thin,VLmui] (2.05,0.95)--(1.85,0.35);
+				\draw[VLdo,thin,VLmui] (6.9,0.2) .. controls (7.1,0.0) and (7.2,-0.3) .. (7.25,-0.55);
 				% nhãn
-				\node[fill=white,inner sep=1.5pt,rounded corners=1pt] (nc) at (1.3,3.3) {Nam châm điện};
-				\draw[thick,VLmui] (nc.east)--(3.2,2.8);
-				\node[fill=white,inner sep=1.5pt,rounded corners=1pt] (rh) at (0.95,2.3) {Rác hỗn hợp};
-				\draw[thick,VLmui] (rh.south)++(-0.1,0)--(0.8,1.5);
+				\node[fill=white,inner sep=1.5pt,rounded corners=1pt] (nc) at (1.35,3.4) {Nam châm điện};
+				\draw[thick,VLmui] (nc.east)--(3.55,2.7);
+				\node[fill=white,inner sep=1.5pt,rounded corners=1pt] (rh) at (1.0,2.55) {Rác hỗn hợp};
+				\draw[thick,VLmui] (rh.south)++(-0.15,0)--(0.8,1.6);
 			\end{tikzpicture}
 		\end{center}
 		\choice
@@ -186,10 +238,10 @@
 				\def\ra{2.9}\def\rb{1.3}\def\h{0.3}
 				\coordinate (O) at (0.05,0.12);
 				% nửa sau của màn huỳnh quang
-				\fill[gray!35] (\ra,0) arc[start angle=0,end angle=180,x radius=\ra,y radius=\rb]--(-\ra,-\h) arc[start angle=180,end angle=0,x radius=\ra,y radius=\rb]--cycle;
+				\shade[left color=gray!70,right color=gray!45,middle color=gray!35] (\ra,0) arc[start angle=0,end angle=180,x radius=\ra,y radius=\rb]--(-\ra,-\h) arc[start angle=180,end angle=0,x radius=\ra,y radius=\rb]--cycle;
 				\draw[gray!30!black,thin] (\ra,0) arc[start angle=0,end angle=180,x radius=\ra,y radius=\rb] (\ra,-\h) arc[start angle=0,end angle=180,x radius=\ra,y radius=\rb];
 				% lá vàng
-				\shade[left color=yellow!80!orange,right color=yellow!35] (-0.3,-0.15)--(0.15,-0.32)--(0.38,0.42)--(-0.08,0.58)--cycle;
+				\shade[left color=yellow!80!orange,right color=yellow!35,opacity=0.85] (-0.3,-0.15)--(0.15,-0.32)--(0.38,0.42)--(-0.08,0.58)--cycle;
 				% chùm hạt alpha
 				\coordinate (S) at (-2.4,-2.2);
 				\draw[orange!85!red,semithick] (S)--(O);
@@ -197,7 +249,7 @@
 				\foreach \g in {80,87,95,102,109,166,14}{\fill[orange!85!red] ({\ra*cos(\g)},{\rb*sin(\g)}) circle (1.8pt);}
 				% nửa trước của màn (có khe cho chùm tia đi qua)
 				\foreach \a/\b in {180/230,258/360}{
-					\fill[gray!55] ({\ra*cos(\a)},{\rb*sin(\a)}) arc[start angle=\a,end angle=\b,x radius=\ra,y radius=\rb]--({\ra*cos(\b)},{\rb*sin(\b)-\h}) arc[start angle=\b,end angle=\a,x radius=\ra,y radius=\rb]--cycle;
+					\shade[top color=gray!55,bottom color=gray!85,middle color=gray!45] ({\ra*cos(\a)},{\rb*sin(\a)}) arc[start angle=\a,end angle=\b,x radius=\ra,y radius=\rb]--({\ra*cos(\b)},{\rb*sin(\b)-\h}) arc[start angle=\b,end angle=\a,x radius=\ra,y radius=\rb]--cycle;
 					\draw[gray!30!black,thin] ({\ra*cos(\a)},{\rb*sin(\a)}) arc[start angle=\a,end angle=\b,x radius=\ra,y radius=\rb]--({\ra*cos(\b)},{\rb*sin(\b)-\h}) arc[start angle=\b,end angle=\a,x radius=\ra,y radius=\rb]--cycle;}
 				\fill[orange!85!red] ({\ra*cos(-58)},{\rb*sin(-58)}) circle (1.8pt);
 				% nguồn phát
@@ -459,8 +511,11 @@
 					% lòng mạch (máu)
 					\shade[top color=VLdo!65!black,bottom color=VLdo!75!black,middle color=VLdo!45] (0,1.62) .. controls (1.5,1.62) and (1.7,2.1) .. (2.6,2.1) .. controls (3.5,2.1) and (3.7,1.62) .. (5.2,1.62)--(5.2,0.95) .. controls (3.8,0.95) and (3.6,0.45) .. (2.6,0.45) .. controls (1.6,0.45) and (1.4,0.95) .. (0,0.95)--cycle;
 					% bọt khí
-					\shade[ball color=white!92!gray] (2.6,1.28) circle (0.82);
-					\draw[gray!55,thin] (2.6,1.28) circle (0.82);
+					\fill[VLdo!30!black,opacity=0.35] (2.68,1.2) circle (0.84);
+					\shade[inner color=white,outer color=gray!50] (2.6,1.28) circle (0.82);
+										\fill[white,opacity=0.85] (2.3,1.72) ellipse (0.2 and 0.12);
+					\draw[white,opacity=0.8,semithick] (2.95,0.75) arc[start angle=-50,end angle=10,radius=0.7];
+					\draw[gray!60,thin] (2.6,1.28) circle (0.82);
 				\end{scope}
 				\draw[gray!50,thin,rounded corners=3pt] (0,0) rectangle (5.2,3.05);
 				\node[fill=white,fill opacity=0.8,text opacity=1,inner sep=1.5pt,rounded corners=1pt,font=\small] (bk) at (2.35,3.45) {Bọt khí};
@@ -483,65 +538,93 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{21.5\baselineskip}
+	\NeedspaceCau{22.7\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Đàn guitar điện sử dụng Pickup để biến đổi dao động cơ của dây đàn thành tín hiệu điện. Pickup gồm một cuộn dây dẫn quấn quanh một nam châm, đặt ngay bên dưới dây đàn bằng thép. Cuộn dây nối với ampli (bộ khuếch đại). Tín hiệu điện sau khi khuếch đại được đưa đến loa và phát ra âm thanh.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.82,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
 				% ===== đàn guitar
-				\begin{scope}[shift={(-0.2,0.15)}]
-					% cần đàn
-					\shade[top color=VLgo!70!black,bottom color=VLgo!45!black] (1.8,0.86)--(3.95,1.06)--(3.95,1.26)--(1.8,1.1)--cycle;
-					\foreach \t in {0.12,0.22,...,0.95}{\draw[gray!70,very thin] ($(1.8,0.86)!\t!(3.95,1.06)$)--($(1.8,1.1)!\t!(3.95,1.26)$);}
-					% đầu đàn
-					\shade[top color=VLxanh!80,bottom color=VLxanh!60!black] (3.95,1.04) .. controls (4.2,1.0) and (4.45,1.05) .. (4.6,1.0) .. controls (4.72,1.08) and (4.65,1.25) .. (4.5,1.3) .. controls (4.3,1.36) and (4.15,1.32) .. (3.95,1.28)--cycle;
-					\foreach \x in {4.05,4.17,...,4.45}{\fill[gray!35] (\x,{1.32+0.02*(\x-4)}) circle (0.035);}
+				\begin{scope}[shift={(0,0.1)}]
+					% bóng đổ
+					\fill[black!10] (1.25,0.28) ellipse (1.15 and 0.1);
+					% cần đàn (phím gỗ hồng, phím đàn, chấm định vị)
+					\shade[top color=VLgo!55!black,bottom color=VLgo!35!black] (2.25,1.02)--(4.6,1.3)--(4.6,1.52)--(2.25,1.3)--cycle;
+					\foreach \t in {0.06,0.13,0.2,0.27,0.33,0.39,0.45,0.5,0.55,0.6,0.65,0.7,0.74,0.78,0.82,0.86,0.9,0.94}{\draw[gray!70,thin] ($(2.25,1.02)!\t!(4.6,1.3)$)--($(2.25,1.3)!\t!(4.6,1.52)$);}
+					\foreach \t in {0.165,0.3,0.42,0.525,0.72}{\fill[white!85!VLgo] ($($(2.25,1.02)!\t!(4.6,1.3)$)!0.5!($(2.25,1.3)!\t!(4.6,1.52)$)$) circle (0.025);}
+					% đầu đàn và khóa lên dây
+					\shade[top color=VLxanh!75,bottom color=VLxanh!60!black] (4.6,1.28) .. controls (4.85,1.28) and (5.05,1.35) .. (5.35,1.32) .. controls (5.5,1.3) and (5.55,1.45) .. (5.45,1.55) .. controls (5.35,1.62) and (5.25,1.6) .. (5.15,1.68) .. controls (5.0,1.75) and (4.85,1.6) .. (4.6,1.54)--cycle;
+					\draw[VLxanh!35!black,thin] (4.6,1.28) .. controls (4.85,1.28) and (5.05,1.35) .. (5.35,1.32) .. controls (5.5,1.3) and (5.55,1.45) .. (5.45,1.55) .. controls (5.35,1.62) and (5.25,1.6) .. (5.15,1.68) .. controls (5.0,1.75) and (4.85,1.6) .. (4.6,1.54);
+					\foreach \i in {0,...,5}{\pgfmathsetmacro{\px}{4.72+0.1*\i}\pgfmathsetmacro{\py}{1.6+0.02*\i}
+						\draw[gray!50!black,semithick] (\px,\py)--(\px,\py+0.12);
+						\shade[ball color=gray!35] (\px,\py+0.15) circle (0.04);}
 					% thân đàn
-					\shade[left color=VLxanh!55!black,right color=VLxanh!85,middle color=VLxanh!60] (1.85,1.1) .. controls (1.6,1.2) and (1.65,1.45) .. (1.85,1.6) .. controls (1.5,1.75) and (1.2,1.5) .. (0.9,1.65) .. controls (0.45,1.85) and (-0.05,1.65) .. (0.0,1.05) .. controls (0.05,0.4) and (0.5,0.15) .. (1.0,0.3) .. controls (1.4,0.4) and (1.7,0.2) .. (2.0,0.35) .. controls (1.75,0.55) and (1.7,0.75) .. (1.85,0.85)--cycle;
-					\draw[VLxanh!40!black,thin] (1.85,1.1) .. controls (1.6,1.2) and (1.65,1.45) .. (1.85,1.6) .. controls (1.5,1.75) and (1.2,1.5) .. (0.9,1.65) .. controls (0.45,1.85) and (-0.05,1.65) .. (0.0,1.05) .. controls (0.05,0.4) and (0.5,0.15) .. (1.0,0.3) .. controls (1.4,0.4) and (1.7,0.2) .. (2.0,0.35) .. controls (1.75,0.55) and (1.7,0.75) .. (1.85,0.85)--cycle;
-					% mặt gảy (pickguard) và pickup
-					\filldraw[fill=VLdo!8,draw=gray!60,thin] (0.3,0.95) .. controls (0.35,1.3) and (0.8,1.5) .. (1.8,1.12)--(1.8,0.86) .. controls (1.3,0.6) and (0.6,0.5) .. (0.3,0.95)--cycle;
-					\foreach \x in {0.75,1.05,1.35}{\shade[left color=gray!65,right color=gray!40,rotate around={8:(\x,1.0)}] (\x-0.06,0.78) rectangle (\x+0.06,1.22);}
-					\fill[gray!65] (0.38,0.85) rectangle (0.5,1.1);
-					\fill[black!70] (0.5,0.5) circle (0.05) (0.7,0.42) circle (0.05) (0.3,0.62) circle (0.04);
+					\def\VLthan{(2.3,1.3) .. controls (2.0,1.4) and (2.0,1.75) .. (2.25,1.95) .. controls (1.85,2.1) and (1.5,1.8) .. (1.15,1.95) .. controls (0.6,2.2) and (0.0,1.95) .. (0.05,1.25) .. controls (0.1,0.5) and (0.6,0.2) .. (1.2,0.38) .. controls (1.7,0.5) and (2.1,0.22) .. (2.45,0.4) .. controls (2.15,0.6) and (2.1,0.9) .. (2.3,1.02)--cycle}
+					\shade[left color=VLxanh!50!black,right color=VLxanh!80,middle color=VLxanh!65] \VLthan;
+					\shade[inner color=VLxanh!45,outer color=VLxanh!75!black,opacity=0.6] \VLthan;
+					\draw[VLxanh!30!black,thin] \VLthan;
+					\draw[white,opacity=0.5,semithick] (0.2,1.5) .. controls (0.3,1.9) and (0.8,2.05) .. (1.1,1.92);
+					% mặt gảy (pickguard)
+					\def\VLguard{(0.35,1.15) .. controls (0.35,1.6) and (0.8,1.85) .. (2.28,1.3)--(2.28,1.03) .. controls (1.6,0.7) and (0.8,0.6) .. (0.35,1.15)--cycle}
+					\shade[top color=white,bottom color=VLdo!12] \VLguard;
+					\draw[gray!55,thin] \VLguard;
+					% ba pickup có 6 cực từ
+					\foreach \x in {0.95,1.35,1.8}{
+						\begin{scope}[rotate around={10:(\x,1.17)}]
+							\filldraw[fill=white!90!gray,draw=gray!50,thin,rounded corners=0.8pt] (\x-0.08,0.93) rectangle (\x+0.08,1.41);
+							\foreach \k in {0,...,5}{\fill[gray!55] (\x,0.98+0.076*\k) circle (0.017);}
+						\end{scope}}
+					% ngựa đàn, núm, công tắc, jack
+					\shade[left color=gray!60,right color=gray!30] (0.55,0.98) rectangle (0.7,1.38);
+					\foreach \k in {0,...,5}{\fill[gray!20] (0.58,1.0+0.066*\k) rectangle (0.67,1.04+0.066*\k);}
+					\foreach \x/\y in {0.82/0.82,1.12/0.72,1.42/0.68}{\shade[ball color=white!70!gray] (\x,\y) circle (0.065);}
+					\draw[gray!50!black,semithick] (1.72,0.72)--(1.85,0.78);
+					\filldraw[fill=gray!35,draw=gray!40!black,very thin] (0.32,0.62) circle (0.05);
 					% dây đàn
-					\foreach \d in {0,0.04,...,0.21}{\draw[gray!45,very thin] (0.44,0.9+\d)--(4.0,1.08+0.8*\d);}
+					\foreach \k in {0,...,5}{\draw[gray!35,very thin] (0.62,1.02+0.066*\k)--(4.65,1.33+0.034*\k);}
 				\end{scope}
-				% mũi tên chỉ dẫn
-				\draw[orange!85!red,thick,VLmui] (1.0,0.5) .. controls (1.6,0.0) and (3.2,0.1) .. (4.25,0.55);
-				\node[inner sep=1pt] (gt) at (2.75,2.3) {Guitar điện};
-				\foreach \x/\y in {0.62/1.25,0.92/1.3,1.22/1.35}{\draw[orange!85!red,thin] (gt.west)++(0,-0.05)--(\x,\y);}
-				% ===== pickup
-				\begin{scope}[shift={(4.6,0)}]
-					\filldraw[fill=white,draw=black!70,thin] (0,0) rectangle (3.2,2.8);
-					% dây đàn kim loại
-					\shade[top color=VLgo!55!gray!60,bottom color=VLgo!35!black!70,middle color=VLgo!25!white] (0.2,2.12) rectangle (3.0,2.32);
-					\node[inner sep=0pt,font=\fontsize{6}{6}\selectfont] at (1.45,2.45) {N};
-					\node[inner sep=0pt,font=\fontsize{6}{6}\selectfont] at (1.45,1.98) {S};
-					% nam châm phía trên
-					\shade[top color=VLdo!75,bottom color=VLdo!90!black] (0.85,1.55) rectangle (2.0,1.82);
-					\node[white,font=\fontsize{6}{6}\selectfont\bfseries] at (1.425,1.685) {N};
-					% lõi, cuộn dây
-					\fill[black!70] (0.78,1.45) rectangle (2.07,1.55) (0.78,0.35) rectangle (2.07,0.45);
-					\shade[left color=gray!55,right color=gray!40,middle color=gray!10] (1.0,0.45) rectangle (1.85,1.45);
-					\foreach \y in {0.5,0.56,...,1.42}{\draw[VLdong!80!black,line width=0.9pt] (0.92,\y)--(1.93,\y+0.02); \draw[VLdong!35!white,line width=0.25pt] (0.92,\y)--(1.93,\y+0.02);}
-					\shade[top color=VLxanh!75,bottom color=VLxanh!95!black] (0.85,0.08) rectangle (2.0,0.35);
-					\node[white,font=\fontsize{6}{6}\selectfont\bfseries] at (1.425,0.215) {S};
-					% dây ra ampli
-					\draw[VLdong!80!black,thin] (1.93,1.3)--(2.75,1.3) (1.93,0.65)--(2.75,0.65);
-					\filldraw[fill=white,draw=black!70,thin] (2.8,1.3) circle (0.05) (2.8,0.65) circle (0.05);
+				% mũi tên chỉ dẫn (cam)
+				\draw[orange!85!red,thick,VLmui] (1.5,0.62) .. controls (2.4,0.05) and (4.6,0.1) .. (5.7,0.65);
+				\node[inner sep=1pt] (gt) at (2.95,2.55) {Guitar điện};
+				\foreach \x/\y in {0.95/1.4,1.35/1.45,1.8/1.5}{\draw[orange!85!red,thin] (gt.west)++(0,-0.05)--(\x,\y);}
+				% ===== hộp pickup
+				\begin{scope}[shift={(6.0,0)}]
+					\filldraw[fill=white,draw=black!75,thin] (0,0) rectangle (3.3,2.9);
+					% dây đàn kim loại (thép bị nhiễm từ)
+					\shade[top color=VLgo!40!gray!70,bottom color=VLgo!30!black!75,middle color=white] (0.15,2.15) rectangle (3.15,2.33);
+					\draw[VLgo!30!black,very thin] (0.15,2.15) rectangle (3.15,2.33);
+					\node[inner sep=0pt,font=\fontsize{6}{6}\selectfont] at (1.5,2.46) {N};
+					\node[inner sep=0pt,font=\fontsize{6}{6}\selectfont] at (1.5,2.02) {S};
+					% nam châm (trụ) phía trên cuộn dây: cực N
+					\shade[left color=VLdo!85!black,right color=VLdo!70!black,middle color=VLdo!55] (0.92,1.55) rectangle (2.08,1.8);
+					\filldraw[fill=VLdo!45,draw=VLdo!50!black,very thin] (1.5,1.8) ellipse (0.58 and 0.07);
+					\node[white,font=\fontsize{6}{6}\selectfont\bfseries] at (1.5,1.66) {N};
+					% má cuộn dây
+					\shade[left color=black!85,right color=black!75,middle color=gray!50] (0.82,1.45) rectangle (2.18,1.55);
+					\shade[left color=black!85,right color=black!75,middle color=gray!50] (0.82,0.35) rectangle (2.18,0.45);
+					% lõi và các vòng dây đồng
+					\shade[left color=gray!60,right color=gray!45,middle color=gray!8] (1.05,0.45) rectangle (1.95,1.45);
+					\foreach \y in {0.49,0.545,...,1.42}{
+						\draw[VLdong!75!black,line width=1.1pt] (0.95,\y) .. controls (1.2,\y-0.02) and (1.8,\y+0.0) .. (2.05,\y+0.03);
+						\draw[VLdong!30!white,line width=0.3pt] (0.95,\y+0.01) .. controls (1.2,\y-0.01) and (1.8,\y+0.01) .. (2.05,\y+0.04);}
+					% đáy: cực S
+					\shade[left color=VLxanh!85!black,right color=VLxanh!70!black,middle color=VLxanh!55] (0.92,0.1) rectangle (2.08,0.35);
+					\node[white,font=\fontsize{6}{6}\selectfont\bfseries] at (1.5,0.22) {S};
+					% dây ra ampli và đầu nối
+					\draw[VLdong!75!black,semithick] (2.05,1.32) .. controls (2.3,1.34) and (2.6,1.33) .. (2.82,1.33);
+					\draw[VLdong!75!black,semithick] (2.05,0.62) .. controls (2.3,0.62) and (2.6,0.64) .. (2.82,0.64);
+					\filldraw[fill=white,draw=black!75,thin] (2.88,1.33) circle (0.06) (2.88,0.64) circle (0.06);
 				\end{scope}
-				% nhãn pickup
-				\node[inner sep=1pt] (dd) at (6.3,3.15) {Dây đàn kim loại};
-				\draw[thin,VLmui] (dd.south)++(0.4,0)--(6.9,2.32);
-				\node[align=center,inner sep=1pt] (nc) at (8.55,2.2) {Nam\\châm};
-				\draw[thin,VLmui] (nc.west)--(6.6,1.75);
-				\node[align=center,inner sep=1pt] (da) at (8.55,0.4) {Dây\\đến\\Ampli};
-				\draw[thin,VLmui] (da.north west)++(0.05,-0.05)--(7.48,1.25);
-				\draw[thin,VLmui] (da.west)--(7.48,0.62);
-				\node[inner sep=1pt] (cd) at (3.5,-0.35) {Cuộn dây};
-				\draw[thin,VLmui] (cd.east)--(5.52,0.7);
+				% nhãn hộp pickup
+				\node[inner sep=1pt] (dd) at (7.6,3.25) {Dây đàn kim loại};
+				\draw[thin,VLmui] (dd.south)++(0.45,0)--(8.3,2.33);
+				\node[align=center,inner sep=1pt] (nc) at (9.95,2.15) {Nam\\châm};
+				\draw[thin,VLmui] (nc.west)--(8.1,1.72);
+				\node[align=center,inner sep=1pt] (da) at (9.95,0.6) {Dây\\đến\\Ampli};
+				\draw[thin,VLmui] (da.north west)++(0.05,-0.05)--(8.97,1.3);
+				\draw[thin,VLmui] (da.west)--(8.97,0.62);
+				\node[inner sep=1pt] (cd) at (5.0,-0.3) {Cuộn dây};
+				\draw[thin,VLmui] (cd.east)--(6.92,0.75);
 			\end{tikzpicture}
 		\end{center}
 		\NeedspaceBang{10\baselineskip}%
@@ -709,7 +792,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{19.8\baselineskip}
+	\NeedspaceCau{22\baselineskip}
 	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-NgheAn-SoGD-Lan1-3]
@@ -718,47 +801,97 @@
 		\label{NgheAn-SoGD-Lan1-III1}\textit{Dùng thông tin sau cho câu~\ref{NgheAn-SoGD-Lan1-III1} và câu~\ref{NgheAn-SoGD-Lan1-III2}:} Chất rắn sodium azide ($\text{NaN}_3$) được sử dụng trong túi khí ô tô như một nguồn cung cấp khí nitrogen để bơm căng túi khí nhanh chóng khi xảy ra va chạm. Khi ô tô va chạm mạnh vào vật cản, cảm biến va chạm sẽ kích hoạt làm chất rắn này phân hủy tạo ra khí $\text{N}_2$ theo phương trình $2\text{NaN}_3\to 2\text{Na}+3\text{N}_2$. Khí $\text{N}_2$ làm túi khí phồng lên, giúp người lái xe không va chạm trực tiếp với hệ thống lái. Trong một đợt thử nghiệm, thể tích túi khí khi có và không có người đè lên lần lượt là $64$ lít và $67$ lít. Biết nhiệt độ túi khí là $30\,^\circ\text{C}$ không đổi. Hằng số Boltzmann $k=1{,}38\cdot 10^{-23}$~J/K.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
 				% ===== ảnh trái: người lái đè lên túi khí
 				\begin{scope}
-					\clip[rounded corners=6pt] (0,0) rectangle (3.6,2.7);
-					\shade[top color=gray!15,bottom color=gray!35] (0,0) rectangle (3.6,2.7);
-					\fill[gray!50] (0.35,2.7)--(0.9,2.7)--(0.6,0.9)--(0.3,0.9)--cycle;
-					\shade[top color=white,bottom color=VLxanh!15] (0.95,2.7)--(3.6,2.7)--(3.6,1.6)--(1.6,1.75)--cycle;
-					% ghế
-					\shade[left color=black!80,right color=black!60] (0.0,0.0)--(0.0,2.0) .. controls (0.1,2.3) and (0.6,2.3) .. (0.7,2.0)--(0.75,0.75)--(1.9,0.65)--(1.9,0.0)--cycle;
-					% bảng điều khiển, vô lăng
-					\shade[top color=black!70,bottom color=black!85] (2.25,1.7)--(3.6,1.6)--(3.6,0.0)--(2.55,0.0)--(2.3,0.9)--cycle;
-					\draw[black!90,line width=2.2pt] (2.62,1.05) ellipse (0.16 and 0.48);
-					\fill[gray!55] (2.82,1.0) circle (0.12) (3.15,0.95) circle (0.09);
-					% người lái
-					\fill[VLgo!40!black] (1.2,2.15) circle (0.22);
-					\shade[top color=VLxanh!65,bottom color=VLxanh!85!black] (0.65,1.95) .. controls (0.95,2.15) and (1.35,2.0) .. (1.6,1.75)--(2.4,1.5)--(3.45,1.62)--(3.5,1.4)--(2.35,1.25)--(1.55,1.35) .. controls (1.5,1.1) and (1.4,0.9) .. (1.25,0.8)--(0.7,0.95)--cycle;
-					\fill[VLgo!30!white] (3.45,1.65) circle (0.1);
-					\shade[top color=VLxanh!40!gray,bottom color=VLxanh!55!black] (0.85,0.95)--(1.95,1.0)--(2.3,0.5)--(2.3,0.0)--(1.95,0.0)--(1.85,0.6)--(0.8,0.55)--cycle;
-					% túi khí
-					\shade[ball color=white!88!gray] (1.95,1.75) ellipse (0.32 and 0.62);
-					\draw[gray!55,thin] (1.95,1.75) ellipse (0.32 and 0.62);
-					\draw[gray!45,very thin] (1.8,2.1)--(2.05,1.9) (1.85,1.5)--(2.1,1.62);
-				\end{scope}
-				\draw[gray!55,thin,rounded corners=6pt] (0,0) rectangle (3.6,2.7);
-				% ===== ảnh phải: túi khí đã bung
-				\begin{scope}[xshift=4.0cm]
-					\clip[rounded corners=6pt] (0,0) rectangle (3.6,2.7);
-					\shade[top color=white,bottom color=VLxanh!10] (0,0) rectangle (3.6,2.7);
-					\fill[VLdo!55] (0,1.25)--(0.9,1.45)--(1.0,2.0)--(0,2.1)--cycle;
-					\fill[gray!40] (0.2,2.7)--(0.55,2.7)--(0.75,1.75)--(0.45,1.7)--cycle;
+					\clip[rounded corners=7pt] (0,0) rectangle (4.6,3.4);
+					% nền: trần xe, kính chắn gió, trụ cửa
+					\shade[top color=gray!30,bottom color=gray!12] (0,0) rectangle (4.6,3.4);
+					\shade[top color=white,bottom color=VLxanh!18] (1.25,3.15)--(4.6,3.15)--(4.6,2.15)--(2.6,2.05)--(1.6,2.3)--cycle;
+					\fill[gray!55] (0,3.15) rectangle (4.6,3.4);
+					\shade[left color=gray!70,right color=gray!45] (0.55,3.4)--(1.25,3.4)--(1.55,2.3)--(1.05,1.9)--cycle;
 					% bảng điều khiển
-					\shade[top color=VLgo!55!black,bottom color=VLgo!70!black] (0,1.2)--(3.6,1.4)--(3.6,0.85)--(0,0.7)--cycle;
-					\shade[top color=VLgo!25!gray,bottom color=gray!70] (0,0.7)--(3.6,0.85)--(3.6,0)--(0,0)--cycle;
-					\fill[black!75] (3.0,0.4) rectangle (3.6,1.3);
-					\foreach \y in {0.55,0.75,0.95,1.15}{\fill[gray!55] (3.1,\y) rectangle (3.5,\y+0.08);}
-					% túi khí lớn
-					\shade[ball color=white!85!gray] (1.85,1.4) circle (1.1);
-					\draw[gray!55,thin] (1.85,1.4) circle (1.1);
-					\draw[gray!45,very thin] (1.2,1.8) .. controls (1.5,1.6) and (1.8,1.9) .. (2.1,1.7) (1.4,1.0) .. controls (1.7,1.2) and (2.0,0.9) .. (2.4,1.1) (2.2,2.2) .. controls (2.4,2.0) and (2.6,2.1) .. (2.7,1.8) (1.0,1.3) .. controls (1.2,1.4) and (1.25,1.2) .. (1.5,1.35);
+					\shade[top color=black!55,bottom color=black!85] (2.6,2.05)--(4.6,2.15)--(4.6,0)--(3.0,0)--(2.75,0.8)--cycle;
+					\shade[top color=gray!60,bottom color=black!70] (2.6,2.05)--(4.6,2.15)--(4.6,2.0)--(2.62,1.92)--cycle;
+					\fill[black!70] (3.85,0.85) rectangle (4.6,1.85);
+					\foreach \y in {1.0,1.2,...,1.7}{\filldraw[fill=gray!45,draw=black!80,very thin] (3.95,\y) rectangle (4.45,\y+0.12);}
+					\shade[ball color=gray!50] (3.62,1.25) circle (0.13);
+					\shade[ball color=gray!50] (3.62,0.85) circle (0.09);
+					\fill[VLdo!80] (3.35,0.45) circle (0.03) (3.5,0.45) circle (0.03);
+					% vô lăng (sau túi khí)
+					\draw[black!90,line width=2.6pt] (3.05,1.5) ellipse (0.2 and 0.66);
+					\draw[gray!55,line width=0.5pt] (3.0,1.5) ellipse (0.2 and 0.66);
+					\fill[black!80] (3.05,1.5) ellipse (0.12 and 0.25);
+					% ghế (tựa lưng, gối đầu, đệm ngồi)
+					\shade[left color=black!85,right color=black!60] (0,0.35) .. controls (0.0,1.4) and (0.05,2.0) .. (0.15,2.25)--(0.95,2.15) .. controls (1.05,1.6) and (1.05,1.0) .. (1.0,0.55)--cycle;
+					\shade[top color=black!55,bottom color=black!85,rounded corners=4pt] (0.2,2.2) rectangle (0.95,2.75);
+					\shade[top color=black!60,bottom color=black!85] (0.0,0.0)--(0.0,0.6) .. controls (0.8,0.75) and (1.6,0.75) .. (2.1,0.6)--(2.2,0.0)--cycle;
+					\fill[gray!70] (0.35,0.0) rectangle (0.45,0.15);
+					\shade[ball color=gray!40] (0.38,1.2) circle (0.12);
+					% chân (quần jeans) và giày
+					\shade[top color=VLxanh!45!gray!80,bottom color=VLxanh!35!black!80] (0.95,0.65) .. controls (1.4,1.15) and (2.0,1.15) .. (2.45,1.0)--(2.85,0.35)--(2.65,0.2)--(2.25,0.75) .. controls (1.8,0.75) and (1.3,0.55) .. (1.05,0.45)--cycle;
+					\shade[top color=VLxanh!40!gray!75,bottom color=VLxanh!40!black!80] (1.1,0.55) .. controls (1.6,0.75) and (2.0,0.8) .. (2.3,0.7)--(2.55,0.05)--(2.25,0.0)--(2.05,0.5) .. controls (1.7,0.5) and (1.4,0.4) .. (1.15,0.3)--cycle;
+					\fill[black!80] (2.6,0.18) .. controls (2.8,0.05) and (3.0,0.15) .. (3.05,0.3)--(2.85,0.38)--cycle;
+					\fill[black!80] (2.2,0.0)--(2.6,0.0)--(2.55,0.12)--(2.25,0.12)--cycle;
+					% thân người (áo xanh)
+					\shade[left color=VLxanh!80!black,right color=VLxanh!60] (0.95,0.75) .. controls (0.9,1.4) and (1.1,2.05) .. (1.5,2.35) .. controls (1.8,2.55) and (2.15,2.55) .. (2.35,2.45)--(2.2,1.85) .. controls (2.0,1.4) and (1.7,1.0) .. (1.55,0.7)--cycle;
+					\draw[VLxanh!45!black,very thin] (1.2,1.4) .. controls (1.4,1.7) and (1.6,1.9) .. (1.9,2.05) (1.25,1.0) .. controls (1.4,1.2) and (1.5,1.3) .. (1.7,1.4);
+					% dây an toàn
+					\draw[gray!25!black,line width=2.2pt] (0.85,2.6) .. controls (1.2,2.0) and (1.45,1.4) .. (1.6,0.75);
+					% tay phải vươn về phía trước
+					\shade[top color=VLxanh!60,bottom color=VLxanh!85!black] (2.05,2.55) .. controls (2.6,2.6) and (3.3,2.62) .. (4.15,2.78)--(4.18,2.55) .. controls (3.4,2.42) and (2.7,2.35) .. (2.2,2.25)--cycle;
+					\draw[VLxanh!45!black,very thin] (2.9,2.48) .. controls (3.1,2.52) and (3.3,2.6) .. (3.5,2.58) (3.6,2.55) .. controls (3.75,2.62) and (3.9,2.66) .. (4.05,2.62);
+					\shade[left color=VLgo!55!white,right color=VLgo!75] (4.12,2.55) .. controls (4.25,2.5) and (4.42,2.58) .. (4.48,2.72) .. controls (4.5,2.85) and (4.35,2.92) .. (4.25,2.86) .. controls (4.2,2.84) and (4.15,2.8) .. (4.12,2.78)--cycle;
+					\draw[VLgo!45!black,very thin] (4.3,2.62)--(4.46,2.66) (4.28,2.7)--(4.47,2.75);
+					% đầu (gục vào túi khí)
+					\shade[ball color=VLgo!50!black] (2.25,2.55) circle (0.25);
+					\fill[VLgo!45!white] (2.42,2.42) .. controls (2.5,2.5) and (2.5,2.62) .. (2.45,2.7)--(2.38,2.6)--cycle;
+					% túi khí
+					\begin{scope}[rotate around={-22:(2.65,1.95)}]
+						\shade[inner color=white,outer color=gray!40] (2.6,2.05) ellipse (0.4 and 0.95);
+						\fill[white,opacity=0.5] (2.55,2.4) ellipse (0.12 and 0.3);
+						\draw[gray!55,thin] (2.6,2.05) ellipse (0.4 and 0.95);
+						\draw[gray!50,very thin] (2.45,2.5) .. controls (2.6,2.4) and (2.7,2.55) .. (2.85,2.42) (2.4,1.8) .. controls (2.55,1.9) and (2.75,1.75) .. (2.9,1.85) (2.5,1.3) .. controls (2.65,1.4) and (2.75,1.25) .. (2.85,1.35) (2.6,2.85) .. controls (2.7,2.75) and (2.8,2.8) .. (2.88,2.7);
+					\end{scope}
 				\end{scope}
-				\draw[gray!55,thin,rounded corners=6pt] (4.0,0) rectangle (7.6,2.7);
+				\draw[gray!55,thin,rounded corners=7pt] (0,0) rectangle (4.6,3.4);
+				% ===== ảnh phải: túi khí đã bung
+				\begin{scope}[xshift=4.9cm]
+					\clip[rounded corners=7pt] (0,0) rectangle (4.6,3.4);
+					% ngoài kính: ô tô màu đỏ, cây xanh
+					\shade[top color=VLla!55,bottom color=white] (0,2.0) rectangle (4.6,3.4);
+					\shade[top color=VLdo!65,bottom color=VLdo!85!black] (0,2.05)--(0.2,2.55)--(1.6,2.75)--(2.0,2.35)--(2.0,2.05)--cycle;
+					\fill[VLdo!45] (0.25,2.5)--(0.6,2.85)--(1.3,2.95)--(1.55,2.72)--cycle;
+					\fill[gray!20] (0.75,2.55)--(0.85,2.78)--(1.2,2.82)--(1.3,2.65)--cycle;
+					% trần, trụ A, gương
+					\fill[gray!35] (0,3.2) rectangle (4.6,3.4);
+					\shade[left color=VLgo!35!white,right color=VLgo!55] (0.95,3.4)--(1.45,3.4)--(1.6,2.35)--(1.3,2.25)--cycle;
+					\shade[top color=gray!30,bottom color=gray!65,rounded corners=2pt] (0.15,1.95) rectangle (0.75,2.35);
+					\fill[white,opacity=0.6,rounded corners=1pt] (0.22,2.05) rectangle (0.68,2.28);
+					% bảng điều khiển
+					\shade[top color=VLgo!50!black,bottom color=VLgo!75!black] (0,2.05)--(4.6,2.15)--(4.6,1.7)--(0,1.65)--cycle;
+					\shade[top color=VLgo!25!gray!60,bottom color=gray!55] (0,1.65)--(4.6,1.7)--(4.6,0)--(0,0)--cycle;
+					% bảng điều khiển trung tâm
+					\shade[top color=black!70,bottom color=black!85] (3.65,0.35) rectangle (4.6,1.9);
+					\filldraw[fill=VLla!30,draw=gray!60,very thin] (3.8,1.5) rectangle (4.45,1.75);
+					\foreach \y in {0.6,0.8,1.0,1.2}{\foreach \x in {3.78,3.98,4.18,4.38}{\fill[gray!60] (\x,\y) rectangle (\x+0.12,\y+0.1);}}
+					% cần số
+					\shade[left color=black!80,right color=black!55] (3.4,0)--(3.48,0.5)--(3.6,0.5)--(3.68,0);
+					\shade[ball color=gray!45] (3.54,0.55) circle (0.11);
+					% ghế
+					\shade[top color=gray!15,bottom color=gray!40] (0,0) .. controls (0,0.55) and (0.25,0.95) .. (0.65,1.0) .. controls (1.0,1.0) and (1.2,0.75) .. (1.3,0.0)--cycle;
+					\draw[gray!55,thin] (0,0.45) .. controls (0.35,0.6) and (0.8,0.6) .. (1.25,0.4);
+					% túi khí lớn
+					\fill[black!20,opacity=0.5] (2.4,0.25) ellipse (1.2 and 0.18);
+					\shade[inner color=white,outer color=gray!45] (2.35,1.7) circle (1.38);
+					\fill[white,opacity=0.55] (1.95,2.25) ellipse (0.45 and 0.3);
+					\draw[gray!55,thin] (2.35,1.7) circle (1.38);
+					\foreach \a/\b in {1.3/2.3,1.6/1.2,2.6/2.6,2.9/1.4,1.9/0.7,3.2/2.2,1.5/1.8,2.3/1.95}{
+						\draw[gray!50,very thin] (\a,\b) .. controls (\a+0.15,\b+0.12) and (\a+0.3,\b-0.08) .. (\a+0.45,\b+0.05);
+						\draw[white,very thin] (\a,\b-0.04) .. controls (\a+0.15,\b+0.08) and (\a+0.3,\b-0.12) .. (\a+0.45,\b+0.01);}
+					\draw[gray!45,very thin] (1.15,1.0) .. controls (1.4,1.3) and (1.3,1.6) .. (1.55,1.9) (3.35,1.1) .. controls (3.2,1.4) and (3.45,1.7) .. (3.3,2.1);
+				\end{scope}
+				\draw[gray!55,thin,rounded corners=7pt] (4.9,0) rectangle (9.5,3.4);
 			\end{tikzpicture}
 		\end{center}
 		Khi có người lái đè lên túi khí thì áp suất khí trong túi là $1{,}4\cdot 10^5$~Pa; trường hợp người lái không đè lên túi khí thì áp suất khí là $a\cdot 10^5$~Pa. Giá trị của $a$ bằng bao nhiêu (làm tròn kết quả đến chữ số hàng phần mười)?
