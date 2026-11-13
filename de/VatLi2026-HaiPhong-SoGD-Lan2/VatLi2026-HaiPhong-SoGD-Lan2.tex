@@ -290,7 +290,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{6.2\baselineskip}
+	\NeedspaceCau{6.5\baselineskip}
 	\begin{ex}%[VL12-C3-NB]
 		Máy biến áp là thiết bị
 		\choice
@@ -378,7 +378,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{31.4\baselineskip}
+	\NeedspaceCau{30.5\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-HaiPhong-SoGD-Lan2-2]
@@ -389,7 +389,7 @@
 		Lúc đầu $t=0$, pit-tông đứng yên ở vị trí chính giữa của bình, áp suất khí quyển là $10^5$~Pa và nhiệt độ khí là $280$~K.\\
 		Kể từ $t=0$, khí được làm nóng từ từ và pit-tông chuyển động chậm. Tại $t=\tau$, pit-tông dừng lại khi vừa chạm vào vòng chặn, nội năng của khí trong bình tăng thêm $100$~J và nhiệt độ khí trong bình là $T$. Coi toàn bộ nhiệt lượng do $R$ tỏa ra được khí hấp thụ.
 		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
 				% vùng từ trường
 				\fill[VLxanh!8] (-0.25,-0.05) rectangle (2.75,2.45);
 				\foreach \i in {0,...,4}{\foreach \j in {0,...,4}{\VLnhan{0.05+0.6*\i}{0.1+0.55*\j}}}
@@ -461,7 +461,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[16.5\baselineskip]{31.1\baselineskip}
+	\NeedspaceCau[16.9\baselineskip]{31.5\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Trong y học, để chẩn đoán các bệnh lý về mạch máu như: phát hiện tắc nghẽn hoặc hẹp động mạch, người ta sử dụng máy đo lưu lượng máu điện từ (Electromagnetic Blood Flowmeter). Cấu tạo của máy gồm hai thành phần chính: cuộn dây tạo ra từ trường đều vuông góc với dòng chảy của mạch máu; hai điện cực được gắn ở hai vị trí tiếp xúc với mô xung quanh mạch máu để đo hiệu điện thế cảm ứng. Trong máu chứa nhiều ion và các hạt tích điện, nên khi máu chảy, các ion này di chuyển trong từ trường đều chịu tác dụng của lực từ có độ lớn $F=|q|vB$, có phương vuông góc với cảm ứng từ $\vv{B}$ và với vận tốc $\vv{v}$ của các hạt. Lực này làm cho các hạt điện tích dương và âm bị lệch về hai phía đối diện của thành mạch máu. Điều này tạo ra một hiệu điện thế cảm ứng giữa hai điện cực đặt tại thành mạch và được xác định nhờ biểu thức $U=Bvd$, với $d$ là đường kính của mạch máu.
 		\begin{center}
@@ -535,34 +535,39 @@
 	\Opensolutionfile{ans}[ans/VatLi2026-HaiPhong-SoGD-Lan2-3]
 
 	\begin{ex}%[VL12-C3-VD]
-		Một đoạn dây dẫn MN, chiều dài $\ell=25{,}0$~cm, khối lượng $m=20{,}0$~g, được treo bằng hai sợi dây mảnh, nhẹ, không dãn, trong một từ trường đều, sao cho đoạn dây nằm ngang. Vectơ cảm ứng từ $\vv{B}$ thẳng đứng, hướng lên, có độ lớn là $B=0{,}10$~T. Lấy $g=9{,}8~\text{m/s}^2$. Khi có dòng điện cường độ $I=10{,}0$~A chạy qua đoạn dây theo chiều từ M đến N, ở trạng thái cân bằng, độ lớn lực căng của mỗi dây treo bằng bao nhiêu mili-niutơn (mN) (kết quả làm tròn đến chữ số hàng đơn vị)? Bỏ qua ảnh hưởng cơ học và lực từ tác dụng lên các dây nối cấp điện cho hệ thống.
-		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				% giá treo
-				\foreach \x in {0.9,3.4}{
-					\fill[gray!40] (\x-0.42,3.0) rectangle (\x+0.42,3.12);
-					\draw[black!75] (\x-0.42,3.0)--(\x+0.42,3.0);
-					\foreach \t in {-0.36,-0.24,...,0.38}{\draw[black!60,thin] (\x+\t,3.0)--(\x+\t+0.1,3.12);}}
-				% vị trí ban đầu (nét đứt)
-				\draw[gray,dashed,thin] (0.9,3.0)--(0.9,0.52) (3.4,3.0)--(3.4,0.52);
-				\draw[gray,dashed,thin] (0.62,0.28) rectangle (3.68,0.52);
-				\node[below,inner sep=2pt] at (0.62,0.28) {M};
-				\node[below,inner sep=2pt] at (3.68,0.28) {N};
-				% dây treo, thanh MN
-				\draw[black!80,semithick] (0.9,3.0)--(1.8,1.38) (3.4,3.0)--(4.3,1.38);
-				\shade[top color=VLdong!55!white,bottom color=VLdong!80!black,middle color=VLdong!25!white,draw=VLdong!45!black] (1.45,1.0) rectangle (4.75,1.38);
-				\draw[VLmui,thick,VLdo] (2.4,1.19)--(3.6,1.19);
-				\node[VLdo,above,inner sep=2pt] at (3.0,1.38) {$I$};
-				% góc lệch
-				\draw[thin] (0.9,2.55) arc[start angle=270,end angle=299,radius=0.45];
-				\node[inner sep=1pt] at (0.98,2.32) {$\alpha$};
-				\draw[thin] (3.4,2.55) arc[start angle=270,end angle=299,radius=0.45];
-				\node[inner sep=1pt] at (3.48,2.32) {$\alpha$};
-				% cảm ứng từ
-				\draw[VLmui,very thick,VLxanh] (2.15,1.85)--(2.15,2.85);
-				\node[VLxanh!85!black,right,inner sep=2pt] at (2.15,2.65) {$\vv{B}$};
-			\end{tikzpicture}
-		\end{center}
+		\par\noindent
+		\begin{minipage}[c]{0.62\linewidth}
+			Một đoạn dây dẫn MN, chiều dài $\ell=25{,}0$~cm, khối lượng $m=20{,}0$~g, được treo bằng hai sợi dây mảnh, nhẹ, không dãn, trong một từ trường đều, sao cho đoạn dây nằm ngang. Vectơ cảm ứng từ $\vv{B}$ thẳng đứng, hướng lên, có độ lớn là $B=0{,}10$~T. Lấy $g=9{,}8~\text{m/s}^2$. Khi có dòng điện cường độ $I=10{,}0$~A chạy qua đoạn dây theo chiều từ M đến N, ở trạng thái cân bằng, độ lớn lực căng của mỗi dây treo bằng bao nhiêu mili-niutơn (mN) (kết quả làm tròn đến chữ số hàng đơn vị)? Bỏ qua ảnh hưởng cơ học và lực từ tác dụng lên các dây nối cấp điện cho hệ thống.
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.36\linewidth}
+			\centering
+				\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+					% giá treo
+					\foreach \x in {0.9,3.4}{
+						\fill[gray!40] (\x-0.42,3.0) rectangle (\x+0.42,3.12);
+						\draw[black!75] (\x-0.42,3.0)--(\x+0.42,3.0);
+						\foreach \t in {-0.36,-0.24,...,0.38}{\draw[black!60,thin] (\x+\t,3.0)--(\x+\t+0.1,3.12);}}
+					% vị trí ban đầu (nét đứt)
+					\draw[gray,dashed,thin] (0.9,3.0)--(0.9,0.52) (3.4,3.0)--(3.4,0.52);
+					\draw[gray,dashed,thin] (0.62,0.28) rectangle (3.68,0.52);
+					\node[below,inner sep=2pt] at (0.62,0.28) {M};
+					\node[below,inner sep=2pt] at (3.68,0.28) {N};
+					% dây treo, thanh MN
+					\draw[black!80,semithick] (0.9,3.0)--(1.8,1.38) (3.4,3.0)--(4.3,1.38);
+					\shade[top color=VLdong!55!white,bottom color=VLdong!80!black,middle color=VLdong!25!white,draw=VLdong!45!black] (1.45,1.0) rectangle (4.75,1.38);
+					\draw[VLmui,thick,VLdo] (2.4,1.19)--(3.6,1.19);
+					\node[VLdo,above,inner sep=2pt] at (3.0,1.38) {$I$};
+					% góc lệch
+					\draw[thin] (0.9,2.55) arc[start angle=270,end angle=299,radius=0.45];
+					\node[inner sep=1pt] at (0.98,2.32) {$\alpha$};
+					\draw[thin] (3.4,2.55) arc[start angle=270,end angle=299,radius=0.45];
+					\node[inner sep=1pt] at (3.48,2.32) {$\alpha$};
+					% cảm ứng từ
+					\draw[VLmui,very thick,VLxanh] (2.15,1.85)--(2.15,2.85);
+					\node[VLxanh!85!black,right,inner sep=2pt] at (2.15,2.65) {$\vv{B}$};
+				\end{tikzpicture}
+		\end{minipage}
+		\par
 		\shortans[oly]{159}
 		\loigiai{
 			$P=mg=0{,}02\cdot 9{,}8=0{,}196$~N; lực từ nằm ngang $F=BI\ell=0{,}1\cdot 10\cdot 0{,}25=0{,}25$~N.\\
@@ -570,16 +575,86 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{27.7\baselineskip}
+	\NeedspaceCau{28.1\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Một nhóm học sinh thực hiện thí nghiệm xác định nhiệt nóng chảy riêng của nước đá. Các bạn bố trí thí nghiệm như hình bên và tiến hành thí nghiệm qua các bước sau:\\
-		\textbf{Bước 1}\\
-		-- Cho nước đá vào nhiệt lượng kế và hứng nước chảy ra bằng một chiếc cốc đặt trên cân, cho đến khi nước chảy ổn định đọc số chỉ của cân được giá trị $m_0$.\\
-		-- Bật đồng hồ đo thời gian, sau thời gian $t$ (giây), đọc số chỉ của cân được giá trị $m_1$.\\
-		\textbf{Bước 2}\\
-		-- Bật biến áp nguồn.\\
-		-- Đọc số chỉ $P$ của oát kế.\\
-		-- Cho nước chảy thêm vào cốc khi đồng hồ chỉ $2t$ (giây), đọc số chỉ của cân được giá trị $m_2$.\\
+		% giuhinh
+		\par\noindent
+		\begin{minipage}[c]{0.53\linewidth}
+			\textbf{Bước 1}\\
+			-- Cho nước đá vào nhiệt lượng kế và hứng nước chảy ra bằng một chiếc cốc đặt trên cân, cho đến khi nước chảy ổn định đọc số chỉ của cân được giá trị $m_0$.\\
+			-- Bật đồng hồ đo thời gian, sau thời gian $t$ (giây), đọc số chỉ của cân được giá trị $m_1$.\\
+			\textbf{Bước 2}\\
+			-- Bật biến áp nguồn.\\
+			-- Đọc số chỉ $P$ của oát kế.\\
+			-- Cho nước chảy thêm vào cốc khi đồng hồ chỉ $2t$ (giây), đọc số chỉ của cân được giá trị $m_2$.
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.45\linewidth}
+			\centering
+				\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
+					% dây nối
+					\draw[black!85,semithick] (1.1,0.52)--(1.35,0.52) (1.1,0.26)--(1.35,0.26);
+					\draw[black!85,semithick] (1.85,0.52)--(2.2,0.52)--(2.2,3.0)--(3.75,3.0)--(3.75,2.72);
+					\draw[black!85,semithick] (1.85,0.26)--(2.4,0.26)--(2.4,3.18)--(4.15,3.18)--(4.15,2.72);
+					% biến áp nguồn
+					\shade[top color=gray!8,bottom color=gray!35,rounded corners=2pt] (0,0.05) rectangle (1.1,0.75);
+					\draw[gray!50!black,rounded corners=2pt] (0,0.05) rectangle (1.1,0.75);
+					\filldraw[fill=VLla!35,draw=black!60,rounded corners=1pt] (0.35,0.5) rectangle (0.75,0.66);
+					\filldraw[fill=VLdo!80,draw=black!60] (0.22,0.32) circle (0.06);
+					\filldraw[fill=black!80,draw=black!60] (0.88,0.32) circle (0.06);
+					\node[font=\scriptsize,inner sep=0] at (0.22,0.15) {$+$};
+					\node[font=\scriptsize,inner sep=0] at (0.88,0.15) {$-$};
+					\node[align=center,above,inner sep=2pt] at (0.55,0.75) {Biến áp\\nguồn};
+					% oát kế
+					\filldraw[fill=gray!12,draw=gray!50!black,rounded corners=1.5pt] (1.35,0.14) rectangle (1.85,0.64);
+					\foreach \p in {(1.45,0.26),(1.45,0.52),(1.75,0.26),(1.75,0.52)}{\fill[black!85] \p circle (0.045);}
+					\node[above,inner sep=2pt] at (1.6,0.64) {Oát kế};
+					% giá thí nghiệm
+					\fill[black!80] (5.65,0) rectangle (6.15,0.12);
+					\shade[left color=gray!75,right color=gray!55,middle color=gray!10] (5.86,0.12) rectangle (5.94,2.5);
+					\shade[top color=gray!50,bottom color=gray!75,middle color=gray!10] (3.3,2.17) rectangle (5.9,2.25);
+					\fill[black!70] (5.81,2.13) rectangle (5.99,2.29);
+					% nhiệt lượng kế
+					\shade[left color=VLxanh!25,right color=VLxanh!8] (3.4,2.55)--(3.4,1.85) .. controls (3.4,1.65) and (3.8,1.6) .. (3.9,1.55)--(4.0,1.55) .. controls (4.1,1.6) and (4.5,1.65) .. (4.5,1.85)--(4.5,2.55)--cycle;
+					\pgfmathsetseed{3}
+					\foreach \k in {1,...,14}{\VLvienda{3.47+0.88*rnd}{1.78+0.6*rnd}{0.07}{0}}
+					\draw[black!60] (3.4,2.55)--(3.4,1.85) .. controls (3.4,1.65) and (3.8,1.6) .. (3.9,1.55)--(4.0,1.55) .. controls (4.1,1.6) and (4.5,1.65) .. (4.5,1.85)--(4.5,2.55);
+					\shade[top color=gray!25,bottom color=gray!55] (3.33,2.55) rectangle (4.57,2.66);
+					\fill[gray!55] (3.9,1.38) rectangle (4.0,1.55);
+					\draw[black!85,semithick] (3.75,2.66)--(3.75,1.95) (4.15,2.66)--(4.15,1.95);
+					\draw[VLdo,semithick,decorate,decoration={coil,aspect=0.5,segment length=2.2pt,amplitude=2pt}] (3.75,1.95)--(4.15,1.95);
+					\foreach \x in {3.75,4.15}{\fill[black!80] (\x-0.05,2.66) rectangle (\x+0.05,2.8);}
+					\fill[VLxanh!60] (3.95,1.27) circle (0.03) (3.95,1.17) circle (0.025);
+					% cốc hứng nước
+					\shade[left color=gray!25,right color=gray!10,middle color=white] (3.45,1.08)--(3.6,0.5)--(4.3,0.5)--(4.45,1.08)--cycle;
+					\fill[VLxanh!20] (3.52,0.78)--(3.6,0.5)--(4.3,0.5)--(4.38,0.78)--cycle;
+					\draw[black!65] (3.45,1.08)--(3.6,0.5)--(4.3,0.5)--(4.45,1.08);
+					\draw[black!65,fill=white] (3.95,1.08) ellipse (0.5 and 0.07);
+					% cân
+					\fill[gray!60] (3.5,0.45) rectangle (4.4,0.5);
+					\shade[top color=VLxanh!35!gray!60,bottom color=VLxanh!55!gray!90,rounded corners=1.5pt] (3.05,0) rectangle (4.9,0.45);
+					\fill[white,rounded corners=1pt] (3.2,0.1) rectangle (4.4,0.32);
+					\fill[gray!20] (4.57,0.3) circle (0.06) (4.57,0.14) circle (0.06);
+					\node[left,inner sep=2pt] at (3.1,0.55) {Cân};
+					% đồng hồ bấm giây
+					\begin{scope}[shift={(6.85,0.68)}]
+						\fill[gray!55] (-0.06,0.6) rectangle (0.06,0.72);
+						\filldraw[fill=gray!15,draw=gray!55!black] (0,0.8) circle (0.1);
+						\draw[gray!60!black,semithick] (-0.38,0.45)--(-0.48,0.58) (0.38,0.45)--(0.48,0.58);
+						\shade[inner color=white,outer color=gray!45] (0,0) circle (0.62);
+						\draw[gray!55!black] (0,0) circle (0.62);
+						\foreach \g in {0,30,...,330}{\draw[black!70,thin] (\g:0.5)--(\g:0.58);}
+						\draw[VLdo,semithick] (0,0)--(60:0.48);
+						\draw[black!80,semithick] (0,0)--(150:0.3);
+						\fill[black!80] (0,0) circle (0.035);
+					\end{scope}
+					% nhãn
+					\draw[thin] (4.53,2.62)--(4.85,2.95) node[right,inner sep=1.5pt,align=left] {Nhiệt\\lượng kế};
+					\draw[thin] (4.07,1.92)--(4.75,1.72) node[right,inner sep=1.5pt] {Dây nung};
+					\node[right,inner sep=2pt,align=left] at (4.5,0.98) {Cốc\\hứng\\nước};
+				\end{tikzpicture}
+		\end{minipage}
+		\par
 		Kết quả thí nghiệm được nhóm ghi lại ở bảng sau:
 		\begin{center}
 			\renewcommand{\arraystretch}{1.2}
@@ -592,71 +667,6 @@
 			\end{tabular}
 		\end{center}
 		Xem điều kiện môi trường (nhiệt độ, áp suất, \ldots) không đổi trong suốt thời gian làm thí nghiệm và điện năng tiêu thụ chuyển hóa hoàn toàn thành nhiệt lượng cung cấp cho nước đá. Bỏ qua sự bay hơi của nước. Giá trị nhiệt nóng chảy riêng của nước đá dùng trong thí nghiệm này là bao nhiêu kJ/kg (kết quả làm tròn đến chữ số hàng đơn vị)?
-		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				% dây nối
-				\draw[black!85,semithick] (1.1,0.52)--(1.35,0.52) (1.1,0.26)--(1.35,0.26);
-				\draw[black!85,semithick] (1.85,0.52)--(2.2,0.52)--(2.2,3.0)--(3.75,3.0)--(3.75,2.72);
-				\draw[black!85,semithick] (1.85,0.26)--(2.4,0.26)--(2.4,3.18)--(4.15,3.18)--(4.15,2.72);
-				% biến áp nguồn
-				\shade[top color=gray!8,bottom color=gray!35,rounded corners=2pt] (0,0.05) rectangle (1.1,0.75);
-				\draw[gray!50!black,rounded corners=2pt] (0,0.05) rectangle (1.1,0.75);
-				\filldraw[fill=VLla!35,draw=black!60,rounded corners=1pt] (0.35,0.5) rectangle (0.75,0.66);
-				\filldraw[fill=VLdo!80,draw=black!60] (0.22,0.32) circle (0.06);
-				\filldraw[fill=black!80,draw=black!60] (0.88,0.32) circle (0.06);
-				\node[font=\scriptsize,inner sep=0] at (0.22,0.15) {$+$};
-				\node[font=\scriptsize,inner sep=0] at (0.88,0.15) {$-$};
-				\node[align=center,above,inner sep=2pt] at (0.55,0.75) {Biến áp\\nguồn};
-				% oát kế
-				\filldraw[fill=gray!12,draw=gray!50!black,rounded corners=1.5pt] (1.35,0.14) rectangle (1.85,0.64);
-				\foreach \p in {(1.45,0.26),(1.45,0.52),(1.75,0.26),(1.75,0.52)}{\fill[black!85] \p circle (0.045);}
-				\node[above,inner sep=2pt] at (1.6,0.64) {Oát kế};
-				% giá thí nghiệm
-				\fill[black!80] (5.65,0) rectangle (6.15,0.12);
-				\shade[left color=gray!75,right color=gray!55,middle color=gray!10] (5.86,0.12) rectangle (5.94,2.5);
-				\shade[top color=gray!50,bottom color=gray!75,middle color=gray!10] (3.3,2.17) rectangle (5.9,2.25);
-				\fill[black!70] (5.81,2.13) rectangle (5.99,2.29);
-				% nhiệt lượng kế
-				\shade[left color=VLxanh!25,right color=VLxanh!8] (3.4,2.55)--(3.4,1.85) .. controls (3.4,1.65) and (3.8,1.6) .. (3.9,1.55)--(4.0,1.55) .. controls (4.1,1.6) and (4.5,1.65) .. (4.5,1.85)--(4.5,2.55)--cycle;
-				\pgfmathsetseed{3}
-				\foreach \k in {1,...,14}{\VLvienda{3.47+0.88*rnd}{1.78+0.6*rnd}{0.07}{0}}
-				\draw[black!60] (3.4,2.55)--(3.4,1.85) .. controls (3.4,1.65) and (3.8,1.6) .. (3.9,1.55)--(4.0,1.55) .. controls (4.1,1.6) and (4.5,1.65) .. (4.5,1.85)--(4.5,2.55);
-				\shade[top color=gray!25,bottom color=gray!55] (3.33,2.55) rectangle (4.57,2.66);
-				\fill[gray!55] (3.9,1.38) rectangle (4.0,1.55);
-				\draw[black!85,semithick] (3.75,2.66)--(3.75,1.95) (4.15,2.66)--(4.15,1.95);
-				\draw[VLdo,semithick,decorate,decoration={coil,aspect=0.5,segment length=2.2pt,amplitude=2pt}] (3.75,1.95)--(4.15,1.95);
-				\foreach \x in {3.75,4.15}{\fill[black!80] (\x-0.05,2.66) rectangle (\x+0.05,2.8);}
-				\fill[VLxanh!60] (3.95,1.27) circle (0.03) (3.95,1.17) circle (0.025);
-				% cốc hứng nước
-				\shade[left color=gray!25,right color=gray!10,middle color=white] (3.45,1.08)--(3.6,0.5)--(4.3,0.5)--(4.45,1.08)--cycle;
-				\fill[VLxanh!20] (3.52,0.78)--(3.6,0.5)--(4.3,0.5)--(4.38,0.78)--cycle;
-				\draw[black!65] (3.45,1.08)--(3.6,0.5)--(4.3,0.5)--(4.45,1.08);
-				\draw[black!65,fill=white] (3.95,1.08) ellipse (0.5 and 0.07);
-				% cân
-				\fill[gray!60] (3.5,0.45) rectangle (4.4,0.5);
-				\shade[top color=VLxanh!35!gray!60,bottom color=VLxanh!55!gray!90,rounded corners=1.5pt] (3.05,0) rectangle (4.9,0.45);
-				\fill[white,rounded corners=1pt] (3.2,0.1) rectangle (4.4,0.32);
-				\fill[gray!20] (4.57,0.3) circle (0.06) (4.57,0.14) circle (0.06);
-				\node[left,inner sep=2pt] at (3.1,0.55) {Cân};
-				% đồng hồ bấm giây
-				\begin{scope}[shift={(6.85,0.68)}]
-					\fill[gray!55] (-0.06,0.6) rectangle (0.06,0.72);
-					\filldraw[fill=gray!15,draw=gray!55!black] (0,0.8) circle (0.1);
-					\draw[gray!60!black,semithick] (-0.38,0.45)--(-0.48,0.58) (0.38,0.45)--(0.48,0.58);
-					\shade[inner color=white,outer color=gray!45] (0,0) circle (0.62);
-					\draw[gray!55!black] (0,0) circle (0.62);
-					\foreach \g in {0,30,...,330}{\draw[black!70,thin] (\g:0.5)--(\g:0.58);}
-					\draw[VLdo,semithick] (0,0)--(60:0.48);
-					\draw[black!80,semithick] (0,0)--(150:0.3);
-					\fill[black!80] (0,0) circle (0.035);
-				\end{scope}
-				% nhãn
-				\draw[thin] (4.53,2.62)--(4.85,2.95) node[right,inner sep=1.5pt,align=left] {Nhiệt\\lượng kế};
-				\draw[thin] (4.07,1.92)--(4.75,1.72) node[right,inner sep=1.5pt] {Dây nung};
-				\node[right,inner sep=2pt,align=left] at (4.5,0.98) {Cốc\\hứng\\nước};
-			\end{tikzpicture}
-		\end{center}
 		\shortans[oly]{354}
 		\loigiai{
 			Khối lượng đá tan do môi trường trong thời gian $t$: $m_1-m_0=3{,}00$~g. Ở bước 2, trong thời gian $t$ có thêm $m_2-m_1=17{,}0$~g nước, phần do dây nung: $\Delta m=17{,}0-3{,}00=14{,}0$~g.
@@ -688,7 +698,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{10.6\baselineskip}
+	\NeedspaceCau{10.9\baselineskip}
 	\begin{ex}%[VL12-C4-VD]
 		Trong điều trị ung thư bằng phương pháp xạ trị áp sát liều cao (HDR), một nguồn phóng xạ iridium-192 ($^{192}_{\phantom{1}77}\text{Ir}$) có chu kì bán rã là $73{,}8$~ngày được sử dụng để phát tia. Do nguồn phóng xạ suy giảm theo thời gian, các bác sĩ vật lí y khoa phải điều chỉnh thời gian chiếu ở mỗi phân liều.\\
 		Một bệnh nhân có liệu trình điều trị gồm nhiều phân liều, mỗi phân liều cách nhau $1$~tuần ($7$~ngày). Ở lần chiếu đầu tiên, thời gian chiếu được chỉ định là $5{,}0$~phút. Hỏi ở lần chiếu thứ $5$, để bệnh nhân nhận được cùng một liều lượng bức xạ như lần đầu, thời gian chiếu phải là bao nhiêu phút (coi nguồn phóng xạ dùng trong liệu trình không bị thay thế và kết quả làm tròn đến chữ số hàng phần mười)?
