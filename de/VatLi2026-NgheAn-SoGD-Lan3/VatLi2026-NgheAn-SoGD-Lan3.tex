@@ -617,26 +617,20 @@
 				\draw[VLdong!70!black,line width=2.6pt] (337,100)--(243,194);
 				\node[above,inner sep=2pt] at (337,98) {M};
 				\node[left,inner sep=2pt] at (234,178) {N};
-				% sợi chỉ
-				\draw[thin] (290,147)--(345,147);
+				% giá đỡ đế chữ nhật
+				\begin{scope}[shift={(500,262)},x=1cm,y=1cm]
+					\VLgiade{0}{0}{3.86}{1.95}
+				\end{scope}
+				% sợi chỉ, lực kế, khớp kẹp
+				\draw[gray!30!black,thin] (290,147)--(337,147);
 				\draw[gray!40!black,semithick] (310,147) circle [radius=4.5];
-				\draw[gray!40!black,semithick] (351,147) circle [radius=4.5];
-				% lực kế
-				\shade[top color=gray!15,bottom color=gray!45,rounded corners=2pt] (356,118) rectangle (462,178);
-				\draw[gray!50!black,rounded corners=2pt] (356,118) rectangle (462,178);
-				\filldraw[fill=VLla!35,draw=black!70,rounded corners=1pt] (376,127) rectangle (440,156);
-				\node[font=\fontsize{6}{6}\selectfont\sffamily,inner sep=0pt] at (408,142) {0.48 N};
-				\foreach \x in {386,408,430}{\filldraw[fill=gray!60,draw=black!60] (\x-6,162) rectangle (\x+6,172);}
-				\draw[black!60] (366,147) circle [radius=4];
-				% giá đỡ
-				\shade[top color=gray!40,bottom color=gray!65,middle color=gray!10] (462,136) rectangle (488,152);
-				\draw[gray!50!black] (462,136) rectangle (488,152);
-				\shade[left color=gray!70,right color=gray!45,middle color=gray!10] (494,5) rectangle (506,262);
-				\fill[black!80] (484,128) rectangle (514,160) (484,214) rectangle (514,246);
-				\fill[black!80,rounded corners=1pt] (514,137) rectangle (522,151) (514,223) rectangle (522,237);
-				\fill[black!80] (469,124) rectangle (479,136) (472,116) rectangle (476,124);
-				\shade[top color=gray!60,bottom color=black!85] (372,262)--(524,262)--(526,278)--(370,278)--cycle;
-				\fill[black!85] (380,278) rectangle (398,285) (500,278) rectangle (518,285);
+				\shade[top color=gray!35,bottom color=gray!65,middle color=white] (470,142) rectangle (494,152);
+				\begin{scope}[shift={(412,147)},x=1cm,y=1cm]
+					\VLluckengang{0}{0}{0.48 N}
+				\end{scope}
+				\begin{scope}[shift={(500,147)},x=1cm,y=1cm]
+					\VLkhoikep{0}{0}{1}
+				\end{scope}
 			\end{tikzpicture}
 		\end{center}
 		Độ lớn cảm ứng từ của từ trường là bao nhiêu tesla (làm tròn kết quả đến chữ số hàng phần mười)?

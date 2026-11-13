@@ -17,6 +17,49 @@
 \newcommand{\VLicmaynang}{\tikz[baseline=0.15em,x=1em,y=1em]{\filldraw[fill=yellow!70!orange,draw=black,line width=0.5pt] (0.75,0.72) circle (0.2);\draw[line width=0.6pt,orange!70!black] foreach \a in {0,45,...,180}{($(0.75,0.72)+(\a:0.28)$)--($(0.75,0.72)+(\a:0.42)$)};\filldraw[fill=gray!12,draw=black,line width=0.55pt] (0.2,0.05)--(1.05,0.05) arc[start angle=-90,end angle=90,radius=0.2] arc[start angle=20,end angle=160,radius=0.3] arc[start angle=60,end angle=180,radius=0.22]--(0.06,0.4) arc[start angle=90,end angle=270,radius=0.175]--cycle;}}
 \newcommand{\VLicgio}{\tikz[baseline=0.15em,x=1em,y=1em]{\draw[line width=0.6pt,gray!40!black] (0,0.7)--(0.75,0.7) arc[start angle=-90,end angle=180,radius=0.12] (0.1,0.45)--(1.0,0.45) (0,0.2)--(0.8,0.2) arc[start angle=90,end angle=-180,radius=0.12];}}
 \newcommand{\VLicgiot}{\tikz[baseline=0.1em,x=1em,y=1em]{\filldraw[fill=VLxanh!25,draw=black,line width=0.55pt] (0,0.95) .. controls (0.12,0.65) and (0.33,0.48) .. (0.33,0.3) arc[start angle=0,end angle=-180,radius=0.33] .. controls (-0.33,0.48) and (-0.12,0.65) .. (0,0.95)--cycle;}}
+%--- Hình thực tiễn câu II.2 (lưu lượng kế điện từ):
+% \VLtrudoc{x0}{x1}{r}: đoạn trụ kim loại nằm ngang dọc trục Ox (tâm trên trục), nhìn hơi chếch từ bên trái:
+%   mặt bên tô sáng giữa, tối hai mép; mặt đầu trái là elip (bán trục ngang 0,25r). Vẽ các đoạn từ phải sang trái.
+%   Ví dụ ống có mặt bích: \VLtrudoc{2}{4}{0.6}\VLtrudoc{1.7}{2}{0.8}\VLtrudoc{0}{1.7}{0.6}
+\newcommand{\VLtrudoc}[3]{%
+	\shade[top color=gray!50,bottom color=gray!85,middle color=gray!5] (#1,#3)--(#2,#3) arc[start angle=90,end angle=-90,x radius=0.25*#3,y radius=#3]--(#1,-#3)--cycle;
+	\fill[white,opacity=0.6] (#1,0.4*#3) rectangle (#2,0.52*#3);
+	\draw[gray!35!black,thin] (#1,#3)--(#2,#3) arc[start angle=90,end angle=-90,x radius=0.25*#3,y radius=#3]--(#1,-#3);
+	\shade[left color=gray!25,right color=gray!60] (#1,0) ellipse ({0.25*#3} and #3);
+	\draw[gray!35!black,thin] (#1,0) ellipse ({0.25*#3} and #3);}
+% \VLgalvan{x0}{x1}{r}: vân thép mạ kẽm (đốm sáng tối ngẫu nhiên) phủ lên đoạn trụ \VLtrudoc cùng tham số
+\newcommand{\VLgalvan}[3]{%
+	\begin{scope}
+		\clip (#1+0.25*#3,-#3) rectangle (#2,#3);
+		\fill[gray!75,opacity=0.3] (#1,-#3) rectangle (#2,#3);
+		\foreach \VLi in {1,...,70}{\pgfmathsetmacro{\VLgx}{#1+(#2-#1)*rnd}\pgfmathsetmacro{\VLgy}{-#3+2*#3*rnd}\pgfmathsetmacro{\VLgw}{0.06+0.16*rnd}
+			\fill[gray!15,opacity=0.3,rotate around={40*rnd-20:(\VLgx,\VLgy)}] (\VLgx,\VLgy) ellipse ({\VLgw} and {0.025});}
+		\foreach \VLi in {1,...,40}{\pgfmathsetmacro{\VLgx}{#1+(#2-#1)*rnd}\pgfmathsetmacro{\VLgy}{-#3+2*#3*rnd}
+			\fill[gray!80!black,opacity=0.3] (\VLgx,\VLgy) ellipse (0.1 and 0.035);}
+	\end{scope}}
+% \VLdauhienthi{(tâm)}{R}: đầu hiển thị tròn của thiết bị đo công nghiệp (vỏ trụ nhìn chếch, viền có gờ,
+%   kính tròn, màn hình trống, 4 nút bấm, hai đầu cáp bên trái). Ví dụ: \VLdauhienthi{(3,4)}{0.9}
+\newcommand{\VLdauhienthi}[2]{%
+	\coordinate (VLH) at #1;
+	\foreach \VLs in {0.5,0.45,...,0.0}{\pgfmathsetmacro{\VLc}{40+50*\VLs}\fill[gray!\VLc] ($(VLH)+(-\VLs,0.25*\VLs)$) circle (#2);}
+	% hai đầu cáp
+	\foreach \VLy in {0.38,-0.12}{
+		\shade[top color=black!50,bottom color=black!90] ($(VLH)+(-#2-0.52,\VLy-0.14)$) rectangle ($(VLH)+(-#2-0.2,\VLy+0.14)$);
+		\shade[inner color=black!40,outer color=black!90] ($(VLH)+(-#2-0.52,\VLy)$) ellipse (0.1 and 0.15);
+		\shade[top color=gray!50,bottom color=gray!80] ($(VLH)+(-#2-0.2,\VLy-0.17)$) rectangle ($(VLH)+(-#2+0.02,\VLy+0.17)$);}
+	\foreach \VLs in {0.5,0.45,...,0.0}{\pgfmathsetmacro{\VLc}{40+50*\VLs}\fill[gray!\VLc] ($(VLH)+(-\VLs,0.25*\VLs)$) circle (#2);}
+	% viền trước có gờ
+	\shade[inner color=gray!8,outer color=gray!45] (VLH) circle (#2);
+	\foreach \VLa in {0,30,...,330}{\fill[gray!55] ($(VLH)+(\VLa:#2*0.94)$) circle (#2*0.075);}
+	\draw[gray!35!black,thin] (VLH) circle (#2);
+	\shade[inner color=gray!40,outer color=gray!70] (VLH) circle (#2*0.78);
+	\fill[black!82] (VLH) circle (#2*0.68);
+	% màn hình (để trống), logo, nút bấm
+	\filldraw[fill=VLla!35,draw=black!50,very thin,rounded corners=0.5pt] ($(VLH)+(-#2*0.38,-#2*0.06)$) rectangle ($(VLH)+(#2*0.38,#2*0.36)$);
+	\fill[gray!50] ($(VLH)+(-#2*0.2,#2*0.45)$) rectangle ($(VLH)+(#2*0.2,#2*0.5)$);
+	\foreach \VLx in {-0.27,-0.09,0.09,0.27}{\filldraw[fill=gray!25,draw=gray!60,very thin] ($(VLH)+(#2*\VLx-#2*0.06,-#2*0.33)$) rectangle ($(VLH)+(#2*\VLx+#2*0.06,-#2*0.2)$);}
+	% kính phản quang
+	\fill[white,opacity=0.18] ($(VLH)+(140:#2*0.66)$) arc[start angle=140,end angle=60,radius=#2*0.66]--($(VLH)+(60:#2*0.4)$) arc[start angle=60,end angle=140,radius=#2*0.4]--cycle;}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT NGHỆ AN -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -380,44 +423,85 @@
 		Lưu lượng kế điện từ SUP-LDG dùng để đo lưu lượng các chất lỏng dẫn điện (thể tích chất lỏng chảy qua tiết diện của ống trong một đơn vị thời gian) trong các ngành thực phẩm và dược phẩm như nước uống, sữa,\,\dots\ Cấu tạo của lưu lượng kế được mô tả như hình vẽ, gồm hai phần chính: cuộn dây tạo ra từ trường đều, có cảm ứng từ $\vv{B}$ vuông góc với dòng chảy; hai điện cực gắn ở hai vị trí tiếp xúc với thành ống làm bằng kim loại, song song với các đường sức từ. Thông qua việc theo dõi điện áp giữa hai điện cực hiển thị trên vôn kế, người ta điều chỉnh lưu lượng dòng chảy cho phù hợp với yêu cầu kỹ thuật. Một nhà máy chế biến sữa sử dụng SUP-LDG để kiểm soát lưu lượng dòng sữa. Sữa là chất lỏng dẫn điện yếu, các hạt tải điện $q$ trong sữa chuyển động với vận tốc $\vv{v}$ trong ống, khi qua SUP-LDG, chúng chịu tác dụng của lực từ có độ lớn $F=|q|Bv$, có phương vuông góc với mặt phẳng $(\vv{B},\vv{v})$, làm tích điện cho các điện cực M, N. Bỏ qua tác dụng của trọng lực lên các hạt tải điện.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
-				% ---------- ảnh thiết bị ----------
-				% ống bên trái, bên phải
-				\foreach \a/\b in {0.2/2.0,4.3/6.0}{
-					\shade[top color=gray!45,bottom color=gray!75,middle color=gray!5] (\a,0)--(\b,0)--(\b,1.1)--(\a,1.1)--cycle;}
-				% miệng ống trái
-				\shade[inner color=gray!70,outer color=gray!30] (0.2,0.55) ellipse (0.24 and 0.62);
-				\fill[black!65] (0.2,0.55) ellipse (0.15 and 0.47);
-				% mặt bích hai đầu
-				\shade[left color=gray!55,right color=gray!25,middle color=white] (0.35,-0.07) rectangle (0.62,1.17);
-				\shade[left color=gray!55,right color=gray!25,middle color=white] (5.6,-0.07) rectangle (5.87,1.17);
-				\shade[left color=gray!40,right color=gray!70] (5.87,0.55) ellipse (0.24 and 0.62);
-				\draw[gray!45!black,thin] (0.35,-0.07) rectangle (0.62,1.17) (5.6,-0.07) rectangle (5.87,1.17);
-				% thân cảm biến
-				\shade[top color=gray!50,bottom color=gray!80,middle color=gray!8] (1.95,-0.12) rectangle (4.35,1.22);
-				\foreach \x in {1.85,4.25}{\shade[left color=gray!60,right color=gray!30,middle color=white] (\x,-0.18) rectangle (\x+0.22,1.28);
-					\draw[gray!45!black,thin] (\x,-0.18) rectangle (\x+0.22,1.28);}
-				\draw[gray!50!black,thin] (1.95,-0.12) rectangle (4.35,1.22);
-				% khung thanh đứng
-				\shade[top color=gray!30,bottom color=gray!60] (2.15,1.55) rectangle (4.15,1.7);
-				\foreach \x in {2.3,2.55,...,4.1}{\shade[left color=gray!65,right color=gray!40,middle color=white] (\x-0.03,0.6) rectangle (\x+0.03,1.9);}
-				\draw[gray!45!black,very thin] (2.15,1.55) rectangle (4.15,1.7);
-				% cổ nối, đầu hiển thị
-				\shade[left color=gray!65,right color=gray!40,middle color=gray!5] (2.95,1.7) rectangle (3.35,2.35);
-				\shade[top color=gray!25,bottom color=gray!60] (2.6,2.3) rectangle (3.7,2.5);
-				\foreach \y in {2.95,3.4}{\fill[black!80] (2.15,\y-0.1) rectangle (2.4,\y+0.1);\fill[black!70] (2.05,\y) ellipse (0.08 and 0.11);}
-				\shade[inner color=gray!8,outer color=gray!55] (3.15,3.15) circle (0.72);
-				\draw[gray!50!black,thin] (3.15,3.15) circle (0.72);
-				\filldraw[fill=gray!80!black,draw=black!70] (3.15,3.15) circle (0.55);
-				\filldraw[fill=VLla!35,draw=black!60,rounded corners=0.5pt] (2.82,3.08) rectangle (3.48,3.52);
-				\foreach \x in {2.9,3.06,3.22,3.38}{\fill[gray!30] (\x,2.85) rectangle (\x+0.1,2.93);}
-				% mũi tên dòng chảy
-				\foreach \x in {1.0,4.75}{\filldraw[fill=white,draw=black,line width=0.8pt] (\x,0.42)--(\x+0.42,0.42)--(\x+0.42,0.3)--(\x+0.72,0.55)--(\x+0.42,0.8)--(\x+0.42,0.68)--(\x,0.68)--cycle;}
+			\begin{tikzpicture}[scale=0.82,line join=round,line cap=round,font=\footnotesize]
+				% ---------- ảnh thiết bị (lưu lượng kế) ----------
+				\pgfmathsetseed{11}
+				\begin{scope}[rotate=7]
+					% bóng đổ
+					\shade[inner color=gray!40,outer color=white] (3.6,-1.0) ellipse (4.1 and 0.26);
+					% ống và thân cảm biến: vẽ từ phải sang trái (đoạn gần người nhìn vẽ sau)
+					\VLtrudoc{6.6}{7.1}{0.72}
+					\VLtrudoc{5.3}{6.6}{0.6}
+					\VLgalvan{5.3}{6.6}{0.6}
+					\VLtrudoc{4.95}{5.3}{0.86}
+					% thanh đỡ dưới thân
+					\shade[top color=gray!30,bottom color=gray!75] (2.3,-0.98) rectangle (5.0,-0.86);
+					\draw[gray!35!black,very thin] (2.3,-0.98) rectangle (5.0,-0.86);
+					\VLtrudoc{2.35}{4.95}{0.78}
+					% phản quang dọc thân cảm biến
+					\fill[white,opacity=0.7] (2.45,0.3) rectangle (4.9,0.4);
+					\fill[gray!60,opacity=0.5] (2.45,-0.45) rectangle (4.9,-0.6);
+					\foreach \x/\w in {2.9/0.55,3.65/0.45,4.25/0.4}{\fill[gray!35,opacity=0.8,rounded corners=1pt] (\x,-0.35) rectangle (\x+\w,-0.12);}
+					\VLtrudoc{2.0}{2.35}{0.86}
+					\VLtrudoc{0.55}{2.0}{0.6}
+					\VLgalvan{0.55}{2.0}{0.6}
+					\VLtrudoc{0}{0.55}{0.72}
+					% miệng ống trái
+					\shade[left color=black!85,right color=gray!45] (0,0) ellipse (0.14 and 0.56);
+					\draw[gray!30!black,thin] (0,0) ellipse (0.14 and 0.56);
+					% bulông kẹp
+					\foreach \x in {2.17,5.12}{
+						\shade[top color=gray!20,bottom color=gray!70] (\x-0.12,-0.95) rectangle (\x+0.12,-0.78);
+						\filldraw[fill=gray!55,draw=gray!30!black,very thin] (\x,-0.5) circle (0.09);
+						\fill[gray!20] (\x-0.03,-0.47) circle (0.03);
+						\shade[top color=gray!20,bottom color=gray!65] (\x-0.1,0.82) rectangle (\x+0.1,0.97);}
+					% mũi tên dòng chảy
+					\foreach \x in {0.9,5.6}{\filldraw[fill=white,draw=black,line width=0.9pt] (\x,-0.13)--(\x+0.42,-0.13)--(\x+0.42,-0.27)--(\x+0.75,0.02)--(\x+0.42,0.31)--(\x+0.42,0.17)--(\x,0.17)--cycle;}
+					% điểm neo trên mặt thân (cho khung, thanh đứng)
+					\coordinate (Pa) at (2.5,0.78);
+					\coordinate (Pb) at (4.8,0.78);
+					\coordinate (Tr) at (3.65,0.78);
+					\coordinate (Mui) at (3.95,0.1);
+				\end{scope}
+				% khung đỡ: các thanh đứng hàng sau
+				\foreach \t in {0.18,0.36,0.54,0.72}{
+					\coordinate (Q) at ($(Pa)!\t!(Pb)+(0.24,0.12)$);
+					\shade[left color=gray!70,right color=gray!45,middle color=gray!10] ($(Q)+(-0.03,-0.15)$) rectangle ($(Q)+(0.03,0.85)$);}
+				% tấm khung ngang
+				\coordinate (dd) at (0.32,0.2);
+				\fill[gray!35] ($(Pa)+(0,0.5)$)--($(Pb)+(0,0.5)$)--($(Pb)+(0,0.5)+(dd)$)--($(Pa)+(0,0.5)+(dd)$)--cycle;
+				\shade[top color=gray!20,bottom color=gray!60] ($(Pa)+(0,0.5)$)--($(Pb)+(0,0.5)$)--($(Pb)+(0,0.43)$)--($(Pa)+(0,0.43)$)--cycle;
+				\draw[gray!35!black,very thin] ($(Pa)+(0,0.43)$)--($(Pb)+(0,0.43)$)--($(Pb)+(0,0.5)+(dd)$)--($(Pa)+(0,0.5)+(dd)$)--($(Pa)+(0,0.5)$)--cycle ($(Pa)+(0,0.5)$)--($(Pb)+(0,0.5)$)--($(Pb)+(0,0.5)+(dd)$);
+				% giá chữ U đỡ đầu hiển thị
+				\foreach \t/\s in {0.12/1,0.88/-1}{
+					\coordinate (U) at ($(Pa)!\t!(Pb)+(0.16,0.6)$);
+					\shade[left color=gray!55,right color=gray!25,middle color=white] ($(U)+(-0.11,-0.1)$) rectangle ($(U)+(0.11,0.72)$);
+					\fill[gray!60] ($(U)+(0.11*\s,-0.1)$)--($(U)+(0.11*\s+0.12*\s,-0.02)$)--($(U)+(0.11*\s+0.12*\s,0.8)$)--($(U)+(0.11*\s,0.72)$)--cycle;
+					\draw[gray!40!black,very thin] ($(U)+(-0.11,-0.1)$) rectangle ($(U)+(0.11,0.72)$);}
+				\coordinate (Ua) at ($(Pa)!0.12!(Pb)+(0.09,1.32)$);
+				\coordinate (Ub) at ($(Pa)!0.88!(Pb)+(0.23,1.32)$);
+				\fill[gray!30] ($(Ua)+(-0.11,0.14)$)--($(Ub)+(0.11,0.14)$)--($(Ub)+(0.11,0.14)+(0.25,0.16)$)--($(Ua)+(-0.11,0.14)+(0.25,0.16)$)--cycle;
+				\shade[top color=gray!15,bottom color=gray!60] ($(Ua)+(-0.11,0)$)--($(Ub)+(0.11,0)$)--($(Ub)+(0.11,0.14)$)--($(Ua)+(-0.11,0.14)$)--cycle;
+				\draw[gray!40!black,very thin] ($(Ua)+(-0.11,0)$)--($(Ub)+(0.11,0)$)--($(Ub)+(0.11,0.14)$)--($(Ua)+(-0.11,0.14)$)--cycle ($(Ua)+(-0.11,0.14)$)--($(Ua)+(-0.11,0.14)+(0.25,0.16)$)--($(Ub)+(0.11,0.14)+(0.25,0.16)$)--($(Ub)+(0.11,0.14)$);
+				% các thanh đứng hàng trước
+				\foreach \t in {0.1,0.27,0.44,0.61,0.78,0.95}{
+					\coordinate (Q) at ($(Pa)!\t!(Pb)+(0,-0.2)$);
+					\shade[left color=gray!75,right color=gray!45,middle color=white] ($(Q)+(-0.035,0)$) rectangle ($(Q)+(0.035,1.0)$);
+					\draw[gray!40!black,very thin] ($(Q)+(-0.035,0)$) rectangle ($(Q)+(0.035,1.0)$);
+					\shade[ball color=gray!50] ($(Q)+(0,1.02)$) circle (0.045);}
+				% cổ nối
+				\coordinate (Co) at ($(Tr)+(0.2,1.56)$);
+				\shade[left color=gray!70,right color=gray!45,middle color=gray!5] ($(Co)+(-0.2,0)$) rectangle ($(Co)+(0.2,0.6)$);
+				\shade[left color=gray!60,right color=gray!40,middle color=white] ($(Co)+(-0.28,0.0)$) rectangle ($(Co)+(0.28,0.14)$);
+				\fill[gray!35] ($(Co)+(0,0.14)$) ellipse (0.28 and 0.05);
+				\draw[gray!40!black,very thin] ($(Co)+(-0.2,0.14)$)--($(Co)+(-0.2,0.6)$) ($(Co)+(0.2,0.14)$)--($(Co)+(0.2,0.6)$);
+				% đầu hiển thị
+				\VLdauhienthi{($(Co)+(0.4,1.6)$)}{1.08}
 				% đường dẫn tới sơ đồ
-				\draw[VLxanh!45!black,semithick] (3.35,0.75)--(4.25,2.9)--(6.75,2.9);
-				\draw[VLxanh!45!black,semithick] (6.55,3.1)--(6.85,2.9)--(6.55,2.7);
+				\draw[VLxanh!45!black,semithick] (Mui)--(6.1,3.15)--(8.95,3.15);
+				\draw[VLxanh!45!black,semithick] (8.72,3.36)--(9.02,3.15)--(8.72,2.94);
 				% ---------- sơ đồ ----------
-				\begin{scope}[shift={(8.4,1.6)}]
+				\begin{scope}[shift={(10.2,2.1)}]
 					% dây nối vôn kế
 					\draw[thick] (0,1.05)--(0,1.22)--(3.1,1.22)--(3.1,0.45);
 					\draw[thick] (0,-1.0)--(0,-1.5)--(3.1,-1.5)--(3.1,-0.45);
@@ -593,7 +677,10 @@
 				% ---------- loa (mặt cắt) ----------
 				\begin{scope}[scale=0.95]
 					% nón loa
-					\shade[top color=gray!35,bottom color=gray!65,middle color=gray!15] (0.95,0.5)--(2.35,1.75)--(2.35,-1.75)--(0.95,-0.5)--cycle;
+					\shade[left color=gray!65,right color=gray!20,middle color=gray!40] (0.95,0.5)--(2.35,1.75)--(2.35,-1.75)--(0.95,-0.5)--cycle;
+					\fill[white,opacity=0.35] (1.1,0.55)--(2.3,1.62)--(2.3,1.2)--(1.1,0.4)--cycle;
+					\shade[left color=gray!30,right color=gray!70] (2.35,1.75) .. controls (2.5,1.82) and (2.5,1.6) .. (2.42,1.5)--(2.35,1.45)--cycle;
+					\shade[left color=gray!30,right color=gray!70] (2.35,-1.75) .. controls (2.5,-1.82) and (2.5,-1.6) .. (2.42,-1.5)--(2.35,-1.45)--cycle;
 					\draw[black!70] (0.95,0.5)--(2.35,1.75)--(2.35,-1.75)--(0.95,-0.5);
 					\draw[black!70] (0.95,0.58)--(2.45,1.88)--(2.45,-1.88)--(0.95,-0.58);
 					\draw[black!70] (2.35,1.75)--(2.45,1.88) (2.35,-1.75)--(2.45,-1.88);
@@ -628,8 +715,10 @@
 					\node at (0.45,-1.82) {Tín hiệu điện};
 				\end{scope}
 				% ---------- nam châm hình trụ và cuộn dây ----------
-				\begin{scope}[shift={(5.25,0.4)}]
+				\begin{scope}[shift={(5.45,0.55)},scale=1.3]
 					\def\Ro{1.25}\def\Ri{0.8}\def\h{0.6}\def\k{0.42}
+					% bóng đổ
+					\shade[inner color=gray!45,outer color=white] (0,-\h-0.05) ellipse (1.55 and 0.6);
 					% mặt trên vành S (phần phía sau, trừ chỗ cắt)
 					\fill[gray!8] (-55:{\Ro} and {\Ro*\k}) arc[start angle=-55,end angle=235,x radius=\Ro,y radius=\Ro*\k]--(235:{\Ri} and {\Ri*\k}) arc[start angle=235,end angle=-55,x radius=\Ri,y radius=\Ri*\k]--cycle;
 					% thành trong phía sau
@@ -640,6 +729,7 @@
 					\fill[VLdong!55!black] (0,0) ellipse (0.68 and {0.68*\k});
 					% lõi N
 					\shade[inner color=black!55,outer color=black!85] (0,0) ellipse (0.56 and {0.56*\k});
+					\fill[white,opacity=0.25] (-0.3,0.08) arc[start angle=160,end angle=60,x radius=0.36,y radius=0.16]--(0.1,0.1) arc[start angle=60,end angle=160,x radius=0.24,y radius=0.08]--cycle;
 					\node[white,font=\scriptsize\bfseries] at (0,0) {N};
 					% vành S phần phía trước (hai bên chỗ cắt)
 					\foreach \a/\b in {180/235,305/360}{
@@ -656,12 +746,12 @@
 					% dòng điện, nhãn
 					\draw[VLdo,thin,VLmui] (0.12,-1.05) arc[start angle=-80,end angle=-112,x radius=0.75,y radius=0.75*\k+0.18];
 					\node[VLdo,font=\fontsize{6}{6}\selectfont\itshape] at (0.0,-1.2) {I};
-					\draw[thick,VLmui] (0.95,-1.25)--(0.62,-0.75);
-					\node[align=center] at (1.25,-1.65) {Cuộn dây\\(gắn với nón loa)};
+					\draw[thick,VLmui] (0.85,-1.05)--(0.62,-0.72);
+					\node[align=center] at (1.15,-1.4) {Cuộn dây\\(gắn với nón loa)};
 				\end{scope}
-				\node[font=\footnotesize\bfseries] at (3.4,-2.25) {Hình a};
+				\node[font=\footnotesize\bfseries] at (3.5,-2.25) {Hình a};
 				% ---------- đồ thị ----------
-				\begin{scope}[shift={(8.6,0)},x=0.15cm,y=0.33cm]
+				\begin{scope}[shift={(9.45,0)},x=0.125cm,y=0.33cm]
 					\draw[gray!55,dashed,thin] foreach \y in {-4,-3,...,4}{(0,\y)--(30,\y)};
 					\draw[gray!55,dashed,thin] foreach \x in {10,15,...,30}{(\x,-4)--(\x,4)};
 					\draw[VLmui,thick] (0,0)--(32.5,0) node[right,inner sep=1pt] {$t$ ($\times 10^{-3}$ s)};
