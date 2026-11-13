@@ -30,3 +30,4 @@ Nguồn: `kho/goc/Ca Mau - So GDDT - Lan 1.docx` (Sở GD&ĐT Cà Mau, mã đề
 ## Hình
 - Cả 4 hình là shape/canvas Word, ảnh gốc dựng bằng `tools/hinh_word.py`. Hình II.3 (ảnh chụp bộ thí nghiệm + các ô chữ Word đè lên số thứ tự): LibreOffice đặt lệch các ô chữ, nên ảnh so `II3-goc.png` được ghép lại từ `image19.png` theo tọa độ ô chữ trong `document.xml` (D trên trái, A trên phải, C dưới trái, B dưới phải khung dây; vôn kế bên trái, ampe kế bên phải).
 - Hình II.3 vẽ lại có khối, tô nhạt (`% giuhinh`); bảng số liệu đặt cạnh hình.
+- Tô màu lại hình theo bảng màu 13/11/2026 (I.13, II.3, III.1, III.3); ảnh gốc so hình lấy lại từ nửa trái các ảnh `so-hinh/` cũ.
