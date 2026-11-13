@@ -1,0 +1,815 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Cụm trường THPT TT1 -- QV1 -- LVT, Bắc Ninh (đề KSCL 2025--2026, mã đề gốc 0202). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Cụm TT1--QV1--LVT, Bắc Ninh -- Lần 1}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+%--- Macro hình riêng của đề
+\usetikzlibrary{fadings}% khói mờ dần (câu I.11)
+% viên nước đá (khối lập phương nhìn xiên): \VLvienda{x}{y}{cạnh}{góc xoay}
+\newcommand{\VLvienda}[4]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#4]
+		\filldraw[fill=white,fill opacity=0.8,draw=VLxanh!55!black,line width=0.3pt] (0,0) rectangle (#3,#3);
+		\filldraw[fill=VLxanh!12,fill opacity=0.85,draw=VLxanh!55!black,line width=0.3pt] (0,#3)--++(0.35*#3,0.25*#3)--++(#3,0)--(#3,#3)--cycle;
+		\filldraw[fill=VLxanh!30,fill opacity=0.85,draw=VLxanh!55!black,line width=0.3pt] (#3,0)--++(0.35*#3,0.25*#3)--++(0,#3)--(#3,#3)--cycle;
+	\end{scope}}
+% ngọn lửa, gốc ở chân ngọn lửa: \VLngonlua{x}{y}{tỉ lệ}
+\newcommand{\VLngonlua}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\shade[inner color=yellow!70,outer color=orange!85!red] (0,0) .. controls (-0.2,0.04) and (-0.16,0.3) .. (0,0.58) .. controls (0.16,0.3) and (0.2,0.04) .. (0,0)--cycle;
+		\fill[yellow!35!white] (0,0.04) .. controls (-0.08,0.06) and (-0.06,0.2) .. (0,0.32) .. controls (0.06,0.2) and (0.08,0.06) .. (0,0.04)--cycle;
+	\end{scope}}
+% đèn cồn, tâm đáy ở (0,0), rộng 1,1, đầu bấc ở (0,0,72): \VLdencon
+\newcommand{\VLdencon}{%
+	\shade[top color=gray!35,bottom color=gray!75] (-0.56,0) rectangle (0.56,0.1);
+	\shade[left color=gray!75,right color=gray!50,middle color=gray!8] (-0.5,0.1) .. controls (-0.5,0.42) and (-0.28,0.5) .. (-0.13,0.52)--(0.13,0.52) .. controls (0.28,0.5) and (0.5,0.42) .. (0.5,0.1)--cycle;
+	\draw[gray!40!black,thin] (-0.5,0.1) .. controls (-0.5,0.42) and (-0.28,0.5) .. (-0.13,0.52)--(0.13,0.52) .. controls (0.28,0.5) and (0.5,0.42) .. (0.5,0.1);
+	\draw[gray!40!black,thin] (-0.56,0) rectangle (0.56,0.1);
+	\draw[gray!30!black,line width=0.5pt] foreach \VLx in {-0.45,-0.37,...,0.46}{(\VLx,0.12)--(\VLx,0.24)};
+	\draw[gray!45!black,thin] (0.5,0.18) .. controls (0.68,0.2) and (0.68,0.36) .. (0.48,0.36);
+	\shade[left color=gray!65,right color=gray!45,middle color=gray!5] (-0.12,0.52) rectangle (0.12,0.66);
+	\draw[gray!40!black,thin] (-0.12,0.52) rectangle (0.12,0.66);
+	\fill[black!75] (-0.025,0.66) rectangle (0.025,0.72);
+	\VLngonlua{0}{0.7}{0.85}}
+% giá thí nghiệm: đế, trụ đứng ở x = #1, tay kẹp ngang ở độ cao #2 vươn tới x = 0: \VLgiado{x trụ}{y tay kẹp}{cao trụ}
+\newcommand{\VLgiado}[3]{%
+	\shade[top color=gray!45,bottom color=gray!80] (#1-0.25,0) rectangle (0.85,0.12);
+	\draw[gray!40!black,thin] (#1-0.25,0) rectangle (0.85,0.12);
+	\shade[left color=gray!75,right color=gray!55,middle color=gray!10] (#1-0.04,0.12) rectangle (#1+0.04,#3);
+	\fill[gray!60!black] (#1-0.09,#2-0.07) rectangle (#1+0.09,#2+0.07);
+	\shade[top color=gray!50,bottom color=gray!75,middle color=gray!10] (#1+0.09,#2-0.03) rectangle (-0.12,#2+0.03);
+	\fill[gray!60!black] (-0.17,#2-0.08) rectangle (-0.1,#2+0.08) (0.1,#2-0.08) rectangle (0.17,#2+0.08);}
+% ống nghiệm thẳng đứng, đáy tròn tại (0,#1), miệng ở (0,#2), bán kính 0,13: \VLongnghiem{y đáy}{y miệng}
+\newcommand{\VLongnghiem}[2]{%
+	\shade[left color=black!80,right color=black!70,middle color=gray!45] (-0.13,#2)--(-0.13,#1+0.13) arc[start angle=180,end angle=360,radius=0.13]--(0.13,#2)--cycle;
+	\draw[black!70,thin] (-0.13,#2)--(-0.13,#1+0.13) arc[start angle=180,end angle=360,radius=0.13]--(0.13,#2);
+	\draw[black!70,thin] (-0.16,#2)--(0.16,#2);
+	\draw[white,line width=0.6pt,opacity=0.6] (-0.06,#2-0.1)--(-0.06,#1+0.2);}
+% ly cocktail chân cao, tâm đế ở (#1,#2), tỉ lệ #3, màu nước #4: \VLlycocktail{x}{y}{tỉ lệ}{màu}
+\newcommand{\VLlycocktail}[4]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[white,opacity=0.55] (0,0) ellipse (0.42 and 0.08);
+		\draw[white,opacity=0.9,line width=0.5pt] (-0.03,0.05) .. controls (-0.05,0.5) and (0.05,0.7) .. (-0.02,1.12) (0.03,0.05) .. controls (0.01,0.5) and (0.1,0.7) .. (0.03,1.12);
+		\shade[top color=#4!65!white,bottom color=#4!90!black,opacity=0.95] (0,1.12)--(-0.68,1.88) arc[start angle=180,end angle=360,x radius=0.68,y radius=0.1]--cycle;
+		\fill[#4!45!white] (0,1.88) ellipse (0.68 and 0.1);
+		\fill[white,opacity=0.18] (0,1.12)--(-0.78,2.0)--(0.78,2.0)--cycle;
+		\draw[white,opacity=0.9,line width=0.5pt] (0,1.12)--(-0.78,2.0) (0,1.12)--(0.78,2.0);
+		\draw[white,opacity=0.95,line width=0.5pt] (0,2.0) ellipse (0.78 and 0.11);
+		\draw[white,line width=0.9pt,opacity=0.6] (-0.5,1.88)--(-0.2,1.4);
+	\end{scope}}
+% khói (đám mây trắng mờ): \VLkhoi{x}{y}{bán kính}
+\newcommand{\VLkhoi}[3]{\fill[white,opacity=0.45] (#1,#2) circle (#3) ($(#1,#2)+(0.7*#3,0.15*#3)$) circle (0.8*#3) ($(#1,#2)+(-0.7*#3,0.1*#3)$) circle (0.75*#3);}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT CỤM TT1 -- QV1 -- LVT -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\NeedspaceCau{14.5\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-BacNinh-CumTT1QV1LVT-Lan1-1]
+
+	\begin{ex}%[VL12-C1-TH]
+		% KIỂM TRA: phương án D (326,15 K) cũng đúng nếu dùng T = t + 273,15; đáp án gốc chọn B (T = t + 273).
+		Một nhóm học sinh dùng ống nghiệm chứa $10$~g paradichlorobenzene ($\text{C}_6\text{H}_4\text{Cl}_2$) ngâm trong chậu nước nóng cho đến khi nó được hóa lỏng hoàn toàn. Sau khi lấy ống nghiệm chứa paradichlorobenzene ra khỏi chậu nước nóng và ghi lại dữ liệu trong quá trình paradichlorobenzene nguội đi như bảng bên dưới.
+		\begin{center}
+			{\renewcommand{\arraystretch}{1.3}%
+			\begin{tabular}{|l|*{11}{c|}}
+				\hline
+				Thời gian (s) & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ & $6$ & $7$ & $8$ & $9$ & $10$\\
+				\hline
+				Nhiệt độ ($^\circ$C) & $65$ & $58$ & $52$ & $53$ & $53$ & $53$ & $53$ & $53$ & $51$ & $47$ & $42$\\
+				\hline
+			\end{tabular}}
+		\end{center}
+		Nhiệt độ đông đặc của paradichlorobenzene bằng bao nhiêu kelvin?
+		\choice
+		{$338{,}15$~K}
+		{\True $326$~K}
+		{$338$~K}
+		{$326{,}15$~K}
+		\loigiai{
+			Khi đông đặc, nhiệt độ không đổi: $t=53\,^\circ\text{C}$ (từ giây thứ $3$ đến giây thứ $7$). $T=53+273=326$~K.
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.8\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Bảng dưới đây ghi tên các loại nhiệt kế và nhiệt độ ghi trên thang đo của chúng. Để đo nhiệt độ của bàn là phải dùng nhiệt kế nào?
+		\begin{center}
+			{\renewcommand{\arraystretch}{1.2}%
+			\begin{tabular}{|l|c|c|c|c|}
+				\hline
+				Loại nhiệt kế & Thủy ngân & Rượu & Kim loại & Y tế\\
+				\hline
+				Thang nhiệt độ & \begin{tabular}{@{}c@{}}Từ $-10\,^\circ\text{C}$\\ đến $110\,^\circ\text{C}$\end{tabular} & \begin{tabular}{@{}c@{}}Từ $-30\,^\circ\text{C}$\\ đến $60\,^\circ\text{C}$\end{tabular} & \begin{tabular}{@{}c@{}}Từ $0\,^\circ\text{C}$\\ đến $400\,^\circ\text{C}$\end{tabular} & \begin{tabular}{@{}c@{}}Từ $34\,^\circ\text{C}$\\ đến $42\,^\circ\text{C}$\end{tabular}\\
+				\hline
+			\end{tabular}}
+		\end{center}
+		\choice
+		{Nhiệt kế y tế}
+		{Nhiệt kế thủy ngân}
+		{\True Nhiệt kế kim loại}
+		{Nhiệt kế rượu}
+		\loigiai{
+			Bàn là nóng tới vài trăm $^\circ$C, vượt thang đo của các nhiệt kế khác; chỉ nhiệt kế kim loại (đến $400\,^\circ\text{C}$) đo được.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Khi nhiệt độ một vật tăng $1\,^\circ\text{C}$ trong thang nhiệt độ Celsius thì nhiệt độ của nó
+		\choice
+		{giảm $1$~K trong thang nhiệt độ Kelvin}
+		{tăng $274$~K trong thang nhiệt độ Kelvin}
+		{giảm $274$~K trong thang nhiệt độ Kelvin}
+		{\True tăng $1$~K trong thang nhiệt độ Kelvin}
+		\loigiai{
+			$T=t+273\Rightarrow \Delta T=\Delta t$: nhiệt độ tăng $1\,^\circ\text{C}$ thì tăng $1$~K.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Một vật đang được làm lạnh sao cho thể tích của vật không thay đổi. Nội năng của vật
+		\choice
+		{tăng lên}
+		{không thay đổi}
+		{\True giảm đi}
+		{tăng lên rồi giảm đi}
+		\loigiai{
+			Thể tích không đổi nên $A=0$; vật truyền nhiệt ra ngoài ($Q<0$) nên $\Delta U=Q<0$: nội năng giảm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Nguyên nhân nào sau đây gây ra áp suất chất khí?
+		\choice
+		{\True Do các phân tử khí khi chuyển động va chạm vào thành bình}
+		{Do chất khí có khối lượng nhỏ}
+		{Do giữa các phân tử khí có lực tương tác phân tử}
+		{Do các phân tử khí có kích thước nhỏ so với khoảng cách giữa chúng}
+		\loigiai{
+			Các phân tử khí chuyển động hỗn loạn, va chạm vào thành bình, tác dụng lực lên thành bình gây ra áp suất.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.5\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Nhiệt dung riêng của đồng lớn hơn chì. Vì vậy để tăng nhiệt độ của $1$~kg đồng và $1$~kg chì thêm $1\,^\circ\text{C}$ thì
+		\choice
+		{\True khối đồng cần nhiều nhiệt lượng hơn khối chì}
+		{khối chì cần nhiều nhiệt lượng hơn khối đồng}
+		{không khẳng định được}
+		{hai khối đều cần nhiệt lượng như nhau}
+		\loigiai{
+			$Q=mc\Delta t$; cùng $m$, cùng $\Delta t$, $c_{\text{đồng}}>c_{\text{chì}}$ nên khối đồng cần nhiều nhiệt lượng hơn.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.2\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Năm 1827 Robert Brown làm thí nghiệm để quan sát chuyển động nhiệt của hạt phấn hoa trong cốc chứa nước bằng kính hiển vi. Nhận xét nào sau đây \textbf{không} đúng?
+		\choice
+		{Các hạt phấn hoa chuyển động hỗn loạn, không ngừng}
+		{\True Nhiệt độ càng cao thì hạt phấn hoa chuyển động càng chậm}
+		{Quỹ đạo của hạt phấn hoa có dạng gấp khúc và không theo quy luật}
+		{Các hạt phấn hoa bị các phân tử nước va đập vào}
+		\loigiai{
+			Nhiệt độ càng cao, phân tử nước chuyển động càng nhanh, va đập càng mạnh nên hạt phấn hoa chuyển động càng nhanh.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Nội năng của một hệ
+		\choice
+		{chỉ phụ thuộc vào nhiệt độ của hệ, không phụ thuộc vào thể tích của hệ}
+		{không phụ thuộc vào nhiệt độ và thể tích của hệ}
+		{chỉ phụ thuộc vào thể tích của hệ, không phụ thuộc vào nhiệt độ của hệ}
+		{\True phụ thuộc vào nhiệt độ và thể tích của hệ}
+		\loigiai{
+			Nội năng gồm động năng của các phân tử (phụ thuộc nhiệt độ) và thế năng tương tác giữa chúng (phụ thuộc thể tích).
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.4\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Hai cốc A và cốc B trong hình bên đang ở trạng thái cân bằng nhiệt, đều chứa nước và nước đá. So với nhiệt độ của nước trong cốc B thì nhiệt độ của nước trong cốc A
+		\begin{center}
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				\foreach \cx/\ten in {0/A,2.4/B}{
+					\begin{scope}[shift={(\cx,0)}]
+						\begin{scope}
+							\clip (0.04,1.62)--(0.08,0.16) to[out=-90,in=180] (0.24,0.02)--(1.76,0.02) to[out=0,in=-90] (1.92,0.16)--(1.96,1.62)--cycle;
+							\shade[top color=VLxanh!18,bottom color=VLxanh!42] (0,0) rectangle (2,1.3);
+							\fill[VLxanh!10] (1,1.3) ellipse (0.94 and 0.09);
+						\end{scope}
+					\end{scope}}
+				% đá cốc A (ít, nổi trên mặt)
+				\VLvienda{0.55}{1.08}{0.3}{8}
+				\VLvienda{0.98}{1.12}{0.3}{-6}
+				% đá cốc B (nhiều, chiếm gần hết cốc)
+				\foreach \x/\y/\g in {2.6/0.15/10,3.05/0.12/-8,3.5/0.18/14,2.75/0.5/-12,3.25/0.48/6,3.75/0.55/-4,2.62/0.85/4,3.05/0.85/-15,3.55/0.88/9,2.85/1.12/-5,3.3/1.15/12,3.8/1.1/-10}{\VLvienda{\x}{\y}{0.3}{\g}}
+				\foreach \cx/\ten in {0/A,2.4/B}{
+					\begin{scope}[shift={(\cx,0)}]
+						\draw[gray!70!black,semithick] (0.04,1.62)--(0.08,0.16) to[out=-90,in=180] (0.24,0.02)--(1.76,0.02) to[out=0,in=-90] (1.92,0.16)--(1.96,1.62);
+						\draw[gray!70!black,thin] (1,1.62) ellipse (0.96 and 0.1);
+						\draw[gray!55,thin] (0.08,1.3) arc[start angle=180,end angle=360,x radius=0.92,y radius=0.09];
+						\draw[white,line width=1.2pt,opacity=0.8] (0.2,1.45)--(0.24,0.3);
+						\node at (1,-0.25) {\normalsize \ten};
+					\end{scope}}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{thấp hơn}
+		{đang tăng nhanh hơn}
+		{cao hơn}
+		{\True là bằng nhau}
+		\loigiai{
+			Nước và nước đá ở trạng thái cân bằng nhiệt (áp suất khí quyển) đều có nhiệt độ $0\,^\circ\text{C}$, không phụ thuộc lượng nước đá.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Vận động viên điền kinh bị mất rất nhiều nước trong khi thi đấu. Các vận động viên thường chỉ có thể chuyển hóa khoảng $22\,\%$ năng lượng dự trữ trong cơ thể thành năng lượng dùng cho các hoạt động của cơ thể. Phần năng lượng còn lại chuyển thành nhiệt thải ra ngoài nhờ sự bay hơi của nước qua hô hấp và da để giữ cho nhiệt độ cơ thể không đổi. Nếu vận động viên dùng hết $10\,800$~kJ trong cuộc thi thì có khoảng bao nhiêu lít nước đã thoát ra ngoài cơ thể? Coi nhiệt độ cơ thể của vận động viên hoàn toàn không đổi và nhiệt hóa hơi riêng của nước ở nhiệt độ của vận động viên là $2{,}4\cdot 10^6$~J/kg. Biết khối lượng riêng của nước là $1{,}0\cdot 10^3~\text{kg/m}^3$.
+		\choice
+		{$1{,}6$ lít}
+		{$4{,}6$ lít}
+		{$2{,}6$ lít}
+		{\True $3{,}51$ lít}
+		\loigiai{
+			$Q=78\,\%\cdot 10\,800=8424$~kJ; $m=\dfrac{Q}{L}=\dfrac{8424\cdot 10^3}{2{,}4\cdot 10^6}=3{,}51$~kg $\Rightarrow V=3{,}51$ lít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{13.7\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Đá khô (dry ice) là tên gọi của carbon dioxide ở dạng đóng băng (thể rắn). Ở điều kiện áp suất khí quyển, đá khô gặp nước sẽ chuyển sang thể khí. Người ta ứng dụng hiện tượng này của đá khô để tạo khói trong tổ chức sự kiện, giải trí, ăn uống,... Hiện tượng tạo khói của đá khô liên quan đến sự chuyển thể nào sau đây?
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				\pgfmathsetseed{11}
+				\shade[left color=black!90,right color=violet!35!black] (0,0) rectangle (5.4,3.5);
+				\begin{scope}
+					\clip (0,0) rectangle (5.4,3.5);
+					% các ly (xa -> gần)
+					\VLlycocktail{0.55}{0.75}{0.62}{orange}
+					\fill[orange!90!red] (0.22,2.0) circle (0.2); \fill[yellow!50!orange] (0.22,2.0) circle (0.15);
+					\VLlycocktail{1.3}{0.72}{0.68}{yellow!80!orange}
+					\fill[orange!80!yellow] (1.05,2.1) circle (0.22); \fill[yellow!60!orange] (1.05,2.1) circle (0.16);
+					\VLlycocktail{2.1}{0.66}{0.74}{orange!70!red}
+					\fill[orange!85!red] (1.85,2.22) circle (0.24); \fill[yellow!55!orange] (1.85,2.22) circle (0.17);
+					\VLlycocktail{3.05}{0.58}{0.8}{VLxanh!45!white}
+					\draw[green!40!black,thin] (3.0,2.25)--(3.1,2.55); \fill[red!85!black] (3.1,2.6) circle (0.09);
+					\VLlycocktail{4.25}{0.42}{0.98}{red!85!black}
+					\draw[green!40!black,thin] (3.95,2.35)--(3.9,2.75); \fill[red!85!black] (3.9,2.8) circle (0.12);
+					% khói tràn xuống từ các ly
+					\foreach \x/\y in {0.4/1.6,1.2/1.7,2.0/1.75,2.9/1.95,4.0/2.1}{
+						\draw[white,opacity=0.55,line width=1.4pt] (\x,\y) .. controls +(-0.25,-0.3) and +(0.15,0.4) .. ++(-0.2,-0.9);
+						\draw[white,opacity=0.4,line width=1pt] (\x+0.3,\y) .. controls +(0.15,-0.35) and +(-0.1,0.4) .. ++(0.25,-1.0);}
+					% khói dưới đáy
+					\fill[white,path fading=north,opacity=0.95] (0,0) rectangle (5.4,1.5);
+					\foreach \i in {1,...,70}{\pgfmathsetmacro{\xx}{5.6*rnd-0.1}\pgfmathsetmacro{\yy}{0.2+0.9*rnd}\pgfmathsetmacro{\rr}{0.12+0.18*rnd}\fill[white,opacity=0.18] (\xx,\yy) circle (\rr);}
+					\foreach \i in {1,...,14}{\pgfmathsetmacro{\xx}{5.4*rnd}\pgfmathsetmacro{\yy}{0.6+0.8*rnd}\draw[white,opacity=0.35,line width=0.8pt] (\xx,\yy) .. controls +(0.2,0.15) and +(-0.2,-0.1) .. ++(0.5,0.2);}
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{Sự ngưng kết}
+		{Sự nóng chảy}
+		{\True Sự thăng hoa}
+		{Sự hóa hơi}
+		\loigiai{
+			Đá khô chuyển trực tiếp từ thể rắn sang thể khí: sự thăng hoa.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.7\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Trong một xilanh hình trụ đặt thẳng đứng, pit-tông có diện tích $S=200~\text{cm}^2$, có chứa đầy nước đóng băng ở nhiệt độ $t=0\,^\circ\text{C}$ (áp suất $1$~atm). Trong xilanh có một thiết bị làm nóng có công suất tỏa nhiệt $P=1$~kW. Sau khi thiết bị được bật, pit-tông bắt đầu hạ xuống. Khối lượng riêng của nước và nước đá lần lượt là $D_\text{n}=1000~\text{kg/m}^3$ và $D_\text{đ}=910~\text{kg/m}^3$, nhiệt nóng chảy riêng của nước đá là $\lambda=3{,}4\cdot 10^5$~J/kg. Bỏ qua sự trao đổi nhiệt của nước, nước đá với pit-tông, xilanh và môi trường. Hỏi pit-tông hạ xuống với tốc độ trung bình gần nhất với giá trị nào sau đây?
+		\choice
+		{$0{,}98$~mm/phút}
+		{$0{,}91$~mm/phút}
+		{$0{,}62$~mm/phút}
+		{\True $0{,}87$~mm/phút}
+		\loigiai{
+			Trong thời gian $\Delta t$, khối lượng nước đá tan $m=\dfrac{P\Delta t}{\lambda}$, thể tích giảm $\Delta V=m\left(\dfrac{1}{D_\text{đ}}-\dfrac{1}{D_\text{n}}\right)$:
+			\[v=\dfrac{\Delta V}{S\Delta t}=\dfrac{P}{\lambda S}\left(\dfrac{1}{D_\text{đ}}-\dfrac{1}{D_\text{n}}\right)=\dfrac{1000}{3{,}4\cdot 10^5\cdot 0{,}02}\left(\dfrac{1}{910}-\dfrac{1}{1000}\right)\approx 1{,}45\cdot 10^{-5}~\text{m/s},\]
+			tức là $v\approx 0{,}87$~mm/phút.
+		}
+	\end{ex}
+
+	\NeedspaceCau{17.2\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Hơ nóng một khối khí trong ống nghiệm có nút đậy kín (không quá chặt) như hình a và kết quả nút bật ra khỏi ống nghiệm (hình b). Chọn câu \textbf{sai}.
+		\begin{center}
+			\begin{tikzpicture}[scale=0.919,line join=round,line cap=round,font=\footnotesize]
+				% hình a
+				\begin{scope}
+					\VLgiado{-1.2}{2.75}{3.45}
+					\begin{scope}[shift={(0,0.12)}]\VLdencon\end{scope}
+					\VLongnghiem{1.25}{3.15}
+					\fill[black!80] (-0.17,3.12)--(0.17,3.12)--(0.2,3.4)--(-0.2,3.4)--cycle;
+					\node at (-0.2,-0.3) {Hình a};
+				\end{scope}
+				% hình b
+				\begin{scope}[shift={(3.2,0)}]
+					\VLgiado{-1.2}{2.75}{3.45}
+					\begin{scope}[shift={(0,0.12)}]\VLdencon\end{scope}
+					\VLongnghiem{1.25}{3.15}
+					\foreach \x/\y/\r in {-0.25/3.35/0.13,0.22/3.38/0.12,-0.4/3.6/0.12,0.38/3.62/0.13,-0.15/3.85/0.11,0.3/3.9/0.1,0.02/3.3/0.1}{\filldraw[fill=VLxanh!8,draw=gray!55,very thin] (\x,\y) circle (\r);}
+					\fill[black!80,rotate around={-15:(0,3.75)}] (-0.17,3.6)--(0.17,3.6)--(0.2,3.88)--(-0.2,3.88)--cycle;
+					\node at (-0.2,-0.3) {Hình b};
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{Khi bị đốt nóng, nội năng của khí trong ống nghiệm tăng lên}
+		{\True Nội năng của khí trong ống nghiệm tăng là do thế năng của các phân tử khí tăng còn động năng của các phân tử khí không tăng}
+		{Áp suất khí trong ống tăng lên tạo ra lực đẩy đủ lớn làm bật nút đẩy ra khỏi ống nghiệm}
+		{Khi nhiệt độ tăng thì các phân tử khí va chạm với thành bình nhiều và mạnh hơn}
+		\loigiai{
+			Khi bị đốt nóng, nhiệt độ khí tăng nên động năng chuyển động nhiệt của các phân tử khí tăng; nội năng tăng chủ yếu do động năng phân tử tăng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.2\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Khi một chất lỏng đang sôi thì năng lượng mà các phân tử chất lỏng nhận được lúc này dùng để
+		\choice
+		{\True phá vỡ các liên kết với các phân tử xung quanh}
+		{giảm nhiệt độ của chất lỏng}
+		{tăng nhiệt độ của chất lỏng}
+		{tạo ra lực liên kết với các phân tử xung quanh}
+		\loigiai{
+			Khi sôi, nhiệt độ chất lỏng không đổi; năng lượng nhận được dùng để phá vỡ liên kết giữa các phân tử, chuyển chúng sang thể hơi.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.1\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Thiết bị nào sau đây \textbf{không} dùng để xác định nhiệt hóa hơi riêng của nước?
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				% nhiệt lượng kế
+				\begin{scope}[shift={(0.9,0.3)}]
+					\shade[left color=gray!60,right color=gray!50,middle color=gray!5] (-0.65,0) arc[start angle=180,end angle=360,x radius=0.65,y radius=0.15]--(0.65,1.65) arc[start angle=0,end angle=180,x radius=0.65,y radius=0.15]--cycle;
+					\draw[gray!45!black,thin] (-0.65,1.65)--(-0.65,0) arc[start angle=180,end angle=360,x radius=0.65,y radius=0.15]--(0.65,1.65);
+					\draw[gray!55,thin] (-0.65,0.28) arc[start angle=180,end angle=360,x radius=0.65,y radius=0.15] (-0.65,1.42) arc[start angle=180,end angle=360,x radius=0.65,y radius=0.15];
+					\filldraw[fill=gray!25,draw=gray!45!black,thin] (0,1.65) ellipse (0.65 and 0.15);
+					\draw[white,line width=2pt,opacity=0.75] (-0.42,1.35)--(-0.42,0.1);
+					\foreach \x/\y/\h/\c in {-0.32/1.66/0.42/VLxanh,-0.12/1.74/0.5/VLdo,0.12/1.72/0.36/black,0.32/1.62/0.46/VLdo,0.0/1.58/0.3/VLxanh}{
+						\shade[left color=\c!70!black,right color=\c!80!black,middle color=\c!55!white] (\x-0.05,\y) rectangle (\x+0.05,\y+\h);
+						\fill[\c!60!black] (\x,\y+\h) ellipse (0.05 and 0.02);}
+					\node at (0,-0.55) {\textit{Nhiệt lượng kế}};
+				\end{scope}
+				% cân điện tử
+				\begin{scope}[shift={(4.6,0.3)}]
+					\shade[top color=gray!45,bottom color=gray!75] (-1.3,0)--(1.3,0)--(1.3,0.4)--(-1.3,0.4)--cycle;
+					\draw[gray!40!black,thin] (-1.3,0) rectangle (1.3,0.4);
+					\fill[black!80] (-0.5,0.08) rectangle (0.5,0.3);
+					\fill[gray!25] (-0.42,0.12) rectangle (0.42,0.26);
+					\foreach \x in {-1.05,-0.8,0.8,1.05}{\fill[gray!30!black] (\x,0.19) ellipse (0.09 and 0.05);}
+					\shade[top color=gray!50,bottom color=gray!20] (-1.25,0.4)--(1.25,0.4)--(1.25,0.48)--(-1.25,0.48)--cycle;
+					\shade[top color=gray!15,bottom color=gray!55] (-1.25,0.48)--(1.25,0.48)--(0.98,1.4)--(-0.98,1.4)--cycle;
+					\draw[gray!45!black,thin] (-1.25,0.4)--(1.25,0.4)--(1.25,0.48)--(0.98,1.4)--(-0.98,1.4)--(-1.25,0.48)--cycle;
+					\node at (0,-0.55) {\textit{Cân điện tử}};
+				\end{scope}
+				% nhiệt kế y tế
+				\begin{scope}[shift={(8.3,0.3)}]
+					\begin{scope}[rotate=27]
+						\filldraw[fill=gray!8,draw=gray!60!black,thin,rounded corners=0.08cm] (0,-0.11) rectangle (3.25,0.11);
+						\fill[yellow!30] (0.75,-0.07) rectangle (3.0,0.07);
+						\foreach \i in {0,...,35}{\draw[black!70,line width=0.2pt] ({0.85+0.06*\i},-0.07)--++(0,0.05);}
+						\foreach \i/\s in {0/35,5/36,10/37,15/38,20/39,25/40,30/41,35/42}{\node[font=\fontsize{4}{4}\selectfont,inner sep=0,VLdo!80!black] at ({0.85+0.06*\i},0.035) {\s};}
+						\draw[gray!55,line width=0.8pt] (0.1,0)--(1.55,0);
+						\shade[left color=gray!60,right color=gray!40,middle color=gray!10] (0,-0.075) rectangle (0.45,0.075);
+						\fill[gray!60] (3.25,0) ellipse (0.03 and 0.1);
+					\end{scope}
+					\node at (1.35,-0.55) {\textit{Nhiệt kế}};
+				\end{scope}
+				% oát kế
+				\begin{scope}[shift={(12.6,0.3)}]
+					\fill[gray!35] (0.6,0.08)--(0.75,0.18)--(0.75,2.25)--(0.6,2.15)--cycle;
+					\filldraw[fill=white,draw=gray!55!black,thin,rounded corners=0.12cm] (-0.6,0) rectangle (0.6,2.2);
+					\shade[top color=gray!25,bottom color=gray!55] (-0.43,1.35) rectangle (0.43,2.02);
+					\draw[gray!45!black,thin] (-0.43,1.35) rectangle (0.43,2.02);
+					\foreach \x in {-0.3,0,0.3}{\filldraw[fill=green!55!black,draw=green!30!black,very thin,rounded corners=0.03cm] (\x-0.1,1.08) rectangle (\x+0.1,1.2);}
+					\filldraw[fill=gray!12,draw=gray!55!black,thin] (0,0.55) circle (0.36);
+					\fill[black!75] (-0.13,0.55) circle (0.05) (0.13,0.55) circle (0.05);
+					\node at (0,-0.55) {\textit{Oát kế}};
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{\True Nhiệt kế}
+		{Nhiệt lượng kế}
+		{Cân điện tử}
+		{Oát kế}
+		\loigiai{
+			Nhiệt kế trong hình là nhiệt kế y tế (thang đo từ $35\,^\circ\text{C}$ đến $42\,^\circ\text{C}$), không đo được nhiệt độ sôi của nước nên không dùng; nhiệt lượng kế, cân điện tử, oát kế đều dùng trong thí nghiệm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{11.3\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Hình bên dưới là các dụng cụ để đo nhiệt dung riêng của nước. Dụng cụ số (3) là
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[x=0.0133cm,y=-0.0133cm,line join=round,line cap=round,font=\footnotesize]
+				% mặt bàn
+				\fill[gray!8] (0,262)--(706,262)--(706,330)--(0,330)--cycle;
+				% cân (5)
+				\shade[top color=gray!30,bottom color=gray!60] (25,240) rectangle (215,300);
+				\draw[gray!45!black,thin] (25,240) rectangle (215,300);
+				\fill[gray!20] (25,240)--(45,215)--(215,215)--(215,240)--cycle;
+				\draw[gray!45!black,thin] (25,240)--(45,215)--(215,215)--(215,240);
+				\fill[black!80] (38,252) rectangle (130,288);
+				\fill[VLdo!60!black] (45,258) rectangle (122,282);
+				\fill[black!85] (140,207) ellipse (78 and 24);
+				\shade[top color=black!60,bottom color=black!90] (62,195)--(62,207) arc[start angle=180,end angle=0,x radius=78,y radius=24]--(218,195)--cycle;
+				\shade[inner color=gray!60,outer color=black!85] (140,195) ellipse (78 and 24);
+				% biến thế nguồn (1)
+				\fill[gray!55] (235,128)--(250,113)--(468,113)--(455,128)--cycle;
+				\fill[gray!45] (455,128)--(468,113)--(468,240)--(455,255)--cycle;
+				\shade[top color=gray!5,bottom color=gray!22] (235,128) rectangle (455,255);
+				\draw[gray!45!black,thin] (235,128) rectangle (455,255) (235,128)--(250,113)--(468,113)--(468,240)--(455,255) (455,128)--(468,113);
+				\draw[black!75,line width=1.4pt] (295,122)--(300,103)--(385,103)--(390,122);
+				\fill[black!80] (250,258) rectangle (265,262) (425,258) rectangle (440,262);
+				\fill[gray!60] (245,140) rectangle (262,152);
+				\draw[gray!55,very thin] (270,145)--(330,145) (270,150)--(320,150) (370,145)--(420,145);
+				\foreach \x/\y/\c in {268/210/VLdo,300/210/VLxanh,268/236/VLdo,300/236/VLxanh}{\shade[inner color=\c!60!white,outer color=\c!80!black] (\x,\y) circle (9);}
+				\foreach \y/\c in {188/VLdo,228/VLxanh}{\shade[inner color=\c!50!white,outer color=\c!75!black] (355,\y) circle (8);}
+				\foreach \g in {150,120,...,30}{\draw[black!70,very thin] (420,210)++(\g:22)--++(\g:5);}
+				\shade[inner color=gray!70,outer color=black!90] (420,210) circle (17);
+				\draw[white,thin] (420,210)--++(60:13);
+				% oát kế (2)
+				\shade[top color=gray!5,bottom color=gray!25] (475,160) rectangle (560,245);
+				\fill[gray!40] (475,160)--(482,152)--(566,152)--(560,160)--cycle;
+				\fill[gray!35] (560,160)--(566,152)--(566,238)--(560,245)--cycle;
+				\draw[gray!45!black,thin] (475,160) rectangle (560,245) (475,160)--(482,152)--(566,152)--(566,238)--(560,245) (560,160)--(566,152);
+				\fill[black!75] (488,172) rectangle (547,200);
+				\fill[green!25!gray!45] (492,176) rectangle (543,196);
+				\foreach \x/\c in {488/VLdo,503/VLxanh,530/VLdo,545/black}{\shade[inner color=\c!55!white,outer color=\c!80!black] (\x,233) circle (5.5);}
+				% nhiệt lượng kế (4)
+				\shade[left color=yellow!85!green!85!black,right color=yellow!85!green!90!black,middle color=yellow!70!white] (575,110)--(575,235) arc[start angle=180,end angle=0,x radius=52,y radius=15]--(679,110)--cycle;
+				\fill[yellow!80!green!70!white] (627,110) ellipse (52 and 15);
+				\draw[yellow!35!green!40!black,thin] (575,110)--(575,235) arc[start angle=180,end angle=0,x radius=52,y radius=15]--(679,110) (627,110) ellipse (52 and 15);
+				% nhiệt kế điện tử (3)
+				\begin{scope}[shift={(640,95)},rotate=-12]
+					\fill[black!85,rounded corners=2pt] (-9,10) rectangle (9,-62);
+					\fill[gray!55] (-6,-30) rectangle (6,-52);
+					\fill[VLdo] (-4,-5) circle (2);
+				\end{scope}
+				\fill[green!45!black] (612,104) rectangle (630,112);
+				% dây nối
+				\draw[VLdo!90!black,line width=0.8pt] (268,236) .. controls (275,275) and (430,272) .. (470,262) .. controls (480,258) and (486,250) .. (488,233);
+				\draw[VLxanh,line width=0.8pt] (300,236) .. controls (310,268) and (440,265) .. (480,258) .. controls (495,254) and (502,245) .. (503,233);
+				\draw[VLdo!90!black,line width=0.8pt] (530,233) .. controls (535,258) and (570,262) .. (585,248) .. controls (592,240) and (598,215) .. (618,110);
+				\draw[black!80,line width=0.8pt] (545,233) .. controls (552,250) and (575,252) .. (590,240) .. controls (600,230) and (606,200) .. (624,110);
+				% nhãn
+				\draw[thin] (150,92)--(150,186);
+				\node[above,inner sep=1pt] at (150,92) {(5)};
+				\draw[thin] (348,72)--(335,112);
+				\node[above,inner sep=1pt] at (348,72) {(1)};
+				\draw[thin] (520,288)--(522,242);
+				\node[below,inner sep=1pt] at (520,288) {(2)};
+				\draw[thin] (596,50)--(628,52);
+				\node[left,inner sep=1pt] at (596,50) {(3)};
+				\draw[thin] (655,288)--(640,248);
+				\node[below,inner sep=1pt] at (655,288) {(4)};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{Cân điện tử}
+		{Nhiệt lượng kế}
+		{Biến thế nguồn}
+		{\True Nhiệt kế điện tử}
+		\loigiai{
+			Các dụng cụ: (1) biến thế nguồn, (2) oát kế, (3) nhiệt kế điện tử, (4) nhiệt lượng kế, (5) cân điện tử.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.1\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Khi thép đang nóng chảy được làm nguội nhanh về nhiệt độ phòng sẽ giúp tăng độ cứng cho thép và cách làm như vậy sẽ được gọi là tôi thép. Người ta có thể sử dụng nước để làm hạ nhiệt độ nhanh cho thép đang nóng đỏ vì
+		\choice
+		{nhiệt độ nóng chảy của nước thấp hơn nhiều so với thép}
+		{sử dụng nước là do thói quen vì thật ra có thể để thép nóng đỏ trong không khí thì thép cũng hạ nhanh về nhiệt độ phòng}
+		{nước có khả năng bốc hơi rất nhanh khi gặp kim loại nóng}
+		{\True nhiệt dung riêng của nước cao hơn nhiều so với thép trong khi đó nhiệt độ sôi của nước lại thấp hơn nhiều so với nhiệt độ nóng chảy của thép}
+		\loigiai{
+			Nước có nhiệt dung riêng lớn và hóa hơi ở $100\,^\circ\text{C}$ nên thu rất nhiều nhiệt lượng của thép (để nóng lên và hóa hơi), làm thép nguội nhanh.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Trong một nhiệt lượng kế bằng nhôm khối lượng $m_{\text{nl}}=300$ gam có một cục nước đá nặng $m_{\text{nđ}}$ gam. Nhiệt độ của nhiệt lượng kế và nước đá là $t_1=-5\,^\circ\text{C}$. Sau đó, người ta cho $m_{\text{hn}}$ gam hơi nước ở $t_2=100\,^\circ\text{C}$ vào nhiệt lượng kế và khi đã cân bằng nhiệt thì nhiệt độ của nhiệt lượng kế là $t_3=25\,^\circ\text{C}$. Lúc đó, trong nhiệt lượng kế có $500$ gam nước. Cho biết nhiệt hóa hơi riêng của nước $L=2{,}26\cdot 10^3$~J/g, nhiệt nóng chảy riêng của nước đá $\lambda=334$~J/g, nhiệt dung riêng của nhôm, của nước đá và của nước lần lượt là $c_{\text{nl}}=0{,}88$~J/(g.K), $c_{\text{nđ}}=2{,}09$~J/(g.K) và $c_\text{n}=4{,}19$~J/(g.K). Giá trị của $(m_{\text{nđ}}-3m_{\text{hn}})$ gần giá trị nào nhất sau đây?
+		\choice
+		{$226$ gam}
+		{$269$ gam}
+		{$253$ gam}
+		{\True $192$ gam}
+		\loigiai{
+			$m_{\text{nđ}}+m_{\text{hn}}=500$~g. Cân bằng nhiệt:
+			\[m_{\text{nl}}c_{\text{nl}}(t_3-t_1)+m_{\text{nđ}}\left[c_{\text{nđ}}(0-t_1)+\lambda+c_\text{n}t_3\right]=m_{\text{hn}}\left[L+c_\text{n}(t_2-t_3)\right]\]
+			$\Rightarrow 7920+449{,}2\,m_{\text{nđ}}=2574{,}25\,(500-m_{\text{nđ}})\Rightarrow m_{\text{nđ}}\approx 423{,}1$~g, $m_{\text{hn}}\approx 76{,}9$~g $\Rightarrow m_{\text{nđ}}-3m_{\text{hn}}\approx 192{,}4$~g.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{25.3\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-BacNinh-CumTT1QV1LVT-Lan1-2]
+
+	\begin{ex}%[VL12-C1-TH]
+		Một học sinh pha một cốc trà nóng. Sau một lúc, học sinh này thêm một số viên đá vào trà. Học sinh sử dụng cảm biến nhiệt độ để đo nhiệt độ của trà. Hình dưới đây cho thấy đồ thị nhiệt độ -- thời gian thu được.
+		\begin{center}
+			\begin{tikzpicture}[x=0.072cm,y=0.036cm,line join=round,line cap=round,font=\footnotesize]
+				% cốc trà
+				\begin{scope}[x=1cm,y=1cm,shift={(-3.45cm,0.05cm)}]
+					\fill[VLgo!25] (0,0) rectangle (2.75,3.0);
+					\filldraw[fill=gray!12,draw=gray!55,thin] (1.35,0.55) ellipse (1.3 and 0.33);
+					\draw[gray!45,thin] (1.35,0.6) ellipse (0.75 and 0.17);
+					\begin{scope}
+						\clip (0.42,2.25) .. controls (0.44,1.25) and (0.62,0.68) .. (1.3,0.64) .. controls (1.98,0.68) and (2.16,1.25) .. (2.18,2.25)--cycle;
+						\shade[top color=orange!65!yellow,bottom color=orange!75!black] (0,0) rectangle (3,1.95);
+						\fill[white,opacity=0.35] (0,1.95) rectangle (3,2.3);
+					\end{scope}
+					\fill[orange!45!yellow] (1.3,1.95) ellipse (0.83 and 0.12);
+					\draw[gray!60!black,thin] (0.42,2.25) .. controls (0.44,1.25) and (0.62,0.68) .. (1.3,0.64) .. controls (1.98,0.68) and (2.16,1.25) .. (2.18,2.25);
+					\draw[gray!60!black,thin] (1.3,2.25) ellipse (0.88 and 0.14);
+					\draw[gray!55,line width=2.2pt] (2.12,1.9) .. controls (2.6,1.95) and (2.65,1.3) .. (2.0,1.1);
+					\draw[white,line width=0.9pt] (2.12,1.9) .. controls (2.6,1.95) and (2.65,1.3) .. (2.0,1.1);
+					\draw[white,line width=1.5pt,opacity=0.75] (0.62,2.0) .. controls (0.62,1.4) and (0.72,1.0) .. (0.9,0.85);
+					\filldraw[fill=green!55!black,draw=green!30!black,very thin] (1.85,0.55) .. controls (2.1,0.85) and (2.5,0.85) .. (2.7,0.7) .. controls (2.45,0.45) and (2.1,0.4) .. (1.85,0.55);
+					\draw[green!25!black,very thin] (1.85,0.55)--(2.65,0.7);
+					\filldraw[fill=green!45!black,draw=green!30!black,very thin] (2.4,0.45) .. controls (2.55,0.75) and (2.7,0.95) .. (2.75,1.05)--(2.75,0.35) .. controls (2.6,0.3) and (2.5,0.35) .. (2.4,0.45);
+				\end{scope}
+				% đồ thị
+				\draw[gray!70,densely dashed,thin] (0,0) grid[xstep=5,ystep=10] (55,85);
+				\draw[gray!70,densely dashed,thin] (0,85)--(55,85);
+				\draw[VLmui,thick] (0,0)--(63,0) node[right,inner sep=2pt] {Thời gian (phút)};
+				\draw[VLmui,thick] (0,0)--(0,98) node[above,inner sep=2pt] {Nhiệt độ ($^\circ$C)};
+				\foreach \x in {10,20,...,60}{\node[below,inner sep=2pt] at (\x,0) {$\x$};}
+				\node[below,inner sep=2pt] at (0,0) {$0$};
+				\foreach \y in {20,40,...,80}{\node[left,inner sep=2pt] at (0,\y) {$\y$};}
+				\draw[very thick] plot[smooth,tension=0.6] coordinates {(0,80) (1.5,68) (3,59) (5,52) (7,47.5) (8,45)};
+				\draw[very thick] plot[smooth,tension=0.6] coordinates {(8,45) (8.8,32) (9.8,18) (11.2,10) (13,7)};
+				\draw[very thick] plot[smooth,tension=0.6] coordinates {(13,7) (17,12) (22,17) (28,21) (34,25) (40,27.5) (45,27.8) (50,27) (55,26)};
+				\fill (0,80) circle (1.6pt) (8,45) circle (1.6pt) (13,7) circle (1.6pt) (40,27.5) circle (1.6pt);
+				\node[right,inner sep=2pt,font=\footnotesize\bfseries] at (0,82) {M};
+				\node[right,inner sep=2pt,font=\footnotesize\bfseries] at (8,45) {N};
+				\node[above,inner sep=2pt,font=\footnotesize\bfseries] at (13,8) {P};
+				\node[above,inner sep=2pt,font=\footnotesize\bfseries] at (40,28) {Q};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{Thời điểm thả các viên đá vào ứng với điểm M trên đồ thị}
+		{\True Thời điểm đá tan hết ứng với điểm P trên đồ thị}
+		{Nhiệt độ môi trường xung quanh cốc trà khoảng $35\,^\circ\text{C}$}
+		{\True Khi thả viên đá vào, để quá trình trao đổi nhiệt diễn ra nhanh hơn học sinh phải khuấy liên tục cốc trà}
+		\loigiai{
+			Từ M đến N trà nguội dần; tại N thả đá, nhiệt độ giảm nhanh đến P; sau P trà nhận nhiệt từ môi trường, nhiệt độ tăng dần đến ổn định khoảng $27\,^\circ\text{C}$.
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Thả đá ứng với điểm N (nhiệt độ bắt đầu giảm nhanh).
+				\itemch \textbf{Đúng.} Đến P đá tan hết, sau đó trà nhận nhiệt từ môi trường nên nhiệt độ tăng.
+				\itemch \textbf{Sai.} Nhiệt độ trà ổn định bằng nhiệt độ môi trường, khoảng $27\,^\circ\text{C}$.
+				\itemch \textbf{Đúng.} Khuấy làm nước đá và trà tiếp xúc tốt hơn nên trao đổi nhiệt nhanh hơn.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[18\baselineskip]{30.9\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một nhóm học sinh thực hiện dự án chưng cất tinh dầu bạc hà bằng phương pháp ``lôi cuốn hơi nước'' với hệ thống như hình bên. Quy trình thực hiện như sau: Nước trong bình (2) nhận nhiệt từ nguồn nhiệt (1), hóa hơi và đi qua nguyên liệu (3), cuốn theo tinh dầu bạc hà; Hỗn hợp hơi nước -- tinh dầu (4) đi qua ống dẫn (5) vào bình ngưng (6) được làm nguội và ngưng tụ thành hỗn hợp lỏng và thu vào bình chứa (7); Sau đó dùng kĩ thuật tách để lấy tinh dầu khỏi nước. Nhóm sử dụng bình ngưng chứa $5{,}0$ lít nước ban đầu ở $15{,}0\,^\circ\text{C}$ và không thay nước trong cả quá trình. Sau $4$ giờ thì hoàn thành quá trình chưng cất, khi đó nước trong bình ngưng có nhiệt độ $40{,}0\,^\circ\text{C}$. Bỏ qua sự tỏa nhiệt của bình ngưng ra môi trường, khối lượng riêng và nhiệt dung riêng của nước là $D_\text{n}=0{,}997~\text{g/cm}^3$; $c_\text{n}=4{,}180$~J/(g.K).
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.78,line join=round,line cap=round,font=\footnotesize]
+				\pgfmathsetseed{5}
+				% nguồn nhiệt (1)
+				\fill[yellow!25] (0.15,0)--(0.15,0.75) .. controls (0.2,1.2) and (0.6,1.3) .. (1.15,1.3) .. controls (1.7,1.3) and (2.1,1.2) .. (2.15,0.75)--(2.15,0)--cycle;
+				\foreach \x/\h in {0.4/0.75,0.65/1.0,0.9/0.85,1.15/1.1,1.4/0.9,1.65/1.0,1.9/0.7}{
+					\fill[orange!80!red,opacity=0.85] (\x-0.14,0.05) .. controls (\x-0.16,0.4) and (\x-0.05,0.6) .. (\x,\h) .. controls (\x+0.06,0.6) and (\x+0.16,0.4) .. (\x+0.14,0.05)--cycle;
+					\fill[yellow!80!orange] (\x-0.07,0.05) .. controls (\x-0.08,0.25) and (\x-0.02,0.4) .. (\x,0.55*\h) .. controls (\x+0.03,0.4) and (\x+0.08,0.25) .. (\x+0.07,0.05)--cycle;}
+				\draw[gray!55!black,thin] (0.15,0)--(0.15,0.75) .. controls (0.2,1.2) and (0.6,1.3) .. (1.15,1.3) .. controls (1.7,1.3) and (2.1,1.2) .. (2.15,0.75)--(2.15,0);
+				% bình chưng cất
+				\begin{scope}
+					\clip (0.1,1.45)--(0.1,3.9) .. controls (0.1,4.35) and (0.7,4.6) .. (0.98,4.72)--(1.22,4.72) .. controls (1.5,4.6) and (2.2,4.35) .. (2.2,3.9)--(2.2,1.45)--cycle;
+					\fill[VLxanh!6] (0,1.4) rectangle (2.3,4.8);
+					\shade[top color=VLxanh!22,bottom color=VLxanh!38] (0,1.4) rectangle (2.3,2.88);
+					\foreach \i in {1,...,40}{\draw[VLxanh!60,very thin] ({0.2+1.9*rnd},{1.55+1.25*rnd}) circle (0.03);}
+					\fill[green!18!yellow!40] (0,2.88) rectangle (2.3,3.68);
+					\foreach \i in {1,...,34}{\pgfmathsetmacro{\xx}{0.15+2.0*rnd}\pgfmathsetmacro{\yy}{2.98+0.62*rnd}\pgfmathsetmacro{\gg}{180*rnd}\filldraw[fill=green!55!black,draw=green!25!black,very thin,rotate around={\gg:(\xx,\yy)}] (\xx,\yy) ellipse (0.11 and 0.05);}
+					\foreach \x/\y in {0.4/3.95,0.8/4.15,1.5/4.05,1.85/3.85,1.2/3.85}{\draw[gray!60,very thin] (\x,\y) .. controls +(0.05,0.06) and +(-0.05,-0.06) .. ++(0.12,0.02) .. controls +(0.05,0.06) and +(-0.05,-0.06) .. ++(0.12,0.02);}
+				\end{scope}
+				\draw[gray!60,thin] (0.1,2.88)--(2.2,2.88);
+				\draw[gray!50!black,thin] (0.1,1.45)--(0.1,3.9) .. controls (0.1,4.35) and (0.7,4.6) .. (0.98,4.72) (1.22,4.72) .. controls (1.5,4.6) and (2.2,4.35) .. (2.2,3.9)--(2.2,1.45);
+				\draw[gray!50!black,thin] (0.1,1.45) arc[start angle=180,end angle=360,x radius=1.05,y radius=0.1];
+				% ống dẫn (5)
+				\draw[gray!50!black,line width=5.5pt] (1.1,4.7)--(1.15,5.05) .. controls (1.2,5.2) and (1.35,5.2) .. (1.6,5.15)--(2.7,4.95) .. controls (3.05,4.88) and (3.4,4.6) .. (3.48,4.15);
+				\draw[VLxanh!8,line width=4.3pt] (1.1,4.68)--(1.15,5.05) .. controls (1.2,5.2) and (1.35,5.2) .. (1.6,5.15)--(2.7,4.95) .. controls (3.05,4.88) and (3.4,4.6) .. (3.48,4.15);
+				\draw[gray!55,very thin,VLmui] (2.15,5.02)--(2.6,4.94);
+				% bình ngưng (6)
+				\shade[left color=VLxanh!20,right color=VLxanh!12,middle color=VLxanh!4] (3.0,2.35) rectangle (4.0,4.1);
+				\draw[gray!50!black,thin] (3.0,2.35)--(3.0,4.1) (4.0,2.35)--(4.0,4.1);
+				\draw[gray!50!black,thin] (3.5,4.1) ellipse (0.5 and 0.08);
+				\draw[gray!50!black,line width=4pt] (4.0,3.72)--(4.28,3.72);
+				\draw[VLxanh!8,line width=2.8pt] (3.98,3.72)--(4.27,3.72);
+				\foreach \i in {0,...,3}{
+					\pgfmathsetmacro{\yy}{3.95-0.32*\i}
+					\draw[gray!50!black,line width=5pt] (3.48,\yy) .. controls (3.1,\yy-0.04) and (3.1,\yy-0.17) .. (3.48,\yy-0.17) .. controls (3.9,\yy-0.17) and (3.9,\yy-0.32) .. (3.48,\yy-0.32);
+					\draw[VLxanh!8,line width=3.8pt] (3.48,\yy) .. controls (3.1,\yy-0.04) and (3.1,\yy-0.17) .. (3.48,\yy-0.17) .. controls (3.9,\yy-0.17) and (3.9,\yy-0.32) .. (3.48,\yy-0.32);}
+				\draw[gray!50!black,line width=5pt] (3.48,2.67) .. controls (3.6,2.56) and (3.75,2.55) .. (4.0,2.55)--(5.15,2.55) .. controls (5.4,2.55) and (5.45,2.3) .. (5.45,1.9);
+				\draw[VLxanh!8,line width=3.8pt] (3.47,2.69) .. controls (3.6,2.56) and (3.75,2.55) .. (4.0,2.55)--(5.15,2.55) .. controls (5.4,2.55) and (5.45,2.3) .. (5.45,1.88);
+				\filldraw[fill=gray!20,draw=gray!50!black,thin] (3.5,2.3) ellipse (0.62 and 0.12);
+				\draw[gray!50!black,line width=1.2pt] (3.02,2.24)--(3.02,0.15) (3.98,2.24)--(3.98,0.15) (3.5,2.18)--(3.5,0.2);
+				% bình chứa (7)
+				\filldraw[fill=gray!20,draw=gray!50!black,thin] (5.5,1.0) ellipse (0.55 and 0.1);
+				\draw[gray!50!black,line width=1.1pt] (5.1,0.95)--(5.05,0.25) (5.9,0.95)--(5.95,0.25) (5.35,0.92)--(5.33,0.2) (5.65,0.92)--(5.67,0.2);
+				\begin{scope}
+					\clip (5.38,1.9)--(5.38,1.75) .. controls (5.0,1.7) and (5.02,1.08) .. (5.5,1.06) .. controls (5.98,1.08) and (6.0,1.7) .. (5.62,1.75)--(5.62,1.9)--cycle;
+					\fill[VLxanh!6] (5,1) rectangle (6,2);
+					\shade[top color=yellow!55,bottom color=VLxanh!35] (5,1) rectangle (6,1.58);
+				\end{scope}
+				\draw[gray!50!black,thin] (5.38,1.9)--(5.38,1.75) .. controls (5.0,1.7) and (5.02,1.08) .. (5.5,1.06) .. controls (5.98,1.08) and (6.0,1.7) .. (5.62,1.75)--(5.62,1.9);
+				\draw[gray!50!black,thin] (5.9,1.5)--(6.12,1.52)--(6.12,1.4);
+				% nhãn
+				\foreach \x/\y/\s in {0.85/0.45/1,0.95/2.1/2,1.0/3.3/3,1.2/4.25/4,3.45/4.62/5,4.55/3.7/6,6.0/2.3/7}{\node[circle,draw,thin,fill=white,fill opacity=0.85,text opacity=1,inner sep=0.8pt,minimum size=0.42cm] at (\x,\y) {\s};}
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{12.8\baselineskip}%
+		\choiceTFt
+		{Khi đi qua bình ngưng, hỗn hợp hơi nước -- tinh dầu đã nhận nhiệt từ nước và ngưng tụ}
+		{Nhiệt lượng mà nước trong bình ngưng đã nhận từ hỗn hợp hơi là $0{,}52$~kJ (làm tròn kết quả đến chữ số hàng phần trăm)}
+		{\True Tốc độ trao đổi nhiệt giữa hỗn hợp hơi và nước trong bình ngưng giảm khi nhiệt độ nước của bình ngưng tăng lên}
+		{\True Thực tế, để đảm bảo hiệu suất ngưng tụ, nhiệt độ bình ngưng không được vượt quá $25{,}0\,^\circ\text{C}$; với điều kiện tốc độ cung cấp nhiệt lượng của hơi cho nước ổn định thì cứ khoảng $1{,}6$ giờ các bạn cần thay nước cho bình lạnh một lần}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Hỗn hợp hơi tỏa nhiệt cho nước trong bình ngưng và ngưng tụ.
+				\itemch \textbf{Sai.} $Q=D_\text{n}Vc_\text{n}\Delta t=0{,}997\cdot 5000\cdot 4{,}180\cdot (40-15)\approx 520\,933$~J $\approx 520{,}93$~kJ.
+				\itemch \textbf{Đúng.} Nhiệt độ nước tăng thì độ chênh nhiệt độ giữa hơi và nước giảm nên tốc độ trao đổi nhiệt giảm.
+				\itemch \textbf{Đúng.} Nhiệt lượng nhận đều nên nhiệt độ nước tăng đều $\dfrac{40-15}{4}=6{,}25\,^\circ\text{C}$/giờ; tăng từ $15\,^\circ\text{C}$ đến $25\,^\circ\text{C}$ mất $\dfrac{10}{6{,}25}=1{,}6$ giờ.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{14.4\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Có hai bình cách nhiệt. Bình thứ nhất đựng $5$ lít nước ở nhiệt độ $t_1=60\,^\circ\text{C}$, bình thứ hai chứa $1$ lít nước ở nhiệt độ $t_2=20\,^\circ\text{C}$. Đầu tiên, rót một phần nước từ bình thứ nhất sang bình thứ hai, sau khi bình thứ hai đã đạt cân bằng nhiệt, người ta lại rót trở lại từ bình thứ hai sang bình thứ nhất một lượng nước để cho trong hai bình có dung tích nước bằng như lúc đầu. Sau các thao tác đó nhiệt độ nước trong bình thứ nhất là $t_1'=59\,^\circ\text{C}$. Cho biết khối lượng riêng của nước là $1000~\text{kg/m}^3$, nhiệt dung riêng của nước là $4200$~J/(kg.K).
+		\NeedspaceBang{8.4\baselineskip}%
+		\choiceTFt
+		{Sau khi rót nước lần thứ 2 thì khối lượng nước ở 2 bình đã thay đổi}
+		{Sau 2 lần rót nước, nhiệt độ của bình 2 là $24\,^\circ\text{C}$}
+		{\True Sau 2 lần rót nước, nước ở bình 1 đã mất một nhiệt lượng $21$~kJ}
+		{Khối lượng nước đã rót là $\dfrac{1}{3}$~kg}
+		\loigiai{
+			Gọi $m$ là khối lượng nước mỗi lần rót, $t$ là nhiệt độ bình 2 sau lần rót thứ nhất. Nhiệt lượng bình 2 nhận bằng nhiệt lượng bình 1 mất:
+			\[m_2c(t-t_2)=mc(t_1-t)=m_1c(t_1-t_1')\Rightarrow 1\cdot(t-20)=5\cdot(60-59)\Rightarrow t=25\,^\circ\text{C}.\]
+			Khối lượng nước mỗi lần rót: $m=\dfrac{m_1(t_1-t_1')}{t_1-t}=\dfrac{5}{60-25}=\dfrac{1}{7}$~kg.
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Mỗi bình rót đi và nhận về cùng lượng nước $m$ nên khối lượng nước mỗi bình như lúc đầu.
+				\itemch \textbf{Sai.} Rót nước đi không làm đổi nhiệt độ: bình 2 ở $25\,^\circ\text{C}$.
+				\itemch \textbf{Đúng.} $Q=m_1c(t_1-t_1')=5\cdot 4200\cdot 1=21\,000$~J $=21$~kJ.
+				\itemch \textbf{Sai.} $m=\dfrac{1}{7}$~kg.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{12.1\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Người ta cung cấp nhiệt lượng $20{,}6$~J cho một lượng khí trong xilanh đặt nằm ngang. Lượng khí nở ra đẩy pit-tông di chuyển đều đi được $4$~cm. Cho lực ma sát giữa pit-tông và xilanh là $15$~N. $Q$ và $A$ là nhiệt lượng và công mà hệ nói trên nhận từ vật khác hoặc truyền cho vật khác, $Q$ và $A$ tuân theo quy ước dấu của định luật I của nhiệt động lực học.
+		\NeedspaceBang{8.1\baselineskip}%
+		\choiceTFt
+		{\True Độ biến thiên nội năng của khí là $20$~J}
+		{Độ lớn của công mà chất khí thực hiện để pit-tông chuyển động đều là $60$~J}
+		{\True Quá trình trên khí thực hiện công nên $A<0$}
+		{\True Quá trình trên hệ nhận nhiệt lượng nên $Q>0$}
+		\loigiai{
+			Pit-tông chuyển động đều nên lực đẩy của khí bằng lực ma sát: $F=15$~N; công khí thực hiện: $|A|=Fs=15\cdot 0{,}04=0{,}6$~J.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $\Delta U=Q+A=20{,}6-0{,}6=20$~J.
+				\itemch \textbf{Sai.} $|A|=0{,}6$~J.
+				\itemch \textbf{Đúng.} Khí thực hiện công lên vật khác nên $A<0$.
+				\itemch \textbf{Đúng.} Hệ nhận nhiệt lượng nên $Q>0$.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{7.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-BacNinh-CumTT1QV1LVT-Lan1-3]
+
+	\begin{ex}%[VL12-C1-TH]
+		Một khối khí có thể tích $3$ lít, được cung cấp một nhiệt lượng $400$~J thì nó giãn nở ở áp suất không đổi ($10^5$~Pa) đến thể tích $4{,}5$ lít. Nội năng của khối khí này tăng thêm bao nhiêu J (lấy đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{250}
+		\loigiai{
+			Công khí thực hiện: $|A|=p\Delta V=10^5\cdot(4{,}5-3)\cdot 10^{-3}=150$~J.\\
+			$\Delta U=Q+A=400-150=250$~J.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.9\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Bản tin dự báo thời tiết khu vực Đông Bắc Bộ có đoạn như sau: nhiệt độ thấp nhất trong ngày là $23\,^\circ\text{C}$, nhiệt độ cao nhất trong ngày là $34\,^\circ\text{C}$. Độ chênh lệch giữa nhiệt độ cao nhất và nhiệt độ thấp nhất trong ngày ở khu vực Đông Bắc Bộ bằng bao nhiêu kelvin?
+		\par
+		\shortans[oly]{11}
+		\loigiai{
+			$\Delta T=\Delta t=34-23=11$~K.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.5\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Có $10$ người tập trung trong một căn phòng đóng kín, cách nhiệt có kích thước $5~\text{m}\times 10~\text{m}\times 3~\text{m}$. Bỏ qua thể tích choán chỗ không khí trong phòng của người. Giả sử tốc độ truyền nhiệt trung bình của mỗi người ra môi trường là $1800$~kcal/ngày. Biết khối lượng riêng của không khí là $1{,}2~\text{kg/m}^3$ và nhiệt dung riêng của không khí coi như không đổi bằng $0{,}24$~kcal/(kg.$^\circ$C). Tính độ tăng nhiệt độ không khí trong phòng sau $20$ phút theo đơn vị $^\circ$C (kết quả làm tròn đến chữ số hàng phần mười).
+		\par
+		\shortans[oly]{5{,}8}
+		\loigiai{
+			Nhiệt lượng $10$ người tỏa ra trong $20$ phút: $Q=10\cdot 1800\cdot\dfrac{20}{24\cdot 60}=250$~kcal.\\
+			Khối lượng không khí: $m=DV=1{,}2\cdot 5\cdot 10\cdot 3=180$~kg.\\
+			$\Delta t=\dfrac{Q}{mc}=\dfrac{250}{180\cdot 0{,}24}\approx 5{,}8\,^\circ\text{C}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.5\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một người pha chế một mẫu trà sữa bằng cách trộn các mẫu chất lỏng với nhau: nước trà đen (mẫu A), nước đường nâu (mẫu B) và sữa tươi (mẫu C). Các mẫu chất lỏng này chỉ trao đổi nhiệt lẫn nhau mà không gây ra các phản ứng hóa học. Bỏ qua sự trao đổi nhiệt với môi trường. Nhiệt độ trước khi trộn của mẫu A, mẫu B và mẫu C lần lượt là $12\,^\circ\text{C}$, $19\,^\circ\text{C}$ và $28\,^\circ\text{C}$. Biết rằng:\\
+		-- Khi trộn mẫu A với mẫu B với nhau thì nhiệt độ cân bằng của hệ là $16\,^\circ\text{C}$.\\
+		-- Khi trộn mẫu B với mẫu C với nhau thì nhiệt độ cân bằng của hệ là $23\,^\circ\text{C}$.\\
+		Tìm nhiệt độ cân bằng theo độ C khi trộn cả 3 mẫu (làm tròn kết quả đến chữ số hàng phần mười).
+		\par
+		\shortans[oly]{19{,}8}
+		\loigiai{
+			Gọi $C=mc$ là nhiệt dung của mỗi mẫu: $C_\text{A}(16-12)=C_\text{B}(19-16)$, $C_\text{B}(23-19)=C_\text{C}(28-23)$. Chọn $C_\text{B}=4$ thì $C_\text{A}=3$, $C_\text{C}=3{,}2$.
+			\[t=\dfrac{C_\text{A}t_\text{A}+C_\text{B}t_\text{B}+C_\text{C}t_\text{C}}{C_\text{A}+C_\text{B}+C_\text{C}}=\dfrac{3\cdot 12+4\cdot 19+3{,}2\cdot 28}{3+4+3{,}2}\approx 19{,}8\,^\circ\text{C}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.7\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		\par\noindent
+		\begin{minipage}[t]{0.66\linewidth}
+			Người ta thả một miếng đồng khối lượng $0{,}50$~kg vào $0{,}50$~kg nước. Miếng đồng nguội đi từ $89\,^\circ\text{C}$ xuống $21\,^\circ\text{C}$. Biết nhiệt dung riêng của đồng là $380$~J/(kg.K), nhiệt dung riêng của nước là $4200$~J/(kg.K). Hỏi nước nóng lên thêm bao nhiêu $^\circ$C (làm tròn kết quả đến chữ số hàng phần mười)?
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.26\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.6ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
+				\fill[black] (0.05,0) rectangle (3.0,0.1);
+				\fill[gray!30] (0.92,0.1) rectangle (2.18,1.08);
+				\draw[gray!55,thin] (0.92,1.08)--(2.18,1.08);
+				\draw[black,line width=1.1pt] (0.9,0.1)--(0.9,1.42) (2.2,0.1)--(2.2,1.42);
+				% miếng đồng
+				\fill[black] (1.2,1.52) .. controls (1.1,1.6) and (1.15,1.75) .. (1.3,1.82) .. controls (1.35,1.95) and (1.5,1.98) .. (1.62,1.93) .. controls (1.72,1.98) and (1.88,1.95) .. (1.95,1.85) .. controls (2.1,1.8) and (2.08,1.6) .. (1.98,1.52)--cycle;
+				\draw[black,line width=0.9pt] (1.62,1.93)--(1.6,2.62);
+				% bàn tay
+				\fill[black] (0.82,3.05)--(1.05,3.32)--(1.32,3.12)--(1.08,2.86)--cycle;
+				\fill[yellow!70!orange] (0.94,2.98) circle (0.035) (1.02,3.06) circle (0.035);
+				\filldraw[fill=VLgo!35!white,draw=VLgo!60!black,thin] (1.12,2.9)--(1.3,3.12) .. controls (1.5,3.15) and (1.75,3.12) .. (1.92,3.0) .. controls (2.05,2.92) and (2.12,2.85) .. (2.15,2.78) .. controls (2.1,2.74) and (2.02,2.78) .. (1.95,2.82) .. controls (1.88,2.76) and (1.82,2.66) .. (1.78,2.58) .. controls (1.74,2.52) and (1.68,2.54) .. (1.68,2.6)--(1.7,2.72) .. controls (1.66,2.66) and (1.6,2.56) .. (1.56,2.56) .. controls (1.5,2.56) and (1.5,2.62) .. (1.54,2.7) .. controls (1.42,2.72) and (1.3,2.76) .. (1.12,2.9)--cycle;
+				\draw[VLgo!60!black,very thin] (1.6,2.8) .. controls (1.7,2.85) and (1.8,2.88) .. (1.9,2.86) (1.5,2.9) .. controls (1.6,2.95) and (1.75,2.98) .. (1.85,2.95);
+			\end{tikzpicture}
+		\end{minipage}
+		\par
+		\shortans[oly]{6{,}2}
+		\loigiai{
+			$m_1c_1(t_1-t)=m_2c_2\Delta t_2\Rightarrow \Delta t_2=\dfrac{0{,}5\cdot 380\cdot (89-21)}{0{,}5\cdot 4200}\approx 6{,}2\,^\circ\text{C}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.5\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Dẫn $m_1=0{,}4$~kg hơi nước ở nhiệt độ $t_1=100\,^\circ\text{C}$ từ một lò hơi vào một bình chứa $m_2=0{,}8$~kg nước đá ở $t_0=0\,^\circ\text{C}$. Cho biết nhiệt dung riêng của nước là $c=4200$~J/(kg.K), nhiệt hóa hơi riêng của nước là $L=2{,}3\cdot 10^6$~J/kg và nhiệt nóng chảy riêng của nước đá là $\lambda=3{,}4\cdot 10^5$~J/kg (bỏ qua sự hấp thụ nhiệt của bình chứa). Khi có cân bằng nhiệt, khối lượng nước ở trong bình khi đó là bao nhiêu kg (làm tròn đến 2 chữ số sau dấu phẩy thập phân)?
+		\par
+		\shortans[oly]{1{,}06}
+		\loigiai{
+			Nước đá tan hết và nóng tới $100\,^\circ\text{C}$ cần $Q_1=m_2(\lambda+c\cdot 100)=0{,}8\cdot(3{,}4\cdot 10^5+4200\cdot 100)=6{,}08\cdot 10^5~\text{J}<m_1L=9{,}2\cdot 10^5$~J nên hệ cân bằng ở $100\,^\circ\text{C}$, chỉ một phần hơi ngưng tụ: $m'=\dfrac{Q_1}{L}\approx 0{,}264$~kg.\\
+			Khối lượng nước trong bình: $m=m_2+m'\approx 1{,}06$~kg.
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-BacNinh-CumTT1QV1LVT-Lan1-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-BacNinh-CumTT1QV1LVT-Lan1-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-BacNinh-CumTT1QV1LVT-Lan1-3}
+\end{document}
