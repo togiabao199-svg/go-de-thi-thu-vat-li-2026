@@ -53,9 +53,17 @@
 	\NeedspaceCau{15.3\baselineskip}
 	\begin{ex}%[VL12-C4-VD]
 		% KIỂM TRA: hình gốc không ghi nhãn t_1; đã ghi t_1 ở vạch thứ hai (t_1 = 2T/3), khớp đáp án gốc 1,70
-		Khảo sát quá trình phân rã của một mẫu chất phóng xạ X nguyên chất thì được đồ thị biểu diễn sự phụ thuộc của số hạt nhân mẹ $N_\text{X}$ còn lại và số hạt nhân con $N_\text{Y}$ sinh ra trong mẫu chất theo thời gian như hình vẽ. Tại thời điểm $t_1$, tỉ số $\dfrac{N_\text{X}}{N_\text{Y}}$ có giá trị gần nhất với giá trị nào sau đây?
-		\begin{center}
-			\begin{tikzpicture}[scale=0.917,x=0.42cm,y=3.1cm,line join=round,line cap=round,font=\footnotesize]
+		\begin{minipage}[t]{0.6\linewidth}
+		Khảo sát quá trình phân rã của một mẫu chất phóng xạ X nguyên chất thì được đồ thị biểu diễn sự phụ thuộc của số hạt nhân mẹ $N_\text{X}$ còn lại và số hạt nhân con $N_\text{Y}$ sinh ra trong mẫu chất theo thời gian như hình bên. Tại thời điểm $t_1$, tỉ số $\dfrac{N_\text{X}}{N_\text{Y}}$ có giá trị gần nhất với giá trị nào sau đây?
+		\choice
+		{$0{,}58$}
+		{$0{,}67$}
+		{$2{,}89$}
+		{\True $1{,}70$}
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.38\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.5ex]current bounding box.north)},x=0.42cm,y=3.1cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[gray!45,densely dotted,thin] foreach \x in {1,...,12}{(\x,0)--(\x,1)};
 				\draw[gray!70,densely dotted,thin] (0,1)--(12.6,1) (0,0.5)--(3,0.5);
 				\draw[VLmui,thick] (0,0)--(13.3,0) node[below left,inner sep=2pt,yshift=-3pt] {Thời gian};
@@ -69,12 +77,7 @@
 				\node[above,inner sep=2pt,VLxanh!85!black] at (10.6,{1-2^(-10.6/3)}) {$N_\text{Y}$};
 				\node[above,inner sep=2pt,VLdo!85!black] at (9.6,{2^(-9.6/3)}) {$N_\text{X}$};
 			\end{tikzpicture}
-		\end{center}
-		\choice
-		{$0{,}58$}
-		{$0{,}67$}
-		{$2{,}89$}
-		{\True $1{,}70$}
+		\end{minipage}
 		\loigiai{
 			$N_\text{X}=N_\text{Y}$ khi $t=T$ (ba ô), $t_1$ ứng với hai ô nên $t_1=\dfrac{2T}{3}$.\\
 			$\dfrac{N_\text{X}}{N_\text{Y}}=\dfrac{2^{-\frac{t_1}{T}}}{1-2^{-\frac{t_1}{T}}}=\dfrac{2^{-\frac{2}{3}}}{1-2^{-\frac{2}{3}}}\approx 1{,}70$.
@@ -127,10 +130,18 @@
 
 	\NeedspaceCau{12.5\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
+		\begin{minipage}[t]{0.6\linewidth}
 		Hiện nay công nghệ sạc điện thoại không dây đang trở nên phổ biến vì tính an toàn và tiện lợi của nó. Hình vẽ bên mô tả nguyên lí hoạt động của sạc điện thoại không dây. Đế sạc trang bị cuộn dây $N_\text{A}$, pin điện thoại tích hợp với cuộn dây $N_\text{B}$. Cuộn dây $N_\text{A}$ gọi là
 		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[x=0.011cm,y=-0.011cm,line join=round,line cap=round,font=\footnotesize]
+		\choice
+		{cuộn dây roto}
+		{cuộn dây thứ cấp}
+		{cuộn dây stato}
+		{\True cuộn dây sơ cấp}
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.38\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.5ex]current bounding box.north)},x=0.011cm,y=-0.011cm,line join=round,line cap=round,font=\footnotesize]
 				% đế sạc nhỏ và cáp
 				\draw[black!70,line width=1.2pt] (160,128) .. controls (175,133) and (182,138) .. (196,142);
 				\begin{scope}[shift={(118,113)},rotate=-17]
@@ -184,12 +195,7 @@
 				\node[font=\fontsize{6}{6}\selectfont,inner sep=0] at (242,252) {$N_\text{B}$};
 				\node[font=\fontsize{6}{6}\selectfont,inner sep=0] at (190,264) {$N_\text{A}$};
 			\end{tikzpicture}
-		\end{center}
-		\choice
-		{cuộn dây roto}
-		{cuộn dây thứ cấp}
-		{cuộn dây stato}
-		{\True cuộn dây sơ cấp}
+		\end{minipage}
 		\loigiai{
 			Cuộn $N_\text{A}$ ở đế sạc nối với nguồn, tạo từ trường biến thiên: đó là cuộn sơ cấp; cuộn $N_\text{B}$ trong điện thoại là cuộn thứ cấp.
 		}
@@ -262,9 +268,17 @@
 
 	\NeedspaceCau{13.1\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
-		Cùng một khối lượng khí đựng trong $3$ bình kín có thể tích khác nhau, đồ thị thay đổi áp suất theo nhiệt độ của $3$ khối khí ở $3$ bình được mô tả như hình vẽ. Quan hệ về thể tích của $3$ bình đó là
-		\begin{center}
-			\begin{tikzpicture}[x=0.0135cm,y=0.0135cm,line join=round,line cap=round,font=\footnotesize]
+		\begin{minipage}[t]{0.62\linewidth}
+		Cùng một khối lượng khí đựng trong $3$ bình kín có thể tích khác nhau, đồ thị thay đổi áp suất theo nhiệt độ của $3$ khối khí ở $3$ bình được mô tả như hình bên. Quan hệ về thể tích của $3$ bình đó là
+		\choice
+		{$V_3>V_2>V_1$}
+		{$V_3\geq V_2\geq V_1$}
+		{$V_3=V_2=V_1$}
+		{\True $V_3<V_2<V_1$}
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.34\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.5ex]current bounding box.north)},x=0.0135cm,y=0.0135cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[VLmui,thick] (0,0)--(255,0) node[below,inner sep=3pt] {$p$};
 				\draw[VLmui,thick] (0,0)--(0,235) node[right,inner sep=2pt] {$T$};
 				\node[below left,inner sep=2pt] at (0,0) {O};
@@ -273,12 +287,7 @@
 					\draw[very thick,\c] ({0.28*\x},{0.28*\y})--(\x,\y);
 					\node[above,inner sep=2pt] at (\x,\y) {$\t$};}
 			\end{tikzpicture}
-		\end{center}
-		\choice
-		{$V_3>V_2>V_1$}
-		{$V_3\geq V_2\geq V_1$}
-		{$V_3=V_2=V_1$}
-		{\True $V_3<V_2<V_1$}
+		\end{minipage}
 		\loigiai{
 			$pV=nRT\Rightarrow T=\dfrac{V}{nR}\,p$: hệ số góc của đường thẳng tỉ lệ với $V$. Đường $V_1$ dốc nhất, $V_3$ thoải nhất nên $V_3<V_2<V_1$.
 		}

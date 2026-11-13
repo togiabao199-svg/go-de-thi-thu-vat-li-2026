@@ -102,72 +102,76 @@
 	\begin{ex}%[VL12-C3-TH]
 		Trong chụp cắt lớp điện toán theo trục (Computerised axial tomography, gọi tắt là CT), một chùm tia X hình quạt được phát ra từ nguồn quay quanh phần cần chụp của cơ thể bệnh nhân, đồng thời các đầu thu (detector) đo cường độ tia X sau khi đi xuyên qua các mô khác nhau. Dữ liệu thu được gửi đến máy tính xử lí để tạo ra hình ảnh theo các lát cắt ngang.
 		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
-				% sàn
-				\fill[gray!10] (-0.6,0) rectangle (8.0,0.35);
-				% khung máy (gantry): mặt bên rồi mặt trước
-				\shade[left color=gray!50,right color=gray!30,rounded corners=14pt] (-0.5,0.32) rectangle (2.9,4.35);
-				\shade[left color=gray!28,right color=gray!6,rounded corners=14pt] (0,0.2) rectangle (3.3,4.15);
-				\draw[gray!55,rounded corners=14pt] (0,0.2) rectangle (3.3,4.15);
-				\fill[gray!35,rounded corners=2pt] (0.2,0.2) rectangle (3.1,0.42);
-				% lỗ chụp
-				\filldraw[fill=white,draw=gray!45,line width=1.2pt] (1.65,2.3) ellipse (1.32 and 1.48);
-				\shade[inner color=gray!8,outer color=gray!42] (1.5,2.3) ellipse (1.08 and 1.24);
-				\draw[gray!35] (1.5,2.3) ellipse (1.08 and 1.24);
-				% bảng điều khiển hai bên
-				\filldraw[fill=gray!55,draw=gray!70,rounded corners=1.5pt] (0.06,1.75) rectangle (0.27,2.75);
-				\foreach \y in {1.9,2.1,...,2.65}{\fill[orange!80!yellow] (0.165,\y) circle (0.045);}
-				\filldraw[fill=gray!55,draw=gray!70,rounded corners=1.5pt] (3.0,2.35) rectangle (3.22,3.35);
-				\foreach \y in {2.5,2.7,...,3.25}{\fill[orange!80!yellow] (3.11,\y) circle (0.045);}
-				\draw[VLxanh!70,semithick] (0.165,2.98) circle (0.07) (3.11,3.55) circle (0.07);
-				% chân bàn
-				\shade[top color=gray!20,bottom color=gray!50] (3.5,0.35) rectangle (5.3,1.0);
-				\fill[gray!38] (5.3,0.35)--(5.65,0.55)--(5.65,1.15)--(5.3,1.0)--cycle;
-				\shade[top color=gray!12,bottom color=gray!35] (3.7,1.0) rectangle (5.2,1.35);
-				\foreach \y in {0.55,0.75}{\draw[gray!50] (3.6,\y)--(5.2,\y);}
-				% bàn chụp và bệnh nhân
-				\begin{scope}[shift={(0.35,1.78)},rotate=-6]
-					\fill[gray!55] (0.2,-0.17)--(6.45,-0.17)--(6.45,-0.33)--(0.2,-0.33)--cycle;
-					\shade[top color=white,bottom color=gray!28] (0.2,-0.17)--(6.45,-0.17)--(6.8,0.24)--(0.55,0.24)--cycle;
-					\fill[VLxanh!30!gray!55] (0.45,-0.1)--(4.6,-0.1)--(4.85,0.17)--(0.7,0.17)--cycle;
-					\shade[left color=yellow!75!orange,right color=orange!70!yellow] (5.0,-0.12)--(6.25,-0.12)--(6.5,0.17)--(5.25,0.17)--cycle;
-					\foreach \x in {5.15,5.3,...,6.2}{\draw[orange!60!black,very thin] (\x,-0.1)--(\x+0.22,0.15);}
-					% bệnh nhân
-					\fill[orange!35!white!88!brown] (0.62,0.17) circle (0.18);
-					\fill[black!75] (0.5,0.2) arc[start angle=110,end angle=250,radius=0.17]--cycle;
-					\shade[top color=VLxanh!25!white,bottom color=VLxanh!55!gray,rounded corners=4pt] (0.8,-0.05) rectangle (2.15,0.33);
-					\fill[orange!35!white!88!brown] (1.1,0.33) rectangle (1.7,0.36);
-					\shade[top color=VLxanh!25!white,bottom color=VLxanh!55!gray,rounded corners=3pt] (2.1,-0.03) rectangle (3.6,0.29);
-					\draw[VLxanh!50!gray!70!black,very thin] (2.15,0.13)--(3.55,0.13);
-					\fill[orange!35!white!88!brown] (3.6,0.0) rectangle (3.72,0.27);
-					\fill[orange!35!white!88!brown] (3.76,0.2) ellipse (0.08 and 0.17) (3.76,-0.02) ellipse (0.07 and 0.13);
-				\end{scope}
-				% bóng phát tia X và chùm tia hình quạt
-				\filldraw[fill=gray!55,draw=gray!75,rounded corners=1pt] (1.2,3.75)--(2.1,3.75)--(1.95,3.42)--(1.35,3.42)--cycle;
-				\fill[gray!35] (1.38,3.62) rectangle (1.92,3.7);
-				\fill[orange!90!red] (1.65,3.4) ellipse (0.16 and 0.05);
-				\fill[yellow!80!orange,opacity=0.5] (1.65,3.38)--(1.2,1.98)--(2.25,1.88)--cycle;
-				\foreach \i in {1,...,6}{\draw[yellow!70!orange,semithick] (1.65,3.38)--({1.25+0.17*\i},{1.97-0.016*\i});}
-				\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.75,2.05)--(2.95,2.75);
-				\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.45,2.05)--(0.32,2.4);
-				% máy tính xử lí
-				\filldraw[fill=white,draw=gray!60,rounded corners=2pt] (4.55,2.65) rectangle (7.8,4.3);
-				\shade[left color=gray!50,right color=gray!25] (4.7,2.85) rectangle (5.2,4.1);
-				\foreach \y in {3.3,3.5,...,3.95}{\draw[gray!70] (4.78,\y)--(5.12,\y);}
-				\fill[gray!25] (5.3,2.8)--(7.65,2.8)--(7.5,3.05)--(5.45,3.05)--cycle;
-				\filldraw[fill=black!80,draw=gray!50] (5.85,3.25) rectangle (7.4,4.15);
-				\fill[black!55] (6.55,3.1) rectangle (6.7,3.25);
-				\fill[VLxanh!25!black] (5.95,3.33) rectangle (7.3,4.07);
-				\fill[gray!55] (6.6,3.7) ellipse (0.36 and 0.27);
-				\fill[orange!55!gray] (6.6,3.7) ellipse (0.22 and 0.15);
-				\fill[gray!80] (6.6,3.7) circle (0.05);
-				\fill[gray!45] (5.6,2.88)--(6.9,2.88)--(6.8,3.0)--(5.7,3.0)--cycle;
-				\draw[VLxanh!45,line width=1.6pt,VLmui] (3.4,3.25) .. controls (3.85,3.55) .. (4.45,3.5);
-				\draw[VLxanh!45,line width=1.6pt,VLmui] (5.6,1.75) .. controls (6.1,1.95) .. (6.35,2.55);
-			\end{tikzpicture}
-		\end{center}
-		Biết rằng cường độ tia X sau khi đi qua vật chất tuân theo định luật suy giảm: $I=I_0e^{-\mu x}$. Trong đó: $I_0$ là cường độ ban đầu, $I$ là cường độ sau khi xuyên qua vật, $\mu$ là hệ số hấp thụ (phụ thuộc vào loại mô) và $x$ là bề dày vật chất đi qua. Nhận định nào sau đây là đúng về nguyên lí tạo ảnh khi chụp CT?
+		\par\noindent
+		\begin{minipage}[c]{0.5\linewidth}
+			Biết rằng cường độ tia X sau khi đi qua vật chất tuân theo định luật suy giảm: $I=I_0e^{-\mu x}$. Trong đó: $I_0$ là cường độ ban đầu, $I$ là cường độ sau khi xuyên qua vật, $\mu$ là hệ số hấp thụ (phụ thuộc vào loại mô) và $x$ là bề dày vật chất đi qua. Nhận định nào sau đây là đúng về nguyên lí tạo ảnh khi chụp CT?
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.48\linewidth}
+			\centering
+				\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
+					% sàn
+					\fill[gray!10] (-0.6,0) rectangle (8.0,0.35);
+					% khung máy (gantry): mặt bên rồi mặt trước
+					\shade[left color=gray!50,right color=gray!30,rounded corners=14pt] (-0.5,0.32) rectangle (2.9,4.35);
+					\shade[left color=gray!28,right color=gray!6,rounded corners=14pt] (0,0.2) rectangle (3.3,4.15);
+					\draw[gray!55,rounded corners=14pt] (0,0.2) rectangle (3.3,4.15);
+					\fill[gray!35,rounded corners=2pt] (0.2,0.2) rectangle (3.1,0.42);
+					% lỗ chụp
+					\filldraw[fill=white,draw=gray!45,line width=1.2pt] (1.65,2.3) ellipse (1.32 and 1.48);
+					\shade[inner color=gray!8,outer color=gray!42] (1.5,2.3) ellipse (1.08 and 1.24);
+					\draw[gray!35] (1.5,2.3) ellipse (1.08 and 1.24);
+					% bảng điều khiển hai bên
+					\filldraw[fill=gray!55,draw=gray!70,rounded corners=1.5pt] (0.06,1.75) rectangle (0.27,2.75);
+					\foreach \y in {1.9,2.1,...,2.65}{\fill[orange!80!yellow] (0.165,\y) circle (0.045);}
+					\filldraw[fill=gray!55,draw=gray!70,rounded corners=1.5pt] (3.0,2.35) rectangle (3.22,3.35);
+					\foreach \y in {2.5,2.7,...,3.25}{\fill[orange!80!yellow] (3.11,\y) circle (0.045);}
+					\draw[VLxanh!70,semithick] (0.165,2.98) circle (0.07) (3.11,3.55) circle (0.07);
+					% chân bàn
+					\shade[top color=gray!20,bottom color=gray!50] (3.5,0.35) rectangle (5.3,1.0);
+					\fill[gray!38] (5.3,0.35)--(5.65,0.55)--(5.65,1.15)--(5.3,1.0)--cycle;
+					\shade[top color=gray!12,bottom color=gray!35] (3.7,1.0) rectangle (5.2,1.35);
+					\foreach \y in {0.55,0.75}{\draw[gray!50] (3.6,\y)--(5.2,\y);}
+					% bàn chụp và bệnh nhân
+					\begin{scope}[shift={(0.35,1.78)},rotate=-6]
+						\fill[gray!55] (0.2,-0.17)--(6.45,-0.17)--(6.45,-0.33)--(0.2,-0.33)--cycle;
+						\shade[top color=white,bottom color=gray!28] (0.2,-0.17)--(6.45,-0.17)--(6.8,0.24)--(0.55,0.24)--cycle;
+						\fill[VLxanh!30!gray!55] (0.45,-0.1)--(4.6,-0.1)--(4.85,0.17)--(0.7,0.17)--cycle;
+						\shade[left color=yellow!75!orange,right color=orange!70!yellow] (5.0,-0.12)--(6.25,-0.12)--(6.5,0.17)--(5.25,0.17)--cycle;
+						\foreach \x in {5.15,5.3,...,6.2}{\draw[orange!60!black,very thin] (\x,-0.1)--(\x+0.22,0.15);}
+						% bệnh nhân
+						\fill[orange!35!white!88!brown] (0.62,0.17) circle (0.18);
+						\fill[black!75] (0.5,0.2) arc[start angle=110,end angle=250,radius=0.17]--cycle;
+						\shade[top color=VLxanh!25!white,bottom color=VLxanh!55!gray,rounded corners=4pt] (0.8,-0.05) rectangle (2.15,0.33);
+						\fill[orange!35!white!88!brown] (1.1,0.33) rectangle (1.7,0.36);
+						\shade[top color=VLxanh!25!white,bottom color=VLxanh!55!gray,rounded corners=3pt] (2.1,-0.03) rectangle (3.6,0.29);
+						\draw[VLxanh!50!gray!70!black,very thin] (2.15,0.13)--(3.55,0.13);
+						\fill[orange!35!white!88!brown] (3.6,0.0) rectangle (3.72,0.27);
+						\fill[orange!35!white!88!brown] (3.76,0.2) ellipse (0.08 and 0.17) (3.76,-0.02) ellipse (0.07 and 0.13);
+					\end{scope}
+					% bóng phát tia X và chùm tia hình quạt
+					\filldraw[fill=gray!55,draw=gray!75,rounded corners=1pt] (1.2,3.75)--(2.1,3.75)--(1.95,3.42)--(1.35,3.42)--cycle;
+					\fill[gray!35] (1.38,3.62) rectangle (1.92,3.7);
+					\fill[orange!90!red] (1.65,3.4) ellipse (0.16 and 0.05);
+					\fill[yellow!80!orange,opacity=0.5] (1.65,3.38)--(1.2,1.98)--(2.25,1.88)--cycle;
+					\foreach \i in {1,...,6}{\draw[yellow!70!orange,semithick] (1.65,3.38)--({1.25+0.17*\i},{1.97-0.016*\i});}
+					\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.75,2.05)--(2.95,2.75);
+					\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.45,2.05)--(0.32,2.4);
+					% máy tính xử lí
+					\filldraw[fill=white,draw=gray!60,rounded corners=2pt] (4.55,2.65) rectangle (7.8,4.3);
+					\shade[left color=gray!50,right color=gray!25] (4.7,2.85) rectangle (5.2,4.1);
+					\foreach \y in {3.3,3.5,...,3.95}{\draw[gray!70] (4.78,\y)--(5.12,\y);}
+					\fill[gray!25] (5.3,2.8)--(7.65,2.8)--(7.5,3.05)--(5.45,3.05)--cycle;
+					\filldraw[fill=black!80,draw=gray!50] (5.85,3.25) rectangle (7.4,4.15);
+					\fill[black!55] (6.55,3.1) rectangle (6.7,3.25);
+					\fill[VLxanh!25!black] (5.95,3.33) rectangle (7.3,4.07);
+					\fill[gray!55] (6.6,3.7) ellipse (0.36 and 0.27);
+					\fill[orange!55!gray] (6.6,3.7) ellipse (0.22 and 0.15);
+					\fill[gray!80] (6.6,3.7) circle (0.05);
+					\fill[gray!45] (5.6,2.88)--(6.9,2.88)--(6.8,3.0)--(5.7,3.0)--cycle;
+					\draw[VLxanh!45,line width=1.6pt,VLmui] (3.4,3.25) .. controls (3.85,3.55) .. (4.45,3.5);
+					\draw[VLxanh!45,line width=1.6pt,VLmui] (5.6,1.75) .. controls (6.1,1.95) .. (6.35,2.55);
+				\end{tikzpicture}
+		\end{minipage}
 		\choice
 		{Ảnh CT được tạo ra do máy tính đo trực tiếp độ dày của các mô trong cơ thể, từ đó máy tính xử lí thành hình ảnh lát cắt}
 		{\True Ảnh CT được tạo ra từ sự khác nhau về hệ số hấp thụ tia X của các mô và việc xử lí nhiều phép đo cường độ tia X theo các hướng khác nhau}
@@ -568,38 +572,42 @@
 	\begin{ex}%[VL12-C1-TH]
 		Để tìm hiểu sự truyền năng lượng nhiệt giữa các vật, một nhóm học sinh đã chuẩn bị một số dụng cụ thí nghiệm gồm: $01$ cốc nhôm; $01$ cốc thủy tinh (loại lớn chứa được cốc nhôm); $02$ nhiệt kế điện tử; $01$ bình đựng nước nóng và $01$ bình đựng nước lạnh cùng nhiệt độ với môi trường nơi làm thí nghiệm. Nhóm đã tiến hành hai thí nghiệm như sau:\\
 		\textbf{Thí nghiệm 1:} Đổ nước từ bình nước lạnh vào cốc nhôm và cốc thủy tinh rồi dùng hai nhiệt kế đồng thời đo nhiệt độ nước trong hai cốc (lúc $t=0$). Sau đó, đặt cốc nhôm vào trong cốc thủy tinh sao cho nước của cốc thủy tinh không tràn vào cốc nhôm, đồng thời đo nhiệt độ nước trong hai cốc và ghi số liệu từ hai nhiệt kế vào các thời điểm cách nhau $2$ phút.\\
-		\textbf{Thí nghiệm 2:} Đưa cốc nhôm ra khỏi cốc thủy tinh và thay nước trong cốc thủy tinh bằng nước nóng còn nước trong cốc nhôm vẫn giữ nguyên. Đo đồng thời nhiệt độ nước trong hai cốc (lúc $t=0$). Sau đó lại đặt cốc nhôm chứa nước lạnh vào cốc thủy tinh chứa nước nóng sao cho nước từ cốc thủy tinh không tràn vào cốc nhôm, đồng thời đo nhiệt độ nước trong hai cốc và ghi số liệu từ hai nhiệt kế vào các thời điểm cách nhau $2$ phút.
 		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
-				% cốc thủy tinh: nửa sau
-				\fill[VLxanh!4] (1.12,0.2)--(1.07,2.42)--(3.03,2.42)--(2.98,0.2)--cycle;
-				\draw[gray!55] (2.05,2.42) ellipse (0.98 and 0.16);
-				% nước
-				\fill[VLxanh!14] (1.09,1.62)--(1.12,0.2) arc[start angle=180,end angle=360,x radius=0.93,y radius=0.13]--(3.01,1.62)--cycle;
-				\filldraw[fill=VLxanh!22,draw=VLxanh!40] (2.05,1.62) ellipse (0.96 and 0.14);
-				% que nhiệt kế trong nước (phần dưới)
-				% cốc nhôm
-				\shade[left color=gray!45,right color=gray!60,middle color=white] (1.95,0.5) rectangle (2.8,1.82);
-				\fill[gray!60] (2.375,0.5) ellipse (0.425 and 0.08);
-				\shade[left color=gray!45,right color=gray!60,middle color=white] (1.95,0.5) rectangle (2.8,1.82);
-				\filldraw[fill=gray!50,draw=gray!65] (2.375,1.82) ellipse (0.425 and 0.09);
-				\fill[VLxanh!18] (2.375,1.8) ellipse (0.37 and 0.06);
-				% hai nhiệt kế
-				\begin{scope}[shift={(1.77,0.73)},rotate=4.6]\HPnhietke{2.1}{20.0}\end{scope}
-				\begin{scope}[shift={(2.2,1.3)},rotate=2.6]\HPnhietke{1.55}{20.0}\end{scope}
-				% cốc thủy tinh: nửa trước
-				\draw[gray!65,semithick] (1.07,2.42)--(1.12,0.2) arc[start angle=180,end angle=360,x radius=0.93,y radius=0.13]--(3.03,2.42);
-				\draw[gray!60,semithick] (1.07,2.42) arc[start angle=180,end angle=360,x radius=0.98,y radius=0.16];
-				\draw[yellow!55!brown,semithick] (1.09,2.25) arc[start angle=180,end angle=360,x radius=0.96,y radius=0.15];
-				\draw[white,line width=1.6pt,opacity=0.8] (1.25,2.1)--(1.28,0.5);
-				\fill[VLxanh!12,opacity=0.6] (2.05,0.1) ellipse (0.95 and 0.12);
-				% nhãn
-				\draw[thin] (1.72,2.55)--(0.75,2.95) node[left,inner sep=1pt] {Nhiệt kế};
-				\draw[thin] (2.85,2.52)--(3.45,3.05) node[right,inner sep=1pt] {Cốc thủy tinh};
-				\draw[thin] (2.6,1.35)--(3.45,1.45) node[right,inner sep=1pt,align=left] {Cốc nhôm\\(cốc nhỏ phía trong)};
-			\end{tikzpicture}
-		\end{center}
+		\par\noindent
+		\begin{minipage}[c]{0.6\linewidth}
+			\textbf{Thí nghiệm 2:} Đưa cốc nhôm ra khỏi cốc thủy tinh và thay nước trong cốc thủy tinh bằng nước nóng còn nước trong cốc nhôm vẫn giữ nguyên. Đo đồng thời nhiệt độ nước trong hai cốc (lúc $t=0$). Sau đó lại đặt cốc nhôm chứa nước lạnh vào cốc thủy tinh chứa nước nóng sao cho nước từ cốc thủy tinh không tràn vào cốc nhôm, đồng thời đo nhiệt độ nước trong hai cốc và ghi số liệu từ hai nhiệt kế vào các thời điểm cách nhau $2$ phút.
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.38\linewidth}
+			\centering
+				\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
+					% cốc thủy tinh: nửa sau
+					\fill[VLxanh!4] (1.12,0.2)--(1.07,2.42)--(3.03,2.42)--(2.98,0.2)--cycle;
+					\draw[gray!55] (2.05,2.42) ellipse (0.98 and 0.16);
+					% nước
+					\fill[VLxanh!14] (1.09,1.62)--(1.12,0.2) arc[start angle=180,end angle=360,x radius=0.93,y radius=0.13]--(3.01,1.62)--cycle;
+					\filldraw[fill=VLxanh!22,draw=VLxanh!40] (2.05,1.62) ellipse (0.96 and 0.14);
+					% que nhiệt kế trong nước (phần dưới)
+					% cốc nhôm
+					\shade[left color=gray!45,right color=gray!60,middle color=white] (1.95,0.5) rectangle (2.8,1.82);
+					\fill[gray!60] (2.375,0.5) ellipse (0.425 and 0.08);
+					\shade[left color=gray!45,right color=gray!60,middle color=white] (1.95,0.5) rectangle (2.8,1.82);
+					\filldraw[fill=gray!50,draw=gray!65] (2.375,1.82) ellipse (0.425 and 0.09);
+					\fill[VLxanh!18] (2.375,1.8) ellipse (0.37 and 0.06);
+					% hai nhiệt kế
+					\begin{scope}[shift={(1.77,0.73)},rotate=4.6]\HPnhietke{2.1}{20.0}\end{scope}
+					\begin{scope}[shift={(2.2,1.3)},rotate=2.6]\HPnhietke{1.55}{20.0}\end{scope}
+					% cốc thủy tinh: nửa trước
+					\draw[gray!65,semithick] (1.07,2.42)--(1.12,0.2) arc[start angle=180,end angle=360,x radius=0.93,y radius=0.13]--(3.03,2.42);
+					\draw[gray!60,semithick] (1.07,2.42) arc[start angle=180,end angle=360,x radius=0.98,y radius=0.16];
+					\draw[yellow!55!brown,semithick] (1.09,2.25) arc[start angle=180,end angle=360,x radius=0.96,y radius=0.15];
+					\draw[white,line width=1.6pt,opacity=0.8] (1.25,2.1)--(1.28,0.5);
+					\fill[VLxanh!12,opacity=0.6] (2.05,0.1) ellipse (0.95 and 0.12);
+					% nhãn
+					\draw[thin] (1.72,2.55)--(0.75,2.95) node[left,inner sep=1pt] {Nhiệt kế};
+					\draw[thin] (2.85,2.52)--(3.45,3.05) node[right,inner sep=1pt] {Cốc thủy tinh};
+					\draw[thin] (2.6,1.35)--(3.45,1.45) node[right,inner sep=1pt,align=left] {Cốc nhôm\\(cốc nhỏ phía trong)};
+				\end{tikzpicture}
+		\end{minipage}\par
 		Kết quả hai lần thí nghiệm:
 		\begin{center}
 			\renewcommand{\arraystretch}{1.2}\setlength{\tabcolsep}{4pt}
@@ -638,7 +646,7 @@
 		Phanh điện từ có cấu tạo đơn giản gồm cuộn dây dẫn được quấn quanh lõi thép. Lõi thép được xẻ một rãnh nhỏ để đặt vào đĩa kim loại. Đĩa kim loại gắn đồng trục với trục quay của bánh xe cần hãm phanh. Khi chưa có dòng điện chạy qua cuộn dây thì đĩa kim loại quay không chịu tác dụng của lực cản nào. Khi đạp phanh là đóng công tắc điện, một dòng điện một chiều được truyền qua cuộn dây của nam châm điện và đĩa quay chậm lại.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[scale=0.78,line join=round,line cap=round,font=\footnotesize]
 				\ctikzset{bipoles/length=0.75cm}
 				% lõi thép hình khung
 				\fill[gray!55] (2.3,3.8)--(4.2,3.8)--(4.5,4.08)--(2.6,4.08)--cycle;
