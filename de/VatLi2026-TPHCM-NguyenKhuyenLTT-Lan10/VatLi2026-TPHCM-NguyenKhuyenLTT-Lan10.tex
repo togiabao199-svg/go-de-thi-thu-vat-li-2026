@@ -1,0 +1,763 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Trường Nguyễn Khuyến -- Lê Thánh Tông, TP HCM -- Lần 10 (mã đề gốc 100, bản scan). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Nguyễn Khuyến -- Lê Thánh Tông, TP HCM -- Lần 10}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT NGUYỄN KHUYẾN -- LTT -- LẦN 10}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\noindent\textbf{Cho biết:} $\pi=3{,}14$; $T(\text{K})=t\,(^\circ\text{C})+273$; $R=8{,}31$~J$\cdot$mol$^{-1}\cdot$K$^{-1}$; $N_A=6{,}02\cdot 10^{23}$~hạt/mol.
+
+	\NeedspaceCau{8.4\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10-1]
+
+	\begin{ex}%[VL12-C2-NB]
+		Gọi $p$, $V$ và $T$ lần lượt là áp suất, thể tích và nhiệt độ tuyệt đối của một khối lượng khí lí tưởng xác định. Công thức nào sau đây mô tả \textbf{đúng} định luật Boyle?
+		\choice
+		{\True $pV=\text{hằng số}$}
+		{$\dfrac{p}{T}=\text{hằng số}$}
+		{$VT=\text{hằng số}$}
+		{$\dfrac{V}{T}=\text{hằng số}$}
+		\loigiai{
+			Định luật Boyle (quá trình đẳng nhiệt): $pV=\text{hằng số}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.5\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Trong hệ đơn vị SI, đơn vị của nhiệt nóng chảy riêng là
+		\choice
+		{J/(kg.K)}
+		{J/$^\circ$C}
+		{\True J/kg}
+		{J/K}
+		\loigiai{
+			$\lambda=\dfrac{Q}{m}$ nên đơn vị của nhiệt nóng chảy riêng là J/kg.
+		}
+	\end{ex}
+
+	\NeedspaceCau{12.3\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một khối khí lí tưởng xác định thực hiện quá trình biến đổi đẳng nhiệt ở hai nhiệt độ khác nhau $T_1$ và $T_2$ (trong đó $T_2<T_1$). Hình nào dưới đây diễn tả \textbf{đúng} dạng đường đẳng nhiệt trong hệ tọa độ tương ứng?
+		\begin{center}
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				% Hình 1: (p, T)
+				\begin{scope}
+					\draw[VLmui,thick] (0,0)--(2.45,0) node[below,inner sep=3pt] {$T$};
+					\draw[VLmui,thick] (0,0)--(0,2.3) node[right,inner sep=2pt] {$p$};
+					\node[left,inner sep=2pt] at (0,0) {$O$};
+					\draw[dashed,thin,gray] (0.75,0)--(0.75,0.5) (1.35,0)--(1.35,0.5);
+					\draw[very thick,VLxanh] (0.75,0.5)--(0.75,1.95) (1.35,0.5)--(1.35,1.95);
+					\node[below,inner sep=2pt] at (0.75,0) {$T_1$};
+					\node[below,inner sep=2pt] at (1.35,0) {$T_2$};
+					\node[font=\footnotesize\itshape] at (1.2,-0.75) {Hình 1};
+				\end{scope}
+				% Hình 2: (p, V), T2 ở ngoài
+				\begin{scope}[xshift=3.3cm]
+					\draw[VLmui,thick] (0,0)--(2.45,0) node[below,inner sep=3pt] {$V$};
+					\draw[VLmui,thick] (0,0)--(0,2.3) node[right,inner sep=2pt] {$p$};
+					\node[left,inner sep=2pt] at (0,0) {$O$};
+					\draw[very thick,VLxanh] plot[domain=0.2:1.8,samples=40] (\x,{0.12+0.3/\x});
+					\draw[very thick,VLxanh] plot[domain=0.37:1.8,samples=40] (\x,{0.2+0.6/\x});
+					\node[right,inner sep=1.5pt] at (1.8,0.29) {$T_1$};
+					\node[above right,inner sep=1pt] at (1.75,0.53) {$T_2$};
+					\node[font=\footnotesize\itshape] at (1.2,-0.75) {Hình 2};
+				\end{scope}
+				% Hình 3: (p, V), T1 ở ngoài
+				\begin{scope}[xshift=6.6cm]
+					\draw[VLmui,thick] (0,0)--(2.45,0) node[below,inner sep=3pt] {$V$};
+					\draw[VLmui,thick] (0,0)--(0,2.3) node[right,inner sep=2pt] {$p$};
+					\node[left,inner sep=2pt] at (0,0) {$O$};
+					\draw[very thick,VLxanh] plot[domain=0.2:1.8,samples=40] (\x,{0.12+0.3/\x});
+					\draw[very thick,VLxanh] plot[domain=0.37:1.8,samples=40] (\x,{0.2+0.6/\x});
+					\node[right,inner sep=1.5pt] at (1.8,0.29) {$T_2$};
+					\node[above right,inner sep=1pt] at (1.75,0.53) {$T_1$};
+					\node[font=\footnotesize\itshape] at (1.2,-0.75) {Hình 3};
+				\end{scope}
+				% Hình 4: (p, V), đường thẳng qua gốc
+				\begin{scope}[xshift=9.9cm]
+					\draw[VLmui,thick] (0,0)--(2.45,0) node[below,inner sep=3pt] {$V$};
+					\draw[VLmui,thick] (0,0)--(0,2.3) node[right,inner sep=2pt] {$p$};
+					\node[left,inner sep=2pt] at (0,0) {$O$};
+					\draw[dashed,thin,VLdo] (0,0)--(0.2,0.4) (0,0)--(0.3,0.23);
+					\draw[very thick,VLxanh] (0.2,0.4)--(0.85,1.7);
+					\draw[very thick,VLxanh] (0.3,0.23)--(1.6,1.23);
+					\node[right,inner sep=2pt] at (0.85,1.75) {$T_1$};
+					\node[right,inner sep=2pt] at (1.6,1.3) {$T_2$};
+					\node[font=\footnotesize\itshape] at (1.2,-0.75) {Hình 4};
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{Hình 1}
+		{Hình 2}
+		{\True Hình 3}
+		{Hình 4}
+		\loigiai{
+			Đường đẳng nhiệt trong hệ $(p,V)$ là hyperbol; nhiệt độ càng cao thì đường càng xa gốc tọa độ. Vì $T_1>T_2$ nên đường $T_1$ ở ngoài: Hình 3. (Hình 1 vẽ $T_1<T_2$, Hình 4 không phải hyperbol.)
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.1\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Khi chất lỏng sôi, sự hóa hơi của chất lỏng xảy ra
+		\choice
+		{\True ở cả trong lòng và bề mặt chất lỏng}
+		{chỉ ở trên bề mặt chất lỏng}
+		{chỉ ở trong lòng chất lỏng}
+		{chỉ ở sát bề mặt chất lỏng}
+		\loigiai{
+			Khi sôi, chất lỏng hóa hơi cả ở mặt thoáng và trong lòng chất lỏng (tạo bọt hơi).
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.9\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Một chiếc ghế văn phòng có thể nâng hạ độ cao như hình bên. Một khối khí xác định bị giam giữa hai ống A và B, ống A có thể trượt lên xuống dọc theo thành trong của B. Coi khối khí là khí lí tưởng và không trao đổi nhiệt với bên ngoài. Khi A trượt xuống dưới thì khối khí bên trong ống
+		% giuhinh
+		\par\noindent
+		\begin{minipage}[c]{0.6\linewidth}
+		\choice
+		{thực hiện công và nội năng tăng}
+		{thực hiện công và nội năng giảm}
+		{nhận công và nội năng giảm}
+		{\True nhận công và nội năng tăng}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.38\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
+				% đường dẫn phóng to
+				\draw[gray!70,thin] (1.55,2.85)--(3.42,1.75) (1.62,1.05)--(3.42,1.55);
+				% khung phóng to
+				\filldraw[fill=white,draw=gray!70,thin] (0.9,1.95) ellipse (0.85 and 2.0);
+				% ống B
+				\fill[VLxanh!12] (0.58,0.3) rectangle (1.22,1.4);
+				\fill[VLla!25] (0.58,1.4) rectangle (1.22,2.55);
+				\draw[white,line width=1.5pt,opacity=0.8] (0.68,0.42)--(0.68,2.45);
+				\draw[VLxanh!35!black,line width=1.8pt] (0.58,2.55)--(0.58,0.3)--(1.22,0.3)--(1.22,2.55);
+				\draw[VLxanh!35!black,line width=1.2pt,fill=white] (0.9,2.55) ellipse (0.32 and 0.07);
+				\draw[VLxanh!35!black,line width=1.2pt,fill=white] (0.9,1.4) ellipse (0.32 and 0.06);
+				% ống A
+				\fill[white] (0.68,2.55) rectangle (1.12,3.62);
+				\draw[VLxanh!35!black,line width=1.8pt] (0.68,2.58)--(0.68,3.62) (1.12,2.58)--(1.12,3.62);
+				\filldraw[fill=VLxanh!35!black,draw=VLxanh!35!black] (0.9,3.62) ellipse (0.22 and 0.07);
+				\node[font=\normalsize] at (0.9,3.2) {A};
+				\node[font=\normalsize] at (0.9,0.62) {B};
+				% ghế: chân sao, bánh xe
+				\fill[black,opacity=0.1] (3.5,0.55) ellipse (0.95 and 0.13);
+				\foreach \ex/\ey in {2.65/0.85,4.35/0.85,2.95/0.55,4.05/0.55,3.5/1.05}{
+					\draw[gray!50!black,line width=2.4pt] (3.5,0.95)--(\ex,\ey);
+					\draw[white,line width=0.6pt,opacity=0.8] (3.5,0.97)--(\ex,\ey+0.03);}
+				\foreach \ex/\ey in {2.65/0.85,4.35/0.85,2.95/0.55,4.05/0.55,3.5/1.05}{\shade[ball color=black!70] (\ex,\ey-0.1) circle (0.075);}
+				% trụ hơi
+				\shade[left color=gray!65,right color=gray!55,middle color=white] (3.44,0.95) rectangle (3.56,1.95);
+				\shade[left color=black!80,right color=black!70,middle color=gray!45] (3.39,0.92) rectangle (3.61,1.12);
+				% đệm ngồi
+				\fill[black!85] (3.15,1.9) rectangle (3.85,2.05);
+				\shade[top color=black!60,bottom color=black!90] (2.75,2.1) .. controls (2.7,2.45) and (4.2,2.55) .. (4.3,2.25) .. controls (4.3,2.0) and (2.85,1.88) .. cycle;
+				% tựa lưng (lưới)
+				\def\tualung{(2.75,2.4) .. controls (2.6,2.9) and (2.6,3.35) .. (2.75,3.6) .. controls (3.1,3.75) and (3.6,3.7) .. (3.8,3.5) .. controls (3.65,3.05) and (3.55,2.7) .. (3.4,2.42)--cycle}
+				\shade[top color=gray!55,bottom color=gray!80] \tualung;
+				\begin{scope}
+					\clip \tualung;
+					\foreach \y in {2.4,2.47,...,3.8}{\draw[black!45,very thin] (2.5,\y)--(3.9,\y+0.05);}
+					\foreach \x in {2.6,2.67,...,3.9}{\draw[black!45,very thin] (\x,2.3)--(\x-0.08,3.8);}
+				\end{scope}
+				\draw[black!85,line width=1.4pt] \tualung;
+				\draw[black!80,line width=1.1pt,rounded corners=2pt] (3.0,2.5) rectangle (3.4,2.75);
+				% tay vịn
+				\draw[black!85,line width=2.6pt] (3.0,2.75) .. controls (3.4,2.95) and (4.0,2.85) .. (4.05,2.6) .. controls (4.08,2.45) and (3.95,2.35) .. (3.85,2.28);
+				\draw[gray!55,line width=0.5pt] (3.1,2.83) .. controls (3.45,2.98) and (3.95,2.9) .. (4.03,2.68);
+			\end{tikzpicture}
+		\end{minipage}
+		\loigiai{
+			A trượt xuống, khí bị nén: khí nhận công ($A>0$), $Q=0$ nên $\Delta U=A>0$, nội năng tăng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Khi tăng khối lượng của chất rắn $3$ lần thì nhiệt lượng cung cấp cho vật rắn nóng chảy hoàn toàn sẽ
+		\choice
+		{giảm đi $3$ lần}
+		{giảm đi $9$ lần}
+		{\True tăng lên $3$ lần}
+		{tăng lên $9$ lần}
+		\loigiai{
+			$Q=\lambda m$ tỉ lệ thuận với $m$ nên $Q$ tăng $3$ lần.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.7\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Để đúc một vật bằng đồng, cần nung nóng để đồng chuyển từ thể rắn thành thể lỏng. Quá trình này là quá trình
+		\choice
+		{\True nóng chảy}
+		{hóa hơi}
+		{đông đặc}
+		{ngưng tụ}
+		\loigiai{
+			Chất chuyển từ thể rắn sang thể lỏng là sự nóng chảy.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.7\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Sự truyền năng lượng nhiệt giữa hai vật được đặt tiếp xúc với nhau chỉ xảy ra khi chúng khác nhau về
+		\choice
+		{khối lượng}
+		{\True nhiệt độ}
+		{thể tích}
+		{thế năng}
+		\loigiai{
+			Năng lượng nhiệt truyền từ vật có nhiệt độ cao sang vật có nhiệt độ thấp; hai vật cùng nhiệt độ thì không truyền nhiệt.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Nội năng của một khối khí xác định không đổi khi
+		\choice
+		{thể tích của khối khí không đổi}
+		{\True nhiệt độ và thể tích của khối khí không đổi}
+		{nhiệt độ của khối khí thay đổi}
+		{khối khí nhận năng lượng nhiệt từ vật khác}
+		\loigiai{
+			Nội năng phụ thuộc nhiệt độ (động năng phân tử) và thể tích (thế năng tương tác) nên không đổi khi cả nhiệt độ và thể tích không đổi.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.9\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Giả sử một nhiệt kế thủy ngân bị mất thông số vạch chia độ. Ở áp suất tiêu chuẩn, để xác định lại vị trí vạch $0\,^\circ\text{C}$ trên nhiệt kế thì cần đặt nhiệt kế vào đối tượng nào dưới đây?
+		\choice
+		{Ngăn đông của tủ lạnh}
+		{Ngọn lửa của bếp ga}
+		{\True Nước đá đang tan chảy}
+		{Nước sôi}
+		\loigiai{
+			Ở áp suất tiêu chuẩn, nước đá đang tan có nhiệt độ $0\,^\circ\text{C}$ (mốc dưới của thang Celsius).
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Nội dung nào dưới đây \textbf{không} phải là tính chất của các phân tử khí?
+		\choice
+		{Chuyển động hỗn loạn, không ngừng}
+		{Nhiệt độ càng cao, các phân tử khí chuyển động càng nhanh}
+		{Các phân tử khí va chạm vào thành bình gây ra áp suất}
+		{\True Chuyển động hỗn loạn xung quanh các vị trí cân bằng cố định}
+		\loigiai{
+			Dao động quanh vị trí cân bằng cố định là đặc điểm của phân tử chất rắn; phân tử khí chuyển động hỗn loạn tự do.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.2\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Thả nhẹ nhàng vài viên đá vào một cốc nước. Sau một lúc ta thấy bên ngoài thành cốc có các giọt nước nhỏ li ti bám vào. Hiện tượng đó là do
+		\choice
+		{nước trong cốc thấm ra}
+		{hơi nước trong không khí gặp lạnh ngưng kết lại}
+		{\True hơi nước trong không khí gặp lạnh ngưng tụ}
+		{nước trong cốc bay hơi và ngưng tụ lại}
+		\loigiai{
+			Thành cốc lạnh, hơi nước trong không khí gặp lạnh ngưng tụ thành giọt nước (thể lỏng) bám ngoài thành cốc.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Khi nung nóng một lượng không khí chứa trong một xilanh, khối khí nhận một nhiệt lượng $1{,}75$~kJ làm nội năng của khí tăng thêm $720$~J. Khí giãn nở và sinh công làm pit-tông dịch chuyển. Khối khí đã thực hiện một công có độ lớn là
+		\choice
+		{$2{,}56$~kJ}
+		{\True $1{,}03$~kJ}
+		{$1{,}25$~kJ}
+		{$2{,}47$~kJ}
+		\loigiai{
+			$\Delta U=Q+A\Rightarrow |A|=Q-\Delta U=1750-720=1030~\text{J}=1{,}03$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.4\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Một bạn học sinh dùng bơm có van một chiều để bơm không khí vào một quả bóng. Ban đầu quả bóng chứa không khí ở áp suất khí quyển $p_0$. Bóng có thể tích không đổi $V$. Coi nhiệt độ không khí trong và ngoài bóng như nhau và không đổi. Mỗi lần bơm đưa được một thể tích bằng $0{,}25V$ không khí vào bóng. Sau lần bơm đầu tiên, áp suất không khí trong bóng là
+		\choice
+		{$p=\dfrac{p_0}{1{,}25}$}
+		{$p=0{,}25p_0$}
+		{\True $p=1{,}25p_0$}
+		{$p=4p_0$}
+		\loigiai{
+			Đẳng nhiệt cho lượng khí $V+0{,}25V$ ở áp suất $p_0$ nén vào thể tích $V$: $p_0\cdot 1{,}25V=pV\Rightarrow p=1{,}25p_0$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.8\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một ấm điện trên nhãn mác có ghi các thông số như bảng dưới.
+		\begin{center}
+			\begin{tabular}{|l|c|}
+				\hline
+				\textbf{Điện áp định mức} & \textbf{$220$~V}\\
+				\hline
+				Công suất định mức & $1000$~W\\
+				\hline
+				Dung tích & $2{,}0$~lít\\
+				\hline
+			\end{tabular}
+		\end{center}
+		Đổ $1{,}5$~lít nước ở $27\,^\circ\text{C}$ vào ấm điện, rồi cắm ấm điện vào hiệu điện thế $U=220$~V thì sau $12$ phút nước bắt đầu sôi (giả sử chưa xảy ra quá trình bay hơi). Biết nước có khối lượng riêng là $1000~\text{kg/m}^3$, nhiệt dung riêng của nước là $4200$~J/(kg.K). Hiệu suất của ấm điện là
+		\choice
+		{\True $63{,}9\%$}
+		{$85{,}2\%$}
+		{$67{,}65\%$}
+		{$100\%$}
+		\loigiai{
+			$Q=mc\Delta t=1{,}5\cdot 4200\cdot(100-27)=459\,900$~J; $A=Pt=1000\cdot 720=720\,000$~J.\\
+			$H=\dfrac{Q}{A}=\dfrac{459\,900}{720\,000}\approx 63{,}9\%$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.7\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Chiều cao của cột thủy ngân trong nhiệt kế thủy ngân thay đổi theo nhiệt độ. Ứng với hai vạch có nhiệt độ là $0\,^\circ\text{C}$ và $100\,^\circ\text{C}$ thì chiều cao của cột thủy ngân trong nhiệt kế là $2$~cm và $22$~cm. Khi sử dụng nhiệt kế này để đo nhiệt độ của cơ thể của một em bé đang bị sốt thì thấy cột thủy ngân cao $9{,}9$~cm, nhiệt độ của em bé lúc này là
+		\choice
+		{\True $39{,}5\,^\circ\text{C}$}
+		{$38{,}5\,^\circ\text{C}$}
+		{$37\,^\circ\text{C}$}
+		{$39\,^\circ\text{C}$}
+		\loigiai{
+			$t=\dfrac{9{,}9-2}{22-2}\cdot 100=39{,}5\,^\circ\text{C}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.8\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một vật được làm bằng kim loại A có khối lượng $0{,}1$~kg ở nhiệt độ $100\,^\circ\text{C}$ được bỏ vào một nhiệt lượng kế làm bằng đồng có khối lượng $0{,}1$~kg chứa $0{,}2$~kg nước có nhiệt độ là $20\,^\circ\text{C}$. Khi cân bằng, nhiệt độ của hệ là $24\,^\circ\text{C}$. Biết nhiệt dung riêng của đồng là $380$~J/(kg.K), của nước là $4200$~J/(kg.K). Nhiệt dung riêng của kim loại A gần giá trị nào nhất dưới đây?
+		\choice
+		{$880$~J/(kg.K)}
+		{$570$~J/(kg.K)}
+		{$2062$~J/(kg.K)}
+		{\True $462$~J/(kg.K)}
+		\loigiai{
+			$m_\text{A}c_\text{A}(100-24)=(0{,}1\cdot 380+0{,}2\cdot 4200)(24-20)\Rightarrow c_\text{A}=\dfrac{878\cdot 4}{0{,}1\cdot 76}\approx 462$~J/(kg.K).
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một vật khối lượng $1{,}2$~kg trượt không vận tốc ban đầu từ đỉnh xuống chân một mặt phẳng dài $5$~m, nghiêng $30^\circ$ so với mặt nằm ngang. Tốc độ của vật ở chân mặt phẳng nghiêng là $5$~m/s. Lấy $g=10~\text{m/s}^2$. Bỏ qua sự trao đổi nhiệt với mặt phẳng nghiêng và môi trường xung quanh. Độ biến thiên nội năng của vật trong quá trình chuyển động trên có độ lớn là
+		\choice
+		{\True $15$~J}
+		{$51$~J}
+		{$48$~J}
+		{$36$~J}
+		\loigiai{
+			$\Delta U=mgl\sin 30^\circ-\dfrac{1}{2}mv^2=1{,}2\cdot 10\cdot 5\cdot 0{,}5-\dfrac{1}{2}\cdot 1{,}2\cdot 5^2=30-15=15$~J.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{30.2\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10-2]
+
+	\begin{ex}%[VL12-C2-VD]
+		Một học sinh sử dụng bộ dụng cụ như hình vẽ để khảo sát mối quan hệ giữa áp suất và thể tích của một khối khí xác định. Hình vẽ mô tả một ống thủy tinh cố định đặt thẳng đứng, diện tích tiết diện của ống là $7{,}5\cdot 10^{-5}~\text{m}^2$ chứa một cột không khí xem là khí lí tưởng bị nhốt bởi dầu. Dầu trong ống được nối với một bình chứa dầu và một áp kế. Một cái bơm tay được nối với hệ thống để tăng áp suất. Khi áp suất của khối khí bị nhốt tăng lên, chiều dài của cột khí bị nhốt giảm xuống. Học sinh thu thập dữ liệu và ghi vào bảng sau.
+		% giuhinh
+		\par\noindent
+		\begin{minipage}[c]{0.55\linewidth}
+			\centering
+			\begin{tabular}{|l|c|c|c|c|}
+				\hline
+				Chiều dài cột khí (cm) & $45$ & $30$ & $15$ & $10$\\
+				\hline
+				Áp suất (kPa) & $100$ & $150$ & $300$ & $450$\\
+				\hline
+			\end{tabular}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.43\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
+				% đế
+				\fill[black,opacity=0.12] (0.1,-0.25) rectangle (3.2,-0.18);
+				\shade[top color=black!65,bottom color=black!85] (0,-0.18) rectangle (2.9,0);
+				\fill[black!55] (0,0)--(2.9,0)--(3.2,0.3)--(0.3,0.3)--cycle;
+				% bảng chia độ
+				\shade[left color=black!80,right color=black!60] (0.35,0.15) rectangle (1.0,4.25);
+				\fill[white] (0.43,0.25) rectangle (0.92,4.15);
+				\foreach \y in {0.4,0.55,...,4.05}{\draw[black!60,very thin] (0.43,\y)--(0.53,\y) (0.82,\y)--(0.92,\y);}
+				\foreach \y in {0.55,1.15,...,4.0}{\draw[black!80,thin] (0.43,\y)--(0.58,\y) (0.77,\y)--(0.92,\y);}
+				% ống thủy tinh: dầu, không khí
+				\fill[orange!45!yellow] (0.63,0.25) rectangle (0.72,2.85);
+				\fill[VLxanh!12] (0.63,2.85) rectangle (0.72,3.95);
+				\draw[black!75,thin] (0.63,0.25)--(0.63,3.95) arc[start angle=180,end angle=0,radius=0.045]--(0.72,0.25);
+				\draw[black!75,thin] (0.63,2.85)--(0.72,2.85);
+				% ống nối dưới đế
+				\draw[black!70,line width=1.2pt] (0.68,0.2)--(1.6,0.2);
+				% bình chứa dầu
+				\shade[left color=gray!35,right color=gray!45,middle color=white] (1.45,0.15) rectangle (1.95,0.95);
+				\draw[black!75,thin] (1.45,0.15)--(1.45,0.95) (1.95,0.15)--(1.95,0.95);
+				\draw[black!75,thin,fill=gray!20] (1.7,0.95) ellipse (0.25 and 0.07);
+				\draw[black!75,thin] (1.45,0.15) arc[start angle=180,end angle=360,x radius=0.25,y radius=0.07];
+				% ống lên áp kế
+				\draw[black!75,line width=1.3pt] (1.7,0.97)--(1.7,1.12) .. controls (1.7,1.3) and (1.35,1.25) .. (1.35,1.45) .. controls (1.35,1.62) and (1.55,1.62) .. (1.55,1.7);
+				\draw[black!75,line width=1.3pt] (1.55,1.7)--(1.55,1.78);
+				% áp kế
+				\fill[black,opacity=0.15] (1.58,2.12) circle (0.34);
+				\shade[inner color=gray!15,outer color=gray!60] (1.55,2.15) circle (0.34);
+				\filldraw[fill=white,draw=black!80,thin] (1.55,2.15) circle (0.27);
+				\foreach \g in {-40,-10,...,230}{\draw[black!70,very thin] ($(1.55,2.15)+(\g:0.27)$)--($(1.55,2.15)+(\g:0.21)$);}
+				\draw[black,semithick] (1.55,2.15)--++(70:0.2);
+				\fill (1.55,2.15) circle (0.025);
+				% ống mềm sang bơm
+				\draw[black!85,line width=1.4pt] (1.95,0.6) .. controls (2.5,0.65) and (2.75,0.5) .. (2.7,0.1) .. controls (2.65,-0.25) and (3.05,-0.2) .. (3.3,0.2) .. controls (3.4,0.32) and (3.55,0.38) .. (3.72,0.38);
+				% bơm đạp chân
+				\fill[black,opacity=0.1] (3.55,-0.28) rectangle (4.85,-0.2);
+				\draw[black!85,line width=1.3pt] (3.45,-0.2)--(4.45,-0.2)--(4.8,0.35)--(3.8,0.35)--cycle;
+				\draw[black!85,line width=0.9pt] (3.7,-0.2)--(4.05,0.35) (4.15,-0.2)--(4.5,0.35);
+				\draw[black!80,line width=0.8pt] (3.95,0.15)--(4.5,0.55);
+				\begin{scope}[rotate around={28:(4.15,0.6)}]
+					\shade[top color=gray!20,bottom color=gray!55,middle color=white] (3.7,0.42) rectangle (4.6,0.78);
+					\draw[black!80,thin] (3.7,0.42) rectangle (4.6,0.78);
+					\filldraw[fill=gray!35,draw=black!80,thin] (3.7,0.6) ellipse (0.07 and 0.18);
+					\filldraw[fill=gray!15,draw=black!80,thin] (4.6,0.6) ellipse (0.07 and 0.18);
+				\end{scope}
+				\filldraw[fill=gray!8,draw=black!85,line width=1.2pt] (4.25,0.95)--(4.15,2.05)--(4.7,2.05)--(4.75,0.95)--cycle;
+				\fill[gray!35] (4.27,1.1)--(4.22,1.9)--(4.62,1.9)--(4.65,1.1)--cycle;
+				\draw[black!85,line width=1pt] (4.75,0.95)--(4.8,0.35) (4.25,0.95)--(4.05,0.85);
+				% nhãn
+				\draw[thin] (0.72,4.0)--(1.25,4.1) node[right,inner sep=1pt] {Ống thủy tinh};
+				\draw[thin] (0.72,3.4)--(1.25,3.5) node[right,inner sep=1pt] {Không khí};
+				\draw[thin] (0.72,2.6)--(1.25,2.85) node[right,inner sep=1pt] {Dầu};
+				\draw[thin] (1.75,2.35)--(2.25,2.6) node[right,inner sep=1pt] {Áp kế};
+				\draw[thin] (4.3,0.65)--(5.0,0.65) node[right,inner sep=1pt] {Bơm};
+				\draw[thin] (1.7,0.4)--(1.75,-0.4) node[below,inner sep=1pt] {Ống chứa dầu};
+			\end{tikzpicture}
+		\end{minipage}
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{\True Để kiểm chứng định luật Boyle cần phải giữ nhiệt độ khối khí trong ống thủy tinh không đổi}
+		{\True Đối với khối khí bị nhốt trong ống thủy tinh thì áp suất $p$ tỉ lệ nghịch với thể tích $V$}
+		{Tích của áp suất và thể tích của khối khí là hằng số và hằng số đó bằng $45\cdot 10^3$~Pa$\cdot$m$^3$}
+		{\True Khi chiều dài cột khí trong ống thủy tinh có chiều dài là $20$~cm thì áp suất của khí là $225$~kPa}
+		\loigiai{
+			$pl$ trong bảng: $45\cdot 100=30\cdot 150=15\cdot 300=10\cdot 450=4500$~(cm$\cdot$kPa).
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Định luật Boyle áp dụng cho quá trình đẳng nhiệt.
+				\itemch \textbf{Đúng.} $V=Sl$ và $pl$ không đổi nên $pV$ không đổi: $p$ tỉ lệ nghịch với $V$.
+				\itemch \textbf{Sai.} $pV=100\cdot 10^3\cdot 0{,}45\cdot 7{,}5\cdot 10^{-5}\approx 3{,}38$~Pa$\cdot$m$^3$.
+				\itemch \textbf{Đúng.} $p=\dfrac{4500}{20}=225$~kPa.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[13.6\baselineskip]{23.4\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Dùng quạt hơi nước để làm mát căn phòng có kích thước $3~\text{m}\times 4~\text{m}\times 3~\text{m}$. Khi quạt hoạt động, không khí trong phòng được quạt hút vào sau đó đi qua màng gỗ để làm mát đã được làm ướt để tạo ra hiện tượng bay hơi nước. Biết lưu lượng nước bay hơi từ quạt là $0{,}5$~g/s; nhiệt hóa hơi riêng của nước ở nhiệt độ phòng (không đổi) là $2{,}25\cdot 10^6$~J/kg; khối lượng riêng của không khí trong phòng là $1{,}2~\text{kg/m}^3$ và nhiệt dung riêng của không khí là $1005$~J/(kg.K).
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
+				% ngăn chứa nước
+				\fill[gray!60] (1.0,0.25)--(2.0,0.25)--(2.3,0.5)--(2.3,0.8)--(1.3,0.8)--(1.0,0.55)--cycle;
+				\shade[top color=gray!35,bottom color=gray!65] (1.0,0.25) rectangle (2.0,0.55);
+				\fill[gray!75] (2.0,0.25)--(2.3,0.5)--(2.3,0.8)--(2.0,0.55)--cycle;
+				\fill[VLxanh!35] (1.08,0.55)--(1.98,0.55)--(2.22,0.75)--(1.32,0.75)--cycle;
+				\draw[gray!40!black,thin] (1.0,0.25) rectangle (2.0,0.55) (2.0,0.25)--(2.3,0.5)--(2.3,0.8)--(1.3,0.8)--(1.0,0.55) (2.0,0.55)--(2.3,0.8);
+				\foreach \x in {1.35,1.55,1.75}{\draw[VLxanh!70,densely dotted,thick] (\x,0.85)--(\x,1.05);}
+				% luồng khí mát (vẽ trước màng)
+				\fill[VLxanh!45,opacity=0.85] (1.8,2.05)--(3.25,2.2)--(3.25,2.05)--(3.6,2.3)--(3.25,2.55)--(3.25,2.4)--(1.8,2.3)--cycle;
+				% màng gỗ sũng nước (tổ ong)
+				\fill[orange!55!black] (1.55,1.15)--(1.75,1.3)--(1.75,3.2)--(1.55,3.05)--cycle;
+				\shade[left color=orange!55,right color=yellow!65!orange] (1.0,0.95)--(1.55,1.15)--(1.55,3.05)--(1.0,2.85)--cycle;
+				\begin{scope}
+					\clip (1.0,0.95)--(1.55,1.15)--(1.55,3.05)--(1.0,2.85)--cycle;
+					\foreach \y in {0.6,0.75,...,3.1}{\draw[orange!40!black,very thin,opacity=0.6] (1.0,\y)--(1.55,\y+0.2);}
+					\foreach \y in {0.9,1.1,...,3.3}{\draw[orange!40!black,very thin,opacity=0.5] (1.0,\y)--(1.55,\y-0.25);}
+				\end{scope}
+				\draw[orange!35!black,thin] (1.0,0.95)--(1.55,1.15)--(1.75,1.3)--(1.75,3.2)--(1.55,3.05)--(1.0,2.85)--cycle (1.55,1.15)--(1.55,3.05);
+				% giàn nước
+				\foreach \x in {1.15,1.3,...,1.65}{\draw[VLxanh!65,densely dotted,thick] (\x,3.05)--(\x+0.05,3.3);}
+				\shade[top color=gray!30,bottom color=gray!70] (0.95,3.35)--(1.85,3.35)--(2.15,3.65)--(1.25,3.65)--cycle;
+				\fill[gray!80] (0.95,3.35)--(1.85,3.35)--(1.85,3.25)--(0.95,3.25)--cycle;
+				\draw[gray!40!black,thin] (0.95,3.25)--(1.85,3.25)--(1.85,3.35)--(2.15,3.65)--(1.25,3.65)--(0.95,3.35)--cycle;
+				% quạt
+				\begin{scope}[xshift=0.7cm]
+				\fill[gray!55] (3.0,0.95)--(3.2,0.8)--(3.2,3.0)--(3.0,3.15)--cycle;
+				\shade[left color=gray!20,right color=gray!45,even odd rule] (3.2,0.8)--(4.3,1.2)--(4.3,3.4)--(3.2,3.0)--cycle (3.75,2.1) ellipse (0.4 and 0.85);
+				\draw[gray!40!black,thin] (3.0,0.95)--(3.2,0.8)--(4.3,1.2)--(4.3,3.4)--(3.2,3.0)--(3.0,3.15)--cycle (3.2,0.8)--(3.2,3.0);
+				\draw[gray!40!black,thin] (3.75,2.1) ellipse (0.4 and 0.85);
+				\foreach \a in {90,210,330}{\fill[gray!50,rotate around={\a:(3.75,2.1)}] (3.75,2.1) .. controls (3.85,2.35) and (3.8,2.75) .. (3.75,2.8) .. controls (3.6,2.7) and (3.6,2.35) .. (3.75,2.1);}
+				\fill[gray!70] (3.75,2.1) ellipse (0.08 and 0.15);
+				% luồng khí ra
+				\foreach \y/\dy in {2.85/0.25,2.2/0,1.55/-0.2}{\fill[VLxanh!45,opacity=0.9] (4.35,\y-0.1)--(4.95,\y+\dy-0.1)--(4.95,\y+\dy-0.22)--(5.35,\y+\dy)--(4.95,\y+\dy+0.22)--(4.95,\y+\dy+0.1)--(4.35,\y+0.1)--cycle;}
+				\end{scope}
+				% khí nóng
+				\fill[VLdo!80] (0.05,1.85)--(0.75,1.95)--(0.75,1.82)--(1.15,2.05)--(0.75,2.3)--(0.75,2.17)--(0.05,2.07)--cycle;
+				% nhãn
+				\node[align=left,inner sep=1pt,anchor=east] at (0.9,3.4) {Giàn nước\\làm ướt\\màng tổ ong};
+				\node[align=left,inner sep=1pt,anchor=south west] at (4.85,3.35) {Luồng khí\\hơi sương};
+				\node[inner sep=1pt,anchor=north east] at (0.85,1.78) {Khí nóng};
+				\node[inner sep=1pt,anchor=west] at (5.1,0.95) {Quạt};
+				\node[align=left,inner sep=1pt,anchor=south west] at (2.35,0.58) {Màng gỗ\\sũng nước};
+				\node[inner sep=1pt,anchor=west] at (2.35,0.22) {Ngăn chứa nước};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{10\baselineskip}%
+		\choiceTFt
+		{Khối lượng của nước bay hơi trong thời gian $10$ phút là $0{,}5$~kg}
+		{Khi nước bay hơi thì nước đã tỏa nhiệt ra không khí xung quanh}
+		{\True Khối lượng của không khí trong phòng là $43{,}2$~kg}
+		{\True Giả sử toàn bộ nhiệt lượng lấy từ không khí trong phòng dùng để làm bay hơi nước. Sau $10$ phút mở quạt, nhiệt độ phòng giảm đi $15{,}55\,^\circ\text{C}$ (làm tròn kết quả đến chữ số hàng phần trăm)}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} $m_\text{n}=0{,}5\cdot 600=300~\text{g}=0{,}3$~kg.
+				\itemch \textbf{Sai.} Khi bay hơi, nước thu nhiệt của không khí xung quanh.
+				\itemch \textbf{Đúng.} $m_\text{kk}=DV=1{,}2\cdot 3\cdot 4\cdot 3=43{,}2$~kg.
+				\itemch \textbf{Đúng.} $m_\text{kk}c\,\Delta t=Lm_\text{n}\Rightarrow\Delta t=\dfrac{2{,}25\cdot 10^6\cdot 0{,}3}{43{,}2\cdot 1005}\approx 15{,}55\,^\circ\text{C}$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[9.5\baselineskip]{21.2\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		\begin{minipage}[t]{0.6\linewidth}
+			Phong vũ biểu thủy ngân được phát minh bởi Evangelista Torricelli vào năm 1643, là thiết bị dùng để đo áp suất khí quyển. Nó gồm một ống thủy tinh dài khoảng $80$~cm -- $90$~cm, một đầu kín, đầu còn lại nhúng vào chậu chứa thủy ngân như hình bên. Số chỉ phong vũ biểu được xác định bằng chiều cao cột thủy ngân trong ống so với mặt thoáng thủy ngân trong chậu. Xem nhiệt độ không đổi. Thể tích thủy ngân trong ống rất nhỏ so với thể tích thủy ngân trong chậu.
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.3\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.2em]current bounding box.north)},scale=0.85,line join=round,line cap=round,font=\footnotesize]
+				% chậu thủy ngân
+				\shade[top color=gray!25,bottom color=gray!60] (0,0) rectangle (2.0,1.15);
+				\draw[white,opacity=0.6,line width=1.2pt] (0.15,1.1)--(1.85,1.1);
+				% ống thủy tinh
+				\shade[top color=gray!25,bottom color=gray!60] (0.78,1.15) rectangle (1.12,3.05);
+				\fill[white] (0.78,3.05) rectangle (1.12,4.3);
+				\draw[gray!70!black,line width=0.6pt] (0.78,3.05)--(1.12,3.05);
+				\draw[black!75,line width=1.4pt] (0.78,0.3)--(0.78,4.35)--(1.12,4.35)--(1.12,0.3);
+				\draw[white,line width=0.8pt,opacity=0.7] (0.85,1.3)--(0.85,4.2);
+				\draw[black,line width=1.6pt] (0,1.9)--(0,0)--(2.0,0)--(2.0,1.9);
+				% nhãn
+				\draw[VLmui,semithick] (1.12,4.15)--(1.75,4.15) node[right,inner sep=1.5pt] {Ống thủy tinh};
+				\draw[VLmui,semithick] (1.12,3.6)--(1.75,3.6) node[right,inner sep=1.5pt] {Chân không};
+				\draw[VLmui,semithick] (1.12,3.05)--(1.75,3.05) node[right,inner sep=1.5pt,align=left,anchor=north west,yshift=0.2cm] {Màng ngăn thủy\\ngân bay hơi};
+				\draw[VLmui,semithick] (1.4,0.6)--(2.2,0.6) node[right,inner sep=1.5pt] {Thủy ngân};
+			\end{tikzpicture}
+		\end{minipage}
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{Áp suất khí quyển bằng áp suất ở miệng ống thủy tinh trong chậu}
+		{\True Khi trong khoảng chân không của phong vũ biểu có lọt vào một ít không khí, khi đó phong vũ biểu có số chỉ nhỏ hơn áp suất thực của khí quyển}
+		{\True Xét lượng khí xác định (được xem là khí lí tưởng) bị lọt vào trong ống, ta có thể áp dụng định luật Boyle cho khối khí}
+		{\True Vì khí lọt vào ống thủy tinh nên khi áp suất khí quyển là $760$~mmHg thì phong vũ biểu chỉ $746$~mmHg và chiều dài cột khí là $54$~mm. Khi phong vũ biểu này chỉ $752$~mmHg thì áp suất của khí quyển là $767{,}75$~mmHg}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Miệng ống nằm sâu dưới mặt thoáng thủy ngân trong chậu nên áp suất ở đó lớn hơn áp suất khí quyển; áp suất khí quyển bằng áp suất tại điểm ngang mặt thoáng.
+				\itemch \textbf{Đúng.} $p_0=h+p_\text{k}$ nên số chỉ $h=p_0-p_\text{k}<p_0$.
+				\itemch \textbf{Đúng.} Lượng khí xác định, nhiệt độ không đổi: quá trình đẳng nhiệt.
+				\itemch \textbf{Đúng.} Lúc đầu $p_1=760-746=14$~mmHg, $l_1=54$~mm. Số chỉ tăng $6$~mm nên $l_2=48$~mm; $p_2=\dfrac{p_1l_1}{l_2}=\dfrac{14\cdot 54}{48}=15{,}75$~mmHg.\\
+				$p_0'=752+15{,}75=767{,}75$~mmHg.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[14.5\baselineskip]{24.5\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		\begin{minipage}[t]{0.57\linewidth}
+			Một học sinh tiến hành thí nghiệm xác định nhiệt nóng chảy riêng của nước đá bằng nhiệt lượng kế có dây nung với công suất $P=24$~W, cùng với cân điện tử và cốc hứng nước. Sơ đồ thí nghiệm như hình bên.\\
+			\textbf{\textit{Bước 1:}} Cho nước đá vào nhiệt lượng kế, khi nước đá bắt đầu tan chảy cho nước chảy vào cốc trên cân trong thời gian $t$ phút, xác định được khối lượng $m$ của nước trong cốc này.\\
+			\textbf{\textit{Bước 2:}} Đổ hết nước trong cốc, bật biến áp nguồn để nung nóng lượng nước đá, cho nước chảy vào cốc trong thời gian $t$ phút, xác định được khối lượng $M$ của nước trong cốc này. Bước 2 được tiến hành ngay sau bước 1, xem dây nung không tỏa nhiệt ra môi trường, bỏ qua bay hơi và ngưng tụ của nước.
+		\end{minipage}\hfill
+		% giuhinh
+		\begin{minipage}[t]{0.34\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.2em]current bounding box.north)},scale=0.85,line join=round,line cap=round,font=\footnotesize]
+				% giá thí nghiệm
+				\shade[top color=gray!30,bottom color=gray!60] (5.05,0)--(5.85,0)--(5.7,0.18)--(5.2,0.18)--cycle;
+				\foreach \x in {5.2,5.3,...,5.7}{\fill[gray!20] (\x,0.08) circle (0.025);}
+				\shade[left color=VLxanh!40!black,right color=VLxanh!30!black,middle color=VLxanh!35!gray] (5.38,0.18) rectangle (5.5,4.25);
+				\shade[top color=VLxanh!40!black,bottom color=VLxanh!25!black,middle color=VLxanh!40!gray] (2.6,3.17) rectangle (5.7,3.27);
+				\fill[VLxanh!20!black,rounded corners=1pt] (5.34,3.08) rectangle (5.54,3.36);
+				% nhiệt lượng kế
+				\fill[white] (2.85,1.6) rectangle (4.15,3.6);
+				\pgfmathsetseed{11}
+				\foreach \y in {1.66,1.92,...,3.0}{\foreach \x in {2.9,3.17,...,3.9}{\pgfmathsetmacro{\dx}{0.05*rnd-0.025}\pgfmathsetmacro{\dy}{0.04*rnd-0.02}\filldraw[fill=VLxanh!22,draw=VLxanh!50,very thin,rounded corners=0.5pt] (\x+\dx,\y+\dy) rectangle ++(0.22,0.22);}}
+				\draw[black!80,line width=1.1pt] (2.85,3.6)--(2.85,1.6)--(4.15,1.6)--(4.15,3.6);
+				\filldraw[fill=gray!35,draw=black!80,thin] (2.8,3.6) rectangle (4.2,3.72);
+				\foreach \x in {2.85,2.95,...,4.15}{\draw[black!70,very thin] (\x,3.6)--(\x+0.08,3.72);}
+				\fill[VLxanh!20!black,rounded corners=1pt] (2.6,3.08) rectangle (2.82,3.36) (4.18,3.08) rectangle (4.4,3.36);
+				\draw[black!80,line width=0.9pt] (3.45,1.6)--(3.45,1.38) (3.55,1.6)--(3.55,1.38);
+				% dây nung
+				\draw[black!85,thin] (3.2,3.85)--(3.2,2.55) (3.8,3.85)--(3.8,2.55);
+				\draw[black!85,semithick] (3.2,2.55)--(3.3,2.55) (3.78,2.55)--(3.8,2.55);
+				\foreach \i in {0,...,3}{\draw[black!85,semithick] (3.36+0.12*\i,2.55) ellipse (0.06 and 0.1);}
+				\fill[gray!60!black] (3.15,3.72) rectangle (3.25,3.88) (3.75,3.72) rectangle (3.85,3.88);
+				% cân điện tử, cốc
+				\shade[top color=gray!15,bottom color=gray!45,draw=VLxanh!30!black,rounded corners=2pt] (2.75,0) rectangle (4.35,0.35);
+				\filldraw[fill=VLla!35,draw=VLxanh!30!black,thin] (3.0,0.1) rectangle (3.95,0.24);
+				\fill[VLxanh!30!black] (4.15,0.17) circle (0.04);
+				\fill[VLxanh!30] (3.5,0.42) ellipse (0.27 and 0.06);
+				\draw[VLxanh!30!black,semithick] (3.05,1.18)--(3.23,0.42) arc[start angle=180,end angle=360,x radius=0.27,y radius=0.06]--(3.95,1.18);
+				\draw[VLxanh!30!black,semithick] (3.5,1.18) ellipse (0.45 and 0.08);
+				% oát kế
+				\filldraw[fill=gray!8,draw=VLxanh!30!black,line width=0.9pt,rounded corners=2pt] (0.25,1.3) rectangle (1.3,2.15);
+				\foreach \x/\y in {0.55/1.95,1.0/1.95,0.55/1.5,1.0/1.5}{\filldraw[fill=white,draw=black,thin] (\x,\y) circle (0.06);}
+				% biến áp nguồn
+				\filldraw[fill=gray!8,draw=VLxanh!30!black,line width=0.9pt,rounded corners=2pt] (0,0) rectangle (1.55,0.8);
+				\filldraw[fill=white,draw=VLxanh!30!black,thin] (0.45,0.48) rectangle (1.35,0.65);
+				\node[font=\fontsize{6}{6}\selectfont] at (0.25,0.56) {$\ast$};
+				\filldraw[fill=white,draw=black,thin] (0.4,0.22) circle (0.05) (1.15,0.22) circle (0.05);
+				\node[font=\fontsize{6}{6}\selectfont,inner sep=0pt] at (0.58,0.22) {$+$};
+				\node[font=\fontsize{6}{6}\selectfont,inner sep=0pt] at (0.97,0.22) {$-$};
+				% dây nối
+				\draw[black!85,thin] (0.55,2.01) .. controls (0.5,3.2) and (1.2,3.7) .. (2.0,3.95) .. controls (2.6,4.15) and (3.0,4.1) .. (3.2,3.88);
+				\draw[black!85,thin] (1.0,2.01) .. controls (1.0,3.0) and (1.6,3.5) .. (2.3,3.8) .. controls (3.0,4.25) and (3.6,4.25) .. (3.8,3.88);
+				\draw[black!85,thin] (0.55,1.44) .. controls (0.3,1.1) and (0.45,0.6) .. (0.4,0.27);
+				\draw[black!85,thin] (1.0,1.44) .. controls (1.25,1.1) and (1.1,0.6) .. (1.15,0.27);
+				% nhãn
+				\draw[thin] (4.05,3.68)--(4.35,3.95) node[above,inner sep=1pt,align=center] {Nhiệt\\lượng kế};
+				\node[right,inner sep=1pt] at (1.35,1.72) {Oát kế};
+				\node[right,inner sep=1pt,align=left] at (4.12,0.78) {Cốc\\hứng\\nước};
+				\node[below,inner sep=2pt] at (0.78,0) {Biến áp nguồn};
+				\node[below,inner sep=2pt] at (3.55,0) {Cân điện tử};
+			\end{tikzpicture}
+		\end{minipage}
+		\NeedspaceBang{9.9\baselineskip}%
+		\choiceTFt
+		{\True Ở bước 1, nước đá tan do nhận nhiệt lượng từ môi trường}
+		{Ở bước 2, nước đá tan và chảy vào cốc do nhận nhiệt lượng từ dây nung}
+		{Ở bước 2, nếu bật nguồn trong thời gian $2t$ phút thì lượng nước đá do dây nung làm tan chảy là $2(M-2m)$}
+		{\True Nếu $t=2$ phút, $m=2$~g và $M=10$~g thì nhiệt nóng chảy riêng của nước đá mà học sinh này đo được là $3{,}6\cdot 10^5$~J/kg}
+		\loigiai{
+			Trong $t$ phút, môi trường làm tan $m$, dây nung làm tan $M-m$.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Bước 1 chưa bật nguồn, nước đá nhận nhiệt từ môi trường.
+				\itemch \textbf{Sai.} Ở bước 2 nước đá nhận nhiệt từ cả dây nung và môi trường.
+				\itemch \textbf{Sai.} Trong $2t$ phút, dây nung làm tan $2(M-m)$.
+				\itemch \textbf{Đúng.} $\lambda=\dfrac{Pt}{M-m}=\dfrac{24\cdot 120}{(10-2)\cdot 10^{-3}}=3{,}6\cdot 10^5$~J/kg.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{6.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10-3]
+
+	\begin{ex}%[VL12-C2-TH]
+		Một lượng khí lí tưởng có thể tích $2{,}2$~lít và áp suất $1$~atm. Người ta nén đẳng nhiệt khí tới áp suất $2{,}5$~atm. Thể tích của khí sau khi nén là bao nhiêu lít?
+		\par
+		\shortans[oly]{0{,}88}
+		\loigiai{
+			$p_1V_1=p_2V_2\Rightarrow V_2=\dfrac{1\cdot 2{,}2}{2{,}5}=0{,}88$~lít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Truyền cho khí trong xilanh một nhiệt lượng $200$~J. Khí nở ra và thực hiện công $140$~J đẩy pit-tông lên. Độ biến thiên nội năng của khí là bao nhiêu J?
+		\par
+		\shortans[oly]{60}
+		\loigiai{
+			$\Delta U=Q+A=200+(-140)=60$~J.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Biết nhiệt dung riêng của nước là $4190$~J/(kg.K) và nhiệt hóa hơi riêng của nước là $2{,}26\cdot 10^6$~J/kg. Cần cung cấp một nhiệt lượng bằng bao nhiêu MJ để làm cho $200$~g nước có nhiệt độ $10\,^\circ\text{C}$ sôi ở $100\,^\circ\text{C}$ và $10\%$ khối lượng của nó đã hóa hơi khi sôi (làm tròn kết quả đến chữ số hàng phần trăm)?
+		\par
+		\shortans[oly]{0{,}12}
+		\loigiai{
+			$Q=mc\Delta t+0{,}1mL=0{,}2\cdot 4190\cdot 90+0{,}02\cdot 2{,}26\cdot 10^6=120\,620~\text{J}\approx 0{,}12$~MJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một tấm đồng có khối lượng $2{,}5$~kg và nhiệt độ $30\,^\circ\text{C}$ được đưa vào trong một lò nung điện có công suất $20\,000$~W. Cho rằng chỉ có $50\%$ điện năng tiêu thụ của lò để làm nóng chảy đồng. Biết nhiệt dung riêng của đồng là $c_\text{Cu}=380$~J/(kg.K), nhiệt nóng chảy riêng của đồng là $\lambda_\text{Cu}=180\cdot 10^3$~J/kg, nhiệt độ nóng chảy của đồng là $1084\,^\circ\text{C}$. Cần tối thiểu bao nhiêu phút để làm tấm đồng nóng chảy hoàn toàn (kết quả làm tròn đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{2{,}4}
+		\loigiai{
+			$Q=mc\Delta t+m\lambda=2{,}5\cdot 380\cdot(1084-30)+2{,}5\cdot 180\cdot 10^3=1\,451\,300$~J.\\
+			$t=\dfrac{Q}{0{,}5P}=\dfrac{1\,451\,300}{10\,000}\approx 145{,}1~\text{s}\approx 2{,}4$~phút.
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.9\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		\begin{minipage}[t]{0.6\linewidth}
+			Cho $200$~g nước đá ở $-10\,^\circ\text{C}$ vào một cốc cách nhiệt đựng nước ở $30\,^\circ\text{C}$. Sự thay đổi nhiệt độ của nước đá và nước trong cốc theo thời gian được biểu diễn theo đồ thị hình bên. Biết nhiệt dung riêng của nước đá là $2100$~J/(kg.K), nhiệt nóng chảy riêng của nước đá là $3{,}4\cdot 10^5$~J/kg, nhiệt dung riêng của nước là $4200$~J/(kg.K), bỏ qua nhiệt dung của cốc. Khối lượng nước trong cốc bằng bao nhiêu kilogam (làm tròn kết quả đến chữ số hàng phần trăm)?
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.31\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.2em]current bounding box.north)},x=0.95cm,y=0.075cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[dashed,thin,gray] (0,6)--(2.35,6);
+				\draw[VLmui,thick] (0,0)--(4.3,0) node[below left,inner sep=3pt] {Thời gian};
+				\draw[VLmui,thick] (0,-13)--(0,38) node[right,inner sep=2pt] {$t$ ($^\circ$C)};
+				\draw[very thick,VLdo] (0,30)--(2.35,6)--(3.2,6);
+				\draw[very thick,VLxanh] (0,-10)--(0.85,0)--(1.85,0)--(2.35,6);
+				\node[left,inner sep=2pt] at (0,30) {$30$};
+				\node[left,inner sep=2pt] at (0,6.5) {$6$};
+				\node[left,inner sep=2pt] at (0,-1) {$O$};
+				\node[left,inner sep=2pt] at (0,-10) {$-10$};
+				\draw[thick] (-0.06,30)--(0,30) (-0.06,6)--(0,6) (-0.06,-10)--(0,-10);
+			\end{tikzpicture}
+		\end{minipage}
+		\par
+		\shortans[oly]{0{,}77}
+		\loigiai{
+			Nhiệt độ cân bằng $6\,^\circ\text{C}$. Nhiệt lượng nước đá thu vào:
+			\[Q_\text{thu}=0{,}2\cdot 2100\cdot 10+0{,}2\cdot 3{,}4\cdot 10^5+0{,}2\cdot 4200\cdot 6=77\,240~\text{J}.\]
+			$Q_\text{tỏa}=Q_\text{thu}\Rightarrow m\cdot 4200\cdot(30-6)=77\,240\Rightarrow m\approx 0{,}77$~kg.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.1\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		\begin{minipage}[t]{0.72\linewidth}
+			Xilanh và pit-tông nhẹ cách nhiệt chứa bên trong nó một lượng khí xác định. Ban đầu thể tích khí chứa trong xilanh là $900~\text{cm}^3$. Tiến hành đặt nhẹ nhàng lên pit-tông một gia trọng có khối lượng $10$~kg. Biết diện tích của pit-tông là $S=100~\text{cm}^2$, lấy $g=10~\text{m/s}^2$, áp suất khí quyển $p_0=10^5$~Pa. Bỏ qua ma sát giữa pit-tông và xilanh. Biết nhiệt độ của khối khí không đổi. Thể tích của chất khí trong xilanh khi pit-tông cân bằng là $x\cdot 10^{-3}~\text{m}^3$. Tìm $x$ (làm tròn kết quả đến chữ số hàng phần trăm).
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.18\linewidth}
+			\centering
+			\begin{tikzpicture}[baseline={([yshift=-1.2em]current bounding box.north)},scale=0.8,line join=round,line cap=round,font=\footnotesize]
+				\fill[VLxanh!10] (0,0) rectangle (2.4,2.6);
+				\shade[top color=gray!25,bottom color=gray!55] (0.04,2.6) rectangle (2.36,2.9);
+				\shade[top color=VLdong!60!white,bottom color=VLdong!85!black] (0.75,2.9)--(1.65,2.9)--(1.45,3.5)--(0.95,3.5)--cycle;
+				\draw[VLdong!40!black,thin] (0.75,2.9)--(1.65,2.9)--(1.45,3.5)--(0.95,3.5)--cycle;
+				\draw[gray!40!black,thin] (0.04,2.6) rectangle (2.36,2.9);
+				\draw[black!80,line width=1.6pt] (0,4.2)--(0,0)--(2.4,0)--(2.4,4.2);
+			\end{tikzpicture}
+		\end{minipage}
+		\par
+		\shortans[oly]{0{,}82}
+		\loigiai{
+			$p_1=p_0=10^5$~Pa (pit-tông nhẹ); $p_2=p_0+\dfrac{mg}{S}=10^5+\dfrac{10\cdot 10}{100\cdot 10^{-4}}=1{,}1\cdot 10^5$~Pa.\\
+			$V_2=\dfrac{p_1V_1}{p_2}=\dfrac{900}{1{,}1}\approx 818{,}2~\text{cm}^3\approx 0{,}82\cdot 10^{-3}~\text{m}^3\Rightarrow x\approx 0{,}82$.
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10-3}
+\end{document}
