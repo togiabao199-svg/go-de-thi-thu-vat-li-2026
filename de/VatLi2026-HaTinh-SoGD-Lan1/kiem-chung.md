@@ -4,10 +4,10 @@ Nguồn: `kho/goc/Ha Tinh - So GDDT - Lan 1.docx` (Sở GD&ĐT Hà Tĩnh, mã đ
 
 | Câu | Đáp án gốc | Giải lại | Ghi chú |
 |---|---|---|---|
-| I.1–I.18 | C B C C D B B C A A D B C D C C D D | trùng | I.10: p₂ = 12·400/300 = 16 atm; xem I.5, I.8, I.9 dưới |
-| **I.5** | **D** | **D (câu lỗi)** | **Câu hỏi lỗi từ bản gốc**: "Hai vật có cùng nội năng khi chúng … D. có cùng nội năng" — phương án D lặp lại câu dẫn (bản thuvienhoclieu tự ghi chú "(lặp do lỗi đề)"). Gõ theo đáp án gốc D, bỏ chú thích "(lặp do lỗi đề)", có `% KIỂM TRA`. Thầy xem có sửa lại câu không. |
-| **I.8** | **C (30)** | **C** | **Bản gốc ghi hạt nhân ⁵⁵₂₆Fe** (N = 29, không có phương án). Sửa thành ⁵⁶₂₆Fe (khớp đáp án gốc 30 và câu I.9). Có `% KIỂM TRA`. |
-| **I.9** | **A** | **A** | **Đề thiếu dữ kiện**: không cho khối lượng hạt nhân Fe hay năng lượng liên kết riêng. Đáp án A = 8,8 MeV/nucleon × 56 = 492,8 MeV (giá trị thực ≈ 492,3 MeV). Lời giải dùng W_lkr ≈ 8,8 MeV/nucleon. Có `% KIỂM TRA`. |
+| I.1–I.18 | C B C C D B B C A A D B C D C C D D | trùng, trừ I.5 (C) | I.10: p₂ = 12·400/300 = 16 atm; xem I.5, I.8, I.9 dưới |
+| **I.5** | **D** | **C (sửa câu dẫn)** | **Sửa lời đề (thầy chốt 13/11/2026).** Câu dẫn gốc "Hai vật có cùng nội năng khi chúng … D. có cùng nội năng" lặp phương án D (bản thuvienhoclieu ghi chú "(lặp do lỗi đề)"). Sửa câu dẫn thành "Hai vật tiếp xúc nhau **không** truyền nhiệt cho nhau khi chúng", giữ bốn phương án ⇒ đáp án C (cùng nhiệt độ). |
+| **I.8** | **C (30)** | **C** | **Bản gốc ghi hạt nhân ⁵⁵₂₆Fe** (N = 29, không có phương án). Sửa thành ⁵⁶₂₆Fe (khớp đáp án gốc 30 và câu I.9). Thầy đồng ý (13/11/2026). |
+| **I.9** | **A** | **A** | **Sửa lời đề (thầy chốt 13/11/2026).** Đề gốc không cho khối lượng hạt nhân Fe hay năng lượng liên kết riêng; thêm vào câu dẫn "Biết năng lượng liên kết riêng của hạt nhân sắt ⁵⁶₂₆Fe là 8,8 MeV/nucleon". W_lk = 56·8,8 = 492,8 MeV. |
 | II.1 | Đ S Đ S | trùng | (t_max − t₀)/d = 7,40; 7,60; 7,53; 7,45 (TB 7,50); b) Δt = 30,4 °C; d) t_max ≈ 25 + 7,5·5 = 62,5 °C ≠ 57,5 |
 | II.2 | Đ Đ S Đ | trùng | n = 2,1·1,013·10⁵·0,03/(8,31·300) = 2,560 mol; p₂ = 2,31 atm; 1 − 300/330 = 9,09 % |
 | II.3 | Đ S Đ S | trùng | |
@@ -25,7 +25,8 @@ Nguồn: `kho/goc/Ha Tinh - So GDDT - Lan 1.docx` (Sở GD&ĐT Hà Tĩnh, mã đ
 ## Sửa lời đề (lỗi chữ bản gốc)
 - I.3: phương án C "λ = 3,34×10⁵, J/kg" bỏ dấu phẩy thừa trước đơn vị.
 - I.4: viết số tách nhóm "33 400", "334 000".
-- I.5: bỏ chú thích "(lặp do lỗi đề)" ở phương án D (xem bảng trên).
+- I.5: sửa câu dẫn (xem bảng trên), bỏ chú thích "(lặp do lỗi đề)" ở phương án D.
+- I.9: thêm năng lượng liên kết riêng 8,8 MeV/nucleon vào câu dẫn (xem bảng trên).
 - I.8: ⁵⁵₂₆Fe → ⁵⁶₂₆Fe (xem bảng trên).
 - I.11: "(p − V)" → "(p, V)"; "hypebol" → "hyperbol" (thuật ngữ SGK).
 - I.14: bỏ dấu hai chấm và kí tự rác sau công thức "Φ = BS cos α"; viết vectơ $\vv{B}$, $\vv{n}$ ở các phương án (ảnh trang mất mũi tên).
