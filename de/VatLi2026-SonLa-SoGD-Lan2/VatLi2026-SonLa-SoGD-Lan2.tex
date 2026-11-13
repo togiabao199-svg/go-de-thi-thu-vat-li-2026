@@ -1,0 +1,590 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Sở GD&ĐT Sơn La, thi thử lần 2 (mã đề gốc 0209). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Sở GD\&ĐT Sơn La -- Lần 2}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+% Macro riêng của đề:
+% cuộn dây quấn trên khung nhựa nhỏ đặt trên đế (kiểu ảnh chụp bộ thí nghiệm cảm ứng), góc trái dưới (x,y), rộng #3, cao #4:
+% \SLcuonde{x}{y}{rộng}{cao}
+\newcommand{\SLcuonde}[4]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\fill[gray!25] (-0.04,-0.05) rectangle (#3+0.04,0);
+		\fill[black!70] (0,0)--(#3,0)--(#3+0.12,0.08)--(#3+0.12,#4+0.08)--(#3,#4)--cycle;
+		\shade[left color=black!55,right color=black!80] (0,0) rectangle (0.12,#4);
+		\shade[left color=black!55,right color=black!80] (#3-0.12,0) rectangle (#3,#4);
+		\shade[top color=VLdong!65!white,bottom color=VLdong!80!black,middle color=VLdong!35!white] (0.12,0.1) rectangle (#3-0.12,#4-0.1);
+		\pgfmathsetmacro{\SLcuoi}{#3-0.13}%
+		\draw[VLdong!45!black,very thin] foreach \VLi in {0.16,0.22,...,\SLcuoi}{(\VLi,0.1)--(\VLi,#4-0.1)};
+		\fill[black!80] (0.12,#4-0.1) rectangle (#3-0.12,#4);
+	\end{scope}}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT SƠN LA -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\NeedspaceCau{7.9\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-SonLa-SoGD-Lan2-1]
+
+	\begin{ex}%[VL12-C3-NB]
+		Tại các hộ gia đình Việt Nam, các thiết bị điện thường ghi ``$220$~V''. Con số này là
+		\choice
+		{\True giá trị hiệu dụng của điện áp}
+		{giá trị trung bình của điện áp}
+		{giá trị cực đại của điện áp}
+		{giá trị tức thời của điện áp}
+		\loigiai{
+			Số $220$~V ghi trên thiết bị điện dân dụng là giá trị hiệu dụng của điện áp xoay chiều.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.7\baselineskip}
+	\begin{ex}%[VL11-C2-NB]
+		Trong y tế, để kiểm tra các vết gãy xương hoặc tổn thương bên trong cơ thể mà không cần phẫu thuật, các bác sĩ thường sử dụng loại bức xạ nào sau đây?
+		\choice
+		{Tia tử ngoại}
+		{Tia hồng ngoại}
+		{\True Tia X}
+		{Sóng vô tuyến}
+		\loigiai{
+			Tia X đâm xuyên qua mô mềm và bị xương hấp thụ mạnh hơn nên được dùng để chụp kiểm tra xương.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.3\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Gọi $k$ là hằng số Boltzmann, $T$ là nhiệt độ tuyệt đối. Động năng tịnh tiến trung bình của phân tử khí được xác định bởi công thức
+		\choice
+		{$\overline{E}_{\text{đ}}=\dfrac{2}{3}kT^2$}
+		{$\overline{E}_{\text{đ}}=\dfrac{3}{2}kT^2$}
+		{$\overline{E}_{\text{đ}}=\dfrac{2}{3}kT$}
+		{\True $\overline{E}_{\text{đ}}=\dfrac{3}{2}kT$}
+		\loigiai{
+			Động năng tịnh tiến trung bình của phân tử khí: $\overline{E}_{\text{đ}}=\dfrac{3}{2}kT$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Người ta cung cấp một nhiệt lượng $2000$~J cho một khối khí trong xilanh. Khối khí nở ra và thực hiện một công $1200$~J đẩy pit-tông đi lên. Độ biến thiên nội năng của khối khí là
+		\choice
+		{$-800$~J}
+		{\True $800$~J}
+		{$-3200$~J}
+		{$3200$~J}
+		\loigiai{
+			Khí nhận nhiệt $Q=2000$~J, thực hiện công nên $A=-1200$~J: $\Delta U=A+Q=-1200+2000=800$~J.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một quả bóng thám không chứa $100~\text{cm}^3$ khí helium ở áp suất $10^5$~Pa và nhiệt độ $27\,^\circ\text{C}$. Khi quả bóng bay lên đến độ cao mà áp suất khí quyển chỉ còn $0{,}5\cdot 10^5$~Pa và nhiệt độ giảm xuống còn $-23\,^\circ\text{C}$, thể tích của quả bóng lúc này là
+		\choice
+		{\True $167~\text{cm}^3$}
+		{$16{,}7~\text{cm}^3$}
+		{$1{,}67~\text{cm}^3$}
+		{$167\cdot 10^{-3}~\text{cm}^3$}
+		\loigiai{
+			$\dfrac{p_1V_1}{T_1}=\dfrac{p_2V_2}{T_2}\Rightarrow V_2=V_1\cdot\dfrac{p_1T_2}{p_2T_1}=100\cdot\dfrac{10^5\cdot 250}{0{,}5\cdot 10^5\cdot 300}\approx 167~\text{cm}^3$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Trong sạc điện thoại có một máy biến áp lí tưởng có số vòng dây cuộn sơ cấp $2200$ vòng, cuộn thứ cấp là $120$ vòng. Khi cắm sạc vào điện áp hiệu dụng $220$~V thì điện áp hiệu dụng ở hai đầu cuộn thứ cấp (để hở) là
+		\choice
+		{$48$~V}
+		{$24$~V}
+		{\True $12$~V}
+		{$22$~V}
+		\loigiai{
+			$U_2=U_1\cdot\dfrac{N_2}{N_1}=220\cdot\dfrac{120}{2200}=12$~V.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.9\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Trong kĩ thuật chụp hình PET (Positron Emission Tomography) sử dụng đồng vị phóng xạ fluorine-18 (${}^{18}_{\phantom{1}9}\text{F}$). Biết ${}^{18}_{\phantom{1}9}\text{F}$ sau phân rã tạo ra oxygen-18 (${}^{18}_{\phantom{1}8}\text{O}$). ${}^{18}_{\phantom{1}9}\text{F}$ phát ra hạt nào sau đây để chẩn đoán ung thư?
+		\choice
+		{Hạt $\alpha$}
+		{\True Hạt $\beta^{+}$}
+		{Hạt neutron}
+		{Hạt neutrino}
+		\loigiai{
+			${}^{18}_{\phantom{1}9}\text{F}\to{}^{18}_{\phantom{1}8}\text{O}+{}^{\phantom{+}0}_{+1}\text{e}+\nu$: số khối không đổi, điện tích giảm $1$ nên hạt phát ra là $\beta^{+}$ (positron).
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.5\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Tại sao các thanh điều khiển (chứa boron hoặc cadmium) lại cực kì quan trọng trong lò phản ứng hạt nhân phân hạch uranium-235 (${}^{235}_{\phantom{2}92}\text{U}$)?
+		\choice
+		{Để phản xạ các neutron quay lại vùng tâm lò}
+		{\True Để hấp thụ bớt neutron, giữ cho phản ứng dây chuyền ở mức kiểm soát được}
+		{Để làm chậm các neutron nhanh}
+		{Để tăng tốc độ phân hạch của hạt nhân ${}^{235}\text{U}$}
+		\loigiai{
+			Boron, cadmium hấp thụ mạnh neutron; thanh điều khiển hấp thụ bớt neutron để phản ứng dây chuyền ở mức kiểm soát được.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Một bình kín chứa khí oxygen ở nhiệt độ $27\,^\circ\text{C}$. Nếu nung nóng bình để nhiệt độ tăng thêm $10\,^\circ\text{C}$ thì nhiệt độ tuyệt đối của khí trong bình lúc này là
+		\choice
+		{$283$~K}
+		{\True $310$~K}
+		{$300$~K}
+		{$37$~K}
+		\loigiai{
+			$T=27+10+273=310$~K.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.8\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Một bệnh nhân được tiêm một lượng nhỏ đồng vị phóng xạ có chu kì bán rã là $6$ giờ để chụp hình cơ quan nội tạng. Sau $24$ giờ, lượng phóng xạ còn lại trong cơ thể bệnh nhân là
+		\choice
+		{\True $6{,}25\%$}
+		{$93{,}75\%$}
+		{$64\%$}
+		{$36\%$}
+		\loigiai{
+			$t=24~\text{h}=4T\Rightarrow\dfrac{N}{N_0}=2^{-4}=6{,}25\%$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.3\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Việc truyền thông tin liên lạc giữa Trạm Vũ trụ Quốc tế (ISS) và trạm điều khiển dưới mặt đất chủ yếu sử dụng loại sóng nào sau đây để có thể xuyên qua tầng điện li?
+		\choice
+		{Sóng dài vì có bước sóng lớn, ít bị vật cản hấp thụ}
+		{\True Sóng cực ngắn vì có năng lượng lớn và không bị tầng điện li phản xạ hay hấp thụ}
+		{Sóng trung vì có khả năng phản xạ tốt trên tầng điện li}
+		{Sóng ngắn vì có thể phản xạ nhiều lần giữa tầng điện li và mặt đất}
+		\loigiai{
+			Sóng cực ngắn không bị tầng điện li phản xạ hay hấp thụ nên truyền xuyên qua tầng điện li, dùng liên lạc với vệ tinh, trạm vũ trụ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.8\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Một kĩ sư đang thiết kế hệ thống làm mát cho một loại máy công nghiệp mới. Ông ta cân nhắc giữa việc dùng nước và dùng dầu chuyên dụng. Cho biết nhiệt dung riêng của nước là $4200$~J/(kg.K) và của dầu là $2100$~J/(kg.K). Chọn phát biểu \textbf{sai}.
+		\choice
+		{Nước được chọn làm chất làm mát phổ biến vì nó có nhiệt dung riêng lớn, giúp duy trì nhiệt độ ổn định tốt}
+		{\True Nếu cùng một khối lượng, nước có khả năng hấp thụ nhiệt kém hơn dầu khi tăng cùng một độ tăng nhiệt độ}
+		{Để tăng nhiệt độ của $1$~kg dầu lên thêm $2\,^\circ\text{C}$ cần một nhiệt lượng là $4200$~J}
+		{Trong các bộ phận tản nhiệt nhanh, việc dùng dầu sẽ giúp hệ thống đạt nhiệt độ cao nhanh hơn so với nước}
+		\loigiai{
+			$Q=mc\Delta t$: cùng $m$, $\Delta t$ thì nước ($c$ lớn gấp đôi dầu) hấp thụ nhiệt lượng nhiều hơn dầu nên B sai; C đúng vì $Q=1\cdot 2100\cdot 2=4200$~J.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.8\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Trong các thiết bị sau, thiết bị nào hoạt động dựa trên tác dụng của lực từ lên dòng điện?
+		\choice
+		{\True Loa điện (loa thùng)}
+		{Bình đun nước siêu tốc}
+		{Đèn sợi đốt}
+		{Bếp hồng ngoại}
+		\loigiai{
+			Trong loa điện, lực từ của nam châm tác dụng lên cuộn dây có dòng điện làm màng loa dao động.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Một đoạn dây dẫn thẳng dài $l$ có dòng điện với cường độ $I$ chạy qua được đặt trong từ trường đều sao cho vectơ cảm ứng từ $\vv{B}$ tạo với chiều dòng điện một góc $\alpha$. Khi đó lực từ tác dụng lên đoạn dây được xác định theo biểu thức
+		\choice
+		{\True $F=BIl\sin\alpha$}
+		{$F=BIl\cot\alpha$}
+		{$F=BIl\cos\alpha$}
+		{$F=BIl\tan\alpha$}
+		\loigiai{
+			Độ lớn lực từ tác dụng lên đoạn dây dẫn: $F=BIl\sin\alpha$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một khung dây phẳng diện tích $20~\text{cm}^2$ đặt trong từ trường đều có cảm ứng từ $B=0{,}05$~T. Vectơ cảm ứng từ hợp với mặt phẳng khung dây một góc $30^\circ$. Từ thông qua khung dây là
+		\choice
+		{\True $5\cdot 10^{-5}$~Wb}
+		{$5\cdot 10^{6}$~Wb}
+		{$5\cdot 10^{5}$~Wb}
+		{$5\cdot 10^{-6}$~Wb}
+		\loigiai{
+			$\vv{B}$ hợp với pháp tuyến góc $60^\circ$: $\Phi=BS\cos 60^\circ=0{,}05\cdot 20\cdot 10^{-4}\cdot 0{,}5=5\cdot 10^{-5}$~Wb.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.4\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Đặc điểm nào sau đây \textbf{không} phải của đường sức từ?
+		\choice
+		{Là những đường cong khép kín}
+		{Qua mỗi điểm trong từ trường chỉ vẽ được một đường sức}
+		{\True Các đường sức từ có thể cắt nhau tại nơi từ trường mạnh}
+		{Chiều của đường sức đi ra từ cực Bắc và đi vào cực Nam của nam châm}
+		\loigiai{
+			Các đường sức từ không cắt nhau; nếu cắt nhau thì tại giao điểm $\vv{B}$ có hai hướng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Đồng vị phóng xạ cobalt-60 (${}^{60}_{27}\text{Co}$) phát ra tia gamma năng lượng cao, được dùng rộng rãi để tiêu diệt tế bào ung thư hoặc tiệt trùng thực phẩm. Chọn phát biểu đúng.
+		\choice
+		{Để bảo vệ nhân viên y tế khỏi tia gamma, người ta thường dùng các tấm chắn bằng nhựa mỏng hoặc giấy}
+		{\True Sau một chu kì bán rã, số lượng hạt nhân ${}^{60}\text{Co}$ trong nguồn phóng xạ sẽ giảm đi một nửa}
+		{Việc tiệt trùng thực phẩm bằng tia gamma sẽ làm thực phẩm đó trở thành nguồn phóng xạ nguy hiểm cho người ăn}
+		{Tia gamma có bản chất là sóng điện từ bước sóng cực dài, có khả năng đâm xuyên rất mạnh}
+		\loigiai{
+			Sau mỗi chu kì bán rã, số hạt nhân phóng xạ còn lại một nửa; tia gamma có bước sóng rất ngắn, phải chắn bằng chì, bê tông dày và không làm thực phẩm thành chất phóng xạ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.3\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một khung dây dẫn kín đặt trong từ trường đều có cảm ứng từ $\vv{B}$. Hiện tượng cảm ứng điện từ \textbf{không} xảy ra khi
+		\choice
+		{\True khung dây chuyển động tịnh tiến dọc theo các đường sức từ}
+		{độ lớn cảm ứng từ $B$ thay đổi theo thời gian}
+		{khung dây quay quanh một trục nằm trong mặt phẳng khung dây}
+		{diện tích của khung dây thay đổi (bị bóp méo) trong từ trường}
+		\loigiai{
+			Khung tịnh tiến dọc theo đường sức của từ trường đều thì từ thông qua khung không đổi, không có dòng điện cảm ứng.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{21\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-SonLa-SoGD-Lan2-2]
+
+	\begin{ex}%[VL12-C2-VD]
+		Một trong những bệnh nghề nghiệp của thợ lặn có tỉ lệ gây tử vong và mất sức lao động cao là bệnh giảm áp. Nếu một thợ lặn từ độ sâu $30$~m nổi lên mặt nước quá nhanh, nitrogen (N$_2$) không vận chuyển kịp đến phổi giải phóng ra ngoài sẽ tích lại trong cơ thể hình thành các bọt khí gây nguy hiểm. Giả sử sự chênh lệch nhiệt độ là không đáng kể. Cho biết khối lượng riêng của nước là $1000~\text{kg/m}^3$, áp suất khí quyển là $1{,}013\cdot 10^5$~Pa. Lấy $g=9{,}8~\text{m/s}^2$.
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{\True Khi thợ lặn nổi lên mặt nước quá nhanh, áp suất giảm đột ngột làm các bọt khí nitrogen nở ra, to dần gây tắc mạch chèn ép các tế bào thần kinh gây liệt, tổn thương các cơ quan}
+		{\True Khi nổi lên mặt nước áp suất tại mặt nước khi đó bằng áp suất khí quyển $1{,}013\cdot 10^5$~Pa}
+		{Áp suất người thợ lặn phải chịu khi ở độ sâu $30$~m là $294$~kPa}
+		{Thể tích của bọt khí nitrogen (coi là khí lí tưởng) khi lên đến mặt nước lớn gấp $2{,}9$ lần thể tích của bọt khí này ở độ sâu $30$~m}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Áp suất giảm đột ngột, bọt khí nitrogen nở ra gây tắc mạch, chèn ép mô và tế bào thần kinh.
+				\itemch \textbf{Đúng.} Tại mặt nước $p_0=1{,}013\cdot 10^5$~Pa.
+				\itemch \textbf{Sai.} $p=p_0+\rho gh=1{,}013\cdot 10^5+1000\cdot 9{,}8\cdot 30=3{,}953\cdot 10^5~\text{Pa}\approx 395$~kPa.
+				\itemch \textbf{Sai.} Đẳng nhiệt: $\dfrac{V_0}{V}=\dfrac{p}{p_0}=\dfrac{3{,}953\cdot 10^5}{1{,}013\cdot 10^5}\approx 3{,}9$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{23.2\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Một nhóm học sinh thực hiện thí nghiệm khảo sát quá trình làm nguội của nước. Nhóm sử dụng hai chậu giống nhau, mỗi chậu chứa $2$~kg nước nóng có nhiệt độ ban đầu là $50\,^\circ\text{C}$. Thí nghiệm được tiến hành trong phòng có nhiệt độ $25\,^\circ\text{C}$. Chậu 1 để nguội tự nhiên và chậu 2 dùng quạt thổi gió đều trên mặt thoáng. Trong quá trình đo, học sinh liên tục khuấy nhẹ và đều nước trong cả hai chậu và phòng lặng gió. Kết quả đo nhiệt độ nước sau mỗi phút được ghi lại ở bảng bên dưới:
+		% giuhinh
+		\par\smallskip\noindent
+		\begin{minipage}[c]{0.36\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.62,line join=round,line cap=round,font=\footnotesize]
+				% tường, cửa sổ
+				\fill[VLla!18!yellow!12] (0,0) rectangle (8.4,4.6);
+				\fill[gray!30] (7.25,1.8) rectangle (8.4,4.6);
+				\foreach \y in {2.0,2.18,...,4.5}{\draw[gray!55,thin] (7.3,\y)--(8.4,\y);}
+				% bảng trắng
+				\filldraw[fill=white,draw=gray!60,thick] (0,2.2) rectangle (2.7,4.6);
+				\fill[gray!45] (0,2.12) rectangle (2.7,2.22);
+				% tờ đồ thị
+				\filldraw[fill=white,draw=gray!55] (3.4,3.1) rectangle (5.6,4.55);
+				\draw[gray!70,thin] (3.65,3.3)--(3.65,4.2) (3.65,3.3)--(5.4,3.3);
+				\draw[black!70,semithick] (3.8,4.1)--(4.3,3.75)--(4.75,3.95)--(5.25,3.4);
+				\draw[gray!60,thin] (3.9,4.38)--(5.1,4.38);
+				% mặt bàn
+				\fill[black!65] (0,1.55) rectangle (4.6,1.78);
+				\fill[black!80] (0,0) rectangle (4.6,1.55);
+				% bình tam giác
+				\foreach \x in {0.55,1.55}{
+					\fill[VLxanh!35] (\x-0.4,1.78)--(\x+0.4,1.78)--(\x+0.18,2.1)--(\x-0.18,2.1)--cycle;
+					\draw[gray!65,thick] (\x-0.08,2.75)--(\x-0.08,2.35)--(\x-0.42,1.78)--(\x+0.42,1.78)--(\x+0.08,2.35)--(\x+0.08,2.75);}
+				% ống đong
+				\fill[VLxanh!25] (2.32,1.78) rectangle (2.52,2.4);
+				\draw[gray!65,thick] (2.32,3.3)--(2.32,1.78)--(2.52,1.78)--(2.52,3.3);
+				\fill[gray!55] (2.18,1.78) rectangle (2.66,1.85);
+				\foreach \y in {2.0,2.2,...,3.2}{\draw[gray!70,very thin] (2.32,\y)--(2.42,\y);}
+				% giá thí nghiệm
+				\fill[gray!60] (2.95,1.78) rectangle (3.75,1.88);
+				\draw[gray!70,line width=1.2pt] (3.35,1.88)--(3.35,3.2) (3.0,2.85)--(3.7,2.85);
+				% cây trong chậu
+				\fill[VLgo!80!black] (6.25,1.1)--(7.05,1.1)--(6.95,0.4)--(6.35,0.4)--cycle;
+				\draw[VLla!50!black,thick] (6.65,1.1)--(6.6,3.6);
+				\foreach \x/\y/\a in {6.6/3.6/70,6.62/3.0/25,6.6/2.7/155,6.63/2.2/30,6.6/1.9/160,6.6/3.3/140}{
+					\fill[VLla!70!black,rotate around={\a:(\x,\y)}] (\x,\y) .. controls +(0.25,0.22) and +(-0.2,0.2) .. ++(0.85,0) .. controls +(-0.2,-0.2) and +(0.25,-0.22) .. (\x,\y);}
+				% học sinh nữ
+				\fill[white] (2.6,0)..controls (2.65,0.7) and (3.0,0.95)..(3.6,1.0)--(4.6,1.0)..controls (5.1,0.95) and (5.35,0.6)..(5.4,0)--cycle;
+				\draw[gray!60] (2.6,0)..controls (2.65,0.7) and (3.0,0.95)..(3.6,1.0)--(4.6,1.0)..controls (5.1,0.95) and (5.35,0.6)..(5.4,0);
+				\fill[VLdo] (4.1,0.88)--(3.8,0.68)--(3.8,1.02)--cycle (4.1,0.88)--(4.4,0.68)--(4.4,1.02)--cycle;
+				\fill[VLdo!80!black] (4.1,0.86) circle (0.08);
+				\fill[orange!22!white] (3.92,0.95) rectangle (4.28,1.25);
+				\fill[black!80] (3.1,0.5)..controls (3.0,1.4) and (3.0,2.2)..(3.4,2.65)..controls (3.8,3.0) and (4.5,3.0)..(4.85,2.6)..controls (5.2,2.2) and (5.15,1.4)..(5.05,0.5)--(4.8,0.55)..controls (4.85,1.4) and (4.8,1.9)..(4.6,2.1)--(3.6,2.1)..controls (3.4,1.9) and (3.35,1.4)..(3.4,0.55)--cycle;
+				\fill[orange!22!white] (4.1,1.75) ellipse (0.62 and 0.68);
+				\fill[black!80] (3.45,2.05)..controls (3.6,2.75) and (4.6,2.75)..(4.75,2.05)..controls (4.4,2.35) and (3.8,2.35)..(3.45,2.05);
+				\fill[black!85] (3.85,1.8) ellipse (0.07 and 0.1) (4.35,1.8) ellipse (0.07 and 0.1);
+				\draw[VLdo!70!black,thin] (3.98,1.38)..controls (4.05,1.33) and (4.15,1.33)..(4.22,1.38);
+				\fill[VLdo!25] (3.7,1.55) circle (0.09) (4.5,1.55) circle (0.09);
+				\fill[VLdo] (3.12,0.5) circle (0.08) (5.04,0.5) circle (0.08);
+				% học sinh nam
+				\fill[VLxanh!65] (5.5,0)..controls (5.55,0.55) and (5.85,0.8)..(6.3,0.85)--(7.1,0.85)..controls (7.55,0.8) and (7.8,0.5)..(7.85,0)--cycle;
+				\fill[white] (6.5,0.85)--(6.7,0.62)--(6.9,0.85)--cycle;
+				\fill[orange!22!white] (6.53,0.8) rectangle (6.87,1.05);
+				\fill[orange!22!white] (6.7,1.6) ellipse (0.6 and 0.66);
+				\fill[black!85] (6.05,1.7)..controls (5.95,2.3) and (6.4,2.6)..(6.85,2.55)..controls (7.3,2.5) and (7.5,2.1)..(7.35,1.65)..controls (7.2,1.95) and (6.9,2.05)..(6.75,1.95)..controls (6.55,2.15) and (6.3,2.05)..(6.15,1.75)--cycle;
+				\fill[black!85] (6.45,1.6) ellipse (0.07 and 0.1) (6.95,1.6) ellipse (0.07 and 0.1);
+				\draw[VLdo!70!black,thin] (6.6,1.2)..controls (6.67,1.15) and (6.77,1.15)..(6.84,1.2);
+				\draw[gray!60] (0,0) rectangle (8.4,4.6);
+			\end{tikzpicture}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.62\linewidth}
+			\centering
+			{\footnotesize
+			\renewcommand{\arraystretch}{1.25}
+			\begin{tabular}{|l|c|c|c|c|c|}
+				\hline
+				Thời gian (phút) & $1$ & $2$ & $3$ & $4$ & $5$\\ \hline
+				Nhiệt độ chậu 1 ($^\circ$C) & $46{,}0$ & $43{,}5$ & $41{,}5$ & $40{,}0$ & $39{,}0$\\ \hline
+				Nhiệt độ chậu 2 ($^\circ$C) & $43{,}0$ & $39{,}0$ & $36{,}0$ & $34{,}0$ & $32{,}3$\\ \hline
+			\end{tabular}}
+		\end{minipage}
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{Trong thí nghiệm này, nước trong chậu thu nhiệt lượng từ môi trường xung quanh để bay hơi}
+		{\True Việc khuấy nhẹ nước liên tục giúp duy trì sự cân bằng nhiệt cục bộ, đảm bảo nhiệt độ tại mọi điểm trong lòng chất lỏng là đồng đều khi đo}
+		{Tốc độ giảm nhiệt độ của nước ở chậu 2 nhanh hơn chậu 1 là do luồng gió từ quạt làm giảm tốc độ bay hơi trên bề mặt nước}
+		{Độ giảm nội năng của nước trong chậu 2 từ thời điểm ban đầu đến phút thứ 5 nhỏ hơn chậu 1}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Nước nguội đi tức là tỏa nhiệt ra môi trường; nhiệt lượng cho sự bay hơi lấy từ chính nước trong chậu.
+				\itemch \textbf{Đúng.} Khuấy đều làm nhiệt độ nước như nhau ở mọi điểm nên số đo tin cậy.
+				\itemch \textbf{Sai.} Gió từ quạt làm tăng tốc độ bay hơi nên nước ở chậu 2 nguội nhanh hơn.
+				\itemch \textbf{Sai.} $\Delta U=mc\Delta t$, cùng $m$: $\Delta t_2=50-32{,}3=17{,}7\,^\circ\text{C}>\Delta t_1=50-39=11\,^\circ\text{C}$ nên độ giảm nội năng ở chậu 2 lớn hơn.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{24.9\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		% giuhinh
+		\begin{minipage}[t]{0.48\linewidth}
+			Trong tiết thực hành Vật lí, một nhóm học sinh tiến hành thí nghiệm nghiên cứu hiện tượng cảm ứng điện từ. Bộ thiết bị gồm: nam châm điện (có lõi sắt non), cuộn dây dẫn kín, điện kế nhạy, biến trở, khóa K, nguồn điện một chiều và các dây nối. Sơ đồ lắp đặt được mô tả như hình bên.
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.42\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.8,baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
+				% nền bàn
+				\fill[gray!8] (-0.2,-0.35) rectangle (8.4,4.6);
+				% (5) nguồn điện
+				\begin{scope}[shift={(4.0,2.55)}]
+					\fill[gray!35] (0,1.5)--(3.4,1.5)--(3.65,1.68)--(0.25,1.68)--cycle;
+					\fill[gray!45] (3.4,0)--(3.65,0.18)--(3.65,1.68)--(3.4,1.5)--cycle;
+					\shade[top color=gray!5,bottom color=gray!28] (0,0) rectangle (3.4,1.5);
+					\draw[gray!60,thin] (0,0) rectangle (3.4,1.5);
+					\draw[black!70,line width=1.6pt,rounded corners=2pt] (1.05,1.62)--(1.1,1.95)--(2.6,1.95)--(2.65,1.62);
+					\fill[VLxanh!60] (1.9,1.2) rectangle (3.2,1.3);
+					\fill[gray!50] (0.35,0.95) rectangle (1.5,1.15);
+					\foreach \x/\c in {0.45/black,0.75/VLdo,1.25/VLdo,1.55/black}{\filldraw[fill=\c,draw=black!70] (\x,0.5) circle (0.075);}
+					\VLnumvan{2.75}{0.6}{0.24}
+					\fill[black!75] (0.2,-0.08) rectangle (0.5,0) (2.9,-0.08) rectangle (3.2,0);
+				\end{scope}
+				% (6) biến trở
+				\begin{scope}[shift={(3.4,1.05)}]
+					\fill[orange!75!VLgo] (0,0)--(2.4,0)--(2.6,0.16)--(0.2,0.16)--cycle;
+					\shade[top color=orange!70!VLgo,bottom color=orange!60!black] (0,-0.18) rectangle (2.4,0);
+					\fill[gray!65] (0.25,0.12) rectangle (0.4,0.75) (2.0,0.12) rectangle (2.15,0.75);
+					\shade[top color=gray!25,bottom color=gray!55] (0.4,0.25) rectangle (2.0,0.62);
+					\draw[VLdong!45!black,very thin] foreach \x in {0.45,0.5,...,1.96}{(\x,0.25)--(\x+0.02,0.62)};
+					\draw[gray!70,line width=1.3pt] (0.3,0.85)--(2.1,0.85);
+					\fill[black!80] (1.05,0.62) rectangle (1.4,0.98);
+					\coordinate (B6t) at (0.32,0.75);
+					\coordinate (B6p) at (2.08,0.75);
+				\end{scope}
+				% (4) khóa K
+				\begin{scope}[shift={(6.45,1.05)}]
+					\fill[orange!75!VLgo] (0,0)--(1.3,0)--(1.5,0.16)--(0.2,0.16)--cycle;
+					\shade[top color=orange!70!VLgo,bottom color=orange!60!black] (0,-0.18) rectangle (1.3,0);
+					\fill[gray!60] (0.25,0.1) rectangle (0.45,0.3) (0.95,0.1) rectangle (1.15,0.3);
+					\draw[gray!75,line width=1.3pt] (0.35,0.3)--(1.0,0.75);
+					\fill[black!85] (1.0,0.75) circle (0.07);
+					\draw[black!85,line width=2pt] (1.0,0.75)--(1.15,0.95);
+					\coordinate (K1) at (0.35,0.25);
+					\coordinate (K2) at (1.05,0.25);
+				\end{scope}
+				% (3) điện kế
+				\begin{scope}[shift={(0,0.2)},scale=0.52]
+					\VLdienke{1}
+					\VLcoc{0.75}{0.45}{black}
+					\VLcoc{3.25}{0.45}{VLdo}
+					\coordinate (D1) at (0.75,0.9);
+					\coordinate (D2) at (3.25,0.9);
+					\coordinate (D3) at (2,4.05);
+				\end{scope}
+				% (2), (1) cuộn dây và nam châm điện
+				\SLcuonde{2.35}{0.25}{0.8}{0.65}
+				\SLcuonde{3.25}{0.25}{0.8}{0.65}
+				\fill[gray!55] (3.15,0.48) rectangle (3.25,0.72);
+				\coordinate (C2a) at (2.5,0.9); \coordinate (C2b) at (2.95,0.9);
+				\coordinate (C1a) at (3.45,0.9); \coordinate (C1b) at (3.9,0.9);
+				% dây nối
+				\draw[VLxanh,line width=0.9pt] (D1) .. controls +(-0.3,-0.9) and +(-0.4,-0.6) .. (1.6,-0.15) .. controls +(0.5,0.3) and +(0,-0.6) .. (C2a);
+				\draw[VLdo,line width=0.9pt] (D2) .. controls +(0.1,0.4) and +(-0.3,0.4) .. (C2b);
+				\draw[VLxanh,line width=0.9pt] (C1a) .. controls +(0,0.9) and +(-0.6,-0.4) .. (3.6,2.3) .. controls +(0.4,0.3) and +(0,-0.5) .. (4.45,3.05);
+				\draw[VLdo,line width=0.9pt] (C1b) .. controls +(0.2,-0.9) and +(-1.2,-0.4) .. (5.6,-0.05) .. controls +(1.0,0.3) and +(0,-0.6) .. (K1);
+				\draw[VLdo,line width=0.9pt] (B6t) .. controls +(-0.2,0.6) and +(0,-0.6) .. (4.75,3.05);
+				\draw[VLdo,line width=0.9pt] (B6p) .. controls +(0.1,0.6) and +(0,-0.6) .. (5.25,3.05);
+				\draw[VLxanh,line width=0.9pt] (K2) .. controls +(0.4,0.9) and +(0,-0.9) .. (5.55,3.05);
+				% nhãn
+				\node[above,inner sep=1.5pt] at ($(D3)+(0,0.1)$) {(3)};
+				\draw[thin] (2.75,0.25)--(2.65,-0.15) node[below,inner sep=1pt] {(2)};
+				\draw[thin] (3.65,0.25)--(3.75,-0.15) node[below,inner sep=1pt] {(1)};
+				\draw[thin] (4.6,1.05)--(4.6,0.45) node[below,inner sep=1pt] {(6)};
+				\draw[thin] (7.0,0.87)--(7.4,0.4) node[below,inner sep=1pt] {(4)};
+				\node[above,inner sep=1.5pt] at (5.85,4.5) {(5)};
+			\end{tikzpicture}
+		\end{minipage}
+		\NeedspaceBang{15.9\baselineskip}%
+		\choiceTFt
+		{\True Trong sơ đồ thí nghiệm, các thiết bị (1), (2), (3), (4), (5) và (6) lần lượt tương ứng với: nam châm điện, cuộn dây dẫn, điện kế, khóa K, nguồn điện một chiều và biến trở}
+		{\True Khi thực hiện các thao tác: đóng khóa K hoặc ngắt khóa K hoặc dịch chuyển con chạy của biến trở, kim điện kế đều lệch khỏi vạch số 0, chứng tỏ trong cuộn dây (2) xuất hiện dòng điện cảm ứng}
+		{Trong suốt thời gian khóa K đóng và giữ nguyên con chạy của biến trở, kim điện kế luôn lệch khỏi vạch số 0 vì cuộn dây (2) được đặt trong từ trường của nam châm điện}
+		{\True Nếu giữ nguyên các điều kiện khác và chỉ tăng số vòng dây của cuộn dây (2), thì độ lệch cực đại của kim điện kế khi đóng hoặc ngắt khóa K sẽ luôn lớn hơn so với lúc đầu do suất điện động cảm ứng trong cuộn dây tăng lên}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Theo hình: (1) có lõi sắt, nối với nguồn (5) qua biến trở (6) và khóa K (4) là nam châm điện; (2) nối với điện kế (3) là cuộn dây dẫn.
+				\itemch \textbf{Đúng.} Các thao tác đó làm dòng điện qua nam châm điện thay đổi, từ thông qua cuộn dây (2) biến thiên nên xuất hiện dòng điện cảm ứng.
+				\itemch \textbf{Sai.} Dòng điện qua nam châm điện không đổi, từ thông qua cuộn dây (2) không đổi nên không có dòng điện cảm ứng, kim điện kế chỉ số 0.
+				\itemch \textbf{Đúng.} $|e|=N\left|\dfrac{\Delta\Phi}{\Delta t}\right|$ tăng khi số vòng $N$ tăng.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[4.3\baselineskip]{19\baselineskip}
+	\begin{ex}%[VL12-C4-VD]
+		Arktika là tàu phá băng chạy bằng năng lượng hạt nhân của Nga, tàu được trang bị hai lò phản ứng hạt nhân RITM-200, mỗi lò có công suất nhiệt là $175$~MW, giúp tàu phá lớp băng dày đến $3$~m. Lò phản ứng này sử dụng năng lượng từ sự phân hạch của ${}^{235}_{\phantom{2}92}\text{U}$, mỗi phân hạch sinh ra năng lượng trung bình $203$~MeV. Cho khối lượng mol của nguyên tử ${}^{235}_{\phantom{2}92}\text{U}$ là $235$~g/mol.
+		\NeedspaceBang{14.9\baselineskip}%
+		\choiceTFt
+		{Năng lượng trung bình tỏa ra từ một phân hạch hạt nhân ${}^{235}_{\phantom{2}92}\text{U}$ là $324{,}8\cdot 10^{-19}$~J}
+		{Nếu lò phản ứng hoạt động liên tục với công suất trên, trong $1$ ngày đêm, khối lượng ${}^{235}_{\phantom{2}92}\text{U}$ mà mỗi lò phản ứng tiêu thụ xấp xỉ $1{,}82$~kg}
+		{Biết mỗi kg than đá khi đốt cháy hoàn toàn sẽ tỏa ra nhiệt lượng $27\cdot 10^6$~J. Năng lượng nhiệt tỏa ra khi $1$~kg ${}^{235}_{\phantom{2}92}\text{U}$ phân hạch hoàn toàn bằng năng lượng nhiệt tỏa ra khi đốt cháy hoàn toàn khoảng $3$ tấn than đá}
+		{Giả sử hiệu suất chuyển hóa năng lượng nhiệt từ lò phản ứng dùng để làm tan chảy băng là $25\%$. Cho nhiệt nóng chảy riêng của băng ở $0\,^\circ\text{C}$ là $334$~kJ/kg, nhiệt dung riêng của băng là $2100$~J/(kg.K). Với năng lượng nhiệt tỏa ra khi $1$~kg ${}^{235}_{\phantom{2}92}\text{U}$ phân hạch hoàn toàn sẽ làm nóng chảy khối băng ở nhiệt độ $-10\,^\circ\text{C}$ có khối lượng $6{,}2\cdot 10^7$~kg}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} $E=203\cdot 1{,}6\cdot 10^{-13}=3{,}248\cdot 10^{-11}~\text{J}=324{,}8\cdot 10^{-13}$~J.
+				\itemch \textbf{Sai.} $N=\dfrac{Pt}{E}=\dfrac{175\cdot 10^6\cdot 86\,400}{3{,}248\cdot 10^{-11}}\approx 4{,}655\cdot 10^{23}$;\\
+				$m=\dfrac{N}{N_A}M=\dfrac{4{,}655\cdot 10^{23}}{6{,}02\cdot 10^{23}}\cdot 235\approx 182~\text{g}=0{,}182$~kg.
+				\itemch \textbf{Sai.} $E_1=\dfrac{1000}{235}\cdot 6{,}02\cdot 10^{23}\cdot 3{,}248\cdot 10^{-11}\approx 8{,}32\cdot 10^{13}$~J;\\
+				$m_{\text{than}}=\dfrac{8{,}32\cdot 10^{13}}{27\cdot 10^6}\approx 3{,}08\cdot 10^6~\text{kg}\approx 3080$ tấn.
+				\itemch \textbf{Sai.} $m=\dfrac{0{,}25E_1}{c\Delta t+\lambda}=\dfrac{0{,}25\cdot 8{,}32\cdot 10^{13}}{2100\cdot 10+334\cdot 10^3}\approx 5{,}86\cdot 10^7$~kg.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{11.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-SonLa-SoGD-Lan2-3]
+
+	\begin{ex}%[VL12-C2-VD]
+		Chạy bộ vào mỗi buổi sáng là hoạt động luyện tập rất tốt cho sức khỏe. Trung bình, một người khi chạy bộ sẽ cần hít vào một lượng khí xác định trong mỗi nhịp thở. Giả sử ở điều kiện tiêu chuẩn (áp suất $1{,}013\cdot 10^5$~Pa và nhiệt độ $0\,^\circ\text{C}$), khối lượng không khí hít vào mỗi nhịp thở là $1$~g. Biết khối lượng riêng của không khí ở điều kiện tiêu chuẩn là $1{,}29~\text{kg/m}^3$ và coi khối lượng không khí hít vào trong mỗi nhịp thở là bằng nhau. Tính thể tích không khí cần hít vào trong mỗi nhịp thở khi người đó chạy bộ ở nơi có áp suất $100$~kPa và nhiệt độ $20\,^\circ\text{C}$ theo đơn vị ml (kết quả làm tròn đến hàng đơn vị).
+		\par
+		\shortans[oly]{843}
+		\loigiai{
+			$V_0=\dfrac{m}{\rho_0}=\dfrac{10^{-3}}{1{,}29}\approx 7{,}75\cdot 10^{-4}~\text{m}^3$.
+			\[\dfrac{p_0V_0}{T_0}=\dfrac{pV}{T}\Rightarrow V=V_0\cdot\dfrac{p_0T}{pT_0}=7{,}75\cdot 10^{-4}\cdot\dfrac{1{,}013\cdot 10^5\cdot 293}{10^5\cdot 273}\approx 8{,}43\cdot 10^{-4}~\text{m}^3\approx 843~\text{ml}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.6\baselineskip}
+	\begin{ex}%[VL12-C4-VD]
+		Các nhà khoa học đã xác định được độ phóng xạ của $1$~g mẫu carbon trong cơ thể sinh vật sống là $0{,}25$~Bq. Biết rằng, trong số các đồng vị của carbon có trong mẫu, chỉ có ${}^{14}_{\phantom{1}6}\text{C}$ là đồng vị phóng xạ với chu kì bán rã là $5730$ năm. Vào ngày 19/9/1991, trong khi đang tìm đường vượt qua dãy Otztal Alps, hai nhà leo núi người Đức đã phát hiện thấy xác ướp người cổ được bảo quản hầu như nguyên vẹn trong băng tuyết tại Hauslabjoch, khu vực giữa biên giới Áo và Italia. Xác ướp đó được đặt tên là người băng Otzi. Tại thời điểm này, các nhà khoa học đã đo được độ phóng xạ của $1$~g mẫu carbon trong cơ thể người băng Otzi là $0{,}12$~Bq. Xác định niên đại của người băng đó ở thời điểm được phát hiện theo đơn vị năm (kết quả làm tròn đến hàng đơn vị).
+		\par
+		\shortans[oly]{6067}
+		\loigiai{
+			$H=H_0\cdot 2^{-\frac{t}{T}}\Rightarrow t=T\log_2\dfrac{H_0}{H}=5730\cdot\log_2\dfrac{0{,}25}{0{,}12}\approx 6067$ năm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{14.3\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một khung dây hình vuông có diện tích $1~\text{m}^2$ chuyển động thẳng đều với tốc độ $1$~m/s vào trong một vùng từ trường đều giới hạn và có phương vuông góc với đường sức từ như hình vẽ. Biết cảm ứng từ có độ lớn $0{,}1$~T, khung dây có điện trở $2~\Omega$. Trong khoảng thời gian khung dây đi vào vùng có từ trường thì cường độ dòng điện cảm ứng qua khung dây có độ lớn là bao nhiêu ampe (A)?
+		\begin{center}
+			\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
+				\fill[VLxanh!8] (0.96,0.05) rectangle (4.25,3.95);
+				\draw[thick] (0.96,0.05) rectangle (4.25,3.95);
+				\foreach \i in {0,...,8}{\foreach \j in {0,...,5}{\ifnum\i=3\ifnum\j=3\else\VLcham{1.2+0.37*\i}{0.35+0.66*\j}\fi\else\VLcham{1.2+0.37*\i}{0.35+0.66*\j}\fi}}
+				\node[VLxanh!85!black] at (2.95,3.32) {$\vv{B}$};
+				\draw[VLdong!80!black,thick] (0.1,1.15) rectangle (1.8,2.85);
+				\draw[VLmui,thick,VLluc] (1.8,2.0)--(2.9,2.0);
+				\node[VLluc] at (2.32,2.27) {$\vv{v}$};
+			\end{tikzpicture}
+		\end{center}
+		\shortans[oly]{0{,}05}
+		\loigiai{
+			Cạnh khung $l=1$~m. Khi khung đi vào từ trường: $e=Blv=0{,}1\cdot 1\cdot 1=0{,}1$~V.\\
+			$I=\dfrac{e}{R}=\dfrac{0{,}1}{2}=0{,}05$~A.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một sóng điện từ có tần số $90$~MHz truyền trong không khí với tốc độ $3\cdot 10^8$~m/s. Bước sóng của sóng điện từ này bằng bao nhiêu mét (m) (kết quả làm tròn đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{3{,}3}
+		\loigiai{
+			$\lambda=\dfrac{c}{f}=\dfrac{3\cdot 10^8}{90\cdot 10^6}\approx 3{,}3$~m.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Hạt nhân ${}^{10}_{\phantom{1}4}\text{Be}$ có khối lượng $10{,}0135$~amu. Cho biết khối lượng của neutron và proton lần lượt là $1{,}0087$~amu và $1{,}0073$~amu, $1~\text{amu}=931{,}5~\text{MeV}/c^2$. Năng lượng liên kết riêng của hạt nhân ${}^{10}_{\phantom{1}4}\text{Be}$ bằng bao nhiêu MeV/nucleon (kết quả làm tròn đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{6{,}3}
+		\loigiai{
+			$\Delta m=4\cdot 1{,}0073+6\cdot 1{,}0087-10{,}0135=0{,}0679$~amu.\\
+			$W_{\text{lkr}}=\dfrac{\Delta m c^2}{A}=\dfrac{0{,}0679\cdot 931{,}5}{10}\approx 6{,}3$~MeV/nucleon.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.9\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một nhân viên spa muốn pha nước tắm cho các bé, nhân viên này mở vòi nước nóng ở $90\,^\circ\text{C}$ và vòi nước lạnh ở $10\,^\circ\text{C}$ đồng thời chảy vào bể đã chứa sẵn $50$ lít nước ở $20\,^\circ\text{C}$. Biết lưu lượng của mỗi vòi là $0{,}25$ lít/giây. Hệ thống massager được mở liên tục trong quá trình bơm nước vào bể để tạo dòng nước, khuấy đều để nhiệt độ nước tăng đều. Bỏ qua sự truyền nhiệt với bể chứa và môi trường. Coi khối lượng riêng của nước nóng và lạnh đều bằng $997~\text{kg/m}^3$. Để thu được nước có nhiệt độ $40\,^\circ\text{C}$ thì nhân viên cần mở hai vòi chảy liên tục trong bao nhiêu giây?
+		\par
+		\shortans[oly]{200}
+		\loigiai{
+			Sau thời gian $t$, mỗi vòi chảy vào bể thể tích $V=0{,}25t$ (lít). Các khối nước cùng khối lượng riêng, cùng nhiệt dung riêng nên cân bằng nhiệt:
+			\[V(90-40)=V(40-10)+50\cdot(40-20)\Rightarrow V=50~\text{lít}\Rightarrow t=\dfrac{50}{0{,}25}=200~\text{s}.\]
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-SonLa-SoGD-Lan2-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-SonLa-SoGD-Lan2-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-SonLa-SoGD-Lan2-3}
+\end{document}

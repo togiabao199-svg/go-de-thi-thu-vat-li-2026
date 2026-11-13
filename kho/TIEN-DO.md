@@ -12,7 +12,8 @@
 - **Lô W04 + W05 (13/11/2026) — xong, thầy duyệt 13/11/2026 (PR #7, một nhánh, một PR)**: 8 đề Word, Opus, 8 agent con song song. Phiên chính soát từng đề (kiem-chung, ảnh so hình, bản đề, bản xám), sửa `tools/so_hinh.py` (chạy song song bắt nhầm `hinh.tex` của đề khác), chuyển `\VLchamtron` vào `preamble-vatli-hinh.tex`. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
 - **Lô W06 + W07 (13–14/11/2026) — xong, thầy duyệt 14/11/2026 (PR #8, một nhánh, một PR)**: 8 đề Word, Opus, 8 agent con song song; giữa phiên chạm hạn mức 5 giờ, chạy tiếp sau 17:00 UTC. Phiên chính soát từng đề (kiem-chung, ảnh so hình, bản đề, tự kiểm các câu lệch đáp án), gom 24 macro hình vào `preamble-vatli-hinh.tex` (dựng lại 8 đề, số trang không đổi, đều ĐẠT). Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
 - **Hình thực tiễn các đề đã gõ: chờ phiên vẽ lại riêng** (thầy quyết 13/11/2026: rà và vẽ lại trong một phiên riêng sau khi gõ xong hết đề, theo mục HÌNH VẼ — "Vẽ chi tiết, trau chuốt" trong `CLAUDE.md`; các lô gõ đề ưu tiên đáp án, lời giải, sơ đồ, đồ thị, dàn trang). Lô W06 + W07 đã vẽ chi tiết một phần trước khi thầy quyết.
-- **Tiếp theo**: lô W08 + W09 (Opus, song song, 8 đề một PR): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W08 và W09 (8 đề) trong phiên này, chạy song song, chung một nhánh và một PR.`
+- **Lô W08 + W09 + W10 (13/11/2026) — xong, thầy duyệt 14/11/2026 (PR #9, một nhánh, một PR)**: 13 đề Word (hết nhóm đề Word), Opus, tối đa 8 agent con chạy cùng lúc (8 đề W08 + W09 trước, 5 đề W10 vào lần lượt khi có agent xong); chạy khoảng 1 giờ 15 phút. Phiên chính soát từng đề (kiem-chung, ảnh so hình, bản đề, tự kiểm các câu lệch đáp án và các hình sửa), sửa phương án trùng Phú Thọ Lần 2 I.2. Không có macro mới dùng chung (chỉ macro một đề, để trong file đề). Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
+- **Tiếp theo**: lô P01 + P02 (Opus mức Cao, đề PDF tự giải, 8 đề một PR): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô P01 và P02 (8 đề) trong phiên này, chạy song song, chung một nhánh và một PR.` Hết các lô P: phiên Fable giải lại độc lập + vẽ lại hình thực tiễn (mục QUY TRÌNH MỘT LÔ trong `CLAUDE.md`).
 
 ## Quyết định của thầy
 
@@ -40,9 +41,13 @@
 
 - 14/11/2026 — duyệt lô W06 + W07 (PR #8): giữ các câu tính lại như PR sau khi đối chiếu hình gốc — máy phát điện Nghệ An SGD Lần 2 II.4c, Ninh Bình SGD Lần 4 II.3a,d (B tại (1) đi lên, B từ N sang S ⇒ dòng trong AB từ A ra sau đến B, trong BC từ B đến C; hai đề dùng chung một hình nên đáp án gốc không độc lập); Nghệ An Lần 3 I.11 = A; Ninh Bình Lần 3 II.3d Sai (đề cho p₂ = 2p₁, (1), (3) trên đường qua O ⇒ T₃ = 4T₂), III.2 = 5,6 (p₂ = p₀/4 theo ô lưới; chỉ cách đọc này giải được mà không cần giả thiết khí đơn nguyên tử); Ninh Bình Lần 4 I.13 (tự dựng hình), I.17 (sửa hình) giữ như PR; Cụm 9 và Liên trường Lần 5 II.3d giữ đáp án gốc; Cụm 9 I.17 sửa Ra → Rn, Pb → Po. Nghệ An SGD Lần 2 I.2: sửa hình (đổi chiều dòng cảm ứng ở Hình 1) cho chỉ còn đáp án B — làm trong phiên vẽ lại hình. Liên trường Lần 5 II.3 (nhãn đè hình ô tô): sửa trong phiên vẽ lại hình. Tên nguyên tố theo IUPAC như SGK mới (nitrogen, helium...) cho mọi đề (đã ghi `CLAUDE.md`).
 
+- 14/11/2026 — duyệt lô W08 + W09 + W10 (PR #9): giữ toàn bộ như PR sau khi đối chiếu hình gốc — Thái Nguyên Lần 2 III.1 = 400, III.2 = 4,8 theo hình (hình gốc ghi 400/450 kJ, 2,0 °C; lời giải gốc đọc số của bản khác); Thanh Hóa Lần 1 III.4 = 25, III.5 = 141, III.6 = 1149; Thanh Hóa Lần 2 I.14 = B (Tây), II.4 vẽ trục đều 1–6 giữ b) Sai như gốc; Vĩnh Long III.3 = 30, III.4 = 6; Sơn La Lần 3 II.2 c) giữ Sai (số mũ dương trong mệnh đề là ý sai cố ý); các hình tự dựng / sửa hình cho khớp lời đề (Quảng Ngãi I.10, III.3; Hoàng Lê Kha I.13; Quảng Trị III.1; Thanh Hóa Lần 2 II.2, II.3) và sửa phương án trùng (Phú Thọ I.2) giữ như PR. Model: lô P chạy Opus mức Cao; Fable dành cho phiên giải lại độc lập đề PDF và vẽ lại hình thực tiễn (đã ghi `CLAUDE.md`).
+
 ## Chờ thầy quyết
 
 (không còn)
+
+Việc cho phiên vẽ lại hình (ngoài các hình thực tiễn đã gắn `% giuhinh`): Sơn La Lần 2 II.3 dây nối gần (1), (2) khó nhìn; Vĩnh Long II.2 thiếu đường dẫn nhãn "Hạt lệch hướng / không lệch hướng"; kí hiệu trong biển báo (phóng xạ, tia sét, sinh học, chấm than) đang vẽ tay ở 7 đề (Đà Nẵng, Hưng Yên, Lâm Đồng, Ninh Bình Lần 4, Quảng Ngãi, THPT Tây Ninh, Thanh Hóa Lần 1) — gom thành macro chung; macro một đề có thể đưa vào preamble chung: `\VLdaydong` (dây đồng dạng ống, Tuyên Quang Lần 2), `\THproton`/`\THneutron` (Thanh Hóa Lần 2), `\SLcuonde` (cuộn dây trên đế, Sơn La Lần 2).
 
 ## Việc đã xong
 
@@ -57,9 +62,11 @@
 
 - 13–14/11/2026, lô W06 + W07 (thầy duyệt 14/11, PR #8): 8 đề `VatLi2026-LangSon-SoGD-Lan1`, `VatLi2026-NgheAn-LienTruong-Lan5`, `VatLi2026-NgheAn-SoGD-Lan1`, `VatLi2026-NgheAn-SoGD-Lan2` (W06), `VatLi2026-NgheAn-SoGD-Lan3`, `VatLi2026-NinhBinh-Cum9-Lan1`, `VatLi2026-NinhBinh-SoGD-Lan3`, `VatLi2026-NinhBinh-SoGD-Lan4` (W07); bản đề đều ĐẠT. Gom 24 macro hình vào `preamble-vatli-hinh.tex` (danh sách ở `CLAUDE.md`, mục FILE TRONG REPO); `\VLcuonphang` thống nhất theo bản 6 tham số (đổi lời gọi ở Cụm 9), cốc có vành của Ninh Bình Lần 3 đổi tên `\VLbinhthuytinh` (khỏi trùng `\VLcocthuytinh`). `tools/so_hinh.py` nạp thêm `mathrsfs`. `CLAUDE.md` mục HÌNH VẼ thêm yêu cầu vẽ hình thực tiễn chi tiết (áp dụng ở phiên vẽ lại riêng).
 
+- 13/11/2026, lô W08 + W09 + W10 (chờ thầy duyệt): 13 đề `VatLi2026-PhuTho-SoGD-Lan2`, `VatLi2026-QuangNgai-ChuyenLeKhiet-Lan1`, `VatLi2026-QuangTri-SoGD-Lan1`, `VatLi2026-SonLa-SoGD-Lan2` (W08), `VatLi2026-SonLa-SoGD-Lan3`, `VatLi2026-TayNinh-ChuyenHoangLeKha-Lan2`, `VatLi2026-TayNinh-THPTTayNinh`, `VatLi2026-ThaiNguyen-SoGD-Lan2` (W09), `VatLi2026-ThanhHoa-SoGD-Lan1`, `VatLi2026-ThanhHoa-SoGD-Lan2`, `VatLi2026-TuyenQuang-SoGD-Lan1`, `VatLi2026-TuyenQuang-SoGD-Lan2`, `VatLi2026-VinhLong-SoGD-Lan1` (W10); bản đề đều ĐẠT. Hết nhóm đề Word.
+
 ## Số đề
 
-83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề xong, lô W04 + W05 8 đề xong, lô W06 + W07 8 đề xong → còn 48 đề chưa gõ: W08–W10 13 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
+83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề xong, lô W04 + W05 8 đề xong, lô W06 + W07 8 đề xong, lô W08 – W10 13 đề xong (chờ duyệt) → còn 35 đề chưa gõ: P01–P09 (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
 
 ## Kế hoạch lô và trạng thái từng đề
 
@@ -97,19 +104,19 @@ Trạng thái: chưa gõ → đang gõ → chờ duyệt → xong. Cột "Đáp 
 | W07 | `VatLi2026-NinhBinh-Cum9-Lan1` | Ninh Binh - Cum truong THPT so 9 - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; KIỂM TRA II.3d (chiều quấn không rõ, giữ Đ); sửa kí hiệu I.17 (Rn, Po); 13 tikzpicture (9 hình gốc); đề 6 trang, lời giải 10 trang | xong |
 | W07 | `VatLi2026-NinhBinh-SoGD-Lan3` | Ninh Binh - So GDDT - Lan 3.docx | Word | ĐA + LG | KIỂM TRA II.3d (gốc Đ, gõ S), III.2 (gốc 3,7, gõ 5,6 theo lưới); 9 hình; đề 7 trang, lời giải 11 trang | xong |
 | W07 | `VatLi2026-NinhBinh-SoGD-Lan4` | Ninh Binh - So GDDT - Lan 4.docx | Word | ĐA + LG | KIỂM TRA II.3a,d (gốc Đ Đ S S, gõ S Đ S Đ), I.13 (gốc thiếu hình, tự dựng), I.17 (sửa hình S₃′); 8 hình; đề 7 trang, lời giải 11 trang | xong |
-| W08 | `VatLi2026-PhuTho-SoGD-Lan2` | Phu Tho - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W08 | `VatLi2026-QuangNgai-ChuyenLeKhiet-Lan1` | Quang Ngai - THPT chuyen Le Khiet - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W08 | `VatLi2026-QuangTri-SoGD-Lan1` | Quang Tri - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W08 | `VatLi2026-SonLa-SoGD-Lan2` | Son La - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W09 | `VatLi2026-SonLa-SoGD-Lan3` | Son La - So GDDT - Lan 3.docx | Word | ĐA + LG | — | chưa gõ |
-| W09 | `VatLi2026-TayNinh-ChuyenHoangLeKha-Lan2` | Tay Ninh - THPT chuyen Hoang Le Kha - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W09 | `VatLi2026-TayNinh-THPTTayNinh` | Tay Ninh - THPT Tay Ninh.docx | Word | ĐA + LG | — | chưa gõ |
-| W09 | `VatLi2026-ThaiNguyen-SoGD-Lan2` | Thai Nguyen - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W10 | `VatLi2026-ThanhHoa-SoGD-Lan1` | Thanh Hoa - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W10 | `VatLi2026-ThanhHoa-SoGD-Lan2` | Thanh Hoa - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W10 | `VatLi2026-TuyenQuang-SoGD-Lan1` | Tuyen Quang - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W10 | `VatLi2026-TuyenQuang-SoGD-Lan2` | Tuyen Quang - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W10 | `VatLi2026-VinhLong-SoGD-Lan1` | Vinh Long - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
+| W08 | `VatLi2026-PhuTho-SoGD-Lan2` | Phu Tho - So GDDT - Lan 2.docx | Word | ĐA + LG | mã 0202; khớp ĐA 28/28; sửa phương án A câu I.2 (trùng B); KIỂM TRA II.4b (⁴⁰K β⁺); 5 hình; đề 6 trang, lời giải 10 trang | xong |
+| W08 | `VatLi2026-QuangNgai-ChuyenLeKhiet-Lan1` | Quang Ngai - THPT chuyen Le Khiet - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; KIỂM TRA I.10 (gốc thiếu đồ thị, tự dựng); sửa hình III.3 (chiều v); 9 hình; đề 8 trang, lời giải 11 trang | xong |
+| W08 | `VatLi2026-QuangTri-SoGD-Lan1` | Quang Tri - So GDDT - Lan 1.docx | Word | ĐA + LG | mã 0204; khớp ĐA 28/28; 5 hình; đề 6 trang, lời giải 10 trang | xong |
+| W08 | `VatLi2026-SonLa-SoGD-Lan2` | Son La - So GDDT - Lan 2.docx | Word | ĐA + LG | khớp ĐA; II.3a (bảng ĐA Đúng, LG gốc Sai) giữ Đúng theo hình; 3 hình; đề 7 trang, lời giải 10 trang | xong |
+| W09 | `VatLi2026-SonLa-SoGD-Lan3` | Son La - So GDDT - Lan 3.docx | Word | ĐA + LG | khớp ĐA 28/28; KIỂM TRA I.12, III.5; II.2c hằng số 2,2·10¹⁰ s⁻¹; 9 hình; đề 8 trang, lời giải 11 trang | xong |
+| W09 | `VatLi2026-TayNinh-ChuyenHoangLeKha-Lan2` | Tay Ninh - THPT chuyen Hoang Le Kha - Lan 2.docx | Word | ĐA + LG | khớp ĐA 28/28; KIỂM TRA I.3, I.13 (dời B sang phút 10); sửa hình I.17, II.3; 12 hình; đề 8 trang, lời giải 12 trang | xong |
+| W09 | `VatLi2026-TayNinh-THPTTayNinh` | Tay Ninh - THPT Tay Ninh.docx | Word | ĐA + LG | không ghi lần; khớp ĐA 28/28; sửa kí hiệu I.9 (⁷₄Be); 8 hình; đề 6 trang, lời giải 10 trang | xong |
+| W09 | `VatLi2026-ThaiNguyen-SoGD-Lan2` | Thai Nguyen - So GDDT - Lan 2.docx | Word | ĐA + LG | mã 0201; KIỂM TRA III.1 (gốc 200, gõ 400), III.2 (gốc 5,4, gõ 4,8) — hình Word lệch LG gốc; sửa hình III.3; 3 hình; đề 6 trang, lời giải 9 trang | xong |
+| W10 | `VatLi2026-ThanhHoa-SoGD-Lan1` | Thanh Hoa - So GDDT - Lan 1.docx | Word | ĐA + LG | mã 1201; KIỂM TRA III.4 (bảng 99920, gõ 25), III.5 (140 → 141), III.6 (1142 → 1149), I.13 (sửa kí hiệu hình); II.1 `% tachDS`; 11 hình; đề 8 trang, lời giải 11 trang | xong |
+| W10 | `VatLi2026-ThanhHoa-SoGD-Lan2` | Thanh Hoa - So GDDT - Lan 2.docx | Word | ĐA + LG | mã 1204; KIỂM TRA I.14 (gốc C, gõ B), II.2d (thêm M, N), II.3 (chiều CD), II.4 (trục thiếu 5); 11 hình; đề 7 trang, lời giải 11 trang | xong |
+| W10 | `VatLi2026-TuyenQuang-SoGD-Lan1` | Tuyen Quang - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; 5 hình; đề 6 trang, lời giải 10 trang | xong |
+| W10 | `VatLi2026-TuyenQuang-SoGD-Lan2` | Tuyen Quang - So GDDT - Lan 2.docx | Word | ĐA + LG | khớp ĐA 28/28; II.1 `% tachDS`; 5 hình; đề 6 trang, lời giải 9 trang | xong |
+| W10 | `VatLi2026-VinhLong-SoGD-Lan1` | Vinh Long - So GDDT - Lan 1.docx | Word | ĐA + LG | III.3–III.4 bảng ĐA gốc đảo thứ tự, gõ theo lời đề (30, 6); 4 hình; đề 6 trang, lời giải 9 trang | xong |
 | P01 | `VatLi2026-BacNinh-SoGD-Lan1` | Bac Ninh - So GDDT - Lan 1.pdf | PDF chữ | không | — | chưa gõ |
 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan1` | Ha Noi - THPT chuyen KHTN - Lan 1.pdf | PDF chữ | không | — | chưa gõ |
 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan3` | Ha Noi - THPT chuyen KHTN - Lan 3.pdf | PDF chữ | không | — | chưa gõ |
