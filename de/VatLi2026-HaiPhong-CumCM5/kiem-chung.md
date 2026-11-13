@@ -51,4 +51,4 @@ Nguồn: `kho/goc/Hai Phong - Cum chuyen mon so 5.docx` (Sở GD&ĐT Hải Phòn
   - III.1 thanh OM, góc α, $I$ (VLdo), ⊙ $\vv{B}$ (VLxanh), cung $d$ nét đứt hai đầu mũi tên.
   - III.3 chai thủy tinh nút bần trong nồi nước trên bếp ga (ảnh chụp, `% giuhinh`): ngọn lửa ga giữ màu xanh thật.
 - Không khai báo macro riêng trong file đề.
-- Ảnh so ở `so-hinh/`. Lưu ý kĩ thuật: `tools/so_hinh.py` gọi `xelatex hinh.tex` với `TEXINPUTS=<gốc repo>//` nên khi nhiều agent chạy song song có thể biên dịch nhầm `so-hinh/hinh.tex` của đề khác (lần đầu ra 4 trang hình của đề khác); đã chạy bản chép trong thư mục nháp, sửa thành `xelatex ./hinh.tex`.
+- Ảnh so ở `so-hinh/`. (Lỗi `tools/so_hinh.py` bắt nhầm `hinh.tex` của đề khác khi chạy song song đã sửa trong phiên chính.) Ngọn lửa III.3 tô `VLdo` theo quy định màu (phiên chính sửa sau khi dựng ảnh so; ảnh so còn màu cũ).
