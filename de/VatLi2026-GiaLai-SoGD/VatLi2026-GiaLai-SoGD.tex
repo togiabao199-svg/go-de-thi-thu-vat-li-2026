@@ -9,21 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% lực kế điện tử treo (hộp có màn hình, móc dưới, khuyên trên), tâm x, đáy thân y: \GLlucke{x}{y}{chữ trên màn hình}
-% móc dưới thấp nhất ở (x, y-0,45); khuyên trên cao nhất ở (x, y+1,22)
-\newcommand{\GLlucke}[3]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\shade[left color=gray!70,right color=gray!45,middle color=gray!10] (-0.09,-0.2) rectangle (0.09,0);
-		\draw[gray!40!black,semithick] (0,-0.2)--(0,-0.25) arc[start angle=90,end angle=-200,radius=0.1];
-		\shade[top color=gray!15,bottom color=gray!55,rounded corners=3pt] (-0.85,0) rectangle (0.85,0.8);
-		\draw[gray!50!black,rounded corners=3pt] (-0.85,0) rectangle (0.85,0.8);
-		\filldraw[fill=VLla!35,draw=black!70,rounded corners=1pt] (-0.72,0.2) rectangle (0.72,0.6);
-		\node[font=\fontsize{6}{6}\selectfont,inner sep=0pt] at (0,0.4) {#3};
-		\shade[left color=gray!70,right color=gray!45,middle color=gray!10] (-0.09,0.8) rectangle (0.09,1.0);
-		\draw[gray!40!black,semithick] (0,1.11) circle (0.1);
-	\end{scope}}
-% dấu ⊗ (từ trường hướng vào) cỡ vừa: \GLnhanto{x}{y}
-\newcommand{\GLnhanto}[2]{\draw[VLxanh!85!black,semithick] (#1,#2) circle (0.11) ++(-0.078,-0.078)--++(0.156,0.156) (#1,#2)++(-0.078,0.078)--++(0.156,-0.156);}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT GIA LAI}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -113,8 +98,8 @@
 				\draw[gray!55!black,line width=2.2pt] (4.45,4.45) .. controls (4.9,4.45) and (4.7,3.6) .. (5.3,3.4);
 				\draw[gray!35,line width=1pt] (4.45,4.45) .. controls (4.9,4.45) and (4.7,3.6) .. (5.3,3.4);
 				% lực kế, giá treo
-				\GLlucke{1.7}{2.85}{$T_1\!=\!0{,}33$\,N}
-				\GLlucke{3.6}{4.05}{$T_2\!=\!0{,}33$\,N}
+				\VLlucke{1.7}{2.85}{$T_1\!=\!0{,}33$\,N}
+				\VLlucke{3.6}{4.05}{$T_2\!=\!0{,}33$\,N}
 				\foreach \x/\y in {1.7/4.07,3.6/5.27}{
 					\draw[gray!40!black,semithick] (\x,\y-0.1)--(\x,\y);
 					\fill[gray!35] (\x-0.6,\y+0.12)--(\x+0.6,\y+0.12)--(\x+0.75,\y+0.22)--(\x-0.45,\y+0.22)--cycle;
@@ -710,11 +695,11 @@
 				\draw[VLdong!80!black,thick] (-1,0)--(0,1)--(1,0)--(0,-1)--cycle;
 				\draw[VLluc,VLmui,semithick] (-1,0)--(-1.55,0);
 				\draw[VLluc,VLmui,semithick] (1,0)--(1.55,0);
-				\GLnhanto{0}{0}
+				\VLnhantron{0}{0}
 				\node[VLxanh!85!black,right,inner sep=1pt] at (0.12,-0.05) {$\vv{B}$};
 				\begin{scope}[xshift=3.9cm]
 					\draw[VLdong!80!black,thick] (-1.225,0)--(0,0.707)--(1.225,0)--(0,-0.707)--cycle;
-					\GLnhanto{0}{-0.12}
+					\VLnhantron{0}{-0.12}
 					\node[VLxanh!85!black,right,inner sep=1pt] at (0.12,-0.17) {$\vv{B}$};
 					\draw[thin] (0,0.707)++(-120:0.17) arc[start angle=-120,end angle=-60,radius=0.17];
 					\node[inner sep=0pt] at (0,0.33) {$\theta$};

@@ -8,7 +8,8 @@
 - **Lô M (13/11/2026) — xong, thầy duyệt 13/11/2026**: `VatLi2026-LaoCai-CumPhiaBac-Lan2` (mẫu thứ hai: đề PDF không đáp án, tự giải toàn bộ 28 câu, vẽ lại 14 hình). Bản đề 8 trang (ĐẠT), bản lời giải 12 trang. Thành phẩm trong `thanh-pham/`, kiểm chứng ở `de/VatLi2026-LaoCai-CumPhiaBac-Lan2/kiem-chung.md`.
 - **Lô W01 (13/11/2026) — xong, thầy duyệt 13/11/2026**: 4 đề Word (Bắc Ninh ×3, Cà Mau), chạy Opus, 4 agent con song song (thầy cho phép trong phiên), phiên chính soát, thống nhất, gom macro. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
 - **Tô màu lại 6 đề đã xong (13/11/2026) — xong (PR #5)**: Cao Bằng, Lào Cai, 4 đề lô W01 (Opus, 6 agent con song song). Số trang bản đề / lời giải không đổi, cả 6 đề `kiem` ĐẠT, thành phẩm xuất lại.
-- **Tiếp theo**: lô W02 (Opus, song song): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W02, chạy song song.`
+- **Lô W02 + W03 (13/11/2026) — chờ duyệt (một nhánh, một PR)**: 8 đề Word, Opus, 8 agent con song song (W03 thầy yêu cầu làm luôn trong phiên W02). Phiên chính soát từng đề, thống nhất (nhãn `\label`, bỏ số ảnh chụp trên màn hình thiết bị), gom 5 macro vào `preamble-vatli-hinh.tex`. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
+- **Tiếp theo**: lô W04 (Opus, song song): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W04, chạy song song.`
 
 ## Quyết định của thầy
 
@@ -32,7 +33,18 @@
 
 ## Chờ thầy quyết
 
-(không còn)
+Lô W02 + W03 (chi tiết trong `kiem-chung.md` từng đề):
+1. **Sửa đáp án gốc** (đã gõ theo kết quả tính lại, có `% KIỂM TRA`): Đà Nẵng III.3 gốc 4 → 3 (lời giải gốc bỏ điện trở trong r = 0,05 Ω; câu III.4 của chính đề dùng tổng 0,2 Ω); Đồng Nai III.3 gốc 63 → 6 (lời giải gốc nhầm E₀ = 4π ≈ 125,6 V, đúng 12,57 V); Gia Lai I.5 gốc B (Hình 4) → D (Hình 1) (Hình 1 đúng chiều và mật độ đường sức, có tiết diện dây; Hình 4 sai mật độ, không có dây); Yên Viên I.13 gốc C → D (v rắn > v lỏng > v khí).
+2. **Đắk Lắk**: II.3 đề in T(Sr-90) = 288,8 năm (thực tế 28,8 năm) — giữ như đề và lời giải gốc (Đ S Đ S); nếu sửa 28,8 năm thì a) Sai, b) Đúng. III.2 đề hỏi "bao nhiêu T, làm tròn hàng phần trăm" (3,73·10⁻³ T → 0,00) — đã đổi câu hỏi sang mT, đáp số 3,73; phương án khác: sửa l = 2,0 cm (B ≈ 0,37 T).
+3. **Hà Tĩnh**: I.5 phương án D lặp câu dẫn (lỗi đề gốc, giữ D theo đáp án); I.8 sửa ⁵⁵Fe → ⁵⁶Fe cho khớp đáp án C; I.9 đề không cho năng lượng liên kết riêng của Fe (đáp án dùng 8,8 MeV/nucleon) — thêm dữ kiện vào đề không; III.3 sơ đồ lò phản ứng bỏ chú thích tiếng Anh, có thêm chú thích tiếng Việt không.
+4. **Đà Nẵng**: I.3 phương án B |−ΔΦ/Δt| cùng giá trị với D (giữ D, `% KIỂM TRA`); III.2 giải theo cách hiểu của lời giải gốc; II.4 d) giữ Đúng.
+5. **Đồng Tháp**: II.3 c) "tổng nhiệt lượng bếp cung cấp" hiểu là cho ấm nước → Đúng như gốc (hiểu là bếp tỏa ra thì Sai), `% KIỂM TRA`; II.4 số liệu từng giai đoạn đồ thị không khớp hiệu suất không đổi (đáp án không đổi).
+6. **Gia Lai**: II.4 d) đề ghi 0,43 μg, tính ra 0,243 μg — giữ Sai như đáp án gốc.
+7. **Khối "Cho biết"**: Yên Viên, Đồng Nai, Đồng Tháp (II.1) cần R, N_A nhưng đề gốc không có khối "Cho biết" — chưa thêm; lời giải dùng R = 8,31, N_A = 6,02·10²³.
+8. **Mã câu ngoài lớp 11–12**: Yên Viên I.10 (gia tốc, lớp 10) tạm ghi `VL10-C2`; `CLAUDE.md` chưa có quy ước lớp 10.
+9. **Đáp số không nguyên, đề không yêu cầu làm tròn** (giá trị đúng, không ghi `% KIỂM TRA`): Yên Viên III.4 (1,13), III.6 (1,5).
+10. **Số trên màn hình thiết bị trong hình**: phiên chính bỏ các số của ảnh chụp không có trong đề (Hà Tĩnh II.1; Đồng Tháp III.3 ghi "2000" chính là P = 2000 W phải tính; Gia Lai II.2 đã để trống); giữ số có trong đề (Gia Lai II.1 68.9 mN, 4.48 A). Thầy đồng ý thì ghi thành quy định trong `CLAUDE.md`.
+11. **Dàn trang**: Cần Thơ II.2 gắn `% tachDS` để bản đề 5 trang (không tách thì 6 trang, trang cuối chỉ một câu); Yên Viên trang 3 bản đề trống 11,3 cm trước tiêu đề Phần II (được miễn).
 
 ## Việc đã xong
 
@@ -41,11 +53,12 @@
 - 06/11/2026, phiên 1a: như mục "Giai đoạn hiện tại".
 - 13/11/2026, lô M: đề `VatLi2026-LaoCai-CumPhiaBac-Lan2` (thầy duyệt 13/11). Thêm vào `preamble-vatli-hinh.tex`: thư viện `decorations.pathmorphing`, macro `\VLongday` (ống dây quấn trên lõi trụ), `\VLdongho` (đồng hồ đo dạng hộp); dựng lại đề mẫu Cao Bằng với preamble mới (vẫn 7 trang đề ĐẠT, 10 trang lời giải). `tools/so_hinh.py` dựng hình ở cỡ chữ 12pt như file đề.
 - 13/11/2026, lô W01 (thầy duyệt 13/11): 4 đề `VatLi2026-BacNinh-CumHHNSLTD1-Lan2`, `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1`, `VatLi2026-BacNinh-SoGD-Lan2`, `VatLi2026-CaMau-SoGD-Lan1` (bản đề đều ĐẠT). Thêm vào `preamble-vatli-hinh.tex`: `\VLnhietke`, `\VLvienda`, `\VLngonlua`, `\VLdencon`, `\VLgiado`, `\VLongnghiem`, `\VLvongsau`/`\VLvongtruoc`, `\VLnumvan` (chuyển từ file đề, dựng lại các đề dùng; đề mẫu Cao Bằng, Lào Cai biên dịch lại vẫn như cũ). Thống nhất đoạn "Dùng thông tin sau cho câu …" đặt trong câu đầu của cặp (chờ thầy duyệt).
-- 13/11/2026, tô màu (chờ duyệt): `preamble-vatli-hinh.tex` — `\VLcham`, `\VLnhan` màu `VLxanh!85!black`; `\VLthanhngang`, `\VLthanhdung`, `\VLvongsau`/`\VLvongtruoc` màu đồng. Tô lại toàn bộ hình 6 đề (mỗi đề một commit), dựng lại `so-hinh/`, soát bản xám, `kiem` ĐẠT, xuất lại thành phẩm; số trang không đổi (Cao Bằng 7/10, Lào Cai 8/12, Cụm HH–NSL–TD1 7/10, Cụm TT1–QV1–LVT 7/11, Bắc Ninh SGD 7/11, Cà Mau 6/10).
+- 13/11/2026, lô W02 + W03 (chờ duyệt): 8 đề `VatLi2026-CanTho-SoGD-Lan1`, `VatLi2026-DaNang-SoGD-Lan1`, `VatLi2026-DakLak-Cum1`, `VatLi2026-DongNai-SoGD-Lan1` (W02), `VatLi2026-DongThap-SoGD-Lan1`, `VatLi2026-GiaLai-SoGD`, `VatLi2026-HaNoi-YenVien-Lan1`, `VatLi2026-HaTinh-SoGD-Lan1` (W03); bản đề đều ĐẠT. Thêm vào `preamble-vatli-hinh.tex`: `\VLbienbao`, `\VLbepdien`, `\VLnhietkedt`, `\VLlucke`, `\VLnhantron` (chuyển từ file đề Đà Nẵng, Đồng Nai, Gia Lai; dựng lại 3 đề, số trang không đổi). Nhãn `\label` thống nhất mẫu `<tên đề>-<phần><câu>` (5 đề, gồm Bắc Ninh SGD Lần 2 và Cà Mau của W01; xuất lại, bản in không đổi), ghi vào `CLAUDE.md`.
+- 13/11/2026, tô màu (thầy duyệt PR #5): `preamble-vatli-hinh.tex` — `\VLcham`, `\VLnhan` màu `VLxanh!85!black`; `\VLthanhngang`, `\VLthanhdung`, `\VLvongsau`/`\VLvongtruoc` màu đồng. Tô lại toàn bộ hình 6 đề (mỗi đề một commit), dựng lại `so-hinh/`, soát bản xám, `kiem` ĐẠT, xuất lại thành phẩm; số trang không đổi (Cao Bằng 7/10, Lào Cai 8/12, Cụm HH–NSL–TD1 7/10, Cụm TT1–QV1–LVT 7/11, Bắc Ninh SGD 7/11, Cà Mau 6/10).
 
 ## Số đề
 
-83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề chờ duyệt → còn 72 đề chưa gõ: W02–W10 37 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
+83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề chờ duyệt → còn 64 đề chưa gõ: W04–W10 29 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
 
 ## Kế hoạch lô và trạng thái từng đề
 
@@ -59,14 +72,14 @@ Trạng thái: chưa gõ → đang gõ → chờ duyệt → xong. Cột "Đáp 
 | W01 | `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1` | Bac Ninh - Lien truong Bac Ninh - Lan 1.docx | Word | chỉ ĐA | gần trùng Quế Võ 1 – Lần 1; Phần II đánh số lại (19–22 → 1–4); tự giải khớp ĐA; KIỂM TRA I.1; 8 hình; đề 7 trang, lời giải 11 trang | xong |
 | W01 | `VatLi2026-BacNinh-SoGD-Lan2` | Bac Ninh - So GDDT - Lan 2.docx | Word | ĐA + LG | KIỂM TRA I.9 (gốc C, gõ B); 9 hình; đề 7 trang, lời giải 11 trang | xong |
 | W01 | `VatLi2026-CaMau-SoGD-Lan1` | Ca Mau - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; 4 hình shape Word; đề 6 trang, lời giải 10 trang | xong |
-| W02 | `VatLi2026-CanTho-SoGD-Lan1` | Can Tho - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W02 | `VatLi2026-DaNang-SoGD-Lan1` | Da Nang - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W02 | `VatLi2026-DakLak-Cum1` | Dak Lak - Cum thi thu TN so 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W02 | `VatLi2026-DongNai-SoGD-Lan1` | Dong Nai - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W03 | `VatLi2026-DongThap-SoGD-Lan1` | Dong Thap - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W03 | `VatLi2026-GiaLai-SoGD` | Gia Lai - So GDDT.docx | Word | ĐA + LG | — | chưa gõ |
-| W03 | `VatLi2026-HaNoi-YenVien-Lan1` | Ha Noi - THPT Yen Vien - Lan 1.docx | Word | chỉ ĐA | — | chưa gõ |
-| W03 | `VatLi2026-HaTinh-SoGD-Lan1` | Ha Tinh - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
+| W02 | `VatLi2026-CanTho-SoGD-Lan1` | Can Tho - So GDDT - Lan 1.docx | Word | ĐA + LG | mã 0201; khớp ĐA 28/28; 2 hình; II.2 `% tachDS`; đề 5 trang, lời giải 9 trang | chờ duyệt |
+| W02 | `VatLi2026-DaNang-SoGD-Lan1` | Da Nang - So GDDT - Lan 1.docx | Word | ĐA + LG | KIỂM TRA III.3 (gốc 4, gõ 3), I.3 (B, D tương đương); 8 hình; đề 7 trang, lời giải 10 trang | chờ duyệt |
+| W02 | `VatLi2026-DakLak-Cum1` | Dak Lak - Cum thi thu TN so 1.docx | Word | ĐA + LG | khớp ĐA; KIỂM TRA II.3 (T = 288,8 năm), III.2 (đổi sang mT); 8 hình; đề 7 trang, lời giải 10 trang | chờ duyệt |
+| W02 | `VatLi2026-DongNai-SoGD-Lan1` | Dong Nai - So GDDT - Lan 1.docx | Word | ĐA + LG | KIỂM TRA III.3 (gốc 63, gõ 6); 5 hình; đề 7 trang, lời giải 10 trang | chờ duyệt |
+| W03 | `VatLi2026-DongThap-SoGD-Lan1` | Dong Thap - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA; KIỂM TRA II.3c (hai cách hiểu); 11 hình; đề 8 trang, lời giải 11 trang | chờ duyệt |
+| W03 | `VatLi2026-GiaLai-SoGD` | Gia Lai - So GDDT.docx | Word | ĐA + LG | KIỂM TRA I.5 (gốc B, gõ D); 8 hình; đề 7 trang, lời giải 11 trang | chờ duyệt |
+| W03 | `VatLi2026-HaNoi-YenVien-Lan1` | Ha Noi - THPT Yen Vien - Lan 1.docx | Word | chỉ ĐA | tự giải 28 câu; KIỂM TRA I.13 (gốc C, gõ D); 6 hình; đề 6 trang, lời giải 9 trang | chờ duyệt |
+| W03 | `VatLi2026-HaTinh-SoGD-Lan1` | Ha Tinh - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA; KIỂM TRA I.5, I.8 (⁵⁵Fe → ⁵⁶Fe), I.9 (thiếu dữ kiện); 4 hình; đề 6 trang, lời giải 10 trang | chờ duyệt |
 | W04 | `VatLi2026-HaTinh-SoGD-Lan2` | Ha Tinh - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
 | W04 | `VatLi2026-HaiPhong-CumCM5` | Hai Phong - Cum chuyen mon so 5.docx | Word | ĐA + LG | — | chưa gõ |
 | W04 | `VatLi2026-HaiPhong-SoGD-Lan1` | Hai Phong - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
