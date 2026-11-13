@@ -9,14 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% kim nam châm (la bàn) nằm ngang, tâm (x,y), nửa dài #3, góc quay #4 (0: cực N bên phải);
-% cực N đỏ VLdo, cực S xanh nhạt (in xám vẫn phân biệt): \VLkimnc{x}{y}{nửa dài}{góc}
-\newcommand{\VLkimnc}[4]{%
-	\begin{scope}[shift={(#1,#2)},rotate=#4]
-		\filldraw[fill=VLdo,draw=black,thin] (0,0.09)--(#3,0)--(0,-0.09)--cycle;
-		\filldraw[fill=VLxanh!35,draw=black,thin] (0,0.09)--(-#3,0)--(0,-0.09)--cycle;
-		\fill[black] (0,0) circle (0.022);
-	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT NINH BÌNH -- LẦN 4}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 

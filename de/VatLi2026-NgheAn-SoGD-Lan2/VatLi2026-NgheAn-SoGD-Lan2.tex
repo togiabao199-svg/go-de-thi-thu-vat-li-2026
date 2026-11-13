@@ -17,49 +17,6 @@
 \newcommand{\VLicmaynang}{\tikz[baseline=0.15em,x=1em,y=1em]{\filldraw[fill=yellow!70!orange,draw=black,line width=0.5pt] (0.75,0.72) circle (0.2);\draw[line width=0.6pt,orange!70!black] foreach \a in {0,45,...,180}{($(0.75,0.72)+(\a:0.28)$)--($(0.75,0.72)+(\a:0.42)$)};\filldraw[fill=gray!12,draw=black,line width=0.55pt] (0.2,0.05)--(1.05,0.05) arc[start angle=-90,end angle=90,radius=0.2] arc[start angle=20,end angle=160,radius=0.3] arc[start angle=60,end angle=180,radius=0.22]--(0.06,0.4) arc[start angle=90,end angle=270,radius=0.175]--cycle;}}
 \newcommand{\VLicgio}{\tikz[baseline=0.15em,x=1em,y=1em]{\draw[line width=0.6pt,gray!40!black] (0,0.7)--(0.75,0.7) arc[start angle=-90,end angle=180,radius=0.12] (0.1,0.45)--(1.0,0.45) (0,0.2)--(0.8,0.2) arc[start angle=90,end angle=-180,radius=0.12];}}
 \newcommand{\VLicgiot}{\tikz[baseline=0.1em,x=1em,y=1em]{\filldraw[fill=VLxanh!25,draw=black,line width=0.55pt] (0,0.95) .. controls (0.12,0.65) and (0.33,0.48) .. (0.33,0.3) arc[start angle=0,end angle=-180,radius=0.33] .. controls (-0.33,0.48) and (-0.12,0.65) .. (0,0.95)--cycle;}}
-%--- Hình thực tiễn câu II.2 (lưu lượng kế điện từ):
-% \VLtrudoc{x0}{x1}{r}: đoạn trụ kim loại nằm ngang dọc trục Ox (tâm trên trục), nhìn hơi chếch từ bên trái:
-%   mặt bên tô sáng giữa, tối hai mép; mặt đầu trái là elip (bán trục ngang 0,25r). Vẽ các đoạn từ phải sang trái.
-%   Ví dụ ống có mặt bích: \VLtrudoc{2}{4}{0.6}\VLtrudoc{1.7}{2}{0.8}\VLtrudoc{0}{1.7}{0.6}
-\newcommand{\VLtrudoc}[3]{%
-	\shade[top color=gray!50,bottom color=gray!85,middle color=gray!5] (#1,#3)--(#2,#3) arc[start angle=90,end angle=-90,x radius=0.25*#3,y radius=#3]--(#1,-#3)--cycle;
-	\fill[white,opacity=0.6] (#1,0.4*#3) rectangle (#2,0.52*#3);
-	\draw[gray!35!black,thin] (#1,#3)--(#2,#3) arc[start angle=90,end angle=-90,x radius=0.25*#3,y radius=#3]--(#1,-#3);
-	\shade[left color=gray!25,right color=gray!60] (#1,0) ellipse ({0.25*#3} and #3);
-	\draw[gray!35!black,thin] (#1,0) ellipse ({0.25*#3} and #3);}
-% \VLgalvan{x0}{x1}{r}: vân thép mạ kẽm (đốm sáng tối ngẫu nhiên) phủ lên đoạn trụ \VLtrudoc cùng tham số
-\newcommand{\VLgalvan}[3]{%
-	\begin{scope}
-		\clip (#1+0.25*#3,-#3) rectangle (#2,#3);
-		\fill[gray!75,opacity=0.3] (#1,-#3) rectangle (#2,#3);
-		\foreach \VLi in {1,...,70}{\pgfmathsetmacro{\VLgx}{#1+(#2-#1)*rnd}\pgfmathsetmacro{\VLgy}{-#3+2*#3*rnd}\pgfmathsetmacro{\VLgw}{0.06+0.16*rnd}
-			\fill[gray!15,opacity=0.3,rotate around={40*rnd-20:(\VLgx,\VLgy)}] (\VLgx,\VLgy) ellipse ({\VLgw} and {0.025});}
-		\foreach \VLi in {1,...,40}{\pgfmathsetmacro{\VLgx}{#1+(#2-#1)*rnd}\pgfmathsetmacro{\VLgy}{-#3+2*#3*rnd}
-			\fill[gray!80!black,opacity=0.3] (\VLgx,\VLgy) ellipse (0.1 and 0.035);}
-	\end{scope}}
-% \VLdauhienthi{(tâm)}{R}: đầu hiển thị tròn của thiết bị đo công nghiệp (vỏ trụ nhìn chếch, viền có gờ,
-%   kính tròn, màn hình trống, 4 nút bấm, hai đầu cáp bên trái). Ví dụ: \VLdauhienthi{(3,4)}{0.9}
-\newcommand{\VLdauhienthi}[2]{%
-	\coordinate (VLH) at #1;
-	\foreach \VLs in {0.5,0.45,...,0.0}{\pgfmathsetmacro{\VLc}{40+50*\VLs}\fill[gray!\VLc] ($(VLH)+(-\VLs,0.25*\VLs)$) circle (#2);}
-	% hai đầu cáp
-	\foreach \VLy in {0.38,-0.12}{
-		\shade[top color=black!50,bottom color=black!90] ($(VLH)+(-#2-0.52,\VLy-0.14)$) rectangle ($(VLH)+(-#2-0.2,\VLy+0.14)$);
-		\shade[inner color=black!40,outer color=black!90] ($(VLH)+(-#2-0.52,\VLy)$) ellipse (0.1 and 0.15);
-		\shade[top color=gray!50,bottom color=gray!80] ($(VLH)+(-#2-0.2,\VLy-0.17)$) rectangle ($(VLH)+(-#2+0.02,\VLy+0.17)$);}
-	\foreach \VLs in {0.5,0.45,...,0.0}{\pgfmathsetmacro{\VLc}{40+50*\VLs}\fill[gray!\VLc] ($(VLH)+(-\VLs,0.25*\VLs)$) circle (#2);}
-	% viền trước có gờ
-	\shade[inner color=gray!8,outer color=gray!45] (VLH) circle (#2);
-	\foreach \VLa in {0,30,...,330}{\fill[gray!55] ($(VLH)+(\VLa:#2*0.94)$) circle (#2*0.075);}
-	\draw[gray!35!black,thin] (VLH) circle (#2);
-	\shade[inner color=gray!40,outer color=gray!70] (VLH) circle (#2*0.78);
-	\fill[black!82] (VLH) circle (#2*0.68);
-	% màn hình (để trống), logo, nút bấm
-	\filldraw[fill=VLla!35,draw=black!50,very thin,rounded corners=0.5pt] ($(VLH)+(-#2*0.38,-#2*0.06)$) rectangle ($(VLH)+(#2*0.38,#2*0.36)$);
-	\fill[gray!50] ($(VLH)+(-#2*0.2,#2*0.45)$) rectangle ($(VLH)+(#2*0.2,#2*0.5)$);
-	\foreach \VLx in {-0.27,-0.09,0.09,0.27}{\filldraw[fill=gray!25,draw=gray!60,very thin] ($(VLH)+(#2*\VLx-#2*0.06,-#2*0.33)$) rectangle ($(VLH)+(#2*\VLx+#2*0.06,-#2*0.2)$);}
-	% kính phản quang
-	\fill[white,opacity=0.18] ($(VLH)+(140:#2*0.66)$) arc[start angle=140,end angle=60,radius=#2*0.66]--($(VLH)+(60:#2*0.4)$) arc[start angle=60,end angle=140,radius=#2*0.4]--cycle;}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT NGHỆ AN -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 

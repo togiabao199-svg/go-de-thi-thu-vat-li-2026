@@ -9,117 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-%--- Macro hình riêng của đề (tiền tố VL, để phiên chính gom vào preamble-vatli-hinh.tex) ---
-% bàn tay úp ấn xuống (nhìn ngang), ngón trỏ duỗi về bên trái, cổ tay và tay áo bên phải;
-% điểm (x,y) là mép dưới lòng bàn tay chỗ tì lên vật (giữa bàn tay), dài khoảng 3,2, cao 0,75 (khi tỉ lệ 1).
-% Quay sang phải: đặt trong scope [xscale=-1]. Gọi: \VLtayan{x}{y}{tỉ lệ}
-\newcommand{\VLtayan}[3]{%
-	\begin{scope}[shift={(#1,#2)},scale=#3]
-		% bóng nhẹ dưới bàn tay
-		\fill[black,opacity=0.12] (-1.3,0.0) .. controls (-0.6,-0.05) and (0.5,-0.05) .. (1.1,0.0)--(1.1,0.04)--(-1.3,0.04)--cycle;
-		% ngón cái (khuất phía sau)
-		\shade[top color=orange!18,bottom color=orange!45!brown!55,draw=brown!55!black,line width=0.35pt] (-0.15,0.05) .. controls (-0.45,0.04) and (-0.75,0.1) .. (-0.78,0.2) .. controls (-0.7,0.3) and (-0.3,0.3) .. (0.0,0.28)--cycle;
-		% bàn tay và các ngón duỗi
-		\shade[top color=orange!12,bottom color=orange!42!brown!50,draw=brown!55!black,line width=0.4pt]
-			(-1.35,0.1) .. controls (-1.38,0.02) and (-1.3,0.0) .. (-1.15,0.0)
-			-- (0.7,0.0) .. controls (1.0,0.0) and (1.2,0.04) .. (1.35,0.1)
-			-- (1.42,0.58)
-			.. controls (1.2,0.64) and (0.95,0.62) .. (0.7,0.52)
-			.. controls (0.4,0.42) and (0.0,0.33) .. (-0.4,0.28)
-			.. controls (-0.8,0.25) and (-1.1,0.24) .. (-1.25,0.22)
-			.. controls (-1.33,0.2) and (-1.36,0.15) .. (-1.35,0.1)--cycle;
-		% kẽ ngón, khớp, móng
-		\draw[brown!55!black,line width=0.3pt] (-1.2,0.13) .. controls (-0.8,0.14) and (-0.3,0.16) .. (0.2,0.22);
-		\draw[brown!55!black,line width=0.3pt] (-1.05,0.06) .. controls (-0.7,0.07) and (-0.35,0.08) .. (0.05,0.11);
-		\draw[brown!50!black,line width=0.3pt] (0.42,0.4) .. controls (0.5,0.36) and (0.62,0.35) .. (0.7,0.38);
-		\draw[brown!50!black,line width=0.25pt] (-0.45,0.27) .. controls (-0.43,0.23) and (-0.37,0.22) .. (-0.34,0.25);
-		\fill[white,opacity=0.55] (-1.32,0.12) .. controls (-1.3,0.19) and (-1.22,0.21) .. (-1.12,0.2) .. controls (-1.17,0.16) and (-1.2,0.13) .. (-1.2,0.1)--cycle;
-		\draw[white,opacity=0.6,line width=0.8pt] (-0.9,0.22) .. controls (-0.4,0.25) and (0.1,0.3) .. (0.6,0.45);
-		% cổ tay áo
-		\shade[left color=gray!55,right color=gray!25,middle color=gray!10,draw=black!65,line width=0.4pt] (1.33,0.08) .. controls (1.5,0.03) and (1.7,0.03) .. (1.78,0.06) -- (1.84,0.72) .. controls (1.7,0.76) and (1.55,0.74) .. (1.43,0.66)--cycle;
-		\draw[black!45,line width=0.3pt] (1.55,0.06)--(1.6,0.72) (1.68,0.05)--(1.72,0.74);
-	\end{scope}}
-% áp kế mặt tròn thang 0 – 6 bar (vạch -1 màu xám), viền kim loại, kim chỉ góc #4 (độ, 0 ở bên phải),
-% tâm (x,y), bán kính viền ngoài R: \VLapkebar{x}{y}{R}{góc kim}; số 0 ở 188°, 4 ở 33°, 6 ở -51°
-\newcommand{\VLapkebar}[4]{%
-	\begin{scope}[shift={(#1,#2)},scale=#3]
-		\fill[black,opacity=0.12] (0.04,-0.05) circle (1.0);
-		\shade[inner color=gray!20,outer color=gray!75] (0,0) circle (1.0);
-		\draw[black!80,line width=0.6pt] (0,0) circle (1.0);
-		\shade[top color=gray!75,bottom color=gray!15] (0,0) circle (0.9);
-		\filldraw[fill=white,draw=black!75,line width=0.4pt] (0,0) circle (0.86);
-				\foreach \VLg in {222,188,147,116,71,33,-8,-51}{\draw[black!85,line width=0.7pt] (\VLg:0.86)--(\VLg:0.66);}
-		\foreach \VLg in {205,167.5,131.5,93.5,52,12.5,-29.5}{\draw[black!85,line width=0.45pt] (\VLg:0.86)--(\VLg:0.74);}
-		\foreach \VLg/\VLs in {188/0,147/1,116/2,71/3,33/4,-8/5,-51/6}{\node[inner sep=0pt,font=\normalsize] at (\VLg:0.53) {\VLs};}
-		\node[inner sep=0pt,gray!70,font=\normalsize] at (222:0.53) {1};
-		\node[inner sep=0pt,font=\normalsize] (VLbar) at (0,-0.6) {Bar};
-		\draw[line width=0.4pt] (VLbar.south west)--(VLbar.south east);
-		\draw[black,line width=1pt,-{Stealth[length=4pt,width=3.5pt]}] ({#4+180}:0.08)--(#4:0.38);
-		\filldraw[fill=black,draw=black] (0,0) circle (0.07);
-		\fill[white] (0,0) circle (0.025);
-		\draw[white,opacity=0.7,line width=1.2pt] (125:0.95) arc[start angle=125,end angle=160,radius=0.95];
-	\end{scope}}
-% nhiệt kế thủy tinh thẳng đứng chi tiết (ống có vạch chia, mao quản, cột chất lỏng đỏ, bầu tròn, vệt sáng):
-% \VLnhietkett{x}{y tâm bầu}{chiều cao từ tâm bầu tới đỉnh}{độ cao đỉnh cột chất lỏng (tính từ tâm bầu)}
-\newcommand{\VLnhietkett}[4]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\shade[left color=gray!30,right color=gray!40,middle color=white] (-0.085,0.05)--(-0.085,#3-0.085) arc[start angle=180,end angle=0,radius=0.085]--(0.085,0.05)--cycle;
-		\draw[gray!60!black,line width=0.35pt] (-0.085,0.05)--(-0.085,#3-0.085) arc[start angle=180,end angle=0,radius=0.085]--(0.085,0.05);
-		\pgfmathsetmacro{\VLtop}{#3-0.2}
-		\foreach \VLk in {0.3,0.38,...,\VLtop}{\draw[VLxanh!70!black,line width=0.25pt] (-0.085,\VLk)--(-0.045,\VLk);}
-		\foreach \VLk in {0.3,0.7,...,\VLtop}{\draw[VLxanh!70!black,line width=0.35pt] (-0.085,\VLk)--(-0.02,\VLk);}
-		\fill[gray!25] (-0.012,0.05) rectangle (0.012,#3-0.1);
-		\shade[left color=VLdo!75!black,right color=VLdo!80!black,middle color=VLdo!70!white] (-0.02,0.0) rectangle (0.02,#4);
-		\shade[ball color=VLdo!85] (0,0) circle (0.085);
-		\fill[white,opacity=0.75] (-0.03,0.03) circle (0.018);
-		\draw[white,opacity=0.85,line width=0.6pt] (0.05,0.15)--(0.05,#3-0.12);
-	\end{scope}}
-% cốc / bình thủy tinh nhìn chính diện có vành miệng, thành dày, nước có mặt thoáng elip, bóng đổ dưới đáy:
-% \VLcocthuytinh{x trái}{y đáy}{rộng}{cao}{mực nước (độ cao, 0 nếu không có)}
-\newcommand{\VLcocthuytinh}[5]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\fill[black,opacity=0.13] (0.5*#3,-0.02) ellipse ({0.58*#3} and 0.06);
-		\fill[gray!12,opacity=0.6] (0,0) rectangle (#3,#4);
-		\ifdim #5pt>0pt
-			\shade[top color=VLxanh!22,bottom color=VLxanh!40,opacity=0.85] (0.05,0.06) rectangle (#3-0.05,#5);
-			\filldraw[fill=VLxanh!14,draw=VLxanh!55!black,line width=0.3pt,opacity=0.9] (0.5*#3,#5) ellipse ({0.5*#3-0.05} and 0.045);
-		\fi
-		\draw[gray!50!black,line width=0.5pt,rounded corners=1.5pt] (0,#4)--(0,0)--(#3,0)--(#3,#4);
-		\draw[gray!60,line width=0.3pt,rounded corners=1pt] (0.05,#4)--(0.05,0.06)--(#3-0.05,0.06)--(#3-0.05,#4);
-		\fill[white,opacity=0.55] (0.09,0.12) rectangle (0.13,#4-0.08);
-		\shade[top color=gray!25,bottom color=gray!60,draw=gray!45!black,line width=0.4pt,rounded corners=0.8pt] (-0.06,#4-0.02) rectangle (#3+0.06,#4+0.09);
-		\draw[white,opacity=0.7,line width=0.5pt] (0.0,#4+0.06)--(#3,#4+0.06);
-	\end{scope}}
-% nhiệt kế y tế thủy ngân nằm nghiêng: đầu kim loại hình nón, thân thủy tinh trụ, dải số 35–42 (37 đỏ, dấu ▼, °C), vạch xanh, nắp kính đầu;
-% gốc ở mũi kim loại, dài 4,85, thân bán kính 0,31. Gọi trong scope có shift: \VLnhietkeyte{góc nghiêng}
-% tọa độ có tên (VLyte37) ở vạch 37 hàng dưới (để kẻ đường chú thích)
-\newcommand{\VLnhietkeyte}[1]{%
-	\begin{scope}[rotate=#1,yscale=1.2]
-		\fill[black,opacity=0.1] (0.4,-0.36) .. controls (2,-0.4) and (4,-0.4) .. (4.8,-0.32)--(4.8,-0.27)--(0.4,-0.31)--cycle;
-		% mũi và đầu kim loại
-		\fill[black!80] (0,0) -- (0.3,-0.035) -- (0.3,0.035) -- cycle;
-		\shade[top color=gray!30,bottom color=gray!80,middle color=white] (0.28,-0.045)--(0.72,-0.2)--(0.72,0.2)--(0.28,0.045)--cycle;
-		\draw[gray!45!black,line width=0.3pt] (0.28,-0.045)--(0.72,-0.2) (0.28,0.045)--(0.72,0.2);
-		% thân thủy tinh
-		\shade[top color=gray!45,bottom color=gray!55,middle color=white] (0.72,-0.26) rectangle (3.95,0.26);
-		% dải số
-		\fill[white] (1.0,-0.2) rectangle (3.75,0.2);
-		\fill[gray!55] (0.72,-0.025) rectangle (3.85,0.025);
-		\foreach \VLk in {0,...,14}{\draw[black!65,line width=0.25pt] ({1.43+0.155*\VLk},-0.025)--++(0,{-0.04-0.05*(\VLk==int(\VLk/2)*2)}) ({1.43+0.155*\VLk},0.025)--++(0,{0.04+0.05*(\VLk==int(\VLk/2)*2)});}
-		\foreach \VLs/\VLx in {35/1.43,39/2.67,41/3.29}{\node[rotate=#1,inner sep=0pt,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (\VLx+0.15,-0.13) {\VLs};}
-		\foreach \VLs/\VLx in {36/1.74,38/2.36,40/2.98,42/3.6}{\node[rotate=#1,inner sep=0pt,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (\VLx-0.12,0.13) {\VLs};}
-		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (2.2,-0.13) {37};
-		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{4.5}{4.5}\selectfont] at (3.65,-0.13) {$^\circ$C};
-		\fill[VLdo] (2.03,0.17)--(2.11,0.17)--(2.07,0.1)--cycle;
-		\coordinate (VLyte37) at (2.12,-0.2);
-		% vạch xanh, nắp kính
-		\shade[top color=VLluc!60,bottom color=VLluc!90!black,middle color=VLluc!45] (3.95,-0.26) rectangle (4.12,0.26);
-		\shade[top color=gray!35,bottom color=gray!50,middle color=white,opacity=0.85] (4.12,-0.26)--(4.65,-0.26) arc[start angle=-90,end angle=90,x radius=0.2,y radius=0.26]--(4.12,0.26)--cycle;
-		\draw[gray!45!black,line width=0.35pt] (0.72,-0.26)--(4.65,-0.26) arc[start angle=-90,end angle=90,x radius=0.2,y radius=0.26]--(0.72,0.26)--cycle;
-		\draw[gray!45!black,line width=0.3pt] (3.95,-0.26)--(3.95,0.26) (4.12,-0.26)--(4.12,0.26);
-		\draw[white,opacity=0.9,line width=0.9pt] (0.8,0.2)--(4.6,0.2);
-		\draw[white,opacity=0.7,line width=0.5pt] (0.33,0.03)--(0.7,0.15);
-	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT NINH BÌNH -- LẦN 3}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -621,18 +510,18 @@
 		\begin{center}
 			\begin{tikzpicture}[scale=1.08,line join=round,line cap=round,font=\footnotesize]
 				% (1) cốc nhôm đựng nước và nhiệt kế
-				\VLcocthuytinh{0.08}{0.13}{0.52}{1.0}{0.72}
+				\VLbinhthuytinh{0.08}{0.13}{0.52}{1.0}{0.72}
 				\VLnhietkett{0.35}{0.77}{3.05}{1.56}
 				\fill[VLxanh!30,opacity=0.45] (0.25,0.2) rectangle (0.45,0.72);
 				\node[inner sep=1pt] at (0.34,0.4) {(1)};
 				% (2) bình cách nhiệt đựng nước và nhiệt kế
-				\VLcocthuytinh{1.03}{0.13}{1.3}{1.84}{0.83}
+				\VLbinhthuytinh{1.03}{0.13}{1.3}{1.84}{0.83}
 				\VLnhietkett{1.33}{0.73}{3.1}{2.7}
 				\fill[VLxanh!30,opacity=0.45] (1.23,0.2) rectangle (1.43,0.83);
 				\node[inner sep=1pt] at (1.85,0.45) {(2)};
 				% cốc nhôm đặt trong bình cách nhiệt
-				\VLcocthuytinh{2.87}{0.13}{1.3}{1.84}{1.1}
-				\VLcocthuytinh{3.37}{0.19}{0.53}{1.08}{1.05}
+				\VLbinhthuytinh{2.87}{0.13}{1.3}{1.84}{1.1}
+				\VLbinhthuytinh{3.37}{0.19}{0.53}{1.08}{1.05}
 				\VLnhietkett{3.17}{0.73}{3.1}{2.44}
 				\VLnhietkett{3.63}{0.73}{3.1}{2.44}
 				\fill[VLxanh!30,opacity=0.45] (3.07,0.2) rectangle (3.27,1.1) (3.53,0.25) rectangle (3.73,1.05);

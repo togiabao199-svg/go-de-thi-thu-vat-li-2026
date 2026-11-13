@@ -9,23 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% --- Macro riêng của đề (có thể gom vào preamble-vatli-hinh.tex) ---
-% màn hình LCD của thiết bị: viền đen, nền xanh nhạt chuyển màu, vệt phản quang mặt kính;
-% tâm (x,y), rộng, cao (vùng hiển thị, chưa kể viền 0,06), chữ hiển thị (để trống {} nếu đề không cho số): \VLmanhinh{x}{y}{rộng}{cao}{chữ}
-\newcommand{\VLmanhinh}[5]{%
-	\filldraw[fill=black!78,draw=black,rounded corners=1.5pt] (#1-0.5*#3-0.06,#2-0.5*#4-0.06) rectangle (#1+0.5*#3+0.06,#2+0.5*#4+0.06);
-	\shade[top color=VLla!20,bottom color=VLla!60] (#1-0.5*#3,#2-0.5*#4) rectangle (#1+0.5*#3,#2+0.5*#4);
-	\node[font=\footnotesize\bfseries,text=black!85] at (#1,#2) {#5};
-	\fill[white,opacity=0.3] (#1-0.5*#3,#2+0.5*#4)--(#1-0.08*#3,#2+0.5*#4)--(#1-0.32*#3,#2-0.5*#4)--(#1-0.5*#3,#2-0.5*#4)--cycle;}
-% ống nước thẳng đứng nối vào đáy thiết bị, có đai ốc ở đầu trên và miệng ống (elip) ở đầu dưới;
-% tâm x, y mép trên đai ốc, y miệng ống, màu ống: \VLongnoi{x}{y trên}{y dưới}{màu}
-\newcommand{\VLongnoi}[4]{%
-	\shade[left color=#4!70!black,right color=#4!75!black,middle color=#4!30!white] (#1-0.12,#3) rectangle (#1+0.12,#2-0.18);
-	\draw[#4!45!black,thin] (#1-0.12,#3)--(#1-0.12,#2-0.18) (#1+0.12,#3)--(#1+0.12,#2-0.18);
-	\fill[white,opacity=0.55] (#1-0.065,#3+0.05) rectangle (#1-0.035,#2-0.22);
-	\shade[left color=gray!75,right color=gray!50,middle color=gray!8,draw=black!70,thin] (#1-0.19,#2-0.2) rectangle (#1+0.19,#2+0.02);
-	\draw[black!45,very thin] (#1-0.07,#2-0.2)--(#1-0.07,#2+0.02) (#1+0.07,#2-0.2)--(#1+0.07,#2+0.02);
-	\filldraw[fill=#4!25,draw=#4!45!black,thin] (#1,#3) ellipse (0.12 and 0.035);}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT LẠNG SƠN -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 

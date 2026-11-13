@@ -9,13 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% Macro riêng của đề:
-% cuộn dây phẳng nhiều vòng nhìn xiên (nửa trước nét liền, nửa sau nét đứt), tâm vòng trên cùng (x,y),
-% bán trục rx, ry, số vòng n, khoảng cách giữa hai vòng d: \VLcuonphang{x}{y}{rx}{ry}{n}{d}
-\newcommand{\VLcuonphang}[6]{%
-	\foreach \VLk in {1,...,#5}{%
-		\draw[VLdong!70!black,semithick,densely dashed] ($(#1,#2)-(0,{(\VLk-1)*#6})$) ++(#3,0) arc[start angle=0,end angle=180,x radius=#3,y radius=#4];
-		\draw[VLdong!70!black,thick] ($(#1,#2)-(0,{(\VLk-1)*#6})$) ++(#3,0) arc[start angle=0,end angle=-180,x radius=#3,y radius=#4];}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT LIÊN TRƯỜNG NGHỆ AN -- LẦN 5}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 

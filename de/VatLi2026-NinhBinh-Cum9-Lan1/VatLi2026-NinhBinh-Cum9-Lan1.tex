@@ -16,58 +16,6 @@
 		\shade[top color=VLxanh!45,bottom color=VLxanh!85!black] (-0.42,0) arc[start angle=270,end angle=90,radius=0.16] arc[start angle=160,end angle=60,radius=0.22] arc[start angle=110,end angle=0,radius=0.26] arc[start angle=80,end angle=-90,radius=0.18]--cycle;
 		\foreach \VLx in {-0.24,0,0.24}{\draw[VLxanh!85!black,line width=0.9pt] (\VLx,-0.1)--++(-0.05,-0.15);}
 	\end{scope}}
-% cuộn dây phẳng nhiều vòng (nhìn xiên từ trên), tâm vòng trên ở (x,y): \VLcuonphang{x}{y}{bán trục ngang}{số vòng}
-% vòng thứ k (k = 0..số vòng-1) lùi xuống 0,09k; nửa sau nét đứt
-\newcommand{\VLcuonphang}[4]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\foreach \VLk in {1,...,#4}{\draw[VLdong!70!black,densely dashed,thin] ({-#3},{-0.09*(\VLk-1)}) arc[start angle=180,end angle=0,x radius=#3,y radius={0.3*#3}];}
-		\draw[VLdong!70!black,semithick] (-#3,0) arc[start angle=180,end angle=0,x radius=#3,y radius={0.3*#3}];
-		\foreach \VLk in {1,...,#4}{\draw[VLdong!70!black,semithick] ({-#3},{-0.09*(\VLk-1)}) arc[start angle=180,end angle=360,x radius=#3,y radius={0.3*#3}];}
-	\end{scope}}
-% bàn tay người duỗi ngón trỏ (nhìn từ bên, cổ tay ở trên trái, các ngón còn lại co lại),
-% đầu ngón trỏ ở (x,y), dài khoảng 2,8 x 1,8 (trước khi co giãn): \VLbantay{x}{y}{tỉ lệ}{góc xoay}
-\newcommand{\VLbantay}[4]{%
-	\begin{scope}[shift={(#1,#2)},scale=#3,rotate=#4]
-		\shade[top color=orange!12!white,bottom color=orange!38!white,draw=black!75,line width=0.5pt]
-			(-2.75,1.85) .. controls (-2.1,1.62) and (-1.45,1.3) .. (-0.98,0.98)
-			.. controls (-0.62,0.72) and (-0.32,0.42) .. (-0.09,0.17)
-			.. controls (0.03,0.05) and (-0.02,-0.06) .. (-0.13,-0.03)
-			.. controls (-0.32,0.12) and (-0.5,0.3) .. (-0.66,0.42)
-			.. controls (-0.58,0.34) and (-0.52,0.24) .. (-0.56,0.14)
-			.. controls (-0.62,0.02) and (-0.8,0.0) .. (-0.92,0.12)
-			.. controls (-0.92,0.0) and (-1.1,-0.06) .. (-1.22,0.06)
-			.. controls (-1.24,-0.04) and (-1.42,-0.08) .. (-1.52,0.06)
-			.. controls (-1.62,0.2) and (-1.58,0.36) .. (-1.48,0.42)
-			.. controls (-1.9,0.62) and (-2.3,0.88) .. (-2.9,1.12)--cycle;
-		% móng tay, nếp gấp ngón, khớp
-		\draw[black!55,line width=0.35pt] (-0.12,0.13) .. controls (-0.2,0.2) and (-0.28,0.24) .. (-0.32,0.22);
-		\draw[black!45,line width=0.35pt] (-0.66,0.42) .. controls (-0.8,0.5) and (-0.9,0.52) .. (-1.0,0.5) (-0.92,0.12) .. controls (-0.98,0.24) and (-1.0,0.36) .. (-1.0,0.5) (-1.22,0.06) .. controls (-1.28,0.2) and (-1.3,0.32) .. (-1.28,0.44) (-1.0,0.5) .. controls (-1.15,0.5) and (-1.3,0.47) .. (-1.48,0.42);
-		\draw[black!35,line width=0.3pt] (-0.5,0.47) .. controls (-0.46,0.52) and (-0.44,0.56) .. (-0.45,0.6) (-1.6,1.15) .. controls (-1.4,1.05) and (-1.2,0.95) .. (-1.05,0.85);
-		\draw[white,line width=1pt,opacity=0.55] (-2.4,1.65) .. controls (-1.9,1.45) and (-1.4,1.18) .. (-1.0,0.9);
-	\end{scope}}
-% cốc thủy tinh hình trụ có nước, tâm đáy (x,y), rộng w, cao h, mực nước hw; #6 = lệnh vẽ vật trong nước (vẽ sau nước, trước thành cốc):
-% \VLcocthuytinh{x}{y}{w}{h}{hw}{\fill (0,0) circle (0.1);}
-\newcommand{\VLcocthuytinh}[6]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\fill[black!18] (0,-0.02) ellipse ({0.56*#3} and {0.06*#3});
-		\draw[gray!55,thin] ({-#3/2},#4) arc[start angle=180,end angle=0,x radius={#3/2},y radius={0.07*#3}];
-		\shade[left color=VLxanh!40,right color=VLxanh!30,middle color=VLxanh!14] ({-#3/2},{0.07*#3}) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}]--({#3/2},#5) arc[start angle=0,end angle=-180,x radius={#3/2},y radius={0.07*#3}]--cycle;
-		\filldraw[fill=VLxanh!20,draw=VLxanh!55,thin] (0,#5) ellipse ({#3/2} and {0.07*#3});
-		#6
-		\fill[white,opacity=0.18] ({-#3/2},#4)--({-#3/2},{0.07*#3}) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}]--({#3/2},#4)--cycle;
-		\draw[gray!55!black,line width=0.7pt] ({-#3/2},#4)--({-#3/2},{0.07*#3}) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}]--({#3/2},#4);
-		\draw[gray!55!black,line width=0.7pt] ({-#3/2},#4) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}];
-		\draw[white,line width=1.6pt,opacity=0.75] ({-#3/2+0.12},{#4-0.2})--({-#3/2+0.12},{0.07*#3+0.1});
-		\draw[white,line width=0.8pt,opacity=0.6] ({#3/2-0.14},{#4-0.3})--({#3/2-0.14},{0.07*#3+0.25});
-	\end{scope}}
-% miếng kim loại hình trụ dẹt (đĩa), tâm đáy (x,y), bán trục rx, dày d, màu c: \VLdiakimloai{x}{y}{rx}{d}{c}
-\newcommand{\VLdiakimloai}[5]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\shade[left color=#5!70!black,right color=#5!65!black,middle color=#5!35!white] (-#3,0) arc[start angle=180,end angle=360,x radius=#3,y radius={0.14*#3}]--(#3,#4) arc[start angle=0,end angle=-180,x radius=#3,y radius={0.14*#3}]--cycle;
-		\filldraw[fill=#5!45!white,draw=#5!45!black,line width=0.3pt] (0,#4) ellipse (#3 and {0.14*#3});
-		\fill[white,opacity=0.5] ({-0.35*#3},#4) ellipse ({0.3*#3} and {0.05*#3});
-		\draw[#5!45!black,line width=0.3pt] (-#3,#4)--(-#3,0) arc[start angle=180,end angle=360,x radius=#3,y radius={0.14*#3}]--(#3,#4);
-	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT CỤM SỐ 9 NINH BÌNH -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -528,8 +476,8 @@
 				\node[left,inner sep=2pt] at (0.35,0.45) {Đế sạc};
 				\node[align=center,inner sep=0pt] at (1.3,1.75) {Cuộn\\nhận};
 				\node[align=center,inner sep=0pt] at (4.6,0.45) {Cuộn\\phát};
-				\VLcuonphang{2.95}{1.95}{0.95}{4}
-				\VLcuonphang{2.95}{0.75}{0.95}{4}
+				\VLcuonphang{2.95}{1.95}{0.95}{0.285}{4}{0.09}
+				\VLcuonphang{2.95}{0.75}{0.95}{0.285}{4}{0.09}
 				% đầu dây cuộn nhận
 				\draw[thin] (3.9,1.95)--(4.4,1.95); \filldraw[fill=white,draw=black] (4.45,1.95) circle (0.05) node[right,inner sep=2pt] {$d$};
 				\draw[thin] (3.88,1.6)--(4.4,1.6); \filldraw[fill=white,draw=black] (4.45,1.6) circle (0.05) node[right,inner sep=2pt] {$c$};

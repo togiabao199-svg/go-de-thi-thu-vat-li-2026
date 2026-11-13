@@ -222,3 +222,352 @@
 \newcommand{\VLnhantron}[2]{\draw[VLxanh!85!black,semithick] (#1,#2) circle (0.11) ++(-0.078,-0.078)--++(0.156,0.156) (#1,#2)++(-0.078,0.078)--++(0.156,-0.156);}
 % dấu ⊙ có vòng tròn (từ trường hướng ra), bán kính 0,11 cm, cặp với \VLnhantron: \VLchamtron{x}{y}
 \newcommand{\VLchamtron}[2]{\draw[VLxanh!85!black,semithick] (#1,#2) circle (0.11); \fill[VLxanh!85!black] (#1,#2) circle (0.035);}
+
+%=====================================================================
+% Lô W06 + W07 (13/11/2026): hình thực tiễn chi tiết
+%=====================================================================
+% (từ đề VatLi2026-LangSon-SoGD-Lan1)
+% màn hình LCD của thiết bị: viền đen, nền xanh nhạt chuyển màu, vệt phản quang mặt kính;
+% tâm (x,y), rộng, cao (vùng hiển thị, chưa kể viền 0,06), chữ hiển thị (để trống {} nếu đề không cho số): \VLmanhinh{x}{y}{rộng}{cao}{chữ}
+\newcommand{\VLmanhinh}[5]{%
+	\filldraw[fill=black!78,draw=black,rounded corners=1.5pt] (#1-0.5*#3-0.06,#2-0.5*#4-0.06) rectangle (#1+0.5*#3+0.06,#2+0.5*#4+0.06);
+	\shade[top color=VLla!20,bottom color=VLla!60] (#1-0.5*#3,#2-0.5*#4) rectangle (#1+0.5*#3,#2+0.5*#4);
+	\node[font=\footnotesize\bfseries,text=black!85] at (#1,#2) {#5};
+	\fill[white,opacity=0.3] (#1-0.5*#3,#2+0.5*#4)--(#1-0.08*#3,#2+0.5*#4)--(#1-0.32*#3,#2-0.5*#4)--(#1-0.5*#3,#2-0.5*#4)--cycle;}
+% ống nước thẳng đứng nối vào đáy thiết bị, có đai ốc ở đầu trên và miệng ống (elip) ở đầu dưới;
+% tâm x, y mép trên đai ốc, y miệng ống, màu ống: \VLongnoi{x}{y trên}{y dưới}{màu}
+\newcommand{\VLongnoi}[4]{%
+	\shade[left color=#4!70!black,right color=#4!75!black,middle color=#4!30!white] (#1-0.12,#3) rectangle (#1+0.12,#2-0.18);
+	\draw[#4!45!black,thin] (#1-0.12,#3)--(#1-0.12,#2-0.18) (#1+0.12,#3)--(#1+0.12,#2-0.18);
+	\fill[white,opacity=0.55] (#1-0.065,#3+0.05) rectangle (#1-0.035,#2-0.22);
+	\shade[left color=gray!75,right color=gray!50,middle color=gray!8,draw=black!70,thin] (#1-0.19,#2-0.2) rectangle (#1+0.19,#2+0.02);
+	\draw[black!45,very thin] (#1-0.07,#2-0.2)--(#1-0.07,#2+0.02) (#1+0.07,#2-0.2)--(#1+0.07,#2+0.02);
+	\filldraw[fill=#4!25,draw=#4!45!black,thin] (#1,#3) ellipse (0.12 and 0.035);}
+% (từ đề VatLi2026-NgheAn-SoGD-Lan1)
+% bu lông kim loại nhìn nghiêng (đầu lục giác + thân có ren): \VLbulong{x}{y}{góc xoay}{dài thân}
+\newcommand{\VLbulong}[4]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#3]
+		\shade[top color=gray!25,bottom color=gray!70,middle color=gray!10] (0,-0.045) rectangle (#4,0.045);
+		\foreach \VLr in {0.25,0.31,...,#4}{\draw[gray!55!black,very thin] (\VLr,-0.045)--(\VLr+0.03,0.045);}
+		\shade[top color=gray!35,bottom color=gray!75,middle color=gray!15] (-0.1,-0.1) rectangle (0,0.1);
+		\draw[gray!40!black,very thin] (-0.1,-0.1) rectangle (0,0.1) (-0.1,-0.033)--(0,-0.033) (-0.1,0.033)--(0,0.033) (0,-0.045)--(#4,-0.045)--(#4,0.045)--(0,0.045);
+	\end{scope}}
+% đai ốc lục giác kim loại nhìn chính diện: \VLdaioc{x}{y}{bán kính}
+\newcommand{\VLdaioc}[3]{%
+	\shade[top color=gray!20,bottom color=gray!70] (#1,#2)++(0:#3)--++(120:#3)--++(180:#3)--++(240:#3)--++(300:#3)--++(0:#3)--cycle;
+	\draw[gray!40!black,very thin] (#1,#2)++(0:#3)--++(120:#3)--++(180:#3)--++(240:#3)--++(300:#3)--++(0:#3)--cycle;
+	\fill[gray!85!black] (#1,#2) circle (0.45*#3);
+	\draw[gray!20,very thin] (#1,#2) circle (0.45*#3);}
+% (từ đề VatLi2026-NgheAn-SoGD-Lan2)
+% \VLtrudoc{x0}{x1}{r}: đoạn trụ kim loại nằm ngang dọc trục Ox (tâm trên trục), nhìn hơi chếch từ bên trái:
+%   mặt bên tô sáng giữa, tối hai mép; mặt đầu trái là elip (bán trục ngang 0,25r). Vẽ các đoạn từ phải sang trái.
+%   Ví dụ ống có mặt bích: \VLtrudoc{2}{4}{0.6}\VLtrudoc{1.7}{2}{0.8}\VLtrudoc{0}{1.7}{0.6}
+\newcommand{\VLtrudoc}[3]{%
+	\shade[top color=gray!50,bottom color=gray!85,middle color=gray!5] (#1,#3)--(#2,#3) arc[start angle=90,end angle=-90,x radius=0.25*#3,y radius=#3]--(#1,-#3)--cycle;
+	\fill[white,opacity=0.6] (#1,0.4*#3) rectangle (#2,0.52*#3);
+	\draw[gray!35!black,thin] (#1,#3)--(#2,#3) arc[start angle=90,end angle=-90,x radius=0.25*#3,y radius=#3]--(#1,-#3);
+	\shade[left color=gray!25,right color=gray!60] (#1,0) ellipse ({0.25*#3} and #3);
+	\draw[gray!35!black,thin] (#1,0) ellipse ({0.25*#3} and #3);}
+% \VLgalvan{x0}{x1}{r}: vân thép mạ kẽm (đốm sáng tối ngẫu nhiên) phủ lên đoạn trụ \VLtrudoc cùng tham số
+\newcommand{\VLgalvan}[3]{%
+	\begin{scope}
+		\clip (#1+0.25*#3,-#3) rectangle (#2,#3);
+		\fill[gray!75,opacity=0.3] (#1,-#3) rectangle (#2,#3);
+		\foreach \VLi in {1,...,70}{\pgfmathsetmacro{\VLgx}{#1+(#2-#1)*rnd}\pgfmathsetmacro{\VLgy}{-#3+2*#3*rnd}\pgfmathsetmacro{\VLgw}{0.06+0.16*rnd}
+			\fill[gray!15,opacity=0.3,rotate around={40*rnd-20:(\VLgx,\VLgy)}] (\VLgx,\VLgy) ellipse ({\VLgw} and {0.025});}
+		\foreach \VLi in {1,...,40}{\pgfmathsetmacro{\VLgx}{#1+(#2-#1)*rnd}\pgfmathsetmacro{\VLgy}{-#3+2*#3*rnd}
+			\fill[gray!80!black,opacity=0.3] (\VLgx,\VLgy) ellipse (0.1 and 0.035);}
+	\end{scope}}
+% \VLdauhienthi{(tâm)}{R}: đầu hiển thị tròn của thiết bị đo công nghiệp (vỏ trụ nhìn chếch, viền có gờ,
+%   kính tròn, màn hình trống, 4 nút bấm, hai đầu cáp bên trái). Ví dụ: \VLdauhienthi{(3,4)}{0.9}
+\newcommand{\VLdauhienthi}[2]{%
+	\coordinate (VLH) at #1;
+	\foreach \VLs in {0.5,0.45,...,0.0}{\pgfmathsetmacro{\VLc}{40+50*\VLs}\fill[gray!\VLc] ($(VLH)+(-\VLs,0.25*\VLs)$) circle (#2);}
+	% hai đầu cáp
+	\foreach \VLy in {0.38,-0.12}{
+		\shade[top color=black!50,bottom color=black!90] ($(VLH)+(-#2-0.52,\VLy-0.14)$) rectangle ($(VLH)+(-#2-0.2,\VLy+0.14)$);
+		\shade[inner color=black!40,outer color=black!90] ($(VLH)+(-#2-0.52,\VLy)$) ellipse (0.1 and 0.15);
+		\shade[top color=gray!50,bottom color=gray!80] ($(VLH)+(-#2-0.2,\VLy-0.17)$) rectangle ($(VLH)+(-#2+0.02,\VLy+0.17)$);}
+	\foreach \VLs in {0.5,0.45,...,0.0}{\pgfmathsetmacro{\VLc}{40+50*\VLs}\fill[gray!\VLc] ($(VLH)+(-\VLs,0.25*\VLs)$) circle (#2);}
+	% viền trước có gờ
+	\shade[inner color=gray!8,outer color=gray!45] (VLH) circle (#2);
+	\foreach \VLa in {0,30,...,330}{\fill[gray!55] ($(VLH)+(\VLa:#2*0.94)$) circle (#2*0.075);}
+	\draw[gray!35!black,thin] (VLH) circle (#2);
+	\shade[inner color=gray!40,outer color=gray!70] (VLH) circle (#2*0.78);
+	\fill[black!82] (VLH) circle (#2*0.68);
+	% màn hình (để trống), logo, nút bấm
+	\filldraw[fill=VLla!35,draw=black!50,very thin,rounded corners=0.5pt] ($(VLH)+(-#2*0.38,-#2*0.06)$) rectangle ($(VLH)+(#2*0.38,#2*0.36)$);
+	\fill[gray!50] ($(VLH)+(-#2*0.2,#2*0.45)$) rectangle ($(VLH)+(#2*0.2,#2*0.5)$);
+	\foreach \VLx in {-0.27,-0.09,0.09,0.27}{\filldraw[fill=gray!25,draw=gray!60,very thin] ($(VLH)+(#2*\VLx-#2*0.06,-#2*0.33)$) rectangle ($(VLH)+(#2*\VLx+#2*0.06,-#2*0.2)$);}
+	% kính phản quang
+	\fill[white,opacity=0.18] ($(VLH)+(140:#2*0.66)$) arc[start angle=140,end angle=60,radius=#2*0.66]--($(VLH)+(60:#2*0.4)$) arc[start angle=60,end angle=140,radius=#2*0.4]--cycle;}
+% (từ đề VatLi2026-NgheAn-SoGD-Lan3)
+% giá đỡ chân ba (kiểu ảnh chụp): tâm đế ở (#1,#2), thanh trụ cao #3 (tính từ tâm đế), #4 = 1: chân dài sang trái, -1: lật sang phải.
+% Ví dụ: \VLgiaba{0.6}{0}{3.4}{1}
+\newcommand{\VLgiaba}[4]{%
+	\begin{scope}[shift={(#1,#2)},xscale=#4]
+		\fill[black,opacity=0.12] (-0.05,-0.08) ellipse (0.8 and 0.09);
+		\shade[top color=gray!45!black,bottom color=black!90] (-0.04,0.14) .. controls (0.08,0.18) and (0.16,0.2) .. (0.22,0.22)--(0.24,0.17) .. controls (0.16,0.15) and (0.08,0.1) .. (0.02,0.07)--cycle;
+		\shade[top color=gray!50!black,bottom color=black!90] (-0.05,0.15) .. controls (-0.28,0.08) and (-0.5,0.0) .. (-0.7,-0.02)--(-0.7,-0.08) .. controls (-0.48,-0.07) and (-0.26,-0.01) .. (0,0.03)--cycle;
+		\shade[top color=gray!50!black,bottom color=black!90] (0.05,0.12) .. controls (0.24,0.04) and (0.42,-0.05) .. (0.58,-0.09)--(0.58,-0.15) .. controls (0.4,-0.12) and (0.2,-0.05) .. (0,0.02)--cycle;
+		\foreach \px/\py in {0.24/0.19,-0.7/-0.05,0.58/-0.12}{
+			\shade[top color=gray!55!black,bottom color=black!95,rounded corners=0.8pt] (\px-0.1,\py-0.07) rectangle (\px+0.1,\py+0.02);
+			\fill[gray!40!black] (\px,\py+0.02) ellipse (0.1 and 0.025);}
+		\shade[left color=black!85,right color=black!75,middle color=gray!55] (-0.09,0.04) rectangle (0.09,0.3);
+		\fill[gray!35!black] (0,0.3) ellipse (0.09 and 0.03);
+		\shade[left color=gray!65,right color=gray!55,middle color=white] (-0.035,0.3) rectangle (0.035,#3);
+		\draw[gray!40!black,very thin] (-0.035,0.3)--(-0.035,#3) (0.035,0.3)--(0.035,#3);
+		\fill[gray!55] (0,#3) ellipse (0.035 and 0.012);
+	\end{scope}}
+% giá đỡ đế chữ nhật (kiểu ảnh chụp): chân thanh trụ ở (#1,#2) trên mặt đế, thanh trụ cao #3, đế kéo sang trái #4 (sang phải 0,5).
+% Ví dụ: \VLgiade{7.5}{0.3}{3.6}{1.9}
+\newcommand{\VLgiade}[4]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\fill[black,opacity=0.13] (-#4-0.05,-0.32) rectangle (0.6,-0.25);
+		\fill[black!90,rounded corners=0.6pt] (-#4+0.12,-0.31) rectangle (-#4+0.38,-0.2) (0.15,-0.31) rectangle (0.41,-0.2);
+		\shade[top color=gray!45!black,bottom color=black!90,rounded corners=1pt] (-#4,-0.24) rectangle (0.52,-0.04);
+		\fill[gray!50!black] (-#4,-0.04)--(0.52,-0.04)--(0.44,0.04)--(-#4+0.08,0.04)--cycle;
+		\draw[white,opacity=0.35] (-#4+0.02,-0.05)--(0.5,-0.05);
+		\shade[left color=black!85,right color=black!75,middle color=gray!50] (-0.12,0.02) rectangle (0.12,0.48);
+		\fill[gray!35!black] (0,0.48) ellipse (0.12 and 0.035);
+		\shade[top color=gray!50!black,bottom color=black!90,rounded corners=0.8pt] (0.12,0.19) rectangle (0.17,0.31);
+		\shade[left color=gray!45!black,right color=black!90,rounded corners=1.2pt] (0.17,0.12) rectangle (0.27,0.38);
+		\foreach \yy in {0.16,0.21,...,0.36}{\draw[gray!60,very thin] (0.17,\yy)--(0.27,\yy);}
+		\shade[left color=gray!65,right color=gray!55,middle color=white] (-0.05,0.48) rectangle (0.05,#3);
+		\draw[gray!40!black,very thin] (-0.05,0.48)--(-0.05,#3) (0.05,0.48)--(0.05,#3);
+		\fill[gray!60] (0,#3) ellipse (0.05 and 0.015);
+	\end{scope}}
+% khối kẹp (khớp nối) gắn trên thanh trụ tại (#1,#2), núm vặn phía #3 (1: phải, -1: trái): \VLkhoikep{x}{y}{1}
+\newcommand{\VLkhoikep}[3]{%
+	\begin{scope}[shift={(#1,#2)},xscale=#3]
+		\shade[top color=gray!50!black,bottom color=black!90,rounded corners=0.8pt] (-0.12,-0.13) rectangle (0.12,0.13);
+		\fill[white,opacity=0.22] (-0.1,0.07) rectangle (0.1,0.1);
+		\fill[gray!55] (0.12,-0.025) rectangle (0.2,0.025);
+		\shade[left color=gray!45!black,right color=black!90,rounded corners=1.2pt] (0.2,-0.11) rectangle (0.3,0.11);
+		\foreach \yy in {-0.07,-0.025,...,0.08}{\draw[gray!60,very thin] (0.2,\yy)--(0.3,\yy);}
+	\end{scope}}
+% tay kẹp ống nghiệm: từ khối kẹp ở (#1,#2) vươn dài #3 theo hướng #4 (1: phải, -1: trái), ngàm kẹp ống bán kính khoảng 0,17 tại đầu tay.
+% Vẽ SAU ống để ngàm nằm trước ống. Ví dụ: \VLtaykep{0.6}{3.3}{0.65}{1}
+\newcommand{\VLtaykep}[4]{%
+	\begin{scope}[shift={(#1,#2)},xscale=#4]
+		\shade[top color=gray!45,bottom color=gray!70,middle color=white] (0,-0.035) rectangle (#3-0.3,0.035);
+		\shade[top color=gray!50!black,bottom color=black!90,rounded corners=1pt] (#3-0.38,-0.09) rectangle (#3-0.16,0.09);
+		\shade[top color=gray!55!black,bottom color=black!90] (#3-0.24,0.09) .. controls (#3-0.2,0.14) and (#3-0.12,0.12) .. (#3-0.08,0.05)--(#3-0.12,0.04) .. controls (#3-0.16,0.08) .. (#3-0.2,0.06)--cycle;
+		\shade[top color=gray!55!black,bottom color=black!90] (#3-0.24,-0.09) .. controls (#3-0.2,-0.14) and (#3-0.12,-0.12) .. (#3-0.08,-0.05)--(#3-0.12,-0.04) .. controls (#3-0.16,-0.08) .. (#3-0.2,-0.06)--cycle;
+		\fill[gray!55,opacity=0.85] (#3-0.16,-0.05) rectangle (#3+0.17,0.05);
+		\fill[white,opacity=0.5] (#3-0.16,0.02) rectangle (#3+0.17,0.035);
+		\shade[top color=gray!50!black,bottom color=black!90,rounded corners=0.6pt] (#3+0.17,-0.06) rectangle (#3+0.23,0.06);
+		\fill[gray!55] (#3-0.3,0.09) rectangle (#3-0.25,0.15);
+		\shade[top color=gray!45!black,bottom color=black!90,rounded corners=1pt] (#3-0.34,0.15) rectangle (#3-0.21,0.23);
+	\end{scope}}
+% ống thủy tinh trong suốt thẳng đứng (kiểu ảnh chụp): trục x = #1, đáy y = #2, miệng y = #3, bán kính #4.
+% Vẽ chất lỏng / cột thủy ngân TRƯỚC, rồi gọi macro (kính phủ mờ lên trên); nắp vẽ sau. Ví dụ: \VLongthuytinh{1.25}{0.15}{4.2}{0.17}
+\newcommand{\VLongthuytinh}[4]{%
+	\fill[VLxanh!12,opacity=0.2] (#1-#4,#2) rectangle (#1+#4,#3);
+	\fill[white,opacity=0.55] (#1-0.66*#4,#2+0.06) rectangle (#1-0.42*#4,#3-0.06);
+	\fill[white,opacity=0.45] (#1+0.48*#4,#2+0.06) rectangle (#1+0.6*#4,#3-0.06);
+	\draw[gray!60,semithick] (#1-#4,#2)--(#1-#4,#3) (#1+#4,#2)--(#1+#4,#3);
+	\draw[gray!40,very thin] (#1-0.84*#4,#2)--(#1-0.84*#4,#3) (#1+0.84*#4,#2)--(#1+0.84*#4,#3);}
+% nắp cao su đen của ống (bán kính #3) tại đỉnh/đáy y = #2: \VLnapong{x}{y tâm nắp}{bán kính}
+\newcommand{\VLnapong}[3]{%
+	\shade[left color=black!90,right color=black!80,middle color=gray!45!black] (#1-#3-0.02,#2-0.06) rectangle (#1+#3+0.02,#2+0.06);
+	\fill[black!90] (#1,#2-0.06) ellipse ({#3+0.02} and 0.035);
+	\fill[gray!40!black] (#1,#2+0.06) ellipse ({#3+0.02} and 0.035);}
+% lực kế điện tử nằm ngang (thân hộp, màn hình, 3 nút, khuyên móc bên trái), tâm thân (#1,#2), chữ màn hình #3.
+% Khuyên móc ở (#1-1,02; #2); trục nối bên phải từ (#1+0,85; #2). Ví dụ: \VLluckengang{6}{1.8}{0.48 N}
+\newcommand{\VLluckengang}[3]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\fill[black,opacity=0.14,rounded corners=3pt] (-0.8,-0.56) rectangle (0.92,0.44);
+		\draw[gray!35!black,semithick] (-0.85,0)--(-0.94,0);
+		\draw[gray!35!black,semithick] (-1.02,0) circle (0.075);
+		\shade[top color=gray!8,bottom color=gray!50,rounded corners=3pt] (-0.85,-0.5) rectangle (0.85,0.5);
+		\draw[gray!45!black,rounded corners=3pt] (-0.85,-0.5) rectangle (0.85,0.5);
+		\draw[white,opacity=0.85,rounded corners=2pt] (-0.81,-0.46) rectangle (0.81,0.46);
+		\filldraw[fill=VLxanh!45!black,draw=black!70,rounded corners=2pt] (-0.56,-0.42) rectangle (0.56,0.42);
+		\node[white,font=\fontsize{4}{4}\selectfont\sffamily,inner sep=0pt] at (0,0.34) {Force};
+		\shade[top color=VLla!30,bottom color=VLla!55,rounded corners=1pt] (-0.48,-0.1) rectangle (0.48,0.26);
+		\draw[black!60,rounded corners=1pt] (-0.48,-0.1) rectangle (0.48,0.26);
+		\node[font=\fontsize{6.5}{6.5}\selectfont\sffamily,inner sep=0pt] at (0,0.08) {#3};
+		\foreach \xx in {-0.3,0,0.3}{\filldraw[fill=VLxanh!25!black,draw=white!70!black,rounded corners=0.8pt] (\xx-0.11,-0.36) rectangle (\xx+0.11,-0.18);}
+		\fill[white] (-0.3,-0.23)--(-0.34,-0.31)--(-0.26,-0.31)--cycle (0.3,-0.31)--(0.34,-0.23)--(0.26,-0.23)--cycle;
+		\node[white,font=\fontsize{3}{3}\selectfont\sffamily,inner sep=0pt] at (0,-0.27) {UNIT};
+		\filldraw[fill=gray!15,draw=black!60] (-0.7,0) circle (0.075);
+		\draw[black!70,very thin] (-0.7,0.02)--(-0.7,0.06) (-0.7,0) ++(60:0.04) arc[start angle=60,end angle=-240,radius=0.04];
+		\filldraw[fill=gray!25,draw=black!60,rounded corners=0.6pt] (0.62,-0.07) rectangle (0.77,0.09);
+		\shade[top color=gray!35,bottom color=gray!65,middle color=white] (0.85,-0.07) rectangle (1.05,0.07);
+		\fill[gray!55] (0.93,0.07) rectangle (0.98,0.16);
+		\shade[left color=gray!45!black,right color=black!90,rounded corners=1pt] (0.9,0.16) rectangle (1.01,0.27);
+	\end{scope}}
+% (từ đề VatLi2026-NinhBinh-Cum9-Lan1)
+% bàn tay người duỗi ngón trỏ (nhìn từ bên, cổ tay ở trên trái, các ngón còn lại co lại),
+% đầu ngón trỏ ở (x,y), dài khoảng 2,8 x 1,8 (trước khi co giãn): \VLbantay{x}{y}{tỉ lệ}{góc xoay}
+\newcommand{\VLbantay}[4]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3,rotate=#4]
+		\shade[top color=orange!12!white,bottom color=orange!38!white,draw=black!75,line width=0.5pt]
+			(-2.75,1.85) .. controls (-2.1,1.62) and (-1.45,1.3) .. (-0.98,0.98)
+			.. controls (-0.62,0.72) and (-0.32,0.42) .. (-0.09,0.17)
+			.. controls (0.03,0.05) and (-0.02,-0.06) .. (-0.13,-0.03)
+			.. controls (-0.32,0.12) and (-0.5,0.3) .. (-0.66,0.42)
+			.. controls (-0.58,0.34) and (-0.52,0.24) .. (-0.56,0.14)
+			.. controls (-0.62,0.02) and (-0.8,0.0) .. (-0.92,0.12)
+			.. controls (-0.92,0.0) and (-1.1,-0.06) .. (-1.22,0.06)
+			.. controls (-1.24,-0.04) and (-1.42,-0.08) .. (-1.52,0.06)
+			.. controls (-1.62,0.2) and (-1.58,0.36) .. (-1.48,0.42)
+			.. controls (-1.9,0.62) and (-2.3,0.88) .. (-2.9,1.12)--cycle;
+		% móng tay, nếp gấp ngón, khớp
+		\draw[black!55,line width=0.35pt] (-0.12,0.13) .. controls (-0.2,0.2) and (-0.28,0.24) .. (-0.32,0.22);
+		\draw[black!45,line width=0.35pt] (-0.66,0.42) .. controls (-0.8,0.5) and (-0.9,0.52) .. (-1.0,0.5) (-0.92,0.12) .. controls (-0.98,0.24) and (-1.0,0.36) .. (-1.0,0.5) (-1.22,0.06) .. controls (-1.28,0.2) and (-1.3,0.32) .. (-1.28,0.44) (-1.0,0.5) .. controls (-1.15,0.5) and (-1.3,0.47) .. (-1.48,0.42);
+		\draw[black!35,line width=0.3pt] (-0.5,0.47) .. controls (-0.46,0.52) and (-0.44,0.56) .. (-0.45,0.6) (-1.6,1.15) .. controls (-1.4,1.05) and (-1.2,0.95) .. (-1.05,0.85);
+		\draw[white,line width=1pt,opacity=0.55] (-2.4,1.65) .. controls (-1.9,1.45) and (-1.4,1.18) .. (-1.0,0.9);
+	\end{scope}}
+% miếng kim loại hình trụ dẹt (đĩa), tâm đáy (x,y), bán trục rx, dày d, màu c: \VLdiakimloai{x}{y}{rx}{d}{c}
+\newcommand{\VLdiakimloai}[5]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\shade[left color=#5!70!black,right color=#5!65!black,middle color=#5!35!white] (-#3,0) arc[start angle=180,end angle=360,x radius=#3,y radius={0.14*#3}]--(#3,#4) arc[start angle=0,end angle=-180,x radius=#3,y radius={0.14*#3}]--cycle;
+		\filldraw[fill=#5!45!white,draw=#5!45!black,line width=0.3pt] (0,#4) ellipse (#3 and {0.14*#3});
+		\fill[white,opacity=0.5] ({-0.35*#3},#4) ellipse ({0.3*#3} and {0.05*#3});
+		\draw[#5!45!black,line width=0.3pt] (-#3,#4)--(-#3,0) arc[start angle=180,end angle=360,x radius=#3,y radius={0.14*#3}]--(#3,#4);
+	\end{scope}}
+% cốc thủy tinh hình trụ có nước, tâm đáy (x,y), rộng w, cao h, mực nước hw; #6 = lệnh vẽ vật trong nước (vẽ sau nước, trước thành cốc):
+% \VLcocthuytinh{x}{y}{w}{h}{hw}{\fill (0,0) circle (0.1);}
+\newcommand{\VLcocthuytinh}[6]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\fill[black!18] (0,-0.02) ellipse ({0.56*#3} and {0.06*#3});
+		\draw[gray!55,thin] ({-#3/2},#4) arc[start angle=180,end angle=0,x radius={#3/2},y radius={0.07*#3}];
+		\shade[left color=VLxanh!40,right color=VLxanh!30,middle color=VLxanh!14] ({-#3/2},{0.07*#3}) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}]--({#3/2},#5) arc[start angle=0,end angle=-180,x radius={#3/2},y radius={0.07*#3}]--cycle;
+		\filldraw[fill=VLxanh!20,draw=VLxanh!55,thin] (0,#5) ellipse ({#3/2} and {0.07*#3});
+		#6
+		\fill[white,opacity=0.18] ({-#3/2},#4)--({-#3/2},{0.07*#3}) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}]--({#3/2},#4)--cycle;
+		\draw[gray!55!black,line width=0.7pt] ({-#3/2},#4)--({-#3/2},{0.07*#3}) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}]--({#3/2},#4);
+		\draw[gray!55!black,line width=0.7pt] ({-#3/2},#4) arc[start angle=180,end angle=360,x radius={#3/2},y radius={0.07*#3}];
+		\draw[white,line width=1.6pt,opacity=0.75] ({-#3/2+0.12},{#4-0.2})--({-#3/2+0.12},{0.07*#3+0.1});
+		\draw[white,line width=0.8pt,opacity=0.6] ({#3/2-0.14},{#4-0.3})--({#3/2-0.14},{0.07*#3+0.25});
+	\end{scope}}
+% (từ đề VatLi2026-NinhBinh-SoGD-Lan3)
+% bàn tay úp ấn xuống (nhìn ngang), ngón trỏ duỗi về bên trái, cổ tay và tay áo bên phải;
+% điểm (x,y) là mép dưới lòng bàn tay chỗ tì lên vật (giữa bàn tay), dài khoảng 3,2, cao 0,75 (khi tỉ lệ 1).
+% Quay sang phải: đặt trong scope [xscale=-1]. Gọi: \VLtayan{x}{y}{tỉ lệ}
+\newcommand{\VLtayan}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		% bóng nhẹ dưới bàn tay
+		\fill[black,opacity=0.12] (-1.3,0.0) .. controls (-0.6,-0.05) and (0.5,-0.05) .. (1.1,0.0)--(1.1,0.04)--(-1.3,0.04)--cycle;
+		% ngón cái (khuất phía sau)
+		\shade[top color=orange!18,bottom color=orange!45!brown!55,draw=brown!55!black,line width=0.35pt] (-0.15,0.05) .. controls (-0.45,0.04) and (-0.75,0.1) .. (-0.78,0.2) .. controls (-0.7,0.3) and (-0.3,0.3) .. (0.0,0.28)--cycle;
+		% bàn tay và các ngón duỗi
+		\shade[top color=orange!12,bottom color=orange!42!brown!50,draw=brown!55!black,line width=0.4pt]
+			(-1.35,0.1) .. controls (-1.38,0.02) and (-1.3,0.0) .. (-1.15,0.0)
+			-- (0.7,0.0) .. controls (1.0,0.0) and (1.2,0.04) .. (1.35,0.1)
+			-- (1.42,0.58)
+			.. controls (1.2,0.64) and (0.95,0.62) .. (0.7,0.52)
+			.. controls (0.4,0.42) and (0.0,0.33) .. (-0.4,0.28)
+			.. controls (-0.8,0.25) and (-1.1,0.24) .. (-1.25,0.22)
+			.. controls (-1.33,0.2) and (-1.36,0.15) .. (-1.35,0.1)--cycle;
+		% kẽ ngón, khớp, móng
+		\draw[brown!55!black,line width=0.3pt] (-1.2,0.13) .. controls (-0.8,0.14) and (-0.3,0.16) .. (0.2,0.22);
+		\draw[brown!55!black,line width=0.3pt] (-1.05,0.06) .. controls (-0.7,0.07) and (-0.35,0.08) .. (0.05,0.11);
+		\draw[brown!50!black,line width=0.3pt] (0.42,0.4) .. controls (0.5,0.36) and (0.62,0.35) .. (0.7,0.38);
+		\draw[brown!50!black,line width=0.25pt] (-0.45,0.27) .. controls (-0.43,0.23) and (-0.37,0.22) .. (-0.34,0.25);
+		\fill[white,opacity=0.55] (-1.32,0.12) .. controls (-1.3,0.19) and (-1.22,0.21) .. (-1.12,0.2) .. controls (-1.17,0.16) and (-1.2,0.13) .. (-1.2,0.1)--cycle;
+		\draw[white,opacity=0.6,line width=0.8pt] (-0.9,0.22) .. controls (-0.4,0.25) and (0.1,0.3) .. (0.6,0.45);
+		% cổ tay áo
+		\shade[left color=gray!55,right color=gray!25,middle color=gray!10,draw=black!65,line width=0.4pt] (1.33,0.08) .. controls (1.5,0.03) and (1.7,0.03) .. (1.78,0.06) -- (1.84,0.72) .. controls (1.7,0.76) and (1.55,0.74) .. (1.43,0.66)--cycle;
+		\draw[black!45,line width=0.3pt] (1.55,0.06)--(1.6,0.72) (1.68,0.05)--(1.72,0.74);
+	\end{scope}}
+% áp kế mặt tròn thang 0 – 6 bar (vạch -1 màu xám), viền kim loại, kim chỉ góc #4 (độ, 0 ở bên phải),
+% tâm (x,y), bán kính viền ngoài R: \VLapkebar{x}{y}{R}{góc kim}; số 0 ở 188°, 4 ở 33°, 6 ở -51°
+\newcommand{\VLapkebar}[4]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[black,opacity=0.12] (0.04,-0.05) circle (1.0);
+		\shade[inner color=gray!20,outer color=gray!75] (0,0) circle (1.0);
+		\draw[black!80,line width=0.6pt] (0,0) circle (1.0);
+		\shade[top color=gray!75,bottom color=gray!15] (0,0) circle (0.9);
+		\filldraw[fill=white,draw=black!75,line width=0.4pt] (0,0) circle (0.86);
+				\foreach \VLg in {222,188,147,116,71,33,-8,-51}{\draw[black!85,line width=0.7pt] (\VLg:0.86)--(\VLg:0.66);}
+		\foreach \VLg in {205,167.5,131.5,93.5,52,12.5,-29.5}{\draw[black!85,line width=0.45pt] (\VLg:0.86)--(\VLg:0.74);}
+		\foreach \VLg/\VLs in {188/0,147/1,116/2,71/3,33/4,-8/5,-51/6}{\node[inner sep=0pt,font=\normalsize] at (\VLg:0.53) {\VLs};}
+		\node[inner sep=0pt,gray!70,font=\normalsize] at (222:0.53) {1};
+		\node[inner sep=0pt,font=\normalsize] (VLbar) at (0,-0.6) {Bar};
+		\draw[line width=0.4pt] (VLbar.south west)--(VLbar.south east);
+		\draw[black,line width=1pt,-{Stealth[length=4pt,width=3.5pt]}] ({#4+180}:0.08)--(#4:0.38);
+		\filldraw[fill=black,draw=black] (0,0) circle (0.07);
+		\fill[white] (0,0) circle (0.025);
+		\draw[white,opacity=0.7,line width=1.2pt] (125:0.95) arc[start angle=125,end angle=160,radius=0.95];
+	\end{scope}}
+% nhiệt kế thủy tinh thẳng đứng chi tiết (ống có vạch chia, mao quản, cột chất lỏng đỏ, bầu tròn, vệt sáng):
+% \VLnhietkett{x}{y tâm bầu}{chiều cao từ tâm bầu tới đỉnh}{độ cao đỉnh cột chất lỏng (tính từ tâm bầu)}
+\newcommand{\VLnhietkett}[4]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\shade[left color=gray!30,right color=gray!40,middle color=white] (-0.085,0.05)--(-0.085,#3-0.085) arc[start angle=180,end angle=0,radius=0.085]--(0.085,0.05)--cycle;
+		\draw[gray!60!black,line width=0.35pt] (-0.085,0.05)--(-0.085,#3-0.085) arc[start angle=180,end angle=0,radius=0.085]--(0.085,0.05);
+		\pgfmathsetmacro{\VLtop}{#3-0.2}
+		\foreach \VLk in {0.3,0.38,...,\VLtop}{\draw[VLxanh!70!black,line width=0.25pt] (-0.085,\VLk)--(-0.045,\VLk);}
+		\foreach \VLk in {0.3,0.7,...,\VLtop}{\draw[VLxanh!70!black,line width=0.35pt] (-0.085,\VLk)--(-0.02,\VLk);}
+		\fill[gray!25] (-0.012,0.05) rectangle (0.012,#3-0.1);
+		\shade[left color=VLdo!75!black,right color=VLdo!80!black,middle color=VLdo!70!white] (-0.02,0.0) rectangle (0.02,#4);
+		\shade[ball color=VLdo!85] (0,0) circle (0.085);
+		\fill[white,opacity=0.75] (-0.03,0.03) circle (0.018);
+		\draw[white,opacity=0.85,line width=0.6pt] (0.05,0.15)--(0.05,#3-0.12);
+	\end{scope}}
+% cốc / bình thủy tinh nhìn chính diện có vành miệng, thành dày, nước có mặt thoáng elip, bóng đổ dưới đáy:
+% \VLbinhthuytinh{x trái}{y đáy}{rộng}{cao}{mực nước (độ cao, 0 nếu không có)}
+\newcommand{\VLbinhthuytinh}[5]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\fill[black,opacity=0.13] (0.5*#3,-0.02) ellipse ({0.58*#3} and 0.06);
+		\fill[gray!12,opacity=0.6] (0,0) rectangle (#3,#4);
+		\ifdim #5pt>0pt
+			\shade[top color=VLxanh!22,bottom color=VLxanh!40,opacity=0.85] (0.05,0.06) rectangle (#3-0.05,#5);
+			\filldraw[fill=VLxanh!14,draw=VLxanh!55!black,line width=0.3pt,opacity=0.9] (0.5*#3,#5) ellipse ({0.5*#3-0.05} and 0.045);
+		\fi
+		\draw[gray!50!black,line width=0.5pt,rounded corners=1.5pt] (0,#4)--(0,0)--(#3,0)--(#3,#4);
+		\draw[gray!60,line width=0.3pt,rounded corners=1pt] (0.05,#4)--(0.05,0.06)--(#3-0.05,0.06)--(#3-0.05,#4);
+		\fill[white,opacity=0.55] (0.09,0.12) rectangle (0.13,#4-0.08);
+		\shade[top color=gray!25,bottom color=gray!60,draw=gray!45!black,line width=0.4pt,rounded corners=0.8pt] (-0.06,#4-0.02) rectangle (#3+0.06,#4+0.09);
+		\draw[white,opacity=0.7,line width=0.5pt] (0.0,#4+0.06)--(#3,#4+0.06);
+	\end{scope}}
+% nhiệt kế y tế thủy ngân nằm nghiêng: đầu kim loại hình nón, thân thủy tinh trụ, dải số 35–42 (37 đỏ, dấu ▼, °C), vạch xanh, nắp kính đầu;
+% gốc ở mũi kim loại, dài 4,85, thân bán kính 0,31. Gọi trong scope có shift: \VLnhietkeyte{góc nghiêng}
+% tọa độ có tên (VLyte37) ở vạch 37 hàng dưới (để kẻ đường chú thích)
+\newcommand{\VLnhietkeyte}[1]{%
+	\begin{scope}[rotate=#1,yscale=1.2]
+		\fill[black,opacity=0.1] (0.4,-0.36) .. controls (2,-0.4) and (4,-0.4) .. (4.8,-0.32)--(4.8,-0.27)--(0.4,-0.31)--cycle;
+		% mũi và đầu kim loại
+		\fill[black!80] (0,0) -- (0.3,-0.035) -- (0.3,0.035) -- cycle;
+		\shade[top color=gray!30,bottom color=gray!80,middle color=white] (0.28,-0.045)--(0.72,-0.2)--(0.72,0.2)--(0.28,0.045)--cycle;
+		\draw[gray!45!black,line width=0.3pt] (0.28,-0.045)--(0.72,-0.2) (0.28,0.045)--(0.72,0.2);
+		% thân thủy tinh
+		\shade[top color=gray!45,bottom color=gray!55,middle color=white] (0.72,-0.26) rectangle (3.95,0.26);
+		% dải số
+		\fill[white] (1.0,-0.2) rectangle (3.75,0.2);
+		\fill[gray!55] (0.72,-0.025) rectangle (3.85,0.025);
+		\foreach \VLk in {0,...,14}{\draw[black!65,line width=0.25pt] ({1.43+0.155*\VLk},-0.025)--++(0,{-0.04-0.05*(\VLk==int(\VLk/2)*2)}) ({1.43+0.155*\VLk},0.025)--++(0,{0.04+0.05*(\VLk==int(\VLk/2)*2)});}
+		\foreach \VLs/\VLx in {35/1.43,39/2.67,41/3.29}{\node[rotate=#1,inner sep=0pt,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (\VLx+0.15,-0.13) {\VLs};}
+		\foreach \VLs/\VLx in {36/1.74,38/2.36,40/2.98,42/3.6}{\node[rotate=#1,inner sep=0pt,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (\VLx-0.12,0.13) {\VLs};}
+		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{6.5}{6.5}\selectfont\bfseries] at (2.2,-0.13) {37};
+		\node[rotate=#1,inner sep=0pt,VLdo,font=\fontsize{4.5}{4.5}\selectfont] at (3.65,-0.13) {$^\circ$C};
+		\fill[VLdo] (2.03,0.17)--(2.11,0.17)--(2.07,0.1)--cycle;
+		\coordinate (VLyte37) at (2.12,-0.2);
+		% vạch xanh, nắp kính
+		\shade[top color=VLluc!60,bottom color=VLluc!90!black,middle color=VLluc!45] (3.95,-0.26) rectangle (4.12,0.26);
+		\shade[top color=gray!35,bottom color=gray!50,middle color=white,opacity=0.85] (4.12,-0.26)--(4.65,-0.26) arc[start angle=-90,end angle=90,x radius=0.2,y radius=0.26]--(4.12,0.26)--cycle;
+		\draw[gray!45!black,line width=0.35pt] (0.72,-0.26)--(4.65,-0.26) arc[start angle=-90,end angle=90,x radius=0.2,y radius=0.26]--(0.72,0.26)--cycle;
+		\draw[gray!45!black,line width=0.3pt] (3.95,-0.26)--(3.95,0.26) (4.12,-0.26)--(4.12,0.26);
+		\draw[white,opacity=0.9,line width=0.9pt] (0.8,0.2)--(4.6,0.2);
+		\draw[white,opacity=0.7,line width=0.5pt] (0.33,0.03)--(0.7,0.15);
+	\end{scope}}
+% (từ đề VatLi2026-NinhBinh-SoGD-Lan4)
+% kim nam châm (la bàn) nằm ngang, tâm (x,y), nửa dài #3, góc quay #4 (0: cực N bên phải);
+% cực N đỏ VLdo, cực S xanh nhạt (in xám vẫn phân biệt): \VLkimnc{x}{y}{nửa dài}{góc}
+\newcommand{\VLkimnc}[4]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#4]
+		\filldraw[fill=VLdo,draw=black,thin] (0,0.09)--(#3,0)--(0,-0.09)--cycle;
+		\filldraw[fill=VLxanh!35,draw=black,thin] (0,0.09)--(-#3,0)--(0,-0.09)--cycle;
+		\fill[black] (0,0) circle (0.022);
+	\end{scope}}
+% (từ đề VatLi2026-NgheAn-LienTruong-Lan5)
+% Macro riêng của đề:
+% cuộn dây phẳng nhiều vòng nhìn xiên (nửa trước nét liền, nửa sau nét đứt), tâm vòng trên cùng (x,y),
+% bán trục rx, ry, số vòng n, khoảng cách giữa hai vòng d: \VLcuonphang{x}{y}{rx}{ry}{n}{d}
+\newcommand{\VLcuonphang}[6]{%
+	\foreach \VLk in {1,...,#5}{%
+		\draw[VLdong!70!black,semithick,densely dashed] ($(#1,#2)-(0,{(\VLk-1)*#6})$) ++(#3,0) arc[start angle=0,end angle=180,x radius=#3,y radius=#4];
+		\draw[VLdong!70!black,thick] ($(#1,#2)-(0,{(\VLk-1)*#6})$) ++(#3,0) arc[start angle=0,end angle=-180,x radius=#3,y radius=#4];}}

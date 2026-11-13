@@ -10,20 +10,6 @@
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
 % --- Macro hình riêng của đề (tiền tố VL, có thể gom vào preamble-vatli-hinh.tex) ---
-% bu lông kim loại nhìn nghiêng (đầu lục giác + thân có ren): \VLbulong{x}{y}{góc xoay}{dài thân}
-\newcommand{\VLbulong}[4]{%
-	\begin{scope}[shift={(#1,#2)},rotate=#3]
-		\shade[top color=gray!25,bottom color=gray!70,middle color=gray!10] (0,-0.045) rectangle (#4,0.045);
-		\foreach \VLr in {0.25,0.31,...,#4}{\draw[gray!55!black,very thin] (\VLr,-0.045)--(\VLr+0.03,0.045);}
-		\shade[top color=gray!35,bottom color=gray!75,middle color=gray!15] (-0.1,-0.1) rectangle (0,0.1);
-		\draw[gray!40!black,very thin] (-0.1,-0.1) rectangle (0,0.1) (-0.1,-0.033)--(0,-0.033) (-0.1,0.033)--(0,0.033) (0,-0.045)--(#4,-0.045)--(#4,0.045)--(0,0.045);
-	\end{scope}}
-% đai ốc lục giác kim loại nhìn chính diện: \VLdaioc{x}{y}{bán kính}
-\newcommand{\VLdaioc}[3]{%
-	\shade[top color=gray!20,bottom color=gray!70] (#1,#2)++(0:#3)--++(120:#3)--++(180:#3)--++(240:#3)--++(300:#3)--++(0:#3)--cycle;
-	\draw[gray!40!black,very thin] (#1,#2)++(0:#3)--++(120:#3)--++(180:#3)--++(240:#3)--++(300:#3)--++(0:#3)--cycle;
-	\fill[gray!85!black] (#1,#2) circle (0.45*#3);
-	\draw[gray!20,very thin] (#1,#2) circle (0.45*#3);}
 % túi ni lông / mẩu rác nhàu (đường cong mềm, tô chuyển màu): \VLmaurac{x}{y}{cỡ}{màu}{góc}
 \newcommand{\VLmaurac}[5]{%
 	\begin{scope}[shift={(#1,#2)},rotate=#5,scale=#3]
