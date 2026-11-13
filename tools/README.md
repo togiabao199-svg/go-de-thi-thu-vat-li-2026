@@ -76,6 +76,7 @@ python3 tools/so_hinh.py de/VatLi2026-CaoBang-SoGD-Lan1/VatLi2026-CaoBang-SoGD-L
 
 - Câu đánh `I.2`, `II.4`, `III.5` theo thứ tự `\begin{ex}` trong từng PHẦN (câu có nhiều hình thì có nhiều ảnh cùng số câu, đánh số thứ tự `NN` khác nhau; ghép ảnh gốc theo câu nên hai hình cùng câu dùng chung một ảnh gốc).
 - Đề PDF: ảnh gốc là ảnh trang kèm vùng cắt sau `@`, `x0:y0:x1:y1` (giá trị ≤ 1 là tỉ lệ khổ ảnh, > 1 là pixel): `"I.5=trang-2.png@0.08:0.31:0.55:0.52"`. Câu không ghi ảnh gốc thì ô gốc để trắng.
+- Hình dựng ở cỡ chữ 12pt như file đề (`\footnotesize` = 10pt), nên nhãn trong ảnh so đúng cỡ so với nét vẽ.
 - Màu `blue`, `cyan`, `teal` được đổi sang tông vàng như preamble-eduzy-v2, nên ảnh so khớp màu bản in. Biên dịch lỗi thì in dòng lỗi và giữ `so-hinh/hinh.tex`, `hinh.log` để xem.
 - Xem từng ảnh `so-hinh/NN-cau-*.png`, sửa TikZ, chạy lại đến khi sát gốc; commit thư mục `so-hinh/`.
 
