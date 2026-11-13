@@ -29,6 +29,8 @@ Ghi chú: đề gốc không có khối "Cho biết"; III.3 dùng $R=8{,}31$ J/(
 - I.5 "sai" đã in đậm trong bản gốc (giữ \textbf).
 
 ## Hình
-- 6 hình vẽ lại bằng TikZ: I.10 (sơ đồ dây – vòng dây, đặt bên phải phương án), I.12 (mạch rơ-le, đặt bên phải phương án), II.1 (sơ đồ thí nghiệm Brown + đường gấp khúc), II.2 (bộ thí nghiệm Boyle: áp kế, xilanh, bình nước, nhiệt kế, tay quay; đặt bên phải đoạn dẫn như bản gốc), II.3 (ô tô sạc không dây, cuộn phát/nhận, đồ thị $i(t)$), II.4 (đồ thị $\ln H$ theo $t$).
+- 6 hình vẽ lại bằng TikZ: I.10 (sơ đồ dây – vòng dây, đặt bên phải phương án), I.12 (mạch rơ-le, đặt bên phải phương án), II.1 (sơ đồ thí nghiệm Brown + đường gấp khúc), II.2 (bộ thí nghiệm Boyle: áp kế, xilanh, bình nước, nhiệt kế, tay quay; bản gốc đặt bên phải đoạn dẫn, bản gõ đặt giữa dưới câu dẫn để dàn trang ĐẠT), II.3 (ô tô sạc không dây, cuộn phát/nhận, đồ thị $i(t)$), II.4 (đồ thị $\ln H$ theo $t$).
 - II.2: mặt áp kế và thước xilanh chỉ giữ vạch chia, bỏ số (không phải dữ kiện của đề).
 - II.4: trục $\ln H$ của ảnh gốc chia không đều (6,24 đặt sát 6,25); bản vẽ lại dùng thang đều, ghi 6,24 tại vạch gióng và chỉ để vạch (không ghi số) ở 6,25 cho khỏi chồng chữ. Các điểm đo vẽ theo vị trí tương đối như ảnh gốc (đường thẳng qua hai điểm gióng $(90;\,6{,}24)$ và $(160;\,6{,}00)$).
+- Hình thực tiễn vẽ chi tiết (yêu cầu bổ sung 13/11/2026), gắn `% giuhinh`: II.1 (kính hiển vi có vòng khía, nắp kính trong suốt, ống khói có mặt elip, đế hai tầng, bóng đổ; rộng ≈ 0,83 \linewidth), II.2 (áp kế có vành, mặt kính phản quang, ốc đồng lục giác, trụ đỡ có điểm sáng, bình kính có mặt thoáng, xilanh trong suốt có thước chia, pit-tông cao su có gân, thanh ren, tấm đỡ có ốc, tay quay có lỗ và tay cầm, đế vàng có chân và bóng; rộng ≈ 0,62 \linewidth), II.3 Hình 1 (ô tô có đèn, gương, tay nắm cửa, mâm bánh xe).
+- Dàn trang: bản đề 8 trang (ĐẠT), bản lời giải 11 trang; câu II.4 tách câu dẫn (tr. 6) / bảng (tr. 7).
