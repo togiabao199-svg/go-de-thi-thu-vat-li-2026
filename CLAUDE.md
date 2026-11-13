@@ -40,6 +40,16 @@ Model do thầy chọn khi mở phiên (thầy chốt 14/11/2026): lô W và lô
 8. **Commit, push, PR** vào `main`: mỗi đề một commit (hoặc một commit cho cả lô), push nhánh lô, tạo PR, KHÔNG tự merge. PR ghi: đề trong lô, số trang bản đề / lời giải, câu sửa đáp án hoặc lời đề so với bản gốc, chỗ `% KIỂM TRA`, điểm cần thầy quyết. Báo số PR cho thầy.
 Các đề trong lô làm lần lượt từng bước hoặc song song (biên dịch song song được). Hết hạn mức giữa lô: commit, push phần đã xong, ghi vào TIEN-DO đề nào đang dở ở bước nào.
 
+# PHIÊN FABLE (giải lại độc lập + vẽ lại hình thực tiễn; thầy chốt 14/11/2026)
+Thầy mở phiên bằng model Fable mức Cao; agent con cùng model. Đợt 1: 35 đề PDF (lô P01–P09). Đợt 2: 43 đề Word + Cao Bằng, Lào Cai (chỉ vẽ lại hình, không giải lại) kèm các việc sửa hình ghi ở `kho/TIEN-DO.md`.
+- Phiên chính: tạo nhánh, luôn giữ tối đa 8 agent chạy cùng lúc (đề nào xong thì soát, commit, push, giao ngay đề kế tiếp). Ngữ cảnh phiên chính vượt 75% hoặc chạm hạn mức: không giao đề mới, làm xong đề đang chạy, cập nhật TIEN-DO, tạo PR rồi dừng; thầy nhắn "tiếp" thì làm tiếp từ TIEN-DO.
+- Mỗi agent, một đề:
+  1. **Giải lại độc lập** (chỉ đề PDF): đọc đề gốc trong `kho/goc/` (ảnh trang), tự giải đủ 28 câu, câu có số liệu tính bằng Python, ghi đáp án ra file nháp `/tmp/<tên đề>/fable.md` TRƯỚC khi mở file `.tex`. Sau đó mới so với `\True`, `\shortans` trong file đề. KHÔNG tự sửa đáp án, lời giải. Ghi mục "## Đối chiếu Fable (ngày)" cuối `kiem-chung.md`: bảng các câu lệch (đáp án trong file / Fable / lời giải ngắn của Fable / nhận xét chỗ lệch do đâu); không lệch thì ghi "khớp 28/28". Các câu đang có `% KIỂM TRA` thì ghi rõ Fable nghiêng về cách hiểu nào.
+  2. **Vẽ lại hình thực tiễn** (câu có `% giuhinh`, ảnh chụp, thiết bị, cảnh thật) theo mục HÌNH VẼ — "Vẽ chi tiết, trau chuốt"; sơ đồ, đồ thị, mạch điện giữ nguyên trừ khi sai. Dựng lại `so-hinh/`, chạy `dan_trang.py tat-ca`, `xuat`; bản đề vẫn ĐẠT.
+  3. Báo: số câu lệch (liệt kê), hình đã vẽ lại, hình chưa ưng (nêu lí do), số trang.
+- Soát hình (phiên chính) KHÔNG tự chấm dễ: đặt ảnh gốc cạnh hình vẽ lại, hình đạt khi đủ bộ phận chính, đúng hình dạng và góc nhìn, không có chi tiết thừa hay đoán mò, tô khối rõ, chữ không đè hình. Chưa đạt thì trả agent vẽ lại; vẽ lại 2 lần vẫn chưa đạt thì ghi vào TIEN-DO để thầy xem. Gửi kèm PR ảnh ghép các hình đã vẽ lại để thầy duyệt.
+- Phiên chính không sửa đáp án. Danh sách câu lệch gom vào mục "Chờ thầy quyết" của TIEN-DO và PR.
+
 # CHẠY SONG SONG (khi prompt của thầy có chữ "song song")
 Thầy cho phép mở agent con trong phiên đó (thầy chốt 13/11/2026, lô W01 chạy tốt):
 - Phiên chính: thiết lập môi trường một lần, tạo nhánh lô, tạo `thanh-pham/` nếu thiếu; giao MỖI ĐỀ một agent con CÙNG LÚC (cùng model với phiên), gửi kèm tên file đề, file gốc, dòng 1 khung tiêu đề, `\tenchuong`, ghi chú lấy từ `kho/kiem-ke.md`. Agent nào xong thì soát đề đó (kiem-chung.md, ảnh so-hinh, vài trang bản đề, `dan_trang.py kiem`) rồi commit, push đề đó. Cả lô xong: gom macro hình dùng chung vào `preamble-vatli-hinh.tex` (dựng lại các đề có dùng, kể cả đề đã xong), thống nhất cách trình bày giữa các đề, cập nhật `kho/TIEN-DO.md`, tạo PR (bước 8).
