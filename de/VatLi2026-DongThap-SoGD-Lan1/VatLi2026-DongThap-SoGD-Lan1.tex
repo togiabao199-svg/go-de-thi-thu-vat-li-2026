@@ -12,6 +12,7 @@
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT ĐỒNG THÁP -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
+	\NeedspaceCau{9.9\baselineskip}
 	\noindent
 	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
 	\setcounter{ex}{0}
@@ -29,6 +30,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{7.5\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
 		Trong phòng thí nghiệm, trong một bình thủy tinh kín ban đầu không khí có nhiệt độ là $10\,^\circ\text{C}$, có áp suất bằng với áp suất khí quyển bên ngoài. Sau khi đậy nắp và đặt bình dưới ánh đèn mạnh trong một thời gian, nhiệt độ không khí trong bình tăng lên đến $80\,^\circ\text{C}$. Sau đó, mở nắp bình cho khí thoát ra, sao cho áp suất khí trong bình bằng với áp suất khí quyển và giữ cho nhiệt độ khí vẫn là $80\,^\circ\text{C}$ thì đậy nắp bình lại. So với số mol khí trong bình ngay khi vừa đậy nắp, phần trăm số mol khí đã thoát ra xấp xỉ là
 		\choice
@@ -41,6 +43,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{10.9\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Khi chụp cộng hưởng từ (MRI), để đảm bảo an toàn và tránh gây nguy hiểm, cần loại bỏ các vật kim loại ra khỏi cơ thể người bệnh. Giả sử có một vòng dây dẫn kim loại nằm trong máy MRI sao cho mặt phẳng của vòng vuông góc với cảm ứng từ của từ trường do máy tạo ra khi chụp. Biết bán kính và điện trở của vòng lần lượt là $4{,}2$~cm và $0{,}015~\Omega$. Nếu trong $0{,}50$~s, độ lớn của cảm ứng từ này giảm đều từ $2{,}00$~T xuống $0{,}50$~T, thì cường độ dòng điện cảm ứng trong vòng kim loại là
 		% giuhinh
@@ -91,6 +94,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{2.6\baselineskip}
 	\begin{ex}%[VL12-C3-NB]
 		Thiết bị nào sau đây \textbf{không} có ứng dụng của hiện tượng cảm ứng điện từ?
 		\choice
@@ -103,6 +107,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{4.8\baselineskip}
 	\begin{ex}%[VL12-C4-TH]
 		Hạt nhân $^{235}_{\phantom{2}92}\text{U}$ có năng lượng liên kết $1784$~MeV. Năng lượng liên kết riêng của hạt nhân này là
 		\choice
@@ -115,16 +120,17 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{12.2\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Một khung dây hình vuông có diện tích $1~\text{m}^2$ di chuyển thẳng đều với tốc độ $10$~m/s vào trong một vùng từ trường đều được giới hạn như hình vẽ. Biết cảm ứng từ có độ lớn $0{,}1$~T, khung dây có điện trở $2~\Omega$. Cường độ dòng điện qua khung dây có độ lớn là
 		\begin{center}
-			\begin{tikzpicture}[x=0.012cm,y=-0.012cm,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[x=0.0145cm,y=-0.0145cm,line join=round,line cap=round,font=\footnotesize]
 				\fill[VLxanh!8] (73,7) rectangle (320,280);
 				\draw[thin] (73,7) rectangle (320,280);
 				\foreach \i in {0,...,8}{\foreach \j in {0,...,7}{
 					\pgfmathsetmacro{\xx}{85+28*\i}\pgfmathsetmacro{\yy}{25+33.4*\j}
 					\pgfmathtruncatemacro{\bo}{(\xx>130 && \xx<240 && \yy>125 && \yy<160) || (\xx>195 && \xx<235 && \yy<65) ? 1 : 0}
-					\ifnum\bo=0 \VLcham{\xx}{\yy}\fi}}
+					\ifnum\bo=0 \fill[VLxanh!85!black] (\xx,\yy) circle (1.1pt);\fi}}
 				\draw[VLdong!80!black,line width=2.2pt] (5,93) rectangle (125,197);
 				\draw[VLdong!45!white,line width=0.7pt] (5,93) rectangle (125,197);
 				\draw[VLmui,thick,VLluc] (140,145)--(228,145);
@@ -142,6 +148,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{7.3\baselineskip}
 	\begin{ex}%[VL12-C1-NB]
 		Trong thí nghiệm xác định nhiệt dung riêng của nước, thao tác nào sau đây có tác dụng giúp nhiệt độ của nước trong bình đồng đều và làm tăng độ chính xác của phép đo?
 		\choice
@@ -154,6 +161,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{6.2\baselineskip}
 	\begin{ex}%[VL12-C1-NB]
 		Phát biểu nào sau đây về nội năng là \textbf{không} đúng?
 		\choice
@@ -166,6 +174,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{9.5\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Trong các phát biểu sau, có bao nhiêu phát biểu đúng?\\
 		(1) Mọi nam châm đều có hai cực: cực âm ($-$) và cực dương ($+$).\\
@@ -183,6 +192,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{19.4\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Cho hệ thống như hình vẽ bên. Khi nam châm đi lên thì dòng điện cảm ứng trong khung dây có chiều như thế nào (nhìn từ trên xuống)? Khi đó, vòng dây sẽ chuyển động như thế nào?
 		% giuhinh
@@ -227,6 +237,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{8.7\baselineskip}
 	\begin{ex}%[VL12-C1-NB]
 		Khoảng $70\%$ bề mặt của Trái Đất được bao phủ bởi nước. Vì có \ldots(1)\ldots\ nên lượng nước này có thể hấp thụ năng lượng nhiệt khổng lồ của năng lượng Mặt Trời mà vẫn giữ cho \ldots(2)\ldots\ của bề mặt Trái Đất tăng không nhanh và không nhiều, tạo điều kiện thuận lợi cho sự sống của con người và các sinh vật khác. Khoảng trống (1) và (2) lần lượt là
 		% giuhinh
@@ -240,17 +251,17 @@
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.28\linewidth}
 			\centering
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				\shade[ball color=VLxanh!85!white] (0,0) circle (1.1);
+			\begin{tikzpicture}[scale=1.3,line join=round,line cap=round,font=\footnotesize]
+				\begin{scope}\clip (0,0) circle (1.1);\shade[inner color=VLxanh!30!white,outer color=VLxanh!80!black] (-0.3,0.35) circle (1.6);\end{scope}
 				\begin{scope}
 					\clip (0,0) circle (1.1);
 					\draw[white,opacity=0.35,very thin] (0,0) ellipse (0.37 and 1.1) (0,0) ellipse (0.74 and 1.1);
 					\foreach \h in {-0.7,-0.35,0,0.35,0.7}{\draw[white,opacity=0.35,very thin] (-1.2,\h)--(1.2,\h);}
-					\filldraw[fill=VLla!80!VLluc,draw=VLla!45!black,very thin] plot[smooth cycle] coordinates {(-1.1,0.42) (-0.85,0.85) (-0.42,1.0) (-0.2,0.8) (-0.42,0.52) (-0.55,0.25) (-0.8,0.12) (-1.05,0.18)};
-					\filldraw[fill=VLla!65!white,draw=VLla!45!black,very thin] plot[smooth cycle] coordinates {(-0.18,1.02) (0.02,0.92) (-0.05,0.76) (-0.22,0.82)};
-					\filldraw[fill=VLla!80!VLluc,draw=VLla!45!black,very thin] plot[smooth cycle] coordinates {(-0.72,-0.05) (-0.38,-0.12) (-0.25,-0.4) (-0.42,-0.88) (-0.58,-0.75) (-0.72,-0.38)};
-					\filldraw[fill=VLla!80!VLluc,draw=VLla!45!black,very thin] plot[smooth cycle] coordinates {(0.3,0.32) (0.75,0.38) (0.95,0.02) (0.8,-0.42) (0.6,-0.72) (0.46,-0.42) (0.32,-0.05) (0.18,0.14)};
-					\filldraw[fill=VLla!65!white,draw=VLla!45!black,very thin] plot[smooth cycle] coordinates {(0.32,0.48) (0.55,0.88) (0.88,0.8) (1.02,0.52) (0.75,0.45) (0.48,0.42)};
+					\filldraw[fill=VLla!55!green!70!black,draw=VLla!35!black,very thin] plot[smooth cycle] coordinates {(-1.1,0.42) (-0.85,0.85) (-0.42,1.0) (-0.2,0.8) (-0.42,0.52) (-0.55,0.25) (-0.8,0.12) (-1.05,0.18)};
+					\filldraw[fill=yellow!25!VLla,draw=VLla!35!black,very thin] plot[smooth cycle] coordinates {(-0.18,1.02) (0.02,0.92) (-0.05,0.76) (-0.22,0.82)};
+					\filldraw[fill=VLla!55!green!70!black,draw=VLla!35!black,very thin] plot[smooth cycle] coordinates {(-0.72,-0.05) (-0.38,-0.12) (-0.25,-0.4) (-0.42,-0.88) (-0.58,-0.75) (-0.72,-0.38)};
+					\filldraw[fill=VLla!55!green!70!black,draw=VLla!35!black,very thin] plot[smooth cycle] coordinates {(0.3,0.32) (0.75,0.38) (0.95,0.02) (0.8,-0.42) (0.6,-0.72) (0.46,-0.42) (0.32,-0.05) (0.18,0.14)};
+					\filldraw[fill=yellow!25!VLla,draw=VLla!35!black,very thin] plot[smooth cycle] coordinates {(0.32,0.48) (0.55,0.88) (0.88,0.8) (1.02,0.52) (0.75,0.45) (0.48,0.42)};
 					\fill[white,opacity=0.18] (-0.35,0.4) circle (0.55);
 				\end{scope}
 				\draw[VLxanh!55!black,semithick] (0,0) circle (1.1);
@@ -261,6 +272,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{2.5\baselineskip}
 	\begin{ex}%[VL12-C3-NB]
 		Trong hệ đơn vị SI, đơn vị cảm ứng từ là
 		\choice
@@ -273,6 +285,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{6.3\baselineskip}
 	\begin{ex}%[VL11-C1-NB]
 		Vật dao động điều hòa theo trục $Ox$. Phát biểu nào sau đây đúng?
 		\choice
@@ -285,6 +298,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{5.6\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Một vật có khối lượng $1{,}5$~kg trượt không vận tốc ban đầu từ đỉnh xuống chân một mặt phẳng dài $20$~m, nghiêng $30^\circ$ so với mặt phẳng nằm ngang. Tốc độ của vật ở chân mặt phẳng nghiêng là $5$~m/s. Lấy $g=10~\text{m/s}^2$. Bỏ qua sự trao đổi nhiệt với mặt phẳng nghiêng và môi trường. Độ biến thiên nội năng của vật trong quá trình chuyển động trên bằng
 		\choice
@@ -297,6 +311,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{6.9\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Một khối khí xác định được nhốt trong một xilanh kín. Pit-tông có thể chuyển động qua lại trong xilanh. Truyền cho khối khí một nhiệt lượng để khối khí thực hiện công. So với trạng thái ban đầu, trong quá trình thực hiện công tốc độ chuyển động nhiệt của các phân tử khí
 		\choice
@@ -309,6 +324,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{13.2\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
 		Trạng thái của $n$ (mol) khí lí tưởng đơn nguyên tử thay đổi theo quá trình (1) $\to$ (2) $\to$ (3) được thể hiện trên đồ thị $(p,V)$ như hình vẽ. Biết nhiệt độ tuyệt đối của khối khí ở trạng thái (1) là $T$ (K). Trong cả quá trình (1) $\to$ (2) $\to$ (3), nhiệt lượng mà khối khí nhận được là
 		\begin{center}
@@ -339,6 +355,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{3.4\baselineskip}
 	\begin{ex}%[VL12-C4-TH]
 		Hạt nhân $^{235}_{\phantom{2}92}\text{U}$ hấp thụ một neutron nhiệt rồi vỡ ra thành hai hạt nhân ${}^{95}_{37}\text{Rb}$ và ${}^{137}_{\phantom{1}55}\text{Cs}$. Phản ứng này giải phóng kèm theo
 		\choice
@@ -351,6 +368,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{11.4\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Một khối khí lí tưởng thực hiện chu trình như hình vẽ. Trạng thái có nhiệt độ nhỏ nhất là
 		\begin{center}
@@ -382,6 +400,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
+	\NeedspaceCau{33.7\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-DongThap-SoGD-Lan1-2]
@@ -451,27 +470,27 @@
 					% các ion
 					\foreach \p in {(1.6,3.65),(2.3,2.95),(2.9,3.7),(3.55,3.12),(3.95,3.68),(4.35,2.98),(1.85,2.82),(3.1,2.8)}{\shade[ball color=VLxanh] \p circle (0.08);}
 					% bức xạ ion hóa
-					\draw[VLmui,thick,VLdo] (3.25,4.5)--(2.75,3.38);
-					\node[above,inner sep=2pt] at (3.3,4.5) {Bức xạ ion hóa};
+					\draw[VLmui,thick,VLdo] (3.45,4.5)--(2.85,3.4);
+					\node[above,inner sep=2pt] at (3.7,4.5) {Bức xạ ion hóa};
 					\draw[thin,densely dashed] (0.8,4.42)--(0.9,3.95);
-					\node[above,align=center,inner sep=2pt] at (0.75,4.42) {Nguồn bức xạ\\ion hóa};
+					\node[above,align=center,inner sep=2pt] at (0.6,4.42) {Nguồn bức xạ\\ion hóa};
 					\draw[thin,densely dashed] (4.25,3.4)--(5.6,2.85);
 					\node[right,align=center,inner sep=1pt] at (5.4,2.62) {Anốt\\(dây kim loại)};
-					\draw[thin,densely dashed] (2.6,2.18)--(2.45,2.6);
-					\node[below,inner sep=1pt] at (2.6,2.2) {Catốt (vỏ kim loại)};
+					\draw[thin,densely dashed] (3.2,2.18)--(2.95,2.6);
+					\node[below,inner sep=1pt] at (3.5,2.2) {Catốt (vỏ kim loại)};
 					% bộ đếm xung
-					\fill[gray!25] (3.8,1.35)--(5.9,1.35)--(6.1,1.55)--(4.0,1.55)--cycle;
-					\fill[gray!55] (5.9,0.45)--(6.1,0.65)--(6.1,1.55)--(5.9,1.35)--cycle;
-					\shade[top color=gray!20,bottom color=gray!50] (3.8,0.45) rectangle (5.9,1.35);
-					\draw[gray!50!black,very thin] (3.8,0.45) rectangle (5.9,1.35) (3.8,1.35)--(4.0,1.55)--(6.1,1.55)--(6.1,0.65)--(5.9,0.45) (5.9,1.35)--(6.1,1.55);
-					\fill[black!90] (4.0,0.9) rectangle (5.7,1.22);
-					\node[font=\sffamily\bfseries\scriptsize,inner sep=0] at (4.85,1.06) {{\color{gray!60}88}{\color{VLdo}3558}};
-					\foreach \xx in {4.45,4.95,5.45}{\shade[ball color=yellow!80!orange] (\xx,0.7) circle (0.08);}
-					\fill[VLla!80!black] (4.1,0.7) circle (0.04);
-					\node[font=\fontsize{4}{4}\selectfont] at (4.45,0.53) {MODE};
-					\node[font=\fontsize{4}{4}\selectfont] at (4.95,0.53) {RESET};
-					\node[font=\fontsize{4}{4}\selectfont] at (5.45,0.53) {COUNT};
-					\node[right,align=center,inner sep=1pt] at (6.15,0.85) {Bộ đếm\\xung};
+					\fill[gray!25] (3.8,1.35)--(6.2,1.35)--(6.4,1.55)--(4.0,1.55)--cycle;
+					\fill[gray!55] (6.2,0.45)--(6.4,0.65)--(6.4,1.55)--(6.2,1.35)--cycle;
+					\shade[top color=gray!20,bottom color=gray!50] (3.8,0.45) rectangle (6.2,1.35);
+					\draw[gray!50!black,very thin] (3.8,0.45) rectangle (6.2,1.35) (3.8,1.35)--(4.0,1.55)--(6.4,1.55)--(6.4,0.65)--(6.2,0.45) (6.2,1.35)--(6.4,1.55);
+					\fill[black!90] (4.1,0.9) rectangle (5.9,1.22);
+					\node[font=\sffamily\bfseries\scriptsize,inner sep=0] at (5.0,1.06) {{\color{gray!60}88}{\color{VLdo}3558}};
+					\foreach \xx in {4.45,5.1,5.75}{\shade[ball color=yellow!80!orange] (\xx,0.72) circle (0.08);}
+					\fill[VLla!80!black] (4.02,0.72) circle (0.04);
+					\node[font=\fontsize{4}{4}\selectfont] at (4.45,0.55) {MODE};
+					\node[font=\fontsize{4}{4}\selectfont] at (5.1,0.55) {RESET};
+					\node[font=\fontsize{4}{4}\selectfont] at (5.75,0.55) {COUNT};
+					\node[right,align=center,inner sep=1pt] at (6.45,0.85) {Bộ đếm\\xung};
 					% loa
 					\fill[black!85] (1.4,0.55) rectangle (1.4,0.75);
 					\shade[top color=black!60,bottom color=black!90] (0.95,0.55) rectangle (1.85,0.78);
@@ -490,6 +509,7 @@
 			\end{tikzpicture}
 		\end{center}
 		Lấy khối lượng của các hạt nhân gần bằng số khối của chúng; chu kì bán rã của $^{210}_{\phantom{1}84}\text{Po}$ và ${}^{131}_{\phantom{1}53}\text{I}$ lần lượt là $138{,}4$ ngày và $8{,}02$ ngày.
+		\NeedspaceBang{10\baselineskip}%
 		\choiceTFt
 		{\True Ban đầu, số nguyên tử $^{210}_{\phantom{1}84}\text{Po}$ có trong $1{,}5$~g là $4{,}3\cdot 10^{21}$ nguyên tử}
 		{Số lượng hạt nhân ${}^{131}_{\phantom{1}53}\text{I}$ phân rã trong vòng $1$ ngày đầu tiên xấp xỉ bằng $6{,}3\cdot 10^{21}$ hạt}
@@ -506,6 +526,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{22.1\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Cho mạch điện như hình vẽ. Thanh kim loại PQ đang đứng yên trên hai thanh ray kim loại song song nằm ngang, cách nhau một khoảng $4{,}9$~cm. Thanh có khối lượng $23{,}5$~g. Từ trường đều $B=0{,}80$~T vuông góc với mặt phẳng chứa hai thanh ray, chiều hướng vào. $R$ là một biến trở. Nguồn điện lí tưởng có suất điện động $12$~V. Di chuyển con chạy C để biến trở có giá trị giảm từ từ. Khi $R=20~\Omega$ thì thanh PQ bắt đầu chuyển động. Lấy $g=10~\text{m/s}^2$.
 		% giuhinh
@@ -516,8 +537,8 @@
 				\draw (296,188)--(322,175) to[battery1] (415,175) to[vR] (415,53)--(296,53);
 				\node[above,inner sep=2pt] at (352,180) {$+$};
 				\node[above,inner sep=2pt] at (384,180) {$-$};
-				\node[below,inner sep=3pt] at (368,170) {$E$};
-				\node[right,inner sep=6pt] at (415,114) {$R$};
+				\node[below,inner sep=6pt] at (368,170) {$E$};
+				\node[right,inner sep=12pt] at (415,114) {$R$};
 				% hai thanh ray
 				\foreach \y in {188,53}{
 					\shade[top color=gray!40,bottom color=gray!75,middle color=gray!8] (12,\y-8) rectangle (296,\y+8);
@@ -540,6 +561,7 @@
 				\node[fill=white,inner sep=1pt] at (40,120) {$4{,}9$~cm};
 			\end{tikzpicture}
 		\end{center}
+		\NeedspaceBang{10\baselineskip}%
 		\choiceTFt
 		{Cường độ dòng điện trong mạch tại thời điểm PQ bắt đầu chuyển động là $0{,}3$~A}
 		{Lực từ tác dụng lên thanh PQ tại thời điểm nó bắt đầu chuyển động là $F=0{,}01176$~N}
@@ -555,9 +577,11 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{14.1\baselineskip}
 	\begin{ex}%[VL12-C1-TH]
 		% KIỂM TRA: ý c) "tổng nhiệt lượng mà bếp điện cung cấp" hiểu là nhiệt lượng cung cấp cho ấm nước (1 224 240 J, Đúng như đáp án gốc); nếu hiểu là nhiệt lượng bếp tỏa ra thì bằng 1 632 320 J (Sai)
 		Dùng bếp điện để đun một ấm nhôm khối lượng $600$~g đựng $1{,}5$ lít nước ở nhiệt độ $20\,^\circ\text{C}$. Sau $35$ phút đã có $20\%$ lượng nước trong ấm đã hóa hơi ở nhiệt độ sôi $100\,^\circ\text{C}$. Biết chỉ có $75\%$ nhiệt lượng mà bếp tỏa ra được dùng vào việc đun ấm nước. Biết nhiệt dung riêng của nhôm là $880$~J/(kg.K), của nước là $4200$~J/(kg.K); nhiệt hóa hơi riêng của nước ở nhiệt độ sôi $100\,^\circ\text{C}$ là $2{,}26\cdot 10^6$~J/kg. Khối lượng riêng của nước là $1$~kg/lít. Các kết quả lấy đến $2$ chữ số sau dấu phẩy thập phân.
+		\NeedspaceBang{8.1\baselineskip}%
 		\choiceTFt
 		{\True Nhiệt lượng cần để đun nước từ $20\,^\circ\text{C}$ đến sôi ở $100\,^\circ\text{C}$ là $504\,000$~J}
 		{Nhiệt lượng cung cấp cho $0{,}3$~kg nước sôi hóa hơi là $180\,800$~J}
@@ -573,9 +597,11 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{57.9\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Một bạn học sinh làm thí nghiệm, lấy $1{,}2$~kg nước đá (dạng viên nhỏ) trong tủ đông nơi có nhiệt độ $-18\,^\circ\text{C}$ để đưa vào đun trong một bình điện đun nước (bình điện) chuyên dụng có thành bằng thủy tinh có thể quan sát được bên trong như Hình 1. Thông số kĩ thuật của bình điện được cho như Bảng 1.
 		% giuhinh
+		% tachDS
 		\begin{center}
 			\begin{tikzpicture}[scale=0.92,line join=round,line cap=round,font=\footnotesize]
 				% đế nguồn
@@ -643,7 +669,7 @@
 		\end{center}
 		Học sinh đo nhiệt độ của nước đá, nước theo thời gian và đồ thị biểu diễn như trong Hình 2. Biết nhiệt dung riêng và nhiệt nóng chảy riêng của nước đá lần lượt là $2100$~J/(kg.K), $334\,000$~J/kg; nhiệt hóa hơi riêng của nước là $2{,}3\cdot 10^6$~J/kg. Bình điện được cắm vào nguồn điện $220$~V.
 		\begin{center}
-			\begin{tikzpicture}[x=0.0095cm,y=0.027cm,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[x=0.013cm,y=0.027cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[VLmui,thick] (0,0)--(565,0) node[right,inner sep=2pt] {$\tau$ (s)};
 				\draw[VLmui,thick] (0,-24)--(0,122) node[above,inner sep=2pt] {$t$ ($^\circ$C)};
 				\foreach \y in {20,40,...,100}{\draw[thick] (-6,\y)--(0,\y) node[left,inner sep=4pt] {$\y$};}
@@ -659,10 +685,11 @@
 				\draw[very thick,VLdo] (0,-18)--(19,0)--(220,0)--(470,100);
 				\foreach \x/\y in {0/-18,19/0,100/0,200/0}{\fill (\x,\y) circle (1.7pt);}
 				\foreach \k in {0,...,12}{\fill ({220+250*\k/12},{100*\k/12}) circle (1.7pt);}
-				\node at (250,-30) {\textbf{Hình 2.} Đồ thị nhiệt độ -- thời gian};
+				\node at (260,-30) {\textbf{Hình 2.} Đồ thị nhiệt độ -- thời gian};
 			\end{tikzpicture}
 		\end{center}
 		Hiệu suất đun nước của bình điện được xem không đổi trong suốt quá trình đun. Bỏ qua sự thoát hơi nước trong quá trình đun nước.
+		\NeedspaceBang{11\baselineskip}%
 		\choiceTFt
 		{\True Nhiệt lượng khối nước đá đã nhận vào để nóng chảy hoàn toàn là $400\,800$~J}
 		{Hiệu suất đun nước của bình điện bằng $90{,}(18)\%$}
@@ -680,6 +707,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
+	\NeedspaceCau{9.4\baselineskip}
 	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-DongThap-SoGD-Lan1-3]
@@ -694,6 +722,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{7.6\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Trong một thí nghiệm xác định nhiệt hóa hơi riêng của nước, người ta dùng một ấm điện để đun sôi nước, khi nước sôi thì người ta mở nắp ấm cho nước bay hơi và tiến hành đo thời gian bay hơi của nước. Biết công suất của ấm, khối lượng nước và thời gian để nước bay hơi hết lần lượt là: $P=1800\pm 10$~W; $m=150\pm 5$~g; $t=196\pm 1$~s. Cho rằng ấm luôn hoạt động đúng định mức, mọi hao phí nhiệt là không đáng kể. Sai số của nhiệt hóa hơi riêng trong cách làm này bằng bao nhiêu \%? Kết quả lấy đến $1$ chữ số thập phân sau dấu phẩy.
 		\par
@@ -703,6 +732,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{13\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Một bếp điện được dùng để đun sôi $1{,}5$ lít nước ở nhiệt độ ban đầu là $30\,^\circ\text{C}$ trong $4{,}6$ phút. Bếp được sử dụng với mạng điện dân dụng ở Việt Nam có biểu thức điện áp là $u=220\sqrt{2}\cos(100\pi t)$ (V). Biết nhiệt dung riêng và khối lượng riêng của nước lần lượt là $4200$~J/(kg.K) và $997~\text{kg/m}^3$. Điện trở của bếp điện là $24{,}2~\Omega$. Hiệu suất của bếp điện là $x\%$. Giá trị của $x$ là bao nhiêu (làm tròn kết quả đến hàng đơn vị)?
 		% giuhinh
@@ -738,6 +768,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{4.6\baselineskip}
 	\begin{ex}%[VL12-C4-TH]
 		Cho khối lượng của hạt proton, neutron và hạt nhân deuteron ${}^2_1\text{D}$ lần lượt là $1{,}0073$~amu; $1{,}0087$~amu và $2{,}0136$~amu. Biết $1~\text{amu}=931{,}5~\text{MeV}/c^2$. Năng lượng liên kết riêng của hạt nhân deuteron ${}^2_1\text{D}$ là bao nhiêu MeV/nucleon? Làm tròn kết quả đến hàng phần trăm.
 		\par
@@ -748,6 +779,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{4.6\baselineskip}
 	\begin{ex}%[VL12-C1-TH]
 		Nhiệt lượng cần thiết để làm cho $10$~kg nước ở $25\,^\circ\text{C}$ chuyển hoàn toàn thành hơi ở $100\,^\circ\text{C}$ là bao nhiêu MJ (kết quả lấy đến $1$ chữ số thập phân sau dấu phẩy)? Cho nhiệt dung riêng của nước là $4200$~J/(kg.K); nhiệt hóa hơi riêng của nước là $2{,}26\cdot 10^6$~J/kg.
 		\par
@@ -757,6 +789,7 @@
 		}
 	\end{ex}
 
+	\NeedspaceCau{7.1\baselineskip}
 	\begin{ex}%[VL12-C4-VD]
 		Hạt nhân X phóng xạ $\beta^-$ và biến đổi thành hạt nhân Y bền vững. Ban đầu ($t=0$) có một mẫu chất phóng xạ X nguyên chất. Tại các thời điểm $t_1=t_0$ (năm) và $t_2=t_0+24{,}6$ (năm), tỉ số giữa số hạt nhân X còn lại trong mẫu và số hạt nhân Y đã sinh ra có giá trị lần lượt là $\dfrac{1}{3}$ và $\dfrac{1}{15}$. Chu kì bán rã của chất phóng xạ X là bao nhiêu năm (làm tròn kết quả đến chữ số hàng phần mười)?
 		\par
