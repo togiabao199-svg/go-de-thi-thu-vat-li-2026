@@ -1,0 +1,544 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Trường THPT Hàm Rồng, Thanh Hóa -- Đề thi KSCL năm học 2025 -- 2026 (mã đề gốc 0221). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{THPT Hàm Rồng, Thanh Hóa -- Lần 1}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT HÀM RỒNG -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\NeedspaceCau{16.3\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-ThanhHoa-HamRong-Lan1-1]
+
+	\begin{ex}%[VL12-C3-NB]
+		Hình bên dùng để mô tả điều gì?
+		\begin{center}
+			\begin{tikzpicture}[scale=0.72,line join=round,line cap=round,font=\footnotesize]
+				\begin{scope}
+					\clip (-5.65,-1.4) rectangle (5.65,1.9);
+					% điện trường xoáy (vòng tròn)
+					\foreach \cx in {-5.6,-1.9,1.9,5.6}{
+						\draw[VLdo,semithick] (\cx,0) circle (1.15);
+						\draw[VLdo,semithick] (\cx,0) circle (0.75);
+						\draw[VLdo,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx-1.15,-0.12)--(\cx-1.15,0.08);
+						\draw[VLdo,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx-0.75,-0.12)--(\cx-0.75,0.08);
+						\draw[VLdo,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx+1.15,0.12)--(\cx+1.15,-0.08);
+						\draw[VLdo,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx+0.75,0.12)--(\cx+0.75,-0.08);
+					}
+					% từ trường xoáy (elip)
+					\foreach \cx in {-3.72,0,3.72}{
+						\draw[VLxanh,semithick] (\cx,0) ellipse (1.85 and 0.48);
+						\draw[VLxanh,semithick] (\cx,0) ellipse (1.4 and 0.35);
+						\draw[VLxanh,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx+0.35,0.48)--(\cx+0.15,0.48);
+						\draw[VLxanh,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx+0.35,0.35)--(\cx+0.15,0.35);
+						\draw[VLxanh,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx-0.55,-0.48)--(\cx-0.35,-0.48);
+						\draw[VLxanh,-{Stealth[length=4.5pt,width=3.5pt]}] (\cx-0.55,-0.35)--(\cx-0.35,-0.35);
+					}
+				\end{scope}
+				% điện trường biến thiên E1
+				\foreach \x in {-0.48,0,0.47}{\draw[VLdo,thick,VLmui] (\x,-1.3)--(\x,1.85);}
+				\node[VLdo,right] at (0.65,1.62) {$\vv{E}_1$\ \textcolor{black}{biến thiên}};
+				\node[VLdo] at (-1.95,1.6) {$\vv{E}_2$};
+				\node[VLxanh] at (-3.85,0.85) {$\vv{B}_2$};
+				\node[VLxanh,fill=white,inner sep=1pt] at (-0.24,-1.0) {$\vv{B}_1$};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{liên hệ giữa từ trường, điện trường và tốc độ sóng điện từ}
+		{bước sóng điện từ}
+		{\True sự hình thành và lan truyền sóng điện từ}
+		{sự biến thiên đồng pha của điện trường và từ trường}
+		\loigiai{
+			Điện trường biến thiên $\vv{E}_1$ sinh ra từ trường xoáy $\vv{B}_1$, từ trường này biến thiên lại sinh ra điện trường xoáy $\vv{E}_2$,~\ldots{} Hình mô tả sự hình thành và lan truyền của sóng điện từ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.9\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Nội năng của một khối khí lí tưởng nhất định không thay đổi trong quá trình nào sau đây?
+		\choice
+		{đẳng tích}
+		{đẳng tích và đẳng nhiệt}
+		{đẳng áp}
+		{\True đẳng nhiệt}
+		\loigiai{
+			Nội năng của khối khí lí tưởng chỉ phụ thuộc nhiệt độ nên không đổi trong quá trình đẳng nhiệt.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Ban đầu một mẫu chất phóng xạ nguyên chất có khối lượng $m_0$, chu kì bán rã của chất này là $3{,}8$ ngày. Sau $15{,}2$ ngày khối lượng của chất phóng xạ đó còn lại là $2{,}24$~gam. Khối lượng $m_0$ là
+		\choice
+		{$17{,}92$~gam}
+		{$8{,}96$~gam}
+		{$5{,}60$~gam}
+		{\True $35{,}84$~gam}
+		\loigiai{
+			$\dfrac{t}{T}=\dfrac{15{,}2}{3{,}8}=4\Rightarrow m_0=m\cdot 2^{4}=2{,}24\cdot 16=35{,}84$~gam.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Trong một dây dẫn kín đặt trong từ trường người ta đo được suất điện động ổn định bằng $0{,}4$~V trong thời gian $0{,}2$~giây. Độ lớn độ biến thiên của từ thông qua dây dẫn trong thời gian đó là
+		\choice
+		{$0{,}2$~Wb}
+		{\True $0{,}08$~Wb}
+		{$2$~Wb}
+		{$0{,}6$~Wb}
+		\loigiai{
+			$|\Delta\Phi|=e\,\Delta t=0{,}4\cdot 0{,}2=0{,}08$~Wb.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Đại lượng nào sau đây đặc trưng cho độ mạnh yếu của từ trường trong tương tác từ?
+		\choice
+		{\True cảm ứng từ}
+		{dòng điện cảm ứng}
+		{từ thông}
+		{suất điện động cảm ứng}
+		\loigiai{
+			Cảm ứng từ $\vv{B}$ đặc trưng cho từ trường về phương diện tác dụng lực (độ mạnh yếu của từ trường).
+		}
+	\end{ex}
+
+	\NeedspaceCau{12.1\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Hình bên mô tả sự phụ thuộc của thể tích theo nhiệt độ của một khối lượng khí lí tưởng không đổi trong quá trình biến đổi trạng thái. Quá trình biến đổi này là quá trình nào và có thể tích cuối cùng là bao nhiêu?
+		\begin{center}
+			\begin{tikzpicture}[x=0.27cm,y=0.26cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (-4,0)--(8,0) node[above,inner sep=3pt] {$t\,(^\circ\text{C})$};
+				\draw[VLmui,thick] (0,0)--(0,8.4) node[above,inner sep=2pt] {$V$ (lít)};
+				\draw[dashed,gray] (0,6)--(5.46,6)--(5.46,0);
+				\draw[VLdo,thick,dashed] (-2.73,0)--(0,2);
+				\draw[VLdo,very thick,VLgiua=0.6] (0,2)--(5.46,6);
+				\foreach \p in {(-2.73,0),(0,2),(5.46,6),(0,6),(5.46,0)}{\filldraw[fill=black] \p circle (1.6pt);}
+				\node[left,inner sep=3pt] at (0,2.3) {$2$};
+				\node[below,inner sep=3pt] at (-2.73,0) {$-273$};
+				\node[below,inner sep=3pt] at (0,0) {$O$};
+				\node[below,inner sep=3pt] at (5.46,0) {$546$};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{đẳng áp, $4$ lít}
+		{đẳng nhiệt, $6$ lít}
+		{đẳng tích, $4$ lít}
+		{\True đẳng áp, $6$ lít}
+		\loigiai{
+			Đường kéo dài qua điểm $-273\,^\circ\text{C}$ ($0$~K) nên $V\sim T$: quá trình đẳng áp.\\
+			$V_2=V_1\cdot\dfrac{T_2}{T_1}=2\cdot\dfrac{546+273}{273}=6$ lít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.8\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Nhiệt độ mà nước tinh khiết có thể tồn tại đồng thời ở cả ba thể rắn, lỏng và hơi trong trạng thái cân bằng nhiệt ở áp suất $0{,}006$~atm được gọi là
+		\choice
+		{nhiệt độ đóng băng của nước}
+		{\True nhiệt độ điểm ba của nước}
+		{nhiệt độ điểm hai của nước}
+		{nhiệt độ sôi của nước}
+		\loigiai{
+			Trạng thái nước tồn tại cân bằng ở cả ba thể rắn, lỏng, hơi gọi là điểm ba của nước ($273{,}16$~K).
+		}
+	\end{ex}
+
+	\NeedspaceCau{4\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Phản ứng hạt nhân nào dưới đây là phản ứng phân hạch?
+		\choice
+		{${}^{226}_{\phantom{2}88}\text{Ra}\to{}^4_2\text{He}+{}^{222}_{\phantom{2}86}\text{Rn}$}
+		{${}^2_1\text{H}+{}^6_3\text{Li}\to{}^4_2\text{He}+{}^4_2\text{He}$}
+		{${}^2_1\text{H}+{}^3_1\text{H}\to{}^4_2\text{He}+{}^1_0\text{n}$}
+		{\True ${}^1_0\text{n}+{}^{235}_{\phantom{2}92}\text{U}\to{}^{139}_{\phantom{1}54}\text{Xe}+{}^{95}_{38}\text{Sr}+2{}^1_0\text{n}$}
+		\loigiai{
+			Phân hạch là hạt nhân nặng hấp thụ neutron rồi vỡ thành hai hạt nhân trung bình, kèm vài neutron: phản ứng D.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Hạt nhân X có $4$ proton và $3$ neutron. Kí hiệu của hạt nhân này là
+		\choice
+		{${}^4_3\text{X}$}
+		{${}^7_3\text{X}$}
+		{${}^4_7\text{X}$}
+		{\True ${}^7_4\text{X}$}
+		\loigiai{
+			$Z=4$, $A=4+3=7$: ${}^7_4\text{X}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Cho biết nước đá có nhiệt nóng chảy riêng là $\lambda=3{,}4\cdot 10^5$~J/kg và nhiệt dung riêng $c=2{,}09\cdot 10^3$~J/(kg.K). Nhiệt lượng cần cung cấp để làm nóng chảy cục nước đá khối lượng $50$~g và đang có nhiệt độ $-20\,^\circ\text{C}$ có giá trị bằng
+		\choice
+		{$190$~kJ}
+		{$36$~kJ}
+		{\True $19$~kJ}
+		{$1{,}9$~kJ}
+		\loigiai{
+			$Q=mc\Delta t+\lambda m=0{,}05\cdot 2090\cdot 20+3{,}4\cdot 10^5\cdot 0{,}05=19\,090~\text{J}\approx 19$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.3\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Theo mô hình động học phân tử, sự khác biệt về cấu trúc của chất rắn, chất lỏng, chất khí là do sự khác biệt về
+		\choice
+		{thành phần các phân tử cấu tạo của mỗi chất}
+		{kích thước của các phân tử cấu tạo của mỗi chất}
+		{\True độ lớn của lực tương tác giữa các phân tử trong mỗi chất}
+		{số lượng phân tử cấu tạo nên mỗi chất}
+		\loigiai{
+			Cấu trúc rắn, lỏng, khí khác nhau do lực tương tác giữa các phân tử (và khoảng cách giữa chúng) khác nhau.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.7\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Khí lí tưởng \textbf{không} tuân theo nội dung vắn tắt nào sau đây của mô hình động học phân tử của chất?\\
+		Nội dung 1: Chất được cấu tạo bởi các phân tử.\\
+		Nội dung 2: Giữa các phân tử có lực liên kết gồm lực hút và lực đẩy.\\
+		Nội dung 3: Nhiệt độ càng cao thì các phân tử chuyển động càng nhanh.
+		\choice
+		{Nội dung 1}
+		{Nội dung 1 và 2}
+		{\True Nội dung 2}
+		{Nội dung 2 và 3}
+		\loigiai{
+			Trong mô hình khí lí tưởng, các phân tử chỉ tương tác khi va chạm, bỏ qua lực hút, lực đẩy giữa chúng: không tuân theo nội dung 2.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.7\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một mạch điện kín hình tròn được đặt trong từ trường đều như hình vẽ. Khi mạch điện ở vị trí nào thì từ thông qua mạch lớn nhất?
+		\begin{center}
+			\begin{tikzpicture}[x=0.8cm,y=0.8cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLxanh,thick,VLmui] (-4.0,0.64)--(-2.15,0.64);
+				\node[VLxanh,above,inner sep=2pt] at (-3.05,0.64) {$\vv{B}$};
+				% bốn vị trí của mạch: cùng một đường kính, quay quanh đường kính đó
+				\foreach \wx/\wy in {1.61/0,-1.2/1.2,0/1.6,1.3/1.3}{
+					\draw[VLdong!80!black,thin,dashed,domain=90:270,samples=50,variable=\t] plot ({0.55*cos(\t)+\wx*sin(\t)},{-0.33*cos(\t)+\wy*sin(\t)});
+					\draw[VLdong!85!black,thick,domain=-90:90,samples=50,variable=\t] plot ({0.55*cos(\t)+\wx*sin(\t)},{-0.33*cos(\t)+\wy*sin(\t)});
+				}
+				\node at (-1.95,-0.02) {1};
+				\node at (-1.55,1.42) {2};
+				\node at (0,1.85) {3};
+				\node at (1.5,1.6) {4};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{2}
+		{1}
+		{4}
+		{\True 3}
+		\loigiai{
+			$\Phi=BS\cos\alpha$ lớn nhất khi mặt phẳng mạch vuông góc với $\vv{B}$ ($\alpha=0$): vị trí 3.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.1\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Trong một phản ứng bắn phá hạt nhân, tổng khối lượng nghỉ của các hạt trước phản ứng là $38{,}9698$~amu và tổng khối lượng nghỉ các hạt sau phản ứng là $38{,}9656$~amu. Phản ứng này là
+		\choice
+		{phản ứng tự phát và thu năng lượng}
+		{\True phản ứng kích thích và tỏa năng lượng}
+		{phản ứng kích thích và thu năng lượng}
+		{phản ứng tự phát và tỏa năng lượng}
+		\loigiai{
+			Phản ứng bắn phá là phản ứng kích thích; $m_{\text{trước}}>m_{\text{sau}}$ nên phản ứng tỏa năng lượng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{13.6\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Hình bên là sơ đồ phân bố năng lượng liên kết riêng của một số hạt nhân theo số khối $A$ của nó. Trong số các hạt nhân trên sơ đồ và có số khối từ $75$ đến $250$, hạt nhân có kí hiệu nào kém bền vững nhất?
+		\begin{center}
+			\begin{tikzpicture}[scale=0.919,x=0.027cm,y=0.29cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[gray!40,xstep=25,ystep=2] (0,0) grid (250,12);
+				\draw[thick] (0,0)--(250,0) (0,0)--(0,12);
+				\foreach \x in {0,50,...,250}{\node[below,inner sep=2pt] at (\x,0) {$\x$};}
+				\foreach \y in {2,4,...,12}{\node[left,inner sep=2pt] at (0,\y) {$\y$};}
+				\node[below,inner sep=2pt] at (125,-1.6) {Số khối $A$};
+				\node[rotate=90] at (-30,6) {$W_{\text{lkr}}$ (MeV/nucleon)};
+				\draw[VLdo,thick] (5,1.0)--(5,2.7)--(5,6.6)--(8,5.5)--(13,7.6)--(18,7.2)--(19,8.2)--(22,7.7)--(32,8.5)--(58,8.75)--(100,8.55)--(128,8.35)--(180,7.9)--(198,7.75)--(239,7.6)--(250,7.55);
+				\foreach \p in {(5,1.0),(5,2.7),(5,6.6),(8,5.5),(13,7.6),(18,7.2),(19,8.2),(32,8.5),(58,8.75),(100,8.55),(128,8.35),(180,7.9),(198,7.75),(239,7.6)}{\filldraw[fill=white,draw=black] \p circle (1.3pt);}
+				\begin{scope}[font=\scriptsize,inner sep=1pt]
+					\node[right] at (6,1.0) {${}^{2}\text{H}$};
+					\node[right] at (6,2.7) {${}^{3}\text{H}$};
+					\node[left] at (-1,7.0) {${}^{4}\text{He}$};
+					\node[right] at (9,5.3) {${}^{6}\text{Li}$};
+					\node[above] at (11,7.9) {${}^{12}\text{C}$};
+					\node[below right] at (17,7.1) {${}^{14}\text{N}$};
+					\node[above] at (19,8.85) {${}^{16}\text{O}$};
+					\node[below right] at (33,8.4) {${}^{32}\text{S}$};
+					\node[above] at (58,8.95) {${}^{56}\text{Fe}$};
+					\node[above] at (100,8.75) {${}^{100}\text{Mo}$};
+					\node[above] at (128,8.55) {${}^{127}\text{I}$};
+					\node[above] at (175,8.1) {${}^{184}\text{W}$};
+					\node[above] at (204,7.95) {${}^{197}\text{Au}$};
+					\node[above] at (239,7.8) {${}^{238}\text{U}$};
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{\True U}
+		{Au}
+		{W}
+		{Mo}
+		\loigiai{
+			Hạt nhân kém bền vững nhất có năng lượng liên kết riêng nhỏ nhất. Với $75\le A\le 250$, ${}^{238}\text{U}$ có năng lượng liên kết riêng nhỏ nhất (khoảng $7{,}6$~MeV/nucleon).
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.4\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Trong một máy phát điện xoay chiều, người ta thấy có hai vành khuyên trong cấu tạo của máy. Cấu tạo của máy phù hợp với mô hình thực tế nào sau đây?
+		\choice
+		{\True Khung dây của máy quay, nam châm của máy đặt cố định}
+		{Khung dây của máy cố định, nam châm của máy đặt cố định}
+		{Khung dây của máy quay, nam châm của máy quay}
+		{Khung dây của máy cố định, nam châm của máy quay}
+		\loigiai{
+			Hai vành khuyên gắn với hai đầu khung dây đang quay, qua chổi quét đưa dòng điện ra mạch ngoài; nam châm (phần cảm) đứng yên.
+		}
+	\end{ex}
+
+	\NeedspaceCau{11\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Hình bên mô tả sự phụ thuộc của áp suất vào thể tích của khối khí lí tưởng không đổi trong quá trình biến đổi trạng thái. Ở trạng thái nào sau đây khối khí có nhiệt độ lớn nhất?
+		\begin{center}
+			\begin{tikzpicture}[x=0.75cm,y=0.75cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(4.4,0) node[above,inner sep=3pt] {$V$};
+				\draw[VLmui,thick] (0,0)--(0,3.6) node[left,inner sep=3pt] {$p$};
+				\node[below left,inner sep=2pt] at (0,0) {$O$};
+				\fill[VLla!35] (0.9,0.75) rectangle (3.2,2.9);
+				\draw[very thick,VLdo,VLgiua=0.6] (0.9,2.9)--(3.2,2.9);
+				\draw[very thick,VLxanh,VLgiua=0.6] (3.2,2.9)--(3.2,0.75);
+				\draw[very thick,VLluc,VLgiua=0.6] (3.2,0.75)--(0.9,0.75);
+				\draw[very thick,VLtim,VLgiua=0.6] (0.9,0.75)--(0.9,2.9);
+				\foreach \p in {(0.9,2.9),(3.2,2.9),(3.2,0.75),(0.9,0.75)}{\filldraw[fill=white,draw=black,thick] \p circle (2pt);}
+				\node[above left,inner sep=2pt] at (0.9,2.9) {1};
+				\node[above right,inner sep=2pt] at (3.2,2.9) {2};
+				\node[below right,inner sep=2pt] at (3.2,0.75) {3};
+				\node[below left,inner sep=2pt] at (0.9,0.75) {4};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{4}
+		{3}
+		{1}
+		{\True 2}
+		\loigiai{
+			$T\sim pV$; trạng thái 2 có cả $p$ và $V$ lớn nhất nên nhiệt độ lớn nhất.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.4\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Phát biểu nào sau đây là \textbf{sai} khi nói về chất rắn vô định hình?
+		\choice
+		{Khi bị nung nóng chúng mềm dần và chuyển sang thể lỏng}
+		{\True Có nhiệt độ nóng chảy (hay đông đặc) xác định}
+		{Có tính đẳng hướng}
+		{Không có cấu trúc tinh thể}
+		\loigiai{
+			Chất rắn vô định hình không có nhiệt độ nóng chảy xác định.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{26.2\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-ThanhHoa-HamRong-Lan1-2]
+
+	\begin{ex}%[VL12-C2-TH]
+		Một học sinh thực hiện thí nghiệm khảo sát sự biến đổi trạng thái của một khối lượng khí xác định nhốt trong một xilanh kín có pit-tông dịch chuyển được. Học sinh này thay đổi thể tích $V$ của khối khí và đo áp suất $p$ tương ứng. Biết nhiệt độ phòng không đổi bằng $27\,^\circ\text{C}$. Học sinh thu được đồ thị mối quan hệ giữa áp suất ($p$) và nghịch đảo thể tích ($1/V$) là một đường thẳng đi qua gốc tọa độ như hình vẽ. Khi nói về thí nghiệm và các trạng thái của khối khí này, hãy cho biết các nhận xét sau đúng hay sai.
+		\begin{center}
+			\begin{tikzpicture}[x=0.95cm,y=0.6cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(3.0,0) node[right,inner sep=3pt] {$1/V$ (lít$^{-1}$)};
+				\draw[VLmui,thick] (0,0)--(0,3.6) node[above,inner sep=2pt] {$p$ ($10^5$~Pa)};
+				\node[below left,inner sep=2pt] at (0,0) {$O$};
+				\draw[dashed,gray] (0,2)--(2,2)--(2,0);
+				\draw[VLdo,very thick] (0,0)--(2.65,2.65);
+				\foreach \p in {(0,2),(2,0)}{\fill \p circle (1.6pt);}
+				\filldraw[fill=white,draw=black,thick] (2,2) circle (2pt);
+				\node[above left,inner sep=3pt] at (2,2) {M};
+				\node[left,inner sep=3pt] at (0,2) {$2$};
+				\node[below,inner sep=3pt] at (2,0) {$2$};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{\True Khối khí đang trải qua quá trình biến đổi đẳng nhiệt theo định luật Boyle}
+		{\True Tại điểm M trên đồ thị, tích số $pV$ của khối khí có giá trị bằng $100$~J}
+		{Nếu học sinh nén khí nhanh để thể tích giảm xuống còn $0{,}2$ lít thì áp suất khí khi đó đúng bằng $5\cdot 10^5$~Pa}
+		{\True Số mol khí trong xilanh xấp xỉ bằng $0{,}04$~mol}
+		\loigiai{
+			Tại M: $p=2\cdot 10^5$~Pa, $V=\dfrac{1}{2}$ lít $=0{,}5\cdot 10^{-3}~\text{m}^3$.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Nhiệt độ không đổi, $p$ tỉ lệ với $\dfrac{1}{V}$ ($pV=$ hằng số): định luật Boyle.
+				\itemch \textbf{Đúng.} $pV=2\cdot 10^5\cdot 0{,}5\cdot 10^{-3}=100$~J.
+				\itemch \textbf{Sai.} Nén nhanh thì nhiệt độ khí tăng, không còn đẳng nhiệt; áp suất lớn hơn $\dfrac{100}{0{,}2\cdot 10^{-3}}=5\cdot 10^5$~Pa.
+				\itemch \textbf{Đúng.} $n=\dfrac{pV}{RT}=\dfrac{100}{8{,}31\cdot 300}\approx 0{,}04$~mol.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{13\baselineskip}
+	\begin{ex}%[VL12-C4-VD]
+		Trong y học, đồng vị phóng xạ ${}^{131}_{\phantom{1}53}\text{I}$ (phóng xạ $\beta^-$ và $\gamma$) có chu kì bán rã $8{,}02$ ngày được sử dụng rộng rãi trong điều trị ung thư tuyến giáp. Giả sử trong liệu trình điều trị của mình, một bệnh nhân được chỉ định dùng ${}^{131}_{\phantom{1}53}\text{I}$ với độ phóng xạ (hoạt độ phóng xạ) là $50$~mCi. Xét tính đúng/sai trong các nhận định sau.
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{\True Phóng xạ $\beta^-$ phát ra có tác dụng tiêu diệt tế bào ung thư tuyến giáp}
+		{\True Hạt nhân con của ${}^{131}_{\phantom{1}53}\text{I}$ trong quá trình phóng xạ có số khối là $131$}
+		{Khối lượng ${}^{131}_{\phantom{1}53}\text{I}$ trong liều thuốc trên tại thời điểm ngay khi bệnh nhân nhận và uống liều thuốc là $1{,}09\cdot 10^{-17}$~gam}
+		{\True Độ phóng xạ sau $7$ ngày kể từ khi bệnh nhân nhận liều thuốc trên là $27{,}3$~mCi}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Hạt $\beta^-$ có quãng chạy ngắn trong mô, iodine tập trung ở tuyến giáp nên tia $\beta^-$ tiêu diệt tế bào ung thư tại chỗ.
+				\itemch \textbf{Đúng.} Phóng xạ $\beta^-$ (và $\gamma$) không làm thay đổi số khối: hạt nhân con có $A=131$.
+				\itemch \textbf{Sai.} $H=50\cdot 10^{-3}\cdot 3{,}7\cdot 10^{10}=1{,}85\cdot 10^9$~Bq; $\lambda=\dfrac{\ln 2}{8{,}02\cdot 86\,400}\approx 1{,}0\cdot 10^{-6}~\text{s}^{-1}$.\\
+				$m=\dfrac{H}{\lambda}\cdot\dfrac{M}{N_A}=\dfrac{1{,}85\cdot 10^9}{1{,}0\cdot 10^{-6}}\cdot\dfrac{131}{6{,}02\cdot 10^{23}}\approx 4{,}02\cdot 10^{-7}$~gam.
+				\itemch \textbf{Đúng.} $H=H_0\cdot 2^{-\frac{t}{T}}=50\cdot 2^{-\frac{7}{8{,}02}}\approx 27{,}3$~mCi.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{19\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Để xác định nhanh (gần đúng) nhiệt dung riêng của nước máy tại nhà, một học sinh đã bố trí thí nghiệm như sau: đổ $500$~ml nước (tương đương $0{,}5$~kg nước) vào trong một ấm siêu tốc, trên ấm ghi $220~\text{V}-1600~\text{W}$; cắm vào trong ấm một nhiệt kế dài để đo nhiệt độ nước, mở ứng dụng camera điện thoại và chuyển sang chế độ quay video hướng về nhiệt kế. Ngay khi cắm điện cho ấm vào ổ điện gia đình thì học sinh này bắt đầu quay video (ghi hình) nhiệt kế. Sau $1$ phút thì kết thúc quá trình quay và ngắt điện ấm siêu tốc. Sau đó học sinh này ghi lại nhiệt độ trên nhiệt kế từ video sau các khoảng thời gian bằng nhau là $10$ giây kể từ thời điểm bắt đầu quay và được các số sau: $20\,^\circ\text{C}$; $24\,^\circ\text{C}$; $29\,^\circ\text{C}$; $36\,^\circ\text{C}$; $43\,^\circ\text{C}$; $50\,^\circ\text{C}$; $57\,^\circ\text{C}$. Khi bỏ qua sự truyền nhiệt của ấm ra môi trường, học sinh này đưa ra các nhận xét như sau.
+		\NeedspaceBang{10\baselineskip}%
+		\choiceTFt
+		{\True Trong $20$ giây đầu tiên, nhiệt độ của nước tăng $9\,^\circ\text{C}$}
+		{\True Sau $20$ giây đầu tiên, nước nhận nhiệt một cách đều đặn}
+		{\True Nhiệt dung riêng của nước khoảng $4570$~J/(kg.K)}
+		{\True Vỏ ấm siêu tốc cũng nhận nhiệt từ sợi đốt nên nhiệt lượng nước nhận được nhỏ hơn nhiệt lượng từ sợi đốt tỏa ra, nhiệt dung riêng thực tế của nước phải nhỏ hơn $4570$~J/(kg.K)}
+		\loigiai{
+			Độ tăng nhiệt độ sau mỗi $10$~s: $4$; $5$; $7$; $7$; $7$; $7\,^\circ\text{C}$.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $\Delta t=29-20=9\,^\circ\text{C}$.
+				\itemch \textbf{Đúng.} Từ giây thứ $20$, cứ mỗi $10$~s nhiệt độ tăng đều $7\,^\circ\text{C}$ nên nước nhận nhiệt đều đặn.
+				\itemch \textbf{Đúng.} $\mathscr{P}\tau=mc\Delta t\Rightarrow c=\dfrac{1600\cdot 10}{0{,}5\cdot 7}\approx 4570$~J/(kg.K).
+				\itemch \textbf{Đúng.} Nhiệt lượng nước thực nhận $Q<\mathscr{P}\tau$ nên $c=\dfrac{Q}{m\Delta t}<\dfrac{\mathscr{P}\tau}{m\Delta t}\approx 4570$~J/(kg.K).
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[4.3\baselineskip]{16.9\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		% KIỂM TRA: ý c) không nói rõ mạch chứa MN (hai dây treo cách điện); hiểu MN không nằm trong mạch kín có từ thông biến thiên → Sai.
+		Một đoạn dây dẫn thẳng MN có chiều dài $20$~cm, khối lượng $10$~gam được treo nằm ngang bằng hai sợi dây mảnh, nhẹ, cách điện, cùng chiều dài trong một từ trường đều có các đường sức từ thẳng đứng hướng xuống và có độ lớn $0{,}5$~T. Cho dòng điện cường độ $I$ chạy qua dây dẫn theo chiều từ M đến N. Lấy $g=10~\text{m/s}^2$.
+		\NeedspaceBang{12.9\baselineskip}%
+		\choiceTFt
+		{\True Khi cho dòng điện $1$~A chạy qua MN, lực từ tác dụng lên đoạn dây có phương nằm ngang và độ lớn bằng $0{,}1$~N}
+		{\True Để dây treo lệch một góc $45^\circ$ so với phương thẳng đứng, cường độ dòng điện cần duy trì là $1$~A}
+		{Nếu từ trường triệt tiêu (giảm về $0$) trong khoảng thời gian rất ngắn $\Delta t$, trong đoạn dây MN sẽ xuất hiện dòng điện cảm ứng}
+		{Giả sử từ trường không đổi nhưng dây treo MN bị đứt và MN rơi tự do, trong quá trình rơi MN giữ nguyên phương ban đầu. Giữa hai đầu M, N xuất hiện một hiệu điện thế tăng dần theo thời gian}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $\vv{F}\perp\vv{B}$ (thẳng đứng) nên $\vv{F}$ nằm ngang; $F=BIl=0{,}5\cdot 1\cdot 0{,}2=0{,}1$~N.
+				\itemch \textbf{Đúng.} $\tan 45^\circ=\dfrac{F}{mg}\Rightarrow I=\dfrac{mg}{Bl}=\dfrac{0{,}01\cdot 10}{0{,}5\cdot 0{,}2}=1$~A.
+				\itemch \textbf{Sai.} Đoạn dây MN treo bằng dây cách điện, đứng yên, không nằm trong mạch kín có từ thông biến thiên nên không có dòng điện cảm ứng.
+				\itemch \textbf{Sai.} MN rơi theo phương thẳng đứng, $\vv{v}\parallel\vv{B}$ nên MN không cắt đường sức từ, không xuất hiện suất điện động cảm ứng.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{8.3\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-ThanhHoa-HamRong-Lan1-3]
+
+	\begin{ex}%[VL12-C3-TH]
+		Một dây đồng dài $25$~cm, có khối lượng là $10$~g nằm cân bằng trong từ trường đều có các đường sức từ nằm ngang và có độ lớn $0{,}20$~T. Lấy $g=10~\text{m/s}^2$. Cường độ dòng điện nhỏ nhất chạy qua dây để dây có thể cân bằng là bao nhiêu ampe (làm tròn kết quả đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{2}
+		\loigiai{
+			Lực từ cân bằng trọng lực, $I$ nhỏ nhất khi dây vuông góc với đường sức từ:
+			$BIl=mg\Rightarrow I=\dfrac{mg}{Bl}=\dfrac{0{,}01\cdot 10}{0{,}2\cdot 0{,}25}=2$~A.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Đổ $100$~g nước ở $40\,^\circ\text{C}$ vào một khối nước đá lớn ở $0\,^\circ\text{C}$. Biết nhiệt nóng chảy riêng của nước đá là $80$~cal/g và nhiệt dung riêng của nước là $1$~cal/(g.K). Khối lượng nước đá đã nóng chảy là bao nhiêu gam (làm tròn kết quả đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{50}
+		\loigiai{
+			Nước hạ nhiệt về $0\,^\circ\text{C}$: $m_\text{n}c\Delta t=\lambda m_\text{đ}\Rightarrow m_\text{đ}=\dfrac{100\cdot 1\cdot 40}{80}=50$~g.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một khối khí lí tưởng xác định đang ở trạng thái có áp suất $p$, thể tích $V$ và nhiệt độ $T$. Người ta giữ cho nhiệt độ của khối khí không đổi nhưng nén khối khí sao cho thể tích giảm đi $4$ lần. Khi đó, áp suất của khối khí thay đổi một lượng là $150$~kPa. Hãy xác định giá trị áp suất ban đầu của khối khí theo đơn vị kPa (làm tròn kết quả đến chữ số hàng đơn vị).
+		\par
+		\shortans[oly]{50}
+		\loigiai{
+			Đẳng nhiệt: $p_2=\dfrac{pV}{V/4}=4p\Rightarrow \Delta p=3p=150~\text{kPa}\Rightarrow p=50$~kPa.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Xét hạt nhân helium ${}^4_2\text{He}$. Biết khối lượng của hạt nhân helium là $4{,}0015$~amu; khối lượng của proton là $1{,}0073$~amu và khối lượng của neutron là $1{,}0087$~amu. Hãy tính năng lượng liên kết riêng của hạt nhân ${}^4_2\text{He}$ theo đơn vị MeV (làm tròn kết quả đến chữ số hàng phần trăm).
+		\par
+		\shortans[oly]{7{,}10}
+		\loigiai{
+			$\Delta m=2\cdot 1{,}0073+2\cdot 1{,}0087-4{,}0015=0{,}0305$~amu.\\
+			$W_{\text{lkr}}=\dfrac{\Delta m\cdot 931{,}5}{A}=\dfrac{0{,}0305\cdot 931{,}5}{4}\approx 7{,}10$~MeV.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Nội năng của khối khí tăng thêm $45$~J khi truyền cho khối khí một nhiệt lượng $35$~J. Khi đó, khối khí đã nhận một công bằng bao nhiêu jun (làm tròn kết quả đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{10}
+		\loigiai{
+			$\Delta U=A+Q\Rightarrow A=\Delta U-Q=45-35=10$~J.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.6\baselineskip}
+	\begin{ex}%[VL12-C4-VD]
+		% KIỂM TRA: đề không cho N_A và 1 MeV theo J; dùng N_A = 6,02.10^23, 1 MeV = 1,6.10^-13 J → 2108 (6,022.10^23 → 2107; 1,602.10^-13 → 2105).
+		Một nhà máy điện hạt nhân sử dụng nhiên liệu là uranium ${}^{235}_{\phantom{2}92}\text{U}$. Biết rằng mỗi hạt nhân ${}^{235}_{\phantom{2}92}\text{U}$ phân hạch tỏa ra năng lượng trung bình là $200$~MeV. Hiệu suất của nhà máy điện là $30\%$. Nếu nhà máy hoạt động với công suất điện không đổi là $600$~MW thì trong một ngày đêm ($24$ giờ), khối lượng nhiên liệu uranium ${}^{235}_{\phantom{2}92}\text{U}$ thực tế đã tiêu thụ là bao nhiêu gam? Biết khối lượng mol của ${}^{235}_{\phantom{2}92}\text{U}$ là $235$~g/mol (làm tròn kết quả đến chữ số hàng đơn vị).
+		\par
+		\shortans[oly]{2108}
+		\loigiai{
+			Năng lượng phân hạch trong một ngày: $E=\dfrac{\mathscr{P}t}{H}=\dfrac{600\cdot 10^6\cdot 86\,400}{0{,}3}=1{,}728\cdot 10^{14}$~J.\\
+			Số hạt nhân phân hạch: $N=\dfrac{1{,}728\cdot 10^{14}}{200\cdot 1{,}6\cdot 10^{-13}}=5{,}4\cdot 10^{24}$.\\
+			$m=\dfrac{N}{N_A}\cdot M=\dfrac{5{,}4\cdot 10^{24}}{6{,}02\cdot 10^{23}}\cdot 235\approx 2108$~g.
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-ThanhHoa-HamRong-Lan1-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-ThanhHoa-HamRong-Lan1-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-ThanhHoa-HamRong-Lan1-3}
+\end{document}
