@@ -1,0 +1,551 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: THPT chuyên KHTN, Hà Nội -- Lần 1 (PDF SieuGioi, không có đáp án). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{THPT chuyên KHTN, Hà Nội -- Lần 1}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT CHUYÊN KHTN -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\noindent\textbf{Cho biết:} $\pi=3{,}14$; $T(\text{K})=t\,(^\circ\text{C})+273$; $R=8{,}31$~J$\cdot$mol$^{-1}\cdot$K$^{-1}$; $N_A=6{,}02\cdot 10^{23}$~hạt/mol.
+
+	\NeedspaceCau{8\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-HaNoi-ChuyenKHTN-Lan1-1]
+
+	\begin{ex}%[VL12-C2-NB]
+		Tập hợp ba thông số nào sau đây xác định trạng thái của một lượng khí xác định?
+		\choice
+		{Áp suất, thể tích, khối lượng}
+		{\True Áp suất, nhiệt độ, thể tích}
+		{Thể tích, trọng lượng, áp suất}
+		{Áp suất, nhiệt độ, khối lượng}
+		\loigiai{
+			Trạng thái của một lượng khí xác định được mô tả bởi ba thông số trạng thái: áp suất $p$, thể tích $V$, nhiệt độ $T$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Xung quanh vật nào sau đây \textbf{không} có từ trường?
+		\choice
+		{Dòng điện không đổi}
+		{Hạt mang điện chuyển động}
+		{\True Hạt mang điện đứng yên}
+		{Nam châm hình chữ U}
+		\loigiai{
+			Từ trường tồn tại xung quanh nam châm và điện tích chuyển động (dòng điện); hạt mang điện đứng yên chỉ gây ra điện trường.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.7\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Trong quá trình đẳng nhiệt, khi thể tích của một lượng khí lí tưởng xác định giảm $2$ lần thì áp suất của khí đó sẽ
+		\choice
+		{\True tăng lên $2$ lần}
+		{giảm $2$ lần}
+		{tăng $4$ lần}
+		{không đổi}
+		\loigiai{
+			Đẳng nhiệt: $pV=\text{hằng số}\Rightarrow \dfrac{p_2}{p_1}=\dfrac{V_1}{V_2}=2$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.1\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Bốn đoạn dây dẫn a, b, c, d có cùng chiều dài $\ell$ được đặt vuông góc với vectơ cảm ứng từ $\vv{B}$ trong từ trường đều, mang dòng điện $I_1>I_2>I_3>I_4$ (hình bên). Lực từ do từ trường đều tác dụng lên đoạn dây dẫn nào là nhỏ nhất?
+		\par\noindent
+		\begin{minipage}[c]{0.6\linewidth}
+		\choice
+		{\True Đoạn a}
+		{Đoạn b}
+		{Đoạn c}
+		{Đoạn d}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.38\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=1.1,line join=round,line cap=round,font=\footnotesize]
+				\foreach \j in {0,...,5}{\draw[VLxanh,thick,VLmui] (0,{0.42*\j})--(3.5,{0.42*\j});}
+				\foreach \x/\t in {0.55/a,1.3/b,2.05/c,2.8/d}{
+					\draw[VLdong!70!black,line width=1.6pt] (\x,-0.3)--(\x,2.4);
+					\node[below right,inner sep=1pt] at (\x,-0.12) {\t};}
+				\foreach \x/\y in {0.55/1.38,1.3/1.38,2.05/1.38,2.8/1.8}{\draw[VLdo,VLmui,line width=1.2pt] (\x,\y-0.2)--(\x,\y);}
+				\foreach \x/\y/\t in {0.95/0.84/I_4,1.65/1.26/I_3,2.38/1.47/I_2,3.12/1.62/I_1}{\node[VLdo,fill=white,inner sep=0.6pt,font=\scriptsize] at (\x,\y) {$\t$};}
+				\node[VLxanh!85!black,right,inner sep=2pt] at (3.5,0.84) {$\vv{B}$};
+				\node[rotate=90,font=\scriptsize] at (-0.3,1.05) {Đường sức từ};
+			\end{tikzpicture}
+		\end{minipage}
+		\loigiai{
+			$F=BI\ell$ với cùng $B$, $\ell$ nên lực từ nhỏ nhất ứng với dòng điện nhỏ nhất $I_4$, chạy trong đoạn a.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.1\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Tính chất cơ bản của từ trường là gây ra
+		\choice
+		{sự biến đổi về tính chất điện của môi trường xung quanh}
+		{lực điện trường tác dụng lên các dòng điện và nam châm đặt trong nó}
+		{lực hấp dẫn lên các vật đặt trong nó}
+		{\True lực từ tác dụng lên nam châm hoặc lên dòng điện đặt trong nó}
+		\loigiai{
+			Tính chất cơ bản của từ trường là tác dụng lực từ lên nam châm hoặc dòng điện đặt trong nó.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Ở nhiệt độ bao nhiêu trong thang Celsius thì giá trị nhiệt độ bằng một nửa nhiệt độ tuyệt đối của nó?
+		\choice
+		{$0\,^\circ\text{C}$}
+		{$100\,^\circ\text{C}$}
+		{\True $273\,^\circ\text{C}$}
+		{$546\,^\circ\text{C}$}
+		\loigiai{
+			$t=\dfrac{T}{2}=\dfrac{t+273}{2}\Rightarrow t=273\,^\circ\text{C}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.1\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Quá trình đẳng nhiệt là quá trình biến đổi trạng thái trong đó
+		\choice
+		{áp suất được giữ không đổi}
+		{thể tích được giữ không đổi}
+		{\True nhiệt độ được giữ không đổi}
+		{nhiệt độ và thể tích được giữ không đổi}
+		\loigiai{
+			Quá trình đẳng nhiệt là quá trình biến đổi trạng thái khi nhiệt độ được giữ không đổi.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Chỉ ra câu \textbf{sai}?
+		\choice
+		{Các đường mạt sắt của từ phổ cho biết dạng của đường sức từ}
+		{Các đường sức từ của từ trường đều là những đường thẳng song song, cách đều nhau}
+		{\True Các đường sức từ là những đường cong không kín}
+		{Tại mỗi điểm trong từ trường, chỉ có thể vẽ được một và chỉ một đường sức từ đi qua}
+		\loigiai{
+			Các đường sức từ là những đường cong khép kín (hoặc vô hạn ở hai đầu), không phải đường cong không kín.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Một bình chứa khí có áp suất bằng áp suất khí quyển và có nhiệt độ là $27\,^\circ\text{C}$. Khối lượng khí trong bình là $150$~gam. Người ta tăng nhiệt độ của bình thêm $10\,^\circ\text{C}$ và mở một lỗ nhỏ cho khí thông với khí quyển. Khối lượng khí trong bình giảm đi
+		\choice
+		{$5{,}85$~gam}
+		{$6{,}28$~gam}
+		{\True $4{,}84$~gam}
+		{$3{,}76$~gam}
+		\loigiai{
+			$p$, $V$ không đổi: $pV=\dfrac{m}{M}RT\Rightarrow m_2=m_1\dfrac{T_1}{T_2}=150\cdot\dfrac{300}{310}\approx 145{,}16$~g $\Rightarrow \Delta m\approx 4{,}84$~g.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một chiếc lốp ô tô chứa không khí ở áp suất $5$~atm, nhiệt độ $27\,^\circ\text{C}$. Khi xe chạy, nhiệt độ của khí trong lốp tăng lên đến $54\,^\circ\text{C}$, coi thể tích lốp xe không thay đổi, áp suất không khí trong lốp khi đó là
+		\choice
+		{$10$~atm}
+		{\True $5{,}45$~atm}
+		{$4{,}55$~atm}
+		{$10{,}45$~atm}
+		\loigiai{
+			Đẳng tích: $p_2=p_1\dfrac{T_2}{T_1}=5\cdot\dfrac{327}{300}=5{,}45$~atm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.8\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Trong hệ đơn vị SI, đơn vị của chiều dài là mét (m), đơn vị của lực là newton (N), đơn vị cường độ dòng điện là ampe (A) và đơn vị của cảm ứng từ là tesla (T), $1$~T bằng
+		\choice
+		{$1~\text{A}\cdot\text{m/N}$}
+		{\True $1~\text{N}/(\text{A}\cdot\text{m})$}
+		{$1~\text{N}\cdot\text{m/A}$}
+		{$1~\text{A}\cdot\text{N/m}$}
+		\loigiai{
+			$B=\dfrac{F}{I\ell}\Rightarrow 1~\text{T}=1~\text{N}/(\text{A}\cdot\text{m})$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một đoạn dây dẫn đặt trong từ trường đều và vuông góc với đường sức từ. Nếu chiều dài dây dẫn và cường độ dòng điện qua dây dẫn tăng $2$ lần thì độ lớn lực từ tác dụng lên dây dẫn
+		\choice
+		{tăng $2$ lần}
+		{giảm $2$ lần}
+		{\True tăng $4$ lần}
+		{không đổi}
+		\loigiai{
+			$F=BI\ell\Rightarrow \dfrac{F_2}{F_1}=2\cdot 2=4$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một bình có thể tích $10$ lít chứa một chất khí dưới áp suất $30$~at. Cho biết thể tích của chất khí khi ta mở nút bình? Coi nhiệt độ của khí là không đổi, áp suất của khí quyển là $1$~at.
+		\choice
+		{\True $300$ lít}
+		{$20$ lít}
+		{$100$ lít}
+		{$30$ lít}
+		\loigiai{
+			Đẳng nhiệt: $V_2=\dfrac{p_1V_1}{p_2}=\dfrac{30\cdot 10}{1}=300$ lít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.8\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một lượng khí có thể tích $10~\text{m}^3$ và áp suất $1$~atm. Người ta nén đẳng nhiệt khí tới áp suất $2{,}5$~atm. Thể tích của khí nén lúc này là
+		\choice
+		{\True $4{,}00~\text{m}^3$}
+		{$25{,}00~\text{m}^3$}
+		{$0{,}25~\text{m}^3$}
+		{$0{,}35~\text{m}^3$}
+		\loigiai{
+			$V_2=\dfrac{p_1V_1}{p_2}=\dfrac{1\cdot 10}{2{,}5}=4{,}00~\text{m}^3$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một chậu bằng nhôm khối lượng $500$~g đựng $2$ lít nước sôi ở $100\,^\circ\text{C}$. Phải thêm vào chậu xấp xỉ bao nhiêu lít nước ở $20\,^\circ\text{C}$ để có nước ở $35\,^\circ\text{C}$? Biết nhiệt dung riêng của nước là $4200$~J/(kg.K), của nhôm là $880$~J/(kg.K). Khối lượng riêng của nước là $1000~\text{g/dm}^3$.
+		\choice
+		{\True $9{,}1$ lít}
+		{$10{,}5$ lít}
+		{$12{,}8$ lít}
+		{$8{,}4$ lít}
+		\loigiai{
+			$(m_1c_1+m_2c_2)(100-35)=mc_2(35-20)\Rightarrow m=\dfrac{(0{,}5\cdot 880+2\cdot 4200)\cdot 65}{4200\cdot 15}\approx 9{,}12$~kg, tức khoảng $9{,}1$ lít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.9\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Trong quá trình hít vào, cơ hoành và cơ liên sườn của một người co lại, mở rộng khoang ngực và hạ thấp áp suất không khí bên trong xuống dưới môi trường xung quanh để không khí đi vào qua miệng và mũi đến phổi. Giả sử phổi của một người chứa $6000$~ml không khí ở áp suất $1$~atm. Nếu người đó mở rộng khoang ngực thêm $500$~ml bằng cách giữ mũi và miệng đóng lại để không hít không khí vào phổi thì áp suất không khí trong phổi theo atm sẽ là bao nhiêu? Giả sử nhiệt độ không khí không đổi.
+		\choice
+		{\True $0{,}92$~atm}
+		{$1{,}08$~atm}
+		{$1{,}20$~atm}
+		{$0{,}85$~atm}
+		\loigiai{
+			Đẳng nhiệt: $p_2=\dfrac{p_1V_1}{V_2}=\dfrac{1\cdot 6000}{6500}\approx 0{,}92$~atm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.8\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Một lượng không khí có thể tích $240~\text{cm}^3$ chứa trong một xilanh có pit-tông đóng kín, diện tích của pit-tông là $24~\text{cm}^2$ (xem hình bên). Áp suất của không khí trong xilanh bằng áp suất ngoài là $100$~kPa. Cần một lực tối thiểu bằng bao nhiêu để dịch chuyển pit-tông $2$~cm theo chiều làm thể tích khí trong xilanh giảm? Bỏ qua ma sát giữa pit-tông và thành xilanh. Coi trong quá trình chuyển động nhiệt độ không thay đổi.
+		\par\noindent
+		\begin{minipage}[c]{0.55\linewidth}
+		\choice
+		{$20$~N}
+		{$80$~N}
+		{\True $60$~N}
+		{$70$~N}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.43\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=1.15,line join=round,line cap=round,font=\footnotesize]
+				% khí
+				\fill[VLxanh!10] (0.12,0.12) rectangle (3.0,1.48);
+				\foreach \i in {0,...,27}{\foreach \j in {0,...,12}{\fill[VLxanh!45] ({0.2+0.1*\i+0.05*mod(\j,2)},{0.2+0.1*\j}) circle (0.022);}}
+				% thành xilanh
+				\shade[top color=gray!30,bottom color=gray!65] (0,1.48) rectangle (3.95,1.6);
+				\shade[top color=gray!30,bottom color=gray!65] (0,0) rectangle (3.95,0.12);
+				\shade[left color=gray!65,right color=gray!30] (0,0) rectangle (0.12,1.6);
+				\draw[thick] (3.95,1.6)--(0,1.6)--(0,0)--(3.95,0) (3.95,1.48)--(0.12,1.48)--(0.12,0.12)--(3.95,0.12);
+				% pit-tông, cán
+				\shade[left color=gray!45,right color=gray!80!black,draw=black,thick] (3.0,0.12) rectangle (3.22,1.48);
+				\shade[top color=gray!40,bottom color=gray!80!black,draw=black,thick] (3.22,0.71) rectangle (4.3,0.89);
+			\end{tikzpicture}
+		\end{minipage}
+		\loigiai{
+			Chiều dài cột khí $h_1=\dfrac{240}{24}=10$~cm. Đẳng nhiệt: $p_2=p_1\dfrac{h_1}{h_2}=100\cdot\dfrac{10}{8}=125$~kPa.\\
+			$F=(p_2-p_0)S=25\cdot 10^3\cdot 24\cdot 10^{-4}=60$~N.
+		}
+	\end{ex}
+
+	\NeedspaceCau{16.5\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		Một dây dẫn thẳng MN chiều dài $\ell$, khối lượng của một đơn vị dài của dây là $D=0{,}04$~kg/m. Dây được treo bằng hai dây dẫn nhẹ thẳng đứng và đặt trong từ trường đều có $\vv{B}$ vuông góc với mặt phẳng chứa MN và dây treo, $B=0{,}04$~T. Cho dòng điện $I$ qua dây. Xác định chiều và độ lớn của $I$ để lực căng của các dây treo bằng ``không''. Lấy $g=10~\text{m/s}^2$.
+		\begin{center}
+			\begin{tikzpicture}[scale=1.3,line join=round,line cap=round,font=\footnotesize]
+				\fill[black] (0.05,2.3) rectangle (0.75,2.42);
+				\fill[black] (2.85,2.3) rectangle (3.55,2.42);
+				\draw[thick] (0.4,2.3)--(0.4,0.17) (3.2,2.3)--(3.2,0.17);
+				\shade[top color=VLdong!45!white,bottom color=VLdong!85!black,draw=VLdong!40!black,rounded corners=2.2pt] (-0.15,-0.05) rectangle (3.75,0.17);
+				\begin{scope}
+					\clip[rounded corners=2.2pt] (-0.15,-0.05) rectangle (3.75,0.17);
+					\foreach \x in {-0.2,-0.05,...,3.8}{\draw[VLdong!35!black,semithick] (\x,-0.05)--(\x+0.18,0.17);}
+				\end{scope}
+				\draw[VLdong!40!black,thick,rounded corners=2.2pt] (-0.15,-0.05) rectangle (3.75,0.17);
+				\VLnhantron{1.55}{1.2}
+				\node[VLxanh!85!black,right,inner sep=1.5pt] at (1.66,1.22) {$\vv{B}$};
+				\node at (1.8,0.45) {$\ell$};
+				\node[left,inner sep=2pt] at (-0.15,0.06) {M};
+				\node[right,inner sep=2pt] at (3.75,0.06) {N};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{$I$ có chiều từ M đến N và có độ lớn $I=5$~A}
+		{\True $I$ có chiều từ M đến N và có độ lớn $I=10$~A}
+		{$I$ có chiều từ N đến M và có độ lớn $I=5$~A}
+		{$I$ có chiều từ N đến M và có độ lớn $I=10$~A}
+		\loigiai{
+			Lực căng bằng $0$ khi lực từ hướng lên, cân bằng trọng lực: $BI\ell=D\ell g\Rightarrow I=\dfrac{Dg}{B}=\dfrac{0{,}04\cdot 10}{0{,}04}=10$~A.\\
+			$\vv{B}$ hướng vào trong, lực từ hướng lên: theo quy tắc bàn tay trái, $I$ chạy từ M đến N.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{17.9\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-HaNoi-ChuyenKHTN-Lan1-2]
+
+	\begin{ex}%[VL12-C3-TH]
+		Cho một dây dẫn mang dòng điện $I=8$~A đặt trong từ trường $B=1{,}2$~T.
+		\NeedspaceBang{12.9\baselineskip}%
+		\choiceTFt
+		{\True Góc giữa dây dẫn và từ trường là $30^\circ$ nếu đoạn dây $50{,}0$~cm chịu một lực từ $2{,}4$~N}
+		{\True Lực tác dụng lên sợi dây là $4{,}8$~N nếu nó quay để tạo thành một góc $90^\circ$ với từ trường}
+		{Lực tác dụng lên sợi dây không đổi khi góc giữa dây và từ trường thay đổi từ $30^\circ$ sang $90^\circ$}
+		{Lực tác dụng lên đoạn dây là không đổi bất kể cường độ dòng điện qua dây, biết góc giữa dây dẫn và vectơ cảm ứng từ có giá trị nằm trong khoảng từ $0^\circ$ đến $90^\circ$}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $\sin\alpha=\dfrac{F}{BI\ell}=\dfrac{2{,}4}{1{,}2\cdot 8\cdot 0{,}5}=0{,}5\Rightarrow\alpha=30^\circ$.
+				\itemch \textbf{Đúng.} $F=BI\ell\sin 90^\circ=1{,}2\cdot 8\cdot 0{,}5=4{,}8$~N.
+				\itemch \textbf{Sai.} $F=BI\ell\sin\alpha$ tăng từ $2{,}4$~N lên $4{,}8$~N.
+				\itemch \textbf{Sai.} $F=BI\ell\sin\alpha$ tỉ lệ với cường độ dòng điện $I$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{20.9\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Bạn An đang thực hiện một thí nghiệm về từ tính giữa hai nam châm A và B. An đang muốn biểu diễn lực tương tác giữa hai nam châm. Vì vậy An đã vẽ đường sức từ như hình. Từ hình cho biết:
+		\begin{center}
+			\begin{tikzpicture}[scale=1.1,line join=round,line cap=round,font=\footnotesize]
+				% nam châm A (đầu phải ở gốc), nam châm B đối xứng
+				\foreach \s/\t in {1/A,-1/B}{
+					\begin{scope}[xscale=\s,shift={(-2.05,0)}]
+						\shade[top color=gray!55,bottom color=gray!85!black,draw=black,rotate={8*\s}] (-1.5,-0.32) rectangle (0,0.32);
+						\foreach \a/\b in {0.22/1,0.08/1.15,-0.08/1.15,-0.22/1}{
+							\pgfmathsetmacro{\ys}{\a>0?1:-1}
+							\draw[VLxanh,thick,VLgiua=0.72] (0.02,{\a}) .. controls (0.75*\b,{\a+0.06*\ys}) and (1.25*\b,{\a+0.35*\ys}) .. ({1.65*\b},{\a+1.0*\ys*\b});}
+					\end{scope}
+					\node[white,font=\footnotesize\bfseries] at ({-2.75*\s},{-0.1*\s}) {\t};}
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{Các cực Nam (S) hướng đối diện nhau}
+		{Đường sức từ sẽ xuất phát từ điểm có từ trường mạnh nhất và kết thúc ở điểm có từ trường yếu nhất}
+		{\True Khi hai nam châm cùng cực đặt đối diện nhau, đường sức từ sẽ bị biến dạng bởi vì sự tương tác giữa hai từ trường sẽ làm cho các đường sức từ bị uốn cong và hướng ra xa nhau}
+		{Nếu các cực cùng tên của hai nam châm đặt đối diện nhau nhưng không chạm, có thể quan sát thấy một số đường sức từ cắt nhau tại điểm giữa hai nam châm}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Đường sức từ đi ra từ hai đầu đối diện của A và B nên đó là hai cực Bắc (N).
+				\itemch \textbf{Sai.} Bên ngoài nam châm, đường sức từ đi ra từ cực Bắc, đi vào cực Nam.
+				\itemch \textbf{Đúng.} Hai cực cùng tên đẩy nhau, đường sức từ của chúng bị uốn cong, tách ra xa nhau như hình.
+				\itemch \textbf{Sai.} Các đường sức từ không bao giờ cắt nhau.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{14.6\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một lượng khí xác định có thể tích $V=100~\text{cm}^3$, nhiệt độ $t=27\,^\circ\text{C}$ và áp suất $p=10^5$~Pa. Hằng số khí $R=8{,}31$~J$\cdot$mol$^{-1}\cdot$K$^{-1}$.
+		\NeedspaceBang{12.3\baselineskip}%
+		\choiceTFt
+		{\True Nếu kết quả được làm tròn đến chữ số thứ ba sau dấu phẩy thập phân thì số mol của khối khí bằng $0{,}004$~mol}
+		{\True Giữ nhiệt độ không đổi, tăng áp suất tới $1{,}25\cdot 10^5$~Pa thì thể tích khí khi đó bằng $80~\text{cm}^3$}
+		{\True Từ trạng thái ban đầu, nén khí để thể tích giảm đi $20~\text{cm}^3$, nhiệt độ khí tăng lên đến $39\,^\circ\text{C}$ thì áp suất khí lúc này bằng $1{,}3\cdot 10^5$~Pa}
+		{\True Nếu thể tích giảm còn bằng $\dfrac{1}{3}$ thể tích ban đầu và áp suất tăng $20\,\%$ so với áp suất ban đầu thì nhiệt độ của khối khí sau khi nén bằng $120$~K}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $n=\dfrac{pV}{RT}=\dfrac{10^5\cdot 10^{-4}}{8{,}31\cdot 300}\approx 0{,}00401\approx 0{,}004$~mol.
+				\itemch \textbf{Đúng.} $V_2=\dfrac{p_1V_1}{p_2}=\dfrac{10^5\cdot 100}{1{,}25\cdot 10^5}=80~\text{cm}^3$.
+				\itemch \textbf{Đúng.} $p_2=p_1\dfrac{V_1}{V_2}\cdot\dfrac{T_2}{T_1}=10^5\cdot\dfrac{100}{80}\cdot\dfrac{312}{300}=1{,}3\cdot 10^5$~Pa.
+				\itemch \textbf{Đúng.} $T_2=T_1\dfrac{p_2V_2}{p_1V_1}=300\cdot 1{,}2\cdot\dfrac{1}{3}=120$~K.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[10.8\baselineskip]{23.4\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Một xilanh có pit-tông rất nhẹ, bên trong chứa một lượng khí có thể tích ban đầu $500~\text{cm}^3$. Biết diện tích của pit-tông là $50~\text{cm}^2$. Áp suất khí quyển là $p_0=10^5$~Pa. Xem nhiệt độ khối khí không đổi, bỏ qua ma sát giữa pit-tông và thành xilanh. Lấy $g=10~\text{m/s}^2$.
+		\begin{center}
+			\begin{tikzpicture}[scale=1.25,line join=round,line cap=round,font=\footnotesize]
+				% khí
+				\fill[VLxanh!10] (0,0) rectangle (1.6,1.75);
+				\foreach \i in {0,...,14}{\foreach \j in {0,...,16}{\fill[VLxanh!45] ({0.08+0.1*\i+0.05*mod(\j,2)},{0.07+0.1*\j}) circle (0.022);}}
+				% pit-tông
+				\shade[top color=gray!35,bottom color=gray!70,draw=black] (0,1.75) rectangle (1.6,1.85);
+				% quả cân
+				\shade[top color=VLdong!35!white,bottom color=VLdong!80!black,draw=black] (0.55,1.85) rectangle (1.05,2.3);
+				\node[font=\footnotesize\bfseries] at (0.8,2.07) {?};
+				% thành xilanh
+				\draw[very thick] (0,2.75)--(0,0)--(1.6,0)--(1.6,2.75);
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{12.9\baselineskip}%
+		\choiceTFt
+		{\True Ban đầu chiều cao cột khí trong xilanh là $10$~cm}
+		{Đặt lên pit-tông một quả cân khối lượng $m$ thì pit-tông dịch chuyển xuống một đoạn $x$~cm, khi đó áp suất khí giảm}
+		{Đặt lên pit-tông một quả cân có khối lượng $10$~kg thì pit-tông dịch chuyển xuống dưới một đoạn $1{,}5$~cm}
+		{\True Khối khí đang ở trạng thái cân bằng như khi có thêm quả cân $10$~kg đặt lên pit-tông, nếu cung cấp cho khối khí nhiệt lượng $150$~J, khối khí trở về thể tích ban đầu $500~\text{cm}^3$. Trong quá trình đó áp suất khí không đổi. Độ biến thiên nội năng của khối khí khi đó là $140$~J}
+		\loigiai{
+			Có quả cân $10$~kg: $p=p_0+\dfrac{mg}{S}=10^5+\dfrac{10\cdot 10}{50\cdot 10^{-4}}=1{,}2\cdot 10^5$~Pa.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $h_0=\dfrac{V_0}{S}=\dfrac{500}{50}=10$~cm.
+				\itemch \textbf{Sai.} Đẳng nhiệt, thể tích giảm nên áp suất khí tăng.
+				\itemch \textbf{Sai.} $h=h_0\dfrac{p_0}{p}=\dfrac{10}{1{,}2}\approx 8{,}33$~cm, pit-tông dịch xuống khoảng $1{,}67$~cm.
+				\itemch \textbf{Đúng.} $A=p\Delta V=1{,}2\cdot 10^5\cdot\left(500-\dfrac{500}{1{,}2}\right)\cdot 10^{-6}=10$~J; $\Delta U=Q-A=150-10=140$~J.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{7.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-HaNoi-ChuyenKHTN-Lan1-3]
+
+	\begin{ex}%[VL12-C2-TH]
+		Một cái bơm chứa $120~\text{cm}^3$ không khí ở nhiệt độ $27\,^\circ\text{C}$ và áp suất $10^5$~Pa. Áp suất của không khí trong bơm khi nó bị nén xuống còn $40~\text{cm}^3$ và tăng nhiệt độ lên tới $37\,^\circ\text{C}$ là $x\cdot 10^5$~Pa. Giá trị của $x$ bằng bao nhiêu (làm tròn kết quả đến một chữ số thập phân)?
+		\par
+		\shortans[oly]{3{,}1}
+		\loigiai{
+			$p_2=p_1\dfrac{V_1}{V_2}\cdot\dfrac{T_2}{T_1}=10^5\cdot\dfrac{120}{40}\cdot\dfrac{310}{300}=3{,}1\cdot 10^5~\text{Pa}\Rightarrow x=3{,}1$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.9\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một đoạn dây dẫn thẳng dài $89$~cm được đặt vuông góc với các đường sức từ trong một từ trường đều. Cho biết khi dòng điện chạy qua đoạn dây dẫn có cường độ $2{,}3$~A thì đoạn dây dẫn này bị tác dụng một lực từ bằng $1{,}6$~N. Xác định cảm ứng từ của từ trường đều ra đơn vị tesla (làm tròn kết quả đến một chữ số có nghĩa).
+		\par
+		\shortans[oly]{0{,}8}
+		\loigiai{
+			$B=\dfrac{F}{I\ell}=\dfrac{1{,}6}{2{,}3\cdot 0{,}89}\approx 0{,}78\approx 0{,}8$~T.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một dây dẫn thẳng, cứng, dài $20$~cm, có khối lượng $50$~g được giữ nằm yên theo phương ngang trong một từ trường có độ lớn cảm ứng từ là $0{,}49$~T và có hướng nằm ngang, vuông góc với dây. Cường độ dòng điện chạy trong dây là bao nhiêu ampe để khi dây được thả ra thì nó vẫn nằm yên? Lấy $g=9{,}8~\text{m/s}^2$ (làm tròn kết quả đến phần nguyên).
+		\par
+		\shortans[oly]{5}
+		\loigiai{
+			$BI\ell=mg\Rightarrow I=\dfrac{mg}{B\ell}=\dfrac{0{,}05\cdot 9{,}8}{0{,}49\cdot 0{,}2}=5$~A.
+		}
+	\end{ex}
+
+	\NeedspaceCau{13.3\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Một bình đựng khí có dung tích $6\cdot 10^{-3}~\text{m}^3$ đựng khí áp suất $10^6$~Pa. Người ta dùng khí trong bình để thổi các quả bóng bay (bằng van xả khí) sao cho bóng có thể tích tiêu chuẩn là $3{,}3\cdot 10^{-3}~\text{m}^3$ và khí trong bóng có áp suất $10^5$~Pa. Nếu coi nhiệt độ của khí không đổi thì số lượng bóng có thể tích tiêu chuẩn thổi được tối đa là bao nhiêu?
+		\begin{center}
+			\begin{tikzpicture}[scale=1.2,line join=round,line cap=round,font=\footnotesize]
+				% bình khí
+				\fill[VLxanh!10,rounded corners=6pt] (0,0) rectangle (1.25,1.45);
+				\begin{scope}
+					\clip[rounded corners=6pt] (0,0) rectangle (1.25,1.45);
+					\foreach \i in {0,...,11}{\foreach \j in {0,...,13}{\fill[VLxanh!45] ({0.08+0.1*\i+0.05*mod(\j,2)},{0.07+0.1*\j}) circle (0.025);}}
+				\end{scope}
+				\draw[thick,rounded corners=6pt] (0,0) rectangle (1.25,1.45);
+				% cổ bình, van
+				\shade[top color=gray!25,bottom color=gray!60,draw=black] (0.3,1.45) rectangle (0.95,1.6);
+				\shade[left color=gray!20,right color=gray!60,draw=black] (0.42,1.6) rectangle (0.78,1.95);
+				\shade[top color=gray!30,bottom color=gray!70,draw=black] (0.78,1.68) rectangle (1.25,1.92);
+				\fill[black] (0.82,1.68) rectangle (0.97,1.92);
+				\draw[thick] (0.6,1.95)--(0.6,2.12);
+				\shade[top color=gray!30,bottom color=gray!65,draw=black] (0.28,2.12) rectangle (0.92,2.24);
+				% ống dẫn
+				\draw[very thick] (1.25,1.8) .. controls (1.6,1.85) and (1.75,1.55) .. (2.05,1.55);
+				\draw[VLmui,thick] (2.05,1.55)--(2.6,1.62);
+				% bóng
+				\shade[inner color=white,outer color=VLdo!40,draw=black,thick] (3.6,1.5) .. controls (3.25,1.55) and (3.0,1.85) .. (3.0,2.25) .. controls (3.0,2.7) and (3.3,2.9) .. (3.6,2.9) .. controls (3.9,2.9) and (4.2,2.7) .. (4.2,2.25) .. controls (4.2,1.85) and (3.95,1.55) .. (3.6,1.5) -- cycle;
+				\filldraw[fill=VLdo!40,draw=black] (3.6,1.5)--(3.52,1.38)--(3.68,1.38)--cycle;
+				\draw[thin] (3.6,1.38) .. controls (3.57,1.25) and (3.55,1.15) .. (3.54,1.0);
+			\end{tikzpicture}
+		\end{center}
+		\shortans[oly]{16}
+		\loigiai{
+			Khí chỉ thoát ra bóng khi áp suất trong bình còn lớn hơn $10^5$~Pa nên trong bình luôn còn lại khí ở áp suất $p_0=10^5$~Pa. Đẳng nhiệt:
+			\[n=\dfrac{(p_1-p_0)V_1}{p_0V_0}=\dfrac{(10^6-10^5)\cdot 6\cdot 10^{-3}}{10^5\cdot 3{,}3\cdot 10^{-3}}\approx 16{,}4.\]
+			Số bóng thổi được tối đa là $16$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.5\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Có hai bình khí, một bình có thể tích $22{,}4$ lít chứa $1$~mol khí $\text{H}_2$ và một bình có thể tích $44{,}8$ lít chứa $1$~mol khí $\text{O}_2$. Biết rằng áp suất trong hai bình bằng nhau. Giá trị trung bình của bình phương vận tốc phân tử $\text{H}_2$ gấp mấy lần giá trị trung bình của bình phương vận tốc phân tử $\text{O}_2$?
+		\par
+		\shortans[oly]{8}
+		\loigiai{
+			$p=\dfrac{1}{3}\dfrac{N}{V}m\overline{v^2}\Rightarrow\overline{v^2}=\dfrac{3pV}{nM}$. Cùng $p$, cùng $n$:
+			\[\dfrac{\overline{v^2_{\text{H}_2}}}{\overline{v^2_{\text{O}_2}}}=\dfrac{V_{\text{H}_2}}{V_{\text{O}_2}}\cdot\dfrac{M_{\text{O}_2}}{M_{\text{H}_2}}=\dfrac{22{,}4}{44{,}8}\cdot\dfrac{32}{2}=8.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{14.2\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		Hai thanh ray nằm ngang, song song và cách nhau một đoạn $12$~cm đặt trong từ trường đều $\vv{B}$ hướng thẳng đứng và có độ lớn cảm ứng từ $B=0{,}15$~T. Một thanh kim loại đặt trên ray, vuông góc với ray. Nối hai đầu thanh kim loại này với nguồn điện có suất điện động là $9$~V và điện trở trong $1~\Omega$ như hình vẽ. Biết điện trở của kim loại, thanh ray và dây nối là $2~\Omega$. Lực từ tác dụng lên thanh là bao nhiêu N (làm tròn kết quả đến hai chữ số sau dấu phẩy thập phân)?
+		\begin{center}
+			\begin{tikzpicture}[scale=1.3,line join=round,line cap=round,font=\footnotesize]
+				% ray
+				\draw[very thick] (0,0)--(4.4,0);
+				\draw[very thick] (1.8,1.45)--(6.2,1.45);
+				% dây nối qua nguồn
+				\draw[very thick] (4.4,0)--(4.75,0.3) (5.65,1.07)--(6.2,1.45);
+				\begin{scope}[shift={(5.2,0.68)},rotate=40]
+					\shade[top color=gray!55,bottom color=black,draw=black,rounded corners=1pt] (-0.42,-0.17) rectangle (0.32,0.17);
+					\shade[top color=white,bottom color=gray!45,draw=black] (0.32,-0.17) rectangle (0.5,0.17);
+					\filldraw[fill=gray!15,draw=black] (0.5,0) ellipse (0.05 and 0.17);
+				\end{scope}
+				\node[font=\scriptsize] at (6.05,1.0) {$(+)$};
+				\node[font=\scriptsize] at (4.85,0.0) {$(-)$};
+				% khoảng cách hai ray
+				\draw[VLmui,thick] (0.95,0.8)--(1.75,1.42);
+				\draw[VLmui,thick] (0.95,0.8)--(0.05,0.04);
+				\node[rotate=40,above,inner sep=2pt] at (0.75,0.7) {$12$~cm};
+				% cảm ứng từ
+				\draw[densely dotted,thin] (3.6,0.73)--(3.6,-0.4);
+				\draw[VLxanh,thick,VLmui] (3.6,0.73)--(3.6,2.05) node[right,inner sep=2pt] {$\vv{B}$};
+				% thanh kim loại
+				\begin{scope}[shift={(3.6,0.73)},rotate=40]
+					\shade[top color=VLdong!40!white,bottom color=VLdong!85!black,draw=VLdong!40!black] (-1.6,-0.065) rectangle (1.6,0.065);
+					\filldraw[fill=VLdong!30!white,draw=VLdong!40!black] (-1.6,0) ellipse (0.03 and 0.065);
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		\shortans[oly]{0{,}05}
+		\loigiai{
+			$I=\dfrac{\mathscr{E}}{R+r}=\dfrac{9}{2+1}=3$~A; $F=BI\ell=0{,}15\cdot 3\cdot 0{,}12=0{,}054\approx 0{,}05$~N.
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-HaNoi-ChuyenKHTN-Lan1-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-HaNoi-ChuyenKHTN-Lan1-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-HaNoi-ChuyenKHTN-Lan1-3}
+\end{document}

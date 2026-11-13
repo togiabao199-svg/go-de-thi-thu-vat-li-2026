@@ -1,0 +1,842 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Liên trường THPT Nghệ An -- Lần 2 (đề gốc không ghi mã đề). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Liên trường Nghệ An -- Lần 2}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+% bàn tay cầm vật (dạng khối mềm, màu da), dùng riêng cho đề này: \NALtay{x}{y}{tỉ lệ}{góc xoay}
+\newcommand{\NALtay}[4]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3,rotate=#4]
+		\shade[top color=orange!14!white,bottom color=orange!40!white,draw=black!70,line width=0.45pt]
+			(-1.6,-0.55) .. controls (-1.0,-0.62) and (-0.55,-0.5) .. (-0.2,-0.42)
+			.. controls (0.1,-0.36) and (0.32,-0.3) .. (0.38,-0.16)
+			.. controls (0.42,-0.04) and (0.3,0.02) .. (0.12,0.0)
+			.. controls (0.3,0.06) and (0.36,0.18) .. (0.3,0.28)
+			.. controls (0.24,0.36) and (0.1,0.36) .. (-0.02,0.3)
+			.. controls (0.12,0.38) and (0.12,0.5) .. (0.02,0.56)
+			.. controls (-0.08,0.62) and (-0.2,0.58) .. (-0.3,0.5)
+			.. controls (-0.5,0.62) and (-0.8,0.62) .. (-1.05,0.5)
+			.. controls (-1.3,0.42) and (-1.5,0.35) .. (-1.65,0.3)--cycle;
+		\draw[black!45,line width=0.35pt] (0.12,0.0) .. controls (-0.05,-0.03) and (-0.2,-0.02) .. (-0.32,0.02) (-0.02,0.3) .. controls (-0.15,0.24) and (-0.25,0.22) .. (-0.36,0.24) (-0.3,0.5) .. controls (-0.38,0.44) and (-0.44,0.4) .. (-0.5,0.38);
+		\draw[white,line width=0.9pt,opacity=0.5] (-1.4,0.22) .. controls (-1.0,0.32) and (-0.7,0.36) .. (-0.45,0.34);
+	\end{scope}}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT LIÊN TRƯỜNG NGHỆ AN -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\noindent\textbf{Cho biết:} $\pi=3{,}14$; $T(\text{K})=t\,(^\circ\text{C})+273$; $R=8{,}31$~J$\cdot$mol$^{-1}\cdot$K$^{-1}$; $N_A=6{,}02\cdot 10^{23}$~hạt/mol.
+
+	\NeedspaceCau{7.8\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-NgheAn-LienTruong-Lan2-1]
+
+	\begin{ex}%[VL12-C1-NB]
+		Một vật được làm nóng sao cho thể tích và hình dạng của vật không thay đổi thì nội năng của vật
+		\choice
+		{\True tăng}
+		{giảm}
+		{giảm rồi tăng}
+		{không thay đổi}
+		\loigiai{
+			Vật nhận nhiệt lượng, không thực hiện công ($A=0$) nên $\Delta U=Q>0$: nội năng tăng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Phát biểu nào sau đây là \textbf{sai} khi nói về chất khí?
+		\choice
+		{\True Các phân tử khí ở rất gần nhau}
+		{Chất khí không có hình dạng và thể tích riêng}
+		{Chất khí luôn chiếm toàn bộ thể tích bình chứa và có thể nén được dễ dàng}
+		{Lực tương tác giữa các phân tử khí rất yếu}
+		\loigiai{
+			Các phân tử khí ở rất xa nhau (khoảng cách lớn hơn nhiều lần kích thước phân tử).
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.1\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Khi mở lọ nước hoa trong phòng, một lúc sau mùi thơm lan tỏa khắp phòng. Nguyên nhân chính của hiện tượng này là do
+		\choice
+		{\True nước hoa dễ bay hơi, các phân tử chuyển động hỗn loạn và khuếch tán ra khắp không gian}
+		{không khí nóng bay lên mang theo mùi thơm bốc hơi và bay lên trần nhà}
+		{các phân tử nước hoa có khối lượng riêng nhỏ nên tự bay lên cao và bay khắp căn phòng}
+		{các phân tử nước hoa truyền mùi thơm cho các phân tử không khí xung quanh trong căn phòng}
+		\loigiai{
+			Nước hoa bay hơi; các phân tử chuyển động hỗn loạn không ngừng nên khuếch tán ra khắp phòng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.7\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Biểu thức nào diễn tả \textbf{đúng} độ biến thiên nội năng của khối chất khí trong quá trình vừa nhận nhiệt vừa nhận công?
+		\choice
+		{\True $\Delta U=Q+A$; $Q>0$; $A>0$}
+		{$\Delta U=Q+A$; $Q<0$; $A>0$}
+		{$\Delta U=A+Q$; $Q>0$; $A<0$}
+		{$\Delta U=Q$; $Q>0$}
+		\loigiai{
+			$\Delta U=Q+A$; vật nhận nhiệt thì $Q>0$, nhận công thì $A>0$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.8\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một khối khí lí tưởng xác định có thể tích bằng $V_0$. Nếu giữ áp suất của khối khí đó không đổi và làm cho thể tích của khối khí tăng lên bằng $2V_0$ thì nhiệt độ tuyệt đối của khối khí
+		\choice
+		{giảm $2$ lần}
+		{tăng $4$ lần}
+		{\True tăng $2$ lần}
+		{giảm $4$ lần}
+		\loigiai{
+			Đẳng áp: $\dfrac{V}{T}=\text{hằng số}\Rightarrow\dfrac{T_2}{T_1}=\dfrac{V_2}{V_1}=2$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.4\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Biểu thức nào dưới đây là phương trình trạng thái của khí lí tưởng?
+		\choice
+		{$\dfrac{p_1}{T_1}=\dfrac{p_2}{T_2}$}
+		{\True $\dfrac{p_1V_1}{T_1}=\dfrac{p_2V_2}{T_2}$}
+		{$\dfrac{p_1}{V_1}=\dfrac{p_2}{V_2}$}
+		{$p_1V_1=p_2V_2$}
+		\loigiai{
+			Phương trình trạng thái của khí lí tưởng: $\dfrac{pV}{T}=\text{hằng số}$, hay $\dfrac{p_1V_1}{T_1}=\dfrac{p_2V_2}{T_2}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.1\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Nhiệt dung riêng có đơn vị là
+		\choice
+		{Jun (J)}
+		{Jun trên kilôgam (J/kg)}
+		{Jun trên độ (J/K)}
+		{\True Jun trên kilôgam độ (J/kg.K)}
+		\loigiai{
+			$c=\dfrac{Q}{m\Delta T}$ nên đơn vị là J/(kg.K).
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.3\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		% KIỂM TRA: phương án A bản gốc in $\frac{2}{2}kT$ (không có phương án đúng); sửa thành $\frac{3}{2}kT$
+		Động năng trung bình của phân tử được xác định bằng hệ thức
+		\choice
+		{\True $\overline{E}_{\text{đ}}=\dfrac{3}{2}kT$}
+		{$\overline{E}_{\text{đ}}=\dfrac{2}{3}kT$}
+		{$\overline{E}_{\text{đ}}=2kT$}
+		{$\overline{E}_{\text{đ}}=\dfrac{1}{2}kT$}
+		\loigiai{
+			Động năng tịnh tiến trung bình của phân tử khí: $\overline{E}_{\text{đ}}=\dfrac{3}{2}kT$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Tính nhiệt lượng cần cung cấp cho $1$~kg nước ở $20\,^\circ\text{C}$ hóa hơi hoàn toàn ở $100\,^\circ\text{C}$. Cho biết nhiệt dung riêng của nước là $4180$~J/(kg.K) và nhiệt hóa hơi riêng của nước là $2{,}3\cdot 10^6$~J/kg.
+		\choice
+		{$26\,344$~kJ}
+		{\True $2634{,}4$~kJ}
+		{$334{,}4$~kJ}
+		{$3344$~kJ}
+		\loigiai{
+			$Q=mc\Delta t+Lm=1\cdot 4180\cdot 80+2{,}3\cdot 10^6\cdot 1=2\,634\,400~\text{J}=2634{,}4$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.9\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Bản tin dự báo thời tiết của Nghệ An vào một ngày mùa đông như sau: ``Nghệ An: Nhiệt độ từ $14\,^\circ\text{C}$ đến $22\,^\circ\text{C}$''. Nhiệt độ trên tương ứng với nhiệt độ nào trong thang nhiệt độ Kelvin?
+		\choice
+		{Nhiệt độ từ $-253$~K đến $-244$~K}
+		{Nhiệt độ từ $273$~K đến $292$~K}
+		{Nhiệt độ từ $20$~K đến $29$~K}
+		{\True Nhiệt độ từ $287$~K đến $295$~K}
+		\loigiai{
+			$T=t+273$: $14+273=287$~K; $22+273=295$~K.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.7\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Tính nhiệt lượng $Q$ cần cung cấp để làm nóng chảy hoàn toàn $200$~g nước đá ở $0\,^\circ\text{C}$. Biết nhiệt nóng chảy riêng của nước đá bằng $3{,}34\cdot 10^5$~J/kg.
+		\choice
+		{$Q=668$~kJ}
+		{$Q=6{,}68$~kJ}
+		{$Q=6{,}68$~J}
+		{\True $Q=66{,}8$~kJ}
+		\loigiai{
+			$Q=\lambda m=3{,}34\cdot 10^5\cdot 0{,}2=66\,800~\text{J}=66{,}8$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.4\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Gọi $Q$ là nhiệt lượng cần truyền cho một vật có khối lượng $m$ để làm cho vật đó bắt đầu nóng chảy đến khi nóng chảy hoàn toàn ở nhiệt độ nóng chảy xác định, thì nhiệt nóng chảy riêng $\lambda$ của chất làm vật đó được tính theo công thức
+		\choice
+		{$\lambda=Q-m$}
+		{$\lambda=Q\cdot m$}
+		{\True $\lambda=\dfrac{Q}{m}$}
+		{$\lambda=Q+m$}
+		\loigiai{
+			$Q=\lambda m\Rightarrow\lambda=\dfrac{Q}{m}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{14.7\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Hình bên dưới là sơ đồ nguyên lí hoạt động của một máy làm nóng nước. Nước lạnh có nhiệt độ $t_1=20{,}3\,^\circ\text{C}$ được đưa vào máy từ ống dẫn nước lạnh với lưu lượng $\mu=2{,}50$ lít/phút. Khối lượng riêng của nước là $\rho=1000~\text{kg/m}^3$. Nhiệt dung riêng của nước là $c=4180$~J/(kg.K). Hiệu suất làm nóng nước là $H=95\%$. Nếu nhiệt độ của nước sau khi đã làm nóng là $36{,}7\,^\circ\text{C}$ thì công suất tiêu thụ điện của máy làm nóng nước xấp xỉ
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.75,line join=round,line cap=round,font=\footnotesize]
+				% bóng đổ
+				\fill[gray!18] (0.08,-0.08) rectangle (2.18,2.62);
+				% dây điện vào
+				\draw[VLdo!80!black,line width=0.9pt] (1.38,2.62)--(1.38,3.25) (1.5,2.62)--(1.5,3.25);
+				% thân máy
+				\shade[left color=gray!4,right color=gray!28,rounded corners=6pt,draw=gray!70!black,thick] (0,0) rectangle (2.1,2.7);
+				\shade[top color=white,bottom color=gray!10,rounded corners=4pt,draw=gray!55] (0.22,0.32) rectangle (1.88,2.42);
+				\fill[white,opacity=0.7,rounded corners=3pt] (0.3,2.02) rectangle (0.55,2.36);
+				% màn hình
+				\VLmanhinh{1.05}{1.78}{1.05}{0.34}{\scriptsize 36,7\,$^\circ$C}
+				% núm điều chỉnh
+				\fill[gray!30] (1.08,0.95) circle (0.36);
+				\VLnumvan{1.05}{0.98}{0.3}
+				% ống nước
+				\VLongnoi{0.6}{-0.02}{-0.62}{VLdo}
+				\VLongnoi{1.5}{-0.02}{-0.62}{VLxanh}
+				% chú thích
+				\draw[thin] (1.5,3.0)--(2.2,3.25)--(4.2,3.25);
+				\node[above,inner sep=1pt] at (3.2,3.25) {Đường đưa};
+				\node[below,inner sep=1.5pt] at (3.2,3.25) {điện vào};
+				\draw[thin] (0.5,1.78)--(-0.25,2.05)--(-2.55,2.05);
+				\node[above,inner sep=1pt] at (-1.4,2.05) {Nhiệt độ nước};
+				\node[below,inner sep=1.5pt] at (-1.4,2.05) {đã làm nóng};
+				\draw[thin] (1.3,1.05)--(2.45,1.45)--(4.85,1.45);
+				\node[above,inner sep=1pt] at (3.68,1.45) {Núm điều chỉnh};
+				\node[below,inner sep=1.5pt] at (3.68,1.45) {nhiệt độ};
+				\draw[thin] (0.48,-0.4)--(-0.15,-0.55)--(-2.45,-0.55);
+				\node[above,inner sep=1pt,VLdo!85!black] at (-1.3,-0.55) {Ống dẫn nước};
+				\node[below,inner sep=1.5pt,VLdo!85!black] at (-1.3,-0.55) {nóng ra};
+				\draw[thin] (1.62,-0.4)--(2.25,-0.55)--(4.55,-0.55);
+				\node[above,inner sep=1pt,VLxanh!85!black] at (3.4,-0.55) {Ống dẫn nước};
+				\node[below,inner sep=1.5pt,VLxanh!85!black] at (3.4,-0.55) {lạnh vào};
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{$2{,}9$~kW}
+		{$2{,}7$~kW}
+		{$2{,}8$~kW}
+		{\True $3{,}0$~kW}
+		\loigiai{
+			Khối lượng nước qua máy mỗi giây: $m=\dfrac{2{,}5}{60}$~kg. $\mathcal{P}=\dfrac{mc\Delta t}{H}=\dfrac{\frac{2{,}5}{60}\cdot 4180\cdot(36{,}7-20{,}3)}{0{,}95}\approx 3007~\text{W}\approx 3{,}0$~kW.
+		}
+	\end{ex}
+
+	\NeedspaceCau{11.9\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Để đưa thuốc từ một cái lọ vào xilanh của ống tiêm (như hình bên), ban đầu nhân viên y tế đẩy pit-tông sát đầu trên của xilanh, sau đó chọc đầu kim tiêm vào trong lọ thuốc. Khi kéo pit-tông ra, thuốc sẽ vào trong xilanh. Nhận xét nào sau đây là đúng về thể tích và áp suất của khí trong xilanh khi kéo pit-tông ra?
+		% giuhinh
+		\par\noindent
+		\begin{minipage}[c]{0.7\linewidth}
+		\choice
+		{Thể tích giảm, áp suất tăng}
+		{\True Thể tích tăng, áp suất giảm}
+		{Thể tích và áp suất cùng giảm}
+		{Thể tích thay đổi, áp suất không đổi}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.28\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.62,line join=round,line cap=round,font=\footnotesize]
+				\begin{scope}[rotate=-14]
+					% lọ thuốc (úp ngược)
+					\shade[left color=gray!30,right color=gray!25,middle color=white] (-0.42,4.1)--(-0.42,5.3) .. controls (-0.42,5.42) and (-0.36,5.45) .. (-0.25,5.45)--(0.25,5.45) .. controls (0.36,5.45) and (0.42,5.42) .. (0.42,5.3)--(0.42,4.1) .. controls (0.42,3.95) and (0.2,3.9) .. (0.18,3.75)--(-0.18,3.75) .. controls (-0.2,3.9) and (-0.42,3.95) .. (-0.42,4.1)--cycle;
+					\fill[VLxanh!12,opacity=0.9] (-0.36,4.1)--(-0.36,4.85)--(0.36,4.85)--(0.36,4.1) .. controls (0.36,3.98) and (0.16,3.92) .. (0.14,3.8)--(-0.14,3.8) .. controls (-0.16,3.92) and (-0.36,3.98) .. (-0.36,4.1)--cycle;
+					\draw[gray!70] (-0.42,4.1)--(-0.42,5.3) .. controls (-0.42,5.42) and (-0.36,5.45) .. (-0.25,5.45)--(0.25,5.45) .. controls (0.36,5.45) and (0.42,5.42) .. (0.42,5.3)--(0.42,4.1) .. controls (0.42,3.95) and (0.2,3.9) .. (0.18,3.75) (-0.18,3.75) .. controls (-0.2,3.9) and (-0.42,3.95) .. (-0.42,4.1);
+					\draw[white,line width=1.4pt,opacity=0.9] (-0.27,4.2)--(-0.27,5.25);
+					% nắp nhôm, nút cao su
+					\shade[left color=gray!55,right color=gray!45,middle color=gray!10] (-0.24,3.45) rectangle (0.24,3.78);
+					\shade[left color=orange!60!black,right color=orange!55!black,middle color=orange!45] (-0.17,3.33) rectangle (0.17,3.45);
+					% kim
+					\draw[gray!60!black,semithick] (0,3.6)--(0,2.45);
+					% đầu nối kim
+					\shade[left color=gray!30,right color=gray!40,middle color=white] (-0.07,2.25) rectangle (0.07,2.47);
+					\shade[left color=gray!20,right color=gray!40,middle color=white] (-0.22,1.95)--(0.22,1.95)--(0.1,2.25)--(-0.1,2.25)--cycle;
+					% xilanh
+					\shade[left color=gray!25,right color=gray!25,middle color=white] (-0.22,-0.3) rectangle (0.22,1.95);
+					\fill[VLxanh!14,opacity=0.9] (-0.19,1.15) rectangle (0.19,1.93);
+					\draw[gray!70] (-0.22,-0.3) rectangle (0.22,1.95);
+					\foreach \y in {0.0,0.2,...,1.81}{\draw[black!70,very thin] (-0.22,\y)--(-0.1,\y);}
+					\foreach \y in {0.1,0.5,...,1.81}{\draw[black!70,thin] (-0.22,\y)--(-0.04,\y);}
+					% pit-tông
+					\shade[top color=gray!50,bottom color=black!70] (-0.2,1.0) rectangle (0.2,1.15);
+					\draw[gray!70,thick] (0,1.0)--(0,-1.05);
+					\draw[gray!70,thick] (-0.06,1.0)--(-0.06,-1.05) (0.06,1.0)--(0.06,-1.05);
+					\shade[left color=gray!30,right color=gray!60] (-0.32,-0.38) rectangle (0.32,-0.3);
+					\shade[left color=gray!30,right color=gray!60] (-0.28,-1.13) rectangle (0.28,-1.05);
+				\end{scope}
+				% tay cầm lọ thuốc
+				\NALtay{1.3}{4.35}{0.75}{25}
+				% tay cầm xilanh
+				\NALtay{0.42}{0.95}{0.75}{150}
+			\end{tikzpicture}
+		\end{minipage}
+		\loigiai{
+			Kéo pit-tông ra, thể tích khí trong xilanh tăng; nhiệt độ không đổi, $pV=\text{hằng số}$ nên áp suất khí giảm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{10.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Trong các hệ thống làm mát của động cơ ô tô, người ta thường sử dụng nước tuần hoàn để làm mát máy. Nguyên nhân chính là do
+		\choice
+		{Nước có nhiệt dung riêng nhỏ, giúp quá trình truyền nhiệt từ máy sang nước diễn ra nhanh chóng hơn}
+		{\True Nước có nhiệt dung riêng lớn, có thể hấp thụ nhiều nhiệt lượng từ động cơ mà nhiệt độ của nó tăng lên không quá cao}
+		{Nước là chất lỏng có khối lượng riêng lớn nhất nên chứa được nhiều phân tử tải nhiệt hơn}
+		{Nước có nhiệt nóng chảy riêng lớn, giúp ngăn chặn sự đóng băng của chất làm mát bên trong động cơ}
+		\loigiai{
+			$Q=mc\Delta t$: nước có nhiệt dung riêng lớn nên nhận nhiệt lượng lớn mà nhiệt độ tăng ít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.8\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Trong các thiết bị sau đây, thiết bị nào hoạt động dựa vào sự bay hơi của chất lỏng?
+		\choice
+		{Máy sưởi}
+		{Bếp từ}
+		{Lò vi sóng}
+		{\True Máy điều hòa nhiệt độ}
+		\loigiai{
+			Trong máy điều hòa, chất làm lạnh lỏng bay hơi ở dàn lạnh, thu nhiệt của không khí trong phòng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.5\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		``Độ không tuyệt đối'' là nhiệt độ ứng với
+		\choice
+		{$0\,^\circ\text{C}$}
+		{\True $0$~K}
+		{$273$~K}
+		{$273\,^\circ\text{C}$}
+		\loigiai{
+			Độ không tuyệt đối là $0$~K ($-273\,^\circ\text{C}$).
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.9\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Quá trình biến đổi trạng thái trong đó áp suất được giữ không đổi gọi là quá trình
+		\choice
+		{\True đẳng áp}
+		{đoạn nhiệt}
+		{đẳng nhiệt}
+		{đẳng tích}
+		\loigiai{
+			Quá trình có áp suất không đổi là quá trình đẳng áp.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{21.9\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-NgheAn-LienTruong-Lan2-2]
+
+	\begin{ex}%[VL12-C2-TH]
+		Bong bóng cá là một phần nội quan của con cá, giống như túi chứa khí giúp cá điều chỉnh tỉ trọng và giữ thăng bằng khi bơi. Khi cá di chuyển theo phương thẳng đứng trong nước, áp suất của nước tác dụng lên cơ thể cá thay đổi, dẫn đến sự thay đổi thể tích của bong bóng cá để giúp cá giữ thăng bằng hoặc thay đổi độ sâu dưới nước. Giả sử nhiệt độ của khối khí trong bong bóng cá không đổi trong suốt quá trình cá di chuyển.
+		\NeedspaceBang{12.9\baselineskip}%
+		\choiceTFt
+		{Quá trình biến đổi của khối khí trong bong bóng cá khi cá di chuyển chậm theo phương thẳng đứng được coi là quá trình đẳng tích}
+		{\True Khi con cá bơi lặn xuống sâu hơn, áp suất nước tăng lên làm cho mật độ phân tử khí bên trong bong bóng tăng lên}
+		{\True Các ngư dân đánh bắt cá khi kéo lưới phải kéo một cách từ từ, nếu kéo lên quá đột ngột thì sự dãn nở của khí trong bong bóng cá cũng tăng lên đột ngột làm cho vỡ bong bóng cá, cá chết sẽ giảm độ tươi ngon và giá trị của con cá}
+		{Nếu con cá bơi từ độ sâu $20$~m lên độ sâu $10$~m thì áp suất tác dụng lên nó giảm đi một nửa, do đó thể tích bong bóng cá sẽ tăng gấp đôi}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Nhiệt độ khí không đổi: quá trình đẳng nhiệt.
+				\itemch \textbf{Đúng.} Áp suất tăng, đẳng nhiệt nên thể tích bong bóng giảm, số phân tử không đổi: mật độ phân tử tăng.
+				\itemch \textbf{Đúng.} Kéo lên đột ngột, áp suất giảm nhanh, khí trong bong bóng dãn nở đột ngột làm vỡ bong bóng.
+				\itemch \textbf{Sai.} $p=p_0+\rho gh$ với $p_0\approx 10^5$~Pa, $\rho g\approx 10^4$~Pa/m: $p_{20}\approx 3\cdot 10^5$~Pa, $p_{10}\approx 2\cdot 10^5$~Pa. Áp suất giảm $1{,}5$ lần, thể tích tăng $1{,}5$ lần.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[19.7\baselineskip]{31.7\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Vào những ngày hè nóng bức, các gia đình thường sử dụng loại quạt điều hòa để làm mát không khí. Khi quạt vận hành, không khí nóng từ môi trường xung quanh sẽ được hút vào bên trong quạt, đi qua các tấm làm mát (cooling pad). Nước được bơm liên tục từ khoang chứa nước lên tấm làm mát. Tấm làm mát này được thiết kế với rất nhiều đường ống dẫn với mặt cắt như tổ ong có thể dẫn và thấm đẫm nước. Khi không khí nóng bên ngoài luồn qua tấm làm mát đã có nước sẽ tạo ra hiện tượng bay hơi nước tự nhiên ở trong các ống dẫn. Khi nước bay hơi, nhiệt lượng được lấy từ không khí xung quanh, làm giảm nhiệt độ không khí. Giả sử toàn bộ nhiệt lượng lấy từ không khí để làm nước bay hơi.
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+				% ===== quạt điều hòa =====
+				\fill[gray!25] (1.25,-0.12) ellipse (1.55 and 0.1);
+				% mặt bên (lá chắn)
+				\shade[left color=gray!22,right color=gray!40] (2.3,0.35)--(2.75,0.6)--(2.75,4.25)--(2.3,4.0)--cycle;
+				\foreach \y in {1.75,1.9,...,3.95}{\draw[gray!65,thin] (2.33,\y)--(2.72,{\y+0.23});}
+				% mặt trên
+				\fill[gray!10] (0,4.0)--(2.3,4.0)--(2.75,4.25)--(0.45,4.25)--cycle;
+				% mặt trước
+				\shade[left color=white,right color=gray!18,draw=gray!65!black] (0,0.35) rectangle (2.3,4.0);
+				% bảng điều khiển
+				\filldraw[fill=gray!8,draw=gray!55] (0.15,3.62) rectangle (2.15,3.9);
+				\fill[VLxanh!60!black] (0.95,3.68) rectangle (1.35,3.84);
+				\foreach \x in {0.4,0.6,1.7,1.9}{\fill[gray!55] (\x,3.76) circle (0.035);}
+				% lưới cửa gió
+				\filldraw[fill=gray!55,draw=gray!70!black] (0.18,1.55) rectangle (2.12,3.48);
+				\shade[inner color=gray!30,outer color=gray!65] (0.24,1.61) rectangle (2.06,3.42);
+				\foreach \x in {0.34,0.48,...,2.0}{\draw[gray!25,thin] (\x,1.61)--(\x,3.42);}
+				\foreach \y in {1.72,1.86,...,3.38}{\draw[gray!80,very thin] (0.24,\y)--(2.06,\y);}
+				\fill[white,opacity=0.18] (0.24,3.42)--(0.9,3.42)--(0.4,1.61)--(0.24,1.61)--cycle;
+				% khoang chứa nước
+				\draw[gray!55] (0,1.35)--(2.3,1.35);
+				\filldraw[fill=gray!15,draw=gray!55,rounded corners=1pt] (0.95,0.65) rectangle (1.35,1.15);
+				\fill[VLxanh!35] (0.98,0.68) rectangle (1.32,0.85);
+				\fill[VLxanh!70!black] (0.95,1.2) rectangle (1.12,1.28);
+				\draw[gray!55] (0,0.5)--(2.3,0.5);
+				% bánh xe
+				\foreach \x in {0.25,2.05}{\fill[black!75] (\x,0.35) rectangle ({\x+0.1},0.18); \shade[ball color=gray!50] ({\x+0.05},0.08) circle (0.1);}
+				\shade[ball color=gray!50] (2.68,0.42) circle (0.08);
+				% ===== tấm làm mát =====
+				\begin{scope}[shift={(5.0,0.3)}]
+					\fill[gray!20] (1.2,-0.32) ellipse (1.3 and 0.1);
+					% mặt trước
+					\shade[left color=VLgo!55,right color=VLgo!80] (0,0)--(1.4,-0.3)--(1.4,3.4)--(0,3.7)--cycle;
+					\foreach \t in {0.12,0.24,...,1.3}{\draw[VLgo!40!black,very thin] (\t,{-0.214*\t})--++(0,3.7);}
+					\foreach \s in {0.15,0.4,...,3.6}{\draw[VLgo!45!black,very thin] (0,\s)--(1.4,{\s-0.3});}
+					% mặt bên phải
+					\shade[left color=VLgo!75!black,right color=VLgo!60] (1.4,-0.3)--(2.4,0.3)--(2.4,4.0)--(1.4,3.4)--cycle;
+					\foreach \t in {0.15,0.3,...,0.9}{\draw[VLgo!35!black,very thin] ({1.4+\t},{-0.3+0.6*\t})--++(0,3.7);}
+					% mặt trên
+					\fill[VLgo!45] (0,3.7)--(1.4,3.4)--(2.4,4.0)--(1.0,4.3)--cycle;
+					\foreach \t in {0.15,0.3,...,0.9}{\draw[VLgo!50!black,very thin] ({\t*1.4},{3.7-0.3*\t})--++(1.0,0.6);}
+					% tổ ong ở góc
+					\begin{scope}[shift={(2.05,3.55)}]
+						\fill[VLgo!80!black] (0,0) circle (0.3);
+						\foreach \i in {-2,...,2}{\foreach \j in {-2,...,2}{\fill[VLgo!40] ({0.1*\i+0.05*mod(\j+2,2)},{0.09*\j}) circle (0.035);}}
+					\end{scope}
+					% giọt nước
+					\foreach \x/\y in {0.25,0.5,...,2.0}{\fill[VLxanh!75] ({\x+0.08},{4.15+0.12*\x/2}) .. controls ++(-0.07,-0.06) and ++(-0.06,0) .. ++(0,-0.15) .. controls ++(0.06,0) and ++(0.07,-0.06) .. ++(0,0.15);}
+				\end{scope}
+				% không khí nóng vào
+				\foreach \y in {1.0,1.75,2.5,3.25}{\shade[left color=VLdo!30,right color=VLdo] (4.0,{\y-0.09})--(4.55,{\y-0.09})--(4.55,{\y-0.2})--(4.9,\y)--(4.55,{\y+0.2})--(4.55,{\y+0.09})--(4.0,{\y+0.09})--cycle;}
+				% mặt trời
+				\begin{scope}[shift={(3.55,2.3)}]
+					\foreach \g in {0,30,...,330}{\draw[orange,semithick] (\g:0.17)--(\g:0.27);}
+					\shade[ball color=yellow!80!orange] (0,0) circle (0.14);
+				\end{scope}
+				% không khí lạnh ra
+				\foreach \y in {1.55,2.3,3.05}{\shade[left color=VLxanh!25,right color=VLxanh] (7.65,{\y-0.09})--(8.2,{\y-0.09})--(8.2,{\y-0.2})--(8.55,\y)--(8.2,{\y+0.2})--(8.2,{\y+0.09})--(7.65,{\y+0.09})--cycle;}
+				% bông tuyết
+				\begin{scope}[shift={(8.35,3.75)}]
+					\foreach \g in {0,60,120}{\draw[VLxanh,semithick] (\g:0.17)--(\g+180:0.17);}
+					\draw[VLxanh,thin] (0,0) circle (0.08);
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		Biết lưu lượng nước bay hơi từ quạt là $0{,}7$~g/s; nhiệt hóa hơi riêng của nước ở $35\,^\circ\text{C}$ là $2{,}26\cdot 10^6$~J/kg; khối lượng riêng của không khí trong phòng là $1{,}2~\text{kg/m}^3$ và nhiệt dung riêng của không khí là $1005$~J/(kg.K).
+		\NeedspaceBang{12.8\baselineskip}%
+		\choiceTFt
+		{\True Quạt điều hòa làm mát không khí bằng cách thu nhiệt của không khí xung quanh để làm nước bay hơi}
+		{Tốc độ bay hơi của nước trong quạt điều hòa không phụ thuộc vào nhiệt độ không khí xung quanh}
+		{\True Nhiệt lượng cần thiết lấy từ không khí xung quanh để làm bay hơi $0{,}42$~kg nước ở $35\,^\circ\text{C}$ là $949{,}2$~kJ}
+		{Trong một căn phòng kín kích thước $4~\text{m}\times 5~\text{m}\times 4~\text{m}$, nhiệt độ không khí trong phòng ở $35\,^\circ\text{C}$. Sau $10$ phút mở quạt, nhiệt độ phòng giảm đi khoảng $8{,}9\,^\circ\text{C}$}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Nước bay hơi thu nhiệt của không khí đi qua tấm làm mát nên không khí lạnh đi.
+				\itemch \textbf{Sai.} Nhiệt độ không khí càng cao, nước bay hơi càng nhanh.
+				\itemch \textbf{Đúng.} $Q=Lm=2{,}26\cdot 10^6\cdot 0{,}42=949\,200~\text{J}=949{,}2$~kJ.
+				\itemch \textbf{Sai.} Sau $10$ phút nước bay hơi $0{,}7\cdot 600=420~\text{g}$, thu $Q=949{,}2$~kJ. Không khí: $m=1{,}2\cdot 4\cdot 5\cdot 4=96$~kg.\\
+				$\Delta t=\dfrac{Q}{mc}=\dfrac{949\,200}{96\cdot 1005}\approx 9{,}8\,^\circ\text{C}$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[8.9\baselineskip]{17.6\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Một xilanh kín chứa $2$~g khí helium (He), khối khí thực hiện chu trình biến đổi trạng thái từ (1) $\to$ (2) $\to$ (3) $\to$ (4) $\to$ (1) được biểu diễn trên đồ thị $(p-T)$ như hình bên.
+		\par\noindent
+		\begin{minipage}[c]{0.58\linewidth}
+		Cho $p_0=1{,}5\cdot 10^5$~Pa, $T_0=300$~K. Biết khối lượng mol của helium là $4$~g/mol; $R=8{,}31$~J/(mol.K).
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.4\linewidth}
+			\centering
+			\begin{tikzpicture}[x=0.8cm,y=0.8cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(5.0,0) node[below,inner sep=2pt] {$T$ (K)};
+				\draw[VLmui,thick] (0,0)--(0,3.65) node[left,inner sep=2pt] {$p$ (Pa)};
+				\node[below left,inner sep=2pt] at (0,0) {O};
+				\draw[dashed,thin,gray] (0,3)--(1.2,3) (1.2,0)--(1.2,3) (3.6,0)--(3.6,1) (0,1)--(0.4,1) (0,0)--(0.4,1);
+				\draw[very thick,VLdo,VLgiua=0.6] (0.4,1)--(1.2,3);
+				\draw[very thick,VLluc,VLgiua=0.7] (1.2,3)--(3.6,3);
+				\draw[very thick,VLxanh,VLgiua=0.6] (3.6,3)--(3.6,1);
+				\draw[very thick,VLtim,VLgiua=0.6] (3.6,1)--(0.4,1);
+				\foreach \p in {(0.4,1),(1.2,3),(3.6,3),(3.6,1)}{\filldraw[fill=white,draw=black,thick] \p circle (2.2pt);}
+				\node[above,inner sep=3pt] at (1.2,3) {(1)};
+				\node[above right,inner sep=1.5pt] at (3.6,3) {(2)};
+				\node[below right,inner sep=1.5pt] at (3.6,1) {(3)};
+				\node[below right,inner sep=1.5pt] at (0.4,1) {(4)};
+				\node[left,inner sep=2pt] at (0,3) {$3p_0$};
+				\node[left,inner sep=2pt] at (0,1) {$p_0$};
+				\node[below,inner sep=2pt] at (1.2,0) {$T_0$};
+				\node[below,inner sep=2pt] at (3.6,0) {$3T_0$};
+			\end{tikzpicture}
+		\end{minipage}
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{\True Quá trình biến đổi từ trạng thái (4) đến trạng thái (1) là quá trình đẳng tích}
+		{\True Thể tích khí ở trạng thái (2) lớn hơn thể tích khí ở trạng thái (1)}
+		{\True Thể tích của khối khí khi ở trạng thái (1) là $V_1=2{,}77$~lít}
+		{Trong quá trình biến đổi từ trạng thái (1) đến trạng thái (2), chất khí đã thực hiện công có độ lớn $1246{,}5$~J}
+		\loigiai{
+			Số mol khí: $n=\dfrac{2}{4}=0{,}5$~mol.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Đường (4)--(1) kéo dài đi qua gốc O: $p$ tỉ lệ với $T$, thể tích không đổi.
+				\itemch \textbf{Đúng.} (1) $\to$ (2) đẳng áp, $T_2=3T_1\Rightarrow V_2=3V_1$.
+				\itemch \textbf{Đúng.} $V_1=\dfrac{nRT_0}{3p_0}=\dfrac{0{,}5\cdot 8{,}31\cdot 300}{3\cdot 1{,}5\cdot 10^5}=2{,}77\cdot 10^{-3}~\text{m}^3=2{,}77$~lít.
+				\itemch \textbf{Sai.} $A=p(V_2-V_1)=nR(3T_0-T_0)=0{,}5\cdot 8{,}31\cdot 600=2493$~J.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau[15.1\baselineskip]{26.1\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Một nhóm học sinh thực hành đo nhiệt dung riêng của nước. \textit{Dụng cụ thí nghiệm gồm:} biến thế nguồn (1); bộ đo công suất nguồn điện (oát kế) có tích hợp các chức năng đo thời gian (2); nhiệt kế (3); nhiệt lượng kế bằng nhựa có vỏ xốp, kèm dây điện trở (gắn ở mặt trong của nắp bình) (4); cân điện tử (5); các dây nối. \textit{Các bước tiến hành thí nghiệm:} a. Nối oát kế với nhiệt lượng kế và nguồn điện. b. Bật nguồn điện. c. Đổ một lượng nước vào bình nhiệt lượng kế, xác định khối lượng nước này. d. Tắt nguồn điện. e. Khuấy liên tục để nước nóng đều. Cứ sau mỗi khoảng thời gian $3$ phút, đọc nhiệt độ từ nhiệt kế, số chỉ của oát kế rồi ghi lại kết quả.
+		% giuhinh
+		\begin{center}
+			\begin{minipage}[c]{0.5\linewidth}
+				\centering
+				\begin{tikzpicture}[scale=0.58,line join=round,line cap=round,font=\footnotesize]
+					% ===== cân điện tử (5) =====
+					\fill[gray!25] (1.25,-0.1) ellipse (1.35 and 0.12);
+					\shade[top color=gray!15,bottom color=gray!45,draw=gray!60] (0,0.05)--(2.5,0.05)--(2.35,0.55)--(0.15,0.55)--cycle;
+					\filldraw[fill=VLla!30,draw=black!70] (0.75,0.15) rectangle (1.75,0.42);
+					\foreach \x in {0.35,2.15}{\fill[gray!60] (\x,0.28) circle (0.06);}
+					\shade[top color=gray!40,bottom color=black!80] (1.15,0.62) ellipse (1.05 and 0.3);
+					\fill[black!75] (1.15,0.72) ellipse (0.98 and 0.25);
+					\fill[white,opacity=0.15] (0.6,0.82) ellipse (0.35 and 0.07);
+					\coordinate (L5) at (0.6,0.8);
+					% ===== biến thế nguồn (1) =====
+					\begin{scope}[shift={(3.0,0.1)}]
+						\fill[gray!25] (1.0,-0.12) ellipse (1.15 and 0.1);
+						\shade[left color=gray!35,right color=gray!20] (2.0,0)--(2.3,0.25)--(2.3,1.6)--(2.0,1.35)--cycle;
+						\fill[gray!12] (0,1.35)--(2.0,1.35)--(2.3,1.6)--(0.3,1.6)--cycle;
+						\shade[top color=white,bottom color=gray!20,draw=gray!65] (0,0) rectangle (2.0,1.35);
+						% quai xách
+						\draw[gray!55,line width=1.3pt] (0.45,1.45)--(0.5,1.85)--(1.75,1.85)--(1.8,1.45);
+						% tem cảnh báo
+						\fill[yellow!80!orange] (0.12,1.05)--(0.32,1.05)--(0.22,1.22)--cycle;
+						\draw[black!70,thin] (0.12,1.05)--(0.32,1.05)--(0.22,1.22)--cycle;
+						% cọc nối
+						\foreach \x/\c in {0.3/VLdo,0.55/black!80}{\shade[ball color=\c] (\x,0.62) circle (0.08); \shade[ball color=\c] (\x,0.32) circle (0.08);}
+						\filldraw[fill=white,draw=gray!60] (0.18,0.15) rectangle (0.68,0.9);
+						\foreach \x/\c in {0.3/VLdo,0.55/black!80}{\shade[ball color=\c] (\x,0.62) circle (0.08); \shade[ball color=\c] (\x,0.32) circle (0.08);}
+						% công tắc, đèn
+						\foreach \y in {0.4,0.7,1.0}{\fill[black!70] (0.95,\y) circle (0.06);}
+						\fill[VLdo] (0.95,1.0) circle (0.04);
+						% núm vặn
+						\filldraw[fill=gray!8,draw=gray!60] (1.5,0.62) circle (0.38);
+						\foreach \g in {30,60,...,330}{\draw[black!60,very thin] ($(1.5,0.62)+(\g:0.3)$)--($(1.5,0.62)+(\g:0.36)$);}
+						\shade[ball color=black!70] (1.5,0.62) circle (0.22);
+						\draw[white,thin] (1.5,0.62)--++(60:0.2);
+						\coordinate (L1) at (0.9,1.85);
+						\coordinate (N1a) at (2.0,0.4);
+					\end{scope}
+					% ===== oát kế (2) =====
+					\begin{scope}[shift={(5.55,0.1)}]
+						\fill[gray!25] (0.6,-0.1) ellipse (0.7 and 0.08);
+						\fill[gray!12] (0,0.75)--(1.2,0.75)--(1.38,0.9)--(0.18,0.9)--cycle;
+						\shade[left color=gray!35,right color=gray!20] (1.2,0)--(1.38,0.15)--(1.38,0.9)--(1.2,0.75)--cycle;
+						\shade[top color=white,bottom color=gray!20,draw=gray!65] (0,0) rectangle (1.2,0.75);
+						\VLmanhinh{0.6}{0.52}{0.75}{0.22}{}
+						\foreach \x/\c in {0.25/VLdo,0.5/black!80,0.75/VLdo,1.0/black!80}{\shade[ball color=\c] (\x,0.17) circle (0.065);}
+						\coordinate (L2) at (0.6,0);
+						\coordinate (Ra) at (0.75,0.17);
+						\coordinate (Rb) at (1.0,0.17);
+					\end{scope}
+					% dây từ biến thế sang oát kế
+					\draw[VLdo!85!black,line width=0.9pt] (3.3,0.72) .. controls (3.2,-0.25) and (5.3,-0.3) .. (5.8,0.27);
+					\draw[black!80,line width=0.9pt] (3.55,0.42) .. controls (3.6,-0.35) and (5.6,-0.4) .. (6.05,0.27);
+					% ===== nhiệt lượng kế (4) =====
+					\begin{scope}[shift={(7.75,0.0)}]
+						\fill[gray!25] (0,-0.05) ellipse (0.95 and 0.12);
+						\shade[left color=lime!45!yellow!70!gray,right color=lime!35!yellow!55!black,middle color=lime!25!yellow!35] (-0.8,0)--(-0.8,2.1)--(0.8,2.1)--(0.8,0) arc[start angle=0,end angle=-180,x radius=0.8,y radius=0.2]--cycle;
+						\draw[gray!55] (-0.8,0) arc[start angle=-180,end angle=0,x radius=0.8,y radius=0.2];
+						\draw[gray!55] (-0.8,0)--(-0.8,2.1) (0.8,0)--(0.8,2.1);
+						\fill[lime!30!yellow!50!gray] (0,2.1) ellipse (0.8 and 0.2);
+						\fill[lime!45!yellow!65!black] (0,2.1) ellipse (0.62 and 0.14);
+						\draw[gray!60] (0,2.1) ellipse (0.8 and 0.2);
+						\fill[white,opacity=0.35] (-0.55,0.2) rectangle (-0.38,1.9);
+						% nhiệt kế (3)
+						\begin{scope}[rotate around={-12:(0.1,2.1)}]
+							\shade[left color=black!80,right color=black!55] (0.0,2.05) rectangle (0.2,3.15);
+							\fill[black!80] (0.1,3.15) ellipse (0.1 and 0.04);
+							\filldraw[fill=VLla!35,draw=black!60,very thin] (0.04,2.45) rectangle (0.16,2.95);
+							\draw[gray!70,thin] (0.1,2.05)--(0.1,1.6);
+						\end{scope}
+						\coordinate (L4) at (0.75,0.4);
+						\coordinate (L3) at (0.35,3.0);
+						\coordinate (V1) at (-0.35,2.12);
+						\coordinate (V2) at (-0.15,2.15);
+					\end{scope}
+					% dây từ oát kế sang nhiệt lượng kế
+					\draw[VLdo!85!black,line width=0.9pt] (Ra) .. controls +(0.2,-0.5) and +(-0.5,-0.3) .. (6.95,0.6) .. controls +(0.4,0.3) and +(-0.2,-0.4) .. (V1);
+					\draw[black!80,line width=0.9pt] (Rb) .. controls +(0.2,-0.4) and +(-0.3,-0.2) .. (7.1,0.45) .. controls +(0.3,0.3) and +(0,-0.6) .. (V2);
+					% nhãn
+					\draw[thin] (L5)--(0.35,1.6) node[above,inner sep=1pt] {(5)};
+					\draw[thin] (L1)--(3.7,2.4) node[above,inner sep=1pt] {(1)};
+					\draw[thin] (L2)--(6.0,-0.45) node[below,inner sep=1pt] {(2)};
+					\draw[thin] (L3)--(7.85,3.55) node[left,inner sep=1pt] {(3)};
+					\draw[thin] (L4)--(8.85,-0.25) node[right,inner sep=1pt] {(4)};
+				\end{tikzpicture}
+			\end{minipage}\hfill%
+			\begin{minipage}[c]{0.46\linewidth}
+				\centering
+				{\footnotesize\renewcommand{\arraystretch}{0.95}\setlength{\tabcolsep}{4pt}%
+				\begin{tabular}{|c|c|c|}
+					\hline
+					\multicolumn{3}{|c|}{Khối lượng nước $m=0{,}145$~kg; $\overline{\mathcal{P}}=16{,}2$~W}\\
+					\hline
+					\textbf{Lần đo} & \begin{tabular}[c]{@{}c@{}}\textbf{Thời gian đun}\\$\tau$ (s)\end{tabular} & \begin{tabular}[c]{@{}c@{}}\textbf{Nhiệt độ nước}\\\textbf{sau đun} ($^\circ$C)\end{tabular}\\
+					\hline
+					$1$ & $180$ & $33{,}8$\\
+					\hline
+					$2$ & $360$ & $38{,}9$\\
+					\hline
+					$3$ & $540$ & $44{,}1$\\
+					\hline
+					$4$ & $720$ & $49{,}2$\\
+					\hline
+					$5$ & $900$ & $54{,}2$\\
+					\hline
+				\end{tabular}}
+			\end{minipage}
+		\end{center}
+		\NeedspaceBang{10.9\baselineskip}%
+		\choiceTFt
+		{Thứ tự đúng các bước tiến hành thí nghiệm là: b, a, c, d, e}
+		{\True Nhiệt lượng trung bình tỏa ra trên dây điện trở trong khoảng thời gian từ $\tau=180$~s đến $\tau=900$~s là $11\,664$~J}
+		{\True Đồ thị thực nghiệm biểu diễn sự phụ thuộc của nhiệt độ theo thời gian là một đoạn thẳng}
+		{\True Từ bảng số liệu, nhóm học sinh xác định được nhiệt dung riêng trung bình của nước xấp xỉ $3944$~J/(kg.K)}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Thứ tự đúng: c, a, b, e, d.
+				\itemch \textbf{Đúng.} $Q=\overline{\mathcal{P}}\Delta\tau=16{,}2\cdot(900-180)=11\,664$~J.
+				\itemch \textbf{Đúng.} Cứ $180$~s nhiệt độ tăng $5{,}1$; $5{,}2$; $5{,}1$; $5{,}0\,^\circ\text{C}$ (gần như bằng nhau): các điểm thực nghiệm nằm trên một đoạn thẳng.
+				\itemch \textbf{Đúng.} Mỗi khoảng $\Delta\tau=180$~s: $c=\dfrac{\overline{\mathcal{P}}\Delta\tau}{m\Delta t}=\dfrac{16{,}2\cdot 180}{0{,}145\cdot\Delta t}\approx 3943{,}2$; $3867{,}4$; $3943{,}2$; $4022{,}1$~J/(kg.K).\\
+				$\overline{c}=\dfrac{3943{,}2+3867{,}4+3943{,}2+4022{,}1}{4}\approx 3944$~J/(kg.K).
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{17.1\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-NgheAn-LienTruong-Lan2-3]
+
+	\begin{ex}%[VL12-C1-TH]
+		\label{NgheAn-LienTruong-Lan2-III1}\textit{Dùng thông tin sau cho câu~\ref{NgheAn-LienTruong-Lan2-III1} và câu~\ref{NgheAn-LienTruong-Lan2-III2}:} Theo thống kê, vùng Tây Nguyên và Nam Trung Bộ có số giờ nắng trong $1$ năm ($365$ ngày) trung bình khoảng $2300$ giờ.
+		% giuhinh
+		\par\noindent
+		\begin{minipage}[c]{0.7\linewidth}
+		Cường độ bức xạ năng lượng mặt trời trung bình đo được ở đây tính theo số giờ nắng trong một ngày là $5{,}3~\text{kWh/m}^2$. Một hộ gia đình ở vùng trên sử dụng máy nước nóng năng lượng mặt trời có kích thước bộ thu nhiệt là $2000~\text{mm}\times 1250~\text{mm}$. Máy hoạt động nhờ nguồn năng lượng từ bức xạ mặt trời chuyển đổi trực tiếp thành nhiệt năng làm nóng nước. Cho biết nhiệt dung riêng của nước là $4200$~J/(kg.K), khối lượng riêng của nước là $1000~\text{kg/m}^3$.
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.28\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.6,line join=round,line cap=round,font=\footnotesize]
+				% khung đỡ
+				\draw[gray!55,line width=1.6pt] (0.3,0.3)--(4.6,0.3) (4.3,0.3)--(4.3,3.9) (1.2,0.3)--(4.3,3.0) (4.3,1.6)--(5.6,1.0) (4.6,0.3)--(5.6,1.0) (5.6,1.0)--(5.6,4.1);
+				\draw[gray!45,line width=1.2pt] (0.0,0.65)--(0.3,0.3) (3.9,0.0)--(4.6,0.3);
+				% ống thủy tinh
+				\foreach \i in {0,...,13}{
+					\pgfmathsetmacro{\xa}{0.35+0.27*\i}\pgfmathsetmacro{\xb}{1.95+0.27*\i}
+					\draw[VLxanh!40!black,line width=5.2pt] (\xa,0.75)--(\xb,3.95);
+					\draw[VLxanh!75,line width=4pt] (\xa,0.75)--(\xb,3.95);
+					\draw[white!70!VLxanh,line width=0.8pt] ({\xa-0.03},0.85)--({\xb-0.05},3.9);}
+				% ống góp dưới
+				\shade[top color=white,bottom color=gray!55] (0.1,0.55) rectangle (4.25,0.85);
+				\draw[gray!70] (0.1,0.55) rectangle (4.25,0.85);
+				% bình chứa
+				\shade[top color=gray!15,bottom color=gray!55,middle color=white] (1.75,3.85) rectangle (6.05,4.85);
+				\shade[ball color=gray!45] (1.75,4.35) ellipse (0.18 and 0.5);
+				\fill[gray!70] (6.05,4.35) ellipse (0.2 and 0.5);
+				\fill[gray!40] (6.05,4.35) ellipse (0.13 and 0.38);
+				\draw[gray!70] (1.75,3.85)--(6.05,3.85) (1.75,4.85)--(6.05,4.85);
+			\end{tikzpicture}
+		\end{minipage}
+		\par\noindent
+		Khi mở van, có $50$ lít nước tràn vào toàn bộ các ống thủy tinh của bộ thu nhiệt. Biết lượng nước này ban đầu có nhiệt độ $25\,^\circ\text{C}$.\\
+		Nếu sau một thời gian, nhiệt độ nước trong bộ thu nhiệt tăng đến $50\,^\circ\text{C}$ thì độ biến thiên nội năng của lượng nước trên bằng bao nhiêu kJ (coi thể tích nước thay đổi không đáng kể)?
+		\par
+		\shortans[oly]{5250}
+		\loigiai{
+			$m=\rho V=50$~kg. $\Delta U=Q=mc\Delta t=50\cdot 4200\cdot(50-25)=5\,250\,000~\text{J}=5250$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		\label{NgheAn-LienTruong-Lan2-III2}Sau $3$ giờ nắng liên tục, lượng nước trên được đun nóng đến bao nhiêu $^\circ$C? Biết rằng chỉ có $45\%$ năng lượng ánh sáng mặt trời chuyển hóa thành nhiệt năng làm nóng nước (kết quả làm tròn đến $1$ chữ số thập phân).
+		\par
+		\shortans[oly]{73{,}7}
+		\loigiai{
+			Số giờ nắng mỗi ngày: $\dfrac{2300}{365}\approx 6{,}30$~h; công suất bức xạ trên $1~\text{m}^2$: $I=\dfrac{5{,}3\cdot 365}{2300}\approx 0{,}841~\text{kW/m}^2$.\\
+			Nhiệt lượng nước nhận: $Q=0{,}45\cdot I\cdot S\cdot t=0{,}45\cdot 841{,}1\cdot(2\cdot 1{,}25)\cdot 3\cdot 3600\approx 1{,}022\cdot 10^7$~J.
+			\[t=t_0+\dfrac{Q}{mc}=25+\dfrac{1{,}022\cdot 10^7}{50\cdot 4200}\approx 73{,}7\,^\circ\text{C}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Một thỏi nhôm có khối lượng $1{,}0$~kg ở nhiệt độ $8\,^\circ\text{C}$. Biết nhôm nóng chảy ở $658\,^\circ\text{C}$, nhiệt nóng chảy riêng của nhôm là $3{,}9\cdot 10^5$~J/kg và nhiệt dung riêng của nhôm là $880$~J/(kg.K). Cần cung cấp nhiệt lượng $Q$ bằng bao nhiêu kJ để làm nóng chảy hoàn toàn thỏi nhôm này (làm tròn kết quả đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{962}
+		\loigiai{
+			$Q=mc\Delta t+\lambda m=1\cdot 880\cdot(658-8)+3{,}9\cdot 10^5\cdot 1=962\,000~\text{J}=962$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.6\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Chạy bộ vào mỗi buổi sáng là hoạt động luyện tập rất tốt cho sức khỏe. Một người trưởng thành khi chạy bộ nhẹ nhàng sẽ cần hít vào khoảng $1{,}5$~g không khí ở điều kiện tiêu chuẩn (áp suất $1$~bar và nhiệt độ $0\,^\circ\text{C}$) trong mỗi nhịp thở. Biết khối lượng riêng của không khí ở điều kiện tiêu chuẩn là $1{,}29~\text{kg/m}^3$ và coi khối lượng không khí hít vào trong mỗi nhịp thở là bằng nhau. Cho $1~\text{bar}=10^5$~Pa. Tính thể tích không khí người đó cần hít vào trong mỗi nhịp thở khi chạy bộ ở Đà Lạt, nơi có áp suất khí quyển khoảng $0{,}85$~bar và nhiệt độ $18\,^\circ\text{C}$ theo đơn vị ml (kết quả làm tròn đến chữ số hàng đơn vị).
+		\par
+		\shortans[oly]{1458}
+		\loigiai{
+			Ở điều kiện tiêu chuẩn: $V_0=\dfrac{m}{\rho_0}=\dfrac{1{,}5}{1{,}29}\approx 1{,}163$~lít.
+			\[\dfrac{p_0V_0}{T_0}=\dfrac{pV}{T}\Rightarrow V=V_0\cdot\dfrac{p_0}{p}\cdot\dfrac{T}{T_0}=1{,}163\cdot\dfrac{1}{0{,}85}\cdot\dfrac{291}{273}\approx 1{,}458~\text{lít}=1458~\text{ml}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Động năng tịnh tiến trung bình của phân tử khí hydrogen ở nhiệt độ $20\,^\circ\text{C}$ có giá trị là $a\cdot 10^{-21}$~J. Tính $a$ (kết quả làm tròn đến $1$ chữ số thập phân).
+		\par
+		\shortans[oly]{6{,}1}
+		\loigiai{
+			$k=\dfrac{R}{N_A}=\dfrac{8{,}31}{6{,}02\cdot 10^{23}}\approx 1{,}38\cdot 10^{-23}$~J/K.\\
+			$\overline{E}_{\text{đ}}=\dfrac{3}{2}kT=\dfrac{3}{2}\cdot 1{,}38\cdot 10^{-23}\cdot 293\approx 6{,}07\cdot 10^{-21}~\text{J}\Rightarrow a\approx 6{,}1$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{23.8\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		Dưới đây là sơ đồ nguyên lí hoạt động của máy lạnh. Khi mở máy, dàn nóng hoạt động, gas (chất làm lạnh) ở dạng lỏng từ dàn nóng sẽ di chuyển qua van tiết lưu để chuyển thành dạng khí, bay hơi và tạo thành khí lạnh. Ở dàn lạnh của điều hòa, quạt gió sẽ thổi khí lạnh xung quanh các ống đồng và truyền vào phòng, nhờ cơ chế hoạt động này mà làm giảm được nhiệt độ trong phòng. Khí lạnh sau đó được hút về máy nén, máy này sẽ nén khí lạnh từ áp suất thấp trở thành áp suất cao và nóng. Gas áp suất cao sau khi chạy qua dàn nóng của máy lạnh sẽ được làm mát bởi quạt gió và lá nhôm tản nhiệt. Sau đó, nó sẽ lại chuyển qua van tiết lưu một lần nữa. Quá trình này tiếp tục lặp đi lặp lại cho đến khi máy lạnh được tắt.
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+				\colorlet{NALdo}{VLdo}
+				\colorlet{NALvang}{orange!85!yellow}
+				\colorlet{NALtham}{VLxanh!45!black}
+				\colorlet{NALnhat}{VLxanh!40}
+				% nền
+				\fill[gray!6] (-1.05,-0.62) rectangle (9.75,5.0);
+				% ===== đường ống =====
+				% máy nén -> dàn nóng (cao áp, gas khí)
+				\draw[NALdo,line width=2.6pt] (2.35,3.55)--(2.9,3.55)--(2.9,2.15)--(2.45,2.15);
+				% dàn nóng -> bộ lọc khô -> van tiết lưu (cao áp, gas lỏng)
+				\draw[NALvang,line width=2.6pt] (0.95,0.75)--(1.6,0.05)--(4.45,0.35)--(4.6,0.8);
+				\draw[NALvang,line width=2.6pt] (4.6,1.95)--(4.6,4.0);
+				% van tiết lưu -> dàn lạnh (hạ áp, gas lỏng)
+				\draw[NALtham,line width=2.6pt] (4.95,4.0)--(5.6,3.7)--(6.0,3.3);
+				% dàn lạnh -> van -> máy nén (hạ áp, gas khí)
+				\draw[NALnhat,line width=2.6pt] (6.0,3.15)--(5.45,3.5)--(5.0,4.3)--(4.6,4.45)--(2.0,4.0)--(1.9,3.85);
+				% ===== dàn nóng =====
+				\foreach \i in {0,...,7}{\draw[NALdo,line width=1.8pt] (0.45,{2.15-0.2*\i})--(2.45,{2.15-0.2*\i});}
+				\foreach \i in {0,2,4,6}{\draw[NALdo,line width=1.8pt] (2.45,{2.15-0.2*\i}) arc[start angle=90,end angle=-90,radius=0.1];}
+				\foreach \i in {1,3,5}{\draw[NALdo,line width=1.8pt] (0.45,{2.15-0.2*\i}) arc[start angle=90,end angle=270,radius=0.1];}
+				\draw[NALvang,line width=2.2pt] (0.45,0.75)--(0.95,0.75);
+				\draw[gray!60,thick] (0.3,0.6) rectangle (2.6,2.3);
+				% quạt gió dàn nóng
+				\begin{scope}[shift={(0.25,1.35)}]
+					\fill[gray!55] (0,0) ellipse (0.32 and 0.75);
+					\foreach \g in {0,72,...,288}{\fill[gray!25,draw=gray!60,rotate=\g] (0,0) .. controls (0.08,0.2) and (0.1,0.5) .. (0.02,0.68) .. controls (-0.08,0.5) and (-0.1,0.2) .. (0,0);}
+					\shade[ball color=gray!60] (0,0) circle (0.1);
+				\end{scope}
+				\shade[left color=gray!30,right color=VLxanh!55!gray] (-0.95,1.2)--(-0.55,1.2)--(-0.55,1.05)--(-0.25,1.35)--(-0.55,1.65)--(-0.55,1.5)--(-0.95,1.5)--cycle;
+				\shade[left color=VLtim!25,right color=VLtim!65] (2.7,1.1)--(3.15,1.1)--(3.15,0.95)--(3.5,1.25)--(3.15,1.55)--(3.15,1.4)--(2.7,1.4)--cycle;
+				% ===== máy nén =====
+				\begin{scope}[shift={(1.45,3.55)}]
+					\shade[top color=gray!30,bottom color=black!70,middle color=gray!8] (-0.55,-0.45) rectangle (0.55,0.45);
+					\foreach \x in {-0.4,-0.25,...,0.45}{\draw[black!45,very thin] (\x,-0.43)--(\x,0.43);}
+					\shade[left color=gray!50,right color=gray!20] (-0.55,0) ellipse (0.18 and 0.45);
+					\shade[ball color=gray!40] (-0.75,0) circle (0.38);
+					\fill[black!70] (-0.75,0) circle (0.24);
+					\shade[ball color=gray!55] (-0.75,0) circle (0.12);
+					\draw[gray!70!black] (0.55,-0.45) arc[start angle=-90,end angle=90,x radius=0.15,y radius=0.45];
+				\end{scope}
+				% ===== bộ lọc khô =====
+				\begin{scope}[shift={(4.6,1.35)}]
+					\shade[left color=gray!35,right color=black!55,middle color=gray!8,rounded corners=3pt] (-0.18,-0.6) rectangle (0.18,0.6);
+					\fill[gray!60] (-0.12,0.6) rectangle (0.12,0.72);
+					\fill[gray!60] (-0.12,-0.6) rectangle (0.12,-0.72);
+				\end{scope}
+				% ===== van tiết lưu =====
+				\begin{scope}[shift={(4.75,4.15)}]
+					\shade[left color=gray!40,right color=gray!25,middle color=white] (-0.22,-0.3) rectangle (0.22,0.3);
+					\shade[left color=gray!50,right color=gray!30,middle color=white] (-0.14,0.3) rectangle (0.14,0.55);
+					\draw[gray!65] (-0.22,-0.3) rectangle (0.22,0.3);
+				\end{scope}
+				% ===== dàn lạnh =====
+				\foreach \i in {0,...,6}{\pgfmathtruncatemacro{\mm}{100-14*\i}\draw[NALtham!\mm!NALnhat,line width=1.8pt] (6.0,{3.3-0.22*\i})--(7.6,{3.6-0.22*\i});}
+				\foreach \i in {0,2,4}{\draw[NALtham!70!NALnhat,line width=1.8pt] (7.6,{3.6-0.22*\i}) arc[start angle=90,end angle=-90,radius=0.11];}
+				\foreach \i in {1,3,5}{\draw[NALtham!50!NALnhat,line width=1.8pt] (6.0,{3.3-0.22*\i}) arc[start angle=90,end angle=270,radius=0.11];}
+				\draw[gray!55,thin] (6.15,3.55)--(6.15,1.88) (7.45,3.85)--(7.45,2.18);
+				% quạt dàn lạnh
+				\begin{scope}[shift={(8.1,3.45)}]
+					\shade[top color=gray!20,bottom color=gray!55] (-0.35,-0.35) rectangle (0.35,0.35);
+					\foreach \x in {-0.28,-0.18,...,0.3}{\draw[gray!70,thin] (\x,-0.33)--(\x,0.33);}
+					\draw[gray!70] (-0.35,-0.35) rectangle (0.35,0.35);
+				\end{scope}
+				\shade[left color=VLxanh!35,right color=VLxanh!80!black] (8.0,3.95) .. controls (8.15,4.35) and (8.4,4.5) .. (8.65,4.5)--(8.65,4.7)--(9.05,4.38)--(8.65,4.05)--(8.65,4.25) .. controls (8.45,4.25) and (8.3,4.15) .. (8.2,3.9)--cycle;
+				\shade[left color=VLtim!25,right color=VLtim!65] (5.2,2.4)--(5.65,2.55)--(5.7,2.4)--(6.0,2.75)--(5.6,2.95)--(5.62,2.82)--(5.15,2.68)--cycle;
+				% mũi tên chiều chuyển động
+				\draw[VLmui,thick] (3.85,4.05)--(3.25,3.95);
+				\draw[VLmui,thick] (3.15,3.2)--(3.15,2.6);
+				\draw[VLmui,thick] (4.3,2.5)--(4.3,3.1);
+				\draw[VLmui,thick] (5.55,4.15)--(5.8,3.8);
+				\draw[VLmui,thick] (3.0,-0.1)--(3.6,-0.05);
+				% ===== nhãn =====
+				\node[font=\footnotesize\itshape,anchor=south] at (3.6,4.55) {Van tiết lưu};
+				\node[font=\footnotesize\itshape,anchor=south] at (6.9,4.0) {Quạt dàn lạnh};
+				\node[font=\footnotesize\itshape,anchor=south] at (0.9,4.1) {Máy nén};
+				\node[font=\footnotesize\itshape] at (7.55,1.65) {Dàn lạnh};
+				\node[font=\footnotesize\itshape,anchor=west] at (4.85,1.2) {Bộ lọc khô};
+				\node[font=\footnotesize\itshape] at (3.3,0.65) {Dàn nóng};
+				\node[font=\footnotesize\itshape,align=left,anchor=north west] at (-0.95,0.55) {Quạt gió\\dàn nóng};
+				% chú thích
+				\begin{scope}[shift={(5.45,1.1)}]
+					\foreach \c/\t [count=\k] in {NALdo/{Đường cao áp, gas khí},NALvang/{Đường cao áp, gas lỏng},NALtham/{Đường hạ áp, gas lỏng},NALnhat/{Đường hạ áp, gas khí}}{
+						\draw[\c,line width=2.4pt] (0,{-0.4*\k})--(0.45,{-0.4*\k});
+						\node[anchor=west,font=\scriptsize\itshape] at (0.5,{-0.4*\k}) {\t};}
+				\end{scope}
+			\end{tikzpicture}
+		\end{center}
+		Một máy lạnh đang hoạt động, dòng khí gas trước khi vào máy nén có áp suất $60$~PSI và nhiệt độ $a\,^\circ\text{C}$. Sau khi đi qua máy nén để vào dàn nóng, áp suất khí gas là $280$~PSI, nhiệt độ $60\,^\circ\text{C}$. Tỉ số nén về thể tích của cùng một lượng khí gas trước và sau khi qua máy nén là $4:1$. Nhiệt độ trong dàn lạnh $a$ bằng bao nhiêu $^\circ$C (làm tròn kết quả đến chữ số hàng đơn vị)?
+		\par
+		\shortans[oly]{12}
+		\loigiai{
+			\[\dfrac{p_1V_1}{T_1}=\dfrac{p_2V_2}{T_2}\Rightarrow T_1=T_2\cdot\dfrac{p_1}{p_2}\cdot\dfrac{V_1}{V_2}=333\cdot\dfrac{60}{280}\cdot 4\approx 285{,}4~\text{K}\Rightarrow a\approx 12\,^\circ\text{C}.\]
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-NgheAn-LienTruong-Lan2-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-NgheAn-LienTruong-Lan2-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-NgheAn-LienTruong-Lan2-3}
+\end{document}

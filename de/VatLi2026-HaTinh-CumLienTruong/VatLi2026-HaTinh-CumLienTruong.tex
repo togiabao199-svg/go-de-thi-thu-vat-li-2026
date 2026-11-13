@@ -1,0 +1,510 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Sở GD&ĐT Hà Tĩnh -- Cụm liên trường (mã đề gốc 0223). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Cụm liên trường Hà Tĩnh}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+% ống chữ J của thí nghiệm Boyle (câu II.2), mực chuẩn y = 0: \HTongJ{mực nhánh kín}{mực nhánh hở}
+\newcommand{\HTongJ}[2]{%
+	\fill[VLxanh!6] (1.2,2.7)--(1.2,0) arc[start angle=0,end angle=-180,radius=0.4]--(0.4,1.3) arc[start angle=0,end angle=180,radius=0.2]--(0,0) arc[start angle=180,end angle=360,radius=0.8]--(1.6,2.7)--cycle;
+	\shade[top color=gray!45,bottom color=gray!75] (0,#1)--(0,0) arc[start angle=180,end angle=360,radius=0.8]--(1.6,#2)--(1.2,#2)--(1.2,0) arc[start angle=0,end angle=-180,radius=0.4]--(0.4,#1)--cycle;
+	\draw[gray!70] (0,#1)--(0.4,#1) (1.2,#2)--(1.6,#2);
+	\draw[white,line width=0.8pt,opacity=0.8] (0.32,0.1)--(0.32,1.25) (1.52,#2+0.08)--(1.52,2.6);
+	\draw[thick] (1.2,2.7)--(1.2,0) arc[start angle=0,end angle=-180,radius=0.4]--(0.4,1.3) arc[start angle=0,end angle=180,radius=0.2]--(0,0) arc[start angle=180,end angle=360,radius=0.8]--(1.6,2.7);
+	\foreach \k in {0,...,9}{\draw (0,{0.13*\k})--({ifthenelse(mod(\k,5)==0,0.14,0.08)},{0.13*\k});}
+	\foreach \k in {0,...,20}{\draw (1.6,{0.13*\k})--({ifthenelse(mod(\k,5)==0,1.76,1.69)},{0.13*\k});}
+	% cốc rót thủy ngân
+	\fill[gray!55] (2.830,2.902)--(2.568,2.482)--(1.759,2.902)--cycle;
+	\draw[gray!75] (1.759,2.902)--(2.830,2.902);
+	\fill[white,opacity=0.3] (2.123,3.656)--(2.928,3.058)--(2.568,2.482)--(1.677,2.944)--cycle;
+	\draw[thick] (2.123,3.656)--(2.928,3.058) (2.568,2.482)--(1.677,2.944);
+	\draw[thick,rotate around={-32:(1.9,3.3)}] (2.9,3.64) arc[start angle=90,end angle=-90,x radius=0.07,y radius=0.34];
+	\draw[thick,rotate around={-32:(1.9,3.3)}] (1.9,3.3) ellipse (0.09 and 0.42);
+	\draw[white,line width=1pt,opacity=0.9] (2.25,3.45)--(2.75,3.08);
+}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT CỤM LIÊN TRƯỜNG HÀ TĨNH}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\NeedspaceCau{7.7\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-HaTinh-CumLienTruong-1]
+
+	\begin{ex}%[VL12-C2-TH]
+		Động năng trung bình của phân tử khí tăng gấp $2$ lần, đồng thời mật độ phân tử cũng tăng $3$ lần. Áp suất khí sẽ
+		\choice
+		{giảm $1{,}5$ lần}
+		{tăng $2$ lần}
+		{giảm $3$ lần}
+		{\True tăng $6$ lần}
+		\loigiai{
+			$p=\dfrac{2}{3}\mu\overline{E}_{\text{đ}}$ ($\mu$ là mật độ phân tử) nên $p$ tăng $2\cdot 3=6$ lần.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một lượng khí lí tưởng có thể tích $V_1=2{,}00$~lít ở nhiệt độ $T_1=300$~K. Khi tăng nhiệt độ đến $T_2=450$~K trong điều kiện đẳng áp, thể tích khí là
+		\choice
+		{$2{,}50$~lít}
+		{$2{,}80$~lít}
+		{$3{,}50$~lít}
+		{\True $3{,}00$~lít}
+		\loigiai{
+			Đẳng áp: $V_2=V_1\dfrac{T_2}{T_1}=2{,}00\cdot\dfrac{450}{300}=3{,}00$~lít.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.3\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Trong quá trình đẳng nhiệt của khí lí tưởng, đại lượng nào sau đây không đổi?
+		\choice
+		{\True Tích $pV$}
+		{Thể tích}
+		{Áp suất}
+		{Thương $\dfrac{p}{V}$}
+		\loigiai{
+			Định luật Boyle: trong quá trình đẳng nhiệt $pV=$ hằng số.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.2\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Suất điện động cảm ứng có độ lớn $e=10$~V khi từ thông giảm đều từ $0{,}20$~Wb về $0$ trong $0{,}0200$~s. Giá trị $e$ phù hợp với công thức nào?
+		\choice
+		{\True $e=\dfrac{\Delta\Phi}{\Delta t}$}
+		{$e=\Delta\Phi\cdot\Delta t$}
+		{$e=\dfrac{\Phi}{t^2}$}
+		{$e=\Phi\cdot t$}
+		\loigiai{
+			$e=\left|\dfrac{\Delta\Phi}{\Delta t}\right|=\dfrac{0{,}20}{0{,}0200}=10$~V, đúng định luật Faraday.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Một nhà máy điện hạt nhân có hiệu suất $\eta=0{,}300$. Nếu năng lượng phân hạch cung cấp là $1{,}00\cdot 10^9$~J thì điện năng thu được là
+		\choice
+		{$1{,}00\cdot 10^8$~J}
+		{$2{,}00\cdot 10^8$~J}
+		{\True $3{,}00\cdot 10^8$~J}
+		{$5{,}00\cdot 10^8$~J}
+		\loigiai{
+			$W_{\text{điện}}=\eta W=0{,}300\cdot 1{,}00\cdot 10^9=3{,}00\cdot 10^8$~J.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.9\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Cảm ứng từ có đơn vị T (tesla), đây là một đơn vị dẫn xuất trong hệ SI. Đơn vị T có thể biểu diễn thông qua các đơn vị cơ bản theo hệ thức nào sau đây?
+		\choice
+		{$1~\text{T}=1~\text{kg}\cdot\text{m}\cdot\text{s}^{-2}\cdot\text{A}^{-1}$}
+		{\True $1~\text{T}=1~\text{kg}\cdot\text{s}^{-2}\cdot\text{A}^{-1}$}
+		{$1~\text{T}=1~\text{kg}\cdot\text{m}\cdot\text{s}^{-1}\cdot\text{A}^{-1}$}
+		{$1~\text{T}=1~\text{kg}\cdot\text{s}^{-1}\cdot\text{A}^{-1}$}
+		\loigiai{
+			$B=\dfrac{F}{Il}\Rightarrow 1~\text{T}=\dfrac{1~\text{N}}{1~\text{A}\cdot 1~\text{m}}=\dfrac{1~\text{kg}\cdot\text{m}\cdot\text{s}^{-2}}{\text{A}\cdot\text{m}}=1~\text{kg}\cdot\text{s}^{-2}\cdot\text{A}^{-1}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Độ hụt khối của hạt nhân càng lớn thì
+		\choice
+		{năng lượng liên kết riêng càng nhỏ}
+		{năng lượng liên kết càng nhỏ}
+		{\True năng lượng liên kết càng lớn}
+		{hạt nhân càng kém bền}
+		\loigiai{
+			$W_{\text{lk}}=\Delta m\cdot c^2$ nên độ hụt khối càng lớn thì năng lượng liên kết càng lớn.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Nội năng của một vật là
+		\choice
+		{tổng động năng của các phân tử cấu tạo nên vật}
+		{tổng động năng và thế năng của vật, hay còn gọi là cơ năng}
+		{động năng của vật đó}
+		{\True tổng động năng và thế năng của các phân tử cấu tạo nên vật}
+		\loigiai{
+			Nội năng là tổng động năng và thế năng tương tác của các phân tử cấu tạo nên vật.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.1\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Quá trình chuyển thể nào sau đây là sự thăng hoa?
+		\choice
+		{Nước đá $\to$ nước lỏng}
+		{\True Nước đá $\to$ hơi nước}
+		{Nước lỏng $\to$ hơi nước}
+		{Hơi nước $\to$ nước đá}
+		\loigiai{
+			Thăng hoa là sự chuyển trực tiếp từ thể rắn sang thể khí.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.3\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Chu kì bán rã của một chất là $T=10{,}0$~h. Sau $20{,}0$~h, phần còn lại là
+		\choice
+		{$\dfrac{1}{2}$}
+		{\True $\dfrac{1}{4}$}
+		{$\dfrac{1}{16}$}
+		{$\dfrac{1}{8}$}
+		\loigiai{
+			$\dfrac{N}{N_0}=2^{-\frac{t}{T}}=2^{-\frac{20{,}0}{10{,}0}}=\dfrac{1}{4}$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.1\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Phát biểu nào sau đây đúng về điện từ trường?
+		\choice
+		{Từ trường chỉ tồn tại xung quanh dòng điện không đổi}
+		{\True Điện trường biến thiên theo thời gian sinh ra từ trường và ngược lại}
+		{Điện trường và từ trường tồn tại độc lập, không liên hệ với nhau}
+		{Chỉ có điện trường biến thiên theo thời gian mới sinh ra từ trường}
+		\loigiai{
+			Điện trường biến thiên sinh ra từ trường xoáy, từ trường biến thiên sinh ra điện trường xoáy.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.5\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một sóng điện từ có tần số $f=1{,}00\cdot 10^6$~Hz. Bước sóng của nó trong chân không là
+		\choice
+		{\True $300$~m}
+		{$200$~m}
+		{$600$~m}
+		{$100$~m}
+		\loigiai{
+			$\lambda=\dfrac{c}{f}=\dfrac{3\cdot 10^8}{1{,}00\cdot 10^6}=300$~m.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.8\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một lượng khí lí tưởng có áp suất $p_1=1{,}00$~atm, thể tích $V_1=2{,}00$~lít và nhiệt độ $T_1=300$~K. Khi chuyển sang trạng thái có $T_2=600$~K và $V_2=4{,}00$~lít thì áp suất là
+		\choice
+		{$2{,}00$~atm}
+		{$0{,}250$~atm}
+		{$0{,}500$~atm}
+		{\True $1{,}00$~atm}
+		\loigiai{
+			$\dfrac{p_1V_1}{T_1}=\dfrac{p_2V_2}{T_2}\Rightarrow p_2=p_1\dfrac{V_1T_2}{V_2T_1}=1{,}00\cdot\dfrac{2{,}00\cdot 600}{4{,}00\cdot 300}=1{,}00$~atm.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Theo mô hình động học phân tử, các phân tử khí
+		\choice
+		{đứng yên tại chỗ}
+		{\True chuyển động hỗn loạn không ngừng}
+		{chuyển động theo quỹ đạo ổn định}
+		{chỉ dao động quanh vị trí cân bằng}
+		\loigiai{
+			Các phân tử khí chuyển động hỗn loạn, không ngừng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.6\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Trong một thí nghiệm xác định nhiệt dung riêng của một chất rắn, học sinh sử dụng các dụng cụ đo và xác định được các giá trị các đại lượng sau đây: nhiệt lượng $Q$ sai số tỉ đối $2\%$; khối lượng $m$ sai số tỉ đối $1\%$; độ tăng nhiệt độ $\Delta t$ sai số tỉ đối $1{,}5\%$. Sai số tỉ đối phép đo nhiệt dung riêng này bằng bao nhiêu?
+		\choice
+		{\True $4{,}5\%$}
+		{$5{,}5\%$}
+		{$2{,}5\%$}
+		{$3{,}5\%$}
+		\loigiai{
+			$c=\dfrac{Q}{m\Delta t}\Rightarrow\delta c=\delta Q+\delta m+\delta(\Delta t)=2\%+1\%+1{,}5\%=4{,}5\%$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.6\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Nhiệt độ $t=27\,^\circ\text{C}$ tương ứng với nhiệt độ tuyệt đối là
+		\choice
+		{$290$~K}
+		{$313$~K}
+		{\True $300$~K}
+		{$273$~K}
+		\loigiai{
+			$T=t+273=27+273=300$~K.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.1\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Hạt nhân ${}^4_2\text{He}$ có
+		\choice
+		{\True $2$ proton, $2$ neutron}
+		{$2$ proton, $2$ electron}
+		{$4$ neutron, $2$ electron}
+		{$4$ proton, $2$ neutron}
+		\loigiai{
+			$Z=2$ proton, $N=A-Z=4-2=2$ neutron.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Máy phát điện xoay chiều hoạt động dựa trên hiện tượng
+		\choice
+		{\True cảm ứng điện từ}
+		{cảm ứng tĩnh điện}
+		{điện phân}
+		{từ hóa}
+		\loigiai{
+			Từ thông qua các cuộn dây biến thiên làm xuất hiện suất điện động cảm ứng: hiện tượng cảm ứng điện từ.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{20.1\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-HaTinh-CumLienTruong-2]
+
+	\begin{ex}%[VL12-C4-VD]
+		Tại một mỏ uranium ở Kazakhstan, người ta khai thác được $1{,}00$ tấn quặng, trong đó uranium chiếm $0{,}200\%$ theo khối lượng. Trong uranium tự nhiên, đồng vị U-238 chiếm $99{,}3\%$. Biết:\\
+		-- U-238 phóng xạ alpha và tạo thành Th-234;\\
+		-- chu kì bán rã của U-238: $T_1=4{,}47\cdot 10^9$ năm;\\
+		-- chu kì bán rã của Th-234: $T_2=24{,}1$ ngày;\\
+		-- $1$ năm $=365$ ngày, $N_A=6{,}022\cdot 10^{23}~\text{mol}^{-1}$.
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{\True Khối lượng U-238 có trong mẫu quặng là $1{,}99$~kg}
+		{\True Số hạt nhân U-238 trong mẫu quặng xấp xỉ $5{,}03\cdot 10^{24}$}
+		{\True Hoạt độ phóng xạ của U-238 trong mẫu quặng xấp xỉ $2{,}47\cdot 10^7$~Bq}
+		{Biết Th-234 chỉ sinh ra từ U-238, số hạt nhân Th-234 có trong mẫu xấp xỉ $4{,}70\cdot 10^3$ hạt}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $m_{\text{U}}=1000\cdot 0{,}200\%\cdot 99{,}3\%=1{,}986\approx 1{,}99$~kg.
+				\itemch \textbf{Đúng.} $N_1=\dfrac{m}{A}N_A=\dfrac{1986}{238}\cdot 6{,}022\cdot 10^{23}\approx 5{,}03\cdot 10^{24}$.
+				\itemch \textbf{Đúng.} $H_1=\dfrac{\ln 2}{T_1}N_1=\dfrac{\ln 2}{4{,}47\cdot 10^9\cdot 365\cdot 86\,400}\cdot 5{,}03\cdot 10^{24}\approx 2{,}47\cdot 10^7$~Bq.
+				\itemch \textbf{Sai.} Quặng tồn tại rất lâu so với $T_2$ nên Th-234 cân bằng phóng xạ với U-238: $H_2=H_1\Rightarrow\dfrac{N_2}{T_2}=\dfrac{N_1}{T_1}$.\\
+				$N_2=N_1\dfrac{T_2}{T_1}=5{,}03\cdot 10^{24}\cdot\dfrac{24{,}1}{4{,}47\cdot 10^9\cdot 365}\approx 7{,}42\cdot 10^{13}$ hạt.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{25.3\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		% KIỂM TRA: lần đo 7 (h = 72,5; V = 15,5) cho pV lệch khoảng 11% so với trung bình; ý a) giải là Sai vì vậy (xem kiem-chung.md)
+		Trong thí nghiệm của Robert Boyle, một lượng khí được nén đẳng nhiệt trong ống chữ J (Hình 1). Áp suất khí được xác định theo $p=p_0+h$, với $p_0=29{,}0$~inch Hg. Thể tích khí tỉ lệ với chiều dài cột khí đo được. Kết quả đo được cho ở Bảng 1.
+		\begin{center}
+			\begin{minipage}[b]{0.56\linewidth}
+				\centering
+				\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
+					% ống trước khi đổ thêm thủy ngân
+					\HTongJ{0}{0}
+					\draw[VLxanh,dashed,thin] (-0.3,0)--(2,0);
+					\draw[VLmui,thin,VLxanh!70!black] (0.35,2.2)--(1.18,2.2);
+					\node[left] at (0.38,2.2) {$p_0$};
+					\draw[VLmui,thin,VLxanh!70!black] (-0.6,0.75)--(0.15,0.75);
+					\node[left] at (-0.55,0.75) {$p_1$};
+					\draw[{Stealth[length=4pt,width=3pt]}-{Stealth[length=4pt,width=3pt]},thin,VLxanh!70!black] (0.58,0)--(0.58,1.5);
+					\node[right,inner sep=1.5pt] at (0.58,0.8) {$V_1$};
+					% mũi tên chuyển
+					\shade[left color=VLdo!55,right color=VLdo,draw=VLdo!70!black] (2.3,0.62)--(2.7,0.62)--(2.7,0.5)--(3.05,0.75)--(2.7,1.0)--(2.7,0.88)--(2.3,0.88)--cycle;
+					% ống sau khi đổ thêm thủy ngân
+					\begin{scope}[xshift=4.6cm]
+						\HTongJ{0.13}{1.3}
+						\draw[VLxanh,dashed,thin] (-0.3,0)--(2,0);
+						\draw[VLdo,dashed,thin] (-0.3,0.13)--(1.2,0.13) (1.6,0.13)--(2.2,0.13) (1.6,1.3)--(2.2,1.3);
+						\draw[VLmui,thin,VLxanh!70!black] (0.35,2.2)--(1.18,2.2);
+						\node[left] at (0.38,2.2) {$p_0$};
+						\draw[VLmui,thin,VLxanh!70!black] (-0.6,0.75)--(0.15,0.75);
+						\node[left] at (-0.55,0.75) {$p_2$};
+						\draw[{Stealth[length=4pt,width=3pt]}-{Stealth[length=4pt,width=3pt]},thin,VLxanh!70!black] (0.58,0.13)--(0.58,1.5);
+						\node[right,inner sep=1.5pt] at (0.58,0.85) {$V_2$};
+						\draw[{Stealth[length=4pt,width=3pt]}-{Stealth[length=4pt,width=3pt]},thin] (2.05,0.13)--(2.05,1.3);
+						\node[right,inner sep=1.5pt] at (2.05,0.72) {$h$};
+					\end{scope}
+				\end{tikzpicture}\par
+				Hình 1
+			\end{minipage}\hfill%
+			\begin{minipage}[b]{0.4\linewidth}
+				\centering
+				{\footnotesize\renewcommand{\arraystretch}{1.2}\setlength{\tabcolsep}{5pt}%
+				\begin{tabular}{|c|c|c|}
+					\hline
+					\textbf{Lần đo} & \textbf{$h$ (inch Hg)} & \textbf{$V$ (inch)}\\
+					\hline
+					$1$ & $0{,}0$ & $48{,}0$\\
+					\hline
+					$2$ & $7{,}2$ & $38{,}5$\\
+					\hline
+					$3$ & $14{,}5$ & $32{,}2$\\
+					\hline
+					$4$ & $29{,}0$ & $24{,}0$\\
+					\hline
+					$5$ & $43{,}5$ & $19{,}2$\\
+					\hline
+					$6$ & $58{,}0$ & $16{,}0$\\
+					\hline
+					$7$ & $72{,}5$ & $15{,}5$\\
+					\hline
+				\end{tabular}\par\smallskip
+				Bảng 1}
+			\end{minipage}
+		\end{center}
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{Tích $pV$ của các lần đo xấp xỉ không đổi, phù hợp với định luật Boyle trong giới hạn sai số thí nghiệm}
+		{\True Đồ thị biểu diễn $p$ theo $V$ là một đường cong}
+		{Giá trị trung bình của đại lượng $pV$ từ $7$ lần đo là $1{,}40\cdot 10^3$ (inch Hg$\cdot$inch) (làm tròn $3$ chữ số có nghĩa)}
+		{\True Độ lệch tuyệt đối của $pV$ ở lần đo thứ $7$ so với giá trị trung bình là độ lệch lớn nhất nên nếu cần kiểm tra lại số liệu các lần đo thì lần đo này cần được kiểm tra lại đầu tiên}
+		\loigiai{
+			$pV$ (inch Hg$\cdot$inch) của $7$ lần đo: $1392$; $1393{,}7$; $1400{,}7$; $1392$; $1392$; $1392$; $1573{,}25$.\\
+			Trung bình: $\overline{pV}=\dfrac{9935{,}65}{7}\approx 1419{,}4\approx 1{,}42\cdot 10^3$.
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Sáu lần đo đầu có $pV$ lệch nhau dưới $1\%$, lần đo $7$ có $pV$ lớn hơn khoảng $13\%$, vượt xa sai số thí nghiệm.
+				\itemch \textbf{Đúng.} $pV\approx$ hằng số nên đồ thị $p$ theo $V$ là một phần đường hyperbol.
+				\itemch \textbf{Sai.} $\overline{pV}\approx 1{,}42\cdot 10^3$ (inch Hg$\cdot$inch).
+				\itemch \textbf{Đúng.} Độ lệch tuyệt đối các lần đo: $27{,}4$; $25{,}7$; $18{,}7$; $27{,}4$; $27{,}4$; $27{,}4$; $153{,}9$; lần đo $7$ lệch lớn nhất.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{27.2\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Năm 1827, khi quan sát các hạt phấn hoa lơ lửng trong nước bằng kính hiển vi, Robert Brown nhận thấy chúng chuyển động hỗn loạn, liên tục và không theo quỹ đạo xác định, mặc dù môi trường nước dường như đứng yên. Ban đầu, ông đưa ra giả thuyết rằng chuyển động này liên quan đến hoạt động sống của hạt phấn. Để kiểm tra, ông tiến hành thay thế hạt phấn bằng các hạt bụi vô cơ (không có sự sống) và vẫn quan sát thấy chuyển động tương tự. Ngoài ra, khi thay đổi nhiệt độ của môi trường, ông nhận thấy cường độ chuyển động thay đổi rõ rệt. Tuy nhiên, vào thời điểm đó, Brown chưa thể đưa ra lời giải thích đầy đủ cho hiện tượng. Đến năm 1905, Albert Einstein đã xây dựng mô hình lí thuyết, coi các phân tử của chất lỏng luôn chuyển động nhiệt hỗn loạn và va chạm không ngừng vào các hạt nhỏ, từ đó giải thích định lượng được chuyển động Brown. Những kết quả này góp phần quan trọng trong việc khẳng định vật chất được cấu tạo từ các phân tử và các phân tử luôn chuyển động.
+		\NeedspaceBang{15.9\baselineskip}%
+		\choiceTFt
+		{\True Việc nhận thấy ``môi trường nước dường như đứng yên nhưng các hạt vẫn chuyển động'' vừa là quan sát ban đầu vừa hàm chứa mâu thuẫn nhận thức, do đó đóng vai trò khởi nguồn của vấn đề nghiên cứu}
+		{Giả thuyết ``chuyển động do hoạt động sống'' là không có giá trị khoa học vì xuất phát từ suy đoán chủ quan, nên không cần tiến hành thí nghiệm để kiểm tra}
+		{\True Việc thay hạt phấn bằng hạt vô cơ và việc thay đổi nhiệt độ là hai thí nghiệm độc lập, cùng nhằm kiểm tra các giả thuyết khác nhau về nguyên nhân gây ra chuyển động}
+		{\True Việc Albert Einstein xây dựng mô hình lí thuyết để giải thích hiện tượng cho thấy trong khoa học vật lí, kết luận chỉ có thể được chấp nhận khi có sự kết hợp giữa thực nghiệm và lí thuyết, chứ không chỉ dựa vào quan sát ban đầu}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Quan sát mâu thuẫn với hiểu biết thông thường (nước đứng yên mà hạt chuyển động) làm nảy sinh vấn đề cần nghiên cứu.
+				\itemch \textbf{Sai.} Giả thuyết là dự đoán khoa học, có giá trị khi kiểm chứng được và phải được kiểm tra bằng thí nghiệm; Brown đã kiểm tra và bác bỏ nó.
+				\itemch \textbf{Đúng.} Thay hạt vô cơ kiểm tra giả thuyết về sự sống (và bác bỏ nó); thay đổi nhiệt độ kiểm tra ảnh hưởng của chuyển động nhiệt của môi trường.
+				\itemch \textbf{Đúng.} Quan sát của Brown chỉ được giải thích và chấp nhận khi mô hình lí thuyết của Einstein phù hợp với kết quả thực nghiệm.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{12.6\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		Một dây dẫn thẳng dài mang dòng điện $I=5{,}00$~A. Xét điểm M cách dây một khoảng $r=2{,}00$~cm. Độ lớn cảm ứng từ tại điểm M được xác định theo công thức $B=\dfrac{\mu_0 I}{2\pi r}$ với $\mu_0=4\pi\cdot 10^{-7}~\text{T}\cdot\text{m/A}$.
+		\NeedspaceBang{9\baselineskip}%
+		\choiceTFt
+		{\True Cảm ứng từ tại điểm M có độ lớn $B=5{,}00\cdot 10^{-5}$~T}
+		{\True Nếu tăng khoảng cách lên $r=4{,}00$~cm thì cảm ứng từ giảm còn $2{,}50\cdot 10^{-5}$~T}
+		{\True Nếu tăng dòng điện lên $I=10{,}0$~A (giữ nguyên $r=2{,}00$~cm) thì $B=1{,}00\cdot 10^{-4}$~T}
+		{Nếu vừa tăng $I$ lên $10{,}0$~A vừa tăng $r$ lên $4{,}00$~cm thì $B=1{,}00\cdot 10^{-4}$~T}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} $B=\dfrac{4\pi\cdot 10^{-7}\cdot 5{,}00}{2\pi\cdot 0{,}0200}=5{,}00\cdot 10^{-5}$~T.
+				\itemch \textbf{Đúng.} $B\sim\dfrac{1}{r}$: $r$ tăng $2$ lần thì $B=2{,}50\cdot 10^{-5}$~T.
+				\itemch \textbf{Đúng.} $B\sim I$: $I$ tăng $2$ lần thì $B=1{,}00\cdot 10^{-4}$~T.
+				\itemch \textbf{Sai.} $I$ và $r$ cùng tăng $2$ lần thì $B$ không đổi: $B=5{,}00\cdot 10^{-5}$~T.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{7.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-HaTinh-CumLienTruong-3]
+
+	\begin{ex}%[VL12-C1-TH]
+		Một miếng nhôm khối lượng $m=0{,}500$~kg được đun nóng từ $t_1=25{,}0\,^\circ\text{C}$ lên $t_2=85{,}0\,^\circ\text{C}$. Biết nhiệt dung riêng của nhôm là $c=880$~J/(kg.K). Nhiệt lượng mà miếng nhôm thu vào bằng bao nhiêu kJ?
+		\par
+		\shortans[oly]{26{,}4}
+		\loigiai{
+			$Q=mc(t_2-t_1)=0{,}500\cdot 880\cdot(85{,}0-25{,}0)=26\,400~\text{J}=26{,}4$~kJ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một lượng khí lí tưởng có $p_1=1{,}20\cdot 10^5$~Pa, $V_1=2{,}00\cdot 10^{-3}~\text{m}^3$. Khí bị nén đẳng nhiệt đến thể tích $V_2=1{,}25\cdot 10^{-3}~\text{m}^3$, khi đó khí có áp suất $p_2=x\cdot 10^5$~Pa. Giá trị $x$ bằng bao nhiêu?
+		\par
+		\shortans[oly]{1{,}92}
+		\loigiai{
+			$p_2=\dfrac{p_1V_1}{V_2}=\dfrac{1{,}20\cdot 10^5\cdot 2{,}00\cdot 10^{-3}}{1{,}25\cdot 10^{-3}}=1{,}92\cdot 10^5~\text{Pa}\Rightarrow x=1{,}92$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.6\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		% KIỂM TRA: đáp số 4,65 (trừ công suất quạt dàn lạnh tỏa nhiệt trong phòng); nếu coi toàn bộ điện năng thải ở dàn nóng thì 4,68 (xem kiem-chung.md)
+		Một máy điều hòa Panasonic CU/CS-U12XKH-8 có các thông số kĩ thuật điển hình:\\
+		-- công suất làm lạnh: $Q_{\text{lạnh}}=3{,}50$~kW;\\
+		-- công suất điện tiêu thụ: $P=1{,}18$~kW;\\
+		-- công suất quạt dàn lạnh: $P_3=32{,}0$~W.\\
+		Khi hoạt động, công suất nhiệt tỏa ra ở dàn nóng của máy bằng bao nhiêu kW (làm tròn kết quả đến chữ số hàng phần trăm)?
+		\par
+		\shortans[oly]{4{,}65}
+		\loigiai{
+			Công suất quạt dàn lạnh tỏa nhiệt ngay trong phòng; phần điện năng còn lại cùng nhiệt lấy từ phòng được thải ra ở dàn nóng:
+			\[Q_{\text{nóng}}=Q_{\text{lạnh}}+P-P_3=3{,}50+1{,}18-0{,}032=4{,}648\approx 4{,}65~\text{kW}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Hạt nhân ${}^4_2\text{He}$ có độ hụt khối $\Delta m=0{,}0305$~u. Tính năng lượng liên kết của hạt nhân theo đơn vị MeV (làm tròn kết quả đến chữ số hàng phần mười).
+		\par
+		\shortans[oly]{28{,}4}
+		\loigiai{
+			$W_{\text{lk}}=\Delta m\cdot c^2=0{,}0305\cdot 931{,}5\approx 28{,}4$~MeV.
+		}
+	\end{ex}
+
+	\NeedspaceCau{12.6\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		\label{HaTinh-CumLienTruong-III5}
+		\textit{Dùng thông tin sau cho câu~\ref{HaTinh-CumLienTruong-III5} và câu~\ref{HaTinh-CumLienTruong-III6}:} Một bóng đèn sợi đốt trang trí kiểu ST6440W Vintage Edison Filament Bulb hoạt động ở điện áp $U=220$~V, công suất $P=40{,}0$~W. Dây tóc làm bằng tungsten, có điện trở suất ở nhiệt độ làm việc là $\rho=5{,}00\cdot 10^{-7}~\Omega\cdot\text{m}$. Dây tóc có dạng xoắn một lần thành một ống xoắn đều (xem như một ống dây, có cảm ứng từ trong ống dây được xác định theo biểu thức $B=4\pi\cdot 10^{-7}nI$, với $n$ là số vòng dây trên một đơn vị chiều dài, $I$ là cường độ dòng điện chạy trong dây dẫn của ống). Các thông số hình học của dây tóc:\\
+		-- đường kính dây: $d=5{,}00\cdot 10^{-5}$~m;\\
+		-- đường kính vòng xoắn: $D=5{,}00\cdot 10^{-4}$~m;\\
+		-- bước xoắn (khoảng cách giữa hai vòng xoắn liên tiếp): $p=2{,}00\cdot 10^{-4}$~m.\\
+		Cảm ứng từ $B$ bên trong ống xoắn bằng bao nhiêu mT (làm tròn kết quả đến chữ số hàng phần trăm)?
+		\par
+		\shortans[oly]{1{,}14}
+		\loigiai{
+			$I=\dfrac{P}{U}=\dfrac{40{,}0}{220}\approx 0{,}182$~A; $n=\dfrac{1}{p}=\dfrac{1}{2{,}00\cdot 10^{-4}}=5000$ vòng/m.
+			\[B=4\pi\cdot 10^{-7}\cdot 5000\cdot\dfrac{40{,}0}{220}\approx 1{,}14\cdot 10^{-3}~\text{T}=1{,}14~\text{mT}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.5\baselineskip}
+	\begin{ex}%[VL11-C4-VD]
+		\label{HaTinh-CumLienTruong-III6}
+		Chiều dài $L$ của ống xoắn bằng bao nhiêu m (làm tròn kết quả đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{0{,}6}
+		\loigiai{
+			$R=\dfrac{U^2}{P}=\dfrac{220^2}{40{,}0}=1210~\Omega$; chiều dài dây: $\ell=\dfrac{RS}{\rho}=\dfrac{1210\cdot\pi\cdot(5{,}00\cdot 10^{-5})^2}{4\cdot 5{,}00\cdot 10^{-7}}\approx 4{,}75$~m.\\
+			Số vòng xoắn: $N\approx\dfrac{\ell}{\pi D}=\dfrac{4{,}75}{\pi\cdot 5{,}00\cdot 10^{-4}}\approx 3025$ vòng.\\
+			$L=Np=3025\cdot 2{,}00\cdot 10^{-4}\approx 0{,}605~\text{m}\approx 0{,}6$~m.
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-HaTinh-CumLienTruong-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-HaTinh-CumLienTruong-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-HaTinh-CumLienTruong-3}
+\end{document}
