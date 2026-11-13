@@ -6,8 +6,8 @@
 
 - **Phiên 1a (06/11/2026) — xong, thầy duyệt 06/11/2026**: `CLAUDE.md` cho Vật lí; bộ macro hình chung `preamble-vatli-hinh.tex` (thêm circuitikz european), `tools/so_hinh.py` đọc macro từ file chung, dựng lại đề mẫu (bản đề 7 trang, lời giải 10 trang, PDF trùng bản cũ); `tools/README.md`; kiểm kê 83 đề `kho/kiem-ke.md`; chia lô (file này).
 - **Lô M (13/11/2026) — xong, thầy duyệt 13/11/2026**: `VatLi2026-LaoCai-CumPhiaBac-Lan2` (mẫu thứ hai: đề PDF không đáp án, tự giải toàn bộ 28 câu, vẽ lại 14 hình). Bản đề 8 trang (ĐẠT), bản lời giải 12 trang. Thành phẩm trong `thanh-pham/`, kiểm chứng ở `de/VatLi2026-LaoCai-CumPhiaBac-Lan2/kiem-chung.md`.
-- **Lô W01 (13/11/2026) — chờ thầy duyệt**: 4 đề Word (Bắc Ninh ×3, Cà Mau), chạy Opus, 4 agent con song song (thầy cho phép trong phiên), phiên chính soát, thống nhất, gom macro. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
-- **Tiếp theo — lô W02** (Opus): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W02.`
+- **Lô W01 (13/11/2026) — xong, thầy duyệt 13/11/2026**: 4 đề Word (Bắc Ninh ×3, Cà Mau), chạy Opus, 4 agent con song song (thầy cho phép trong phiên), phiên chính soát, thống nhất, gom macro. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
+- **Tiếp theo — lô W02** (Opus, song song): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W02, chạy song song.`
 
 ## Quyết định của thầy
 
@@ -22,14 +22,12 @@
 - 13/11/2026 — in đậm mọi từ phủ định ("không", "sai") trong câu hỏi cho mọi đề, kể cả khi đề gốc không in đậm (đã ghi vào `CLAUDE.md`).
 - 13/11/2026 — model: lô W (đề Word có lời giải gốc) chạy Opus; lô P (đề PDF tự giải) chạy Fable. Lô M bằng Fable tốn khoảng 4 vạch thanh Fable, chạy khoảng 35–40 phút; giữ 4 đề/lô.
 
+- 13/11/2026 — duyệt lô W01: Bắc Ninh SGD Lần 2 câu I.9 sửa đáp án gốc C thành B (mạch nối M và con chạy; đã đối chiếu hình gốc); Cụm TT1–QV1–LVT câu I.1 giữ B (326 K) theo đáp án gốc, giữ `% KIỂM TRA`; các câu khớp đáp án gốc theo cách hiểu ghi trong `kiem-chung.md` giữ nguyên; đoạn "Dùng thông tin sau cho câu … và câu …" đặt trong câu đầu của cặp (đã ghi `CLAUDE.md`).
+- 13/11/2026 — chạy song song: từ lô W01 mỗi phiên mở một agent con cho mỗi đề (mục CHẠY SONG SONG trong `CLAUDE.md`); prompt: `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô <tên lô>, chạy song song.` Lô W01 (4 đề) xong trong khoảng 40 phút.
+
 ## Chờ thầy quyết
 
-Lô W01 (13/11/2026):
-- **Cách trình bày "Dùng thông tin sau cho câu … và câu …"** (Phần III Cà Mau, Bắc Ninh SGD Lần 2): đoạn dữ kiện chung (kèm hình) đặt TRONG câu đầu của cặp, mở đầu chữ nghiêng "*Dùng thông tin sau cho câu~\ref{..} và câu~\ref{..}:*", số câu lấy bằng `\label`/`\ref`. Bản in: "Câu 1. *Dùng thông tin sau cho câu 1 và câu 2:* …". Lý do: `dan_trang.py` chỉ đo, giữ trọn khối `ex`; đoạn để ngoài câu có thể bị bỏ lại cuối trang và khi ghép sách khối câu không tự đủ dữ kiện. Thầy duyệt thì ghi vào `CLAUDE.md` (mục CẤU TRÚC ĐỀ).
-- `VatLi2026-BacNinh-SoGD-Lan2` I.9: **đáp án gốc C, gõ B** (mạch ngoài nối M và con chạy; dịch con chạy M → N thì R tăng, I giảm, từ thông giảm, khung bị hút lại gần; lời giải gốc đọc nhầm sơ đồ nối hai đầu M, N). II.1c "Nội dung (III) là đủ để đưa ra kết luận (IV)" giữ Đúng theo gốc, có thể cãi là Sai.
-- `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1` I.1: đề có cả B "326 K" và D "326,15 K"; gõ B theo gốc (T = t + 273 như cả đề) — `% KIỂM TRA`. I.15 đáp án A đúng nhờ nhiệt kế trong hình là nhiệt kế y tế (35–42 °C). II.1d "phải khuấy liên tục" Đúng theo gốc. III.6 "khối lượng nước trong bình" hiểu là nước lỏng (1,06).
-- `VatLi2026-BacNinh-CumHHNSLTD1-Lan2` III.3 (65,6): chỉ ra đáp án gốc khi hiểu 5,3 kWh/m² là năng lượng nhận trong số giờ nắng mỗi ngày (2300/365 giờ). III.4 (3944): đáp án gốc ứng với lấy trung bình c của 4 khoảng đo (gộp cả đoạn ra 3943). Thuật ngữ đổi theo SGK 2018: "nguyên lí I NĐLH" → "định luật I của nhiệt động lực học", "Xen-xi-út" → "Celsius". Tiêu đề gốc ghi "lần 2" (tên file kho ghi Lan 1) — đặt Lần 2.
-- `VatLi2026-CaMau-SoGD-Lan1` II.3a: lập luận "Sai" dựa vào vị trí nhãn C trái, B phải trên ảnh chụp bộ cân dòng điện (khớp đáp án gốc S); II.4d Δm ≈ 2,296 kg so với 2,2 kg trong mệnh đề (Sai, khớp gốc).
+(Không còn — các điểm của lô W01 thầy đã quyết ngày 13/11/2026, xem mục trên.)
 
 ## Việc đã xong
 
@@ -37,7 +35,7 @@ Lô W01 (13/11/2026):
 - 06/11/2026: đề mẫu Cao Bằng – Lần 1 (thầy duyệt).
 - 06/11/2026, phiên 1a: như mục "Giai đoạn hiện tại".
 - 13/11/2026, lô M: đề `VatLi2026-LaoCai-CumPhiaBac-Lan2` (thầy duyệt 13/11). Thêm vào `preamble-vatli-hinh.tex`: thư viện `decorations.pathmorphing`, macro `\VLongday` (ống dây quấn trên lõi trụ), `\VLdongho` (đồng hồ đo dạng hộp); dựng lại đề mẫu Cao Bằng với preamble mới (vẫn 7 trang đề ĐẠT, 10 trang lời giải). `tools/so_hinh.py` dựng hình ở cỡ chữ 12pt như file đề.
-- 13/11/2026, lô W01 (chờ duyệt): 4 đề `VatLi2026-BacNinh-CumHHNSLTD1-Lan2`, `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1`, `VatLi2026-BacNinh-SoGD-Lan2`, `VatLi2026-CaMau-SoGD-Lan1` (bản đề đều ĐẠT). Thêm vào `preamble-vatli-hinh.tex`: `\VLnhietke`, `\VLvienda`, `\VLngonlua`, `\VLdencon`, `\VLgiado`, `\VLongnghiem`, `\VLvongsau`/`\VLvongtruoc`, `\VLnumvan` (chuyển từ file đề, dựng lại các đề dùng; đề mẫu Cao Bằng, Lào Cai biên dịch lại vẫn như cũ). Thống nhất đoạn "Dùng thông tin sau cho câu …" đặt trong câu đầu của cặp (chờ thầy duyệt).
+- 13/11/2026, lô W01 (thầy duyệt 13/11): 4 đề `VatLi2026-BacNinh-CumHHNSLTD1-Lan2`, `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1`, `VatLi2026-BacNinh-SoGD-Lan2`, `VatLi2026-CaMau-SoGD-Lan1` (bản đề đều ĐẠT). Thêm vào `preamble-vatli-hinh.tex`: `\VLnhietke`, `\VLvienda`, `\VLngonlua`, `\VLdencon`, `\VLgiado`, `\VLongnghiem`, `\VLvongsau`/`\VLvongtruoc`, `\VLnumvan` (chuyển từ file đề, dựng lại các đề dùng; đề mẫu Cao Bằng, Lào Cai biên dịch lại vẫn như cũ). Thống nhất đoạn "Dùng thông tin sau cho câu …" đặt trong câu đầu của cặp (chờ thầy duyệt).
 
 ## Số đề
 
@@ -51,10 +49,10 @@ Trạng thái: chưa gõ → đang gõ → chờ duyệt → xong. Cột "Đáp 
 |---|---|---|---|---|---|---|
 | — | `VatLi2026-CaoBang-SoGD-Lan1` | Cao Bang - So GDDT - Lan 1.docx | Word | ĐA + LG | đề mẫu chuẩn | xong |
 | M | `VatLi2026-LaoCai-CumPhiaBac-Lan2` | Lao Cai - So GDDT - Lan 2.pdf | PDF chữ | không | mẫu thứ hai (đề PDF không đáp án); tên/lần theo tiêu đề gốc; đánh số câu liên tục; đề 8 trang, lời giải 12 trang | xong |
-| W01 | `VatLi2026-BacNinh-CumHHNSLTD1-Lan2` | Bac Ninh - Cum truong Bac Ninh Hiep Hoa - Ngo Si Lien - Tien Du 1 - Lan 1.docx | Word | chỉ ĐA | tên/lần theo tiêu đề gốc; tự giải 28 câu khớp ĐA; 11 hình; đề 7 trang, lời giải 10 trang | chờ duyệt |
-| W01 | `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1` | Bac Ninh - Lien truong Bac Ninh - Lan 1.docx | Word | chỉ ĐA | gần trùng Quế Võ 1 – Lần 1; Phần II đánh số lại (19–22 → 1–4); tự giải khớp ĐA; KIỂM TRA I.1; 8 hình; đề 7 trang, lời giải 11 trang | chờ duyệt |
-| W01 | `VatLi2026-BacNinh-SoGD-Lan2` | Bac Ninh - So GDDT - Lan 2.docx | Word | ĐA + LG | KIỂM TRA I.9 (gốc C, gõ B); 9 hình; đề 7 trang, lời giải 11 trang | chờ duyệt |
-| W01 | `VatLi2026-CaMau-SoGD-Lan1` | Ca Mau - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; 4 hình shape Word; đề 6 trang, lời giải 10 trang | chờ duyệt |
+| W01 | `VatLi2026-BacNinh-CumHHNSLTD1-Lan2` | Bac Ninh - Cum truong Bac Ninh Hiep Hoa - Ngo Si Lien - Tien Du 1 - Lan 1.docx | Word | chỉ ĐA | tên/lần theo tiêu đề gốc; tự giải 28 câu khớp ĐA; 11 hình; đề 7 trang, lời giải 10 trang | xong |
+| W01 | `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1` | Bac Ninh - Lien truong Bac Ninh - Lan 1.docx | Word | chỉ ĐA | gần trùng Quế Võ 1 – Lần 1; Phần II đánh số lại (19–22 → 1–4); tự giải khớp ĐA; KIỂM TRA I.1; 8 hình; đề 7 trang, lời giải 11 trang | xong |
+| W01 | `VatLi2026-BacNinh-SoGD-Lan2` | Bac Ninh - So GDDT - Lan 2.docx | Word | ĐA + LG | KIỂM TRA I.9 (gốc C, gõ B); 9 hình; đề 7 trang, lời giải 11 trang | xong |
+| W01 | `VatLi2026-CaMau-SoGD-Lan1` | Ca Mau - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; 4 hình shape Word; đề 6 trang, lời giải 10 trang | xong |
 | W02 | `VatLi2026-CanTho-SoGD-Lan1` | Can Tho - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
 | W02 | `VatLi2026-DaNang-SoGD-Lan1` | Da Nang - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
 | W02 | `VatLi2026-DakLak-Cum1` | Dak Lak - Cum thi thu TN so 1.docx | Word | ĐA + LG | — | chưa gõ |
