@@ -29,6 +29,7 @@ Quy định trong file này được ưu tiên hơn mọi thiết lập soạn �
 3. Máy đám mây không có font esvect, fontawesome: `bien-dich.sh` và `dan_trang.py` tự tạo gói thay thế trong thư mục biên dịch.
 
 # QUY TRÌNH MỘT LÔ (mỗi lô 4 đề theo `kho/TIEN-DO.md`; mỗi lô một nhánh, một PR)
+Model do thầy chọn khi mở phiên (thầy chốt 13/11/2026): lô W (đề Word có lời giải gốc) chạy Opus, lô P (đề PDF tự giải) chạy Fable. Quy trình và chất lượng như nhau với mọi model.
 1. **Chuẩn bị**: đọc `kho/TIEN-DO.md`, dòng của từng đề trong `kho/kiem-ke.md` (tên file, dòng 1, `\tenchuong`, ghi chú), đề mẫu nếu chưa đọc trong phiên. Chưa có `thanh-pham/` thì tạo.
 2. **Gõ**: đọc đề gốc (mục ĐỌC ĐỀ GỐC), xuất ảnh trang để đối chiếu; tạo `de/<tên>/<tên>.tex` theo mục KHUNG FILE ĐỀ; gõ đủ câu, `\True`, `\shortans`, mã câu, lời giải.
 3. **Giải, kiểm chứng**: tự giải lại MỌI câu; câu có số liệu tính lại bằng Python; đối chiếu đáp án gốc (nếu có); ghi `de/<tên>/kiem-chung.md` (mục KIỂM CHỨNG ĐÁP ÁN).
@@ -127,7 +128,7 @@ Theo đúng đề mẫu (thụt lề bằng tab):
 - Vectơ `\vv{B}`, `\vv{F}` (preamble cho `\overrightarrow` = `\vv`). Song song gõ `\parallel` (in ra //).
 - Kí hiệu hạt nhân `$^{235}_{\phantom{2}92}\text{U}$` (canh số) hoặc `${}^{27}_{13}\text{Al}$`; hạt `${}^4_2\text{He}$`, `${}^1_0\text{n}$`; tên hạt, đại lượng có chỉ số chữ dùng `\text{}`: `$W_{\text{lk}}$`, `$\overline{E}_{\text{đ}}$`, `$m_\text{X}$`.
 - Đại lượng biến thiên `\Delta`, trị tuyệt đối `\left|\dfrac{\Delta B}{\Delta t}\right|`; độ `$45^\circ$`; π gõ `\pi`. Dùng thuật ngữ SGK 2018 (neutron, proton, nucleon, xilanh, pit-tông, hyperbol).
-- Nhấn mạnh từ phủ định của đề (`\textbf{không}`, `\textbf{sai}`) như đề gốc.
+- Luôn in đậm từ phủ định trong câu hỏi (`\textbf{không}`, `\textbf{sai}`), kể cả khi đề gốc không in đậm (thầy chốt 13/11/2026); ghi vào mục sửa lời đề của `kiem-chung.md`.
 
 # HÌNH VẼ
 - **Mọi hình vẽ lại bằng TikZ** (kể cả ảnh chụp, hình thực tiễn), sát hình gốc, chi tiết như đề mẫu. CẤM `\includegraphics`, tkz-euclide, `\immini`. Không dùng `\resizebox`, không `transform shape` (chữ trong hình giữ `\footnotesize`).
