@@ -5,7 +5,8 @@
 ## Giai đoạn hiện tại
 
 - **Phiên 1a (06/11/2026) — xong, thầy duyệt 06/11/2026**: `CLAUDE.md` cho Vật lí; bộ macro hình chung `preamble-vatli-hinh.tex` (thêm circuitikz european), `tools/so_hinh.py` đọc macro từ file chung, dựng lại đề mẫu (bản đề 7 trang, lời giải 10 trang, PDF trùng bản cũ); `tools/README.md`; kiểm kê 83 đề `kho/kiem-ke.md`; chia lô (file này).
-- **Tiếp theo — lô M** (sau khi hạn mức đặt lại 23:00 thứ Ba 10/11): gõ `VatLi2026-LaoCai-CumPhiaBac-Lan2` làm mẫu thứ hai (đề PDF không đáp án, tự giải toàn bộ), dừng chờ thầy duyệt rồi mới chạy các lô W, P.
+- **Lô M (13/11/2026) — xong, chờ thầy duyệt**: `VatLi2026-LaoCai-CumPhiaBac-Lan2` (mẫu thứ hai: đề PDF không đáp án, tự giải toàn bộ 28 câu, vẽ lại 14 hình). Bản đề 8 trang (ĐẠT), bản lời giải 12 trang. Thành phẩm trong `thanh-pham/`, kiểm chứng ở `de/VatLi2026-LaoCai-CumPhiaBac-Lan2/kiem-chung.md`.
+- **Tiếp theo**: thầy duyệt lô M (chữ, lời giải, hình, các điểm ở mục "Chờ thầy quyết") rồi mới chạy lô W01.
 
 ## Quyết định của thầy
 
@@ -18,17 +19,25 @@
 
 ## Chờ thầy quyết
 
-(Không còn — các điểm của phiên 1a thầy đã quyết ngày 06/11/2026, xem mục trên.)
+Lô M — `VatLi2026-LaoCai-CumPhiaBac-Lan2` (chi tiết ở `kiem-chung.md` của đề):
+
+1. Đáp án tự giải (đề gốc không có đáp án): Phần I `D A D C D A B C C B D C B C C B A B`; Phần II `SĐSĐ – SĐĐS – ĐSĐĐ – SĐSS`; Phần III `34,7 – 4,3 – 150 – 4,3 – 41,4 – 0,08`. Thầy xem các câu dễ tranh luận: I.7 (lực Lorentz, hạt β trong từ trường), I.10 (thủy ngân ở 30 °C: chọn "thể lỏng và thể hơi"), II.4 (dấu của suất điện động: hiểu "giá trị cực đại" là e = +E₀).
+2. Hình II.2: màn hình đế gia nhiệt của hình gốc ghi "300°C", lời đề ghi 300 K → hình vẽ lại ghi "300 K". Ảnh chụp bộ thí nghiệm (bình, biến áp, đồng hồ) cũng đã vẽ lại bằng TikZ dạng giản lược; nếu thầy thấy thừa thì bỏ.
+3. Hình II.4 (máy phát điện): lược hai nét phụ kẻ từ P, Q của hình gốc. Hình III.1 (bàn là): bỏ chữ nhãn hiệu và bàn tay.
+4. In đậm mọi từ phủ định ("sai", "không") kể cả câu gốc không in đậm (I.2, I.4, I.11) — giữ cách này cho các đề sau?
+5. Đề gốc không có khối "Cho biết" nên file đề cũng không có; lời giải II.1 c), II.2 d) tự dùng N_A, R, 1 atm.
+6. Cỡ lô: lô M (1 đề PDF không đáp án, 14 hình, trong đó 7 hình thực tiễn) làm trọn trong một phiên; thầy xem mức hạn mức đã dùng để chốt 4 đề/lô hay ít hơn cho các lô P.
 
 ## Việc đã xong
 
 - Giai đoạn 0 (06/11/2026): repo, khung, công cụ chép từ dự án Toán; đề nguồn vào `kho/goc/`.
 - 06/11/2026: đề mẫu Cao Bằng – Lần 1 (thầy duyệt).
 - 06/11/2026, phiên 1a: như mục "Giai đoạn hiện tại".
+- 13/11/2026, lô M: đề `VatLi2026-LaoCai-CumPhiaBac-Lan2` (chờ duyệt). Thêm vào `preamble-vatli-hinh.tex`: thư viện `decorations.pathmorphing`, macro `\VLongday` (ống dây quấn trên lõi trụ), `\VLdongho` (đồng hồ đo dạng hộp); dựng lại đề mẫu Cao Bằng với preamble mới (vẫn 7 trang đề ĐẠT, 10 trang lời giải). `tools/so_hinh.py` dựng hình ở cỡ chữ 12pt như file đề.
 
 ## Số đề
 
-83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu) → còn 77 đề: lô M 1, W01–W10 41 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
+83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 chờ duyệt (lô M) → còn 76 đề chưa gõ: W01–W10 41 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
 
 ## Kế hoạch lô và trạng thái từng đề
 
@@ -37,7 +46,7 @@ Trạng thái: chưa gõ → đang gõ → chờ duyệt → xong. Cột "Đáp 
 | Lô | Đề (tên file) | File gốc | Loại | Đáp án gốc | Ghi chú | Trạng thái |
 |---|---|---|---|---|---|---|
 | — | `VatLi2026-CaoBang-SoGD-Lan1` | Cao Bang - So GDDT - Lan 1.docx | Word | ĐA + LG | đề mẫu chuẩn | xong |
-| M | `VatLi2026-LaoCai-CumPhiaBac-Lan2` | Lao Cai - So GDDT - Lan 2.pdf | PDF chữ | không | mẫu thứ hai (đề PDF không đáp án); tên/lần theo tiêu đề gốc; đánh số câu liên tục | chưa gõ |
+| M | `VatLi2026-LaoCai-CumPhiaBac-Lan2` | Lao Cai - So GDDT - Lan 2.pdf | PDF chữ | không | mẫu thứ hai (đề PDF không đáp án); tên/lần theo tiêu đề gốc; đánh số câu liên tục; đề 8 trang, lời giải 12 trang | chờ duyệt |
 | W01 | `VatLi2026-BacNinh-CumHHNSLTD1-Lan2` | Bac Ninh - Cum truong Bac Ninh Hiep Hoa - Ngo Si Lien - Tien Du 1 - Lan 1.docx | Word | chỉ ĐA | tên/lần theo tiêu đề gốc | chưa gõ |
 | W01 | `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1` | Bac Ninh - Lien truong Bac Ninh - Lan 1.docx | Word | chỉ ĐA | gần trùng Quế Võ 1 – Lần 1 (17/28 câu chung) | chưa gõ |
 | W01 | `VatLi2026-BacNinh-SoGD-Lan2` | Bac Ninh - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
