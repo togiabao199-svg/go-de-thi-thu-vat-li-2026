@@ -518,17 +518,17 @@
 					\filldraw[fill=green!45!black,draw=green!30!black,very thin] (2.4,0.45) .. controls (2.55,0.75) and (2.7,0.95) .. (2.75,1.05)--(2.75,0.35) .. controls (2.6,0.3) and (2.5,0.35) .. (2.4,0.45);
 				\end{scope}
 				% đồ thị
-				\draw[gray!70,densely dashed,thin] (0,0) grid[xstep=5,ystep=10] (55,85);
-				\draw[gray!70,densely dashed,thin] (0,85)--(55,85);
+				\draw[gray!45,densely dashed,thin] (0,0) grid[xstep=5,ystep=10] (55,85);
+				\draw[gray!45,densely dashed,thin] (0,85)--(55,85);
 				\draw[VLmui,thick] (0,0)--(63,0) node[right,inner sep=2pt] {Thời gian (phút)};
 				\draw[VLmui,thick] (0,0)--(0,98) node[above,inner sep=2pt] {Nhiệt độ ($^\circ$C)};
 				\foreach \x in {10,20,...,60}{\node[below,inner sep=2pt] at (\x,0) {$\x$};}
 				\node[below,inner sep=2pt] at (0,0) {$0$};
 				\foreach \y in {20,40,...,80}{\node[left,inner sep=2pt] at (0,\y) {$\y$};}
-				\draw[very thick] plot[smooth,tension=0.6] coordinates {(0,80) (1.5,68) (3,59) (5,52) (7,47.5) (8,45)};
-				\draw[very thick] plot[smooth,tension=0.6] coordinates {(8,45) (8.8,32) (9.8,18) (11.2,10) (13,7)};
-				\draw[very thick] plot[smooth,tension=0.6] coordinates {(13,7) (17,12) (22,17) (28,21) (34,25) (40,27.5) (45,27.8) (50,27) (55,26)};
-				\fill (0,80) circle (1.6pt) (8,45) circle (1.6pt) (13,7) circle (1.6pt) (40,27.5) circle (1.6pt);
+				\draw[very thick,VLdo] plot[smooth,tension=0.6] coordinates {(0,80) (1.5,68) (3,59) (5,52) (7,47.5) (8,45)};
+				\draw[very thick,VLdo] plot[smooth,tension=0.6] coordinates {(8,45) (8.8,32) (9.8,18) (11.2,10) (13,7)};
+				\draw[very thick,VLdo] plot[smooth,tension=0.6] coordinates {(13,7) (17,12) (22,17) (28,21) (34,25) (40,27.5) (45,27.8) (50,27) (55,26)};
+				\foreach \p in {(0,80),(8,45),(13,7),(40,27.5)}{\filldraw[fill=white,draw=black,thick] \p circle (1.8pt);}
 				\node[right,inner sep=2pt,font=\footnotesize\bfseries] at (0,82) {M};
 				\node[right,inner sep=2pt,font=\footnotesize\bfseries] at (8,45) {N};
 				\node[above,inner sep=2pt,font=\footnotesize\bfseries] at (13,8) {P};
@@ -562,7 +562,7 @@
 				% nguồn nhiệt (1)
 				\fill[yellow!25] (0.15,0)--(0.15,0.75) .. controls (0.2,1.2) and (0.6,1.3) .. (1.15,1.3) .. controls (1.7,1.3) and (2.1,1.2) .. (2.15,0.75)--(2.15,0)--cycle;
 				\foreach \x/\h in {0.4/0.75,0.65/1.0,0.9/0.85,1.15/1.1,1.4/0.9,1.65/1.0,1.9/0.7}{
-					\fill[orange!80!red,opacity=0.85] (\x-0.14,0.05) .. controls (\x-0.16,0.4) and (\x-0.05,0.6) .. (\x,\h) .. controls (\x+0.06,0.6) and (\x+0.16,0.4) .. (\x+0.14,0.05)--cycle;
+					\fill[VLdo!75!orange,opacity=0.85] (\x-0.14,0.05) .. controls (\x-0.16,0.4) and (\x-0.05,0.6) .. (\x,\h) .. controls (\x+0.06,0.6) and (\x+0.16,0.4) .. (\x+0.14,0.05)--cycle;
 					\fill[yellow!80!orange] (\x-0.07,0.05) .. controls (\x-0.08,0.25) and (\x-0.02,0.4) .. (\x,0.55*\h) .. controls (\x+0.03,0.4) and (\x+0.08,0.25) .. (\x+0.07,0.05)--cycle;}
 				\draw[gray!55!black,thin] (0.15,0)--(0.15,0.75) .. controls (0.2,1.2) and (0.6,1.3) .. (1.15,1.3) .. controls (1.7,1.3) and (2.1,1.2) .. (2.15,0.75)--(2.15,0);
 				% bình chưng cất
@@ -729,12 +729,12 @@
 		\begin{minipage}[t]{0.26\linewidth}
 			\centering
 			\begin{tikzpicture}[baseline={([yshift=-1.6ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
-				\fill[black] (0.05,0) rectangle (3.0,0.1);
-				\fill[gray!30] (0.92,0.1) rectangle (2.18,1.08);
-				\draw[gray!55,thin] (0.92,1.08)--(2.18,1.08);
+				\fill[black!80] (0.05,0) rectangle (3.0,0.1);
+				\shade[top color=VLxanh!18,bottom color=VLxanh!40] (0.92,0.1) rectangle (2.18,1.08);
+				\draw[VLxanh!60!black,thin] (0.92,1.08)--(2.18,1.08);
 				\draw[black,line width=1.1pt] (0.9,0.1)--(0.9,1.42) (2.2,0.1)--(2.2,1.42);
 				% miếng đồng
-				\fill[black] (1.2,1.52) .. controls (1.1,1.6) and (1.15,1.75) .. (1.3,1.82) .. controls (1.35,1.95) and (1.5,1.98) .. (1.62,1.93) .. controls (1.72,1.98) and (1.88,1.95) .. (1.95,1.85) .. controls (2.1,1.8) and (2.08,1.6) .. (1.98,1.52)--cycle;
+				\shade[top color=VLdong!55!white,bottom color=VLdong!80!black,middle color=VLdong!35!white,draw=VLdong!45!black] (1.2,1.52) .. controls (1.1,1.6) and (1.15,1.75) .. (1.3,1.82) .. controls (1.35,1.95) and (1.5,1.98) .. (1.62,1.93) .. controls (1.72,1.98) and (1.88,1.95) .. (1.95,1.85) .. controls (2.1,1.8) and (2.08,1.6) .. (1.98,1.52)--cycle;
 				\draw[black,line width=0.9pt] (1.62,1.93)--(1.6,2.62);
 				% bàn tay
 				\fill[black] (0.82,3.05)--(1.05,3.32)--(1.32,3.12)--(1.08,2.86)--cycle;
