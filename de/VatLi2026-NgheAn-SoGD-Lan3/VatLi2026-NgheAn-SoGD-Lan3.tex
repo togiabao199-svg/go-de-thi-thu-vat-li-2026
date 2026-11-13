@@ -215,11 +215,20 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{12.9\baselineskip}
+	\NeedspaceCau{9.8\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Một khối khí lí tưởng thực hiện quá trình biến đổi trạng thái từ (1) $\to$ (2) như hình bên. Trong quá trình này, khối khí
-		\begin{center}
-			\begin{tikzpicture}[scale=0.89,x=1cm,y=1cm,line join=round,line cap=round,font=\footnotesize]
+		\par\noindent
+		\begin{minipage}[c]{0.6\linewidth}
+		\choice
+		{giãn đẳng áp}
+		{nén đẳng nhiệt}
+		{giãn đẳng nhiệt}
+		{\True nén đẳng áp}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.38\linewidth}
+			\centering
+			\begin{tikzpicture}[scale=0.85,x=1cm,y=1cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[VLmui,thick] (0,0)--(3.9,0) node[below,inner sep=3pt] {$T$ (K)};
 				\draw[VLmui,thick] (0,0)--(0,3.9) node[right,inner sep=2pt] {$p$ (Pa)};
 				\node[below left,inner sep=2pt] at (0,0) {$O$};
@@ -232,18 +241,13 @@
 				\node[below,inner sep=2pt] at (1.2,0) {$T_1$};
 				\node[below,inner sep=2pt] at (3.1,0) {$T_2$};
 			\end{tikzpicture}
-		\end{center}
-		\choice
-		{giãn đẳng áp}
-		{nén đẳng nhiệt}
-		{giãn đẳng nhiệt}
-		{\True nén đẳng áp}
+		\end{minipage}
 		\loigiai{
 			Áp suất không đổi, $T$ giảm từ $T_2$ về $T_1$; $\dfrac{V}{T}=\text{hằng số}$ nên $V$ giảm: khí bị nén đẳng áp.
 		}
 	\end{ex}
 
-	\NeedspaceCau{6.2\baselineskip}
+	\NeedspaceCau{6.5\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Quá trình nào sau đây là ứng dụng đặc tính dễ nén giãn của chất khí?
 		\choice
@@ -524,14 +528,20 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{18.4\baselineskip}
+	\NeedspaceCau{13.6\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
-		\label{NgheAn-SoGD-Lan3-III2}Xét hai quy trình biến đổi trạng thái sau:\\
+		\label{NgheAn-SoGD-Lan3-III2}Xét hai quy trình biến đổi trạng thái sau:
+		\par\noindent
+		\begin{minipage}[t]{0.55\linewidth}
+		\vspace{0pt}
 		\textit{Quy trình (1):} Quay ngược ống sao cho A phía trên, B để hở ở dưới. Khoảng cách từ A đến trọng tâm của cột thủy ngân là $L_1$.\\
 		\textit{Quy trình (2):} Từ trạng thái ban đầu, bịt kín miệng B, sau đó quay ngược ống sao cho A ở trên, B đã bị kín ở dưới. Khoảng cách từ A đến trọng tâm của cột thủy ngân là $L_2$.\\
 		Trong quá trình thực hiện các thao tác, không khí trong các phần không hòa vào nhau, nhiệt độ của hệ không đổi. Giá trị $\Delta L=|L_1-L_2|$ bằng bao nhiêu cm (làm tròn kết quả đến chữ số hàng phần mười)?
-		% giuhinh
-		\begin{center}
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.36\linewidth}
+			\vspace{0pt}
+			\centering
+			% giuhinh
 			\begin{tikzpicture}[x=0.125mm,y=-0.125mm,line join=round,line cap=round,font=\footnotesize]
 				% giá đỡ
 				\foreach \xr/\xt/\s in {62/120/1,325/265/-1}{
@@ -569,7 +579,8 @@
 				\node[inner sep=1pt] at (25,272) {(1)};
 				\node[inner sep=1pt] at (360,272) {(2)};
 			\end{tikzpicture}
-		\end{center}
+		\end{minipage}
+		\par
 		\shortans[oly]{1{,}9}
 		\loigiai{
 			Ban đầu khí ở đáy A: $p_A=84$~cmHg, $l_A=20$~cm; khí phía trên cột thủy ngân dài $l_B=68-8-20=40$~cm.\\
@@ -636,7 +647,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{4.6\baselineskip}
+	\NeedspaceCau{4.9\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		\label{NgheAn-SoGD-Lan3-III4}Tháo sợi dây khỏi lực kế rồi kéo cho MN chuyển động sang phải, ra xa nguồn điện. Khi MN có tốc độ là $2{,}5$~m/s thì cường độ dòng điện qua $R$ là bao nhiêu ampe (làm tròn kết quả đến chữ số hàng phần mười)?
 		\par
