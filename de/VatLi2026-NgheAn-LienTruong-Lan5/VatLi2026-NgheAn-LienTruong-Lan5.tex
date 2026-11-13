@@ -317,7 +317,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{37.2\baselineskip}
+	\NeedspaceCau{37.6\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-NgheAn-LienTruong-Lan5-2]
@@ -627,11 +627,11 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[18.5\baselineskip]{35.6\baselineskip}
+	\NeedspaceCau[18.1\baselineskip]{35.6\baselineskip}
 	\begin{ex}%[VL12-C4-VD]
 		Trong công nghiệp thực phẩm, kĩ thuật chiếu xạ sử dụng tia gamma ($\gamma$) phát ra từ đồng vị phóng xạ cobalt-60 (${}^{60}\text{Co}$) là phương pháp hiệu quả để tiêu diệt vi sinh vật, kí sinh trùng, nhằm kéo dài thời gian bảo quản các loại nông sản và trái cây xuất khẩu. Các tia gamma này được phát ra khi hạt nhân ${}^{60}_{27}\text{Co}$ phân rã thành hạt nhân ${}^{60}_{28}\text{Ni}$ rồi chuyển từ trạng thái kích thích về trạng thái bền. Do hiện tượng phân rã phóng xạ tự phát, độ phóng xạ của nguồn ${}^{60}\text{Co}$ giảm dần theo thời gian, làm ảnh hưởng đến liều lượng chiếu xạ quy chuẩn. Để giám sát chất lượng nguồn phóng xạ này, các kĩ sư tại phòng thực nghiệm đã sử dụng máy đếm xung để đo độ phóng xạ $H$ (phân rã/giây) của một mẫu ${}^{60}\text{Co}$ theo thời gian, kết quả trả về là hình vẽ biểu diễn sự phụ thuộc của $\ln H$ theo thời gian $t$ có dạng đoạn thẳng như hình bên.
 		\begin{center}
-			\begin{tikzpicture}[scale=0.903,x=0.056cm,y=6.6cm,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[x=0.056cm,y=7.0cm,line join=round,line cap=round,font=\footnotesize]
 				\begin{scope}[shift={(-50,-5.87)}]
 					\draw[thick] (50,5.87) rectangle (192,6.35);
 					\foreach \x in {60,80,...,180}{\draw[thick] (\x,5.87)--(\x,5.885); \node[below,inner sep=2pt] at (\x,5.87) {$\pgfmathprintnumber[fixed,fixed zerofill,precision=1,use comma]{\x}$};}
@@ -642,8 +642,8 @@
 					\draw[VLdo,very thick] (61,{6.24+0.24*29/70})--(184,{6.24-0.24*94/70});
 					\foreach \x/\d in {60/-0.03,71/-0.024,82/-0.012,90/0,101/0.012,112/0.02,121/0.022,132/0.014,141/0.019,151/0.016,160/0,169/-0.015,181/-0.03}{
 						\filldraw[fill=black,draw=black] (\x,{6.24-0.24*(\x-90)/70+\d}) circle (1.5pt);}
-					\node[below,inner sep=8pt] at (121,5.87) {Thời gian (ngày)};
-					\node[rotate=90,above,inner sep=30pt] at (50,6.115) {$\ln H$ ($\times 10^{-1}$)};
+					\node[below,inner sep=0pt,yshift=-0.5cm] at (121,5.87) {Thời gian (ngày)};
+					\node[rotate=90,inner sep=0pt] at (29.5,6.115) {$\ln H$ ($\times 10^{-1}$)};
 				\end{scope}
 			\end{tikzpicture}
 		\end{center}
