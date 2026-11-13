@@ -7,7 +7,8 @@
 - **Phiên 1a (06/11/2026) — xong, thầy duyệt 06/11/2026**: `CLAUDE.md` cho Vật lí; bộ macro hình chung `preamble-vatli-hinh.tex` (thêm circuitikz european), `tools/so_hinh.py` đọc macro từ file chung, dựng lại đề mẫu (bản đề 7 trang, lời giải 10 trang, PDF trùng bản cũ); `tools/README.md`; kiểm kê 83 đề `kho/kiem-ke.md`; chia lô (file này).
 - **Lô M (13/11/2026) — xong, thầy duyệt 13/11/2026**: `VatLi2026-LaoCai-CumPhiaBac-Lan2` (mẫu thứ hai: đề PDF không đáp án, tự giải toàn bộ 28 câu, vẽ lại 14 hình). Bản đề 8 trang (ĐẠT), bản lời giải 12 trang. Thành phẩm trong `thanh-pham/`, kiểm chứng ở `de/VatLi2026-LaoCai-CumPhiaBac-Lan2/kiem-chung.md`.
 - **Lô W01 (13/11/2026) — xong, thầy duyệt 13/11/2026**: 4 đề Word (Bắc Ninh ×3, Cà Mau), chạy Opus, 4 agent con song song (thầy cho phép trong phiên), phiên chính soát, thống nhất, gom macro. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
-- **Tiếp theo — tô màu lại 6 đề đã xong** (Opus, song song): Cao Bằng, Lào Cai, 4 đề lô W01 — prompt ở mục "Quyết định của thầy" 13/11/2026 (tô màu). Sau đó lô W02 (Opus, song song): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W02, chạy song song.`
+- **Tô màu lại 6 đề đã xong (13/11/2026) — chờ duyệt**: Cao Bằng, Lào Cai, 4 đề lô W01 (Opus, 6 agent con song song). Số trang bản đề / lời giải không đổi, cả 6 đề `kiem` ĐẠT, thành phẩm xuất lại. Điểm cần thầy quyết ở mục "Chờ thầy quyết".
+- **Tiếp theo**: lô W02 (Opus, song song): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W02, chạy song song.`
 
 ## Quyết định của thầy
 
@@ -29,7 +30,12 @@
 
 ## Chờ thầy quyết
 
-(Không còn — các điểm của lô W01 thầy đã quyết ngày 13/11/2026, xem mục trên.)
+Phiên tô màu (13/11/2026):
+- Nam châm theo quy ước N `VLdo` / S `VLxanh` khác màu ảnh gốc: Cao Bằng II.4 (ảnh gốc N xanh, S đỏ), Bắc Ninh SGD Lần 2 II.1 (ảnh gốc đen). Đề không ghi cực thì KHÔNG tô cực (giữ màu gốc/xám để khỏi lộ đáp án): Cà Mau II.3 (nam châm chữ U xám), Lào Cai II.3 (micro, giữ đỏ / xanh lá như gốc).
+- Màu ngoài bảng: Lào Cai II.3 sóng âm tím (`violet`, ảnh gốc xanh dương trùng màu từ trường) — thầy chốt màu chung cho sóng âm? Khí trong bình (Cà Mau III.1) tô `VLxanh!10` — bảng màu chưa quy định chất khí.
+- Giữ màu "thật" của ảnh chụp: dây nối đỏ/xanh ở hình thực tiễn (Lào Cai I.16), màu trang trí (Bắc Ninh SGD III.1 ghế xanh, III.5 tia vàng), cột nhiệt kế "thủy ngân" vàng cam (Cụm HH–NSL–TD1 I.2).
+- Không tô nước nóng / lạnh khác màu khi đó là ý cần suy luận (Cụm HH–NSL–TD1 II.2); các tia X, Y, Z (Lào Cai I.5) và hai vết hạt (I.7) cùng màu `VLdo`.
+- Cao Bằng (đề mẫu) nay gọi thẳng macro chung `\VLcham`, `\VLnhan`, `\VLthanhngang`, `\VLthanhdung` (đã mang màu); `tham-khao/to-mau/mau-to-mau.tex` vẫn dùng scope màu và `\Dngang`/`\Ddung` riêng (cùng kết quả).
 
 ## Việc đã xong
 
@@ -38,6 +44,7 @@
 - 06/11/2026, phiên 1a: như mục "Giai đoạn hiện tại".
 - 13/11/2026, lô M: đề `VatLi2026-LaoCai-CumPhiaBac-Lan2` (thầy duyệt 13/11). Thêm vào `preamble-vatli-hinh.tex`: thư viện `decorations.pathmorphing`, macro `\VLongday` (ống dây quấn trên lõi trụ), `\VLdongho` (đồng hồ đo dạng hộp); dựng lại đề mẫu Cao Bằng với preamble mới (vẫn 7 trang đề ĐẠT, 10 trang lời giải). `tools/so_hinh.py` dựng hình ở cỡ chữ 12pt như file đề.
 - 13/11/2026, lô W01 (thầy duyệt 13/11): 4 đề `VatLi2026-BacNinh-CumHHNSLTD1-Lan2`, `VatLi2026-BacNinh-CumTT1QV1LVT-Lan1`, `VatLi2026-BacNinh-SoGD-Lan2`, `VatLi2026-CaMau-SoGD-Lan1` (bản đề đều ĐẠT). Thêm vào `preamble-vatli-hinh.tex`: `\VLnhietke`, `\VLvienda`, `\VLngonlua`, `\VLdencon`, `\VLgiado`, `\VLongnghiem`, `\VLvongsau`/`\VLvongtruoc`, `\VLnumvan` (chuyển từ file đề, dựng lại các đề dùng; đề mẫu Cao Bằng, Lào Cai biên dịch lại vẫn như cũ). Thống nhất đoạn "Dùng thông tin sau cho câu …" đặt trong câu đầu của cặp (chờ thầy duyệt).
+- 13/11/2026, tô màu (chờ duyệt): `preamble-vatli-hinh.tex` — `\VLcham`, `\VLnhan` màu `VLxanh!85!black`; `\VLthanhngang`, `\VLthanhdung`, `\VLvongsau`/`\VLvongtruoc` màu đồng. Tô lại toàn bộ hình 6 đề (mỗi đề một commit), dựng lại `so-hinh/`, soát bản xám, `kiem` ĐẠT, xuất lại thành phẩm; số trang không đổi (Cao Bằng 7/10, Lào Cai 8/12, Cụm HH–NSL–TD1 7/10, Cụm TT1–QV1–LVT 7/11, Bắc Ninh SGD 7/11, Cà Mau 6/10).
 
 ## Số đề
 
