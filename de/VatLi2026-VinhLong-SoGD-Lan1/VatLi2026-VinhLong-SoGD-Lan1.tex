@@ -1,0 +1,505 @@
+%=====================================================================
+% ĐỀ THI THỬ TỐT NGHIỆP THPT 2026 -- MÔN VẬT LÍ
+% Nguồn: Sở GD&ĐT Vĩnh Long (mã đề gốc 0201). Gõ lại theo template Eduzy.
+%=====================================================================
+\def\CheDo{solcolor}% loigiai | dethi
+\def\tenchuong{Sở GD\&ĐT Vĩnh Long -- Lần 1}
+\def\thuonghieu{VẬT LÍ 12 -- Eduzy.com.vn}
+\def\TachCauDS{1}
+\def\TachCauLG{1}
+\input{preamble-eduzy-v2}
+\input{preamble-vatli-hinh}
+\begin{document}
+	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT VĨNH LONG -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
+
+	\noindent\textbf{Cho biết:} $T(\text{K})=t\,(^\circ\text{C})+273$; $R=8{,}31$~J$\cdot$mol$^{-1}\cdot$K$^{-1}$.\\
+	Không làm tròn kết quả các phép tính trung gian.
+
+	\NeedspaceCau{10.3\baselineskip}
+	\noindent
+	\subsection*{\indam{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn. Thí sinh trả lời từ câu 1 đến câu 18. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-VinhLong-SoGD-Lan1-1]
+
+	\begin{ex}%[VL12-C1-NB]
+		Nội năng của một hệ là đại lượng được xác định bằng tổng
+		\choice
+		{động năng chuyển động vĩ mô và thế năng trọng trường của toàn bộ hệ}
+		{\True động năng chuyển động nhiệt và thế năng tương tác của các phân tử cấu tạo nên hệ}
+		{động năng tịnh tiến trung bình và năng lượng tỏa ra của hệ trong quá trình biến đổi}
+		{nhiệt lượng hệ thu vào và công cơ học hệ nhận được trong suốt quá trình biến đổi}
+		\loigiai{
+			Nội năng của hệ là tổng động năng chuyển động nhiệt và thế năng tương tác của các phân tử cấu tạo nên hệ.
+		}
+	\end{ex}
+
+	\NeedspaceCau{16.3\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Xét đồ thị biểu diễn số hạt nhân chưa bị phân rã ($N$) theo thời gian ($t$). Phát biểu nào sau đây là đúng?
+		\begin{center}
+			\begin{tikzpicture}[x=1cm,y=1cm,line join=round,line cap=round,font=\footnotesize]
+				\draw[VLmui,thick] (0,0)--(4.4,0) node[below,inner sep=3pt] {$t$};
+				\draw[VLmui,thick] (0,0)--(0,3.1) node[left,inner sep=2pt] {$N$};
+				\node[below left,inner sep=2pt] at (0,0) {$O$};
+				\draw[very thick,VLdo] plot[domain=0:4.05,samples=60] (\x,{2.4*exp(-\x/1.35)});
+			\end{tikzpicture}
+		\end{center}
+		\choice
+		{Đồ thị có dạng là một đường hyperbol}
+		{Lượng hạt nhân bị phân rã trong những khoảng thời gian bằng nhau bất kì là như nhau}
+		{Đồ thị sẽ cắt trục thời gian ($Ot$) sau thời gian hai chu kì bán rã}
+		{\True Độ lớn hệ số góc của tiếp tuyến với đồ thị tại mỗi điểm bằng độ phóng xạ tại thời điểm đó}
+		\loigiai{
+			$N=N_0e^{-\lambda t}$ giảm theo hàm mũ, không cắt trục $Ot$; độ phóng xạ $H=\left|\dfrac{\mathrm{d}N}{\mathrm{d}t}\right|$ bằng độ lớn hệ số góc của tiếp tuyến.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.5\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Trong hệ đo lường SI, đơn vị của từ thông là
+		\choice
+		{ampe (A)}
+		{\True weber (Wb)}
+		{vôn (V)}
+		{tesla (T)}
+		\loigiai{
+			Đơn vị của từ thông trong hệ SI là weber (Wb).
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Khoảng thời gian để một nửa số hạt nhân của một lượng chất phóng xạ bị phân rã là
+		\choice
+		{đồng vị phóng xạ}
+		{\True chu kì bán rã}
+		{hằng số phóng xạ}
+		{độ phóng xạ}
+		\loigiai{
+			Khoảng thời gian để một nửa số hạt nhân phóng xạ bị phân rã gọi là chu kì bán rã.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Đại lượng đặc trưng cho mức độ bền vững của hạt nhân là
+		\choice
+		{tổng số nucleon của hạt}
+		{năng lượng liên kết toàn phần}
+		{khối lượng của toàn bộ hạt}
+		{\True năng lượng liên kết riêng}
+		\loigiai{
+			Năng lượng liên kết riêng càng lớn thì hạt nhân càng bền vững.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.1\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Một lượng khí lí tưởng xác định biến đổi trạng thái với áp suất không đổi thì thể tích
+		\choice
+		{\True tỉ lệ thuận với nhiệt độ tuyệt đối}
+		{tỉ lệ thuận với nhiệt độ Celsius}
+		{tỉ lệ nghịch với nhiệt độ Celsius}
+		{tỉ lệ nghịch với nhiệt độ tuyệt đối}
+		\loigiai{
+			Định luật Charles: $\dfrac{V}{T}=\text{hằng số}$, thể tích tỉ lệ thuận với nhiệt độ tuyệt đối.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Môi trường vật chất tồn tại xung quanh một thanh nam châm đứng yên được gọi là
+		\choice
+		{trường hấp dẫn}
+		{trường điện từ}
+		{điện trường tĩnh}
+		{\True từ trường}
+		\loigiai{
+			Xung quanh nam châm đứng yên tồn tại từ trường.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Dòng điện cảm ứng xuất hiện trong mạch kín có chiều sao cho từ trường do nó sinh ra
+		\choice
+		{luôn cùng chiều với từ trường bên ngoài}
+		{\True có tác dụng chống lại sự biến thiên từ thông qua mạch kín}
+		{luôn ngược chiều với từ trường bên ngoài}
+		{có tác dụng tăng cường sự biến thiên từ thông qua mạch kín}
+		\loigiai{
+			Định luật Lenz: từ trường cảm ứng có tác dụng chống lại sự biến thiên từ thông qua mạch kín.
+		}
+	\end{ex}
+
+	\NeedspaceCau{7.2\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Trước cơn mưa giông, thời tiết thường oi bức và cơ thể đổ mồ hôi nhưng \textbf{không} thấy mát vì
+		\choice
+		{áp suất khí quyển giảm mạnh làm cơ thể tỏa nhiệt kém hơn}
+		{mây đen hấp thụ bức xạ mặt trời rồi phản xạ xuống đất}
+		{từ trường trong đám mây giông làm tăng nội năng của cơ thể}
+		{\True độ ẩm cao làm mồ hôi khó bay hơi để lấy đi nhiệt từ cơ thể}
+		\loigiai{
+			Độ ẩm không khí cao nên mồ hôi khó bay hơi, không lấy được nhiệt từ cơ thể.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Đại lượng được đo bằng nhiệt lượng cần cung cấp để $1$~kg chất tăng thêm $1$~K là
+		\choice
+		{nhiệt nóng chảy riêng}
+		{nhiệt hóa hơi riêng}
+		{\True nhiệt dung riêng}
+		{nhiệt lượng tỏa ra}
+		\loigiai{
+			$Q=mc\Delta T$; với $m=1$~kg, $\Delta T=1$~K thì $Q=c$: nhiệt dung riêng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Với $k$ là hằng số Boltzmann, công thức nào thể hiện đúng mối liên hệ giữa động năng tịnh tiến trung bình ($W_{\text{đ}}$) của phân tử khí lí tưởng và nhiệt độ tuyệt đối $T$?
+		\choice
+		{$W_{\text{đ}}=2{,}5kT$}
+		{$W_{\text{đ}}=kT$}
+		{$W_{\text{đ}}=0{,}5kT$}
+		{\True $W_{\text{đ}}=1{,}5kT$}
+		\loigiai{
+			$W_{\text{đ}}=\dfrac{3}{2}kT=1{,}5kT$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{4.9\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Phản ứng trong đó hai hạt nhân nhẹ kết hợp với nhau tạo thành một hạt nhân nặng hơn được gọi là
+		\choice
+		{\True phản ứng nhiệt hạch}
+		{hiện tượng phóng xạ}
+		{phản ứng phân hạch}
+		{hiện tượng cảm ứng điện từ}
+		\loigiai{
+			Hai hạt nhân nhẹ kết hợp thành hạt nhân nặng hơn là phản ứng nhiệt hạch.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C2-NB]
+		Theo mô hình động học phân tử, các phân tử chất khí luôn
+		\choice
+		{\True chuyển động nhiệt hỗn loạn}
+		{đứng yên ở vị trí cân bằng}
+		{hút và đẩy lẫn nhau liên tục}
+		{dao động quanh một vị trí}
+		\loigiai{
+			Các phân tử chất khí luôn chuyển động nhiệt hỗn loạn không ngừng.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.9\baselineskip}
+	\begin{ex}%[VL12-C1-TH]
+		Một lượng khí lí tưởng xác định bị nén đẳng nhiệt thì khối khí sẽ
+		\choice
+		{sinh công và giảm nội năng}
+		{sinh công và thu nhiệt}
+		{\True nhận công và tỏa nhiệt}
+		{nhận công và tăng nội năng}
+		\loigiai{
+			Đẳng nhiệt: $\Delta U=0$. Bị nén nên $A>0$, do đó $Q=-A<0$: khí nhận công và tỏa nhiệt.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C1-NB]
+		Trong sự chuyển thể, quá trình chuyển từ thể rắn sang thể lỏng được gọi là
+		\choice
+		{\True sự nóng chảy}
+		{sự hóa hơi}
+		{sự đông đặc}
+		{sự ngưng tụ}
+		\loigiai{
+			Quá trình chuyển từ thể rắn sang thể lỏng là sự nóng chảy.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.1\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		Hai hạt nhân được gọi là đồng vị của cùng một nguyên tố hóa học khi chúng có số khối khác nhau nhưng phải có cùng
+		\choice
+		{bán kính hạt nhân}
+		{khối lượng hạt nhân}
+		{số neutron}
+		{\True số proton}
+		\loigiai{
+			Các đồng vị có cùng số proton, khác số neutron nên khác số khối.
+		}
+	\end{ex}
+
+	\NeedspaceCau{5.9\baselineskip}
+	\begin{ex}%[VL12-C3-NB]
+		Cường độ hiệu dụng của dòng điện xoay chiều được định nghĩa là đại lượng có giá trị bằng cường độ của một dòng điện không đổi, sao cho khi đi qua cùng một điện trở trong cùng một khoảng thời gian thì
+		\choice
+		{chúng tải đi cùng một điện lượng}
+		{\True chúng tỏa ra cùng một nhiệt lượng}
+		{chúng sinh ra cùng một từ trường}
+		{chúng sinh ra cùng một công cơ học}
+		\loigiai{
+			Cường độ hiệu dụng được định nghĩa dựa trên tác dụng nhiệt: tỏa ra cùng một nhiệt lượng trên cùng điện trở trong cùng thời gian.
+		}
+	\end{ex}
+
+	\NeedspaceCau{6.2\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Phát biểu nào sau đây là đúng khi nói về khí lí tưởng?
+		\choice
+		{Tốc độ trung bình của các phân tử khí bằng không do các phân tử chuyển động hỗn loạn}
+		{Khi nhiệt độ tăng, tốc độ của mọi phân tử khí đều tăng thêm một lượng như nhau}
+		{\True Động năng tịnh tiến trung bình của các phân tử khí tỉ lệ thuận với nhiệt độ tuyệt đối}
+		{Vận tốc trung bình của các phân tử khí tăng khi nhiệt độ tăng}
+		\loigiai{
+			$W_{\text{đ}}=\dfrac{3}{2}kT$: động năng tịnh tiến trung bình của phân tử khí tỉ lệ thuận với nhiệt độ tuyệt đối.
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{26.2\baselineskip}
+	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-VinhLong-SoGD-Lan1-2]
+
+	\begin{ex}%[VL12-C3-VD]
+		Một hạt A mang điện tích $q$ và có khối lượng $m$ bay theo phương ngang với vận tốc $\vv{v}$ vào một vùng không gian có từ trường đều cảm ứng từ $\vv{B}$, bề rộng vùng từ trường là $L$. Hướng của vận tốc $\vv{v}$ vuông góc với các đường sức từ. Trong vùng từ trường này, hạt chịu tác dụng của lực từ có độ lớn $f=|q|vB$. Sau khi bay xuyên qua và ra khỏi vùng từ trường, quỹ đạo chuyển động của hạt bị lệch đi một góc $\theta$ so với phương ngang ban đầu như hình vẽ.
+		\begin{center}
+			\begin{tikzpicture}[x=1cm,y=1cm,line join=round,line cap=round,font=\footnotesize]
+				\fill[VLxanh!8,rounded corners=2pt] (0.5,0.3) rectangle (3.4,2.1);
+				\foreach \x in {1.0,1.95,2.9}{\foreach \y in {0.7,1.7}{\draw[semithick,VLxanh!85!black] (\x,\y)++(-0.08,-0.08)--++(0.16,0.16) (\x,\y)++(-0.08,0.08)--++(0.16,-0.16);}}
+				\draw[dashed,thin] (0,1.2)--(5.4,1.2);
+				\draw[VLmui,thick] (3.4,1.2)--(5.3,2.15);
+				\draw[thin] (4.4,1.2) arc[start angle=0,end angle=26.57,radius=1.0];
+				\node at (4.15,1.42) {$\theta$};
+				\draw[VLmui,thick,VLluc] (0,0.05)--(1.15,0.05) node[right,inner sep=2pt] {$v$};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{11.6\baselineskip}%
+		\choiceTFt
+		{\True Lực từ tác dụng lên hạt A có phương vuông góc với cả vận tốc $\vv{v}$ và cảm ứng từ $\vv{B}$}
+		{Hạt A mang điện tích âm}
+		{\True Khi chuyển động trong vùng từ trường, quỹ đạo của hạt A là một phần của đường tròn}
+		{Độ lớn góc lệch $\theta$ của hạt A khi ra khỏi từ trường được tính bằng công thức $\sin\theta=\dfrac{|q|B}{Lmv}$}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Lực từ (lực Lorentz) tác dụng lên hạt có phương vuông góc với cả $\vv{v}$ và $\vv{B}$.
+				\itemch \textbf{Sai.} $\vv{B}$ hướng vào trong mặt phẳng hình vẽ, hạt bay sang phải và lệch lên trên; theo quy tắc bàn tay trái, hạt mang điện tích dương.
+				\itemch \textbf{Đúng.} Lực từ luôn vuông góc với $\vv{v}$, có độ lớn không đổi, đóng vai trò lực hướng tâm nên quỹ đạo là cung tròn.
+				\itemch \textbf{Sai.} $|q|vB=\dfrac{mv^2}{r}\Rightarrow r=\dfrac{mv}{|q|B}$; $\sin\theta=\dfrac{L}{r}=\dfrac{|q|BL}{mv}$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{28.7\baselineskip}
+	\begin{ex}%[VL12-C4-TH]
+		Một nhóm học sinh dự đoán: ``Hạt $\alpha$ có động năng rất lớn nên khi bắn qua lá vàng, sẽ không có bất kì phần tử nào bên trong nguyên tử đủ lực đẩy nó bật ngược lại.''\\
+		Để kiểm chứng dự đoán này, nhóm học sinh tiến hành phân tích dữ liệu từ thí nghiệm tán xạ hạt $\alpha$ do Rutherford thực hiện. Dữ liệu ghi nhận từ kết quả thí nghiệm thực tế cho thấy: ``Hầu hết các hạt $\alpha$ đi thẳng nhưng có một số hạt bị lệch so với hướng truyền ban đầu với các góc lệch khác nhau. Trong đó, có những hạt $\alpha$ bị lệch ở góc lớn hơn $90^\circ$.''
+		% giuhinh
+		\begin{center}
+			\begin{tikzpicture}[x=1cm,y=1cm,line join=round,line cap=round,font=\footnotesize]
+				\def\cx{5.4}\def\cy{2.6}\def\ra{2.4}\def\rb{1.15}\def\hh{0.35}
+				% màn huỳnh quang: nửa sau (mặt trong)
+				\fill[gray!12] plot[domain=0:180,samples=40] ({\cx+\ra*cos(\x)},{\cy+\hh+\rb*sin(\x)}) -- plot[domain=180:0,samples=40] ({\cx+\ra*cos(\x)},{\cy-\hh+\rb*sin(\x)}) -- cycle;
+				\draw[thin] plot[domain=0:180,samples=40] ({\cx+\ra*cos(\x)},{\cy-\hh+\rb*sin(\x)});
+				% đường đi của hạt alpha
+				\foreach \a in {38,54,68,100,128,150,186,12}{\draw[VLmui,semithick,VLdo!85!black] (\cx,\cy)--({\cx+0.97*\ra*cos(\a)},{\cy+0.97*\rb*sin(\a)});}
+				% chớp sáng trên màn
+				\foreach \a in {40,56,70,102,130}{\filldraw[fill=yellow!55,draw=black,thin] ({\cx+\ra*cos(\a)},{\cy+0.2+\rb*sin(\a)}) circle (0.08);}
+				\draw[thick] plot[domain=0:180,samples=40] ({\cx+\ra*cos(\x)},{\cy+\hh+\rb*sin(\x)});
+				% lá vàng
+				\filldraw[fill=yellow!45!orange!45,draw=black,thin] (\cx-0.16,\cy-0.3)--(\cx+0.16,\cy-0.14)--(\cx+0.16,\cy+0.34)--(\cx-0.16,\cy+0.18)--cycle;
+				% chùm hạt alpha tới
+				\draw[thick,VLdo!85!black] (0.85,0.55)--(\cx-0.16,\cy-0.02);
+				% màn huỳnh quang: nửa trước (mặt ngoài), chừa khe cho chùm tia
+				\shade[top color=gray!8,bottom color=gray!28] plot[domain=180:201,samples=12] ({\cx+\ra*cos(\x)},{\cy+\hh+\rb*sin(\x)}) -- plot[domain=201:180,samples=12] ({\cx+\ra*cos(\x)},{\cy-\hh+\rb*sin(\x)}) -- cycle;
+				\draw[thick] plot[domain=180:201,samples=12] ({\cx+\ra*cos(\x)},{\cy+\hh+\rb*sin(\x)}) -- plot[domain=201:180,samples=12] ({\cx+\ra*cos(\x)},{\cy-\hh+\rb*sin(\x)}) -- cycle;
+				\shade[top color=gray!8,bottom color=gray!28] plot[domain=248:360,samples=30] ({\cx+\ra*cos(\x)},{\cy+\hh+\rb*sin(\x)}) -- plot[domain=360:248,samples=30] ({\cx+\ra*cos(\x)},{\cy-\hh+\rb*sin(\x)}) -- cycle;
+				\draw[thick] plot[domain=248:360,samples=30] ({\cx+\ra*cos(\x)},{\cy+\hh+\rb*sin(\x)}) -- plot[domain=360:248,samples=30] ({\cx+\ra*cos(\x)},{\cy-\hh+\rb*sin(\x)}) -- cycle;
+				% khe hẹp
+				\filldraw[fill=gray!20,draw=black,thin] (2.82,1.0)--(3.12,1.16)--(3.12,1.78)--(2.82,1.62)--cycle;
+				\fill[white,draw=black,very thin,rounded corners=0.6pt] (2.95,1.17)--(2.99,1.19)--(2.99,1.6)--(2.95,1.58)--cycle;
+				% nguồn phát hạt alpha
+				\shade[top color=gray!15,bottom color=gray!40,draw=black,thin] (0,0)--(0.75,0)--(0.75,0.75)--(0,0.75)--cycle;
+				\fill[gray!10,draw=black,thin] (0,0.75)--(0.75,0.75)--(1.0,0.95)--(0.25,0.95)--cycle;
+				\fill[gray!45,draw=black,thin] (0.75,0)--(1.0,0.2)--(1.0,0.95)--(0.75,0.75)--cycle;
+				% nhãn
+				\draw[thin] (1.0,0.25)--(1.25,0.25) node[right,inner sep=1pt,align=left] {Nguồn phát\\hạt $\alpha$};
+				\draw[thin] (1.7,1.03)--(1.25,1.25) node[left,inner sep=1pt] {Chùm hạt $\alpha$};
+				\draw[thin] (2.9,1.72)--(2.6,2.05) node[above left,inner sep=1pt] {Khe hẹp};
+				\draw[thin] (\cx+0.05,\cy-0.2)--(\cx+0.35,\cy-0.42) node[right,inner sep=1pt] {Lá vàng};
+				\draw[thin] ({\cx+0.2*\ra},{\cy-\hh-\rb+0.04})--({\cx+0.2*\ra},1.05) node[below,inner sep=1pt] {Màn huỳnh quang};
+				\draw[thin] ({\cx+\ra*cos(102)},{\cy+0.28+\rb*sin(102)})--({\cx+\ra*cos(102)-0.05},{\cy+1.45}) node[above,inner sep=1pt,align=center] {Hạt\\lệch hướng};
+				\draw[thin] ({\cx+\ra*cos(56)},{\cy+0.28+\rb*sin(56)})--({\cx+\ra*cos(56)+0.25},{\cy+1.45}) node[above,inner sep=1pt,align=center] {Hạt không\\lệch hướng};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{11.9\baselineskip}%
+		\choiceTFt
+		{\True Hạt $\alpha$ là hạt nhân của nguyên tử ${}^4_2\text{He}$}
+		{Lực làm hạt $\alpha$ bị lệch đi có bản chất là lực hút tĩnh điện giữa hạt $\alpha$ và các electron}
+		{\True Hiện tượng hạt $\alpha$ bị lệch ở góc lớn hơn $90^\circ$ đã bác bỏ dự đoán ban đầu của nhóm học sinh}
+		{\True Kết quả thí nghiệm chứng tỏ toàn bộ điện tích dương của nguyên tử tập trung trong một thể tích nhỏ gọi là hạt nhân và khối lượng nguyên tử tập trung chủ yếu ở hạt nhân}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Hạt $\alpha$ là hạt nhân helium ${}^4_2\text{He}$, gồm $2$ proton và $2$ neutron.
+				\itemch \textbf{Sai.} Hạt $\alpha$ bị lệch do lực đẩy tĩnh điện giữa hạt $\alpha$ và hạt nhân mang điện dương của nguyên tử vàng.
+				\itemch \textbf{Đúng.} Có hạt $\alpha$ bị lệch góc lớn hơn $90^\circ$ (bật ngược lại) nên dự đoán ban đầu bị bác bỏ.
+				\itemch \textbf{Đúng.} Chỉ rất ít hạt bị lệch mạnh: điện tích dương và gần như toàn bộ khối lượng nguyên tử tập trung ở hạt nhân rất nhỏ.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{18.3\baselineskip}
+	\begin{ex}%[VL12-C2-TH]
+		Một khối khí lí tưởng xác định thực hiện quá trình biến đổi trạng thái theo chu trình khép kín $P\to Q\to R\to S\to P$ có đồ thị như hình vẽ.
+		\begin{center}
+			\begin{tikzpicture}[x=1cm,y=1cm,line join=round,line cap=round,font=\footnotesize]
+				\fill[VLla!35] (1.15,1.1) rectangle (3.45,2.2);
+				\draw[dashed,thin,gray] (0,1.1)--(1.15,1.1) (0,2.2)--(1.15,2.2) (1.15,0)--(1.15,1.1) (3.45,0)--(3.45,1.1);
+				\draw[VLmui,thick] (0,0)--(6.0,0);
+				\node[below left,inner sep=3pt] at (6.1,0) {$V$ (Thể tích)};
+				\draw[VLmui,thick] (0,0)--(0,3.0) node[right,inner sep=2pt] {$p$ (Áp suất)};
+				\draw[very thick,VLdo,VLgiua=0.55] (1.15,1.1)--(3.45,1.1);
+				\draw[very thick,VLluc,VLgiua=0.6] (3.45,1.1)--(3.45,2.2);
+				\draw[very thick,VLxanh,VLgiua=0.55] (3.45,2.2)--(1.15,2.2);
+				\draw[very thick,VLtim,VLgiua=0.6] (1.15,2.2)--(1.15,1.1);
+				\foreach \p in {(1.15,1.1),(3.45,1.1),(3.45,2.2),(1.15,2.2)}{\filldraw[fill=white,draw=black,thick] \p circle (2pt);}
+				\node[below right,inner sep=2pt] at (1.15,1.1) {$P$};
+				\node[below right,inner sep=2pt] at (3.45,1.1) {$Q$};
+				\node[above,inner sep=3pt] at (3.45,2.2) {$R$};
+				\node[above,inner sep=3pt] at (1.15,2.2) {$S$};
+				\node[left,inner sep=2pt] at (0,1.1) {$p_0$};
+				\node[left,inner sep=2pt] at (0,2.2) {$2p_0$};
+				\node[below,inner sep=2pt] at (1.15,0) {$V_0$};
+				\node[below,inner sep=2pt] at (3.45,0) {$3V_0$};
+				\node[below left,inner sep=2pt] at (0,0) {$O$};
+			\end{tikzpicture}
+		\end{center}
+		\NeedspaceBang{8.1\baselineskip}%
+		\choiceTFt
+		{\True Quá trình $P\to Q$ là quá trình đẳng áp}
+		{\True Động năng tịnh tiến trung bình của các phân tử khí lớn nhất tại trạng thái $R$}
+		{Trong quá trình $S\to P$, khối khí nhận nhiệt từ môi trường làm tăng nội năng}
+		{Sau một chu trình, khối khí đã sinh công cơ học có độ lớn bằng $2p_0V_0$}
+		\loigiai{
+			Đọc đồ thị: $P(V_0;p_0)$, $Q(3V_0;p_0)$, $R(3V_0;2p_0)$, $S(V_0;2p_0)$; $T$ tỉ lệ với $pV$.
+			\begin{itemchoice}
+				\itemch \textbf{Đúng.} Từ $P$ đến $Q$ áp suất không đổi.
+				\itemch \textbf{Đúng.} $pV$ lần lượt bằng $p_0V_0$, $3p_0V_0$, $6p_0V_0$, $2p_0V_0$ nên $T_R$ lớn nhất, mà $W_{\text{đ}}=\dfrac{3}{2}kT$.
+				\itemch \textbf{Sai.} $S\to P$ đẳng tích ($A=0$), $p$ giảm nên $T$ giảm, $\Delta U<0$: $Q=\Delta U<0$, khí tỏa nhiệt, nội năng giảm.
+				\itemch \textbf{Sai.} Chu trình đi ngược chiều kim đồng hồ trên đồ thị $p$--$V$ nên khí nhận công có độ lớn $(2p_0-p_0)(3V_0-V_0)=2p_0V_0$.
+			\end{itemchoice}
+		}
+	\end{ex}
+
+	\NeedspaceCau{18.9\baselineskip}
+	\begin{ex}%[VL12-C1-VD]
+		Để loại bỏ ảnh hưởng sự hao phí do tỏa nhiệt ra môi trường khi đo nhiệt hóa hơi riêng $L$ của nước, một nhóm học sinh tiến hành thí nghiệm như sau:\\
+		$\bullet$ Đặt một bình đun hở nắp chứa nước lên một cân điện tử;\\
+		$\bullet$ Tiến hành đun nước trong bình ở hai mức công suất điện khác nhau $P_1$ và $P_2$ ($P_1<P_2$);\\
+		$\bullet$ Khi nước đã sôi ổn định, dựa vào sự sụt giảm số chỉ trên cân điện tử, nhóm học sinh đo được khối lượng nước đã bay hơi trong cùng một khoảng thời gian $t$ lần lượt là $\Delta m_1$ và $\Delta m_2$.
+		\NeedspaceBang{12.6\baselineskip}%
+		\choiceTFt
+		{Nhiệt hóa hơi riêng của nước là nhiệt lượng cần cung cấp để làm hóa hơi hoàn toàn nước trong bình ở nhiệt độ sôi}
+		{Đun với công suất điện $P_2$ sẽ làm nước sôi ở nhiệt độ cao hơn so với khi đun ở công suất điện $P_1$}
+		{\True Khi nước sôi ổn định, công suất hao phí do tỏa nhiệt ra môi trường trong hai lần đun là như nhau}
+		{\True Nhiệt hóa hơi riêng của nước trong thí nghiệm này được xác định theo công thức $L=\dfrac{(P_2-P_1)t}{\Delta m_2-\Delta m_1}$}
+		\loigiai{
+			\begin{itemchoice}
+				\itemch \textbf{Sai.} Nhiệt hóa hơi riêng là nhiệt lượng cần cung cấp để làm $1$~kg chất lỏng hóa hơi hoàn toàn ở nhiệt độ sôi.
+				\itemch \textbf{Sai.} Nhiệt độ sôi chỉ phụ thuộc áp suất bên ngoài; công suất lớn hơn chỉ làm nước hóa hơi nhanh hơn.
+				\itemch \textbf{Đúng.} Khi sôi ổn định, nhiệt độ nước và điều kiện tỏa nhiệt trong hai lần đun như nhau nên công suất hao phí $P_{\text{hp}}$ như nhau.
+				\itemch \textbf{Đúng.} $P_1t=L\Delta m_1+P_{\text{hp}}t$; $P_2t=L\Delta m_2+P_{\text{hp}}t\Rightarrow L=\dfrac{(P_2-P_1)t}{\Delta m_2-\Delta m_1}$.
+			\end{itemchoice}
+		}
+	\end{ex}
+	\Closesolutionfile{ans}
+
+	\NeedspaceCau{8.4\baselineskip}
+	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
+	\setcounter{ex}{0}
+	\Opensolutionfile{ans}[ans/VatLi2026-VinhLong-SoGD-Lan1-3]
+
+	\begin{ex}%[VL12-C2-TH]
+		\label{VinhLong-SoGD-Lan1-III1}\textit{Dùng thông tin sau cho câu~\ref{VinhLong-SoGD-Lan1-III1} và câu~\ref{VinhLong-SoGD-Lan1-III2}:} Xét một buồng nghỉ nhỏ trên đỉnh Fansipan. Ở đây, một nhà leo núi đo được nhiệt độ không khí là $17\,^\circ\text{C}$ và áp suất khí quyển là $66{,}48$~kPa. Coi không khí là khí lí tưởng với khối lượng mol $M=29$~g/mol.\\
+		Buồng nghỉ có thể tích $29~\text{m}^3$, số mol không khí trong buồng là bao nhiêu?
+		\par
+		\shortans[oly]{800}
+		\loigiai{
+			$n=\dfrac{pV}{RT}=\dfrac{66\,480\cdot 29}{8{,}31\cdot(17+273)}=800$~mol.
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.7\baselineskip}
+	\begin{ex}%[VL12-C2-VD]
+		\label{VinhLong-SoGD-Lan1-III2}Khối lượng riêng của không khí trong buồng là bao nhiêu $\text{kg/m}^3$?
+		\par
+		\shortans[oly]{0{,}8}
+		\loigiai{
+			$\rho=\dfrac{m}{V}=\dfrac{nM}{V}=\dfrac{800\cdot 0{,}029}{29}=0{,}8~\text{kg/m}^3$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{8.6\baselineskip}
+	\begin{ex}%[VL12-C3-VD]
+		\label{VinhLong-SoGD-Lan1-III3}\textit{Dùng thông tin sau cho câu~\ref{VinhLong-SoGD-Lan1-III3} và câu~\ref{VinhLong-SoGD-Lan1-III4}:} Để đo thành phần nằm ngang của từ trường Trái Đất, học sinh sử dụng một cuộn dây dẹt gồm $1000$ vòng, diện tích mỗi vòng dây là $0{,}1~\text{m}^2$. Cuộn dây có tổng điện trở là $6{,}0~\Omega$. Ban đầu, mặt phẳng cuộn dây vuông góc với thành phần nằm ngang của từ trường Trái Đất. Sau đó, học sinh thực hiện thao tác lật nhanh cuộn dây một góc $180^\circ$. Một thiết bị đo điện lượng nối với cuộn dây ghi nhận được điện lượng di chuyển qua mạch trong quá trình lật là $1{,}0$~mC.\\
+		Thành phần nằm ngang của từ trường Trái Đất tại nơi này là bao nhiêu $\mu$T?
+		\par
+		\shortans[oly]{30}
+		\loigiai{
+			$q=\dfrac{|\Delta\Phi|}{R}$ với $|\Delta\Phi|=2NBS$:
+			\[B=\dfrac{qR}{2NS}=\dfrac{1{,}0\cdot 10^{-3}\cdot 6{,}0}{2\cdot 1000\cdot 0{,}1}=3\cdot 10^{-5}~\text{T}=30~\mu\text{T}.\]
+		}
+	\end{ex}
+
+	\NeedspaceCau{2.6\baselineskip}
+	\begin{ex}%[VL12-C3-TH]
+		\label{VinhLong-SoGD-Lan1-III4}Độ biến thiên từ thông qua cuộn dây trong quá trình lật có độ lớn là bao nhiêu mWb?
+		\par
+		\shortans[oly]{6}
+		\loigiai{
+			$|\Delta\Phi|=qR=1{,}0\cdot 10^{-3}\cdot 6{,}0=6\cdot 10^{-3}~\text{Wb}=6$~mWb.
+		}
+	\end{ex}
+
+	\NeedspaceCau{9.6\baselineskip}
+	\begin{ex}%[VL12-C4-NB]
+		\label{VinhLong-SoGD-Lan1-III5}\textit{Dùng thông tin sau cho câu~\ref{VinhLong-SoGD-Lan1-III5} và câu~\ref{VinhLong-SoGD-Lan1-III6}:} Phương pháp xác định tuổi tritium/helium-3 được sử dụng để xác định thời gian một khối nước biển bị cô lập dưới tầng sâu đại dương. Các hạt nhân tritium (${}^3_1\text{H}$) phóng xạ biến đổi thành hạt nhân helium-3 (${}^3_2\text{He}$). Khi khối nước ở trên bề mặt, lượng ${}^3_2\text{He}$ sinh ra sẽ thoát ngay vào bầu khí quyển. Khi khối nước chìm xuống sâu và bị cô lập, lượng ${}^3_2\text{He}$ sinh ra bị giữ lại hoàn toàn trong nước. Phân tích một mẫu nước lấy từ một dòng hải lưu ngầm, người ta đo được tỉ lệ số nguyên tử ${}^3_2\text{He}$ bị giữ lại và số nguyên tử ${}^3_1\text{H}$ hiện còn trong mẫu nước là $1{,}5$. Biết chu kì bán rã của ${}^3_1\text{H}$ là $12{,}3$ năm.\\
+		Số hạt neutron trong một hạt nhân ${}^3_1\text{H}$ là bao nhiêu?
+		\par
+		\shortans[oly]{2}
+		\loigiai{
+			$N=A-Z=3-1=2$.
+		}
+	\end{ex}
+
+	\NeedspaceCau{3.6\baselineskip}
+	\begin{ex}%[VL12-C4-VD]
+		\label{VinhLong-SoGD-Lan1-III6}Khối nước này đã bị cô lập (\textbf{không} tiếp xúc với khí quyển) trong thời gian là bao nhiêu năm (làm tròn kết quả đến chữ số hàng phần mười)?
+		\par
+		\shortans[oly]{16{,}3}
+		\loigiai{
+			Số hạt nhân ${}^3_2\text{He}$ bị giữ lại bằng số hạt nhân ${}^3_1\text{H}$ đã phân rã:
+			\[\dfrac{N_{\text{He}}}{N_{\text{H}}}=\dfrac{N_0-N}{N}=2^{\frac{t}{T}}-1=1{,}5\Rightarrow t=T\log_2 2{,}5=12{,}3\log_2 2{,}5\approx 16{,}3~\text{năm}.\]
+		}
+	\end{ex}
+
+	\centerline{--- HẾT ---}
+	\Closesolutionfile{ans}
+
+	%===================== BẢNG ĐÁP ÁN =====================
+	%\newpage
+	%\begin{center}\indam{BẢNG ĐÁP ÁN}\end{center}
+	%\noindent\indam{PHẦN I.}\\
+	%\inputansbox{6}{ans/VatLi2026-VinhLong-SoGD-Lan1-1}
+	%\noindent\indam{PHẦN II.}\\
+	%\inputansbox{2}{ans/VatLi2026-VinhLong-SoGD-Lan1-2}
+	%\noindent\indam{PHẦN III.}\\
+	%\inputansbox{6}{ans/VatLi2026-VinhLong-SoGD-Lan1-3}
+\end{document}
