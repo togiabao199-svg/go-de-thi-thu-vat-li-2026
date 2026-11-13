@@ -413,11 +413,11 @@
 				\filldraw[fill=white,draw=black] (3.77,0.9) rectangle (3.93,1.5);
 				\node[right,inner sep=1.5pt] at (3.93,1.2) {$R$};
 				% nhãn
-				\node[draw,fill=white,inner sep=2.5pt] (kd) at (1.35,3.0) {Khung dây};
-				\draw[VLmui,thin] (kd.south)--(1.35,2.08);
+				\node[draw,fill=white,inner sep=2.5pt] (kd) at (1.05,3.0) {Khung dây};
+				\draw[VLmui,thin] (kd.south)--(1.3,2.08);
 				\node[draw,fill=white,inner sep=2.5pt] (kh) at (4.0,3.0) {Khí lí tưởng};
 				\draw[VLmui,thin] (kh.south)--(4.15,1.85);
-				\node[draw,fill=white,inner sep=2.5pt] (vc) at (6.45,3.0) {Vòng chặn};
+				\node[draw,fill=white,inner sep=2.5pt] (vc) at (6.75,3.0) {Vòng chặn};
 				\draw[VLmui,thin] (vc.south)--(6.12,1.95);
 				\node[draw,fill=white,inner sep=2.5pt] (pt) at (6.95,1.2) {Pit-tông};
 				\draw[VLmui,thin] (pt.west)--(4.88,1.2);
@@ -579,21 +579,22 @@
 		Một nhóm học sinh thực hiện thí nghiệm xác định nhiệt nóng chảy riêng của nước đá. Các bạn bố trí thí nghiệm như hình bên và tiến hành thí nghiệm qua các bước sau:
 		% giuhinh
 		\par\noindent
-		\begin{minipage}[c]{0.53\linewidth}
+		\begin{minipage}[c]{0.52\linewidth}
 			\textbf{Bước 1.} -- Cho nước đá vào nhiệt lượng kế và hứng nước chảy ra bằng một chiếc cốc đặt trên cân, cho đến khi nước chảy ổn định đọc số chỉ của cân được giá trị $m_0$.\\
 			-- Bật đồng hồ đo thời gian, sau thời gian $t$ (giây), đọc số chỉ của cân được giá trị $m_1$.\\
 			\textbf{Bước 2.} -- Bật biến áp nguồn.\\
 			-- Đọc số chỉ $P$ của oát kế.\\
 			-- Cho nước chảy thêm vào cốc khi đồng hồ chỉ $2t$ (giây), đọc số chỉ của cân được giá trị $m_2$.
 		\end{minipage}\hfill
-		\begin{minipage}[c]{0.45\linewidth}
+		\begin{minipage}[c]{0.46\linewidth}
 			\centering
-				\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
+				\begin{tikzpicture}[scale=0.82,line join=round,line cap=round,font=\footnotesize]
 					% dây nối
-					\draw[black!85,semithick] (1.1,0.52)--(1.35,0.52) (1.1,0.26)--(1.35,0.26);
-					\draw[black!85,semithick] (1.85,0.52)--(2.2,0.52)--(2.2,3.0)--(3.75,3.0)--(3.75,2.72);
-					\draw[black!85,semithick] (1.85,0.26)--(2.4,0.26)--(2.4,3.18)--(4.15,3.18)--(4.15,2.72);
+					\draw[black!85,semithick] (0.1,0.52)--(1.05,0.52) (0.1,0.26)--(1.05,0.26);
+					\draw[black!85,semithick] (1.55,0.52)--(2.2,0.52)--(2.2,3.0)--(3.75,3.0)--(3.75,2.72);
+					\draw[black!85,semithick] (1.55,0.26)--(2.4,0.26)--(2.4,3.18)--(4.15,3.18)--(4.15,2.72);
 					% biến áp nguồn
+					\begin{scope}[xshift=-1.0cm]
 					\shade[top color=gray!8,bottom color=gray!35,rounded corners=2pt] (0,0.05) rectangle (1.1,0.75);
 					\draw[gray!50!black,rounded corners=2pt] (0,0.05) rectangle (1.1,0.75);
 					\filldraw[fill=VLla!35,draw=black!60,rounded corners=1pt] (0.35,0.5) rectangle (0.75,0.66);
@@ -602,15 +603,16 @@
 					\node[font=\scriptsize,inner sep=0] at (0.22,0.15) {$+$};
 					\node[font=\scriptsize,inner sep=0] at (0.88,0.15) {$-$};
 					\node[align=center,above,inner sep=2pt] at (0.55,0.75) {Biến áp\\nguồn};
+					\end{scope}
 					% oát kế
-					\filldraw[fill=gray!12,draw=gray!50!black,rounded corners=1.5pt] (1.35,0.14) rectangle (1.85,0.64);
-					\foreach \p in {(1.45,0.26),(1.45,0.52),(1.75,0.26),(1.75,0.52)}{\fill[black!85] \p circle (0.045);}
-					\node[above,inner sep=2pt] at (1.6,0.64) {Oát kế};
+					\filldraw[fill=gray!12,draw=gray!50!black,rounded corners=1.5pt] (1.05,0.14) rectangle (1.55,0.64);
+					\foreach \p in {(1.15,0.26),(1.15,0.52),(1.45,0.26),(1.45,0.52)}{\fill[black!85] \p circle (0.045);}
+					\node[above,inner sep=2pt] at (1.3,0.64) {Oát kế};
 					% giá thí nghiệm
-					\fill[black!80] (5.65,0) rectangle (6.15,0.12);
-					\shade[left color=gray!75,right color=gray!55,middle color=gray!10] (5.86,0.12) rectangle (5.94,2.5);
-					\shade[top color=gray!50,bottom color=gray!75,middle color=gray!10] (3.3,2.17) rectangle (5.9,2.25);
-					\fill[black!70] (5.81,2.13) rectangle (5.99,2.29);
+					\fill[black!80] (6.65,0) rectangle (7.15,0.12);
+					\shade[left color=gray!75,right color=gray!55,middle color=gray!10] (6.86,0.12) rectangle (6.94,2.5);
+					\shade[top color=gray!50,bottom color=gray!75,middle color=gray!10] (3.3,2.17) rectangle (6.9,2.25);
+					\fill[black!70] (6.81,2.13) rectangle (6.99,2.29);
 					% nhiệt lượng kế
 					\shade[left color=VLxanh!25,right color=VLxanh!8] (3.4,2.55)--(3.4,1.85) .. controls (3.4,1.65) and (3.8,1.6) .. (3.9,1.55)--(4.0,1.55) .. controls (4.1,1.6) and (4.5,1.65) .. (4.5,1.85)--(4.5,2.55)--cycle;
 					\pgfmathsetseed{3}
@@ -632,9 +634,9 @@
 					\shade[top color=VLxanh!35!gray!60,bottom color=VLxanh!55!gray!90,rounded corners=1.5pt] (3.05,0) rectangle (4.9,0.45);
 					\fill[white,rounded corners=1pt] (3.2,0.1) rectangle (4.4,0.32);
 					\fill[gray!20] (4.57,0.3) circle (0.06) (4.57,0.14) circle (0.06);
-					\node[left,inner sep=2pt] at (3.1,0.55) {Cân};
+					\node[above left,inner sep=1pt] at (3.3,0.45) {Cân};
 					% đồng hồ bấm giây
-					\begin{scope}[shift={(6.85,0.68)}]
+					\begin{scope}[shift={(7.85,0.68)}]
 						\fill[gray!55] (-0.06,0.6) rectangle (0.06,0.72);
 						\filldraw[fill=gray!15,draw=gray!55!black] (0,0.8) circle (0.1);
 						\draw[gray!60!black,semithick] (-0.38,0.45)--(-0.48,0.58) (0.38,0.45)--(0.48,0.58);
@@ -646,9 +648,9 @@
 						\fill[black!80] (0,0) circle (0.035);
 					\end{scope}
 					% nhãn
-					\draw[thin] (4.53,2.62)--(4.85,2.95) node[right,inner sep=1.5pt,align=left] {Nhiệt\\lượng kế};
-					\draw[thin] (4.07,1.92)--(4.75,1.72) node[right,inner sep=1.5pt] {Dây nung};
-					\node[right,inner sep=2pt,align=left] at (4.5,0.98) {Cốc\\hứng\\nước};
+					\draw[thin] (4.53,2.62)--(4.85,2.95) node[right,inner sep=1.5pt,align=left,yshift=4pt] {Nhiệt\\lượng kế};
+					\draw[thin] (4.07,1.92)--(4.62,2.02) node[right,inner sep=1pt] {Dây nung};
+					\node[right,inner sep=1pt,align=left] at (4.92,0.95) {Cốc\\hứng\\nước};
 				\end{tikzpicture}
 		\end{minipage}
 		\par
@@ -672,7 +674,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{17.3\baselineskip}
+	\NeedspaceCau{17.6\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Một dây dẫn có tiết diện ngang $1{,}2~\text{mm}^2$, điện trở suất $1{,}7\cdot 10^{-8}~\Omega\cdot\text{m}$ được uốn thành nửa vòng tròn tâm O có bán kính $24$~cm như hình vẽ. Hai đoạn dây dẫn OM và OP cùng loại với dây trên. Dây OM cố định, dây OP quay quanh O sao cho P luôn tiếp xúc với cung tròn. Hệ thống đặt trong từ trường đều có độ lớn cảm ứng từ $0{,}15$~T có hướng vuông góc với mặt phẳng chứa nửa vòng tròn. Tại thời điểm ban đầu OP trùng với OM và tốc độ góc tăng đều theo thời gian. Góc $\alpha=\widehat{POM}$ mà bán kính OP quét được trong khoảng thời gian $t$ được tính theo biểu thức $\alpha=\sigma t^2$ với $\sigma$ là hằng số. Biết rằng sau $0{,}2$ giây thì dòng điện cảm ứng trong mạch có giá trị cực đại. Bỏ qua điện trở tiếp xúc giữa OP và vòng tròn. Giá trị cực đại của dòng điện là bao nhiêu ampe (kết quả làm tròn đến chữ số hàng phần mười)?
 		\begin{center}
@@ -720,7 +722,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{11.6\baselineskip}
+	\NeedspaceCau{11.9\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Ngày nay, trong ngành khí tượng, người ta dùng bóng thám không vô tuyến có mang các thiết bị cảm biến khí tượng, thiết bị vô tuyến điện và định vị toàn cầu để thu thập và gửi về các trung tâm khí tượng ở mặt đất số liệu về nhiệt độ, áp suất, độ ẩm của khí quyển, tốc độ gió; tốc độ di chuyển của các đám mây,... Vỏ bóng được làm bằng cao su tự nhiên hoặc cao su tổng hợp từ hợp chất polychloroprene. Bóng được bơm khí $\text{H}_2$ hoặc He. Tại một trạm khí tượng trên bề mặt Trái Đất, một bóng thám không được bơm đầy khí helium đến thể tích $30~\text{m}^3$. Tại đây điều kiện môi trường đo được là áp suất $76$~cmHg và nhiệt độ $27\,^\circ\text{C}$. Sau khi thả, bóng bay lên đến độ cao mà tại đó áp suất khí quyển giảm xuống còn $7{,}6$~cmHg và nhiệt độ là $-54\,^\circ\text{C}$. Coi khí helium trong bóng như một khí lí tưởng. Hỏi thể tích của khí trong bóng tăng thêm bao nhiêu mét khối khi bay đến độ cao trên (kết quả làm tròn đến chữ số hàng đơn vị)?
 		\par
