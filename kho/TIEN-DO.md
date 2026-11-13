@@ -10,7 +10,9 @@
 - **Tô màu lại 6 đề đã xong (13/11/2026) — xong (PR #5)**: Cao Bằng, Lào Cai, 4 đề lô W01 (Opus, 6 agent con song song). Số trang bản đề / lời giải không đổi, cả 6 đề `kiem` ĐẠT, thành phẩm xuất lại.
 - **Lô W02 + W03 (13/11/2026) — xong, thầy duyệt 13/11/2026 (PR #6, một nhánh, một PR)**: 8 đề Word, Opus, 8 agent con song song (W03 thầy yêu cầu làm luôn trong phiên W02). Phiên chính soát từng đề, thống nhất (nhãn `\label`, bỏ số ảnh chụp trên màn hình thiết bị), gom 5 macro vào `preamble-vatli-hinh.tex`. Chi tiết ở bảng dưới.
 - **Lô W04 + W05 (13/11/2026) — xong, thầy duyệt 13/11/2026 (PR #7, một nhánh, một PR)**: 8 đề Word, Opus, 8 agent con song song. Phiên chính soát từng đề (kiem-chung, ảnh so hình, bản đề, bản xám), sửa `tools/so_hinh.py` (chạy song song bắt nhầm `hinh.tex` của đề khác), chuyển `\VLchamtron` vào `preamble-vatli-hinh.tex`. Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
-- **Tiếp theo**: lô W06 + W07 (Opus, song song, 8 đề một PR): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W06 và W07 (8 đề) trong phiên này, chạy song song, chung một nhánh và một PR.`
+- **Lô W06 + W07 (13–14/11/2026) — xong, thầy duyệt 14/11/2026 (PR #8, một nhánh, một PR)**: 8 đề Word, Opus, 8 agent con song song; giữa phiên chạm hạn mức 5 giờ, chạy tiếp sau 17:00 UTC. Phiên chính soát từng đề (kiem-chung, ảnh so hình, bản đề, tự kiểm các câu lệch đáp án), gom 24 macro hình vào `preamble-vatli-hinh.tex` (dựng lại 8 đề, số trang không đổi, đều ĐẠT). Chi tiết ở bảng dưới và mục "Chờ thầy quyết".
+- **Hình thực tiễn các đề đã gõ: chờ phiên vẽ lại riêng** (thầy quyết 13/11/2026: rà và vẽ lại trong một phiên riêng sau khi gõ xong hết đề, theo mục HÌNH VẼ — "Vẽ chi tiết, trau chuốt" trong `CLAUDE.md`; các lô gõ đề ưu tiên đáp án, lời giải, sơ đồ, đồ thị, dàn trang). Lô W06 + W07 đã vẽ chi tiết một phần trước khi thầy quyết.
+- **Tiếp theo**: lô W08 + W09 (Opus, song song, 8 đề một PR): `Đọc CLAUDE.md và kho/TIEN-DO.md rồi làm lô W08 và W09 (8 đề) trong phiên này, chạy song song, chung một nhánh và một PR.`
 
 ## Quyết định của thầy
 
@@ -36,6 +38,8 @@
 
 - 13/11/2026 — duyệt lô W04 + W05 (PR #7): giữ toàn bộ như PR sau khi đối chiếu đề gốc, lời giải gốc, hình gốc — Huế I.10 (5,8 J → 5,7·10³ J), I.12 (1 g → 12 g) sửa dữ kiện cho khớp phương án; Huế III.1 = 4,36 (gốc 2,18), III.4 đọc đồ thị B = 0,2 T tại 0,2 s, 30° là góc giữa mặt phẳng vòng dây và B, hỏi theo cm² → 160 (gốc 3700 mm² đọc sai đồ thị), III.6 = 1571 (đề không cho π = 3,14); Lâm Đồng III.1 = 521 theo lưới đồ thị (gốc 1067), III.2 dùng k = 1,38·10⁻²³ (không thêm vào "Cho biết"); Hưng Yên II.4 a) Sai (92 → 100 proton); Lê Trọng Tấn I.17 sửa phương án C trùng B; Hà Tĩnh Lần 2 I.4 vẽ lại Hình 3 (I hướng xuống), I.5 cực N theo lời giải gốc, III.1 = 727 theo gốc; Hải Phòng SGD Lần 1 III.3 = 4,71, I.4 giữ lời đề; các ý Đúng/Sai còn lại theo gốc. Ngọn lửa dùng `\VLngonlua` (cam – đỏ), không sửa macro (đã ghi `CLAUDE.md`).
 
+- 14/11/2026 — duyệt lô W06 + W07 (PR #8): giữ các câu tính lại như PR sau khi đối chiếu hình gốc — máy phát điện Nghệ An SGD Lần 2 II.4c, Ninh Bình SGD Lần 4 II.3a,d (B tại (1) đi lên, B từ N sang S ⇒ dòng trong AB từ A ra sau đến B, trong BC từ B đến C; hai đề dùng chung một hình nên đáp án gốc không độc lập); Nghệ An Lần 3 I.11 = A; Ninh Bình Lần 3 II.3d Sai (đề cho p₂ = 2p₁, (1), (3) trên đường qua O ⇒ T₃ = 4T₂), III.2 = 5,6 (p₂ = p₀/4 theo ô lưới; chỉ cách đọc này giải được mà không cần giả thiết khí đơn nguyên tử); Ninh Bình Lần 4 I.13 (tự dựng hình), I.17 (sửa hình) giữ như PR; Cụm 9 và Liên trường Lần 5 II.3d giữ đáp án gốc; Cụm 9 I.17 sửa Ra → Rn, Pb → Po. Nghệ An SGD Lần 2 I.2: sửa hình (đổi chiều dòng cảm ứng ở Hình 1) cho chỉ còn đáp án B — làm trong phiên vẽ lại hình. Liên trường Lần 5 II.3 (nhãn đè hình ô tô): sửa trong phiên vẽ lại hình. Tên nguyên tố theo IUPAC như SGK mới (nitrogen, helium...) cho mọi đề (đã ghi `CLAUDE.md`).
+
 ## Chờ thầy quyết
 
 (không còn)
@@ -51,9 +55,11 @@
 - 13/11/2026, lô W04 + W05 (thầy duyệt 13/11, PR #7): 8 đề `VatLi2026-HaTinh-SoGD-Lan2`, `VatLi2026-HaiPhong-CumCM5`, `VatLi2026-HaiPhong-SoGD-Lan1`, `VatLi2026-HaiPhong-SoGD-Lan2` (W04), `VatLi2026-TPHCM-LeTrongTan`, `VatLi2026-Hue-SoGD-Lan1`, `VatLi2026-HungYen-SoGD-Lan2`, `VatLi2026-LamDong-SoGD` (W05); bản đề đều ĐẠT. `tools/so_hinh.py` tìm `hinh.tex` ở thư mục hiện hành trước (chạy song song không bắt nhầm hình đề khác). Thêm `\VLchamtron` (⊙ có vòng) vào `preamble-vatli-hinh.tex` (từ đề Hà Tĩnh Lần 2). Phiên chính: ngọn lửa Hải Phòng Cụm CM5 III.3 đổi sang `VLdo`; hình III.3 Hải Phòng SGD Lần 2 đặt bên câu dẫn.
 - 13/11/2026, tô màu (thầy duyệt PR #5): `preamble-vatli-hinh.tex` — `\VLcham`, `\VLnhan` màu `VLxanh!85!black`; `\VLthanhngang`, `\VLthanhdung`, `\VLvongsau`/`\VLvongtruoc` màu đồng. Tô lại toàn bộ hình 6 đề (mỗi đề một commit), dựng lại `so-hinh/`, soát bản xám, `kiem` ĐẠT, xuất lại thành phẩm; số trang không đổi (Cao Bằng 7/10, Lào Cai 8/12, Cụm HH–NSL–TD1 7/10, Cụm TT1–QV1–LVT 7/11, Bắc Ninh SGD 7/11, Cà Mau 6/10).
 
+- 13–14/11/2026, lô W06 + W07 (thầy duyệt 14/11, PR #8): 8 đề `VatLi2026-LangSon-SoGD-Lan1`, `VatLi2026-NgheAn-LienTruong-Lan5`, `VatLi2026-NgheAn-SoGD-Lan1`, `VatLi2026-NgheAn-SoGD-Lan2` (W06), `VatLi2026-NgheAn-SoGD-Lan3`, `VatLi2026-NinhBinh-Cum9-Lan1`, `VatLi2026-NinhBinh-SoGD-Lan3`, `VatLi2026-NinhBinh-SoGD-Lan4` (W07); bản đề đều ĐẠT. Gom 24 macro hình vào `preamble-vatli-hinh.tex` (danh sách ở `CLAUDE.md`, mục FILE TRONG REPO); `\VLcuonphang` thống nhất theo bản 6 tham số (đổi lời gọi ở Cụm 9), cốc có vành của Ninh Bình Lần 3 đổi tên `\VLbinhthuytinh` (khỏi trùng `\VLcocthuytinh`). `tools/so_hinh.py` nạp thêm `mathrsfs`. `CLAUDE.md` mục HÌNH VẼ thêm yêu cầu vẽ hình thực tiễn chi tiết (áp dụng ở phiên vẽ lại riêng).
+
 ## Số đề
 
-83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề xong, lô W04 + W05 8 đề xong → còn 56 đề chưa gõ: W06–W10 21 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
+83 file nguồn − 4 trùng − 1 gần trùng (Quế Võ 1) = 78 đề dùng được; Cao Bằng xong (đề mẫu), Lào Cai Cụm phía Bắc – Lần 2 xong (lô M), lô W01 4 đề xong, lô W02 + W03 8 đề xong, lô W04 + W05 8 đề xong, lô W06 + W07 8 đề xong → còn 48 đề chưa gõ: W08–W10 13 đề Word (W10 có 5 đề), P01–P09 35 đề (33 PDF có chữ + 2 PDF scan; P09 có 3 đề gồm 2 scan).
 
 ## Kế hoạch lô và trạng thái từng đề
 
@@ -83,14 +89,14 @@ Trạng thái: chưa gõ → đang gõ → chờ duyệt → xong. Cột "Đáp 
 | W05 | `VatLi2026-Hue-SoGD-Lan1` | Hue - So GDDT - Lan 1.docx | Word | ĐA + LG | mã 0201; sửa số liệu I.10 (5,7·10³ J), I.12 (12 g); KIỂM TRA III.1 (gốc 2,18, gõ 4,36), III.4 (gốc 3700 mm², gõ 160 cm²), III.6 (gốc 1570, gõ 1571), II.1b; 5 hình; đề 6 trang, lời giải 9 trang | xong |
 | W05 | `VatLi2026-HungYen-SoGD-Lan2` | Hung Yen - So GDDT - Lan 2.docx | Word | ĐA + LG | mã 0215; KIỂM TRA II.4a (gốc Đ, gõ S), I.2 (thêm nhãn t₁); 8 hình; đề 7 trang, lời giải 11 trang | xong |
 | W05 | `VatLi2026-LamDong-SoGD` | Lam Dong - So GDDT.docx | Word | ĐA + LG | KIỂM TRA III.1 (gốc 1067, gõ 521 theo đồ thị), III.2 (thiếu k); 10 hình; đề 7 trang, lời giải 11 trang | xong |
-| W06 | `VatLi2026-LangSon-SoGD-Lan1` | Lang Son - So GDDT - Lan 1.docx | Word | ĐA 6 mã + LG câu VD | — | chưa gõ |
-| W06 | `VatLi2026-NgheAn-LienTruong-Lan5` | Nghe An - Lien truong Nghe An - Lan 5.docx | Word | ĐA + LG | — | chưa gõ |
-| W06 | `VatLi2026-NgheAn-SoGD-Lan1` | Nghe An - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W06 | `VatLi2026-NgheAn-SoGD-Lan2` | Nghe An - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
-| W07 | `VatLi2026-NgheAn-SoGD-Lan3` | Nghe An - So GDDT - Lan 3.docx | Word | ĐA + LG | — | chưa gõ |
-| W07 | `VatLi2026-NinhBinh-Cum9-Lan1` | Ninh Binh - Cum truong THPT so 9 - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
-| W07 | `VatLi2026-NinhBinh-SoGD-Lan3` | Ninh Binh - So GDDT - Lan 3.docx | Word | ĐA + LG | — | chưa gõ |
-| W07 | `VatLi2026-NinhBinh-SoGD-Lan4` | Ninh Binh - So GDDT - Lan 4.docx | Word | ĐA + LG | — | chưa gõ |
+| W06 | `VatLi2026-LangSon-SoGD-Lan1` | Lang Son - So GDDT - Lan 1.docx | Word | ĐA 6 mã + LG câu VD | mã 201; khớp ĐA 28/28 (câu không có LG gốc tự giải); 4 hình (3 shape Word); đề 5 trang, lời giải 9 trang | xong |
+| W06 | `VatLi2026-NgheAn-LienTruong-Lan5` | Nghe An - Lien truong Nghe An - Lan 5.docx | Word | ĐA + LG | khớp ĐA 28/28; II.3d theo chiều quấn hình gốc (không rõ); 6 hình; đề 8 trang, lời giải 11 trang | xong |
+| W06 | `VatLi2026-NgheAn-SoGD-Lan1` | Nghe An - So GDDT - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; sửa phương án D câu I.13 (gốc trùng B → "tăng 4 lần"); 11 hình + 1 bảng; đề 8 trang, lời giải 11 trang | xong |
+| W06 | `VatLi2026-NgheAn-SoGD-Lan2` | Nghe An - So GDDT - Lan 2.docx | Word | ĐA + LG | mã 0304; KIỂM TRA II.4c (gốc Đ, gõ S), I.2 (hai phương án đúng B, C; gõ B); sửa ⁹⁵Mo I.15; 6 hình + bảng thời tiết; đề 6 trang, lời giải 10 trang | xong |
+| W07 | `VatLi2026-NgheAn-SoGD-Lan3` | Nghe An - So GDDT - Lan 3.docx | Word | ĐA + LG | KIỂM TRA I.11 (gốc C, gõ A); 7 hình; đề 7 trang, lời giải 10 trang | xong |
+| W07 | `VatLi2026-NinhBinh-Cum9-Lan1` | Ninh Binh - Cum truong THPT so 9 - Lan 1.docx | Word | ĐA + LG | khớp ĐA 28/28; KIỂM TRA II.3d (chiều quấn không rõ, giữ Đ); sửa kí hiệu I.17 (Rn, Po); 13 tikzpicture (9 hình gốc); đề 6 trang, lời giải 10 trang | xong |
+| W07 | `VatLi2026-NinhBinh-SoGD-Lan3` | Ninh Binh - So GDDT - Lan 3.docx | Word | ĐA + LG | KIỂM TRA II.3d (gốc Đ, gõ S), III.2 (gốc 3,7, gõ 5,6 theo lưới); 9 hình; đề 7 trang, lời giải 11 trang | xong |
+| W07 | `VatLi2026-NinhBinh-SoGD-Lan4` | Ninh Binh - So GDDT - Lan 4.docx | Word | ĐA + LG | KIỂM TRA II.3a,d (gốc Đ Đ S S, gõ S Đ S Đ), I.13 (gốc thiếu hình, tự dựng), I.17 (sửa hình S₃′); 8 hình; đề 7 trang, lời giải 11 trang | xong |
 | W08 | `VatLi2026-PhuTho-SoGD-Lan2` | Phu Tho - So GDDT - Lan 2.docx | Word | ĐA + LG | — | chưa gõ |
 | W08 | `VatLi2026-QuangNgai-ChuyenLeKhiet-Lan1` | Quang Ngai - THPT chuyen Le Khiet - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |
 | W08 | `VatLi2026-QuangTri-SoGD-Lan1` | Quang Tri - So GDDT - Lan 1.docx | Word | ĐA + LG | — | chưa gõ |

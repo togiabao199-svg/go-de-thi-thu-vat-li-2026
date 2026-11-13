@@ -54,7 +54,7 @@ for m in re.finditer(r'PHẦN (I+)\.|\\begin\{ex\}|\\begin\{(tikzpicture|circuit
 ra = os.path.join(os.path.dirname(os.path.abspath(src)), 'so-hinh')
 os.makedirs(ra, exist_ok=True)
 doc = ['\\documentclass[12pt,tikz,border=6pt]{standalone}',
-       '\\usepackage{amsmath,amssymb,mathpazo}', '\\usepackage[no-math]{fontspec}',
+       '\\usepackage{amsmath,amssymb,mathpazo,mathrsfs}', '\\usepackage[no-math]{fontspec}',
        '\\setmainfont{TeX Gyre Pagella}', '\\usepackage{pgfplots}\\pgfplotsset{compat=1.17}',
        '\\usetikzlibrary{math,calc,intersections,angles,quotes,shapes,shapes.geometric,arrows,patterns,arrows.meta,'
        'decorations.shapes,decorations.markings,shadows,decorations.pathreplacing}',
