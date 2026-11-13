@@ -128,12 +128,12 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{12.1\baselineskip}
+	\NeedspaceCau{13.2\baselineskip}
 	\begin{ex}%[VL12-C1-TH]
 		\label{DN1-I8}\textit{Dùng thông tin sau cho câu~\ref{DN1-I8} và câu~\ref{DN1-I9}:} Hình bên là một bếp dùng để hâm nóng ly cà phê. Biết khối lượng cà phê trong ly là $150$~g, nhiệt độ của cà phê tăng thêm $10\,^\circ\text{C}$ khi được hâm nóng, nhiệt dung riêng của cà phê trong ly là $4180$~J/(kg.K).
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[scale=1.05,line join=round,line cap=round,font=\footnotesize]
 				% dây điện, phích cắm
 				\draw[black!75,line width=1.3pt] (1.38,0.2) .. controls (1.9,0.1) and (2.0,-0.25) .. (2.45,-0.2);
 				\draw[white,line width=0.5pt] (1.38,0.2) .. controls (1.9,0.1) and (2.0,-0.25) .. (2.45,-0.2);
@@ -312,7 +312,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{33.5\baselineskip}
+	\NeedspaceCau{32.9\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-DongNai-SoGD-Lan1-2]
@@ -320,57 +320,57 @@
 	\begin{ex}%[VL12-C1-TH]
 		Để tìm hiểu sự nóng chảy của băng phiến, một nhóm học sinh đã tiến hành thí nghiệm với bố trí như hình bên.
 		% giuhinh
-		\par\noindent
+		\par\smallskip\noindent
 		\begin{minipage}[c]{0.58\linewidth}
-		Một lượng băng phiến tán nhỏ ở trạng thái rắn được cho vào ống nghiệm, sau đó đặt ống nghiệm thẳng đứng sao cho phần ống nghiệm chứa băng phiến ngập hoàn toàn trong nước. Bình nước được đun nóng liên tục bằng nguồn nhiệt (bếp điện). Trong suốt quá trình đun, nhiệt độ của băng phiến được theo dõi bằng nhiệt kế gắn cố định trên giá đỡ, đảm bảo đầu đo tiếp xúc hoàn toàn với mẫu băng phiến. Khi nhiệt độ của băng phiến đạt $60\,^\circ\text{C}$, nhóm học sinh bắt đầu ghi lại số liệu nhiệt độ sau mỗi $1$ phút, đồng thời quan sát trạng thái của mẫu chất.
+		Một lượng băng phiến tán nhỏ ở trạng thái rắn được cho vào ống nghiệm, sau đó đặt ống nghiệm thẳng đứng sao cho phần ống nghiệm chứa băng phiến ngập hoàn toàn trong nước. Bình nước được đun nóng liên tục bằng nguồn nhiệt (bếp điện). Trong suốt quá trình đun, nhiệt độ của băng phiến được theo dõi bằng nhiệt kế gắn cố định trên giá đỡ, đảm bảo đầu đo tiếp xúc hoàn toàn với mẫu băng phiến.
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.40\linewidth}
 			\centering
-				\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
-					% giá đỡ (trụ đứng sau bếp)
-					\shade[left color=gray!65,right color=gray!40,middle color=gray!5] (3.55,1.0) rectangle (3.65,6.1);
-					% bếp điện
-					\VLbepdien{0}{0}{3.6}{0.9}
-					\VLnumvan{0.95}{0.45}{0.18}
-					\VLnumvan{1.55}{0.45}{0.18}
-					\fill[VLdo] (2.45,0.5) circle (0.05);
-					\filldraw[fill=gray!70,draw=black!70,very thin] (2.85,0.33) rectangle (3.15,0.6);
-					% bình nước (cốc thủy tinh)
-					\shade[top color=VLxanh!10,bottom color=VLxanh!25] (0.92,2.75)--(0.92,1.2)--(2.88,1.2)--(2.88,2.75)--cycle;
-					\fill[VLxanh!18] (1.9,2.75) ellipse (0.96 and 0.1);
-					% ống nghiệm và băng phiến
-					\fill[white,opacity=0.7] (1.62,4.05)--(1.62,1.55) arc[start angle=180,end angle=360,radius=0.13]--(1.88,4.05)--cycle;
-					\pgfmathsetseed{5}
-					\foreach \i in {1,...,26}{\pgfmathsetmacro{\xx}{1.65+0.2*rnd}\pgfmathsetmacro{\yy}{1.46+0.42*rnd}\filldraw[fill=white,draw=gray!60,very thin] (\xx,\yy) circle (0.032);}
-					\draw[gray!55!black,thin] (1.62,4.05)--(1.62,1.55) arc[start angle=180,end angle=360,radius=0.13]--(1.88,4.05);
-					\draw[gray!55!black,thin] (1.75,4.05) ellipse (0.13 and 0.035);
-					% nhiệt kế điện tử
-					\begin{scope}[shift={(1.75,1.55)}]
-						\VLnhietkedt{3.35}
-					\end{scope}
-					% vỏ bình thủy tinh
-					\draw[gray!60!black,thin] (0.92,3.1)--(0.92,1.2)--(2.88,1.2)--(2.88,3.1);
-					\draw[gray!60!black,thin] (1.9,3.1) ellipse (0.96 and 0.1);
-					\draw[gray!60!black,thin] (0.92,3.1)--(0.8,3.18);
-					\draw[white,line width=1.4pt,opacity=0.7] (1.07,2.95)--(1.07,1.4);
-					% tay kẹp
-					\shade[top color=gray!30,bottom color=gray!65,middle color=white] (1.88,3.72) rectangle (3.6,3.8);
-					\fill[gray!55!black] (3.5,3.66) rectangle (3.7,3.86);
-					\fill[gray!55!black] (1.88,3.66) rectangle (1.94,3.86);
-					\shade[top color=gray!30,bottom color=gray!65,middle color=white] (1.9,5.32) rectangle (3.6,5.4);
-					\fill[gray!55!black] (3.5,5.26) rectangle (3.7,5.46);
-					\fill[gray!55!black] (1.9,5.24) rectangle (1.96,5.48);
-					% nhãn
-					\draw[thin] (1.6,5.55)--(-0.15,5.55) node[left,inner sep=1pt] {Nhiệt kế};
-					\draw[thin] (1.62,3.9)--(-0.15,4.25) node[left,inner sep=1pt] {Ống nghiệm};
-					\draw[thin] (0.92,3.0)--(-0.15,3.3) node[left,inner sep=1pt] {Bình nước};
-					\draw[thin] (1.68,1.65)--(-0.15,2.0) node[left,inner sep=1pt,align=center] {Băng phiến\\tán nhỏ};
-					\draw[thin] (0.08,0.75)--(-0.15,0.95) node[left,inner sep=1pt] {Nguồn nhiệt};
-					\draw[thin] (2.7,2.35)--(4.05,2.6) node[right,inner sep=1pt] {Nước};
-				\end{tikzpicture}
+			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+				% giá đỡ (trụ đứng sau bếp)
+				\shade[left color=gray!65,right color=gray!40,middle color=gray!5] (3.55,1.0) rectangle (3.65,6.1);
+				% bếp điện
+				\VLbepdien{0}{0}{3.6}{0.9}
+				\VLnumvan{0.95}{0.45}{0.18}
+				\VLnumvan{1.55}{0.45}{0.18}
+				\fill[VLdo] (2.45,0.5) circle (0.05);
+				\filldraw[fill=gray!70,draw=black!70,very thin] (2.85,0.33) rectangle (3.15,0.6);
+				% bình nước (cốc thủy tinh)
+				\shade[top color=VLxanh!10,bottom color=VLxanh!25] (0.92,2.75)--(0.92,1.2)--(2.88,1.2)--(2.88,2.75)--cycle;
+				\fill[VLxanh!18] (1.9,2.75) ellipse (0.96 and 0.1);
+				% ống nghiệm và băng phiến
+				\fill[white,opacity=0.7] (1.62,4.05)--(1.62,1.55) arc[start angle=180,end angle=360,radius=0.13]--(1.88,4.05)--cycle;
+				\pgfmathsetseed{5}
+				\foreach \i in {1,...,26}{\pgfmathsetmacro{\xx}{1.65+0.2*rnd}\pgfmathsetmacro{\yy}{1.46+0.42*rnd}\filldraw[fill=white,draw=gray!60,very thin] (\xx,\yy) circle (0.032);}
+				\draw[gray!55!black,thin] (1.62,4.05)--(1.62,1.55) arc[start angle=180,end angle=360,radius=0.13]--(1.88,4.05);
+				\draw[gray!55!black,thin] (1.75,4.05) ellipse (0.13 and 0.035);
+				% nhiệt kế điện tử
+				\begin{scope}[shift={(1.75,1.55)}]
+					\VLnhietkedt{3.35}
+				\end{scope}
+				% vỏ bình thủy tinh
+				\draw[gray!60!black,thin] (0.92,3.1)--(0.92,1.2)--(2.88,1.2)--(2.88,3.1);
+				\draw[gray!60!black,thin] (1.9,3.1) ellipse (0.96 and 0.1);
+				\draw[gray!60!black,thin] (0.92,3.1)--(0.8,3.18);
+				\draw[white,line width=1.4pt,opacity=0.7] (1.07,2.95)--(1.07,1.4);
+				% tay kẹp
+				\shade[top color=gray!30,bottom color=gray!65,middle color=white] (1.88,3.72) rectangle (3.6,3.8);
+				\fill[gray!55!black] (3.5,3.66) rectangle (3.7,3.86);
+				\fill[gray!55!black] (1.88,3.66) rectangle (1.94,3.86);
+				\shade[top color=gray!30,bottom color=gray!65,middle color=white] (1.9,5.32) rectangle (3.6,5.4);
+				\fill[gray!55!black] (3.5,5.26) rectangle (3.7,5.46);
+				\fill[gray!55!black] (1.9,5.24) rectangle (1.96,5.48);
+				% nhãn
+				\draw[thin] (1.6,5.55)--(-0.15,5.55) node[left,inner sep=1pt] {Nhiệt kế};
+				\draw[thin] (1.62,3.9)--(-0.15,4.25) node[left,inner sep=1pt] {Ống nghiệm};
+				\draw[thin] (0.92,3.0)--(-0.15,3.3) node[left,inner sep=1pt] {Bình nước};
+				\draw[thin] (1.68,1.65)--(-0.15,2.0) node[left,inner sep=1pt,align=center] {Băng phiến\\tán nhỏ};
+				\draw[thin] (0.08,0.75)--(-0.15,0.95) node[left,inner sep=1pt] {Nguồn nhiệt};
+				\draw[thin] (2.7,2.35)--(4.05,2.6) node[right,inner sep=1pt] {Nước};
+			\end{tikzpicture}
 		\end{minipage}
-		\par\noindent
-		Quá trình đo kết thúc khi nhiệt độ băng phiến đạt $86\,^\circ\text{C}$. Kết quả thu được trình bày trong bảng sau:
+		\par\smallskip\noindent
+		Khi nhiệt độ của băng phiến đạt $60\,^\circ\text{C}$, nhóm học sinh bắt đầu ghi lại số liệu nhiệt độ sau mỗi $1$ phút, đồng thời quan sát trạng thái của mẫu chất. Quá trình đo kết thúc khi nhiệt độ băng phiến đạt $86\,^\circ\text{C}$. Kết quả thu được trình bày trong bảng sau:
 		\begin{center}
 			{\renewcommand{\arraystretch}{1.3}\setlength{\tabcolsep}{4pt}%
 			\begin{tabular}{|l|*{16}{c|}}
@@ -398,82 +398,82 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[11.2\baselineskip]{23\baselineskip}
+	\NeedspaceCau[11.3\baselineskip]{23\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Công nghệ sạc không dây trên điện thoại thông minh hoạt động dựa trên hiện tượng cảm ứng điện từ.
 		% giuhinh
-		\par\noindent
+		\par\smallskip\noindent
 		\begin{minipage}[c]{0.58\linewidth}
 		Bên trong đế sạc có một cuộn phát và ở mặt lưng điện thoại có một cuộn thu. Cấp điện cho đế sạc và đặt điện thoại lên trên, năng lượng sẽ được truyền qua khoảng không gian hẹp giữa chúng để sạc pin cho điện thoại. Biết khi đế sạc hoạt động, không gian giữa cuộn phát và cuộn thu tồn tại một từ trường biến thiên điều hòa. Để đảm bảo an toàn, các nhà sản xuất luôn khuyến cáo người dùng không để các vật kim loại mỏng kẹp giữa đế sạc và điện thoại trong quá trình sạc.
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.40\linewidth}
 			\centering
-				\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
-					% ---- hình nhỏ: tay đặt điện thoại lên đế sạc tròn
-					\begin{scope}[shift={(0.2,3.0)}]
-						\draw[black!75,line width=1pt] (1.55,-0.05) .. controls (2.0,-0.2) and (2.2,-0.6) .. (2.6,-0.7);
-						\shade[top color=gray!10,bottom color=gray!40] (-0.05,0.05)--(-0.05,-0.08) arc[start angle=180,end angle=360,x radius=0.8,y radius=0.3]--(1.55,0.05)--cycle;
-						\filldraw[fill=gray!8,draw=black!65,thin] (0.75,0.05) ellipse (0.8 and 0.3);
-						\draw[black!65,thin] (-0.05,0.05)--(-0.05,-0.08) arc[start angle=180,end angle=360,x radius=0.8,y radius=0.3]--(1.55,0.05);
-						% điện thoại
-						\filldraw[fill=black!75,draw=black,thin,rounded corners=2pt] (0.15,0.32)--(1.2,0.12)--(1.62,0.55)--(0.57,0.75)--cycle;
-						\fill[gray!35,rounded corners=1.5pt] (0.27,0.35)--(1.17,0.18)--(1.52,0.53)--(0.62,0.7)--cycle;
-						% bàn tay
-						\filldraw[fill=orange!18!white,draw=black!65,thin] (-0.35,1.55) .. controls (-0.1,1.1) and (0.1,0.85) .. (0.35,0.72) .. controls (0.6,0.6) and (0.85,0.55) .. (1.05,0.58) .. controls (1.2,0.6) and (1.2,0.72) .. (1.05,0.76) .. controls (0.9,0.8) and (0.8,0.82) .. (0.75,0.86) .. controls (1.0,0.85) and (1.25,0.88) .. (1.3,0.98) .. controls (1.32,1.08) and (1.2,1.1) .. (1.0,1.08) .. controls (0.9,1.2) and (0.6,1.35) .. (0.35,1.55) .. controls (0.2,1.7) and (0.05,1.85) .. (-0.05,1.95);
-						\draw[black!55,very thin] (0.75,0.86) .. controls (0.65,0.9) and (0.6,0.95) .. (0.55,1.0) (1.0,1.08) .. controls (0.85,1.05) and (0.75,1.02) .. (0.65,1.0);
-					\end{scope}
-					% ---- đế sạc và điện thoại
-					\draw[black!80,line width=1.1pt] (6.75,0.62) .. controls (7.1,0.6) and (7.3,0.75) .. (7.5,0.7);
-					\shade[top color=gray!25,bottom color=gray!55,rounded corners=4pt] (0.55,0.15) rectangle (6.8,0.95);
-					\draw[black!70,thin,rounded corners=4pt] (0.55,0.15) rectangle (6.8,0.95);
-					\node[font=\scriptsize] at (5.6,0.45) {ĐẾ SẠC};
-					\fill[gray!20] (0.0,1.25)--(6.25,1.25)--(6.65,1.75)--(0.4,1.75)--cycle;
-					\shade[top color=gray!8,bottom color=gray!35] (0.0,0.95) rectangle (6.25,1.25);
-					\fill[gray!45] (6.25,0.95)--(6.65,1.45)--(6.65,1.75)--(6.25,1.25)--cycle;
-					\draw[black!70,thin] (0.0,0.95) rectangle (6.25,1.25) (0.0,1.25)--(0.4,1.75)--(6.65,1.75)--(6.65,1.45)--(6.25,0.95) (6.25,1.25)--(6.65,1.75);
-					\node[font=\scriptsize] at (1.2,1.47) {ĐIỆN THOẠI};
-					% vòng tròn nét đứt (vị trí hai cuộn dây)
-					\fill[white] (3.4,1.05) circle (0.45);
-					\draw[thick,VLdong!85!black] (3.4,1.27) ellipse (0.22 and 0.06);
-					\draw[thick,VLdong!85!black] (3.4,0.86) ellipse (0.26 and 0.07);
-					\draw[densely dashed,thin] (3.4,1.05) circle (0.45);
-					\node[font=\scriptsize,right,inner sep=1pt] at (3.86,1.1) {N$_\text{B}$};
-					\node[font=\scriptsize,left,inner sep=1pt] at (2.94,0.82) {N$_\text{A}$};
-					% hình phóng to
-					\draw[densely dashed,thin] (3.15,1.42)--(3.65,2.35) (3.75,1.35)--(5.15,1.85);
-					\fill[white] (4.75,3.25) circle (1.45);
-					\draw[densely dashed,thin] (4.75,3.25) circle (1.45);
-					% cuộn phát N_A (dẹt)
-					\begin{scope}[shift={(4.75,2.6)}]
-						\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
-						\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
-					\end{scope}
-					% cuộn thu N_B
-					\begin{scope}[shift={(4.75,3.75)}]
-						\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
-						\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
-					\end{scope}
-					% đường sức từ
-					\foreach \x/\d in {-0.3/-0.55,-0.15/-0.28,0/0,0.15/0.28,0.3/0.55}{
-						\draw[VLxanh,semithick,VLmui] ({4.75+\x},2.25) .. controls ({4.75+\x},3.2) and ({4.75+\x+0.3*\d},3.8) .. ({4.75+\x+\d},4.45);}
-					\foreach \x/\d in {-0.5/-0.25,0.5/0.25}{
-						\draw[VLxanh,semithick,VLmui] ({4.75+\x},2.3) .. controls ({4.75+\x},2.8) and ({4.75+1.1*\x},3.1) .. ({4.75+\x+\d},3.5);}
-					% nửa trước cuộn dây
-					\begin{scope}[shift={(4.75,2.6)}]
-						\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
-						\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
-						\draw[VLdong!45!black,line width=1.6pt] (-0.12,-0.16)--(-0.12,-0.5) (0.12,-0.16)--(0.12,-0.5);
-						\draw[VLdong!80!white,line width=0.9pt] (-0.12,-0.16)--(-0.12,-0.5) (0.12,-0.16)--(0.12,-0.5);
-					\end{scope}
-					\begin{scope}[shift={(4.75,3.75)}]
-						\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
-						\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
-					\end{scope}
-					\node[right,inner sep=1pt] at (5.35,3.85) {N$_\text{B}$};
-					\node[right,inner sep=1pt] at (6.22,2.55) {N$_\text{A}$};
-				\end{tikzpicture}
+			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+				% ---- hình nhỏ: tay đặt điện thoại lên đế sạc tròn
+				\begin{scope}[shift={(0.2,3.0)}]
+					\draw[black!75,line width=1pt] (1.55,-0.05) .. controls (2.0,-0.2) and (2.2,-0.6) .. (2.6,-0.7);
+					\shade[top color=gray!10,bottom color=gray!40] (-0.05,0.05)--(-0.05,-0.08) arc[start angle=180,end angle=360,x radius=0.8,y radius=0.3]--(1.55,0.05)--cycle;
+					\filldraw[fill=gray!8,draw=black!65,thin] (0.75,0.05) ellipse (0.8 and 0.3);
+					\draw[black!65,thin] (-0.05,0.05)--(-0.05,-0.08) arc[start angle=180,end angle=360,x radius=0.8,y radius=0.3]--(1.55,0.05);
+					% điện thoại
+					\filldraw[fill=black!75,draw=black,thin,rounded corners=2pt] (0.15,0.32)--(1.2,0.12)--(1.62,0.55)--(0.57,0.75)--cycle;
+					\fill[gray!35,rounded corners=1.5pt] (0.27,0.35)--(1.17,0.18)--(1.52,0.53)--(0.62,0.7)--cycle;
+					% bàn tay
+					\filldraw[fill=orange!18!white,draw=black!65,thin] (-0.35,1.55) .. controls (-0.1,1.1) and (0.1,0.85) .. (0.35,0.72) .. controls (0.6,0.6) and (0.85,0.55) .. (1.05,0.58) .. controls (1.2,0.6) and (1.2,0.72) .. (1.05,0.76) .. controls (0.9,0.8) and (0.8,0.82) .. (0.75,0.86) .. controls (1.0,0.85) and (1.25,0.88) .. (1.3,0.98) .. controls (1.32,1.08) and (1.2,1.1) .. (1.0,1.08) .. controls (0.9,1.2) and (0.6,1.35) .. (0.35,1.55) .. controls (0.2,1.7) and (0.05,1.85) .. (-0.05,1.95);
+					\draw[black!55,very thin] (0.75,0.86) .. controls (0.65,0.9) and (0.6,0.95) .. (0.55,1.0) (1.0,1.08) .. controls (0.85,1.05) and (0.75,1.02) .. (0.65,1.0);
+				\end{scope}
+				% ---- đế sạc và điện thoại
+				\draw[black!80,line width=1.1pt] (6.75,0.62) .. controls (7.1,0.6) and (7.3,0.75) .. (7.5,0.7);
+				\shade[top color=gray!25,bottom color=gray!55,rounded corners=4pt] (0.55,0.15) rectangle (6.8,0.95);
+				\draw[black!70,thin,rounded corners=4pt] (0.55,0.15) rectangle (6.8,0.95);
+				\node[font=\scriptsize] at (5.6,0.45) {ĐẾ SẠC};
+				\fill[gray!20] (0.0,1.25)--(6.25,1.25)--(6.65,1.75)--(0.4,1.75)--cycle;
+				\shade[top color=gray!8,bottom color=gray!35] (0.0,0.95) rectangle (6.25,1.25);
+				\fill[gray!45] (6.25,0.95)--(6.65,1.45)--(6.65,1.75)--(6.25,1.25)--cycle;
+				\draw[black!70,thin] (0.0,0.95) rectangle (6.25,1.25) (0.0,1.25)--(0.4,1.75)--(6.65,1.75)--(6.65,1.45)--(6.25,0.95) (6.25,1.25)--(6.65,1.75);
+				\node[font=\scriptsize] at (1.2,1.47) {ĐIỆN THOẠI};
+				% vòng tròn nét đứt (vị trí hai cuộn dây)
+				\fill[white] (3.4,1.05) circle (0.45);
+				\draw[thick,VLdong!85!black] (3.4,1.27) ellipse (0.22 and 0.06);
+				\draw[thick,VLdong!85!black] (3.4,0.86) ellipse (0.26 and 0.07);
+				\draw[densely dashed,thin] (3.4,1.05) circle (0.45);
+				\node[font=\scriptsize,right,inner sep=1pt] at (3.86,1.1) {N$_\text{B}$};
+				\node[font=\scriptsize,left,inner sep=1pt] at (2.94,0.82) {N$_\text{A}$};
+				% hình phóng to
+				\draw[densely dashed,thin] (3.15,1.42)--(3.65,2.35) (3.75,1.35)--(5.15,1.85);
+				\fill[white] (4.75,3.25) circle (1.45);
+				\draw[densely dashed,thin] (4.75,3.25) circle (1.45);
+				% cuộn phát N_A (dẹt)
+				\begin{scope}[shift={(4.75,2.6)}]
+					\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
+					\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
+				\end{scope}
+				% cuộn thu N_B
+				\begin{scope}[shift={(4.75,3.75)}]
+					\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
+					\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=180,x radius=\r,y radius=0.3*\r];}
+				\end{scope}
+				% đường sức từ
+				\foreach \x/\d in {-0.3/-0.55,-0.15/-0.28,0/0,0.15/0.28,0.3/0.55}{
+					\draw[VLxanh,semithick,VLmui] ({4.75+\x},2.25) .. controls ({4.75+\x},3.2) and ({4.75+\x+0.3*\d},3.8) .. ({4.75+\x+\d},4.45);}
+				\foreach \x/\d in {-0.5/-0.25,0.5/0.25}{
+					\draw[VLxanh,semithick,VLmui] ({4.75+\x},2.3) .. controls ({4.75+\x},2.8) and ({4.75+1.1*\x},3.1) .. ({4.75+\x+\d},3.5);}
+				% nửa trước cuộn dây
+				\begin{scope}[shift={(4.75,2.6)}]
+					\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
+					\foreach \r in {0.55,0.65,0.75,0.85,0.95}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
+					\draw[VLdong!45!black,line width=1.6pt] (-0.12,-0.16)--(-0.12,-0.5) (0.12,-0.16)--(0.12,-0.5);
+					\draw[VLdong!80!white,line width=0.9pt] (-0.12,-0.16)--(-0.12,-0.5) (0.12,-0.16)--(0.12,-0.5);
+				\end{scope}
+				\begin{scope}[shift={(4.75,3.75)}]
+					\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!45!black,line width=1.6pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
+					\foreach \r in {0.32,0.4,0.48,0.56}{\draw[VLdong!80!white,line width=0.9pt] (\r,0) arc[start angle=0,end angle=-180,x radius=\r,y radius=0.3*\r];}
+				\end{scope}
+				\node[right,inner sep=1pt] at (5.35,3.85) {N$_\text{B}$};
+				\node[right,inner sep=1pt] at (6.22,2.55) {N$_\text{A}$};
+			\end{tikzpicture}
 		\end{minipage}
-		\NeedspaceBang{11.9\baselineskip}%
+		\NeedspaceBang{11.8\baselineskip}%
 		\choiceTFt
 		{Để hệ thống truyền được năng lượng, dòng điện cấp vào cuộn phát trong đế sạc phải là dòng điện không đổi}
 		{\True Khuyến cáo của nhà sản xuất nhằm tránh việc vật kim loại bị nóng lên dưới tác dụng của dòng điện Foucault, có thể gây hỏng thiết bị hoặc gây cháy nổ}
@@ -489,70 +489,70 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[23.1\baselineskip]{33.9\baselineskip}
+	\NeedspaceCau[22.1\baselineskip]{32.8\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
 		Để khảo sát mối liên hệ giữa áp suất và nhiệt độ của một lượng khí xác định, một nhóm học sinh tiến hành thí nghiệm bố trí như hình bên.
 		% giuhinh
-		\par\noindent
+		\par\smallskip\noindent
 		\begin{minipage}[c]{0.58\linewidth}
-		Đối tượng khảo sát là một quả cầu kim loại chứa không khí, được nhúng ngập hoàn toàn trong bình chứa nước. Quả cầu khí được nối với một khí áp kế để đo áp suất, đồng thời có gắn một van có thể đóng -- mở nhằm kết nối hoặc cô lập khí trong quả cầu với khí quyển bên ngoài. Nhiệt độ của hệ được theo dõi bằng nhiệt kế. Trong suốt quá trình thí nghiệm, bỏ qua sự co giãn không đáng kể của bình khí. Ban đầu, mở van để khí trong bình cân bằng áp suất với khí quyển, sau đó đóng van để cô lập khối khí trong bình. Ghi lại các giá trị nhiệt độ và áp suất ban đầu của khí vào bảng số liệu.
+		Đối tượng khảo sát là một quả cầu kim loại chứa không khí, được nhúng ngập hoàn toàn trong bình chứa nước. Quả cầu khí được nối với một khí áp kế để đo áp suất, đồng thời có gắn một van có thể đóng -- mở nhằm kết nối hoặc cô lập khí trong quả cầu với khí quyển bên ngoài. Nhiệt độ của hệ được theo dõi bằng nhiệt kế. Trong suốt quá trình thí nghiệm, bỏ qua sự co giãn không đáng kể của bình khí.
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.40\linewidth}
 			\centering
-				\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
-					% giá đỡ: đế, trụ, tay ngang
-					\shade[top color=gray!35,bottom color=gray!70] (-0.55,0)--(-0.35,0.2)--(1.6,0.2)--(1.6,0)--cycle;
-					\draw[black!65,thin] (-0.55,0)--(-0.35,0.2)--(1.6,0.2)--(1.6,0)--cycle;
-					\shade[left color=gray!65,right color=gray!40,middle color=gray!5] (-0.05,0.2) rectangle (0.05,4.55);
-					\fill[gray!55!black] (-0.1,3.95) rectangle (0.1,4.15);
-					\VLnumvan{-0.22}{4.05}{0.09}
-					\shade[top color=gray!30,bottom color=gray!65,middle color=white] (0.1,4.0) rectangle (2.85,4.1);
-					\fill[gray!55!black] (2.75,3.92) rectangle (2.95,4.18);
-					\VLnumvan{0.8}{0.55}{0.13}
-					\draw[gray!55!black,line width=1pt] (0.8,0.42)--(0.8,0.2);
-					% bếp điện
-					\VLbepdien{1.4}{0}{3.6}{1.0}
-					\VLnumvan{2.3}{0.42}{0.2}
-					\VLnumvan{3.05}{0.42}{0.2}
-					\filldraw[fill=white,draw=black!70,very thin] (3.6,0.32)--(3.84,0.32)--(3.72,0.54)--cycle;
-					\node[font=\fontsize{4}{4}\selectfont] at (3.72,0.4) {!};
-					\filldraw[fill=gray!70,draw=black!70,very thin] (4.2,0.3) rectangle (4.55,0.6);
-					\filldraw[fill=gray!15,draw=black!50,very thin] (2.0,0.72) rectangle (4.4,0.86);
-					% nước trong bình
-					\shade[top color=VLxanh!10,bottom color=VLxanh!25] (2.0,3.15)--(2.0,1.3)--(4.4,1.3)--(4.4,3.15)--cycle;
-					\fill[VLxanh!18] (3.2,3.15) ellipse (1.2 and 0.12);
-					% quả cầu kim loại, ống nối
-					\shade[left color=gray!50,right color=gray!45,middle color=gray!8] (3.13,2.95) rectangle (3.27,3.85);
-					\shade[ball color=gray!45] (3.2,2.25) circle (0.72);
-					% nhiệt kế điện tử (xiên)
-					\begin{scope}[shift={(2.35,1.55)},rotate=-36]
-						\VLnhietkedt{3.3}
-					\end{scope}
-					% vỏ bình thủy tinh
-					\draw[gray!60!black,thin] (2.0,3.55)--(2.0,1.3)--(4.4,1.3)--(4.4,3.55);
-					\draw[gray!60!black,thin] (3.2,3.55) ellipse (1.2 and 0.13);
-					\draw[white,line width=1.4pt,opacity=0.7] (2.15,3.4)--(2.15,1.5);
-					% van và khí áp kế
-					\shade[top color=gray!40,bottom color=gray!75] (2.95,3.85) rectangle (3.45,4.25);
-					\draw[black!65,very thin] (2.95,3.85) rectangle (3.45,4.25);
-					\draw[gray!50!black,line width=1.2pt] (3.45,4.05)--(3.75,4.05);
-					\fill[black!75] (3.75,3.97) rectangle (3.82,4.13);
-					\shade[left color=gray!55,right color=gray!40,middle color=gray!5] (3.12,4.25) rectangle (3.28,4.45);
-					\filldraw[fill=gray!55,draw=black!70,thin] (3.2,5.05) circle (0.62);
-					\filldraw[fill=white,draw=black!60,very thin] (3.2,5.05) circle (0.53);
-					\foreach \g in {-45,-22.5,...,225}{\draw[black!75,very thin] (3.2,5.05)++(\g:0.4)--++(\g:0.11);}
-					\draw[VLdo,semithick] (3.2,5.05)--++(120:0.4);
-					\fill[black] (3.2,5.05) circle (0.04);
-					% nhãn
-					\draw[thin] (2.6,5.25)--(1.65,5.25) node[left,inner sep=1pt] {Khí áp kế};
-					\draw[thin] (2.6,2.5)--(0.75,2.85) node[above,inner sep=1pt] {Quả cầu};
-					\draw[thin] (1.45,1.05)--(0.95,1.45) node[above,inner sep=1pt] {Nguồn nhiệt};
-					\draw[thin] (4.35,2.45)--(5.25,2.6) node[right,inner sep=1pt,align=left] {Bình chứa\\nước};
-					\draw[thin] (4.45,4.75)--(4.9,5.35) node[above,inner sep=1pt] {Nhiệt kế};
-				\end{tikzpicture}
+			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+				% giá đỡ: đế, trụ, tay ngang
+				\shade[top color=gray!35,bottom color=gray!70] (-0.55,0)--(-0.35,0.2)--(1.6,0.2)--(1.6,0)--cycle;
+				\draw[black!65,thin] (-0.55,0)--(-0.35,0.2)--(1.6,0.2)--(1.6,0)--cycle;
+				\shade[left color=gray!65,right color=gray!40,middle color=gray!5] (-0.05,0.2) rectangle (0.05,4.55);
+				\fill[gray!55!black] (-0.1,3.95) rectangle (0.1,4.15);
+				\VLnumvan{-0.22}{4.05}{0.09}
+				\shade[top color=gray!30,bottom color=gray!65,middle color=white] (0.1,4.0) rectangle (2.85,4.1);
+				\fill[gray!55!black] (2.75,3.92) rectangle (2.95,4.18);
+				\VLnumvan{0.8}{0.55}{0.13}
+				\draw[gray!55!black,line width=1pt] (0.8,0.42)--(0.8,0.2);
+				% bếp điện
+				\VLbepdien{1.4}{0}{3.6}{1.0}
+				\VLnumvan{2.3}{0.42}{0.2}
+				\VLnumvan{3.05}{0.42}{0.2}
+				\filldraw[fill=white,draw=black!70,very thin] (3.6,0.32)--(3.84,0.32)--(3.72,0.54)--cycle;
+				\node[font=\fontsize{4}{4}\selectfont] at (3.72,0.4) {!};
+				\filldraw[fill=gray!70,draw=black!70,very thin] (4.2,0.3) rectangle (4.55,0.6);
+				\filldraw[fill=gray!15,draw=black!50,very thin] (2.0,0.72) rectangle (4.4,0.86);
+				% nước trong bình
+				\shade[top color=VLxanh!10,bottom color=VLxanh!25] (2.0,3.15)--(2.0,1.3)--(4.4,1.3)--(4.4,3.15)--cycle;
+				\fill[VLxanh!18] (3.2,3.15) ellipse (1.2 and 0.12);
+				% quả cầu kim loại, ống nối
+				\shade[left color=gray!50,right color=gray!45,middle color=gray!8] (3.13,2.95) rectangle (3.27,3.85);
+				\shade[ball color=gray!45] (3.2,2.25) circle (0.72);
+				% nhiệt kế điện tử (xiên)
+				\begin{scope}[shift={(2.35,1.55)},rotate=-36]
+					\VLnhietkedt{3.3}
+				\end{scope}
+				% vỏ bình thủy tinh
+				\draw[gray!60!black,thin] (2.0,3.55)--(2.0,1.3)--(4.4,1.3)--(4.4,3.55);
+				\draw[gray!60!black,thin] (3.2,3.55) ellipse (1.2 and 0.13);
+				\draw[white,line width=1.4pt,opacity=0.7] (2.15,3.4)--(2.15,1.5);
+				% van và khí áp kế
+				\shade[top color=gray!40,bottom color=gray!75] (2.95,3.85) rectangle (3.45,4.25);
+				\draw[black!65,very thin] (2.95,3.85) rectangle (3.45,4.25);
+				\draw[gray!50!black,line width=1.2pt] (3.45,4.05)--(3.75,4.05);
+				\fill[black!75] (3.75,3.97) rectangle (3.82,4.13);
+				\shade[left color=gray!55,right color=gray!40,middle color=gray!5] (3.12,4.25) rectangle (3.28,4.45);
+				\filldraw[fill=gray!55,draw=black!70,thin] (3.2,5.05) circle (0.62);
+				\filldraw[fill=white,draw=black!60,very thin] (3.2,5.05) circle (0.53);
+				\foreach \g in {-45,-22.5,...,225}{\draw[black!75,very thin] (3.2,5.05)++(\g:0.4)--++(\g:0.11);}
+				\draw[VLdo,semithick] (3.2,5.05)--++(120:0.4);
+				\fill[black] (3.2,5.05) circle (0.04);
+				% nhãn
+				\draw[thin] (2.6,5.25)--(1.65,5.25) node[left,inner sep=1pt] {Khí áp kế};
+				\draw[thin] (2.6,2.5)--(0.75,2.85) node[above,inner sep=1pt] {Quả cầu};
+				\draw[thin] (1.45,1.05)--(0.95,1.45) node[above,inner sep=1pt] {Nguồn nhiệt};
+				\draw[thin] (4.35,2.45)--(5.25,2.6) node[right,inner sep=1pt,align=left] {Bình chứa\\nước};
+				\draw[thin] (4.45,4.75)--(4.9,5.35) node[above,inner sep=1pt] {Nhiệt kế};
+			\end{tikzpicture}
 		\end{minipage}
-		\par\noindent
-		Tiếp theo, bật bếp điện và điều chỉnh công suất ở mức phù hợp để nhiệt độ của nước tăng chậm; đồng thời thường xuyên khuấy nước để đảm bảo nhiệt độ nước trong bình đồng đều, giúp khí trong quả cầu nhanh đạt cân bằng nhiệt với nước. Cứ mỗi khi nhiệt độ tăng thêm $10\,^\circ\text{C}$, nhóm học sinh tiến hành ghi lại đồng thời nhiệt độ và áp suất tương ứng của khí vào bảng số liệu. Kết quả thí nghiệm được trình bày trong bảng sau:
+		\par\smallskip\noindent
+		Ban đầu, mở van để khí trong bình cân bằng áp suất với khí quyển, sau đó đóng van để cô lập khối khí trong bình. Ghi lại các giá trị nhiệt độ và áp suất ban đầu của khí vào bảng số liệu. Tiếp theo, bật bếp điện và điều chỉnh công suất ở mức phù hợp để nhiệt độ của nước tăng chậm; đồng thời thường xuyên khuấy nước để đảm bảo nhiệt độ nước trong bình đồng đều, giúp khí trong quả cầu nhanh đạt cân bằng nhiệt với nước. Cứ mỗi khi nhiệt độ tăng thêm $10\,^\circ\text{C}$, nhóm học sinh tiến hành ghi lại đồng thời nhiệt độ và áp suất tương ứng của khí vào bảng số liệu. Kết quả thí nghiệm được trình bày trong bảng sau:
 		\begin{center}
 			{\renewcommand{\arraystretch}{1.3}%
 			\begin{tabular}{|l|*{5}{c|}}
@@ -579,11 +579,11 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{24.4\baselineskip}
+	\NeedspaceCau{25.9\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Hình bên minh họa bộ thí nghiệm khảo sát lực từ tác dụng lên đoạn dây dẫn có dòng điện đặt trong từ trường đều. Khung dây dẫn hình chữ nhật $MNPQ$ có $N=50$ vòng được treo vào đầu bên trái của một đòn cân có hai cánh tay đòn bằng nhau. Phần cạnh dưới $PQ$ của mỗi vòng dây có chiều dài $L=5{,}0$~cm nằm trọn trong vùng từ trường đều, vectơ cảm ứng từ $\vv{B}$ vuông góc với mặt phẳng khung dây. Ban đầu, khi chưa có dòng điện chạy qua khung, người ta điều chỉnh quả cân ở đĩa bên phải để đòn cân ở trạng thái cân bằng nằm ngang. Khi cho dòng điện cường độ $I=0{,}30$~A chạy qua khung dây, đòn cân lệch khỏi vị trí cân bằng nằm ngang. Để đòn cân trở lại vị trí cân bằng nằm ngang, người ta đặt thêm một quả cân có khối lượng $m=20$~g lên đĩa cân bên phải. Lấy $g=9{,}8~\text{m/s}^2$.
 		\begin{center}
-			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[scale=1.0,line join=round,line cap=round,font=\footnotesize]
 				% vùng từ trường
 				\fill[VLxanh!8,rounded corners=2pt] (-0.8,0.18) rectangle (2.05,3.03);
 				\foreach \i in {0,...,7}{\foreach \j in {0,...,7}{\VLcham{-0.6+0.35*\i}{0.35+0.36*\j}}}
@@ -592,11 +592,11 @@
 				\filldraw[fill=white,draw=black,semithick] (3.5,3.6)--(3.33,3.3)--(3.67,3.3)--cycle;
 				% khung dây
 				\draw[thick] (0.6,3.6)--(0.6,3.05);
-				\draw[VLdong!80!black,line width=1.3pt] (0.25,1.97) rectangle (0.95,3.05);
+				\draw[VLdong!80!black,line width=1.3pt] (0.25,1.25) rectangle (0.95,3.05);
 				\node[above left,inner sep=1pt] at (0.25,3.05) {M};
 				\node[above right,inner sep=1pt] at (0.95,3.05) {N};
-				\node[left,inner sep=1.5pt,fill=VLxanh!8] at (0.2,1.97) {Q};
-				\node[right,inner sep=1.5pt,fill=VLxanh!8] at (1.0,1.97) {P};
+				\node[left,inner sep=1.5pt,fill=VLxanh!8] at (0.2,1.25) {Q};
+				\node[right,inner sep=1.5pt,fill=VLxanh!8] at (1.0,1.25) {P};
 				% đĩa cân bên phải
 				\draw[thick] (6.6,3.6)--(6.6,3.33);
 				\draw[thick] (6.6,3.25) circle (0.07);
@@ -637,7 +637,8 @@
 		\par
 		\shortans[oly]{5{,}33}
 		\loigiai{
-			$\vv{B}$ hợp với pháp tuyến góc $60^\circ$: $|e|=\dfrac{NB\Delta S\cos 60^\circ}{\Delta t}=\dfrac{100\cdot 0{,}20\cdot 10^{-3}\cdot 40\cdot 10^{-4}\cdot 0{,}5}{2{,}0}=2\cdot 10^{-5}$~V.
+			$\vv{B}$ hợp với pháp tuyến góc $60^\circ$:
+			\[|e|=\dfrac{NB\Delta S\cos 60^\circ}{\Delta t}=\dfrac{100\cdot 0{,}20\cdot 10^{-3}\cdot 40\cdot 10^{-4}\cdot 0{,}5}{2{,}0}=2\cdot 10^{-5}~\text{V}.\]
 			\[Q=\dfrac{e^2}{R}\Delta t=\dfrac{\left(2\cdot 10^{-5}\right)^2}{1{,}5}\cdot 2{,}0\approx 5{,}33\cdot 10^{-10}~\text{J}\Rightarrow X\approx 5{,}33.\]
 		}
 	\end{ex}
@@ -652,7 +653,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{9.6\baselineskip}
+	\NeedspaceCau{9.9\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		% KIỂM TRA: đáp án gốc 63 (lời giải gốc tính nhầm E0 = 4π ≈ 125,6 V) / tính lại 6
 		Một máy phát điện xoay chiều mini được gắn với một tua-bin gió trên ghi đông xe đạp. Phần ứng của máy phát là một khung dây dẫn kín, phẳng gồm $200$ vòng, diện tích mỗi vòng là $25~\text{cm}^2$. Khung dây dẫn được đặt trong từ trường đều của một nam châm vĩnh cửu có cảm ứng từ bằng $0{,}4$~T. Trục quay của khung nằm trong mặt phẳng khung và vuông góc với các đường sức từ. Khi xe chạy với tốc độ không đổi làm trục máy phát điện quay đều với tốc độ $600$ vòng/phút. Biết tại thời điểm ban đầu ($t=0$), mặt phẳng khung dây song song với các đường sức từ. Khi khung quay được một góc $60^\circ$, độ lớn suất điện động tức thời trong khung bằng bao nhiêu volt (làm tròn kết quả đến chữ số hàng đơn vị)?
