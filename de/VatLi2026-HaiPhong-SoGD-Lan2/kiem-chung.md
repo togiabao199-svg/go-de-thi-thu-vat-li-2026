@@ -53,4 +53,4 @@ Nguồn: `kho/goc/Hai Phong - So GDDT - Lan 2.docx` (Sở GD&ĐT Hải Phòng, �
   - II.3 máy đo lưu lượng máu: mạch máu trong từ trường (chấm), mặt cắt với điện cực, vôn kế; mũi tên dòng máu màu `VLluc` (vận tốc).
   - III.1 đoạn dây MN treo lệch góc α, B hướng lên; đặt bên phải câu dẫn để gọn trang.
   - III.2 bộ thí nghiệm nhiệt nóng chảy (biến áp nguồn, oát kế, nhiệt lượng kế có dây nung, cốc trên cân, giá, đồng hồ bấm giây); màn hình cân, nguồn, mặt đồng hồ để trống số; đặt bên phải các bước thí nghiệm; `% giuhinh`.
-  - III.3 nửa vòng tròn MPN, OP, OM màu đồng, hai kí hiệu ⊗ B̄ (`\VLnhantron`).
+  - III.3 nửa vòng tròn MPN, OP, OM màu đồng, hai kí hiệu ⊗ B̄ (`\VLnhantron`).; đặt bên phải câu dẫn ("như hình vẽ" → "như hình bên") để gọn trang 8 (phiên chính).

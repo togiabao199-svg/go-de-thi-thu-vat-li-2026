@@ -674,24 +674,29 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{17.6\baselineskip}
+	\NeedspaceCau{20.1\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
-		Một dây dẫn có tiết diện ngang $1{,}2~\text{mm}^2$, điện trở suất $1{,}7\cdot 10^{-8}~\Omega\cdot\text{m}$ được uốn thành nửa vòng tròn tâm O có bán kính $24$~cm như hình vẽ. Hai đoạn dây dẫn OM và OP cùng loại với dây trên. Dây OM cố định, dây OP quay quanh O sao cho P luôn tiếp xúc với cung tròn. Hệ thống đặt trong từ trường đều có độ lớn cảm ứng từ $0{,}15$~T có hướng vuông góc với mặt phẳng chứa nửa vòng tròn. Tại thời điểm ban đầu OP trùng với OM và tốc độ góc tăng đều theo thời gian. Góc $\alpha=\widehat{POM}$ mà bán kính OP quét được trong khoảng thời gian $t$ được tính theo biểu thức $\alpha=\sigma t^2$ với $\sigma$ là hằng số. Biết rằng sau $0{,}2$ giây thì dòng điện cảm ứng trong mạch có giá trị cực đại. Bỏ qua điện trở tiếp xúc giữa OP và vòng tròn. Giá trị cực đại của dòng điện là bao nhiêu ampe (kết quả làm tròn đến chữ số hàng phần mười)?
-		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				\fill[VLxanh!8] (-2.25,-0.75) rectangle (2.25,2.15);
-				\draw[VLdong!80!black,line width=1.4pt] (1.7,0) arc[start angle=0,end angle=180,radius=1.7];
-				\draw[VLdong!80!black,line width=1.4pt] (0,0)--(1.7,0) (0,0)--(45:1.7);
-				\foreach \p/\t/\v in {(0,0)/O/below,(1.7,0)/M/below right,(-1.7,0)/N/left,(45:1.7)/P/above right}{\filldraw[fill=black,draw=black] \p circle (1.6pt); \node[\v,inner sep=2pt] at \p {\t};}
-				\VLnhantron{-0.45}{1.1}
-				\node[VLxanh!85!black,right,inner sep=2pt] at (-0.32,1.12) {$\vv{B}$};
-				\VLnhantron{-0.95}{-0.45}
-				\node[VLxanh!85!black,right,inner sep=2pt] at (-0.82,-0.43) {$\vv{B}$};
-			\end{tikzpicture}
-		\end{center}
+		\begin{minipage}[c]{0.70\linewidth}
+			Một dây dẫn có tiết diện ngang $1{,}2~\text{mm}^2$, điện trở suất $1{,}7\cdot 10^{-8}~\Omega\cdot\text{m}$ được uốn thành nửa vòng tròn tâm O có bán kính $24$~cm như hình bên. Hai đoạn dây dẫn OM và OP cùng loại với dây trên. Dây OM cố định, dây OP quay quanh O sao cho P luôn tiếp xúc với cung tròn. Hệ thống đặt trong từ trường đều có độ lớn cảm ứng từ $0{,}15$~T có hướng vuông góc với mặt phẳng chứa nửa vòng tròn. Tại thời điểm ban đầu OP trùng với OM và tốc độ góc tăng đều theo thời gian. Góc $\alpha=\widehat{POM}$ mà bán kính OP quét được trong khoảng thời gian $t$ được tính theo biểu thức $\alpha=\sigma t^2$ với $\sigma$ là hằng số. Biết rằng sau $0{,}2$ giây thì dòng điện cảm ứng trong mạch có giá trị cực đại. Bỏ qua điện trở tiếp xúc giữa OP và vòng tròn. Giá trị cực đại của dòng điện là bao nhiêu ampe (kết quả làm tròn đến chữ số hàng phần mười)?
+		\end{minipage}\hfill%
+		\begin{minipage}[c]{0.28\linewidth}
+			\centering
+				\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+					\fill[VLxanh!8] (-2.25,-0.75) rectangle (2.25,2.15);
+					\draw[VLdong!80!black,line width=1.4pt] (1.7,0) arc[start angle=0,end angle=180,radius=1.7];
+					\draw[VLdong!80!black,line width=1.4pt] (0,0)--(1.7,0) (0,0)--(45:1.7);
+					\foreach \p/\t/\v in {(0,0)/O/below,(1.7,0)/M/below right,(-1.7,0)/N/left,(45:1.7)/P/above right}{\filldraw[fill=black,draw=black] \p circle (1.6pt); \node[\v,inner sep=2pt] at \p {\t};}
+					\VLnhantron{-0.45}{1.1}
+					\node[VLxanh!85!black,right,inner sep=2pt] at (-0.32,1.12) {$\vv{B}$};
+					\VLnhantron{-0.95}{-0.45}
+					\node[VLxanh!85!black,right,inner sep=2pt] at (-0.82,-0.43) {$\vv{B}$};
+				\end{tikzpicture}
+		\end{minipage}
+		\par
 		\shortans[oly]{6{,}4}
 		\loigiai{
-			Với $r=0{,}24$~m: $\Phi=B\cdot\dfrac{r^2\alpha}{2}=\dfrac{Br^2\sigma t^2}{2}\Rightarrow e=\Phi'(t)=Br^2\sigma t$. Điện trở mạch OMPO: $R_m=\dfrac{\rho\,(2r+r\alpha)}{S}=\dfrac{\rho r(2+\sigma t^2)}{S}$.
+			Với $r=0{,}24$~m, điện trở mạch OMPO là $R_m$:
+			\[\Phi=B\cdot\dfrac{r^2\alpha}{2}=\dfrac{Br^2\sigma t^2}{2}\Rightarrow e=\Phi'(t)=Br^2\sigma t;\qquad R_m=\dfrac{\rho\,(2r+r\alpha)}{S}=\dfrac{\rho r(2+\sigma t^2)}{S}.\]
 			\[I=\dfrac{e}{R_m}=\dfrac{BrS\sigma}{\rho}\cdot\dfrac{1}{\frac{2}{t}+\sigma t}\]
 			$I$ cực đại khi $\dfrac{2}{t}=\sigma t$ (Cô-si), tức $\sigma t^2=2\Rightarrow\sigma=\dfrac{2}{0{,}2^2}=50~\text{rad/s}^2$.
 			\[I_{\max}=\dfrac{0{,}15\cdot 0{,}24\cdot 1{,}2\cdot 10^{-6}\cdot 50}{1{,}7\cdot 10^{-8}}\cdot\dfrac{0{,}2}{2+2}\approx 6{,}35~\text{A}.\]
