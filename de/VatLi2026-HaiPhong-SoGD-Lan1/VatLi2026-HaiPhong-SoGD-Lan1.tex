@@ -148,7 +148,7 @@
 					% bóng phát tia X và chùm tia hình quạt
 					\filldraw[fill=gray!55,draw=gray!75,rounded corners=1pt] (1.2,3.75)--(2.1,3.75)--(1.95,3.42)--(1.35,3.42)--cycle;
 					\fill[gray!35] (1.38,3.62) rectangle (1.92,3.7);
-					\fill[orange!90!red] (1.65,3.4) ellipse (0.16 and 0.05);
+					\fill[VLdo] (1.65,3.4) ellipse (0.16 and 0.05);
 					\fill[yellow!80!orange,opacity=0.5] (1.65,3.38)--(1.2,1.98)--(2.25,1.88)--cycle;
 					\foreach \i in {1,...,6}{\draw[yellow!70!orange,semithick] (1.65,3.38)--({1.25+0.17*\i},{1.97-0.016*\i});}
 					\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.75,2.05)--(2.95,2.75);
@@ -399,7 +399,7 @@
 				\fill[gray!55] (3.05,0.95) ellipse (1.25 and 0.3);
 				\shade[left color=gray!55,right color=gray!45,middle color=gray!15] (1.8,0.95) rectangle (4.3,1.0);
 				% cửa lò có lửa
-				\shade[inner color=yellow!80,outer color=orange!85!red] (2.3,1.15) rectangle (3.8,2.05);
+				\shade[inner color=yellow!75,outer color=VLdo] (2.3,1.15) rectangle (3.8,2.05);
 				\draw[gray!60!black] (2.3,1.15) rectangle (3.8,2.05);
 				\draw[gray!55!black,thin] (1.8,2.05)--(2.3,2.05) (3.8,2.05)--(4.3,2.05) (1.8,1.6)--(2.3,1.6) (3.8,1.6)--(4.3,1.6);
 				% các đầu đốt
@@ -409,10 +409,10 @@
 				% miệng lò, đồng nóng chảy
 				\fill[gray!35] (3.05,2.55) ellipse (1.25 and 0.32);
 				\draw[gray!60] (3.05,2.55) ellipse (1.25 and 0.32);
-				\shade[inner color=yellow!90,outer color=orange!90!red] (3.05,2.57) ellipse (0.78 and 0.18);
-				\VLngonlua{3.05}{2.55}{1.7}
-				\VLngonlua{2.75}{2.58}{1.0}
-				\VLngonlua{3.35}{2.58}{1.1}
+				\shade[inner color=yellow!75,outer color=VLdo] (3.05,2.57) ellipse (0.78 and 0.18);
+				\begin{scope}[shift={(3.05,2.55)},scale=1.7]\shade[inner color=yellow!60,outer color=VLdo] (0,0) .. controls (-0.2,0.04) and (-0.16,0.3) .. (0,0.58) .. controls (0.16,0.3) and (0.2,0.04) .. (0,0)--cycle;\fill[yellow!40!white] (0,0.04) .. controls (-0.08,0.06) and (-0.06,0.2) .. (0,0.32) .. controls (0.06,0.2) and (0.08,0.06) .. (0,0.04)--cycle;\end{scope}
+				\begin{scope}[shift={(2.75,2.58)},scale=1.0]\shade[inner color=yellow!60,outer color=VLdo] (0,0) .. controls (-0.2,0.04) and (-0.16,0.3) .. (0,0.58) .. controls (0.16,0.3) and (0.2,0.04) .. (0,0)--cycle;\fill[yellow!40!white] (0,0.04) .. controls (-0.08,0.06) and (-0.06,0.2) .. (0,0.32) .. controls (0.06,0.2) and (0.08,0.06) .. (0,0.04)--cycle;\end{scope}
+				\begin{scope}[shift={(3.35,2.58)},scale=1.1]\shade[inner color=yellow!60,outer color=VLdo] (0,0) .. controls (-0.2,0.04) and (-0.16,0.3) .. (0,0.58) .. controls (0.16,0.3) and (0.2,0.04) .. (0,0)--cycle;\fill[yellow!40!white] (0,0.04) .. controls (-0.08,0.06) and (-0.06,0.2) .. (0,0.32) .. controls (0.06,0.2) and (0.08,0.06) .. (0,0.04)--cycle;\end{scope}
 				% chuông đồng trên khuôn
 				\fill[VLgo!60!gray] (5.55,0.5) ellipse (0.9 and 0.25);
 				\shade[top color=VLgo!55!gray,bottom color=VLgo!75!gray] (4.65,0.5) rectangle (6.45,0.75);
@@ -713,35 +713,39 @@
 	\begin{ex}%[VL12-C4-VD]
 		Tàu ngầm hạt nhân sử dụng năng lượng từ phản ứng phân hạch $^{235}_{\phantom{2}92}\text{U}$. Biết mỗi phản ứng phân hạch tỏa ra năng lượng $200$~MeV. Hiệu suất của lò phản ứng là $25\,\%$. Cho khối lượng mol của nguyên tử $^{235}_{\phantom{2}92}\text{U}$ là $235$~g/mol.
 		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
-				% tháp chỉ huy
-				\shade[top color=black!55,bottom color=black!80] (1.45,1.72)--(1.55,2.3)--(2.1,2.3)--(2.25,1.72)--cycle;
-				\draw[black!70,semithick] (1.65,2.3)--(1.65,2.6) (1.75,2.3)--(1.75,2.5) (1.85,2.3)--(1.85,2.55);
-				\fill[black!75] (1.2,2.0)--(2.5,2.0)--(2.45,2.06)--(1.25,2.06)--cycle;
-				% bánh lái, chân vịt
-				\shade[top color=black!55,bottom color=black!80] (5.0,1.25)--(5.25,1.95)--(5.45,1.95)--(5.4,1.2)--cycle;
-				\shade[top color=black!55,bottom color=black!80] (5.0,0.95)--(5.25,0.3)--(5.45,0.3)--(5.4,1.0)--cycle;
-				\fill[VLdong!70!yellow!70!black] (5.62,1.08) ellipse (0.06 and 0.32);
-				\fill[VLdong!60!yellow!60!black] (5.62,1.08) ellipse (0.15 and 0.07);
-				% thân tàu
-				\shade[top color=black!55,bottom color=black!85,middle color=black!65] (0,1.0) .. controls (0,1.55) and (0.55,1.75) .. (1.3,1.77)--(3.9,1.75) .. controls (4.6,1.7) and (5.05,1.3) .. (5.55,1.15)--(5.55,0.98) .. controls (5.05,0.85) and (4.6,0.38) .. (3.9,0.32)--(1.3,0.27) .. controls (0.55,0.28) and (0,0.45) .. (0,1.0)--cycle;
-				% mặt cắt bên trong
-				\fill[VLgo!40!black!70] (0.35,1.0) .. controls (0.35,1.38) and (0.7,1.55) .. (1.3,1.57)--(3.85,1.55) .. controls (4.2,1.5) and (4.3,1.2) .. (4.3,1.0) .. controls (4.3,0.75) and (4.15,0.55) .. (3.85,0.5)--(1.3,0.47) .. controls (0.7,0.48) and (0.35,0.65) .. (0.35,1.0)--cycle;
-				\foreach \x in {0.95,1.55,2.3,3.4}{\draw[black!80,semithick] (\x,0.5)--(\x,1.56);}
-				\draw[black!80,semithick] (0.45,1.0)--(1.55,1.0) (2.3,0.95)--(4.25,0.95);
-				\foreach \y in {0.62,0.78,1.15,1.3,1.45}{\draw[VLgo!60,thin] (0.55,\y)--(0.9,\y);}
-				\foreach \x/\y in {1.05/0.6,1.25/0.6,1.05/1.1,1.3/1.15,2.45/0.6,2.75/0.62,3.05/0.6,3.55/0.62,3.85/0.6,3.6/1.1,3.9/1.1}{\filldraw[fill=VLgo!70!black,draw=VLgo!40!black,very thin] (\x,\y) rectangle ++(0.18,0.22);}
-				% lò phản ứng
-				\shade[inner color=yellow!85,outer color=orange!90!red,rounded corners=2pt] (1.7,0.58) rectangle (2.15,1.48);
-				\draw[gray!60!black,thin,rounded corners=2pt] (1.7,0.58) rectangle (2.15,1.48);
-				% phòng điều khiển
-				\fill[VLxanh!30!black] (2.4,1.05) rectangle (3.3,1.5);
-				\foreach \x in {2.45,2.75,3.05}{\fill[VLxanh!55!white] (\x,1.25) rectangle ++(0.2,0.18);}
-				\foreach \x in {2.6,2.9,3.2}{\fill[black!85] (\x,1.12) circle (0.06);}
-			\end{tikzpicture}
-		\end{center}
-		Nếu công suất của lò phản ứng hạt nhân trên tàu là $400$~MW thì khối lượng $^{235}_{\phantom{2}92}\text{U}$ cần dùng trong một ngày bằng bao nhiêu kg (làm tròn kết quả đến chữ số hàng phần trăm)?
+		\par\noindent
+		\begin{minipage}[c]{0.6\linewidth}
+			Nếu công suất của lò phản ứng hạt nhân trên tàu là $400$~MW thì khối lượng $^{235}_{\phantom{2}92}\text{U}$ cần dùng trong một ngày bằng bao nhiêu kg (làm tròn kết quả đến chữ số hàng phần trăm)?
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.38\linewidth}
+			\centering
+				\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
+					% tháp chỉ huy
+					\shade[top color=black!55,bottom color=black!80] (1.45,1.72)--(1.55,2.3)--(2.1,2.3)--(2.25,1.72)--cycle;
+					\draw[black!70,semithick] (1.65,2.3)--(1.65,2.6) (1.75,2.3)--(1.75,2.5) (1.85,2.3)--(1.85,2.55);
+					\fill[black!75] (1.2,2.0)--(2.5,2.0)--(2.45,2.06)--(1.25,2.06)--cycle;
+					% bánh lái, chân vịt
+					\shade[top color=black!55,bottom color=black!80] (5.0,1.25)--(5.25,1.95)--(5.45,1.95)--(5.4,1.2)--cycle;
+					\shade[top color=black!55,bottom color=black!80] (5.0,0.95)--(5.25,0.3)--(5.45,0.3)--(5.4,1.0)--cycle;
+					\fill[VLdong!70!yellow!70!black] (5.62,1.08) ellipse (0.06 and 0.32);
+					\fill[VLdong!60!yellow!60!black] (5.62,1.08) ellipse (0.15 and 0.07);
+					% thân tàu
+					\shade[top color=black!55,bottom color=black!85,middle color=black!65] (0,1.0) .. controls (0,1.55) and (0.55,1.75) .. (1.3,1.77)--(3.9,1.75) .. controls (4.6,1.7) and (5.05,1.3) .. (5.55,1.15)--(5.55,0.98) .. controls (5.05,0.85) and (4.6,0.38) .. (3.9,0.32)--(1.3,0.27) .. controls (0.55,0.28) and (0,0.45) .. (0,1.0)--cycle;
+					% mặt cắt bên trong
+					\fill[VLgo!40!black!70] (0.35,1.0) .. controls (0.35,1.38) and (0.7,1.55) .. (1.3,1.57)--(3.85,1.55) .. controls (4.2,1.5) and (4.3,1.2) .. (4.3,1.0) .. controls (4.3,0.75) and (4.15,0.55) .. (3.85,0.5)--(1.3,0.47) .. controls (0.7,0.48) and (0.35,0.65) .. (0.35,1.0)--cycle;
+					\foreach \x in {0.95,1.55,2.3,3.4}{\draw[black!80,semithick] (\x,0.5)--(\x,1.56);}
+					\draw[black!80,semithick] (0.45,1.0)--(1.55,1.0) (2.3,0.95)--(4.25,0.95);
+					\foreach \y in {0.62,0.78,1.15,1.3,1.45}{\draw[VLgo!60,thin] (0.55,\y)--(0.9,\y);}
+					\foreach \x/\y in {1.05/0.6,1.25/0.6,1.05/1.1,1.3/1.15,2.45/0.6,2.75/0.62,3.05/0.6,3.55/0.62,3.85/0.6,3.6/1.1,3.9/1.1}{\filldraw[fill=VLgo!70!black,draw=VLgo!40!black,very thin] (\x,\y) rectangle ++(0.18,0.22);}
+					% lò phản ứng
+					\shade[inner color=yellow!75,outer color=VLdo,rounded corners=2pt] (1.7,0.58) rectangle (2.15,1.48);
+					\draw[gray!60!black,thin,rounded corners=2pt] (1.7,0.58) rectangle (2.15,1.48);
+					% phòng điều khiển
+					\fill[VLxanh!30!black] (2.4,1.05) rectangle (3.3,1.5);
+					\foreach \x in {2.45,2.75,3.05}{\fill[VLxanh!55!white] (\x,1.25) rectangle ++(0.2,0.18);}
+					\foreach \x in {2.6,2.9,3.2}{\fill[black!85] (\x,1.12) circle (0.06);}
+				\end{tikzpicture}
+		\end{minipage}
 		\par
 		\shortans[oly]{1{,}69}
 		\loigiai{
