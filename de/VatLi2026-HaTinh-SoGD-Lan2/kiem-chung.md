@@ -47,7 +47,7 @@ Nguồn: `kho/goc/Ha Tinh - So GDDT - Lan 2.docx` (Sở GD&ĐT Hà Tĩnh, mã đ
   - II.4 pin hạt nhân C-14 nhiều lớp, đủ 6 chú thích (ý a dựa vào chú thích lớp 5).
   - III.2 chu trình hình bình hành (mỗi quá trình một màu, vùng chu trình tô `VLla!35`).
   - III.6 máy đếm Geiger cầm tay + ống đếm, bộ đếm, loa (màn hình để trống; bỏ chữ hiệu "S.E.A.P.", "PM-141A Radiation Detector").
-- Macro riêng khai báo trong file đề: `\VLchamtron` (⊙ có vòng, cặp với `\VLnhantron`), `\VLtiaset`, `\VLpindung`, `\VLbanhrang`, `\VLoto`, `\VLbanhxe`, `\VLrotor`.
+- `\VLchamtron` (⊙ có vòng, cặp với `\VLnhantron`) phiên chính đã chuyển vào `preamble-vatli-hinh.tex`. Macro riêng khai báo trong file đề: `\VLtiaset`, `\VLpindung`, `\VLbanhrang`, `\VLoto`, `\VLbanhxe`, `\VLrotor`.
 - Ảnh so ở `so-hinh/`.
 
 ## Dàn trang

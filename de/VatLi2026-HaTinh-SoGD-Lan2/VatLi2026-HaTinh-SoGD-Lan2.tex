@@ -10,8 +10,6 @@
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
 %--- Macro riêng của đề
-% dấu ⊙ có vòng tròn (từ trường hướng ra), bán kính 0,11 cm (cặp với \VLnhantron): \VLchamtron{x}{y}
-\newcommand{\VLchamtron}[2]{\draw[VLxanh!85!black,semithick] (#1,#2) circle (0.11); \fill[VLxanh!85!black] (#1,#2) circle (0.035);}
 % biểu tượng tia sét (điện năng), tâm (x,y), cao khoảng 0,4*#3: \VLtiaset{x}{y}{tỉ lệ}{màu}
 \newcommand{\VLtiaset}[4]{\fill[#4,shift={(#1,#2)},scale=#3] (0.06,0.2)--(-0.1,-0.02)--(0,-0.02)--(-0.06,-0.2)--(0.1,0.03)--(0,0.03)--cycle;}
 % pin dựng đứng (cực + ở trên), góc trái dưới (x,y), rộng #3, cao #4: \VLpindung{x}{y}{rộng}{cao}
