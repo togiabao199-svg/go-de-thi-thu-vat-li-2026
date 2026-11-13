@@ -9,14 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% nhiệt kế thủy tinh thẳng đứng (hình vẽ sơ đồ): \VLnhietke{x}{y đáy bầu}{chiều cao}{chiều cao cột chất lỏng}
-\newcommand{\VLnhietke}[4]{%
-	\begin{scope}[shift={(#1,#2)}]
-		\filldraw[fill=white,draw=black!70,thin,rounded corners=0.6pt] (-0.07,0.08) rectangle (0.07,#3);
-		\fill[VLdo!85!black] (-0.025,0.1) rectangle (0.025,#4);
-		\shade[ball color=VLdo!90] (0,0.08) circle (0.1);
-		\foreach \VLk in {0.3,0.42,...,#3}{\draw[black!60,very thin] (-0.07,\VLk)--(-0.02,\VLk);}
-	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT CỤM HH -- NSL -- TD1 -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 

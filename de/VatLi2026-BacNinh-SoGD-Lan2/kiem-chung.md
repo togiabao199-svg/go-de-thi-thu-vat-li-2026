@@ -33,6 +33,6 @@ Nguồn: `kho/goc/Bac Ninh - So GDDT - Lan 2.docx` (Sở GD&ĐT Bắc Ninh, mã 
 - Cho biết: "N_A = 6,02·10²³ mol⁻¹" giữ đơn vị mol⁻¹ theo gốc.
 
 ## Trình bày
-- Đề gốc đánh số từng phần từ câu 1 (không cần đánh số lại). Hai khối "Dùng thông tin sau cho câu 1 và câu 2", "…câu 5 và câu 6" giữ nguyên cách trình bày (đoạn riêng ngoài câu, số câu tham chiếu bằng `\ref`). Khối câu 5–6 đặt hình bên cạnh chữ để gọn trang.
-- Hình: 9 hình gốc vẽ lại bằng TikZ (I.4 khung dây quay + đồ thị Φ(t); I.9 khung ABCD, nam châm điện, biến trở; II.1 điện kế – cuộn dây – nam châm; II.2 bộ dụng cụ đo nhiệt hóa hơi; II.3 khinh khí cầu; khoang máy bay; III.3 máy biến áp + đồ thị u₁(t); III.4 khung dây trên giá; máy Gamma Knife). Ảnh so ở `so-hinh/` (hình khoang máy bay đánh số III.0; hình Gamma Knife đi kèm III.4 vì đứng sau câu 4, ghép ảnh gốc chung).
+- Đề gốc đánh số từng phần từ câu 1 (không cần đánh số lại). Hai khối "Dùng thông tin sau cho câu 1 và câu 2", "…câu 5 và câu 6" đặt trong câu đầu của cặp (câu 1, câu 5), mở đầu bằng chữ nghiêng "Dùng thông tin sau cho câu~\ref{..} và câu~\ref{..}:" như đề Cà Mau – Lần 1 cùng lô, để `dan_trang.py` đo, giữ trọn khối với câu hỏi (phiên chính thống nhất). Khối câu 5–6 đặt hình bên cạnh chữ để gọn trang.
+- Hình: 9 hình gốc vẽ lại bằng TikZ (I.4 khung dây quay + đồ thị Φ(t); I.9 khung ABCD, nam châm điện, biến trở; II.1 điện kế – cuộn dây – nam châm; II.2 bộ dụng cụ đo nhiệt hóa hơi; II.3 khinh khí cầu; III.1 khoang máy bay; III.3 máy biến áp + đồ thị u₁(t); III.4 khung dây trên giá; III.5 máy Gamma Knife). Ảnh so ở `so-hinh/`.
 - Hình Gamma Knife bỏ dòng chữ quảng cáo tiếng Anh "Treatment without an incision" của ảnh gốc.

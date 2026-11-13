@@ -9,16 +9,6 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% vòng dây quấn quanh một trụ thẳng đứng của lõi máy biến áp (câu III.3): nửa sau (vẽ trước lõi) / nửa trước (vẽ sau lõi)
-% \BNvongsau{tâm x}{y vòng dưới}{y vòng trên}{số khoảng}, \BNvongtruoc{...} cùng tham số
-\newcommand{\BNvongsau}[4]{%
-	\foreach \BNi in {0,...,#4}{\pgfmathsetmacro{\BNy}{#2+(#3-#2)*\BNi/#4}
-		\draw[black!80,line width=2.4pt] (#1-0.52,\BNy) arc[start angle=180,end angle=0,x radius=0.52,y radius=0.12];
-		\draw[gray!45,line width=1.5pt] (#1-0.52,\BNy) arc[start angle=180,end angle=0,x radius=0.52,y radius=0.12];}}
-\newcommand{\BNvongtruoc}[4]{%
-	\foreach \BNi in {0,...,#4}{\pgfmathsetmacro{\BNy}{#2+(#3-#2)*\BNi/#4}
-		\draw[black!80,line width=2.4pt] (#1-0.52,\BNy) arc[start angle=180,end angle=360,x radius=0.52,y radius=0.12];
-		\draw[gray!45,line width=1.5pt] (#1-0.52,\BNy) arc[start angle=180,end angle=360,x radius=0.52,y radius=0.12];}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT BẮC NINH -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -592,51 +582,50 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{23.5\baselineskip}
+	\NeedspaceCau{23.4\baselineskip}
 	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-BacNinh-SoGD-Lan2-3]
 
-	\noindent\textit{Dùng thông tin sau cho câu \ref{BN-III-1} và câu \ref{BN-III-2}:} Một máy bay vận hành thử để kiểm tra kỹ thuật của hệ thống điều khiển môi trường ECS (Environmental Control System) trên cabin. Biết máy bay có thể tích không gian trống trong cabin là $200~\text{m}^3$. Khi ở mặt đất, không khí trong cabin có nhiệt độ $27\,^\circ\text{C}$ và áp suất $101$~kPa. Coi việc hít thở của những người trên máy bay không làm ảnh hưởng đến khối không khí trong cabin, không khí trong cabin và không khí tươi ở ngoài máy bay đều là khí lí tưởng có khối lượng mol giống nhau và không đổi trong quá trình bay.
-	\begin{center}
-		\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
-			\begin{scope}
-				\clip (-2.4,-1.8) rectangle (2.4,1.8);
-				\fill[gray!12] (-2.4,-1.8) rectangle (2.4,1.8);
-				% trần: dải đèn giữa
-				\shade[top color=white,bottom color=gray!20] (-1.15,1.8)--(1.15,1.8)--(0.42,0.88)--(-0.42,0.88)--cycle;
-				\foreach \t in {0.2,0.4,0.6,0.8}{\draw[gray!45,thin] ($(-1.15,1.8)!\t!(-0.42,0.88)$)--($(1.15,1.8)!\t!(0.42,0.88)$);}
-				% khoang hành lí hai bên
-				\shade[top color=gray!8,bottom color=gray!35] (-2.4,1.8)--(-1.15,1.8)--(-0.42,0.88)--(-0.48,0.66)--(-2.4,0.95)--cycle;
-				\shade[top color=gray!8,bottom color=gray!35] (2.4,1.8)--(1.15,1.8)--(0.42,0.88)--(0.48,0.66)--(2.4,0.95)--cycle;
-				\draw[gray!60,thin] (-2.4,1.15)--(-0.46,0.74) (2.4,1.15)--(0.46,0.74);
-				\foreach \t in {0.12,0.3,0.5,0.66,0.78}{\draw[gray!55,very thin] ($(-2.4,1.8)!\t!(-0.42,0.88)$)--($(-2.4,0.95)!\t!(-0.48,0.66)$) ($(2.4,1.8)!\t!(0.42,0.88)$)--($(2.4,0.95)!\t!(0.48,0.66)$);}
-				% vách hai bên, cửa sổ
-				\fill[gray!25] (-2.4,0.95)--(-0.48,0.66)--(-0.48,0.2)--(-2.4,-0.1)--cycle;
-				\fill[gray!25] (2.4,0.95)--(0.48,0.66)--(0.48,0.2)--(2.4,-0.1)--cycle;
-				% vách cuối khoang
-				\fill[gray!50] (-0.48,0.0) rectangle (0.48,0.88);
-				\fill[black!70] (-0.38,0.62) rectangle (0.38,0.8);
-				\fill[gray!35] (-0.22,0.0) rectangle (0.22,0.58);
-				\foreach \y in {0.12,0.24,0.36,0.48}{\draw[gray!60,very thin] (-0.2,\y)--(0.2,\y);}
-				% lối đi
-				\shade[top color=gray!45,bottom color=gray!70] (-0.5,-1.8)--(0.5,-1.8)--(0.14,0.02)--(-0.14,0.02)--cycle;
-				\draw[gray!30,thin] (0,-1.8)--(0,0.02);
-				% các dãy ghế (vẽ từ xa đến gần)
-				\foreach \k in {13,...,0}{
-					\pgfmathsetmacro{\z}{0.82+0.4*\k}
-					\foreach \X in {-0.78,-1.42,-2.06,0.78,1.42,2.06}{
-						\pgfmathsetmacro{\xa}{(\X-0.31)/\z}\pgfmathsetmacro{\xb}{(\X+0.31)/\z}
-						\pgfmathsetmacro{\ya}{0.3-0.95/\z}\pgfmathsetmacro{\yb}{0.3-2.9/\z}
-						\shade[top color=black!30,bottom color=black!90,rounded corners=6pt/\z] (\xa,\yb) rectangle (\xb,\ya);
-						\draw[black!85,very thin,rounded corners=6pt/\z] (\xa,\yb) rectangle (\xb,\ya);}}
-			\end{scope}
-			\draw[gray!60] (-2.4,-1.8) rectangle (2.4,1.8);
-		\end{tikzpicture}
-	\end{center}
-
 	\begin{ex}%[VL12-C2-VD]
 		\label{BN-III-1}
+		\textit{Dùng thông tin sau cho câu~\ref{BN-III-1} và câu~\ref{BN-III-2}:} Một máy bay vận hành thử để kiểm tra kỹ thuật của hệ thống điều khiển môi trường ECS (Environmental Control System) trên cabin. Biết máy bay có thể tích không gian trống trong cabin là $200~\text{m}^3$. Khi ở mặt đất, không khí trong cabin có nhiệt độ $27\,^\circ\text{C}$ và áp suất $101$~kPa. Coi việc hít thở của những người trên máy bay không làm ảnh hưởng đến khối không khí trong cabin, không khí trong cabin và không khí tươi ở ngoài máy bay đều là khí lí tưởng có khối lượng mol giống nhau và không đổi trong quá trình bay.
+		\begin{center}
+			\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
+				\begin{scope}
+					\clip (-2.4,-1.8) rectangle (2.4,1.8);
+					\fill[gray!12] (-2.4,-1.8) rectangle (2.4,1.8);
+					% trần: dải đèn giữa
+					\shade[top color=white,bottom color=gray!20] (-1.15,1.8)--(1.15,1.8)--(0.42,0.88)--(-0.42,0.88)--cycle;
+					\foreach \t in {0.2,0.4,0.6,0.8}{\draw[gray!45,thin] ($(-1.15,1.8)!\t!(-0.42,0.88)$)--($(1.15,1.8)!\t!(0.42,0.88)$);}
+					% khoang hành lí hai bên
+					\shade[top color=gray!8,bottom color=gray!35] (-2.4,1.8)--(-1.15,1.8)--(-0.42,0.88)--(-0.48,0.66)--(-2.4,0.95)--cycle;
+					\shade[top color=gray!8,bottom color=gray!35] (2.4,1.8)--(1.15,1.8)--(0.42,0.88)--(0.48,0.66)--(2.4,0.95)--cycle;
+					\draw[gray!60,thin] (-2.4,1.15)--(-0.46,0.74) (2.4,1.15)--(0.46,0.74);
+					\foreach \t in {0.12,0.3,0.5,0.66,0.78}{\draw[gray!55,very thin] ($(-2.4,1.8)!\t!(-0.42,0.88)$)--($(-2.4,0.95)!\t!(-0.48,0.66)$) ($(2.4,1.8)!\t!(0.42,0.88)$)--($(2.4,0.95)!\t!(0.48,0.66)$);}
+					% vách hai bên, cửa sổ
+					\fill[gray!25] (-2.4,0.95)--(-0.48,0.66)--(-0.48,0.2)--(-2.4,-0.1)--cycle;
+					\fill[gray!25] (2.4,0.95)--(0.48,0.66)--(0.48,0.2)--(2.4,-0.1)--cycle;
+					% vách cuối khoang
+					\fill[gray!50] (-0.48,0.0) rectangle (0.48,0.88);
+					\fill[black!70] (-0.38,0.62) rectangle (0.38,0.8);
+					\fill[gray!35] (-0.22,0.0) rectangle (0.22,0.58);
+					\foreach \y in {0.12,0.24,0.36,0.48}{\draw[gray!60,very thin] (-0.2,\y)--(0.2,\y);}
+					% lối đi
+					\shade[top color=gray!45,bottom color=gray!70] (-0.5,-1.8)--(0.5,-1.8)--(0.14,0.02)--(-0.14,0.02)--cycle;
+					\draw[gray!30,thin] (0,-1.8)--(0,0.02);
+					% các dãy ghế (vẽ từ xa đến gần)
+					\foreach \k in {13,...,0}{
+						\pgfmathsetmacro{\z}{0.82+0.4*\k}
+						\foreach \X in {-0.78,-1.42,-2.06,0.78,1.42,2.06}{
+							\pgfmathsetmacro{\xa}{(\X-0.31)/\z}\pgfmathsetmacro{\xb}{(\X+0.31)/\z}
+							\pgfmathsetmacro{\ya}{0.3-0.95/\z}\pgfmathsetmacro{\yb}{0.3-2.9/\z}
+							\shade[top color=black!30,bottom color=black!90,rounded corners=6pt/\z] (\xa,\yb) rectangle (\xb,\ya);
+							\draw[black!85,very thin,rounded corners=6pt/\z] (\xa,\yb) rectangle (\xb,\ya);}}
+				\end{scope}
+				\draw[gray!60] (-2.4,-1.8) rectangle (2.4,1.8);
+			\end{tikzpicture}
+		\end{center}
 		Khi máy bay bay ổn định, không khí trong cabin được duy trì ở nhiệt độ $22\,^\circ\text{C}$ và áp suất $80$~kPa. Hệ thống ECS thực hiện làm mới khí trong cabin. Trung bình cứ mỗi $3$ phút, hệ thống thay thế $50\%$ lượng không khí trong cabin bằng một lượng không khí tươi tương đương (cùng khối lượng). Biết không khí tươi ở ngoài máy bay có nhiệt độ $-50\,^\circ\text{C}$ và áp suất $25$~kPa. Trong mỗi chu kì $3$ phút, thể tích lượng không khí tươi ở ngoài máy bay được hút vào trong cabin là bao nhiêu mét khối ($\text{m}^3$) (làm tròn kết quả đến chữ số hàng đơn vị)?
 		\par
 		\shortans[oly]{242}
@@ -664,8 +653,8 @@
 			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
 				% Hình 1: máy biến áp
 				\begin{scope}[scale=1.2]
-					\BNvongsau{0.35}{0.5}{1.7}{6}
-					\BNvongsau{2.15}{0.65}{1.55}{4}
+					\VLvongsau{0.35}{0.5}{1.7}{6}
+					\VLvongsau{2.15}{0.65}{1.55}{4}
 					% lõi thép
 					\fill[gray!70] (2.5,0)--(2.68,-0.14)--(2.68,2.06)--(2.5,2.2)--cycle;
 					\fill[gray!60] (0,0)--(0.18,-0.14)--(2.68,-0.14)--(2.5,0)--cycle;
@@ -674,8 +663,8 @@
 					\fill[gray!65] (0.7,0.55)--(0.85,0.67)--(0.85,1.65)--(0.7,1.65)--cycle;
 					\fill[gray!58] (0.7,1.65)--(0.85,1.53)--(1.8,1.53)--(1.8,1.65)--cycle;
 					\draw[black!60,thin] (0,0) rectangle (2.5,2.2) (0.7,0.55) rectangle (1.8,1.65);
-					\BNvongtruoc{0.35}{0.5}{1.7}{6}
-					\BNvongtruoc{2.15}{0.65}{1.55}{4}
+					\VLvongtruoc{0.35}{0.5}{1.7}{6}
+					\VLvongtruoc{2.15}{0.65}{1.55}{4}
 					% đầu dây
 					\draw[black!80,line width=2.4pt] (-0.17,1.7)--(-0.5,2.0) (-0.17,0.5)--(-0.55,0.25) (2.67,1.55)--(3.05,1.75) (2.67,0.65)--(3.05,0.45);
 					\draw[gray!45,line width=1.5pt] (-0.17,1.7)--(-0.5,2.0) (-0.17,0.5)--(-0.55,0.25) (2.67,1.55)--(3.05,1.75) (2.67,0.65)--(3.05,0.45);
@@ -745,42 +734,40 @@
 		}
 	\end{ex}
 
-	\noindent
-	\begin{minipage}[c]{0.68\linewidth}
-		\textit{Dùng thông tin sau cho câu \ref{BN-III-5} và câu \ref{BN-III-6}:} Xạ phẫu Gamma Knife (hay phẫu thuật sử dụng dao Gamma) là phương pháp điều trị ung thư hiện đại sử dụng bức xạ hội tụ. Một máy Gamma Knife sử dụng $192$ nguồn phóng xạ Cobalt-60 ${}^{60}_{27}\text{Co}$ giống nhau có chu kì bán rã là $5{,}27$ năm. Ở thời điểm bắt đầu lắp đặt máy, khối lượng ${}^{60}_{27}\text{Co}$ có trong mỗi nguồn là $0{,}17$~g. Khối lượng mol của ${}^{60}_{27}\text{Co}$ là $60$~g/mol. Coi $1$ năm có $365$ ngày.
-	\end{minipage}\hfill
-	\begin{minipage}[c]{0.3\linewidth}
-		\centering
-			\begin{tikzpicture}[scale=0.66,line join=round,line cap=round,font=\footnotesize]
-				\begin{scope}
-					\clip (-2.3,-1.75) rectangle (2.3,1.75);
-					\shade[top color=gray!45,bottom color=black!75] (-2.3,-1.75) rectangle (2.3,1.75);
-					% thiết bị phòng điều trị
-					\fill[gray!55] (-2.3,0.1) rectangle (-1.75,1.1);
-					\fill[gray!35] (-2.2,0.6) rectangle (-1.85,0.95);
-					\fill[gray!60] (-2.3,-1.75) rectangle (-1.8,-0.2);
-					% vỏ máy
-					\shade[inner color=gray!45,outer color=black!70] (1.0,0.05) circle (2.35);
-					\fill[gray!55] (1.0,0.05) circle (2.0);
-					\shade[inner color=gray!30,outer color=gray!75] (1.0,0.05) circle (1.85);
-					\foreach \g in {0,15,...,345}{\fill[black!75] ($(1.0,0.05)+(\g:1.93)$) circle (0.04);}
-					\fill[black!85] (1.0,0.05) circle (1.5);
-					\draw[gray!60,thick] (1.0,0.05) circle (1.5);
-					% các chùm tia gamma hội tụ
-					\foreach \g in {0,7.5,...,355}{\draw[white,opacity=0.55,very thin] ($(1.0,0.05)+(\g:1.45)$)--($(0.75,0.05)+(\g:0.12)$);}
-					\shade[inner color=white,outer color=gray!60,opacity=0.85] (0.75,0.05) circle (0.42);
-					% bệnh nhân
-					\fill[black!90] (-1.55,-1.75) .. controls (-1.6,-1.0) and (-1.5,-0.5) .. (-1.2,-0.25) .. controls (-1.1,0.35) and (-0.75,0.65) .. (-0.35,0.6) .. controls (0.0,0.55) and (0.15,0.25) .. (0.12,-0.05) .. controls (0.25,-0.25) and (0.2,-0.4) .. (0.05,-0.45) .. controls (0.05,-0.8) and (-0.2,-0.95) .. (-0.45,-1.0) .. controls (-0.5,-1.3) and (-0.4,-1.6) .. (-0.3,-1.75)--cycle;
-					\shade[left color=white,right color=gray!50,opacity=0.45] (-1.2,-0.3) .. controls (-0.6,0.5) and (0.2,0.45) .. (0.55,0.2)--(0.6,-0.05) .. controls (0.2,0.1) and (-0.6,0.0) .. (-1.2,-0.3)--cycle;
-				\end{scope}
-				\draw[gray!60] (-2.3,-1.75) rectangle (2.3,1.75);
-			\end{tikzpicture}
-	\end{minipage}
-	\par\medskip
-
-	\NeedspaceCau{3.6\baselineskip}
+	\NeedspaceCau{10.5\baselineskip}
 	\begin{ex}%[VL12-C4-VD]
 		\label{BN-III-5}
+		\begin{minipage}[t]{0.68\linewidth}
+			\textit{Dùng thông tin sau cho câu~\ref{BN-III-5} và câu~\ref{BN-III-6}:} Xạ phẫu Gamma Knife (hay phẫu thuật sử dụng dao Gamma) là phương pháp điều trị ung thư hiện đại sử dụng bức xạ hội tụ. Một máy Gamma Knife sử dụng $192$ nguồn phóng xạ Cobalt-60 ${}^{60}_{27}\text{Co}$ giống nhau có chu kì bán rã là $5{,}27$ năm. Ở thời điểm bắt đầu lắp đặt máy, khối lượng ${}^{60}_{27}\text{Co}$ có trong mỗi nguồn là $0{,}17$~g. Khối lượng mol của ${}^{60}_{27}\text{Co}$ là $60$~g/mol. Coi $1$ năm có $365$ ngày.
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.2\linewidth}
+			\centering
+				\begin{tikzpicture}[scale=0.66,baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
+					\begin{scope}
+						\clip (-2.3,-1.75) rectangle (2.3,1.75);
+						\shade[top color=gray!45,bottom color=black!75] (-2.3,-1.75) rectangle (2.3,1.75);
+						% thiết bị phòng điều trị
+						\fill[gray!55] (-2.3,0.1) rectangle (-1.75,1.1);
+						\fill[gray!35] (-2.2,0.6) rectangle (-1.85,0.95);
+						\fill[gray!60] (-2.3,-1.75) rectangle (-1.8,-0.2);
+						% vỏ máy
+						\shade[inner color=gray!45,outer color=black!70] (1.0,0.05) circle (2.35);
+						\fill[gray!55] (1.0,0.05) circle (2.0);
+						\shade[inner color=gray!30,outer color=gray!75] (1.0,0.05) circle (1.85);
+						\foreach \g in {0,15,...,345}{\fill[black!75] ($(1.0,0.05)+(\g:1.93)$) circle (0.04);}
+						\fill[black!85] (1.0,0.05) circle (1.5);
+						\draw[gray!60,thick] (1.0,0.05) circle (1.5);
+						% các chùm tia gamma hội tụ
+						\foreach \g in {0,7.5,...,355}{\draw[white,opacity=0.55,very thin] ($(1.0,0.05)+(\g:1.45)$)--($(0.75,0.05)+(\g:0.12)$);}
+						\shade[inner color=white,outer color=gray!60,opacity=0.85] (0.75,0.05) circle (0.42);
+						% bệnh nhân
+						\fill[black!90] (-1.55,-1.75) .. controls (-1.6,-1.0) and (-1.5,-0.5) .. (-1.2,-0.25) .. controls (-1.1,0.35) and (-0.75,0.65) .. (-0.35,0.6) .. controls (0.0,0.55) and (0.15,0.25) .. (0.12,-0.05) .. controls (0.25,-0.25) and (0.2,-0.4) .. (0.05,-0.45) .. controls (0.05,-0.8) and (-0.2,-0.95) .. (-0.45,-1.0) .. controls (-0.5,-1.3) and (-0.4,-1.6) .. (-0.3,-1.75)--cycle;
+						\shade[left color=white,right color=gray!50,opacity=0.45] (-1.2,-0.3) .. controls (-0.6,0.5) and (0.2,0.45) .. (0.55,0.2)--(0.6,-0.05) .. controls (0.2,0.1) and (-0.6,0.0) .. (-1.2,-0.3)--cycle;
+					\end{scope}
+					\draw[gray!60] (-2.3,-1.75) rectangle (2.3,1.75);
+				\end{tikzpicture}
+		\end{minipage}
+		\par\noindent
 		Sau $1$ năm kể từ khi bắt đầu lắp đặt, độ phóng xạ của lượng ${}^{60}_{27}\text{Co}$ có trong máy là $x\cdot 10^{12}$~Bq. Giá trị của $x$ là bao nhiêu (làm tròn kết quả đến chữ số hàng đơn vị)?
 		\par
 		\shortans[oly]{1198}
