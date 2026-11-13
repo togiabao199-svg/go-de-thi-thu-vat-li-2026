@@ -42,7 +42,7 @@ Nguồn: `kho/goc/Ha Tinh - So GDDT - Lan 1.docx` (Sở GD&ĐT Hà Tĩnh, mã đ
 - Hai khối "Dùng thông tin sau cho câu 1 và câu 2", "… câu 5 và câu 6" (Phần III) đặt trong câu đầu của cặp, mở đầu bằng `\textit{Dùng thông tin sau cho câu~\ref{..} và câu~\ref{..}:}`.
 - Hình: 4 hình vẽ lại bằng TikZ, có `% giuhinh` ở 3 hình thực tiễn:
   - I.10 bình chữa cháy (ảnh chụp): thân đỏ `\shade`, nhãn "BÌNH CHỮA CHÁY / BỘT ABC" như ảnh, van đồng, cần bóp đỏ, vòi đen; đặt bên phải câu dẫn + phương án.
-  - II.1 bộ thí nghiệm (ảnh chụp): ống đong, giá, cốc nước trên bếp, nhiệt kế điện tử, bình tam giác, bộ điều khiển, nguồn một chiều, dây đỏ/đen; số trên màn hình giữ như ảnh gốc (24.5 °C, 100.0, 10.0 V, 10.0 A — không phải số liệu của bài). Đặt cạnh bảng số liệu (bảng cột đầu xuống dòng) để gọn trang.
+  - II.1 bộ thí nghiệm (ảnh chụp): ống đong, giá, cốc nước trên bếp, nhiệt kế điện tử, bình tam giác, bộ điều khiển, nguồn một chiều, dây đỏ/đen; màn hình để trống (ảnh gốc ghi 24.5 °C, 100.0, 10.0 V, 10.0 A — không phải số liệu của bài; phiên chính bỏ cho thống nhất với các đề khác). Đặt cạnh bảng số liệu (bảng cột đầu xuống dòng) để gọn trang.
   - II.4 chậu nước – bình cầu – cảm biến áp suất – nhiệt kế – kiềng – đèn cồn (dùng `\VLnhietke`, `\VLdencon`); đặt bên phải câu dẫn.
   - III.3 sơ đồ hệ thống lò phản ứng (ảnh gốc chữ tiếng Anh "A system layout of a nuclear test facility"): vẽ lại sơ đồ khối (vỏ lò, vùng hoạt, thanh điều khiển, vòng sơ cấp nóng đỏ / nguội xanh, bộ trao đổi nhiệt ống xoắn, tuabin, máy phát), **bỏ toàn bộ chú thích tiếng Anh** vì đề không có chú thích tiếng Việt (theo ghi chú kiem-ke). Hình chỉ minh họa, không dùng để giải.
 - Ảnh so ở `so-hinh/`.
