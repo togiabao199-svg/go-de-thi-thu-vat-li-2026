@@ -1501,3 +1501,51 @@
 		\coordinate (VLmt-ray) at (71,56);
 	\end{scope}
 	\end{scope}}
+
+% Macro hình riêng của đề (dùng lại được ở đề khác; hệ trục riêng tính bằng cm nên gọi được trong hình có trục y lật):
+% áp kế mặt tròn KHÔNG ghi số (vành kim loại sẫm, mặt trắng, vạch chia dài – ngắn xen kẽ từ 225° đến -45°, kim có đuôi đối trọng, đai ốc dưới chân):
+% \VLapketron{x}{y}{bán kính vành ngoài (cm)}{góc kim (độ, 0 ở bên phải, 90 hướng lên)}; (x,y) là tâm mặt áp kế.
+% Chân đai ốc (chỗ nối ống) ở toạ độ (VLapke-chan), cách tâm 1,24R về phía dưới.
+\newcommand{\VLapketron}[4]{%
+	\begin{scope}[shift={(#1,#2)},x=#3cm,y=#3cm]
+		% đai ốc dưới chân
+		\shade[left color=black!70,right color=black!60,middle color=gray!8] (-0.2,-1.22) rectangle (0.2,-0.96);
+		\draw[black!75,line width=0.35pt] (-0.2,-1.22) rectangle (0.2,-0.96) (-0.09,-1.22)--(-0.09,-0.99) (0.1,-1.22)--(0.1,-0.99);
+		% bóng, vành kim loại
+		\fill[black,opacity=0.13] (0.05,-0.06) circle (1.02);
+		\shade[top color=black!55,bottom color=black!92] (0,0) circle (1);
+		\draw[black,line width=0.4pt] (0,0) circle (1);
+		\draw[gray!45,line width=0.5pt] (40:0.93) arc[start angle=40,end angle=165,radius=0.93];
+		\draw[gray!70,line width=0.3pt] (200:0.93) arc[start angle=200,end angle=350,radius=0.93];
+		% mặt số
+		\shade[inner color=white,outer color=gray!22] (0,0) circle (0.86);
+		\draw[black!85,line width=0.35pt] (0,0) circle (0.86);
+		\fill[black,opacity=0.07] (0,0) circle (0.86) (0.03,-0.04) circle (0.8);
+		\foreach \VLg in {-45,-22.5,...,225.1}{\draw[black!85,line width=0.75pt,line cap=butt] (\VLg:0.80)--(\VLg:0.63);}
+		\foreach \VLg in {-33.75,-11.25,...,214}{\draw[black!70,line width=0.55pt,line cap=butt] (\VLg:0.80)--(\VLg:0.71);}
+		% kim
+		\fill[black,opacity=0.15,shift={(0.025,-0.03)}] (#4:0.72)--({#4-90}:0.06)--({#4+180}:0.3)--({#4+90}:0.06)--cycle;
+		\fill[black!88] (#4:0.72)--({#4-90}:0.055)--($({#4+180}:0.36)+({#4-90}:0.085)$)--($({#4+180}:0.36)+({#4+90}:0.085)$)--({#4+90}:0.055)--cycle;
+		\shade[inner color=gray!45,outer color=black!88] (0,0) circle (0.14);
+		\fill[gray!35] (0,0) circle (0.04);
+		% vệt sáng trên kính
+		\draw[white,opacity=0.8,line width=0.9pt] (35:0.5) arc[start angle=35,end angle=70,radius=0.5];
+		\coordinate (VLapke-chan) at (0,-1.22);
+	\end{scope}}
+
+% thanh gỗ gắn trần có móc treo chữ S bằng kim loại: \VLmoctreo{x}{y}{tỉ lệ}; (x,y) là đáy lòng móc (chỗ buộc dây treo),
+% tỉ lệ 1 thì thanh gỗ rộng 1,3 cm, cả cụm cao 0,45 cm.
+\newcommand{\VLmoctreo}[3]{%
+	\begin{scope}[shift={(#1,#2)},x=#3cm,y=#3cm]
+		% thanh gỗ
+		\shade[top color=VLgo!55!white,bottom color=VLgo!80!black] (-0.65,0.27) rectangle (0.65,0.41);
+		\begin{scope}
+			\clip (-0.65,0.27) rectangle (0.65,0.41);
+			\foreach \VLy/\VLd in {0.385/0.012,0.355/-0.014,0.325/0.01,0.298/-0.008}{
+				\draw[VLgo!45!black,line width=0.25pt,opacity=0.7] (-0.7,\VLy) .. controls (-0.3,\VLy+\VLd) and (-0.1,\VLy-\VLd) .. (0.2,\VLy+\VLd) .. controls (0.4,\VLy+2*\VLd) and (0.55,\VLy-\VLd) .. (0.7,\VLy);}
+		\end{scope}
+		\draw[VLgo!35!black,line width=0.4pt] (-0.65,0.27) rectangle (0.65,0.41);
+		% móc chữ S
+		\foreach \VLm/\VLw in {black!85/1.9pt,gray!50/0.5pt}{
+			\draw[\VLm,line width=\VLw] (0.02,0.27)--(0.03,0.2) .. controls (0.03,0.13) and (-0.16,0.16) .. (-0.165,0.07) .. controls (-0.17,-0.02) and (-0.08,-0.045) .. (0.0,-0.04) .. controls (0.09,-0.035) and (0.165,0.0) .. (0.165,0.08);}
+	\end{scope}}
