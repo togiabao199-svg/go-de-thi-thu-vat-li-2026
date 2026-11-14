@@ -101,6 +101,7 @@ Giải thích thêm:
 - **II.4a, b; II.3b, c ("thầy xem", phụ thuộc đọc hình):** nguồn chấm II.4 a Sai, b Đúng (nắm tay phải: C cực bắc, D cực nam; khung quay ngược chiều kim đồng hồ) và II.3 b Đúng, c Sai — trùng file và lượt giải độc lập của Fable.
 - **Nguồn đã xét / bị chặn:** hoatieu.vn (https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-lien-truong-hai-phong-247552, bảng đáp án chính thức 24 mã đề) — WebFetch bị từ chối (HTTP 403), không đọc được; không thử cách khác.
 - **Truy vấn:** không cần truy vấn mới — dùng link VietJack đã ghi ở mục "Nguồn trên mạng"; trang này cũng hiện trong kết quả WebSearch `khoahoc.vietjack.com thi-online "Cẩm Phả" Quảng Ninh vật lý lần 1 có đáp án` (14/11/2026).
+- **Danh mục VietJack** (https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test, soát 14/11/2026) có đúng trang cả đề dùng ở trên.
 - **Mức tin cậy:** đáp án là lời giải của VietJack ("Giải bởi Vietjack"), không phải bảng đáp án chính thức của cụm; là nguồn độc lập với file. Bảng chính thức (hoatieu) vẫn chưa đối chiếu được.
 
 ### b) Bảng đối chiếu 28 câu

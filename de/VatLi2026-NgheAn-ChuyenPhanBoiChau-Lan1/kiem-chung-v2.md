@@ -96,6 +96,7 @@ Không tìm thấy đáp án trên mạng đọc được.
 - **Nguồn đã xét nhưng không đúng đề:** chuvanbien.vn `LOP12_DETHITHUTOTNGHIEPTHPT_CHUYENPHANBOICHAU.pdf` và `lop12_phanboichau_1741773479.pdf` (đề chuyên Phan Bội Châu năm 2024–2025, theo mục cũ; phiên này không mở lại).
 - **Tên miền bị chặn:** không gặp ở đề này (chỉ dùng khoahoc.vietjack.com).
 - **Truy vấn:** không cần truy vấn mới — dùng link VietJack đã ghi ở mục "Nguồn trên mạng".
+- **Danh mục VietJack** (https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test, soát 14/11/2026) có đúng trang cả đề dùng ở trên.
 - **Mức tin cậy:** đáp án là lời giải của VietJack ("Giải bởi Vietjack"), không phải bảng đáp án chính thức của trường; là nguồn độc lập với file.
 
 ### b) Bảng đối chiếu 28 câu
