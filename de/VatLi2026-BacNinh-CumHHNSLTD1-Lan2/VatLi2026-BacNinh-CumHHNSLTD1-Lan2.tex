@@ -9,6 +9,42 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
+%--- Hình câu III.5 (xe tải nhả khói xuống dốc): thư viện mờ biên, màu, tô chuyển riêng của đề (tiền tố BNHH)
+\usetikzlibrary{fadings}
+\definecolor{BNHHt0}{HTML}{D3EDF4}\definecolor{BNHHt1}{HTML}{D6EDEE}\definecolor{BNHHt2}{HTML}{DDECE9}
+\definecolor{BNHHt3}{HTML}{E1ECE1}\definecolor{BNHHt4}{HTML}{E7EAD9}\definecolor{BNHHt5}{HTML}{EDE9D4}
+\definecolor{BNHHt6}{HTML}{F2EAD0}\definecolor{BNHHt7}{HTML}{F7E9C7}\definecolor{BNHHt8}{HTML}{FBE8BF}
+\definecolor{BNHHt9}{HTML}{FEE8BF}
+% trời: xanh nhạt (trên) -> vàng cam nhạt (chân trời); dùng cho hình chữ nhật cao 100 đơn vị
+\pgfdeclareverticalshading{BNHHtroi}{100bp}{color(0bp)=(BNHHt9);color(55bp)=(BNHHt9);color(56bp)=(BNHHt8);color(57bp)=(BNHHt7);color(58bp)=(BNHHt6);color(59bp)=(BNHHt5);color(60bp)=(BNHHt4);color(61bp)=(BNHHt3);color(63bp)=(BNHHt2);color(65bp)=(BNHHt1);color(66.5bp)=(BNHHt0);color(100bp)=(BNHHt0)}
+% mờ biên tròn (bóng đổ, cụm khói): lõi đặc gần nửa bán kính rồi nhạt dần ra mép
+\pgfdeclareradialshading{BNHHmobien}{\pgfpointorigin}{color(0bp)=(white);color(11bp)=(white);color(25bp)=(black);color(50bp)=(black)}
+\pgfdeclarefading{BNHHmo}{\pgfuseshading{BNHHmobien}}
+% mờ dần xuống dưới (gầm xe chìm vào khói)
+\tikzfading[name=BNHHmoduoi,top color=transparent!0,bottom color=transparent!100]
+% đá núi, đường, thùng xe, cabin, lốp, khói
+\definecolor{BNHHnui}{HTML}{A68A79}\definecolor{BNHHnuiduoi}{HTML}{9B8A78}\definecolor{BNHHnuisang}{HTML}{AE9E8E}
+\definecolor{BNHHnuitoi}{HTML}{8F7A66}\definecolor{BNHHvetsang}{HTML}{C8B8A5}\definecolor{BNHHco}{HTML}{70725A}
+\definecolor{BNHHduong1}{HTML}{8F8F96}\definecolor{BNHHduong2}{HTML}{A7A8AC}\definecolor{BNHHduong3}{HTML}{BBBCBE}
+\definecolor{BNHHhong1}{HTML}{036E98}\definecolor{BNHHhong2}{HTML}{75ABC3}\definecolor{BNHHkhung}{HTML}{80B2C7}
+\definecolor{BNHHcua}{HTML}{338EAB}\definecolor{BNHHthanh}{HTML}{C3C6D2}
+\definecolor{BNHHcabin}{HTML}{D25655}\definecolor{BNHHcabinsang}{HTML}{EE837B}\definecolor{BNHHcabintoi}{HTML}{A2494C}
+\definecolor{BNHHlop}{HTML}{38373B}\definecolor{BNHHmam}{HTML}{A9ABAD}
+\definecolor{BNHHkhoi}{HTML}{D5D6D8}
+% lốp xe nhìn từ phía sau (mặt lốp sáng, nắp trên tối): \BNHHlop{x trái}{y trên}{x phải}{y dưới}{1: lốp đơn | 2: lốp kép}
+\newcommand{\BNHHlop}[5]{%
+	\fill[BNHHlop,rounded corners=2.9pt] (#1,#2) rectangle (#3,#4);
+	\shade[left color=BNHHmam,right color=BNHHmam!72!black,rounded corners=0.9pt] ({#1+0.7},{#2+3}) rectangle ({#3-0.7},{#4-2.4});
+	\fill[white,opacity=0.22] ({#1+1},{#2+3.4}) rectangle ({#1+1.35},{#4-2.9});
+	\ifnum#5=2 \fill[BNHHlop] ({(#1+#3)/2-0.35},{#2+2.8}) rectangle ({(#1+#3)/2+0.35},{#4-2.2});\fi
+}
+% viền mờ cho khối khói: rắc các chấm tròn mờ biên dọc theo đường bao (bước, bán kính)
+\tikzset{BNHHvienmo/.style 2 args={postaction={decorate},decoration={markings,mark=between positions 0 and 1 step #1 with {\fill[path fading=BNHHmo] (0,0) circle (#2);}}}}
+% đường sống núi bên trái
+\newcommand{\BNHHsongnui}{(0,41.8)--(1.5,41.4)--(3,41.6)--(4.5,42)--(6,42.5)--(7.3,42.9)--(8.6,42.3)--(9.6,42.4)--(10.6,43.4)--(11.8,44.4)--(13.5,44.8)--(15.5,45.2)--(17,45.6)--(18.5,46)--(20.5,46.3)--(22.5,46.6)--(27,46.8)}
+% đường bao khối khói: lớp mỏng (phủ cửa, đồi, mặt đường) và lõi dày bên phải
+\newcommand{\BNHHkhoiA}{(62.6,90) .. controls (62,87.4) and (63,85.2) .. (65.6,84.4) .. controls (67,82.2) and (70.6,81.4) .. (73.2,82.2) .. controls (74.6,79.8) and (78,79) .. (80.6,79.8) .. controls (81.6,76.8) and (85,75.6) .. (87.8,76.6) .. controls (88.8,73.2) and (92.4,71.8) .. (95.2,73.2) .. controls (96.4,70) and (100.2,69) .. (102.8,70.4) .. controls (104.4,67.6) and (108.4,67.4) .. (110.2,69.8) .. controls (112.4,68.6) and (115.8,69.4) .. (117,71.8) .. controls (119.4,71) and (122.6,71.8) .. (123.6,74) .. controls (125.8,73) and (128.6,73.4) .. (130.4,75)--(131,75.2)--(131,121.4) .. controls (128,122.4) and (124,122) .. (121.6,120.6) .. controls (118.6,121.4) and (114.4,120.6) .. (112.6,118.8) .. controls (109.6,119.4) and (105.4,118.6) .. (103.8,116.6) .. controls (100.6,117) and (96.6,116.6) .. (94.6,114.8) .. controls (91.4,115.4) and (87,114.8) .. (85.2,113.2) .. controls (82,113.6) and (78,112.6) .. (76.6,110.6) .. controls (73.4,110.6) and (69.6,109) .. (68.4,106.8) .. controls (65.4,106.4) and (62.6,104.4) .. (62.4,101.6) .. controls (61.2,99) and (61.4,93) .. (62.6,90)--cycle}
+\newcommand{\BNHHkhoiB}{(92.4,100) .. controls (89.6,96.4) and (91.4,90.8) .. (95.8,89.6) .. controls (95.6,85) and (99.6,82) .. (103.6,83) .. controls (104.4,78.8) and (108.8,77) .. (112,78.8) .. controls (113.6,75.2) and (118,74.4) .. (120.6,76.8) .. controls (122.6,73.8) and (127,73.6) .. (129.2,76)--(131,76.4)--(131,112) .. controls (127,113) and (123,112.4) .. (121,110.6) .. controls (117.6,111.4) and (113.4,110.6) .. (112,108.4) .. controls (108.4,109) and (104.4,108) .. (103,105.6) .. controls (99,105.6) and (95,104) .. (92.4,100)--cycle}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT CỤM HH -- NSL -- TD1 -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -793,33 +829,130 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{15.4\baselineskip}
+	\NeedspaceCau{19.3\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Phanh xe tải được sử dụng để kiểm soát tốc độ khi xe chạy xuống dốc, nó có tác dụng chuyển đổi thế năng hấp dẫn thành nội năng của vật liệu phanh (làm tăng nhiệt độ của vật liệu phanh), sự chuyển đổi này ngăn không cho thế năng hấp dẫn được chuyển đổi thành động năng của xe. Lấy $g=9{,}8~\text{m/s}^2$. Tính độ tăng nhiệt độ (theo đơn vị $^\circ$C) của $10$~kg vật liệu phanh có nhiệt dung riêng trung bình là $800$~J/(kg.K) nếu vật liệu phanh giữ lại $10\,\%$ năng lượng từ một chiếc xe tải nặng $10$ tấn khi xuống dốc cao $75{,}0$~m với tốc độ không đổi (làm tròn kết quả đến chữ số hàng phần mười).
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.6,line join=round,line cap=round,font=\footnotesize]
-				% nền: trời, đồi, đường
-				\shade[top color=VLxanh!20!white,bottom color=orange!25!white] (0,1.6) rectangle (5.2,5.0);
-				\fill[orange!30!brown!60] (0,1.6)--(0,3.1) .. controls (0.5,3.3) and (0.9,3.0) .. (1.3,2.9)--(1.3,1.6)--cycle;
-				\fill[orange!30!brown!50] (4.0,1.6)--(4.2,2.6) .. controls (4.6,2.9) and (4.9,2.8) .. (5.2,2.7)--(5.2,1.6)--cycle;
-				\shade[top color=gray!45,bottom color=gray!65] (0,0)--(5.2,0)--(5.2,1.75)--(0,1.75)--cycle;
-				\draw[white,line width=1.4pt] (0.2,1.25)--(0.7,1.15) (2.0,0.75)--(2.8,0.55) (3.9,0.25)--(4.6,0.05);
-				% cabin đỏ
-				\fill[VLdo!85!black] (0.45,0.95) rectangle (0.95,2.4);
-				\fill[gray!80] (0.4,1.85) rectangle (0.52,2.1);
-				% bánh xe
-				\fill[black!85] (0.6,0.6) rectangle (0.9,1.05) (1.35,0.7) rectangle (1.65,1.15) (1.75,0.75) rectangle (2.05,1.2) (3.4,0.75) rectangle (3.7,1.2);
-				% thùng xe: mặt bên, mặt sau
-				\shade[left color=VLxanh!45!VLla!80!black,right color=VLxanh!55!VLla!70] (0.85,1.4)--(2.3,1.3)--(2.3,4.3)--(0.85,3.4)--cycle;
-				\shade[top color=VLxanh!45!VLla!60,bottom color=VLxanh!60!VLla!60!black] (2.3,1.3)--(4.25,1.4)--(4.25,4.35)--(2.3,4.3)--cycle;
-				\draw[VLxanh!35!VLla!40!black,thin] (0.85,1.4)--(2.3,1.3)--(2.3,4.3)--(0.85,3.4)--cycle (2.3,1.3)--(4.25,1.4)--(4.25,4.35)--(2.3,4.3)--cycle;
-				\draw[VLxanh!25!white,line width=1.4pt] (2.42,1.45) rectangle (4.13,4.2);
-				\draw[VLxanh!25!white,line width=1.4pt] (3.22,1.45)--(3.22,4.22) (3.34,1.45)--(3.34,4.22);
-				\fill[black!65] (2.3,1.3)--(4.25,1.4)--(4.25,1.15)--(2.3,1.05)--cycle;
-				\fill[VLdo] (2.45,1.25) circle (0.09) (4.1,1.3) circle (0.09);
-				% khói bụi
-				\foreach \x/\y/\r in {3.6/1.0/0.35,4.1/0.8/0.45,4.7/1.1/0.45,5.0/0.6/0.4,3.3/0.55/0.3,4.4/1.6/0.35,3.9/0.35/0.35}{\fill[gray!12,opacity=0.85] (\x,\y) circle (\r);}
+			\begin{tikzpicture}[x=0.039cm,y=-0.039cm,line join=round,line cap=round,font=\footnotesize]
+				\begin{scope}
+					\clip (0,0) rectangle (129,133);
+					% trời
+					\shade[shading=BNHHtroi] (0,0) rectangle (129,100);
+					% đồi đá bên phải (sau thùng xe): thân, mảng sáng, khe tối, viền sống đồi
+					\fill[BNHHnui] (100,62.6)--(108,62.4) .. controls (111,62.3) and (112.6,61.8) .. (113.6,60.2) .. controls (114.6,58.6) and (115.6,56.6) .. (117,55.8) .. controls (118.5,55) and (121,54.8) .. (124,54.9)--(129.5,55.2)--(129.5,92)--(100,92)--cycle;
+					\fill[BNHHnuisang!85!BNHHnui] (115.4,62) .. controls (116.6,61.3) and (119,61.1) .. (121.8,61.2) .. controls (123.6,61.3) and (124.6,61.7) .. (124.8,62.8)--(124.6,66.2) .. controls (124.2,67.6) and (123,68.3) .. (121.6,68.4)--(118.6,68.5) .. controls (117,68.2) and (115.6,67.4) .. (114.8,66.2)--(114.6,64.2)--cycle;
+					\draw[BNHHnuisang!50!BNHHnui,line width=0.5pt] (115.4,62) .. controls (116.6,61.3) and (119,61.1) .. (121.8,61.2) .. controls (123.6,61.3) and (124.6,61.7) .. (124.8,62.8)--(124.6,66.2) .. controls (124.2,67.6) and (123,68.3) .. (121.6,68.4)--(118.6,68.5) .. controls (117,68.2) and (115.6,67.4) .. (114.8,66.2)--(114.6,64.2)--cycle;
+					\fill[BNHHnuitoi!45!BNHHnui] (104,62.9)--(113.8,62.5)--(114.3,63.6) .. controls (112,64.2) and (108,64.3) .. (104,64.1)--cycle;
+					\draw[BNHHnuitoi!45!BNHHnui,line width=0.5pt] (109.4,65.4) .. controls (110.6,66.4) and (112.2,66.6) .. (113.4,65.8);
+					\draw[BNHHnuitoi!60!BNHHnui,line width=0.5pt] (113.6,60.2) .. controls (114.6,58.6) and (115.6,56.6) .. (117,55.8) .. controls (118.5,55) and (121,54.8) .. (124,54.9)--(129.5,55.2);
+					\fill[BNHHnuiduoi!95!black] (125,57)--(129.5,57)--(129.5,72)--(125.4,70) .. controls (125.6,66) and (125.4,61) .. (125,57)--cycle;
+					% núi đá bên trái: nền tối, dải nâu dưới sống núi, mảng sáng hình chữ W, khe tối, sống núi lởm chởm
+					\fill[BNHHnuiduoi] \BNHHsongnui--(27,83)--(0,83)--cycle;
+					\shade[top color=BNHHnui!90!black,bottom color=BNHHnui] \BNHHsongnui--(27,54.4)--(23,54)--(21,53.2)--(18.4,52.6)--(16,53.2)--(14.2,52.4)--(12.8,50.4)--(11.4,49.4)--(10.4,50)--(9.6,51.6)--(8.6,50.4)--(6.6,48.8)--(4.4,47.8)--(2,49.6)--(0,50.8)--cycle;
+					\fill[BNHHnuisang] (0,50.6)--(1.4,49.6)--(3,48.6)--(4.5,47.9)--(6,48.5)--(7.4,49.4)--(8.4,50.2) .. controls (7.8,52) and (7.2,54) .. (6.4,56) .. controls (5.8,58.4) and (4.8,60.6) .. (3.6,62.6) .. controls (2.6,64) and (1.4,64.8) .. (0,65.2)--cycle;
+					\fill[BNHHnuisang] (9.6,51.6)--(10.2,50)--(11.2,49.4)--(12.4,50)--(13.6,51.4)--(14.4,52.8)--(15.6,53.2)--(17,52.6)--(18.6,52.4)--(20.4,52.8)--(22,53.6)--(22.6,54.4) .. controls (21,55.4) and (18.8,56) .. (17.2,57.2) .. controls (15.8,58.8) and (14.8,60.8) .. (13,62.4) .. controls (12,63.2) and (11,63.8) .. (10.4,63.8) .. controls (9.9,60.6) and (9.5,56.6) .. (9.6,51.6)--cycle;
+					\fill[BNHHnuisang!80!BNHHnuiduoi] (20.2,58.8)--(21.6,58.2)--(21.8,62.6)--(20.6,62.8)--cycle;
+					\draw[BNHHnuisang!45!BNHHnuiduoi,line width=0.45pt] (8.4,50.2) .. controls (7.8,52) and (7.2,54) .. (6.4,56) .. controls (5.8,58.4) and (4.8,60.6) .. (3.6,62.6) .. controls (2.6,64) and (1.4,64.8) .. (0,65.2) (22.6,54.4) .. controls (21,55.4) and (18.8,56) .. (17.2,57.2) .. controls (15.8,58.8) and (14.8,60.8) .. (13,62.4) .. controls (12,63.2) and (11,63.8) .. (10.4,63.8) .. controls (9.9,60.6) and (9.5,56.6) .. (9.6,51.6);
+					\draw[BNHHnuitoi!80!BNHHnui,line width=0.55pt] \BNHHsongnui;
+					\foreach \x/\y in {0.8/41.9,2.6/41.9,7.6/43.2,9.4/42.6,12.4/44.8,16/45.6}{\fill[BNHHco!70!BNHHnuitoi] (\x,\y) ellipse [x radius=0.9,y radius=0.45];}
+					\draw[BNHHnuitoi!60!BNHHnuiduoi,line width=0.5pt] (8.6,77.2) .. controls (10.4,75.6) and (12.6,74) .. (15.6,71.8);
+					% vệt đá sáng và cỏ chân núi
+					\fill[BNHHco] (0,75.6)--(2.4,76.4)--(4.2,77.7)--(5.8,79)--(7.4,80.4)--(8.8,82.4)--(0,82.4)--cycle;
+					\fill[BNHHvetsang] (0,73.6)--(2.2,74.3)--(4,75.5)--(5.6,76.8)--(7.2,78.2)--(8.7,79.6)--(9.9,81.1)--(10.6,82.4)--(8.8,82.4)--(7.4,80.4)--(5.8,79)--(4.2,77.7)--(2.4,76.4)--(0,75.6)--cycle;
+					% lan can xám mép đường bên trái
+					\fill[black!45] (0,81.8) rectangle (22,82.7);
+					\fill[BNHHduong1!60!white] (0,82.6) rectangle (22,84.1);
+					\draw[white!75!gray,line width=0.35pt] (0,83) -- (22,83);
+					\shade[left color=black!40!BNHHnuiduoi!80,right color=black!55!BNHHnuiduoi!70] (0,84.1) rectangle (22,86.3);
+					\fill[BNHHduong1!95!black] (0,86.3) rectangle (22,87.6);
+					% mặt đường, vạch kẻ đứt trắng
+					\shade[top color=BNHHduong1,middle color=BNHHduong2,bottom color=BNHHduong3] (0,87.4) rectangle (129,133);
+					\fill[white] (4.7,97.15)--(15,99.65)--(14.7,100.95)--(4.4,98.45)--cycle;
+					\fill[white] (45,107.8)--(59.6,112.5)--(59.1,114.1)--(44.4,109.4)--cycle;
+					\fill[white] (97.2,126.4)--(112.4,132.8)--(111.6,134.8)--(96.6,128.4)--cycle;
+					% bóng xe trên mặt đường
+					\fill[black!80,opacity=0.75,path fading=BNHHmo] (41,97.6) ellipse [x radius=25,y radius=4.6];
+					\fill[black!85,opacity=0.85,path fading=BNHHmo] (55,99.4) ellipse [x radius=10,y radius=4.2];
+					% nền tối dưới gầm thùng
+					\fill[black!78] (26.2,79.5)--(53.4,79.5)--(53.4,86.6)--(57.4,86.6)--(57.4,97.6)--(26.2,97.6)--cycle;
+					% cabin đỏ: phần trên lấp ló (kính bên), phần dưới, bánh trước, chắn bùn
+					\fill[BNHHcabintoi] (22.4,49.4)--(24.8,48.4)--(25.8,48.6)--(25.9,70.6)--(22.6,71)--cycle;
+					\fill[BNHHcabin!80!BNHHcabintoi] (22.4,49.6)--(23.8,49)--(23.9,70.8)--(22.6,71)--cycle;
+					\shade[top color=white!85!BNHHcabin,bottom color=white!70!gray] (23.5,56.8)--(24.6,56.4)--(24.9,69.2)--(23.6,69.6)--cycle;
+					\fill[black!30!BNHHkhung!60!BNHHcabintoi] (24.7,49)--(25.9,48.8)--(25.9,70.6)--(24.9,70.6)--cycle;
+					\shade[left color=BNHHcabin,right color=BNHHcabintoi] (22.8,70.2)--(26.3,70.2)--(26.8,80)--(26.9,92)--(26.2,94.6)--(24.6,95.2)--(24.4,88.6)--(22.2,86.6)--(20.2,87.4)--(19.4,88.6)--(19.4,84)--(19.7,79.6)--(20.6,75.6)--(21.8,72.4)--cycle;
+					\fill[BNHHcabinsang,path fading=BNHHmo] (22.6,82.4) ellipse [x radius=2.2,y radius=7.4];
+					\fill[BNHHlop!85!BNHHcabintoi,rounded corners=2.4pt] (19.6,86.4) rectangle (24.4,97.2);
+					\shade[left color=BNHHmam!80!BNHHcabinsang,right color=BNHHmam!60!BNHHcabintoi,rounded corners=0.9pt] (20.2,88.6) rectangle (23.8,94.9);
+					\fill[black!45] (21.6,91.1) rectangle (22.4,92.3);
+					\fill[BNHHcabin!88!black] (19.4,84)--(24.6,84)--(24.6,88.4) .. controls (23.6,86.6) and (20.6,86.6) .. (19.4,88.6)--cycle;
+					% gương chiếu hậu trắng và tay gương
+					\shade[left color=white,right color=black!12,rounded corners=0.6pt] (16.8,61.6) rectangle (20.2,69.2);
+					\draw[black!35,line width=0.25pt,rounded corners=0.6pt] (16.8,61.6) rectangle (20.2,69.2);
+					\fill[white] (17.4,62.4) rectangle (17.9,68.4);
+					\draw[black!80,line width=0.7pt] (19.2,69.5)--(21,70.4)--(23,71.2);
+					% gầm thùng: dầm khung, bánh kép trước, hộp bên, bánh kép sau, chắn bùn
+					\shade[left color=black!25!BNHHkhung!80!gray,right color=black!70] (26.4,79.5)--(52.9,79.5)--(52.9,82.2)--(26.6,82.2)--cycle;
+					\BNHHlop{27.3}{81}{33.3}{97.4}{1}
+					\shade[left color=BNHHhong2!60!white,right color=BNHHhong2!85!black] (33.3,82.6) rectangle (35.4,94.4);
+					\fill[BNHHhong2!80!BNHHcua] (35.4,82.6) rectangle (43.6,94.2);
+					\draw[black!60,line width=0.5pt] (33.3,82.7)--(43.6,82.7);
+					\fill[black!76] (29.5,94.2) rectangle (45,97.4);
+					\BNHHlop{43.2}{81.6}{51.2}{100.2}{2}
+					\shade[top color=gray!55,bottom color=gray!75!black] (50.9,81.2)--(53.3,81.2)--(53.3,86.6)--(56.8,86.6)--(57.3,88)--(57.3,96.6)--(56.4,98)--(51.2,98)--cycle;
+					\shade[top color=BNHHkhung!55!gray,bottom color=gray!70] (55.6,86.2) rectangle (60,89.4);
+					\fill[black!75,rounded corners=0.6pt] (56.2,88.8) rectangle (59.2,91.6);
+					% thùng hàng: quầng sáng viền, mặt bên, khung mặt sau, cửa, thanh khóa
+					\draw[white,opacity=0.25,line width=2.6pt] (24.2,46)--(24.4,34.4)--(51.5,14)--(106.4,13.3)--(106.9,62);
+					\draw[white,opacity=0.5,line width=1.3pt] (24.2,46)--(24.4,34.4)--(51.5,14)--(106.4,13.3)--(106.9,62);
+					\shade[top color=BNHHhong1,bottom color=BNHHhong2] (24.4,34.4)--(51.5,14.2)--(52.9,79.7)--(26.6,79.7)--cycle;
+					\draw[white!40!BNHHhong2,line width=0.6pt] (24.9,34.6)--(51.5,14.6);
+					\shade[top color=BNHHkhung!92!white,bottom color=BNHHkhung!92!black] (51.5,14.2)--(106.3,13.5)--(106.9,85.6)--(53.3,86.6)--(52.9,79.7)--cycle;
+					\draw[black!30!BNHHhong1,line width=0.35pt] (51.5,14.2)--(52.9,79.7);
+					\draw[white!55!BNHHkhung,line width=0.6pt] (51.8,13.9)--(106,13.3);
+					\draw[white!45!BNHHkhung,line width=0.6pt] (105.9,13.9)--(106.5,85);
+					\shade[top color=BNHHcua!92!white,bottom color=BNHHcua!92!black] (56.6,18.2)--(74.6,18.2)--(76.8,79.6)--(58.6,79.6)--cycle;
+					\shade[top color=BNHHcua!92!white,bottom color=BNHHcua!92!black] (83.4,18.2)--(102.7,18.2)--(103.2,79.4)--(85.8,79.4)--cycle;
+					\draw[black!25!BNHHcua,line width=0.4pt] (58.6,79.6)--(56.6,18.2)--(74.6,18.2) (85.8,79.4)--(83.4,18.2)--(102.7,18.2);
+					\fill[BNHHkhung!90!BNHHcua] (74.6,18.2)--(83.4,18.2)--(85.8,79.6)--(76.8,79.6)--cycle;
+					\shade[left color=BNHHthanh,right color=BNHHthanh!65!black] (74.7,15)--(76.8,15)--(79.95,80.6)--(77.85,80.6)--cycle;
+					\shade[left color=BNHHthanh,right color=BNHHthanh!65!black] (79.85,15)--(81.95,15)--(85.75,80.6)--(83.65,80.6)--cycle;
+					% đèn hậu, gầm sau tối, cản sau, trụ đỡ cản
+					\shade[inner color=red!45!white,outer color=red!75!black] (58.3,83.8) circle (2.55);
+					\draw[red!40!black,line width=0.3pt] (58.3,83.8) circle (2.55);
+					\fill[white,opacity=0.8] (57.6,83) circle (0.55);
+					\shade[inner color=red!45!white,outer color=red!75!black] (104.4,81) circle (2.2);
+					\fill[black!75,path fading=BNHHmo] (80,93) ellipse [x radius=24,y radius=8.4];
+					\fill[black!72,path fading=BNHHmoduoi] (59.4,88.4)--(101,88)--(100.6,94.4) .. controls (92,96.4) and (84,97.4) .. (78,97.6) .. controls (70,97.6) and (64,97) .. (60.4,96)--cycle;
+					\fill[black!80,path fading=BNHHmo] (72,91.6) ellipse [x radius=8,y radius=3.6];
+					\shade[top color=black!45,bottom color=black!72] (59.5,86.4)--(101.5,85.8)--(101.5,88.2)--(59.5,88.9)--cycle;
+					\draw[black!80,line width=0.3pt] (59.5,88.9)--(101.5,88.2);
+					\fill[red!55!black!80!violet] (60.2,86.9) rectangle (62.6,88.3);
+					\shade[left color=black!70,right color=black!88] (82.8,88.6) rectangle (85.6,97.6);
+					% khói: lớp mỏng phủ cửa, đồi, gầm, mặt đường -- lõi dày bên phải -- mặt khói sáng, khe tối giữa các cuộn
+					\begin{scope}[transparency group,opacity=0.6]
+						\fill[BNHHkhoi] \BNHHkhoiA;
+						\path[BNHHkhoi,BNHHvienmo={2.2pt}{3.2}] \BNHHkhoiA;
+					\end{scope}
+					\begin{scope}[transparency group,opacity=0.5]
+						\fill[BNHHkhoi!55!white] \BNHHkhoiB;
+						\path[BNHHkhoi!55!white,BNHHvienmo={2.4pt}{3.6}] \BNHHkhoiB;
+					\end{scope}
+					\begin{scope}[transparency group,opacity=0.3]
+						\foreach \x/\y/\a/\b in {72/104/8/4,82/107/9/4.5,92/108.5/9/4.5,102/110.5/9/5}{\fill[BNHHkhoi,path fading=BNHHmo] (\x,\y) ellipse [x radius=\a,y radius=\b];}
+					\end{scope}
+					% các cuộn khói: vùng sáng lớn, khe tối mờ giữa các cuộn
+					\begin{scope}[transparency group,opacity=0.06]
+						\foreach \x/\y/\a/\b/\g in {101/80/9/2.6/-12,118/83/10/3/8,107/96/11/3.2/-6,88/104/10/2.6/12,120/104/9/3/-4}{\fill[black!80,path fading=BNHHmo,rotate around={\g:(\x,\y)}] (\x,\y) ellipse [x radius=\a,y radius=\b];}
+					\end{scope}
+					\begin{scope}[transparency group,opacity=0.24]
+						\foreach \x/\y/\a/\b/\g in {97/74.4/6/3.4/-15,110/72.6/8/3.8/5,123/76/7/3.6/10,104/86.6/9/5/-8,120/89.2/9/5.6/6,96/96/6/4/0,112/100.6/9/4.6/-5,78/105.6/9/3.4/14,98/110/10/3.6/8,121/112.6/9/4/4}{\fill[white,path fading=BNHHmo,rotate around={\g:(\x,\y)}] (\x,\y) ellipse [x radius=\a,y radius=\b];}
+					\end{scope}
+					\begin{scope}[transparency group,opacity=0.5]
+						\fill[white,path fading=BNHHmo] (78.2,91.8) ellipse [x radius=3.4,y radius=2.4];
+					\end{scope}
+				\end{scope}
 			\end{tikzpicture}
 		\end{center}
 		\shortans[oly]{91{,}9}
