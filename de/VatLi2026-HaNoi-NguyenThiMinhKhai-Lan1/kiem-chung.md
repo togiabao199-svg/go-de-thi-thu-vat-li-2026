@@ -63,3 +63,8 @@ Các hình dưới đây vẽ lại theo toạ độ điểm ảnh của ảnh n
 - **II.4** (`so-hinh/10-cau-II-4.png`): ảnh mô hình ống phát tia X vẽ lại đủ bộ phận: tường xanh, sàn gỗ, hai bàn gỗ và hai hộp nguồn đen, ống thủy tinh phía cathode, trụ cathode bóng, chùm electron xanh lục, bia anode và thanh anode màu nâu, bóng thủy tinh trong suốt (đáy sẫm, vệt sáng), ống cổ anode, khối nối đen, hai giá đỡ, cột thủy tinh đứng và ống nghiêng của bình nước làm nguội, giá treo cần cong, dây cáp trên sàn, bóng đổ; vẫn lược chữ "Target", "Electrons" mờ trên ảnh. Sơ đồ bên trái vẽ lại theo toạ độ ảnh gốc cho sát hình (vỏ thủy tinh liền cổ cathode – bầu – cổ anode, bia anode hình thang gạch chéo, sợi nung dạng lò xo, ống nước làm nguội hai lớp); cực −/+, K, A, F, F′, chiều các mũi tên giữ nguyên.
 
 Hình chưa ưng: không có. Lưu ý: chữ N, S trên mặt trên nam châm ở Hình a (II.2) cỡ 6pt vì mặt nhánh chỉ rộng 2,4 mm (ảnh gốc cũng in chữ rất nhỏ ở đúng vị trí này).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **II.2 c): sửa moment "4·10⁻⁴ N·m" thành "4,8·10⁻⁴ N·m"; Sai → Đúng** (B = M/(I·l·d) = 4,8·10⁻⁴/(1,5·0,05·0,08) = 0,08 T; đề in thiếu ",8", lời giải của nguồn đăng kèm đề dùng 4,8·10⁻⁴). Câu II.2 thành S S Đ Đ. Viết lại lời giải ý c.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.3 (D), II.4c (S): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

@@ -1,4 +1,4 @@
-# Kiểm đáp án v2 (Fable) — VatLi2026-HaNoi-LuongTheVinh-Lan1
+# Kiểm đáp án v2 (Fable) — VatLi2026-HaNoi-LuongTheVinh-Lan2
 
 Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT Luong The Vinh - Lan 1.pdf`. Giải lại độc lập từ ảnh trang đề gốc trước khi mở file đề; file đề không bị sửa.
 

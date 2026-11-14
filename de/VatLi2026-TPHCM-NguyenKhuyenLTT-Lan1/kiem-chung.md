@@ -74,3 +74,7 @@ Hình chưa ưng: I.6 — ảnh gốc mờ, phân giải thấp (329 × 190 đi�
 
 - II.4 (Hình 2, đồ thị): bản trước chia trục hoành 10 khoảng 48 s (4 điểm trung gian trên đoạn đun); hình gốc chia 8 khoảng 60 s (3 điểm trung gian ở 60, 120, 180 s). Đã vẽ lại theo gốc; các mốc 25 °C, 100 °C, 240 s, 480 s không đổi nên đáp án không đổi.
 - II.2: nét dây nối hai cuộn dây ở đầu trái lõi sắt (thiếu ở bản trên `main`) đã được thêm trong lúc vẽ lại hình (PHIÊN FABLE), đúng gốc.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.1b (Đ, "3 V" sửa 3 A), II.4c, d (S S), I.10, II.1c, II.2a (đọc hình): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

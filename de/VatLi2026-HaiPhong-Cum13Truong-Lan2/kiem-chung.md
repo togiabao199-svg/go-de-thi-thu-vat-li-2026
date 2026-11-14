@@ -57,3 +57,7 @@
 - Macro riêng khai báo trong file đề: `\VLapketron{x}{y}{R}{góc kim}` (áp kế mặt tròn không số, có điểm bám `(VLapke-chan)`), `\VLmoctreo{x}{y}{tỉ lệ}` (thanh gỗ + móc chữ S); cả hai tự đặt hệ trục cm nên gọi được trong hình có trục $y$ lật — có thể đưa vào `preamble-vatli-hinh.tex`.
 - Hình chưa ưng: không có. Lưu ý: mặt ghế của macro `\VLghenangha` tô màu gỗ (ảnh gốc đen trắng, mặt ghế xám); bàn tay III.1 tô màu da (ảnh gốc là nét vẽ không tô).
 - Dàn trang: bản đề 6 trang (ĐẠT), bản lời giải 10 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.17 (B), II.2c (S): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

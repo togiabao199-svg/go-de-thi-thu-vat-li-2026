@@ -64,3 +64,7 @@ Rà cả 11 hình; vẽ lại 3 hình thực tiễn (đều giữ `% giuhinh`), 
 Macro mới (khai báo trong file đề, đề xuất chuyển vào `preamble-vatli-hinh.tex`): `\VLcandientu{x}{y}{tỉ lệ}`, `\VLbienthenguon{x}{y}{tỉ lệ}`, `\VLoatke{x}{y}{tỉ lệ}`, `\VLnhietluongke{x}{y}{tỉ lệ}`, `\VLbodonhietdung{x}{y}{tỉ lệ}` (cả bộ, điểm bám `(VLbd-can)`, `(VLbd-nguon)`, `(VLbd-oatke)`, `(VLbd-nhietke)`, `(VLbd-binh)`), `\VLtnbrown{x}{y}{tỉ lệ}` (điểm bám `(VLbr-ongkinh)`, `(VLbr-nap)`, `(VLbr-ong)`, `(VLbr-khoi)`, `(VLbr-anhsang)`), `\VLquydaobrown{x}{y}{tỉ lệ}`; màu `VLvangchanh`, `VLkhoi`. Các macro tự đặt đơn vị toạ độ (không dùng `scale` của hình ngoài để co linh kiện); nét và góc bo co theo tham số tỉ lệ.
 
 Hình chưa ưng: không có hình nào thiếu bộ phận; I.13 chữ "phát tín hiệu" giữ cỡ rất nhỏ (4,5 pt) như hình gốc. Dàn trang: bản đề 7 trang ĐẠT, bản lời giải 11 trang (lưu ý cũ: trang 8 bản lời giải trống 8,2 cm).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.6 (C), II.3b, c (S S), III.6 (14, giữ `% KIỂM TRA`): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

@@ -78,3 +78,7 @@ Sửa so với bản trước (không ảnh hưởng đáp án):
 - **II.3**: vạch dài của nguồn ở bên trái (phía ampe kế), vạch ngắn ở bên phải; chữ N có nét gióng tới bản cực phía sau, chữ S tới bản cực phía trước ⇒ dòng điện trong thanh chạy từ giá trái sang giá phải, $\vec{B}$ hướng ra phía trước, lực từ lên thanh hướng xuống. Khớp cách đọc của bản trước (a S, c S, d Đ).
 
 Hình chưa ưng: I.15 và III.1 là ảnh chụp nghệ thuật (nền nhòe, phản chiếu kim loại) nên bản TikZ chỉ đạt mức minh họa có khối, không tả hết độ bóng; lò nung cao tần (I.18) và ảnh súng trên tàu (III.3) lược bớt chi tiết nhỏ (cáp, nhãn, lan can) do ảnh gốc mờ.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.17, II.3 (đọc hình), II.4d, III.2 (14): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

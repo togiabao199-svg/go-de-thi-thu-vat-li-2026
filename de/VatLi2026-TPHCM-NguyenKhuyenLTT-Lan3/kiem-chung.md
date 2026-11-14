@@ -65,3 +65,7 @@ Chưa ưng:
 - I.16: thu còn 6,1 cm (từ 6,6 cm) để bản lời giải giữ 9 trang.
 
 Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT; trang 3 trống 11,5 cm ngay trước tiêu đề Phần II, được miễn), bản lời giải 9 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.1b, d (S S, theo số in): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

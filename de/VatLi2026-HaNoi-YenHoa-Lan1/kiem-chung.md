@@ -66,3 +66,7 @@ Năm hình `% giuhinh` vẽ lại theo toạ độ điểm ảnh của ảnh g�
 Hình chưa ưng: I.10 — các dải phản chiếu trên thân và nắp là mảng phẳng, chưa mềm như ảnh chụp inox (nhận ra đúng vật, đủ bộ phận); II.3 — khối mica đầu phải và tấm mica đầu trái đơn giản hơn ảnh (ảnh gốc mờ, không vẽ thêm chi tiết đoán).
 
 II.1 (không vẽ lại): đối chiếu ảnh gốc phóng to — M ở trên bên trái, N ở dưới bên phải, đường sức hướng lên trên sang phải, thanh MN vẽ đè lên các đường sức và có mặt đầu elip ở N: hình TikZ đúng hướng, chiều, nhãn như gốc. Thanh nằm trên mặt phẳng đường sức nên hình là nhìn từ trên xuống; khi đó $\vec l_{MN}\times\vec B$ hướng ra phía người nhìn (lên trên), dòng điện phải chạy M → N, ý b) Sai như đã gõ.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.7 (B, λ như đề in), II.1b (S), III.3 (78,6), III.4 (2,97, N_A = 6,02·10²³): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

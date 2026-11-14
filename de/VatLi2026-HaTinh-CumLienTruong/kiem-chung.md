@@ -43,3 +43,8 @@
 ## Hình
 
 1 hình gốc (II.2: hai ống chữ J kèm cốc rót thủy ngân) vẽ lại bằng TikZ (macro riêng `\HTongJ` khai báo trong file đề); Bảng 1 gõ bằng `tabular` đặt cạnh hình. Ảnh so: `so-hinh/01-cau-II-2.png` (vùng cắt ảnh trang 2, 300 dpi, `0.08:0.69:0.46:0.87`).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **II.2 a): Sai → Đúng.** Tích pV của lần đo 1–6 lệch nhau dưới 1 %; lần đo 7 (lệch khoảng 13 %) là số đo hỏng như ý d chỉ ra, nên số liệu phù hợp định luật Boyle trong giới hạn sai số. Câu II.2 thành Đ Đ S Đ. Viết lại lời giải ý a, bỏ `% KIỂM TRA` của ý này.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.9 (B), II.3c, d (Đ Đ), III.3 (4,65, giữ `% KIỂM TRA`): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.
