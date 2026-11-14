@@ -326,11 +326,11 @@
 				\draw[VLmui,thick] (2.05,2.95)--(1.45,2.95);
 				\qp{2.2}{2.95}
 				\node[above,inner sep=3pt] at (2.35,3.05) {Lực lạ};
-				% chiều dòng điện ngoài
-				\draw[VLmui,thick,VLdo] (0.285,1.0)--(0.285,1.75);
-				\filldraw[fill=white,draw=VLdo,thick] (0.285,0.85) circle (0.12); \node[VLdo,font=\fontsize{6}{6}\selectfont\bfseries] at (0.285,0.85) {I};
-				\draw[VLmui,thick,VLdo] (4.115,1.5)--(4.115,0.75);
-				\filldraw[fill=white,draw=VLdo,thick] (4.115,1.65) circle (0.12); \node[VLdo,font=\fontsize{6}{6}\selectfont\bfseries] at (4.115,1.65) {I};
+				% electron ở hai nhánh dọc (như hình gốc: dấu trừ quay dọc theo dây), mũi tên chiều chuyển động
+				\draw[VLmui,thick] (0.285,1.0)--(0.285,1.75);
+				\filldraw[fill=white,draw=black,thick] (0.285,0.85) circle (0.13); \draw[thick] (0.285,0.78)--(0.285,0.92);
+				\draw[VLmui,thick] (4.115,1.5)--(4.115,0.75);
+				\filldraw[fill=white,draw=black,thick] (4.115,1.65) circle (0.13); \draw[thick] (4.115,1.58)--(4.115,1.72);
 				% electron ở mạch ngoài, lực điện
 				\foreach \x in {1.35,2.35,3.55}{\draw[VLmui,thick] (\x-0.17,0.3)--(\x-0.6,0.3); \qd{\x}{0.3}}
 				\draw[thin] (2.8,0.3)--(3.0,0.75) node[above,inner sep=1pt] {Lực điện};

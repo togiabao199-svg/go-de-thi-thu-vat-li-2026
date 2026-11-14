@@ -77,3 +77,7 @@ Macro riêng của đề (khai báo đầu file): `\PBCdongmuoi{x}{y}{nửa rộ
 Hình chưa thật ưng: I.2 (ảnh gốc rất mờ, hình vẽ lại là cách đọc hợp lí nhất về bố cục: mũ hàn – tay – hồ quang – thanh thép); II.2 ảnh trái (người đạp xe vẽ theo góc nhìn ngang hơi chếch, ảnh gốc chụp chếch từ phía trước và bị nhòe chuyển động).
 
 Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 11 trang.
+
+## Sửa hình theo báo cáo phiên kiểm đáp án (14/11/2026)
+
+- I.6: hình gốc ở hai nhánh dọc là hai electron ⊖ (dấu trừ quay dọc theo dây) kèm mũi tên chiều chuyển động; bản trước vẽ thành nhãn dòng điện I (đỏ) mà giữ chiều mũi tên của electron. Đã vẽ lại thành ⊖ màu đen như gốc, giữ chiều mũi tên. Không đổi đáp án, lời giải.
