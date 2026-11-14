@@ -60,3 +60,7 @@ Vẽ theo toạ độ điểm ảnh của ảnh gốc (ảnh nhúng trong PDF), 
 - II.2 (`03-cau-II-2.png`, sơ đồ, không phải hình thực tiễn): chỉ vẽ lại điện kế G (hộp có bề dày, mặt kính, thang đo cung tròn rộng, vạch 0, kim lệch trái như ảnh gốc) và nối kín vòng dây (C) ở điểm thấp nhất (hình cũ hở một khe nhỏ); nam châm, đường sức, chiều $i$, dấu "+" giữ nguyên.
 - I.16: giữ nguyên.
 Hình chưa ưng: không có. Dàn trang: bản đề 6 trang (ĐẠT), bản lời giải 10 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.2c (Đ), II.3d (S), III.4 (3,46): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

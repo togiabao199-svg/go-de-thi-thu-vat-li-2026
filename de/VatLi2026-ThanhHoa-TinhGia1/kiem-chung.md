@@ -62,3 +62,7 @@
 - Giữ nguyên (sơ đồ, đồ thị, mạch): I.5, I.9, I.17, II.1, II.4, III.1, III.2 (mạch cầu chì tự dựng do đề gốc thiếu hình), III.6.
 - Hình chưa ưng: không có hình nào chưa đạt; II.2 là ảnh chụp mờ nên lá, đất vẽ theo kiểu minh họa (không thể giống hệt từng hạt đất).
 - Dàn trang: bản đề 7 trang (ĐẠT), bản lời giải 12 trang (như trước khi vẽ lại).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.2 (A), II.3 (S S S S theo chữ in), III.2 (0,66, mạch tự dựng): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

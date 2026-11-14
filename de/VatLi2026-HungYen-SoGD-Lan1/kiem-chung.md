@@ -57,3 +57,7 @@
 - Hình chưa ưng: không có.
 - Macro mới trong file đề (đề nghị chuyển vào `preamble-vatli-hinh.tex`): `\VLsoledmau{x}{y}{cao}{danh sách}{màu}` (số bảy đoạn chọn màu, thêm kí tự `o` = dấu độ, `C`), `\VLbinhnuocnong` (dùng được cho đề Lạng Sơn SGD Lần 1 câu II.1 — cùng hình gốc), `\VLtnnongchay` (bộ thí nghiệm nhiệt nóng chảy riêng: nhiệt lượng kế có lỗ hở – cốc hứng – cân – biến áp nguồn).
 - Dàn trang: bản đề 7 trang ĐẠT (trang 4 trống 4,1 cm), bản lời giải 10 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.2 (P = 1,2 kW đã sửa), II.1c (S), II.1d (Đ): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

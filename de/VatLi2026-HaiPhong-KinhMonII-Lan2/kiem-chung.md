@@ -65,3 +65,8 @@ Sửa nhỏ ở hình không thuộc nhóm thực tiễn (đều không ảnh h�
 Hình chưa ưng: II.1 phải thu còn 12,6 cm (để 14,5 cm thì bản lời giải thành 11 trang) nên chữ "AC/DC POWER SUPPLY" rất nhỏ (3 pt); các dòng chữ nhỏ khác trên mặt máy chỉ vẽ bằng vạch vì ảnh gốc không đọc được.
 
 Macro riêng trong file đề: `\KMvanhkhuyen{x}{y}`, `\KMhatthoc{x}{y}{góc}{độ sáng}`, `\KMmam{x}{y}{hướng}{dài}{cong}`, màu `KMchanh`, `KMtrau`, `KMtoi`.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **II.1 a): Sai → Đúng.** Theo nguyên tắc của phép đo (bỏ qua hao phí), nhiệt lượng nước thu vào bằng điện năng cung cấp P·Δt; ý c dùng chính đẳng thức này. Câu II.1 thành Đ S Đ Đ. Viết lại lời giải ý a.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.2b (S), II.3d (S), II.4d (Đ), III.6 (2,3): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

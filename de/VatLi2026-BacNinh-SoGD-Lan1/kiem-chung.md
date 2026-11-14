@@ -58,3 +58,7 @@
 - Không vẽ lại (sơ đồ, đồ thị, giữ nguyên): I.5, I.7, I.10, II.2 (hình vẽ nét sơ đồ thí nghiệm), III.1, III.4.
 - Hình chưa thật ưng: III.2 — bàn tay cầm búa vẽ cách điệu (bốn ngón thẳng đứng), ảnh gốc là nắm tay nhìn nghiêng bị mờ; I.4 — đế vẽ dạng đĩa hai tầng (theo bản ảnh rõ của đề Nghệ An Liên trường Lần 5), ảnh gốc Bắc Ninh là đế phẳng nhìn thẳng.
 - Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 10 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.2c (Đ), III.5 (8,01), III.6 (0,6): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

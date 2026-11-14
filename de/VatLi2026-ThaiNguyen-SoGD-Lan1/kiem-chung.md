@@ -48,3 +48,7 @@
 - Đối chiếu lại cực nguồn trên ảnh gốc (ảnh nhúng phóng 6 lần và ảnh trang 400 dpi): bốn vạch bản cực từ K đến B có chiều cao lần lượt khoảng 42, 20, 40, 18 điểm ảnh gốc, tức dài – ngắn – dài – ngắn; cách đọc "cực dương (bản dài) ở phía K" khớp ảnh gốc. Lưu ý: trên ảnh gốc bốn vạch có bề dày nét như nhau (không thấy rõ "bản ngắn đậm"), nên cực chỉ phân biệt được bằng độ dài vạch; hình vẽ lại vẽ bản ngắn đậm hơn theo kí hiệu SGK.
 - I.7 (khung dây ABCD trong từ trường), I.13, III.5 (đồ thị): sơ đồ, giữ nguyên.
 - Hình chưa ưng: không.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.17 (A, phương án C đã sửa), II.1c (Đ): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

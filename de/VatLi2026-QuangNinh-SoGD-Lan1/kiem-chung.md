@@ -57,3 +57,8 @@ Phần III:
 - II.2 (`so-hinh/05-cau-II-2.png`): vẽ lại sát hình gốc: bình thủy tinh lớn miệng elip có mỏ rót bên phải, đáy bo tròn, nước có bóng đáy; cốc nhỏ có mỏ rót bên trái đặt trong bình, nước trong cốc đậm hơn; hai nhiệt kế loại có vỏ thủy tinh bao ngoài (ống vỏ bo tròn hai đầu, ống thang chia độ, vạch chia hai bên, cột chất lỏng đỏ, cổ và bầu dài) — macro riêng `\QNnhietkevo`; phần nhúng trong nước phủ màu nước. Không ghi số trên thang (số trên ảnh gốc không đọc được, đề không dùng), cột chất lỏng hai nhiệt kế bằng nhau như hình gốc. Bỏ `\VLbinhthuytinh`, `\VLnhietkett` (hình dạng khác vật trong ảnh gốc).
 - Các hình còn lại (I.6 nam châm chữ U – đường sức, I.10, I.12, II.1, III.1, III.3) là sơ đồ, đồ thị: giữ nguyên nội dung. Riêng II.1 thu chiều cao đồ thị từ 4,22 cm xuống 3,79 cm (`y=0.72cm` → `y=0.63cm`) để cả câu II.1 nằm trọn trang 4, nhường chỗ cho hình II.3 lớn ở trang 5 (bản đề vẫn 7 trang, ĐẠT).
 - Hình chưa ưng: II.3 — khuôn mặt bác sĩ, bệnh nhân chỉ vẽ ở mức khối (ảnh gốc mờ); nút trên hai bảng điều khiển vẽ ước lệ theo mảng màu nhìn thấy (màn hình tối phía trên, cụm nút xanh phía dưới), không khẳng định đúng từng nút. Nước tô `VLxanh` theo bảng màu chung nên ngả tím hơn màu xanh lơ của ảnh gốc.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **I.16: đáp án B.** Trả phương án C về nguyên văn đề gốc $U_2=\dfrac{N_1}{N_2}\cdot U_1$; sửa phương án B thành $U_2=\dfrac{N_2}{N_1}\cdot U_1$ (đề gốc in nhầm dấu "+" thay cho dấu nhân; bản đăng trên VietJack in dấu nhân và chọn B). Bỏ `% KIỂM TRA` của câu này; lời giải giữ nguyên.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.3d (S), III.2 (608), III.3 (0,44), III.6 (2,15) — các `% KIỂM TRA` này giữ nguyên: giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

@@ -66,3 +66,8 @@
 - II.3 (đồ thị p–T): giữ nguyên.
 
 Hình chưa thật ưng: I.14 — ảnh gốc độ phân giải thấp (246 × 286 px) nên bàn tay vẽ theo dáng chung, vùng các ngón co của tay phải chỉ thể hiện bằng mảng tối; bản in cỡ 3,8 × 5 cm nhìn rõ bố cục.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **II.2 d): sửa lời đề "khoảng 8,9 °C" thành "khoảng 9,8 °C"; Sai → Đúng** (Δt = 949 200/(96·1005) ≈ 9,84 °C; đề gõ đảo chữ số, nguồn đăng kèm đề tính ra 9,84 °C và chấm Đúng). Câu II.2 thành Đ S Đ Đ. Viết lại lời giải ý d.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.8 (A, (3/2)kT đã sửa), II.4c (Đ): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

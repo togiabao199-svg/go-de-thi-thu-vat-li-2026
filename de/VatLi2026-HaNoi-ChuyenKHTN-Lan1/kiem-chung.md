@@ -49,3 +49,7 @@
 - II.2: nam châm A, B để xám (cực là ý học sinh phải suy luận), đường sức `VLxanh`.
 - II.4: giữ quả cân ghi "?" như hình gốc.
 - III.4: bình khí, van, ống dẫn, bóng bay vẽ lại sơ đồ có tô khối nhẹ (chưa vẽ chi tiết; chờ phiên vẽ lại).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.3a (Đ), III.4 (16), III.5 (8), III.6 (0,05): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

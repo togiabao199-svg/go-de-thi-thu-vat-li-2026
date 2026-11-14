@@ -62,3 +62,7 @@
 - II.2 (hệ thống tản nhiệt CPU, `% giuhinh`): vẽ lại theo toạ độ điểm ảnh của ảnh gốc (ảnh nhúng 336 × 296, phóng 4 lần), rộng 6,4 cm × cao 5,75 cm. Bộ tản nhiệt dạng hộp có mặt trên, mặt bên, dàn lá tản nhiệt bậc thang (nửa trên vạch trắng, nửa dưới vạch đỏ sẫm), 4 mũi tên chất lỏng mát (xanh nhạt, sang phải) và 2 mũi tên chất lỏng nóng (đỏ, sang trái) như gốc, ốc bốn góc; quạt có hai vành, thân trụ giữa, trục ốc, lòng quạt, 7 cánh xoáy, moay-ơ phẳng; ba mũi tên khối khí mát (xanh) đi vào quạt, ba mũi tên khối khí nóng (đỏ) lớn dần thoát ra sau bộ tản nhiệt; bộ làm mát hình trụ chuyển màu đỏ → xanh xám, giá đỡ chữ thập ba trụ ốc, đế mạch và CPU bên dưới; hai ống dẫn (mát xanh nhạt ở trên, nóng đỏ ở dưới) có vạch chỉ dòng chảy, khớp nối ở bộ làm mát, miệng ống ở bộ tản nhiệt. Màu giữ như ảnh gốc (đề đã nói rõ khí mát / chất lỏng nóng lên, màu không phải ý cần suy luận). Macro mới trong file đề: `\VLmuikhoi` (mũi tên khối).
 - I.14 (đồ thị p–V), III.5 (sơ đồ bình có pit-tông): sơ đồ, giữ nguyên.
 - Hình chưa ưng: không. Khác gốc có chủ ý: ba mũi tên khí nóng vẽ liền khối (gốc mỗi mũi tên có khúc đuôi gãy), ảnh gốc không có bóng đổ — thêm bóng mờ dưới ống dẫn.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.1a (S), II.2b, c (S S, theo số in): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

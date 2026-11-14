@@ -60,3 +60,7 @@ Bốn hình thực tiễn (`% giuhinh`) vẽ lại theo tọa độ điểm ản
 Hình chưa ưng: không có. Lưu ý: II.2 khi in trắng đen, mũi tên khí nóng và khí mát cùng độ xám (phân biệt bằng nhãn "Khí nóng", "Luồng khí hơi sương" và vị trí).
 
 Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT; trang 3 trống 7,3 cm ngay trước tiêu đề Phần II, được miễn), bản lời giải 9 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.3a (S), II.4b (S), III.1 (0,88), III.6 (0,82): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.
