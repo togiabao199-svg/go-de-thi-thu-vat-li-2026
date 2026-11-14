@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Phu Tho - So GDDT - Lan 1.pdf`. Giải l
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | B | B | — | khớp |
-| I.2 | B | B | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | D | D | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | B | B | — | khớp |
-| I.10 | A | A | — | khớp |
-| I.11 | B | B | — | khớp |
-| I.12 | D | D | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | C | C | — | khớp (thầy xem: đề không cho k) |
-| I.16 | C | C | — | khớp |
-| I.17 | C | C | — | khớp |
-| I.18 | C | C | — | khớp |
-| II.1 | S Đ Đ Đ | S Đ Đ Đ | — | khớp (thầy xem: ý a mơ hồ) |
-| II.2 | Đ S S Đ | Đ S S Đ | — | khớp |
-| II.3 | Đ Đ S S | Đ Đ S S | — | khớp |
-| II.4 | S Đ Đ Đ | S Đ Đ Đ | — | khớp (thầy xem: ý b không cần k) |
-| III.1 | 144 | 144 | — | khớp (thầy xem: coi đẳng tích) |
-| III.2 | 422 | 422 | — | khớp |
-| III.3 | 504 | 504 | — | khớp |
-| III.4 | 777 | 777 | — | khớp |
-| III.5 | 2,4 | 2,4 | — | khớp |
-| III.6 | 0,45 | 0,45 | — | khớp |
+| I.1 | B | B | B | khớp |
+| I.2 | B | B | B | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | D | D | D | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | B | B | B | khớp |
+| I.10 | A | A | A | khớp |
+| I.11 | B | B | B | khớp |
+| I.12 | D | D | D | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | C | C | C | khớp (thầy xem: đề không cho k) |
+| I.16 | C | C | C | khớp |
+| I.17 | C | C | C | khớp |
+| I.18 | C | C | C | khớp |
+| II.1 | S Đ Đ Đ | S Đ Đ Đ | S Đ Đ Đ | khớp (thầy xem: ý a mơ hồ) |
+| II.2 | Đ S S Đ | Đ S S Đ | Đ S S Đ | khớp |
+| II.3 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp |
+| II.4 | S Đ Đ Đ | S Đ Đ Đ | S Đ Đ Đ | khớp (thầy xem: ý b không cần k) |
+| III.1 | 144 | 144 | 144 | khớp (thầy xem: coi đẳng tích) |
+| III.2 | 422 | 422 | 422 | khớp |
+| III.3 | 504 | 504 | 504 | khớp |
+| III.4 | 777 | 777 | 777 | khớp |
+| III.5 | 2,4 | 2,4 | 2,4 | khớp |
+| III.6 | 0,45 | 0,45 | 0,45 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 File đề không có dòng `% KIỂM TRA` / `% ???`. Các điểm "thầy xem" ghi ở kiem-chung.md và TIEN-DO (dòng P07): II.1a; I.15 và II.4b (không cho k); III.1 (coi đẳng tích); III.5 (áp suất nhỏ). Thêm hai ý Fable thấy cần nêu: II.2b, II.2c.
@@ -94,64 +94,71 @@ Trang liên quan nhưng không mở được (tên miền ngoài danh sách cho 
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-Bước bổ sung chỉ đối chiếu đáp án trên mạng (không giải lại, không sửa `.tex`). Chỉ đọc phần công khai, không đăng nhập; trang VietJack đọc bằng `curl`, tải lần lượt cách nhau khoảng 1,6 s.
+Bước bổ sung chỉ đối chiếu đáp án trên mạng (không giải lại, không sửa `.tex`). Chỉ đọc phần công khai, không đăng nhập; trang VietJack đọc bằng `curl`, tải lần lượt cách nhau khoảng 1,6 s. Trang đúng đề tìm được qua trang danh mục VietJack https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test (WebSearch không ra).
 
 ### (a) Nguồn
 
-**Nguồn đúng đề (chỉ có đề, KHÔNG có đáp án công khai):**
-- https://khoahoc.vietjack.com/chi-tiet-de-thi/5770/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-1 — VietJack (mục tài liệu), "Đề thi thử Tốt nghiệp THPT Vật Lí 2025 - 2026 Sở Phú Thọ (đợt 1)". Bản xem trước công khai là tệp PDF trên cùng tên miền (https://khoahoc.vietjack.com/upload/documents/admission_post/6515428/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-1-17787270036a05385b32ca5.pdf, 6 trang, tạo từ Word ngày 14/05/2026): đầu đề "SỞ GD & ĐT PHÚ THỌ – TRƯỜNG THPT … – ĐỀ KHẢO SÁT CHẤT LƯỢNG HỌC SINH LỚP 12 THPT (ĐỢT 1) NĂM HỌC 2026 – Môn: Vật lý – ĐỀ CHÍNH THỨC – **Mã đề 0203**", có đủ 28 câu nhưng **không có bảng đáp án / lời giải** (kết thúc ở "---- HẾT ----"). Bản DOCX "đầy đủ đáp án" chỉ tải được với gói VIP — không dùng.
-- Bằng chứng khớp đúng đề: đủ 28 câu cùng lời, số liệu, thứ tự câu / phương án / ý với file, ví dụ I.1 (mô hình động học phân tử, bình kín), I.14 (T₁ = 200 K; 200/400/600/300 K), I.16 (bóng thám không 10 m, 0,03 atm, 200 K; 2,12/2,71/3,56/1,78 m), II.1 (khí cầu 498,6 m³, vỏ 145 kg, 127 °C), II.2 (CPU 21 W, 0,4 lít/phút, 80 %), II.3 (nút chai 2,3 cm², 30 °C → 99 °C, 2,59 N), II.4 (0,87 g, 2,9 s, 0,8 bar, 17 °C), III.1 (390 N/m), III.5–6 (pit-tông 600 g, 0,6L, 600 K).
-- Ghi nhận cho mục C: bản mã 0203 này cũng in ý II.2b "75 kJ" và ý II.2c "… nội năng tăng 10,8 J" đúng như bản SieuGioi trong `kho/goc/` — tức lỗi số liệu nằm ngay trong đề của Sở, không phải do bên đăng gõ nhầm (khả năng "bản của Sở in 10,08 kJ" ghi ở mục C không còn). Tên kì thi theo nguồn: "Khảo sát chất lượng học sinh lớp 12 THPT (đợt 1)" của Sở GD&ĐT Phú Thọ — khớp cách đặt "Lần 1".
+**Nguồn đúng đề 1 — VietJack thi online (lời giải công khai cả 28 câu):**
+- Trang cả đề: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-phu-tho-lan-1-co-dap-an — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Phú Thọ lần 1 có đáp án" (28 câu; công khai lời giải câu 1–8: B B D A A D A D, khớp file).
+- Trang câu `khoahoc.vietjack.com/question/2441552` … `2441579` (mục "Trả lời: Giải bởi Vietjack" công khai; dòng "Câu hỏi trong đề" ghi nhóm "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Phú Thọ"). Đáp án III.6 nằm ở mục "Câu hỏi cùng đoạn" trên trang câu III.5 (2441578; id 2441579 trỏ về cùng trang). Thứ tự câu, phương án (đã so cả 18 câu Phần I), ý trùng file.
+- Bằng chứng khớp: I.14 (T₁ = 200 K; 200/400/600/300 K), I.15 (helium 37 °C; 4,28·10⁻²¹ / 7,66·10⁻²² / 6,42·10⁻²¹ / 2,07·10⁻²³ J), I.16 (bóng thám không 10 m, 0,03 atm, 200 K → 1 atm, 300 K), II.1 (khí cầu 498,6 m³, vỏ 145 kg, 127 °C), II.2 (CPU 21 W, 0,4 lít/phút, 80 %; ý b "75 kJ", ý c "10,8 J"), II.3 (nút chai 2,3 cm², 30 °C → 99 °C, 2,59 N), II.4 (0,87 g, 2,9 s, 0,8 bar, 17 °C, 30√277 m/s), III.1 (390 N/m, nén 1 cm), III.3–4 (ấm nhôm 600 g, 1,5 lít, 35 phút, 20 %, 75 %), III.5–6 (pit-tông 600 g, 0,6L, 600 K).
+
+**Nguồn đúng đề 2 — VietJack trang tài liệu (chỉ có đề, không có đáp án):**
+- https://khoahoc.vietjack.com/chi-tiet-de-thi/5770/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-1 — "Đề thi thử Tốt nghiệp THPT Vật Lí 2025 - 2026 Sở Phú Thọ (đợt 1)". Bản xem trước công khai (PDF 6 trang trên cùng tên miền: https://khoahoc.vietjack.com/upload/documents/admission_post/6515428/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-1-17787270036a05385b32ca5.pdf): đầu đề "SỞ GD & ĐT PHÚ THỌ – ĐỀ KHẢO SÁT CHẤT LƯỢNG HỌC SINH LỚP 12 THPT (ĐỢT 1) NĂM HỌC 2026 – Môn: Vật lý – ĐỀ CHÍNH THỨC – **Mã đề 0203**", đủ 28 câu, không có bảng đáp án (bản DOCX "đầy đủ đáp án" chỉ tải được với gói VIP — không dùng).
+- Ghi nhận cho mục C: bản mã 0203 này in ý II.2b "75 kJ" và ý II.2c "… nội năng tăng 10,8 J" đúng như bản SieuGioi trong `kho/goc/` — lỗi số liệu nằm ngay trong đề của Sở. Tên kì thi theo nguồn: "Khảo sát chất lượng học sinh lớp 12 THPT (đợt 1)" của Sở GD&ĐT Phú Thọ; VietJack thi online gọi là "lần 1" — khớp cách đặt "Lần 1".
 
 **Bản lời khác (KHÔNG coi là đúng đề):**
-- https://khoahoc.vietjack.com/question/2312812/mot-he-thong-tan-nhiet-cho-cpu-co-cau-truc-nhu-hinh-ben-bo-lam-mat-tiep-xuc-truc-tiep-voi-cpu — câu hệ thống tản nhiệt CPU trong "Đề thi thử tốt nghiệp THPT môn Vật lí Sở Bà Rịa Vũng Tàu có đáp án" (lời giải công khai). Khác số liệu: công suất CPU 210 W; ý b "750 kJ"; ý c là mệnh đề khác (lưu lượng chất lỏng và lưu lượng khí quyết định hiệu suất làm mát); ý d "6 °C". Đáp án nguồn đó: Đ – S – Đ – Đ; ý b ghi Sai vì Q = 210·3600 = 756 kJ ≠ 750 kJ — cùng kiểu lệch 0,6 kJ / 6 kJ như ý II.2b của đề Phú Thọ (75,6 kJ / "75 kJ"), bản gốc cho Sai. Chỉ là tham khảo cách chấm của câu gốc, không phải đáp án của đề này.
-- https://khoahoc.vietjack.com/question/2312820/noi-ap-suat-co-van-la-1-lo-tron-co-dien-tich-1cm2 (đã ghi ở phiên trước) — câu nồi áp suất cùng dạng III.1, số liệu khác (1300 N/m), không mở.
+- https://khoahoc.vietjack.com/question/2312812/mot-he-thong-tan-nhiet-cho-cpu-co-cau-truc-nhu-hinh-ben-bo-lam-mat-tiep-xuc-truc-tiep-voi-cpu — câu tản nhiệt CPU trong "Đề thi thử tốt nghiệp THPT môn Vật lí Sở Bà Rịa Vũng Tàu có đáp án": công suất 210 W, ý b "750 kJ" (nguồn: Sai vì 756 kJ), ý c là mệnh đề khác, ý d "6 °C"; đáp án nguồn đó Đ – S – Đ – Đ.
 
-**Nguồn đã xét nhưng KHÔNG đúng đề:**
-- https://khoahoc.vietjack.com/chi-tiet-de-thi/5750/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-2 — Sở Phú Thọ **đợt 2** (Câu 1 về dòng điện xoay chiều i = 6√2cos100πt; Câu 4 đẳng áp 1,2 m³…) — đề khác.
-- https://khoahoc.vietjack.com/thi-online/2023-de-thi-thu-vat-li-so-gd-phu-tho-lan-1-co-dap-an/122351 (theo đoạn trích tìm kiếm) — đề năm 2023, khác năm.
+**Nguồn đã xét nhưng KHÔNG đúng đề:** https://khoahoc.vietjack.com/chi-tiet-de-thi/5750/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-2 (Sở Phú Thọ đợt 2: Câu 1 dòng điện i = 6√2cos100πt… — đề khác); trang danh mục còn có "Sở GD&ĐT Phú Thọ lần 2", "THPT Ngô Gia Tự (Phú Thọ)", các đề Phú Thọ năm 2023 — không mở (khác lần / khác trường / khác năm).
 
-**Tên miền bị chặn:** `hoatieu.vn` — thử WebFetch một lần trang https://hoatieu.vn/de-khao-sat-chat-luong-mon-vat-li-12-phu-tho-249503: HTTP 403, không thử lại. Không có đoạn trích tìm kiếm nào nêu đáp án của đề.
+**Tên miền bị chặn:** `hoatieu.vn` — WebFetch một lần trang https://hoatieu.vn/de-khao-sat-chat-luong-mon-vat-li-12-phu-tho-249503: HTTP 403, không thử lại.
 
-**Truy vấn đã thử (bổ sung):** WebSearch: "khí cầu có thể tích luôn không đổi là 498,6" đáp án; "Một hệ thống tản nhiệt cho CPU" "0,4 lít/phút" "21 W" vật lí; Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở Phú Thọ lần 1 có đáp án vietjack; "Nhiệt lượng CPU tỏa ra trong một giờ khi hoạt động bình thường là 75 kJ"; "Quá trình bơm không khí từ bên ngoài vào khí cầu là quá trình đẳng nhiệt" — không ra trang có đáp án. Ô tìm kiếm VietJack (`khoahoc.vietjack.com/search/query`): "Một khí cầu có thể tích luôn không đổi là 498,6"; "hệ thống tản nhiệt cho CPU lưu lượng chất lỏng"; "người A trung bình mỗi nhịp hít không khí vào phổi"; "bóng thám không …"; "Nồi áp suất … 390 N/m"; "Một người đi biển tìm thấy một cái chai kín có nút …"; "Sở Phú Thọ Vật lý 2025-2026"; "Phú Thọ vật lí 2026"; "Sở Phú Thọ Vật Lí đợt 1" (truy vấn cuối ra trang tài liệu đúng đề nói trên). Không có trang câu (`/question/…`) hay trang thi online (`/thi-online/…`) nào của đề này trên VietJack.
+**Truy vấn đã thử (bổ sung):** WebSearch: "khí cầu có thể tích luôn không đổi là 498,6" đáp án; "Một hệ thống tản nhiệt cho CPU" "0,4 lít/phút" "21 W" vật lí; Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở Phú Thọ lần 1 có đáp án vietjack; "Nhiệt lượng CPU tỏa ra trong một giờ khi hoạt động bình thường là 75 kJ"; "Quá trình bơm không khí từ bên ngoài vào khí cầu là quá trình đẳng nhiệt" — không ra trang đề. Ô tìm kiếm VietJack (`khoahoc.vietjack.com/search/query`): ra trang tài liệu đợt 1 / đợt 2 (truy vấn "Sở Phú Thọ Vật Lí đợt 1"), không ra trang thi online. Trang thi online đúng đề tìm được trên trang danh mục nói trên.
 
 ### (b) Bảng đối chiếu 28 câu
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | B | — | — | không có đáp án công khai |
-| I.2 | B | — | — | không có đáp án công khai |
-| I.3 | D | — | — | không có đáp án công khai |
-| I.4 | A | — | — | không có đáp án công khai |
-| I.5 | A | — | — | không có đáp án công khai |
-| I.6 | D | — | — | không có đáp án công khai |
-| I.7 | A | — | — | không có đáp án công khai |
-| I.8 | D | — | — | không có đáp án công khai |
-| I.9 | B | — | — | không có đáp án công khai |
-| I.10 | A | — | — | không có đáp án công khai |
-| I.11 | B | — | — | không có đáp án công khai |
-| I.12 | D | — | — | không có đáp án công khai |
-| I.13 | D | — | — | không có đáp án công khai |
-| I.14 | B | — | — | không có đáp án công khai |
-| I.15 | C | — | — | không có đáp án công khai |
-| I.16 | C | — | — | không có đáp án công khai |
-| I.17 | C | — | — | không có đáp án công khai |
-| I.18 | C | — | — | không có đáp án công khai |
-| II.1 | S Đ Đ Đ | — | — | không có đáp án công khai |
-| II.2 | Đ S S Đ | — | — | không có đáp án công khai |
-| II.3 | Đ Đ S S | — | — | không có đáp án công khai |
-| II.4 | S Đ Đ Đ | — | — | không có đáp án công khai |
-| III.1 | 144 | — | — | không có đáp án công khai |
-| III.2 | 422 | — | — | không có đáp án công khai |
-| III.3 | 504 | — | — | không có đáp án công khai |
-| III.4 | 777 | — | — | không có đáp án công khai |
-| III.5 | 2,4 | — | — | không có đáp án công khai |
-| III.6 | 0,45 | — | — | không có đáp án công khai |
+| I.1 | B | B | [VJ 2441552](https://khoahoc.vietjack.com/question/2441552/theo-mo-hinh-dong-hoc-phan-tu-khi-tang-nhiet-do-cua-khi-trong-binh-kin) | khớp |
+| I.2 | B | B | [VJ 2441553](https://khoahoc.vietjack.com/question/2441553/khi-noi-ve-noi-nang-cua-vat-thi-phat-bieu-nao-sau-day-la-sai) | khớp |
+| I.3 | D | D | [VJ 2441554](https://khoahoc.vietjack.com/question/2441554/trong-he-toa-do-v-t-duong-bieu-dien-nao-sau-day-la-duong-dang-ap-bqpmr) | khớp |
+| I.4 | A | A | [VJ 2441555](https://khoahoc.vietjack.com/question/2441555/khi-an-pittong-tu-tu-xuong-de-nen-khi-trong-mot-xilanh-kin-thi-e0las) | khớp |
+| I.5 | A | A | [VJ 2441556](https://khoahoc.vietjack.com/question/2441556/nhiet-do-khong-tuyet-doi-ung-voi-nhiet-do-la) | khớp |
+| I.6 | D | D | [VJ 2441557](https://khoahoc.vietjack.com/question/2441557/phuong-trinh-trang-thai-khi-li-tuong-cho-biet-moi-lien-he-giua-cac-dai) | khớp |
+| I.7 | A | A | [VJ 2441558](https://khoahoc.vietjack.com/question/2441558/noi-dung-nao-duoi-day-khong-phai-la-tinh-chat-cua-cac-phan-tu-khi-thebk) | khớp |
+| I.8 | D | D | [VJ 2441559](https://khoahoc.vietjack.com/question/2441559/trong-cac-hien-tuong-sau-day-hien-tuong-nao-khong-phai-la-su-bay-hoi-qpg5q) | khớp |
+| I.9 | B | B | [VJ 2441560](https://khoahoc.vietjack.com/question/2441560/don-vi-cua-nhiet-nong-chay-rieng-trong-he-do-luong-quoc-te-si-la) | khớp |
+| I.10 | A | A | [VJ 2441561](https://khoahoc.vietjack.com/question/2441561/trong-dong-hoc-phan-tu-chat-khi-goi-k-la-hang-so-cua-chat-khi-li-tuong) | khớp |
+| I.11 | B | B | [VJ 2441562](https://khoahoc.vietjack.com/question/2441562/dong-nang-trung-binh-cua-chuyen-dong-tinh-tien-phan-tu-khi-li-tuong-li) | khớp |
+| I.12 | D | D | [VJ 2441563](https://khoahoc.vietjack.com/question/2441563/qua-bong-bay-du-duoc-buoc-chat-de-lau-ngay-van-bi-xep-vi-kwa9i) | khớp |
+| I.13 | D | D | [VJ 2441564](https://khoahoc.vietjack.com/question/2441564/o-thang-nhiet-do-celsius-nhiet-do-cua-vat-la-27-do-c-thi-o-thang-do-nhiet-do-kelvin-nhiet-do-cua-vat) | khớp |
+| I.14 | B | B | [VJ 2441565](https://khoahoc.vietjack.com/question/2441565/trong-do-thi-p-v-mot-luong-khi-xac-dinh-bien-doi-tu-trang-thai-1-sang) | khớp |
+| I.15 | C | C | [VJ 2441566](https://khoahoc.vietjack.com/question/2441566/mot-binh-kin-chua-khi-helium-o-nhiet-do-37oc-dong-nang-trung-binh-cua) | khớp |
+| I.16 | C | C | [VJ 2441567](https://khoahoc.vietjack.com/question/2441567/mot-bong-tham-khong-coi-nhu-hinh-cau-li-tuong-duoc-che-tao-de-co-the-t) | khớp |
+| I.17 | C | C | [VJ 2441568](https://khoahoc.vietjack.com/question/2441568/chat-o-the-nao-de-bi-nen-nhat) | khớp |
+| I.18 | C | C | [VJ 2441569](https://khoahoc.vietjack.com/question/2441569/theo-mo-hinh-dong-hoc-phan-tu-chat-khi-ap-suat-khi-trong-binh-kin) | khớp |
+| II.1 | S Đ Đ Đ | S Đ Đ Đ | [VJ 2441570](https://khoahoc.vietjack.com/question/2441570/mot-khi-cau-co-the-tich-luon-khong-doi-la-498-6-m3-khoi-luong-vo-145-k) | khớp (ý a Sai — điểm mục D; lí do nguồn khác file, xem (c)) |
+| II.2 | Đ S S Đ | Đ S S Đ | [VJ 2441571](https://khoahoc.vietjack.com/question/2441571/mot-he-thong-tan-nhiet-cho-cpu-co-cau-truc-nhu-hinh-ben-bo-lam-mat-tie) | khớp (ý b, c Sai — điểm mục C) |
+| II.3 | Đ Đ S S | Đ Đ S S | [VJ 2441572](https://khoahoc.vietjack.com/question/2441572/mot-nguoi-di-bien-tim-thay-mot-cai-chai-kin-co-nut-nut-chai-co-mat-cat) | khớp |
+| II.4 | S Đ Đ Đ | S Đ Đ Đ | [VJ 2441573](https://khoahoc.vietjack.com/question/2441573/o-dieu-kien-ap-suat-khi-quyen-la-p-1-bar-105-pa-va-nhiet-do-t1-27-do-c-nguoi-a-trung-binh-moi-nhip-h) | khớp |
+| III.1 | 144 | 144 | [VJ 2441574](https://khoahoc.vietjack.com/question/2441574/noi-ap-suat-co-van-la-1-lo-tron-co-dien-tich-1-cm2-luon-duoc-ep-chat-boi-1-lo-xo-co-do-cung-390-n-m) | khớp |
+| III.2 | 422 | 422 | [VJ 2441575](https://khoahoc.vietjack.com/question/2441575/biet-khoi-luong-mol-cua-khi-nitrogen-n2-la-28-g-mol-coi-cac-phan-tu-khi-n2-la-khi-li-tuong-tinh-toc) | khớp |
+| III.3 | 504 | 504 | [VJ 2441576](https://khoahoc.vietjack.com/question/2441576/dung-bep-dien-de-dun-mot-am-nhom-khoi-luong-600-g-dung-1-5-lit-nuoc-o-nhiet-do-20-do-c-sau-35-phut-d) | khớp |
+| III.4 | 777 | 777 | [VJ 2441577](https://khoahoc.vietjack.com/question/2441577/dung-bep-dien-de-dun-mot-am-nhom-khoi-luong-600-g-dung-1-5-lit-nuoc-o-nhiet-do-20-do-c-sau-35-phut-d-jtpak) | khớp |
+| III.5 | 2,4 | 2,4 | [VJ 2441578](https://khoahoc.vietjack.com/question/2441578/ap-suat-khi-trong-phan-2-khi-nhiet-do-27-do-c-bang-bao-nhieu-kpa-lam-tron-ket-qua-den-chu-so-hang-ph) | khớp |
+| III.6 | 0,45 | 0,45 | [VJ 2441578](https://khoahoc.vietjack.com/question/2441578/ap-suat-khi-trong-phan-2-khi-nhiet-do-27-do-c-bang-bao-nhieu-kpa-lam-tron-ket-qua-den-chu-so-hang-ph) | khớp (lời giải ở mục "Câu hỏi cùng đoạn" trên trang câu III.5) |
 
 ### (c) Câu mạng khác file
 
-Không có (không tìm thấy đáp án công khai của đề này). Các điểm mục C, D của `kho/KIEM-DAP-AN-V2.md` (II.1a, II.2b, II.2c) chưa đối chiếu được; chỉ xác nhận thêm: số "75 kJ" (II.2b) và "10,8 J" (II.2c) in đúng như vậy trong bản mã 0203 của Sở trên VietJack.
+Không có: nguồn đúng đề (VietJack) khớp file cả 28 câu.
+
+Các điểm mục C, D của `kho/KIEM-DAP-AN-V2.md` (đều khớp file):
+- **II.1a (mục D)**: nguồn **S** như file, nhưng lí do khác: nguồn lập luận "lỗ này cũng là lỗ cấp nhiệt → nhiệt độ bên trong khí cầu cao hơn bên ngoài → quá trình bơm không phải đẳng nhiệt", còn lời giải file lập luận theo lượng khí thay đổi. Kết luận Sai trùng nhau.
+- **II.2b (mục C)**: nguồn **S**: Q = 21·3600 = 75,6·10³ J (≠ 75 kJ).
+- **II.2c (mục C)**: nguồn **S**: Q_thu = 80 %·21·600 = 10 080 J (≠ 10,8 J).
+- Thêm: II.3c nguồn S với p = 1,01·10⁵·372/303 ≈ 1,24·10⁵ Pa (đề in 1,14·10⁵); II.3d nguồn S với F_ms = 2,3·10⁻⁴·(124 000 − 101 000) = 5,29 N (đề in 2,59 N) — khớp file.
 
 ### (d) Tổng
 
-**Không tìm thấy đáp án trên mạng**: 0/28 câu có đáp án công khai (đã tìm thấy đúng đề — mã 0203, bản PDF xem trước trên VietJack — nhưng không kèm đáp án; bản có đáp án nằm sau gói VIP hoặc trên hoatieu.vn bị chặn).
+Có đáp án mạng (nguồn đúng đề, VietJack) cho **28/28** câu; **28 khớp**, **0 khác**.

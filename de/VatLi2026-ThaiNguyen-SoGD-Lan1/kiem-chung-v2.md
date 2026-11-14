@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Thai Nguyen - So GDDT - Lan 1.pdf`. Gi�
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | — | khớp |
-| I.2 | B | B | — | khớp |
-| I.3 | C | C | — | khớp |
-| I.4 | D | D | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | D | D | — | khớp |
-| I.7 | C | C | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | D | D | — | khớp |
-| I.10 | A | A | — | khớp |
-| I.11 | D | D | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | B | B | — | khớp |
-| I.14 | C | C | — | khớp |
-| I.15 | C | C | — | khớp |
-| I.16 | A | A | — | khớp |
-| I.17 | A | A | — | khớp (KIỂM TRA) |
-| I.18 | C | C | — | khớp |
-| II.1 | Đ Đ Đ S | Đ Đ Đ S | — | khớp (thầy xem ý c, d) |
-| II.2 | S S Đ S | S S Đ S | — | khớp (thầy xem ý d) |
-| II.3 | Đ Đ S S | Đ Đ S S | — | khớp (thầy xem ý d) |
-| II.4 | Đ S Đ S | Đ S Đ S | — | khớp |
-| III.1 | 683 | 683 | — | khớp |
-| III.2 | 2,2 | 2,2 | — | khớp |
-| III.3 | 16 | 16 | — | khớp |
-| III.4 | 1,6 | 1,6 | — | khớp |
-| III.5 | 301 | 301 | — | khớp |
-| III.6 | 401 | 401 | — | khớp |
+| I.1 | A | A | A | khớp |
+| I.2 | B | B | B | khớp |
+| I.3 | C | C | C | khớp |
+| I.4 | D | D | D | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | D | D | D | khớp |
+| I.7 | C | C | C | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | D | D | D | khớp |
+| I.10 | A | A | A | khớp |
+| I.11 | D | D | D | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | B | B | B | khớp |
+| I.14 | C | C | C | khớp |
+| I.15 | C | C | C | khớp |
+| I.16 | A | A | A | khớp |
+| I.17 | A | A | A | khớp (KIỂM TRA) |
+| I.18 | C | C | C | khớp |
+| II.1 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp (thầy xem ý c, d) |
+| II.2 | S S Đ S | S S Đ S | S S Đ S | khớp (thầy xem ý d) |
+| II.3 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (thầy xem ý d) |
+| II.4 | Đ S Đ S | Đ S Đ S | Đ S Đ S | khớp |
+| III.1 | 683 | 683 | 683 | khớp |
+| III.2 | 2,2 | 2,2 | 2,2 | khớp |
+| III.3 | 16 | 16 | 16 | khớp |
+| III.4 | 1,6 | 1,6 | 1,6 | khớp |
+| III.5 | 301 | 301 | 301 | khớp |
+| III.6 | 401 | 401 | 401 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -92,65 +92,61 @@ Trang liên quan:
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-**Không tìm thấy đáp án trên mạng của đúng đề này** (0/28 câu có đáp án mạng). Không giải lại đề, không sửa đáp án.
+**Tìm được trang đăng đúng đề trên VietJack, đủ đáp án công khai 28/28 câu; khớp file 28/28.** Không giải lại đề, không sửa đáp án. (Lượt dò lại theo trang danh mục VietJack do phiên chính chỉ; thay cho kết luận "không tìm thấy" của lượt đầu cùng ngày.)
 
 ### (a) Nguồn
 
-- **Nguồn đúng đề:** không tìm thấy.
+- **Nguồn đúng đề (VJ-TN):** https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-thai-nguyen-lan-1-co-dap-an — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Thái Nguyên lần 1 có đáp án" (28 câu), tìm qua trang danh mục https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test. Tải bằng `curl` (HTTP 200), mỗi lần cách 1,5 s, chỉ đọc phần công khai (không đăng nhập, không cookie).
+  - Câu 1–8: đáp án công khai ngay trên trang cả đề ("Đáp án đúng là X"); câu 9–20 trên trang cả đề hiện khóa VIP nên lấy ở trang từng câu.
+  - Câu 9–28: trang câu `khoahoc.vietjack.com/question/<id>`, id liên tiếp 2442614–2442633 (câu n ↔ id 2442605 + n; câu 1–8 là 2442606–2442613). Mỗi trang câu đều ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Thái Nguyên !!" và có "Trả lời: Giải bởi Vietjack" công khai cho chính câu đó (không khóa VIP).
+  - Bằng chứng khớp: cùng thứ tự 28 câu, thứ tự phương án, thứ tự ý; lời câu và số liệu khớp file, ví dụ I.5 (22 °C; 30 °C; 52 / 265 / 8 / 281 K), I.7 (khung ABCD, cạnh DA, phương án DA / CD / AB / BC), I.11 (70 %), I.17 (nguồn cũng in phương án C trùng B, như bản gốc), II.1 (S = 3,5·10⁻⁹ m²; L = 72,0 cm; E = 12 V; r = 0,5 Ω; 12,0 cm; 6,0 g), II.2 (6,5 cm; 1,5 cm; 5 m), II.3 (27 °C; 2,00 bar; 45 °C; 2,35 bar), III.1–2 (800 g; 2,0 l; 25 °C; 16 phút; 20 %; 75 %), III.3–4 (0,8 m²; 10 Ω; 0,4 T; 0,02 s), III.5–6 (6,0 mol). Không có mã đề.
 - **Nguồn đã xét nhưng KHÔNG đúng đề:**
-  - https://khoahoc.vietjack.com/question/2061691/mot-bo-thiet-bi-bao-gom-mot-soi-day-dan-dien-dong-chat-tiet-dien-deu-mot-nam-cham-mot-chiec-can-mot (link ghi ở mục "Nguồn trên mạng" cũ; lượt này tải được bằng `curl`, HTTP 200). Dòng "Câu hỏi trong đề" ghi: *Đề thi thử tốt nghiệp THPT môn Vật lí ĐGNL - Đại học Sư Phạm Hà Nội có đáp án* — đề khác. Câu trên trang là câu tự luận hai ý cùng bộ thiết bị (S = 3,5·10⁻⁹ m²; L = 72,0 cm; đoạn 12,0 cm; cân thay đổi 6,0 g) nhưng suất điện động 16,0 V (đề Thái Nguyên: 12,0 V); lời giải công khai của trang ra I = 4 A, B ≈ 0,1225 T, số chỉ cân giảm. Không có ý "0,13 T", không tính là đáp án của đề này (chỉ cho biết II.1 là bài chuyển thể; hướng "cân giảm" của trang cùng hướng với ý c của file, nhưng hình của đề khác có thể khác cực nguồn).
-  - https://khoahoc.vietjack.com/thi-online/2023-de-thi-thu-vat-ly-so-gd-thai-nguyen-lan-1-co-dap-an — đề Sở Thái Nguyên Lần 1 năm **2023** (40 câu, cấu trúc cũ), không phải đề 2026; không mở.
-  - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-so-thai-nguyen-250435 — theo đoạn trích tìm kiếm (phiên trước) là đề lần 2; lượt này WebFetch bị từ chối (HTTP 403).
-  - https://news.laodong.vn/tuyen-sinh/bo-de-thi-thu-tot-nghiep-thpt-nam-2026-mon-vat-li-1694841.ldo — theo đoạn trích tìm kiếm: ảnh đề Sở Thái Nguyên **đợt 2**, không có đáp án; tên miền bị chặn.
-  - https://docs.google.com/document/d/1LEI_3e3SCxiItANFCEmIhDVc6Esb0O-5/export?format=pdf — hiện ra khi tìm câu "ống đo độ sâu" Lord Kelvin; WebFetch báo ENOTFOUND (bị chặn), không biết nội dung.
-- **Tên miền bị chặn trong lượt này:** hoatieu.vn (WebFetch: HTTP 403), docs.google.com và news.laodong.vn (WebFetch: ENOTFOUND — ngoài danh sách mạng của phiên). Đọc được: khoahoc.vietjack.com (`curl`).
-- **Truy vấn đã thử (WebSearch, 8):**
-  1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở Thái Nguyên lần 1 đáp án
-  2. "Lord Kelvin" "ống đo độ sâu" "6,5 cm" "1,5 cm" chim biển đúng sai vật lí 12
-  3. site:khoahoc.vietjack.com "Thái Nguyên" vật lí 2026 lần 1
-  4. "Dùng bếp điện để đun một ấm nhôm có khối lượng 800 gam đựng 2,0 lít nước"
-  5. "Một lốp xe máy được bơm ở nhiệt độ 27" "2,00 Bar" "45" đẳng tích mật độ phân tử
-  6. tuyensinh247 đề thi thử tốt nghiệp 2026 môn Vật lí Sở GDĐT Thái Nguyên đợt 1 có đáp án
-  7. site:khoahoc.vietjack.com "Lực từ tác dụng lên đoạn dây DA cùng hướng với"
-  8. "yên xe đạp khi để ngoài trời nắng tăng lên là do sự truyền nhiệt" "xoa hai bàn tay"
+  - https://khoahoc.vietjack.com/question/2061691/mot-bo-thiet-bi-bao-gom-mot-soi-day-dan-dien-dong-chat-tiet-dien-deu-mot-nam-cham-mot-chiec-can-mot — thuộc "Đề thi thử tốt nghiệp THPT môn Vật lí ĐGNL - Đại học Sư Phạm Hà Nội"; câu tự luận cùng bộ thiết bị nhưng E = 16,0 V (lời giải trang: I = 4 A, B ≈ 0,1225 T).
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-thai-nguyen-lan-2-co-dap-an — đề Sở Thái Nguyên **lần 2** (đề khác; không mở).
+  - https://khoahoc.vietjack.com/thi-online/2023-de-thi-thu-vat-ly-so-gd-thai-nguyen-lan-1-co-dap-an — đề năm 2023, 40 câu.
+  - hoatieu.vn 250435 (theo đoạn trích là lần 2; WebFetch HTTP 403), news.laodong.vn 1694841 (đợt 2; ENOTFOUND), docs.google.com 1LEI_3e3… (ENOTFOUND).
+- **Tên miền bị chặn:** hoatieu.vn (WebFetch: HTTP 403), docs.google.com, news.laodong.vn (WebFetch: ENOTFOUND). Đọc được: khoahoc.vietjack.com (`curl`).
+- **Truy vấn đã thử (lượt đầu, WebSearch, 8 — không ra trang đúng đề):** đề thi thử tốt nghiệp THPT 2026 Vật lí Sở Thái Nguyên lần 1 đáp án; "Lord Kelvin" "ống đo độ sâu" "6,5 cm" "1,5 cm" chim biển…; site:khoahoc.vietjack.com "Thái Nguyên" vật lí 2026 lần 1; "Dùng bếp điện để đun một ấm nhôm có khối lượng 800 gam đựng 2,0 lít nước"; "Một lốp xe máy được bơm ở nhiệt độ 27" "2,00 Bar"…; tuyensinh247 … Thái Nguyên đợt 1; site:khoahoc.vietjack.com "Lực từ tác dụng lên đoạn dây DA cùng hướng với"; "yên xe đạp khi để ngoài trời nắng…" "xoa hai bàn tay". Lượt dò lại: duyệt trang danh mục VietJack (không qua WebSearch).
 
 ### (b) Bảng đối chiếu
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | A | — | — | không có đáp án mạng |
-| I.2 | B | — | — | không có đáp án mạng |
-| I.3 | C | — | — | không có đáp án mạng |
-| I.4 | D | — | — | không có đáp án mạng |
-| I.5 | C | — | — | không có đáp án mạng |
-| I.6 | D | — | — | không có đáp án mạng |
-| I.7 | C | — | — | không có đáp án mạng |
-| I.8 | D | — | — | không có đáp án mạng |
-| I.9 | D | — | — | không có đáp án mạng |
-| I.10 | A | — | — | không có đáp án mạng |
-| I.11 | D | — | — | không có đáp án mạng |
-| I.12 | A | — | — | không có đáp án mạng |
-| I.13 | B | — | — | không có đáp án mạng |
-| I.14 | C | — | — | không có đáp án mạng |
-| I.15 | C | — | — | không có đáp án mạng |
-| I.16 | A | — | — | không có đáp án mạng |
-| I.17 | A | — | — | không có đáp án mạng |
-| I.18 | C | — | — | không có đáp án mạng |
-| II.1 | Đ Đ Đ S | — | — | không có đáp án mạng |
-| II.2 | S S Đ S | — | — | không có đáp án mạng |
-| II.3 | Đ Đ S S | — | — | không có đáp án mạng |
-| II.4 | Đ S Đ S | — | — | không có đáp án mạng |
-| III.1 | 683 | — | — | không có đáp án mạng |
-| III.2 | 2,2 | — | — | không có đáp án mạng |
-| III.3 | 16 | — | — | không có đáp án mạng |
-| III.4 | 1,6 | — | — | không có đáp án mạng |
-| III.5 | 301 | — | — | không có đáp án mạng |
-| III.6 | 401 | — | — | không có đáp án mạng |
+| I.1 | A | A | trang cả đề (VJ-TN) | khớp |
+| I.2 | B | B | trang cả đề (VJ-TN) | khớp |
+| I.3 | C | C | trang cả đề (VJ-TN) | khớp |
+| I.4 | D | D | trang cả đề (VJ-TN) | khớp |
+| I.5 | C | C | trang cả đề (VJ-TN) | khớp |
+| I.6 | D | D | trang cả đề (VJ-TN) | khớp |
+| I.7 | C | C | trang cả đề (VJ-TN) | khớp |
+| I.8 | D | D | trang cả đề (VJ-TN) | khớp |
+| I.9 | D | D | [q/2442614](https://khoahoc.vietjack.com/question/2442614) | khớp |
+| I.10 | A | A | [q/2442615](https://khoahoc.vietjack.com/question/2442615) | khớp |
+| I.11 | D | D | [q/2442616](https://khoahoc.vietjack.com/question/2442616) | khớp |
+| I.12 | A | A | [q/2442617](https://khoahoc.vietjack.com/question/2442617) | khớp |
+| I.13 | B | B | [q/2442618](https://khoahoc.vietjack.com/question/2442618) | khớp |
+| I.14 | C | C | [q/2442619](https://khoahoc.vietjack.com/question/2442619) | khớp |
+| I.15 | C | C | [q/2442620](https://khoahoc.vietjack.com/question/2442620) | khớp |
+| I.16 | A | A | [q/2442621](https://khoahoc.vietjack.com/question/2442621) | khớp |
+| I.17 | A | A | [q/2442622](https://khoahoc.vietjack.com/question/2442622) | khớp; nguồn cũng in phương án C trùng B (p = nR/(VT)), chọn A |
+| I.18 | C | C | [q/2442623](https://khoahoc.vietjack.com/question/2442623) | khớp |
+| II.1 | Đ Đ Đ S | Đ Đ Đ S | [q/2442624](https://khoahoc.vietjack.com/question/2442624) | khớp; nguồn: E = 12 V, I = 3 A, B = 0,163 T ≠ 0,13 T |
+| II.2 | S S Đ S | S S Đ S | [q/2442625](https://khoahoc.vietjack.com/question/2442625) | khớp; nguồn: h ≈ 3 m ≠ 5 m |
+| II.3 | Đ Đ S S | Đ Đ S S | [q/2442626](https://khoahoc.vietjack.com/question/2442626) | khớp; nguồn: p ≈ 2,13 bar (file 2,12) ≠ 2,35 bar |
+| II.4 | Đ S Đ S | Đ S Đ S | [q/2442627](https://khoahoc.vietjack.com/question/2442627) | khớp |
+| III.1 | 683 | 683 | [q/2442628](https://khoahoc.vietjack.com/question/2442628) | khớp |
+| III.2 | 2,2 | 2,2 | [q/2442629](https://khoahoc.vietjack.com/question/2442629) | khớp |
+| III.3 | 16 | 16 | [q/2442630](https://khoahoc.vietjack.com/question/2442630) | khớp |
+| III.4 | 1,6 | 1,6 | [q/2442631](https://khoahoc.vietjack.com/question/2442631) | khớp |
+| III.5 | 301 | 301 | [q/2442632](https://khoahoc.vietjack.com/question/2442632) | khớp |
+| III.6 | 401 | 401 | [q/2442633](https://khoahoc.vietjack.com/question/2442633) | khớp |
+
+Ghi chú bảng: "trang cả đề (VJ-TN)" = đáp án công khai trên trang cả đề; `q/<id>` = trang câu `https://khoahoc.vietjack.com/question/<id>`.
 
 ### (c) Câu mạng khác file
 
-Không có (không tìm được đáp án mạng nào của đúng đề). Mục B — I.17 (phương án C trùng B ở đề gốc): không có nguồn để đối chiếu.
+Không có (0 câu). Mục B — I.17: nguồn VietJack cũng in phương án C trùng phương án B (p = nR/(VT)) như bản gốc và chọn A, cùng đáp án với file (file đã sửa C thành p = nV/(RT), không đổi đáp án). Các ý "thầy xem" II.1c, d; II.2d; II.3d: nguồn cùng kết luận với file (cân giảm; B ≈ 0,163 T; h ≈ 3 m; p ≈ 2,13 bar — nguồn làm tròn 2,13, file 2,12, đều Sai so với 2,35 bar).
 
 ### (d) Tổng
 
-Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0.
+Số câu có đáp án mạng: 28/28; khớp: 28; khác: 0.

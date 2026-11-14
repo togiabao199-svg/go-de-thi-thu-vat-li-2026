@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - THPT chuyen DH Vinh - Lan 1.pd
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | B | B | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | C | C | — | khớp |
-| I.5 | D | D | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | A | A | — | khớp |
-| I.9 | A | A | — | khớp |
-| I.10 | B | B | — | khớp |
-| I.11 | B | B | — | khớp |
-| I.12 | D | D | — | khớp |
-| I.13 | A | A | — | khớp |
-| I.14 | A | A | — | khớp |
-| I.15 | D | D | — | khớp |
-| I.16 | C | C | — | khớp |
-| I.17 | C | C | — | khớp (thầy xem: đọc hình) |
-| I.18 | D | D | — | khớp |
-| II.1 | S Đ S Đ | S Đ S Đ | — | khớp |
-| II.2 | Đ Đ S Đ | Đ Đ S Đ | — | khớp |
-| II.3 | S Đ S Đ | S Đ S Đ | — | khớp (thầy xem: đọc cực nguồn) |
-| II.4 | Đ Đ Đ S | Đ Đ Đ S | — | khớp (KIỂM TRA) |
-| III.1 | 60 | 60 | — | khớp |
-| III.2 | 14 | 14 | — | khớp (KIỂM TRA) |
-| III.3 | 10 | 10 | — | khớp |
-| III.4 | 1000 | 1000 | — | khớp |
-| III.5 | 1,32 | 1,32 | — | khớp |
-| III.6 | 2,07 | 2,07 | — | khớp |
+| I.1 | B | B | B | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | C | C | C | khớp |
+| I.5 | D | D | D | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | A | A | A | khớp |
+| I.9 | A | A | A | khớp |
+| I.10 | B | B | B | khớp |
+| I.11 | B | B | B | khớp |
+| I.12 | D | D | D | khớp |
+| I.13 | A | A | A | khớp |
+| I.14 | A | A | A | khớp |
+| I.15 | D | D | D | khớp |
+| I.16 | C | C | C | khớp |
+| I.17 | C | C | C | khớp (thầy xem: đọc hình) |
+| I.18 | D | D | D | khớp |
+| II.1 | S Đ S Đ | S Đ S Đ | S Đ S Đ | khớp |
+| II.2 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp |
+| II.3 | S Đ S Đ | S Đ S Đ | S Đ S Đ | khớp (thầy xem: đọc cực nguồn) |
+| II.4 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp (KIỂM TRA) |
+| III.1 | 60 | 60 | 60 | khớp |
+| III.2 | 14 | 14 | 14 | khớp (KIỂM TRA) |
+| III.3 | 10 | 10 | 10 | khớp |
+| III.4 | 1000 | 1000 | 1000 | khớp |
+| III.5 | 1,32 | 1,32 | 1,32 | khớp |
+| III.6 | 2,07 | 2,07 | 2,07 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -81,6 +81,7 @@ Ghi thêm (không lệch, để thầy biết):
 - II.4a (Đ): lớp cách nhiệt dẫn nhiệt kém, hạn chế truyền nhiệt ra môi trường. II.4b (Đ): quy tắc an toàn điện. II.4c (Đ): thanh đốt là điện trở, điện năng chuyển thành nhiệt năng (hiệu ứng Joule).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng. Đề gốc (PDF SieuGioi) cũng không kèm bảng đáp án / lời giải.
 
 Truy vấn đã thử (WebSearch, 9 truy vấn):
@@ -99,3 +100,56 @@ Trang đã thấy:
 - https://truongthptchuyen.vinhuni.edu.vn/ — trang trường có mục đáp án thi thử các năm 2017, 2022, 2023, "lần 2"...; không thấy đáp án Vật lí lần 1 năm 2026 trong kết quả tìm kiếm.
 - https://vietjack.com/luyen-thi-dai-hoc-mon-hoa-hoc/de-thi-thu-2026-hoa-truong-chuyen-dai-hoc-vinh-nghe-an.jsp — đề Hoá học chuyên ĐH Vinh 2025-2026 (không phải Vật lí; vietjack bị chặn, không mở).
 - https://khoahoc.vietjack.com/question/2312002/do-lon-luc-tu-tac-dung-len-dan-phao-la-bao-nhieu-niuton — bài pháo điện từ khác số liệu, không phải đề này.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung: chỉ đọc đáp án công khai trên mạng, không giải lại đề, không sửa đáp án.
+
+### (a) Nguồn
+- **Nguồn đúng đề**: VietJack "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Chuyên Đại học Vinh (Nghệ An) lần 1 có đáp án", https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-chuyen-dai-hoc-vinh-nghe-an-lan-1-co-dap-an (28 câu; link lấy từ danh mục https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test). Trang cả đề hiện công khai "Đáp án đúng là …" câu 1–8 (B A D C D B A A); đáp án đủ 28 câu đọc ở 28 trang câu `https://khoahoc.vietjack.com/question/2442722/...` đến `.../question/2442749/...` (I.1 = 2442722, …, I.18 = 2442739, II.1–II.4 = 2442740–2442743, III.1–III.6 = 2442744–2442749), khối công khai "Trả lời: Giải bởi Vietjack". Trang câu III.1/III.2 (và III.3/III.4) dùng chung đoạn dữ kiện: lời giải câu sau in ở mục "Câu hỏi cùng đoạn" ngay dưới lời giải câu đầu. Dòng "Câu hỏi trong đề" ghi tên phòng luyện chung "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Nghệ An".
+- **Bằng chứng khớp đề**: khớp lời câu, số liệu, thứ tự câu, thứ tự phương án / ý với file ở cả 28 câu; ví dụ I.5 (phương án "Hình d), a), b), c)"), I.17 (khung dây quay, bốn biểu thức i), II.1 (máy nén khí 35 lít, 100 cm³, 28 000 vòng), II.2 (săm 2 atm, chịu tối đa 2,4 atm, 87 °C), II.3 (cân điện tử, nam châm chữ U, bảng 5 lần đo Δm / I: 4,10 g / 2,51 A … 11,00 g / 6,74 A), II.4 (bình nước nóng Panasonic 15 lít, 2500 W, 20 → 75 °C, "13,1 phút"), III.1–III.2 ("đá vĩnh cửu" thép 304 + gel, 15 g, 500 và 3500 J/(kg·K)), III.3–III.4 (Railgun, L = 8 m, 16 kg), III.5–III.6 (gas 1,89 kg propane, 2,53 kg butane). Nguồn còn các lỗi chữ của đề gốc ("ống đây", "tinh thế", "Súng điện tử", "thanh tay dẫn"); không có mã đề.
+- **Nguồn đã xét nhưng KHÔNG đúng đề**: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-chuyen-dh-vinh-nghe-an-co-dap-an — VietJack "Đề thi thử tốt nghiệp THPT môn Vật lí Chuyên ĐH Vinh - Nghệ An có đáp án" (đề năm trước): câu 1 "Một khối khí xác định được giữ đẳng áp. Thể tích … tăng thêm 10 %…", câu 2 "Phát biểu nào sau đây về nội năng là không đúng?", câu 5 khung dây 200 vòng 600 cm² — không trùng file.
+- **Tên miền bị chặn**: không dùng thêm tên miền nào ngoài khoahoc.vietjack.com (không thử chuvanbien.vn).
+- **Cách tìm (phiên này)**: WebSearch không ra trang đề (9 truy vấn phiên trước, xem mục "Nguồn trên mạng"); tìm được qua danh mục đề 2026 của VietJack, so câu 1–6 hai đề "Chuyên ĐH Vinh" trong danh mục.
+
+### (b) Bảng đối chiếu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | B | B | https://khoahoc.vietjack.com/question/2442722 | khớp |
+| I.2 | A | A | https://khoahoc.vietjack.com/question/2442723 | khớp |
+| I.3 | D | D | https://khoahoc.vietjack.com/question/2442724 | khớp |
+| I.4 | C | C | https://khoahoc.vietjack.com/question/2442725 | khớp |
+| I.5 | D | D | https://khoahoc.vietjack.com/question/2442726 | khớp |
+| I.6 | B | B | https://khoahoc.vietjack.com/question/2442727 | khớp |
+| I.7 | A | A | https://khoahoc.vietjack.com/question/2442728 | khớp |
+| I.8 | A | A | https://khoahoc.vietjack.com/question/2442729 | khớp |
+| I.9 | A | A | https://khoahoc.vietjack.com/question/2442730 | khớp |
+| I.10 | B | B | https://khoahoc.vietjack.com/question/2442731 | khớp |
+| I.11 | B | B | https://khoahoc.vietjack.com/question/2442732 | khớp |
+| I.12 | D | D | https://khoahoc.vietjack.com/question/2442733 | khớp |
+| I.13 | A | A | https://khoahoc.vietjack.com/question/2442734 | khớp |
+| I.14 | A | A | https://khoahoc.vietjack.com/question/2442735 | khớp |
+| I.15 | D | D | https://khoahoc.vietjack.com/question/2442736 | khớp |
+| I.16 | C | C | https://khoahoc.vietjack.com/question/2442737 | khớp |
+| I.17 | C | C | https://khoahoc.vietjack.com/question/2442738 | khớp (ý đọc hình) |
+| I.18 | D | D | https://khoahoc.vietjack.com/question/2442739 | khớp |
+| II.1 | S Đ S Đ | S Đ S Đ | https://khoahoc.vietjack.com/question/2442740 | khớp |
+| II.2 | Đ Đ S Đ | Đ Đ S Đ | https://khoahoc.vietjack.com/question/2442741 | khớp |
+| II.3 | S Đ S Đ | S Đ S Đ | https://khoahoc.vietjack.com/question/2442742 | khớp (ý đọc hình / cực nguồn) |
+| II.4 | Đ Đ Đ S | Đ Đ Đ S | https://khoahoc.vietjack.com/question/2442743 | khớp (KIỂM TRA) |
+| III.1 | 60 | 60 | https://khoahoc.vietjack.com/question/2442744 | khớp |
+| III.2 | 14 | 14 | https://khoahoc.vietjack.com/question/2442745 (lời giải ở mục "Câu hỏi cùng đoạn") | khớp (KIỂM TRA) |
+| III.3 | 10 | 10 | https://khoahoc.vietjack.com/question/2442746 | khớp |
+| III.4 | 1000 | 1000 | https://khoahoc.vietjack.com/question/2442747 (lời giải ở mục "Câu hỏi cùng đoạn") | khớp |
+| III.5 | 1,32 | 1,32 | https://khoahoc.vietjack.com/question/2442748 | khớp |
+| III.6 | 2,07 | 2,07 | https://khoahoc.vietjack.com/question/2442749 | khớp |
+
+### (c) Câu mạng khác file
+Không có. Ghi chú các điểm "thầy xem" / `% KIỂM TRA` của đề này (không có điểm mục A–D):
+- I.17 (đọc hình): nguồn chọn C, lập luận t = 0 thì góc (B⃗, n⃗) = π/2, Φ = NBS·cos(ωt + π/2) — trùng file.
+- II.3 (đọc hình, cực nguồn): nguồn ghi a Sai (lực từ lên thanh hướng xuống, phản lực lên nam châm hướng lên → số chỉ cân giảm), b Đúng (B̄ = 0,16 T, cả 5 lần đo ≈ 0,16 T, g = 9,8), c Sai, d Đúng — trùng file.
+- II.4 (`% KIỂM TRA`: đề thiếu c, D của nước): nguồn lấy D = 1 kg/lít, c = 4200 J/(kg·K), t = 15·4200·(75 − 20)/2500 = 1386 s ≈ 23,1 phút → d Sai — trùng file.
+- III.2 (`% KIỂM TRA`): nguồn lấy c = 4200 J/(kg·K), 0,25·4200·(30 − 10) = n·60·(10 + 15) → n = 14 — trùng file.
+
+### (d) Tổng
+28/28 câu có đáp án mạng; 28 khớp, 0 khác.

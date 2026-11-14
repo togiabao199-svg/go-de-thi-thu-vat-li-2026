@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT Luong The Vinh - Lan 1.pdf
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | D | D | — | khớp |
-| I.2 | C | C | — | khớp |
-| I.3 | A | A | — | khớp |
-| I.4 | B | B | — | khớp |
-| I.5 | D | D | — | khớp |
-| I.6 | A | A | — | khớp |
-| I.7 | D | D | — | khớp |
-| I.8 | B | B | — | khớp |
-| I.9 | C | C | — | khớp |
-| I.10 | D | D | — | khớp |
-| I.11 | D | D | — | khớp |
-| I.12 | B | B | — | khớp |
-| I.13 | A | A | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | A | A | — | khớp |
-| I.16 | C | C | — | khớp |
-| I.17 | D | D | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | S Đ S Đ | S Đ S Đ | — | khớp |
-| II.2 | Đ Đ S S | S Đ S S | — | ý a LỆCH do file sửa lời đề (KIỂM TRA); b, c, d khớp |
-| II.3 | Đ Đ Đ S | Đ Đ Đ S | — | khớp |
-| II.4 | Đ S Đ S | Đ S Đ S | — | khớp |
-| III.1 | 2,42 | 2,42 | — | khớp |
-| III.2 | 200 | 200 | — | khớp (thầy xem) |
-| III.3 | 752 | 752 | — | khớp |
-| III.4 | 2,7 | 2,7 | — | khớp (thầy xem) |
-| III.5 | 20 | 20 | — | khớp |
-| III.6 | 5 | 5 | — | khớp |
+| I.1 | D | D | D | khớp |
+| I.2 | C | C | C | khớp |
+| I.3 | A | A | A | khớp |
+| I.4 | B | B | B | khớp |
+| I.5 | D | D | D | khớp |
+| I.6 | A | A | A | khớp |
+| I.7 | D | D | D | khớp |
+| I.8 | B | B | B | khớp |
+| I.9 | C | C | C | khớp |
+| I.10 | D | D | D | khớp |
+| I.11 | D | D | D | khớp |
+| I.12 | B | B | B | khớp |
+| I.13 | A | A | A | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | A | A | A | khớp |
+| I.16 | C | C | C | khớp |
+| I.17 | D | D | D | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | S Đ S Đ | S Đ S Đ | S Đ S Đ | khớp |
+| II.2 | Đ Đ S S | S Đ S S | Đ Đ S S (nguồn giữ Z = 51; ý a khác file) | ý a LỆCH do file sửa lời đề (KIỂM TRA); b, c, d khớp |
+| II.3 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ Đ (ý d khác file) | khớp |
+| II.4 | Đ S Đ S | Đ S Đ S | Đ S Đ S | khớp |
+| III.1 | 2,42 | 2,42 | 2,42 | khớp |
+| III.2 | 200 | 200 | 200 | khớp (thầy xem) |
+| III.3 | 752 | 752 | 752 | khớp |
+| III.4 | 2,7 | 2,7 | 2,7 | khớp (thầy xem) |
+| III.5 | 20 | 20 | 20 | khớp |
+| III.6 | 5 | 5 | 5 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -107,50 +107,53 @@ Trang liên quan:
 Bước bổ sung: chỉ đọc đáp án công khai trên mạng, không giải lại đề, không sửa đáp án.
 
 ### (a) Nguồn
-**Không tìm thấy đáp án trên mạng** cho đúng đề này.
-
-Nguồn đã xét nhưng **KHÔNG đúng đề** (đã mở được, so lời câu):
-- https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-luong-the-vinh-ha-noi-lan-1-co-dap-an/164073 — VietJack "Đề thi thử tốt nghiệp THPT môn Vật lí THPT Lương Thế Vinh - Hà Nội lần 1 có đáp án": đề **40 câu** (60 phút, cấu trúc cũ), câu 1 "Đường sức từ của từ trường đều là các đường", câu 2 "Khi nhiệt độ một vật tăng 1 °C…", câu 3 "đơn vị của nhiệt hóa hơi riêng", câu 4 "Dòng điện Foucault không xuất hiện…", câu 5 "từ thông giảm đều từ 0,2 Wb xuống 0,1 Wb trong 0,02 s"…; không câu nào trong 20 câu hiện trên trang trùng file (không có súng bắn tốc độ, iodine-131, nồi áp suất, chai sữa, phong vũ biểu…). Đây là đề khác (id câu 1739916–1739957, đăng từ năm trước). Đúng như phiên chính nghi.
-- https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-truong-luong-the-vinh-ha-noi-co-dap-an — VietJack "… trường Lương Thế Vinh - Hà Nội có đáp án": đề 28 câu nhưng khác nội dung (câu 1 "Từ trường là dạng vật chất…", câu 2 đồ thị (p, T), câu 3 "Nhiệt độ sôi của nước biển…", câu 15 "Thả 12 viên nước đá…"); không trùng câu nào của file.
-
-Tên miền bị chặn: không thử thêm tên miền ngoài khoahoc.vietjack.com (không tìm được trang nào khác đăng đúng đề để thử).
-
-Truy vấn đã thử (WebSearch): `site:khoahoc.vietjack.com "Lương Thế Vinh" vật lý 2025-2026 lần 1` (ra hai trang VietJack trên, đều sai đề); `"Súng bắn tốc độ của cảnh sát giao thông phát ra" vật lí`; `"chai sữa hoàn toàn giống nhau" "bình cách nhiệt" "bắt đầu nhỏ hơn 30" vật lí 2026`; `site:khoahoc.vietjack.com "iodine-131" "30,0 mCi" xuất viện` (chỉ ra trang câu https://khoahoc.vietjack.com/question/2482415/... — đã mở: câu Đúng/Sai môn Toán về hàm m(t) của I-131 trong "24 Đề ôn thi Tốt nghiệp THPT Toán (về đích) năm 2026", không phải đề này); `đề thi thử tốt nghiệp 2026 vật lí THPT Lương Thế Vinh Hà Nội lần 2 đáp án "bình phun nước tưới cây"` (thử tên "lần 2" vì `kho/kiem-ke.md` ghi đề trùng file "Lương Thế Vinh – Lần 2"); `site:khoahoc.vietjack.com "101 vạch" nhiệt kế thủy ngân mờ vạch chia`. Không truy vấn nào ra trang đăng đúng đề.
+- **Nguồn đúng đề**: VietJack "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THCS&THPT Lương Thế Vinh (Hà Nội) lần 2 có đáp án", https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thcsthpt-luong-the-vinh-ha-noi-lan-2-co-dap-an (28 câu; link lấy từ danh mục https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test, theo gợi ý của phiên chính). Đáp án đủ 28 câu đọc ở 28 trang câu `https://khoahoc.vietjack.com/question/2442550/...` đến `.../question/2442577/...` (I.1 = 2442550, …, I.18 = 2442567, II.1–II.4 = 2442568–2442571, III.1–III.6 = 2442572–2442577; đăng 26/04/2026), khối công khai "Trả lời: Giải bởi Vietjack" (Phần I "Chọn X", Phần II "a) Đúng/Sai …", Phần III "Đáp án: …"). Dòng "Câu hỏi trong đề" ghi tên phòng luyện chung "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Nội".
+- **Tên đề / lần thi**: VietJack ghi trường là "THCS&THPT Lương Thế Vinh (Hà Nội)" và gọi là **lần 2** — khớp ghi chú của `kho/kiem-ke.md` (file "Lương Thế Vinh – Lần 2" trong kho trùng nguyên đề này). File đang đặt tên "Lần 1" — thầy xem lại tên / lần thi.
+- **Bằng chứng khớp đề**: khớp lời câu, số liệu, thứ tự câu, thứ tự phương án / ý với file ở cả 28 câu; ví dụ I.1 ("Năng lượng bức xạ từ Mặt Trời…"), I.4–I.5 (súng bắn tốc độ radar, sóng truyền Đông → Tây), I.16 (101 vạch, 5 °C và 95 °C; C "co bớt 10 %"), I.18 (U-235 / U-238, v = 3·10⁵ m/s, B = 125 mT, 3,9·10⁻²⁵ và 3,95·10⁻²⁵ kg; A 150 mm), II.1 (p = 3, n = 1000 vòng/phút, 6 cuộn × 200 vòng, 0,5 mWb), II.2 (iodine-131, 8 ngày, 36,0 mCi → 30,0 mCi), II.4 (bình phun 4 lít / 3 lít, 1,25 bar, 0,2 lít), III.3 (phong vũ biểu 760 / 755 / 748 mmHg), III.4 (khung 20 cm, 100 vòng, 25 mA, 60°), III.5–III.6 (chai sữa 45 → 40 → 36 °C). Nguồn giữ nguyên ¹³¹₅₁I ở mọi chỗ như đề gốc (file đã sửa thành ¹³¹₅₃I).
+- **Nguồn đã xét nhưng KHÔNG đúng đề** (đã mở, so lời câu):
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-luong-the-vinh-ha-noi-lan-1-co-dap-an/164073 — "… THPT Lương Thế Vinh - Hà Nội lần 1 có đáp án": đề **40 câu** (60 phút, cấu trúc cũ), câu 1 "Đường sức từ của từ trường đều là các đường", câu 2 "Khi nhiệt độ một vật tăng 1 °C…", câu 3 "đơn vị của nhiệt hóa hơi riêng", câu 5 "từ thông giảm đều từ 0,2 Wb xuống 0,1 Wb trong 0,02 s"…; không câu nào trong 20 câu hiện trên trang trùng file. Đúng như phiên chính nghi: đây là đề khác.
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-truong-luong-the-vinh-ha-noi-co-dap-an — "… trường Lương Thế Vinh - Hà Nội có đáp án": 28 câu nhưng khác nội dung (câu 1 "Từ trường là dạng vật chất…", câu 3 "Nhiệt độ sôi của nước biển…", câu 15 "Thả 12 viên nước đá…").
+  - https://khoahoc.vietjack.com/question/2482415/... (ra từ truy vấn I-131) — câu Đúng/Sai môn Toán về hàm m(t) của I-131 trong "24 Đề ôn thi Tốt nghiệp THPT Toán (về đích) năm 2026", không phải đề này.
+- **Tên miền bị chặn**: không dùng thêm tên miền nào ngoài khoahoc.vietjack.com.
+- **Truy vấn đã thử (WebSearch, không truy vấn nào ra trang đúng đề)**: `site:khoahoc.vietjack.com "Lương Thế Vinh" vật lý 2025-2026 lần 1`; `"Súng bắn tốc độ của cảnh sát giao thông phát ra" vật lí`; `"chai sữa hoàn toàn giống nhau" "bình cách nhiệt" "bắt đầu nhỏ hơn 30" vật lí 2026`; `site:khoahoc.vietjack.com "iodine-131" "30,0 mCi" xuất viện`; `đề thi thử tốt nghiệp 2026 vật lí THPT Lương Thế Vinh Hà Nội lần 2 đáp án "bình phun nước tưới cây"`; `site:khoahoc.vietjack.com "101 vạch" nhiệt kế thủy ngân mờ vạch chia`. Tìm được nhờ dò danh mục đề 2026 của VietJack.
 
 ### (b) Bảng đối chiếu
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | D | — | — | không có đáp án mạng |
-| I.2 | C | — | — | không có đáp án mạng |
-| I.3 | A | — | — | không có đáp án mạng |
-| I.4 | B | — | — | không có đáp án mạng |
-| I.5 | D | — | — | không có đáp án mạng |
-| I.6 | A | — | — | không có đáp án mạng |
-| I.7 | D | — | — | không có đáp án mạng |
-| I.8 | B | — | — | không có đáp án mạng |
-| I.9 | C | — | — | không có đáp án mạng |
-| I.10 | D | — | — | không có đáp án mạng |
-| I.11 | D | — | — | không có đáp án mạng |
-| I.12 | B | — | — | không có đáp án mạng |
-| I.13 | A | — | — | không có đáp án mạng |
-| I.14 | B | — | — | không có đáp án mạng |
-| I.15 | A | — | — | không có đáp án mạng |
-| I.16 | C | — | — | không có đáp án mạng |
-| I.17 | D | — | — | không có đáp án mạng |
-| I.18 | A | — | — | không có đáp án mạng |
-| II.1 | S Đ S Đ | — | — | không có đáp án mạng |
-| II.2 | S Đ S S | — | — | không có đáp án mạng |
-| II.3 | Đ Đ Đ S | — | — | không có đáp án mạng |
-| II.4 | Đ S Đ S | — | — | không có đáp án mạng |
-| III.1 | 2,42 | — | — | không có đáp án mạng |
-| III.2 | 200 | — | — | không có đáp án mạng |
-| III.3 | 752 | — | — | không có đáp án mạng |
-| III.4 | 2,7 | — | — | không có đáp án mạng |
-| III.5 | 20 | — | — | không có đáp án mạng |
-| III.6 | 5 | — | — | không có đáp án mạng |
+| I.1 | D | D | https://khoahoc.vietjack.com/question/2442550 | khớp |
+| I.2 | C | C | https://khoahoc.vietjack.com/question/2442551 | khớp |
+| I.3 | A | A | https://khoahoc.vietjack.com/question/2442552 | khớp |
+| I.4 | B | B | https://khoahoc.vietjack.com/question/2442553 | khớp |
+| I.5 | D | D | https://khoahoc.vietjack.com/question/2442554 | khớp |
+| I.6 | A | A | https://khoahoc.vietjack.com/question/2442555 | khớp |
+| I.7 | D | D | https://khoahoc.vietjack.com/question/2442556 | khớp |
+| I.8 | B | B | https://khoahoc.vietjack.com/question/2442557 | khớp |
+| I.9 | C | C | https://khoahoc.vietjack.com/question/2442558 | khớp |
+| I.10 | D | D | https://khoahoc.vietjack.com/question/2442559 | khớp |
+| I.11 | D | D | https://khoahoc.vietjack.com/question/2442560 | khớp |
+| I.12 | B | B | https://khoahoc.vietjack.com/question/2442561 | khớp |
+| I.13 | A | A | https://khoahoc.vietjack.com/question/2442562 | khớp |
+| I.14 | B | B | https://khoahoc.vietjack.com/question/2442563 | khớp |
+| I.15 | A | A | https://khoahoc.vietjack.com/question/2442564 | khớp |
+| I.16 | C | C | https://khoahoc.vietjack.com/question/2442565 | khớp |
+| I.17 | D | D | https://khoahoc.vietjack.com/question/2442566 | khớp |
+| I.18 | A | A | https://khoahoc.vietjack.com/question/2442567 | khớp |
+| II.1 | S Đ S Đ | S Đ S Đ | https://khoahoc.vietjack.com/question/2442568 | khớp (cả ý d) |
+| II.2 | S Đ S S | Đ Đ S S | https://khoahoc.vietjack.com/question/2442569 | KHÁC ý a (file S / mạng Đ) — mục B |
+| II.3 | Đ Đ Đ S | Đ Đ Đ Đ | https://khoahoc.vietjack.com/question/2442570 | KHÁC ý d (file S / mạng Đ) |
+| II.4 | Đ S Đ S | Đ S Đ S | https://khoahoc.vietjack.com/question/2442571 | khớp |
+| III.1 | 2,42 | 2,42 | https://khoahoc.vietjack.com/question/2442572 | khớp |
+| III.2 | 200 | 200 | https://khoahoc.vietjack.com/question/2442573 | khớp (thầy xem) |
+| III.3 | 752 | 752 | https://khoahoc.vietjack.com/question/2442574 | khớp |
+| III.4 | 2,7 | 2,7 | https://khoahoc.vietjack.com/question/2442575 | khớp (thầy xem) |
+| III.5 | 20 | 20 | https://khoahoc.vietjack.com/question/2442576 | khớp |
+| III.6 | 5 | 5 | https://khoahoc.vietjack.com/question/2442577 | khớp |
 
 ### (c) Câu mạng khác file
-Không có (không có đáp án mạng). Điểm mục B (II.2a: Z của I-131 là 51 hay 53) chưa đối chiếu được trên mạng.
+- **II.2a (mục B)**: file S / mạng Đ / https://khoahoc.vietjack.com/question/2442569 / nguồn giữ nguyên ¹³¹₅₁I như đề gốc và viết ¹³¹₅₁I → β⁻ + ¹³¹₅₂Xe ⇒ N_Xe = 131 − 52 = 79 ⇒ Đúng. Nhận xét: khác do **file đã sửa dữ kiện** Z = 51 → 53 (ghi `% KIỂM TRA`), không phải lỗi tính. Nguồn cho thấy đáp án đang lưu hành của đề theo nguyên văn là **Đúng** (ủng hộ khả năng 1 trong phần "Giải thích thêm" ở trên: người ra đề dùng Z = 51 và tính 79). Các ý b, c, d nguồn ghi Đ, S, S — trùng file (c: t = 2,1 ngày = 50,5 h; d: 16,6 %).
+- **II.3d**: file S / mạng Đ / https://khoahoc.vietjack.com/question/2442570 / nguồn chỉ ghi "d) Đúng", lời giải chung ΔU = A + Q, A > 0, Q > 0 ⇒ ΔU > 0 (dùng cho ý c). Lời câu trùng file từng chữ ("Nội năng của khối khí bằng tổng công A và nhiệt lượng Q mà khối khí nhận được"), không do khác đề. Khác ở **cách hiểu chữ**: file chấm Sai vì định luật I cho **độ biến thiên** nội năng ΔU = A + Q, không phải nội năng (lời giải file); nguồn coi mệnh đề là phát biểu của định luật I nên Đúng. Không thuộc mục A–D; điểm mới cần thầy quyết (căn cứ: SGK Vật lí 12 KNTT bài 2 "Nội năng. Định luật I của nhiệt động lực học": "độ biến thiên nội năng của vật bằng tổng công và nhiệt lượng mà vật nhận được").
+
+Ghi chú các điểm "thầy xem" khác: III.2 nguồn ra 200 W với cos(0 − π/3) (u pha 0, i pha π/3) — trùng file; III.4 nguồn ra 2,7 với B_t = B₀·tan 60° — trùng file; II.1d nguồn ra 133 V — trùng file; I.12 nguồn chọn B (đường (4), μ ∝ p/T) — trùng file.
 
 ### (d) Tổng
-0/28 câu có đáp án mạng; 0 khớp, 0 khác.
+28/28 câu có đáp án mạng; 26 khớp, 2 khác (II.2a — mục B, nguồn theo nguyên văn Z = 51; II.3d — "nội năng" hay "độ biến thiên nội năng").

@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT Yen Hoa - Lan 1.pdf`. Gi�
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | D | D | — | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | A | A | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | D | D | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | B | B | — | khớp (KIỂM TRA) |
-| I.8 | A | A | — | khớp |
-| I.9 | C | C | — | khớp |
-| I.10 | C | C | — | khớp |
-| I.11 | C | C | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | B | B | — | khớp (hình vẽ lại sai cực nguồn) |
-| I.14 | A | A | — | khớp |
-| I.15 | D | D | — | khớp |
-| I.16 | D | D | — | khớp |
-| I.17 | D | D | — | khớp |
-| I.18 | B | B | — | khớp |
-| II.1 | Đ S Đ Đ | Đ S Đ Đ | — | khớp (ý b thầy xem) |
-| II.2 | Đ S Đ S | Đ S Đ S | — | khớp (KIỂM TRA) |
-| II.3 | Đ S Đ S | Đ S Đ S | — | khớp |
-| II.4 | Đ Đ S S | Đ Đ S S | — | khớp |
-| III.1 | 1,3 | 1,3 | — | khớp |
-| III.2 | 3 | 3 | — | khớp |
-| III.3 | 78,6 | 78,6 | — | khớp (thầy xem) |
-| III.4 | 2,97 | 2,97 | — | khớp (file đã sửa N_A) |
-| III.5 | 34,7 | 34,7 | — | khớp |
-| III.6 | 11,5 | 11,5 | — | khớp |
+| I.1 | D | D | D | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | A | A | A | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | D | D | D | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | B | B | B | khớp (KIỂM TRA) |
+| I.8 | A | A | A | khớp |
+| I.9 | C | C | C | khớp |
+| I.10 | C | C | C | khớp |
+| I.11 | C | C | C | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | B | B | B | khớp (hình vẽ lại sai cực nguồn) |
+| I.14 | A | A | A | khớp |
+| I.15 | D | D | D | khớp |
+| I.16 | D | D | D | khớp |
+| I.17 | D | D | D | khớp |
+| I.18 | B | B | B | khớp |
+| II.1 | Đ S Đ Đ | Đ S Đ Đ | Đ S Đ Đ | khớp (ý b thầy xem) |
+| II.2 | Đ S Đ S | Đ S Đ S | Đ S Đ S | khớp (KIỂM TRA) |
+| II.3 | Đ S Đ S | Đ S Đ S | Đ S Đ S | khớp |
+| II.4 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp |
+| III.1 | 1,3 | 1,3 | 1,3 | khớp |
+| III.2 | 3 | 3 | 3 | khớp |
+| III.3 | 78,6 | 78,6 | 78,6 | khớp (thầy xem) |
+| III.4 | 2,97 | 2,97 | 2,97 | khớp (file đã sửa N_A) |
+| III.5 | 34,7 | 34,7 | 34,7 | khớp |
+| III.6 | 11,5 | 11,5 | 11,5 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -92,62 +92,63 @@ Ghi nhận: hoatieu.vn chỉ có đề Hóa của THPT Yên Hòa 2026 (https://h
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-**Không tìm thấy đáp án trên mạng của đúng đề này** (0/28 câu có đáp án mạng). Không giải lại đề, không sửa đáp án.
+**Tìm được trang đăng đúng đề trên VietJack, đủ đáp án công khai 28/28 câu; khớp file 28/28.** Không giải lại đề, không sửa đáp án. (Lượt dò lại theo trang danh mục VietJack do phiên chính chỉ; thay cho kết luận "không tìm thấy" của lượt đầu cùng ngày.)
 
 ### (a) Nguồn
 
-- **Nguồn đúng đề:** không tìm thấy. Không trang nào trong kết quả tìm kiếm khớp lời câu và số liệu của đề (đã thử các câu đặc trưng I.7, II.1, II.4, III.5, III.6).
-- **Nguồn đã xét nhưng KHÔNG đúng đề:**
-  - https://hoatieu.vn/de-thi-thu-tot-nghiep-mon-hoa-thpt-yen-hoa-ha-noi-249457 — đề môn **Hóa** của THPT Yên Hòa 2026, không phải Vật lí (theo đoạn trích tìm kiếm); hoatieu.vn bị chặn (WebFetch: HTTP 403).
-  - https://khoahoc.vietjack.com/question/2084863/tau-dem-tu-la-mot-phuong-tien-giao-thong-chay-tren-dem-tu-truong-uu-diem-chinh-cua-tau-dem-tu-so-voi (và bản 2310663) — câu lí thuyết về ưu điểm tàu đệm từ, không phải câu II.1 (thanh MN 10 g/m, B = 0,1 T); không mở.
-  - https://khoahoc.vietjack.com/question/2311678/mot-nhom-hoc-sinh-tien-hanh-thi-nghiem-do-su-phu-thuoc-cua-ap-suat-khi-p-vao-nhiet-do-tuyet-doi-t — câu khác (p theo T), không thuộc đề này; không mở.
-  - https://docs.google.com/document/d/1LEI_3e3SCxiItANFCEmIhDVc6Esb0O-5/export?format=pdf — hiện ra khi tìm câu III.5 (bạn Trang, cân điện tử, thanh PQ) và câu "bia Hà Nội"; WebFetch báo ENOTFOUND (bị chặn), không biết có đúng đề hay không.
-- **Tên miền bị chặn trong lượt này:** docs.google.com (WebFetch: ENOTFOUND), hoatieu.vn (WebFetch: HTTP 403), news.laodong.vn (WebFetch: ENOTFOUND). Đọc được: khoahoc.vietjack.com (`curl`) — nhưng không tìm thấy trang nào của đề này trên VietJack.
-- **Truy vấn đã thử (WebSearch, 6; cộng 9 truy vấn của phiên trước ở mục "Nguồn trên mạng"):**
-  1. đề thi thử tốt nghiệp THPT 2026 môn Vật lí THPT Yên Hòa Hà Nội lần 1
-  2. site:khoahoc.vietjack.com "mô hình tàu mini chạy trên đệm từ trường"
-  3. "Bạn Linh pha chế một mẫu trà sữa" "mẫu A" "mẫu B" "mẫu C" nhiệt độ cân bằng
-  4. "Yên Hòa" Vật lí 2026 đề thi thử có đáp án khoahoc.vietjack OR thuvienvatly OR tuyensinh247
-  5. "Một gia đình đang chuẩn bị bữa ăn ngoài trời vào mùa hè" "4 kg nước đá" 25 nhiệt lượng
-  6. site:khoahoc.vietjack.com "bia Hà Nội" "40 g nước đá" OR "Bạn Trang đã tiến hành thí nghiệm" cân điện tử nam châm
+- **Nguồn đúng đề (VJ-YH):** https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-yen-hoa-ha-noi-lan-1-co-dap-an — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Yên Hòa (Hà Nội) lần 1 có đáp án" (28 câu); có trong trang danh mục https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test và nhóm đề Hà Nội https://khoahoc.vietjack.com/luyen-thi/73270/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-ha-noi. Tải bằng `curl` (HTTP 200), mỗi lần cách 1,5 s, chỉ đọc phần công khai (không đăng nhập, không cookie).
+  - Câu 1–8: đáp án công khai trên trang cả đề ("Đáp án đúng là X"); câu 9–20 trên trang cả đề hiện khóa VIP nên lấy ở trang từng câu.
+  - Câu 9–28: trang câu `khoahoc.vietjack.com/question/<id>`, id liên tiếp 2442474–2442493 (câu n ↔ id 2442465 + n). Mỗi trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Nội !!" (tên nhóm đề Hà Nội) và có "Trả lời: Giải bởi Vietjack" công khai cho chính câu đó; lời câu, số liệu từng trang đã so với file (đúng câu của đề Yên Hòa).
+  - Bằng chứng khớp: cùng thứ tự 28 câu, thứ tự phương án, thứ tự ý; ví dụ I.2 (10 kg; 2,26·10⁶ J/kg; 4200; 22,6 / 16,95 / 31,5 / 25,75 MJ), I.4 (20 cm; 50 g; 0,49 T; 5 / 2,5 / 7,5 / 10 A), I.7 (4 kg; 34·10⁵ J/kg; 4180; 18,96 / 14,018 / 16,94 / 21,23 MJ), I.9 (phương án Hình a / c / d / b), II.1 (10 g/m; 0,1 T; 0,05 T; 25 g/m; 0,25 T), II.2 (bảng 0,2 / 0,4 / 0,46 A; 0,210 N; 0,270 / 0,320 / 0,380 N; 0,019 / 0,017 / 0,018 T), II.3 (56 ml; 10,5 N/cm²; bảng số liệu trên nguồn là ảnh, lời giải nguồn lấy trung bình pV = 295,75 — khớp bảng 294,00 / 297,00 / 296,25 của file), III.1 (0,9 ml; 0,5 ml; 0,3 cm²; 0,4 cm), III.2 (460; 46 cm; 60°; 60 %), III.3 (14 lít; 15·10⁶ Pa; 27 °C; 6 lít / 15 phút), III.5 (15 cm; 28°; 9,8), III.6 (200 g; 40 g; −2,8 °C; 3830; 1800; 3,4·10⁵; 32 °C). Không có mã đề.
+  - Khác lời đề: III.4 đề trên nguồn in "N_A = 6,2·10²³ mol⁻¹" như bản gốc (file đã sửa thành 6,02·10²³); lời giải của nguồn lại tính với 6,02·10²³ nên ra 2,97 như file.
+- **Nguồn đã xét nhưng KHÔNG đúng đề:** hoatieu.vn 249457 (đề Hóa của Yên Hòa); VietJack 2084863, 2310663, 2311678 (câu khác); docs.google.com 1LEI_3e3… (không mở được, ENOTFOUND).
+- **Tên miền bị chặn:** docs.google.com, news.laodong.vn (WebFetch: ENOTFOUND), hoatieu.vn (WebFetch: HTTP 403). Đọc được: khoahoc.vietjack.com (`curl`).
+- **Truy vấn đã thử (lượt đầu, WebSearch, 6; cộng 9 của phiên trước — không ra trang đúng đề):** đề thi thử tốt nghiệp THPT 2026 môn Vật lí THPT Yên Hòa Hà Nội lần 1; site:khoahoc.vietjack.com "mô hình tàu mini chạy trên đệm từ trường"; "Bạn Linh pha chế một mẫu trà sữa"…; "Yên Hòa" Vật lí 2026 đề thi thử có đáp án…; "Một gia đình đang chuẩn bị bữa ăn ngoài trời vào mùa hè" "4 kg nước đá"…; site:khoahoc.vietjack.com "bia Hà Nội" "40 g nước đá" OR "Bạn Trang đã tiến hành thí nghiệm". Lượt dò lại: duyệt trang danh mục VietJack (không qua WebSearch).
 
 ### (b) Bảng đối chiếu
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | D | — | — | không có đáp án mạng |
-| I.2 | D | — | — | không có đáp án mạng |
-| I.3 | A | — | — | không có đáp án mạng |
-| I.4 | A | — | — | không có đáp án mạng |
-| I.5 | D | — | — | không có đáp án mạng |
-| I.6 | B | — | — | không có đáp án mạng |
-| I.7 | B | — | — | không có đáp án mạng |
-| I.8 | A | — | — | không có đáp án mạng |
-| I.9 | C | — | — | không có đáp án mạng |
-| I.10 | C | — | — | không có đáp án mạng |
-| I.11 | C | — | — | không có đáp án mạng |
-| I.12 | A | — | — | không có đáp án mạng |
-| I.13 | B | — | — | không có đáp án mạng |
-| I.14 | A | — | — | không có đáp án mạng |
-| I.15 | D | — | — | không có đáp án mạng |
-| I.16 | D | — | — | không có đáp án mạng |
-| I.17 | D | — | — | không có đáp án mạng |
-| I.18 | B | — | — | không có đáp án mạng |
-| II.1 | Đ S Đ Đ | — | — | không có đáp án mạng |
-| II.2 | Đ S Đ S | — | — | không có đáp án mạng |
-| II.3 | Đ S Đ S | — | — | không có đáp án mạng |
-| II.4 | Đ Đ S S | — | — | không có đáp án mạng |
-| III.1 | 1,3 | — | — | không có đáp án mạng |
-| III.2 | 3 | — | — | không có đáp án mạng |
-| III.3 | 78,6 | — | — | không có đáp án mạng |
-| III.4 | 2,97 | — | — | không có đáp án mạng |
-| III.5 | 34,7 | — | — | không có đáp án mạng |
-| III.6 | 11,5 | — | — | không có đáp án mạng |
+| I.1 | D | D | trang cả đề (VJ-YH) | khớp |
+| I.2 | D | D | trang cả đề (VJ-YH) | khớp |
+| I.3 | A | A | trang cả đề (VJ-YH) | khớp |
+| I.4 | A | A | trang cả đề (VJ-YH) | khớp |
+| I.5 | D | D | trang cả đề (VJ-YH) | khớp |
+| I.6 | B | B | trang cả đề (VJ-YH) | khớp |
+| I.7 | B | B | trang cả đề (VJ-YH) | khớp; nguồn cũng in λ = 34·10⁵ J/kg, chọn B (14,018 MJ) |
+| I.8 | A | A | trang cả đề (VJ-YH) | khớp |
+| I.9 | C | C | [q/2442474](https://khoahoc.vietjack.com/question/2442474) | khớp |
+| I.10 | C | C | [q/2442475](https://khoahoc.vietjack.com/question/2442475) | khớp |
+| I.11 | C | C | [q/2442476](https://khoahoc.vietjack.com/question/2442476) | khớp |
+| I.12 | A | A | [q/2442477](https://khoahoc.vietjack.com/question/2442477) | khớp |
+| I.13 | B | B | [q/2442478](https://khoahoc.vietjack.com/question/2442478) | khớp |
+| I.14 | A | A | [q/2442479](https://khoahoc.vietjack.com/question/2442479) | khớp |
+| I.15 | D | D | [q/2442480](https://khoahoc.vietjack.com/question/2442480) | khớp |
+| I.16 | D | D | [q/2442481](https://khoahoc.vietjack.com/question/2442481) | khớp |
+| I.17 | D | D | [q/2442482](https://khoahoc.vietjack.com/question/2442482) | khớp |
+| I.18 | B | B | [q/2442483](https://khoahoc.vietjack.com/question/2442483) | khớp |
+| II.1 | Đ S Đ Đ | Đ S Đ Đ | [q/2442484](https://khoahoc.vietjack.com/question/2442484) | khớp; ý b: nguồn Sai (lực từ hướng lên ⇒ dòng M → N), cùng cách hiểu với file |
+| II.2 | Đ S Đ S | Đ S Đ S | [q/2442485](https://khoahoc.vietjack.com/question/2442485) | khớp; nguồn cũng in I = 0,46 A ở dòng 3; ý d nguồn: δ ≈ 5,6 % |
+| II.3 | Đ S Đ S | Đ S Đ S | [q/2442486](https://khoahoc.vietjack.com/question/2442486) | khớp; ý d nguồn: p = 295,75/56 ≈ 5,28 N/cm² |
+| II.4 | Đ Đ S S | Đ Đ S S | [q/2442487](https://khoahoc.vietjack.com/question/2442487) | khớp |
+| III.1 | 1,3 | 1,3 | [q/2442488](https://khoahoc.vietjack.com/question/2442488) | khớp |
+| III.2 | 3 | 3 | [q/2442489](https://khoahoc.vietjack.com/question/2442489) | khớp |
+| III.3 | 78,6 | 78,6 | [q/2442490](https://khoahoc.vietjack.com/question/2442490) | khớp; nguồn: V₀ = 1886,48 lít, không trừ khí còn lại → 78,6 |
+| III.4 | 2,97 | 2,97 | [q/2442491](https://khoahoc.vietjack.com/question/2442491) | khớp; đề trên nguồn in N_A = 6,2·10²³ nhưng lời giải nguồn tính với 6,02·10²³ → 2,97 |
+| III.5 | 34,7 | 34,7 | [q/2442492](https://khoahoc.vietjack.com/question/2442492) | khớp; nguồn: B = (g/L)·tan 28°·10⁻³ → 34,7 mT |
+| III.6 | 11,5 | 11,5 | [q/2442493](https://khoahoc.vietjack.com/question/2442493) | khớp |
+
+Ghi chú bảng: "trang cả đề (VJ-YH)" = đáp án công khai trên trang cả đề; `q/<id>` = trang câu `https://khoahoc.vietjack.com/question/<id>`.
 
 ### (c) Câu mạng khác file
 
-Không có (không tìm được đáp án mạng nào của đúng đề). Các điểm mục B (I.7 — λ = 34·10⁵ J/kg; III.4 — N_A in 6,2·10²³) và mục D (III.3 — 78,6 / 78,1; II.1b — hướng nhìn hình): không có nguồn để đối chiếu.
+Không có (0 câu). Các điểm mục B, D đều được nguồn VietJack chấm cùng cách với file:
+- I.7 (mục B): nguồn giữ λ = 34·10⁵ J/kg, chọn B (14,018 MJ).
+- III.4 (mục B): đề nguồn in N_A = 6,2·10²³ nhưng lời giải nguồn dùng 6,02·10²³ → 2,97 (như file đã sửa).
+- III.3 (mục D): nguồn tính hết 1886,48 lít khí chuẩn, không trừ khí còn lại → 78,6.
+- II.1b (mục D): nguồn Sai (dòng phải chạy M → N), cùng cách hiểu hướng nhìn với file.
+- II.2 (`% KIỂM TRA`): nguồn cũng in I = 0,46 A ở lần đo 3; chấm Đ S Đ S, ý d nguồn ra δ ≈ 5,6 %.
 
 ### (d) Tổng
 
-Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0.
+Số câu có đáp án mạng: 28/28; khớp: 28; khác: 0.
