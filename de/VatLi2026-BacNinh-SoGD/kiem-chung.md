@@ -42,3 +42,17 @@
 - II.1: màn hình cảm biến nhiệt độ của hình gốc ghi "23.5 °C" (không phải dữ kiện của đề) → để trống; mặt áp kế không ghi số như gốc.
 - II.4 đồ thị: giữ lưới 50 s × 5 °C, số trên hai trục, vạch chia 10 s, 10 điểm thực nghiệm (tọa độ đọc từ ảnh), đường làm khớp qua (160; 25) và (470; 30); hai nét gióng đỏ của gốc vẽ thành nét gióng đứt xám.
 - I.16: lưới 4 × 4 ô như gốc, (1)→(2) cung hyperbol pV = 8 (ô lưới).
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Năm hình thực tiễn (`% giuhinh`) vẽ lại theo toạ độ điểm ảnh của hình gốc (cắt từ ảnh trang 400 dpi; `x=...cm, y=-...cm`). Không đổi nội dung vật lí, nhãn, số liệu. Đồ thị I.16 và đồ thị II.4 giữ nguyên.
+
+- **I.4** (`so-hinh/01-cau-I-4.png`): cốc thủy tinh thành thẳng nhìn ngang như ảnh (thay cốc trụ cao `\VLcocthuytinh`): đáy thủy tinh dày có dải khúc xạ sẫm, mực nước gần miệng, bốn viên đá trong mờ, lớp sương, khoảng 210 giọt nước đọng và các vệt nước chảy ở mặt ngoài, vệt sáng trên thành cốc, bóng đổ.
+- **I.7** (`so-hinh/02-cau-I-7.png`): đúng tỉ lệ hình gốc (xilanh hẹp, cán dài): thành xilanh kim loại có đầu bo, khí là các chấm xếp so le, pit-tông – cán – tấm tay ấn màu vàng như gốc (có gioăng, vệt sáng), bàn tay vẽ theo dáng tay hình gốc (bốn ngón duỗi chúc sang trái, ngón cái tì trên tấm ngang, cổ tay chếch lên phải), tô màu da thay màu xanh hoạt hình; bỏ nền xám.
+- **I.13** (`so-hinh/03-cau-I-13.png`): nam châm chữ U mảnh, đen như ảnh (vẫn để xám đen, không tô cực vì đề không ghi cực), bóng đổ lệch phải; mạt sắt sinh theo trường của hai dãy cực dọc hai nhánh: giữa hai nhánh xếp thành các đường thẳng song song (như ảnh, đúng ý câu hỏi), phía trên hai đầu cực tỏa hình cung; nền giấy vàng.
+- **II.1** (`so-hinh/05-cau-II-1.png`): áp kế mặt tròn viền kim loại (vạch chia, kim, chữ "bar", khớp nối), ống dẫn khí hình chữ L vào đầu xilanh, que cảm biến nhiệt độ có đầu nối và dây uốn tới hộp màn hình (màn hình để trống, số "23.5 °C" của hình gốc không phải dữ kiện), xilanh thủy tinh có vạch chia lớn – nhỏ, pit-tông đen có khớp nối, cán pit-tông xuyên nắp cuối, khớp và cần tay quay có tay nắm; năm chú thích như gốc.
+- **II.4** – sơ đồ (`so-hinh/06-cau-II-4.png`): biến áp nguồn (hộp bo góc, cửa sổ hiển thị, hai núm có vạch, dấu +, −, hai chấm góc), oát kế bốn ổ cắm (hai đỏ trên, hai xanh dưới), dây đỏ tới chốt phải và dây xanh tới chốt trái của nhiệt lượng kế như gốc, bình thủy tinh miệng loe đáy bo có nắp và hai chốt, nước, hai dây dẫn thẳng và đoạn dây điện trở lò xo 6 vòng. Nhãn "Nhiệt lượng kế" ngắt thành hai dòng cho vừa cột.
+
+Vùng cắt ảnh trang khi dựng `so-hinh/` (ảnh trang 200 dpi): I.4 tr.1 `0.80:0.465:0.95:0.59`; I.7 tr.1 `0.82:0.745:0.945:0.875`; I.13 tr.2 `0.82:0.333:0.945:0.437`; I.16 tr.2 `0.70:0.59:0.94:0.72`; II.1 tr.3 `0.615:0.165:0.96:0.29` (chỉ phần hình, bảng số liệu gõ bằng `tabular`); II.4 tr.4 `0.045:0.07:0.935:0.285`.
+
+Hình chưa ưng: không có. Lưu ý: hình I.13 sinh khoảng 1900 mẫu mạt sắt bằng pgfmath nên mỗi lần biên dịch đề chậm thêm khoảng 15 giây. Cỡ hình I.7 (3,9 cm) và I.13 (3,5 cm) đã chọn để bản đề ĐẠT, 5 trang.
