@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 30/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 31/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -41,7 +41,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 29 | P07 | [`VatLi2026-QuangNinh-ChuyenHaLong-Lan1`](../de/VatLi2026-QuangNinh-ChuyenHaLong-Lan1/kiem-chung-v2.md) | xong | 0 | không | không (II.1b không mơ hồ nhưng phụ thuộc đọc cực nguồn trên hình gốc nhỏ; Fable đọc độc lập ảnh phóng to 800 dpi cũng ra Đ như file) | không thấy (số liệu, phương án, thứ tự ý khớp ảnh trang; các hình vẽ lại I.5, I.11, I.15, II.1, II.3, II.4, III.1 đúng quan hệ với hình gốc — cực nguồn, cực N/S, chiều mũi tên, số trên trục) | không tìm thấy |
 | 30 | P02 | [`VatLi2026-HaNoi-SoGD-Lan1`](../de/VatLi2026-HaNoi-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.2b ("cùng chuyển động": khác vận tốc → S như file và Fable; hiểu là chuyển động như một khối → Đ); I.17 (A đúng; D chỉ sai vì chữ "luôn" theo câu SGK "khép kín hoặc vô hạn ở hai đầu"); I.16 (D chặt chẽ; B "không tương tác với nhau" thiếu "khi chưa va chạm"); III.6 (đề không cho v, phải lấy v = 5,6 km/s của câu III.5) | không thấy (số liệu, thứ tự phương án, thứ tự ý khớp ảnh trang; 7 hình TikZ đúng quan hệ với hình gốc: II.3 cực N trái – S phải, đầu "+" nối cạnh a, đầu "−" nối cạnh d; II.4 chiều mũi tên 1→2→3→1 trên hệ V–T; III.5 bản trên "−", bản dưới "+", B hướng ra ⊙, v sang phải) | không tìm thấy |
 | 31 | P05 | `VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1` | đang kiểm | | | | | |
-| 32 | P06 | `VatLi2026-NinhBinh-SoGD-Lan1` | đang kiểm | | | | | |
+| 32 | P06 | [`VatLi2026-NinhBinh-SoGD-Lan1`](../de/VatLi2026-NinhBinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | không | không thấy (lời đề, số liệu, thứ tự phương án / ý của 28 câu khớp ảnh trang gốc; 4 hình TikZ I.5, I.18, II.2, II.4 đúng quan hệ so với hình gốc: đường p₂ dốc hơn p₁, vị trí nhãn (1)(2)(3) và chiều mũi tên ở cả ba Hình a, b, c) | không tìm thấy |
 | 33 | P07 | `VatLi2026-PhuTho-SoGD-Lan1` | đang kiểm | | | | | |
 | 34 | P08 | `VatLi2026-ThanhHoa-LuongDacBang-Lan1` | đang kiểm | | | | | |
 | 35 | P09 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10` | đang kiểm | | | | | |
