@@ -728,3 +728,74 @@
 		\coordinate (VLtnk-khoi) at (0.08,0.82);
 		\coordinate (VLtnk-anhsang) at (-1.72,1.2);
 	\end{scope}}
+
+% khóa cửa điện từ (mặt cắt ngang): cánh cửa có hốc khóa, tường có hốc chứa chốt sắt + tấm chặn + hai lò xo,
+% cuộn dây (nam châm điện) nối với công tắc S và nguồn một pin. Gọi: \VLkhoacuatu{x}{y}{tỉ lệ}
+%   gốc (x,y) là góc trái dưới của khung hình; hình rộng 8,86 và cao 5,73 (khi tỉ lệ 1); đề dùng tỉ lệ 0,75.
+%   Nội dung vật lí CỐ ĐỊNH theo hình gốc: cực dương của nguồn (vạch dài, mảnh) ở bên TRÁI, nối qua công tắc vào đầu TRÁI cuộn dây;
+%   dây từ đầu trái vòng qua đỉnh rồi đi XUỐNG ở mặt trước (nét liền), đi LÊN ở mặt sau (nét đứt); hai mũi tên chỉ sang phải.
+%   Macro không in chữ; nhãn đặt sau khi gọi nhờ các toạ độ có tên:
+%   (VLkc-tuong) giữa mảng tường trên, (VLkc-cua) giữa cánh cửa, (VLkc-loxo1), (VLkc-loxo2) trên hai lò xo,
+%   (VLkc-chot) mép dưới chốt sắt (đoạn giữa cửa và tường), (VLkc-S) dưới công tắc, (VLkc-khoa) dưới mạch điện (dòng chú thích).
+%   Ví dụ: \VLkhoacuatu{0}{0}{0.75} \node at (VLkc-tuong) {tường}; \node at (VLkc-S) {S};
+\newcommand{\VLkhoacuatu}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		% tường (hai mảng trên, dưới; hốc ở giữa mở về bên phải)
+		\shade[top color=gray!13,bottom color=gray!22] (4.725,5.725)--(8.86,5.725)--(8.86,4.825)--(5.025,4.825)--(5.025,4.175)--(4.725,4.175)--cycle;
+		\shade[top color=gray!15,bottom color=gray!27] (4.725,3.625)--(5.025,3.625)--(5.025,2.95)--(8.86,2.95)--(8.86,0)--(4.725,0)--cycle;
+		% bóng mờ dọc mép hốc (cho có chiều sâu)
+		\fill[black,opacity=0.1] (5.025,4.825)--(8.86,4.825)--(8.86,4.9)--(4.95,4.9)--(4.95,4.175)--(5.025,4.175)--cycle;
+		\fill[black,opacity=0.1] (5.025,2.95)--(8.86,2.95)--(8.86,2.875)--(4.95,2.875)--(4.95,3.625)--(5.025,3.625)--cycle;
+		\draw[black!72,line width=0.8pt] (4.725,5.725)--(8.86,5.725)--(8.86,4.825)--(5.025,4.825)--(5.025,4.175)--(4.725,4.175)--cycle;
+		\draw[black!72,line width=0.8pt] (4.725,3.625)--(5.025,3.625)--(5.025,2.95)--(8.86,2.95)--(8.86,0)--(4.725,0)--cycle;
+		% cánh cửa (đầu trái bo tròn, hốc khóa bên phải), ánh kim chéo
+		\begin{scope}
+			\clip (4.475,4.55)--(0.4,4.55) arc[start angle=90,end angle=180,radius=0.4]--(0,3.625) arc[start angle=180,end angle=270,radius=0.4]--(4.475,3.225)--(4.475,3.625)--(3.925,3.625)--(3.925,4.175)--(4.475,4.175)--cycle;
+			\shade[left color=gray!66,right color=gray!16] (0,3.2) rectangle (4.5,4.6);
+			\foreach \w in {0.5,0.38,0.27,0.17,0.08}{\fill[white,opacity=0.2] (2.95-\w,4.6)--(2.95+\w,4.6)--(3.85+\w,3.2)--(3.85-\w,3.2)--cycle;}
+			\fill[white,opacity=0.22] (0,4.45) rectangle (4.5,4.6);
+			\fill[black,opacity=0.1] (0,3.2) rectangle (4.5,3.33);
+		\end{scope}
+		\draw[black!72,line width=0.8pt] (4.475,4.55)--(0.4,4.55) arc[start angle=90,end angle=180,radius=0.4]--(0,3.625) arc[start angle=180,end angle=270,radius=0.4]--(4.475,3.225)--(4.475,3.625)--(3.925,3.625)--(3.925,4.175)--(4.475,4.175)--cycle;
+		% hai lò xo (vòng sau nhạt, vòng trước đậm), thanh dẫn mảnh dưới mỗi lò xo
+		\foreach \yc in {4.4,3.45}{
+			\draw[gray!70,line width=0.5pt] (5.025,\yc-0.15)--(5.675,\yc-0.15);
+			\foreach \i in {0,...,6}{\draw[gray!60,line width=0.45pt] plot[domain=180:360,samples=14] ({5.06+0.082*\i+0.082*\x/360-0.035*sin(\x)},{\yc+0.14*cos(\x)});}
+			\foreach \i in {0,...,6}{\draw[black!72,line width=0.75pt] plot[domain=0:180,samples=14] ({5.06+0.082*\i+0.082*\x/360-0.035*sin(\x)},{\yc+0.14*cos(\x)});}
+		}
+		% tấm chặn gắn trên chốt
+		\shade[left color=gray!50,right color=gray!82] (5.675,3.15) rectangle (5.9,4.625);
+		\fill[white,opacity=0.35] (5.7,3.17) rectangle (5.745,4.6);
+		\draw[black!78,line width=0.7pt] (5.675,3.15) rectangle (5.9,4.625);
+		% chốt sắt (thanh thép, đầu trái vát cong)
+		\begin{scope}
+			\clip (6.675,4.05)--(4.025,4.05) .. controls (4.1,3.87) and (4.26,3.75) .. (4.52,3.725)--(6.675,3.725)--cycle;
+			\shade[top color=gray!58,bottom color=gray!74,middle color=gray!14] (4,3.725) rectangle (6.7,4.05);
+			\shade[left color=white,right color=black,opacity=0.22] (4,3.725) rectangle (6.7,4.05);
+			\draw[black,opacity=0.35,line width=0.4pt] (5.675,3.725)--(5.675,4.05) (5.9,3.725)--(5.9,4.05);
+		\end{scope}
+		\draw[black!80,line width=0.75pt] (6.675,4.05)--(4.025,4.05) .. controls (4.1,3.87) and (4.26,3.75) .. (4.52,3.725)--(6.675,3.725)--cycle;
+		% mũi tên chỉ chiều dịch chuyển của chốt khi mở khóa
+		\draw[VLluc!85!black,VLmui,thick] (6.07,4.4)--(6.62,4.4);
+		\draw[VLluc!85!black,VLmui,thick] (6.07,3.45)--(6.62,3.45);
+		% dây nối, công tắc S (đang mở), nguồn (vạch dài mảnh: cực dương, bên trái; vạch ngắn đậm: cực âm, bên phải)
+		\draw[black!80,line width=0.9pt] (6.8,3.9)--(6.8,1.15)--(7.2,1.15)--(7.56,1.46);
+		\draw[black!80,line width=0.9pt] (7.62,1.15)--(7.94,1.15) (8.1,1.15)--(8.45,1.15)--(8.45,3.9);
+		\draw[black!85,line width=0.9pt] (7.94,0.74)--(7.94,1.56);
+		\draw[black!85,line width=2.3pt,line cap=butt] (8.09,0.97)--(8.09,1.33);
+		% cuộn dây đồng: nửa vòng phía sau (nét đứt) vẽ trước, nửa vòng phía trước (nét liền) vẽ sau
+		\foreach \i in {0,...,5}{\draw[VLdong!60!black,line width=0.8pt,densely dashed] plot[domain=180:360,samples=20] ({7.0+0.217*\i+0.217*\x/360+0.05*sin(\x)},{3.725+0.46*cos(\x)});}
+		\foreach \lw/\mau in {1.25pt/VLdong!62!black,0.4pt/VLdong!40!white}{
+			\draw[\mau,line width=\lw] (6.8,3.9) .. controls (6.8,4.12) and (6.86,4.185) .. (7.0,4.185);
+			\foreach \i in {0,...,5}{\draw[\mau,line width=\lw] plot[domain=0:180,samples=20] ({7.0+0.217*\i+0.217*\x/360+0.125*sin(\x)},{3.725+0.46*cos(\x)});}
+			\draw[\mau,line width=\lw] (8.302,4.185) .. controls (8.4,4.185) and (8.45,4.1) .. (8.45,3.9);
+		}
+		% toạ độ gắn nhãn
+		\coordinate (VLkc-tuong) at (6.9,5.275);
+		\coordinate (VLkc-cua) at (2.1,3.89);
+		\coordinate (VLkc-loxo1) at (5.3,4.52);
+		\coordinate (VLkc-loxo2) at (5.3,3.57);
+		\coordinate (VLkc-chot) at (4.6,3.735);
+		\coordinate (VLkc-S) at (7.38,0.88);
+		\coordinate (VLkc-khoa) at (6.8,0.38);
+	\end{scope}}
