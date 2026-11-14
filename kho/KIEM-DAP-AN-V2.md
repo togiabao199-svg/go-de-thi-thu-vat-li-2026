@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 19/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 20/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -31,13 +31,13 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 19 | P09 | `VatLi2026-ThanhHoa-TinhGia1` | đang kiểm | | | | | |
 | 20 | P01 | [`VatLi2026-BacNinh-SoGD-Lan1`](../de/VatLi2026-BacNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.2c (số liệu bảng cho h/T dao động 0,852–0,875 mm/K, lệch 2,7 %; file và Fable cùng chọn Đ theo ý người ra đề, xét khắt khe có thể cãi S) | không thấy (lời đề các câu có số liệu và 10 hình khớp bản gốc: chiều I, F, dấu ⊗/⊙ ở I.5; chiều dòng điện, dấu ⊙ ở I.10; số trên trục III.1; bảng II.2) | không tìm thấy |
 | 21 | P09 | `VatLi2026-BacNinh-SoGD` | đang kiểm | | | | | |
-| 22 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan1` | đang kiểm | | | | | |
+| 22 | P01 | [`VatLi2026-HaNoi-ChuyenKHTN-Lan1`](../de/VatLi2026-HaNoi-ChuyenKHTN-Lan1/kiem-chung-v2.md) | xong | 0 | không | III.4 (16 nếu trừ khí còn lại trong bình ở 10⁵ Pa — file và Fable chọn; 18 nếu coi dùng hết khí — đáp án gốc của trường có thể theo cách này) | không thấy (hình III.6 ghi "12 cm" thay cho "10cm" của hình gốc là chủ ý theo lời đề, đáp số vẫn 0,05; trong hình III.6 hai đầu pin hở nhẹ với dây nối — chỉ là thẩm mĩ, cực (+)/(−), chiều B đúng như gốc) | không tìm thấy |
 | 23 | P02 | `VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1` | đang kiểm | | | | | |
 | 24 | P03 | `VatLi2026-HaiPhong-CumCM10-Lan1` | đang kiểm | | | | | |
 | 25 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2` | đang kiểm | | | | | |
 | 26 | P05 | `VatLi2026-LaoCai-SoGD-Lan1` | đang kiểm | | | | | |
 | 27 | P06 | `VatLi2026-NgheAn-LienTruong-Lan1` | đang kiểm | | | | | |
-| 28 | P06 | `VatLi2026-NinhBinh-SoGD-Lan2` | chưa kiểm | | | | | |
+| 28 | P06 | `VatLi2026-NinhBinh-SoGD-Lan2` | đang kiểm | | | | | |
 | 29 | P07 | `VatLi2026-QuangNinh-ChuyenHaLong-Lan1` | chưa kiểm | | | | | |
 | 30 | P02 | `VatLi2026-HaNoi-SoGD-Lan1` | chưa kiểm | | | | | |
 | 31 | P05 | `VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1` | chưa kiểm | | | | | |
