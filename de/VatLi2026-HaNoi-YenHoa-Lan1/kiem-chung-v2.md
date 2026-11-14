@@ -75,6 +75,8 @@ Không có câu nào file và Fable khác nhau; lời giải lần 1 của Fable
 - II.4a — Hơi nước trong không khí gặp thành cốc lạnh thì ngưng tụ (sự chuyển thể). II.4b — nhiệt độ cân bằng nằm giữa nhiệt độ thấp nhất và cao nhất của các vật trao đổi nhiệt. II.4c, d — nước đá ở −5 °C là thể rắn; nhận nhiệt thì nóng chảy (rắn → lỏng).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng. Các truy vấn đã thử (WebSearch, sau khi đã ghi xong `fable.md`):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí THPT Yên Hòa Hà Nội lần 1 đáp án lời giải
 2. "tàu mini chạy trên đệm từ trường" "thanh dẫn kim loại MN" 10 gam/mét đáp án
@@ -87,3 +89,65 @@ Không tìm thấy đáp án trên mạng. Các truy vấn đã thử (WebSearch
 9. "Bạn Trang đã tiến hành thí nghiệm" "cảm ứng từ B trong lòng của nam châm" "α = 28" cân điện tử PQ
 
 Ghi nhận: hoatieu.vn chỉ có đề Hóa của THPT Yên Hòa 2026 (https://hoatieu.vn/de-thi-thu-tot-nghiep-mon-hoa-thpt-yen-hoa-ha-noi-249457), không có đề Vật lí. Truy vấn 9 trả về một file Google Docs (https://docs.google.com/document/d/1LEI_3e3SCxiItANFCEmIhDVc6Esb0O-5) có thể chứa câu cân điện tử – thanh PQ, nhưng docs.google.com nằm ngoài các miền mạng được phép của phiên nên không mở được (không cố vượt). Các kết quả khác là đề của đơn vị khác hoặc bài tương tự, không khớp lời câu và số liệu.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+**Không tìm thấy đáp án trên mạng của đúng đề này** (0/28 câu có đáp án mạng). Không giải lại đề, không sửa đáp án.
+
+### (a) Nguồn
+
+- **Nguồn đúng đề:** không tìm thấy. Không trang nào trong kết quả tìm kiếm khớp lời câu và số liệu của đề (đã thử các câu đặc trưng I.7, II.1, II.4, III.5, III.6).
+- **Nguồn đã xét nhưng KHÔNG đúng đề:**
+  - https://hoatieu.vn/de-thi-thu-tot-nghiep-mon-hoa-thpt-yen-hoa-ha-noi-249457 — đề môn **Hóa** của THPT Yên Hòa 2026, không phải Vật lí (theo đoạn trích tìm kiếm); hoatieu.vn bị chặn (WebFetch: HTTP 403).
+  - https://khoahoc.vietjack.com/question/2084863/tau-dem-tu-la-mot-phuong-tien-giao-thong-chay-tren-dem-tu-truong-uu-diem-chinh-cua-tau-dem-tu-so-voi (và bản 2310663) — câu lí thuyết về ưu điểm tàu đệm từ, không phải câu II.1 (thanh MN 10 g/m, B = 0,1 T); không mở.
+  - https://khoahoc.vietjack.com/question/2311678/mot-nhom-hoc-sinh-tien-hanh-thi-nghiem-do-su-phu-thuoc-cua-ap-suat-khi-p-vao-nhiet-do-tuyet-doi-t — câu khác (p theo T), không thuộc đề này; không mở.
+  - https://docs.google.com/document/d/1LEI_3e3SCxiItANFCEmIhDVc6Esb0O-5/export?format=pdf — hiện ra khi tìm câu III.5 (bạn Trang, cân điện tử, thanh PQ) và câu "bia Hà Nội"; WebFetch báo ENOTFOUND (bị chặn), không biết có đúng đề hay không.
+- **Tên miền bị chặn trong lượt này:** docs.google.com (WebFetch: ENOTFOUND), hoatieu.vn (WebFetch: HTTP 403), news.laodong.vn (WebFetch: ENOTFOUND). Đọc được: khoahoc.vietjack.com (`curl`) — nhưng không tìm thấy trang nào của đề này trên VietJack.
+- **Truy vấn đã thử (WebSearch, 6; cộng 9 truy vấn của phiên trước ở mục "Nguồn trên mạng"):**
+  1. đề thi thử tốt nghiệp THPT 2026 môn Vật lí THPT Yên Hòa Hà Nội lần 1
+  2. site:khoahoc.vietjack.com "mô hình tàu mini chạy trên đệm từ trường"
+  3. "Bạn Linh pha chế một mẫu trà sữa" "mẫu A" "mẫu B" "mẫu C" nhiệt độ cân bằng
+  4. "Yên Hòa" Vật lí 2026 đề thi thử có đáp án khoahoc.vietjack OR thuvienvatly OR tuyensinh247
+  5. "Một gia đình đang chuẩn bị bữa ăn ngoài trời vào mùa hè" "4 kg nước đá" 25 nhiệt lượng
+  6. site:khoahoc.vietjack.com "bia Hà Nội" "40 g nước đá" OR "Bạn Trang đã tiến hành thí nghiệm" cân điện tử nam châm
+
+### (b) Bảng đối chiếu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | D | — | — | không có đáp án mạng |
+| I.2 | D | — | — | không có đáp án mạng |
+| I.3 | A | — | — | không có đáp án mạng |
+| I.4 | A | — | — | không có đáp án mạng |
+| I.5 | D | — | — | không có đáp án mạng |
+| I.6 | B | — | — | không có đáp án mạng |
+| I.7 | B | — | — | không có đáp án mạng |
+| I.8 | A | — | — | không có đáp án mạng |
+| I.9 | C | — | — | không có đáp án mạng |
+| I.10 | C | — | — | không có đáp án mạng |
+| I.11 | C | — | — | không có đáp án mạng |
+| I.12 | A | — | — | không có đáp án mạng |
+| I.13 | B | — | — | không có đáp án mạng |
+| I.14 | A | — | — | không có đáp án mạng |
+| I.15 | D | — | — | không có đáp án mạng |
+| I.16 | D | — | — | không có đáp án mạng |
+| I.17 | D | — | — | không có đáp án mạng |
+| I.18 | B | — | — | không có đáp án mạng |
+| II.1 | Đ S Đ Đ | — | — | không có đáp án mạng |
+| II.2 | Đ S Đ S | — | — | không có đáp án mạng |
+| II.3 | Đ S Đ S | — | — | không có đáp án mạng |
+| II.4 | Đ Đ S S | — | — | không có đáp án mạng |
+| III.1 | 1,3 | — | — | không có đáp án mạng |
+| III.2 | 3 | — | — | không có đáp án mạng |
+| III.3 | 78,6 | — | — | không có đáp án mạng |
+| III.4 | 2,97 | — | — | không có đáp án mạng |
+| III.5 | 34,7 | — | — | không có đáp án mạng |
+| III.6 | 11,5 | — | — | không có đáp án mạng |
+
+### (c) Câu mạng khác file
+
+Không có (không tìm được đáp án mạng nào của đúng đề). Các điểm mục B (I.7 — λ = 34·10⁵ J/kg; III.4 — N_A in 6,2·10²³) và mục D (III.3 — 78,6 / 78,1; II.1b — hướng nhìn hình): không có nguồn để đối chiếu.
+
+### (d) Tổng
+
+Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0.

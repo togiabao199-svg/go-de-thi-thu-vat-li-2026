@@ -77,6 +77,8 @@ Giải lại lần hai các điểm trên:
 - III.3: ΔU = A + Q với ΔU = −6·10⁵ J, Q = −2·10⁵ J → A = −4·10⁵ J (người thực hiện công 4·10⁵ J).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng. Truy vấn đã thử (8): "đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Bắc Ninh lần 1 đáp án lời giải"; câu đặc trưng "khung dây dẫn cứng CDEG" + "MNPQ"; "cảnh báo nhiệt độ cho một kho lạnh" + "4,75 kg" + "98750 Pa"; "móng sắt" + "chân ngựa" + "4186"; "protein dạng lỏng trong cơ thể nhện"; thuvienhoclieu + "9,01" "7,92" "8,01"; "máy nước nóng năng lượng mặt trời" + "1370 W/m" + "9864 kJ"; chuvanbien.vn + Sở Bắc Ninh lần 1.
 
 Trang có thể chứa đề nhưng không mở được (tên miền ngoài danh sách cho phép của phiên, WebFetch báo ENOTFOUND; không cố vượt):
@@ -85,3 +87,71 @@ Trang có thể chứa đề nhưng không mở được (tên miền ngoài dan
 - https://news.vsis.net/dethi/tvhl-de-thi-thu-tot-nghiep-thpt-2026-so-gd-bac-ninh-lan-1-giai-chi-tiet.docx — theo đoạn trích là đề Lịch sử, không phải Vật lí.
 
 Kết quả gần đúng nhưng không phải đề này: các file chuvanbien.vn của liên trường / cụm trường Bắc Ninh (lần 2, KSCL) và bộ 50 câu đúng sai 2024–2025 (có một câu máy nước nóng 1370 W/m², 60 % nhưng khác các ý a–d).
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+**Không tìm thấy đáp án trên mạng của đúng đề này** (0/28 câu có đáp án mạng). Không giải lại đề, không sửa đáp án.
+
+### (a) Nguồn
+
+- **Nguồn đúng đề:** không tìm thấy (không trang nào đọc được khớp lời câu và số liệu; đã thử các câu đặc trưng I.3, I.10, III.2, III.4–5).
+- **Nguồn có thể đúng đề nhưng không mở được:**
+  - https://news.laodong.vn/tuyen-sinh/de-thi-thu-tot-nghiep-thpt-nam-2026-mon-vat-li-kem-dap-an-1697167.ldo — theo đoạn trích tìm kiếm có "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí - Sở GDĐT Bắc Ninh" (không rõ lần; tiêu đề bài ghi "kèm đáp án"); WebFetch báo ENOTFOUND (bị chặn).
+  - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-tinh-bac-ninh-231287 — "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí tỉnh Bắc Ninh"; theo đoạn trích tìm kiếm có "48 đề … sở Bắc Ninh lần 2 có đáp án" (nhiều khả năng là đề lần 2 — trong kho có `Bac Ninh - So GDDT - Lan 2.docx`); hoatieu.vn bị chặn (WebFetch: HTTP 403).
+- **Nguồn đã xét nhưng KHÔNG đúng đề:**
+  - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKTCUOIKI1_SOBACNINH_SOCANTHO.pdf — đề kiểm tra cuối học kì I của Sở Bắc Ninh (là đề `VatLi2026-BacNinh-SoGD`, không phải đề này).
+  - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKSCLKHOI12LAN2-LIENTRUONGBACNINH.pdf — đề khảo sát lần 2 của Liên trường Bắc Ninh (đề khác); không mở.
+  - https://chuvanbien.vn/images/upload_file/2025/lop12_sobacninh_1741752299.pdf — file "lop12 sobacninh" đăng tháng 3/2025 (theo dấu thời gian trong tên), nhiều khả năng là đề năm học 2024–2025; đoạn trích không có câu nào của đề này; không mở.
+  - https://news.vsis.net/dethi/tvhl-de-thi-thu-tot-nghiep-thpt-2026-so-gd-bac-ninh-lan-1-giai-chi-tiet.docx — theo đoạn trích (phiên trước) là đề Lịch sử.
+  - Kết quả 2048.vn: chỉ có đề Tiếng Anh Sở Bắc Ninh lần 1 năm 2023.
+- **Tên miền bị chặn trong lượt này:** hoatieu.vn (WebFetch: HTTP 403), news.laodong.vn và docs.google.com (WebFetch: ENOTFOUND). Đọc được: khoahoc.vietjack.com (`curl`), chuvanbien.vn (WebFetch) — không có trang nào của đề này trên hai trang đó trong kết quả tìm kiếm.
+- **Truy vấn đã thử (WebSearch, 8; cộng 8 truy vấn của phiên trước ở mục "Nguồn trên mạng"):**
+  1. đề thi thử tốt nghiệp THPT 2026 môn Vật lí Sở GD&ĐT Bắc Ninh lần 1 đáp án
+  2. site:khoahoc.vietjack.com "cảnh báo nhiệt độ cho một kho lạnh mà không dùng đến cảm biến điện tử"
+  3. "Một móng sắt bảo vệ chân ngựa có khối lượng 0,4 kg" "5 kg nước" "chậu sắt" 28
+  4. "khung dây dẫn cứng CDEG" "MNPQ" "0,8 T" "12 A" vật lí
+  5. site:2048.vn Đề thi thử tốt nghiệp THPT môn Vật lí Sở Bắc Ninh có đáp án lần 1
+  6. "một kỹ thuật viên cần kiểm tra mẫu huyết thanh được bảo quản" Kelvin
+  7. site:chuvanbien.vn LOP12 Sở Bắc Ninh lần 1 2026 thi thử tốt nghiệp vật lí
+  8. site:chuvanbien.vn "móng sắt" "chân ngựa" "4186" OR "kho lạnh" "98750" OR "tơ nhện" vật lí 12 Bắc Ninh
+
+### (b) Bảng đối chiếu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | B | — | — | không có đáp án mạng |
+| I.2 | D | — | — | không có đáp án mạng |
+| I.3 | B | — | — | không có đáp án mạng |
+| I.4 | D | — | — | không có đáp án mạng |
+| I.5 | D | — | — | không có đáp án mạng |
+| I.6 | B | — | — | không có đáp án mạng |
+| I.7 | C | — | — | không có đáp án mạng |
+| I.8 | C | — | — | không có đáp án mạng |
+| I.9 | B | — | — | không có đáp án mạng |
+| I.10 | B | — | — | không có đáp án mạng |
+| I.11 | C | — | — | không có đáp án mạng |
+| I.12 | C | — | — | không có đáp án mạng |
+| I.13 | D | — | — | không có đáp án mạng |
+| I.14 | B | — | — | không có đáp án mạng |
+| I.15 | C | — | — | không có đáp án mạng |
+| I.16 | B | — | — | không có đáp án mạng |
+| I.17 | C | — | — | không có đáp án mạng |
+| I.18 | D | — | — | không có đáp án mạng |
+| II.1 | Đ Đ Đ S | — | — | không có đáp án mạng |
+| II.2 | Đ S Đ Đ | — | — | không có đáp án mạng |
+| II.3 | S Đ Đ Đ | — | — | không có đáp án mạng |
+| II.4 | Đ Đ S Đ | — | — | không có đáp án mạng |
+| III.1 | 9,01 | — | — | không có đáp án mạng |
+| III.2 | 964 | — | — | không có đáp án mạng |
+| III.3 | 4 | — | — | không có đáp án mạng |
+| III.4 | 7,92 | — | — | không có đáp án mạng |
+| III.5 | 8,01 | — | — | không có đáp án mạng |
+| III.6 | 0,6 | — | — | không có đáp án mạng |
+
+### (c) Câu mạng khác file
+
+Không có (không tìm được đáp án mạng nào của đúng đề). Mục D — II.2c (h/T dao động 2,7 %) và mục F — III.6 (0,6 không cần làm tròn): không có nguồn để đối chiếu.
+
+### (d) Tổng
+
+Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0.

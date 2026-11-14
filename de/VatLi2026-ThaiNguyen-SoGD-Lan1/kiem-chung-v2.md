@@ -79,6 +79,8 @@ Giải thích thêm:
 - II.4a Đ — hai cách làm thay đổi nội năng: thực hiện công, truyền nhiệt (SGK 12, bài Nội năng. Định luật 1 của nhiệt động lực học). II.4b S — công và nhiệt lượng là số đo độ biến thiên nội năng trong quá trình thực hiện công / truyền nhiệt, không phải dạng của nội năng. II.4c Đ — yên xe nhận nhiệt từ ánh nắng (truyền nhiệt bằng bức xạ). II.4d S — xoa tay là thực hiện công (ma sát).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng của đúng đề này. Truy vấn đã thử (WebSearch, 9 truy vấn): "đề thi thử tốt nghiệp THPT 2026 môn Vật lí Sở GD&ĐT Thái Nguyên lần 1 đáp án"; "ống đo độ sâu" Lord Kelvin "6,5 cm" chim biển "1,5 cm"; "Thái Nguyên" ... "yên xe đạp" / "số chỉ của cân thay đổi 6,0 g"; "Một thiết bị bao gồm một sợi dây dẫn điện đồng chất, tiết diện đều, một nam châm, một chiếc cân" "72,0 cm" "0,13 T"; "Sở Thái Nguyên thi thử ... lần 1 Vật lí đề và đáp án các mã đề pdf"; "Dùng bếp điện để đun một ấm nhôm có khối lượng 800" "20% lượng nước trong ấm hóa hơi"; hoatieu.vn / thuvienhoclieu.com / toanmath.com "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí sở Thái Nguyên"; "Thái Nguyên" "lần 1" 2026 "Lord Kelvin" "lốp xe máy" "2,00 Bar"; "số chỉ của cân" "0,13 T" đúng sai lời giải.
 
 Trang liên quan:
@@ -87,3 +89,68 @@ Trang liên quan:
 - https://news.laodong.vn/tuyen-sinh/bo-de-thi-thu-tot-nghiep-thpt-nam-2026-mon-vat-li-1694841.ldo — Báo Lao Động: chỉ có ảnh đề Thái Nguyên đợt 2, không có đáp án, không phải đề này.
 - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf — tuyển tập Đúng/Sai từ trường, có bản gốc của câu II.1 với số liệu khác (10,0 cm; 4,0 g ⇒ 0,13 T): chỉ cho biết nguồn gốc câu hỏi, không phải đáp án của đề này.
 - https://askfilo.com/user-question-answers-physics/review-to-measure-how-far-below-the-ocean-surface-a-bird-36383230373334 — bài gốc tiếng Anh của II.2 (ống 6,50 cm, rửa trôi 2,70 cm), số liệu khác, không có đáp án.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+**Không tìm thấy đáp án trên mạng của đúng đề này** (0/28 câu có đáp án mạng). Không giải lại đề, không sửa đáp án.
+
+### (a) Nguồn
+
+- **Nguồn đúng đề:** không tìm thấy.
+- **Nguồn đã xét nhưng KHÔNG đúng đề:**
+  - https://khoahoc.vietjack.com/question/2061691/mot-bo-thiet-bi-bao-gom-mot-soi-day-dan-dien-dong-chat-tiet-dien-deu-mot-nam-cham-mot-chiec-can-mot (link ghi ở mục "Nguồn trên mạng" cũ; lượt này tải được bằng `curl`, HTTP 200). Dòng "Câu hỏi trong đề" ghi: *Đề thi thử tốt nghiệp THPT môn Vật lí ĐGNL - Đại học Sư Phạm Hà Nội có đáp án* — đề khác. Câu trên trang là câu tự luận hai ý cùng bộ thiết bị (S = 3,5·10⁻⁹ m²; L = 72,0 cm; đoạn 12,0 cm; cân thay đổi 6,0 g) nhưng suất điện động 16,0 V (đề Thái Nguyên: 12,0 V); lời giải công khai của trang ra I = 4 A, B ≈ 0,1225 T, số chỉ cân giảm. Không có ý "0,13 T", không tính là đáp án của đề này (chỉ cho biết II.1 là bài chuyển thể; hướng "cân giảm" của trang cùng hướng với ý c của file, nhưng hình của đề khác có thể khác cực nguồn).
+  - https://khoahoc.vietjack.com/thi-online/2023-de-thi-thu-vat-ly-so-gd-thai-nguyen-lan-1-co-dap-an — đề Sở Thái Nguyên Lần 1 năm **2023** (40 câu, cấu trúc cũ), không phải đề 2026; không mở.
+  - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-so-thai-nguyen-250435 — theo đoạn trích tìm kiếm (phiên trước) là đề lần 2; lượt này WebFetch bị từ chối (HTTP 403).
+  - https://news.laodong.vn/tuyen-sinh/bo-de-thi-thu-tot-nghiep-thpt-nam-2026-mon-vat-li-1694841.ldo — theo đoạn trích tìm kiếm: ảnh đề Sở Thái Nguyên **đợt 2**, không có đáp án; tên miền bị chặn.
+  - https://docs.google.com/document/d/1LEI_3e3SCxiItANFCEmIhDVc6Esb0O-5/export?format=pdf — hiện ra khi tìm câu "ống đo độ sâu" Lord Kelvin; WebFetch báo ENOTFOUND (bị chặn), không biết nội dung.
+- **Tên miền bị chặn trong lượt này:** hoatieu.vn (WebFetch: HTTP 403), docs.google.com và news.laodong.vn (WebFetch: ENOTFOUND — ngoài danh sách mạng của phiên). Đọc được: khoahoc.vietjack.com (`curl`).
+- **Truy vấn đã thử (WebSearch, 8):**
+  1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở Thái Nguyên lần 1 đáp án
+  2. "Lord Kelvin" "ống đo độ sâu" "6,5 cm" "1,5 cm" chim biển đúng sai vật lí 12
+  3. site:khoahoc.vietjack.com "Thái Nguyên" vật lí 2026 lần 1
+  4. "Dùng bếp điện để đun một ấm nhôm có khối lượng 800 gam đựng 2,0 lít nước"
+  5. "Một lốp xe máy được bơm ở nhiệt độ 27" "2,00 Bar" "45" đẳng tích mật độ phân tử
+  6. tuyensinh247 đề thi thử tốt nghiệp 2026 môn Vật lí Sở GDĐT Thái Nguyên đợt 1 có đáp án
+  7. site:khoahoc.vietjack.com "Lực từ tác dụng lên đoạn dây DA cùng hướng với"
+  8. "yên xe đạp khi để ngoài trời nắng tăng lên là do sự truyền nhiệt" "xoa hai bàn tay"
+
+### (b) Bảng đối chiếu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | — | — | không có đáp án mạng |
+| I.2 | B | — | — | không có đáp án mạng |
+| I.3 | C | — | — | không có đáp án mạng |
+| I.4 | D | — | — | không có đáp án mạng |
+| I.5 | C | — | — | không có đáp án mạng |
+| I.6 | D | — | — | không có đáp án mạng |
+| I.7 | C | — | — | không có đáp án mạng |
+| I.8 | D | — | — | không có đáp án mạng |
+| I.9 | D | — | — | không có đáp án mạng |
+| I.10 | A | — | — | không có đáp án mạng |
+| I.11 | D | — | — | không có đáp án mạng |
+| I.12 | A | — | — | không có đáp án mạng |
+| I.13 | B | — | — | không có đáp án mạng |
+| I.14 | C | — | — | không có đáp án mạng |
+| I.15 | C | — | — | không có đáp án mạng |
+| I.16 | A | — | — | không có đáp án mạng |
+| I.17 | A | — | — | không có đáp án mạng |
+| I.18 | C | — | — | không có đáp án mạng |
+| II.1 | Đ Đ Đ S | — | — | không có đáp án mạng |
+| II.2 | S S Đ S | — | — | không có đáp án mạng |
+| II.3 | Đ Đ S S | — | — | không có đáp án mạng |
+| II.4 | Đ S Đ S | — | — | không có đáp án mạng |
+| III.1 | 683 | — | — | không có đáp án mạng |
+| III.2 | 2,2 | — | — | không có đáp án mạng |
+| III.3 | 16 | — | — | không có đáp án mạng |
+| III.4 | 1,6 | — | — | không có đáp án mạng |
+| III.5 | 301 | — | — | không có đáp án mạng |
+| III.6 | 401 | — | — | không có đáp án mạng |
+
+### (c) Câu mạng khác file
+
+Không có (không tìm được đáp án mạng nào của đúng đề). Mục B — I.17 (phương án C trùng B ở đề gốc): không có nguồn để đối chiếu.
+
+### (d) Tổng
+
+Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0.
