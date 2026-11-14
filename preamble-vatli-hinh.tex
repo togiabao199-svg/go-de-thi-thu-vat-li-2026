@@ -1409,3 +1409,95 @@
 		\coordinate (VLnc-giado) at (0.57,5.55); \coordinate (VLnc-nuocda) at (2.93,4.03); \coordinate (VLnc-daynung) at (3.95,3.42);
 		\coordinate (VLnc-binh) at (4.33,3.8); \coordinate (VLnc-coc) at (4.667,1.5); \coordinate (VLnc-can) at (3.5,0); \coordinate (VLnc-nguon) at (6.5,-0.22);
 	\end{scope}}
+
+% MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI (bình chứa nằm ngang phía trên, dàn ống thủy tinh chân không nghiêng xuống phía trước bên trái,
+% khung đỡ: thanh góp dưới, thanh ray bên phải, trụ sau, hai thanh giằng): \VLnuocnongmattroi{x}{y}{tỉ lệ}
+% (x,y): góc trái dưới khung bao; tỉ lệ 1 thì hình rộng khoảng 5,1 cm, cao khoảng 4,8 cm. Macro KHÔNG in chữ.
+% Điểm bám cho nhãn (đặt sau khi gọi): (VLmt-binh) giữa mép trên bình chứa, (VLmt-binhW) đầu trái bình, (VLmt-binhE) nắp phải bình,
+%   (VLmt-ong) giữa dàn ống, (VLmt-ongW) mép trái dàn ống (ống ngoài cùng, ở giữa chiều dài), (VLmt-ongN) đầu trên dàn ống,
+%   (VLmt-gop) giữa thanh góp dưới, (VLmt-tru) giữa trụ đỡ sau, (VLmt-ray) giữa thanh ray bên phải.
+% Ví dụ: \VLnuocnongmattroi{0}{0}{0.8} \draw[thin] (VLmt-binh)--++(0.4,0.5) node[right] {Bình chứa};
+\newcommand{\VLnuocnongmattroi}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+	\begin{scope}[x=0.052cm,y=-0.05cm,shift={(0,-99)}]
+		\pgfmathsetlengthmacro{\VLmtu}{#3*1pt}
+		% bóng đổ trên nền
+		\fill[gray!14] (53,89)--(90,72.5)--(99,75.5)--(98,80)--(60,97.5)--(52,95)--cycle;
+		\foreach \k in {0,...,5}{\draw[white,line width={0.9*\VLmtu},opacity=0.6] ({58+\k*1.2},{89.5+\k*1.2})--({91+\k*1.3},{74.5+\k*0.9});}
+		\fill[gray!22] (1.5,82.2)--(9,83.2)--(47,96.3)--(47,97.6)--(8,85)--(1.5,83.4)--cycle;
+		% thanh giằng, trụ đỡ sau
+		\draw[gray!55!black,line width={2.4*\VLmtu}] (68.5,59)--(90.6,69.6);
+		\draw[gray!25,line width={0.8*\VLmtu}] (68.7,58.5)--(90.6,69);
+		\draw[gray!50!black,line width={2.4*\VLmtu}] (74,48)--(90.8,69.8);
+		\draw[gray!20,line width={0.8*\VLmtu}] (74.4,47.7)--(91,69.2);
+		\shade[left color=gray!55,right color=gray!70!black,middle color=gray!12] (90.5,28)--(93.5,28)--(93.5,74)--(90.5,74)--cycle;
+		\draw[gray!55!black,line width={0.3*\VLmtu}] (90.5,28)--(90.5,74) (93.5,28)--(93.5,74);
+		\fill[black!75,rounded corners={0.6*\VLmtu}] (89.8,73.2)--(94.1,73.2)--(94.3,75.8)--(89.6,75.8)--cycle;
+		% tai đỡ bình trên đầu trụ
+		\shade[top color=gray!60!black,bottom color=gray!35] (85.5,23.5)--(94,23.5)--(93.8,33.5)--(90.3,33.5)--cycle;
+		\fill[gray!15] (87.6,25.6)--(92.6,25.6)--(92.4,31.6)--(90.8,31.6)--cycle;
+		% dàn ống thủy tinh chân không
+		\shade[top color=VLxanh!30!black,bottom color=gray!8,middle color=VLxanh!18!gray!30] (43.3,17.4)--(86,21)--(50.6,83)--(9.6,71)--cycle;
+		\foreach \i in {0,...,18}{
+			\pgfmathsetmacro{\s}{\i/18}
+			\pgfmathsetmacro{\xt}{44.7+40*\s}\pgfmathsetmacro{\yt}{17.6+3.4*\s}
+			\pgfmathsetmacro{\xb}{11+38.2*\s}\pgfmathsetmacro{\yb}{72.1+10.6*\s}
+			\fill[VLxanh!55!black] ({\xt-0.8},\yt)--({\xt+0.8},\yt)--({\xb+0.8},\yb)--({\xb-0.8},\yb)--cycle;
+			\fill[VLxanh!88] ({\xt-0.72},\yt)--({\xt+0.42},\yt)--({\xb+0.42},\yb)--({\xb-0.72},\yb)--cycle;
+			\fill[VLxanh!45!white] ({\xt-0.55},\yt)--({\xt-0.05},\yt)--({\xb-0.05},\yb)--({\xb-0.55},\yb)--cycle;
+			\fill[white,opacity=0.7] ({\xt-0.42},\yt)--({\xt-0.27},\yt)--({\xb-0.27},\yb)--({\xb-0.42},\yb)--cycle;
+			% đầu ống (nút đen) ở thanh góp dưới
+			\fill[VLxanh!25!black] ({\xb+0.03*(\xt-\xb)-0.8},{\yb+0.03*(\yt-\yb)})--({\xb+0.03*(\xt-\xb)+0.8},{\yb+0.03*(\yt-\yb)})--({\xb+0.8},\yb)--({\xb-0.8},\yb)--cycle;}
+		% bóng của bình phủ lên đầu trên dàn ống
+		\fill[black,opacity=0.42] (43.3,17.4)--(86,21)--(84.6,23.6)--(41.8,20)--cycle;
+		% thanh ray bên phải
+		\shade[left color=gray!30,right color=gray!70!black,middle color=gray!45] (85.2,22.3)--(88.8,25.6)--(55.6,90.5)--(50.2,84.2)--cycle;
+		\draw[gray!50!black,line width={0.3*\VLmtu}] (85.2,22.3)--(50.2,84.2) (88.8,25.6)--(55.6,90.5);
+		\draw[white,line width={0.9*\VLmtu},opacity=0.9] (85.5,24.2)--(74.5,43.5) (72.6,47)--(52,83.3);
+		\draw[gray!65!black,line width={0.3*\VLmtu}] (87.6,25.6)--(54,88.6);
+		% bình chứa: thân trụ trắng
+		\begin{scope}
+			\clip (43,4.3)--(91,3.8)--(91,20.6)--(43,18) .. controls (40.6,15) and (40.6,7.5) .. cycle;
+			\shade[top color=gray!30,bottom color=white] (39,3) rectangle (92,8.5);
+			\shade[top color=white,bottom color=gray!50] (39,8.4) rectangle (92,21);
+		\end{scope}
+		\draw[gray!50,line width={0.3*\VLmtu}] (43,4.3)--(91,3.8) (91,20.6)--(43,18);
+		% đai đầu trái bình, hai núm trên bình
+		\fill[gray!60!black] (46.6,3.3) .. controls (40.2,5.4) and (38.6,15) .. (41.8,19) -- (43,18) .. controls (40.6,15) and (40.6,7.5) .. (43,4.3) .. controls (44.2,3.9) and (45.6,3.8) .. cycle;
+		\shade[ball color=gray!55] (47.3,2.9) circle (0.85);
+		\shade[ball color=gray!55] (89.6,3.4) circle (0.8);
+		% nắp phải bình: đai tối, mặt đầu có các gờ tròn
+		\shade[top color=gray!55!black,bottom color=black!80,middle color=gray!70!black] (90.2,14.2) ellipse (4.4 and 10.9);
+		\shade[top color=gray!55!black,bottom color=black!80,middle color=gray!70!black] (90.2,3.3) rectangle (92.9,25.1);
+		\shade[left color=gray!75!black,right color=black!80] (92.9,14.2) ellipse (4.6 and 10.9);
+		\shade[left color=gray!55,right color=gray!75!black,middle color=gray!60] (93.7,14.4) ellipse (3.5 and 9.3);
+		\draw[gray!30,line width={0.4*\VLmtu}] (93.7,14.4) ellipse (3.5 and 9.3);
+		\draw[gray!80!black,line width={0.4*\VLmtu}] (94,14.5) ellipse (2.7 and 7.4);
+		\shade[left color=gray!35,right color=gray!65!black] (94.2,14.6) ellipse (1.8 and 5.2);
+		\draw[gray!75!black,line width={0.3*\VLmtu}] (94.2,14.6) ellipse (1.8 and 5.2);
+		% thanh góp dưới (trắng), thanh khung xám phía dưới
+		\shade[top color=gray!45,bottom color=gray!75!black] (6.5,79)--(49.3,90.3)--(49.3,94.2)--(8.5,82.6)--cycle;
+		\draw[gray!25,line width={0.5*\VLmtu}] (8,81.2)--(49,92.3);
+		\shade[top color=gray!12,bottom color=gray!38,middle color=white] (5.3,71.2)--(49.9,83.4)--(49.4,90.6)--(6.5,79.4) .. controls (4,78) and (3.6,73.5) .. cycle;
+		\draw[gray!50,line width={0.3*\VLmtu}] (5.3,71.2)--(49.9,83.4) (49.4,90.6)--(6.5,79.4);
+		\fill[gray!60!black] (5.8,70.2) .. controls (2.6,71.6) and (2,77.6) .. (5.8,80.2)--(6.5,79.4) .. controls (4,78) and (3.6,73.5) .. (5.3,71.2)--cycle;
+		% nắp đầu phải thanh góp
+		\shade[left color=gray!50!black,right color=gray!75!black,rounded corners={0.8*\VLmtu}] (48.4,83)--(52,84.3)--(52.4,94.3)--(48.8,94.6)--cycle;
+		\fill[gray!35] (49.6,85.4) ellipse (0.9 and 1.6);
+		\fill[gray!35] (50,91.4) ellipse (0.9 and 1.3);
+		% chân đế trước
+		\fill[gray!55!black] (4,76.2)--(6.2,78.4)--(9.8,81.2)--(9.6,82.9)--(2,82.4)--(1.8,80.9)--(4.4,80.3)--cycle;
+		\fill[gray!55!black] (46.6,93.9)--(54.6,93.2)--(55,95.9)--(47.2,97.2)--cycle;
+		\fill[gray!30] (47.4,94.4)--(54,93.8)--(54.1,94.5)--(47.5,95.1)--cycle;
+		% điểm bám
+		\coordinate (VLmt-binh) at (67,3.9);
+		\coordinate (VLmt-binhW) at (40.2,11);
+		\coordinate (VLmt-binhE) at (97.5,14.2);
+		\coordinate (VLmt-ong) at (47,50);
+		\coordinate (VLmt-ongW) at (26.6,45);
+		\coordinate (VLmt-ongN) at (64,19.5);
+		\coordinate (VLmt-gop) at (27,81);
+		\coordinate (VLmt-tru) at (93.5,52);
+		\coordinate (VLmt-ray) at (71,56);
+	\end{scope}
+	\end{scope}}
