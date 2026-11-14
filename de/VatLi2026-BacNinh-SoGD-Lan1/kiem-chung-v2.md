@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Bac Ninh - So GDDT - Lan 1.pdf`. Giải 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | B | B | — | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | B | B | — | khớp |
-| I.4 | D | D | — | khớp |
-| I.5 | D | D | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | C | C | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | B | B | — | khớp |
-| I.10 | B | B | — | khớp |
-| I.11 | C | C | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | C | C | — | khớp |
-| I.16 | B | B | — | khớp |
-| I.17 | C | C | — | khớp |
-| I.18 | D | D | — | khớp |
-| II.1 | Đ Đ Đ S | Đ Đ Đ S | — | khớp |
-| II.2 | Đ S Đ Đ | Đ S Đ Đ | — | khớp (thầy xem ý c) |
-| II.3 | S Đ Đ Đ | S Đ Đ Đ | — | khớp |
-| II.4 | Đ Đ S Đ | Đ Đ S Đ | — | khớp |
-| III.1 | 9,01 | 9,01 | — | khớp |
-| III.2 | 964 | 964 | — | khớp |
-| III.3 | 4 | 4 | — | khớp |
-| III.4 | 7,92 | 7,92 | — | khớp |
-| III.5 | 8,01 | 8,01 | — | khớp (thầy xem) |
-| III.6 | 0,6 | 0,6 | — | khớp (KIỂM TRA) |
+| I.1 | B | B | B | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | B | B | B | khớp |
+| I.4 | D | D | D | khớp |
+| I.5 | D | D | D | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | C | C | C | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | B | B | B | khớp |
+| I.10 | B | B | B | khớp |
+| I.11 | C | C | C | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | C | C | C | khớp |
+| I.16 | B | B | B | khớp |
+| I.17 | C | C | C | khớp |
+| I.18 | D | D | D | khớp |
+| II.1 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp |
+| II.2 | Đ S Đ Đ | Đ S Đ Đ | Đ S Đ Đ | khớp (thầy xem ý c) |
+| II.3 | S Đ Đ Đ | S Đ Đ Đ | S Đ Đ Đ | khớp |
+| II.4 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp |
+| III.1 | 9,01 | 9,01 | 9,01 | khớp |
+| III.2 | 964 | 964 | 964 | khớp |
+| III.3 | 4 | 4 | 4 | khớp |
+| III.4 | 7,92 | 7,92 | 7,92 | khớp |
+| III.5 | 8,01 | 8,01 | 8,01 | khớp (thầy xem) |
+| III.6 | 0,6 | 0,6 | 0,6 | khớp (KIỂM TRA) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -90,68 +90,62 @@ Kết quả gần đúng nhưng không phải đề này: các file chuvanbien.v
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-**Không tìm thấy đáp án trên mạng của đúng đề này** (0/28 câu có đáp án mạng). Không giải lại đề, không sửa đáp án.
+**Tìm được trang đăng đúng đề trên VietJack, đủ đáp án công khai 28/28 câu; khớp file 28/28.** Không giải lại đề, không sửa đáp án. (Lượt dò lại theo trang danh mục VietJack do phiên chính chỉ; thay cho kết luận "không tìm thấy" của lượt đầu cùng ngày.)
 
 ### (a) Nguồn
 
-- **Nguồn đúng đề:** không tìm thấy (không trang nào đọc được khớp lời câu và số liệu; đã thử các câu đặc trưng I.3, I.10, III.2, III.4–5).
-- **Nguồn có thể đúng đề nhưng không mở được:**
-  - https://news.laodong.vn/tuyen-sinh/de-thi-thu-tot-nghiep-thpt-nam-2026-mon-vat-li-kem-dap-an-1697167.ldo — theo đoạn trích tìm kiếm có "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí - Sở GDĐT Bắc Ninh" (không rõ lần; tiêu đề bài ghi "kèm đáp án"); WebFetch báo ENOTFOUND (bị chặn).
-  - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-tinh-bac-ninh-231287 — "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí tỉnh Bắc Ninh"; theo đoạn trích tìm kiếm có "48 đề … sở Bắc Ninh lần 2 có đáp án" (nhiều khả năng là đề lần 2 — trong kho có `Bac Ninh - So GDDT - Lan 2.docx`); hoatieu.vn bị chặn (WebFetch: HTTP 403).
+- **Nguồn đúng đề (VJ-BN):** https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-bac-ninh-ma-de-0204-co-dap-an — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Bắc Ninh **mã đề 0204** có đáp án" (28 câu; tên trang không ghi "lần 1"; đề gốc trong kho ghi "Lần 1, năm 2025 - 2026", không ghi mã đề). Tìm qua trang danh mục https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test. Tải bằng `curl` (HTTP 200), mỗi lần cách 1,5 s, chỉ đọc phần công khai (không đăng nhập, không cookie).
+  - Câu 1–8: đáp án công khai trên trang cả đề ("Đáp án đúng là X"); câu 9–20 trên trang cả đề hiện khóa VIP nên lấy ở trang từng câu.
+  - Câu 9–28: trang câu `khoahoc.vietjack.com/question/<id>`, id liên tiếp 2442362–2442381 (câu n ↔ id 2442353 + n). Mỗi trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Bắc Ninh !!" và có "Trả lời: Giải bởi Vietjack" công khai cho chính câu đó; trang III.4 (2442379) và III.5 (2442380) là cùng một trang đoạn dữ kiện, hiện công khai cả hai đáp án (III.5 ở mục "Câu hỏi cùng đoạn").
+  - Bằng chứng khớp: cùng thứ tự 28 câu, thứ tự phương án, thứ tự ý; lời câu và số liệu khớp file, ví dụ I.3 (4 °C; 292 / 277 / 301 / 269 K), I.10 (khung CDEG; EG 10 cm; B = 0,8 T; I = 12 A; 116 / 96 / 76 / 150 g), I.17 (ống thủy tinh – nút bấc – đèn cồn), II.2 (đường kính 2 mm; 2,7 mm³/K; bảng số liệu trên nguồn là ảnh, lời giải nguồn dùng h = 240 / 247 / 260 / 268 / 280 mm ở 7 / 17 / 27 / 37 / 47 °C — khớp bảng của file), II.3 (2 m²; 1370 W/m²; 60 %; 9864 kJ; 120 lít; 25 °C; 7 giờ), III.1 (121 kJ/phút; 1,8·10⁵ J/kg), III.2 (0,4 kg; 5 kg; 20 °C; 0,3 kg; 28 °C; 450; 4186), III.3 (6·10⁵ J; 2·10⁵ J), III.4–5 (S = 50 cm²; 40 cm; 98 750 Pa; 27 °C; m₂g = 47,5 N), III.6 (50 cm; 10 A; 3 N).
 - **Nguồn đã xét nhưng KHÔNG đúng đề:**
-  - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKTCUOIKI1_SOBACNINH_SOCANTHO.pdf — đề kiểm tra cuối học kì I của Sở Bắc Ninh (là đề `VatLi2026-BacNinh-SoGD`, không phải đề này).
-  - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKSCLKHOI12LAN2-LIENTRUONGBACNINH.pdf — đề khảo sát lần 2 của Liên trường Bắc Ninh (đề khác); không mở.
-  - https://chuvanbien.vn/images/upload_file/2025/lop12_sobacninh_1741752299.pdf — file "lop12 sobacninh" đăng tháng 3/2025 (theo dấu thời gian trong tên), nhiều khả năng là đề năm học 2024–2025; đoạn trích không có câu nào của đề này; không mở.
-  - https://news.vsis.net/dethi/tvhl-de-thi-thu-tot-nghiep-thpt-2026-so-gd-bac-ninh-lan-1-giai-chi-tiet.docx — theo đoạn trích (phiên trước) là đề Lịch sử.
-  - Kết quả 2048.vn: chỉ có đề Tiếng Anh Sở Bắc Ninh lần 1 năm 2023.
-- **Tên miền bị chặn trong lượt này:** hoatieu.vn (WebFetch: HTTP 403), news.laodong.vn và docs.google.com (WebFetch: ENOTFOUND). Đọc được: khoahoc.vietjack.com (`curl`), chuvanbien.vn (WebFetch) — không có trang nào của đề này trên hai trang đó trong kết quả tìm kiếm.
-- **Truy vấn đã thử (WebSearch, 8; cộng 8 truy vấn của phiên trước ở mục "Nguồn trên mạng"):**
-  1. đề thi thử tốt nghiệp THPT 2026 môn Vật lí Sở GD&ĐT Bắc Ninh lần 1 đáp án
-  2. site:khoahoc.vietjack.com "cảnh báo nhiệt độ cho một kho lạnh mà không dùng đến cảm biến điện tử"
-  3. "Một móng sắt bảo vệ chân ngựa có khối lượng 0,4 kg" "5 kg nước" "chậu sắt" 28
-  4. "khung dây dẫn cứng CDEG" "MNPQ" "0,8 T" "12 A" vật lí
-  5. site:2048.vn Đề thi thử tốt nghiệp THPT môn Vật lí Sở Bắc Ninh có đáp án lần 1
-  6. "một kỹ thuật viên cần kiểm tra mẫu huyết thanh được bảo quản" Kelvin
-  7. site:chuvanbien.vn LOP12 Sở Bắc Ninh lần 1 2026 thi thử tốt nghiệp vật lí
-  8. site:chuvanbien.vn "móng sắt" "chân ngựa" "4186" OR "kho lạnh" "98750" OR "tơ nhện" vật lí 12 Bắc Ninh
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-bac-ninh-co-dap-an — "Sở GD&ĐT Bắc Ninh có đáp án": đề khác (câu 1 "Trong quá trình sôi, năng lượng mà các phân tử chất lỏng nhận thêm dùng để…", câu 2 "thực hiện công 1200 J… truyền ra 800 J").
+  - VietJack "Sở Bắc Ninh lần 2", "Liên trường THPT Bắc Ninh lần 2", "Cụm Bắc Ninh lần 1" (tên trang khác đơn vị / lần; không mở).
+  - chuvanbien.vn `LOP12_DEKTCUOIKI1_SOBACNINH_SOCANTHO.pdf` (là đề cuối học kì I — đề `VatLi2026-BacNinh-SoGD`), `LOP12_DEKSCLKHOI12LAN2-LIENTRUONGBACNINH.pdf`, `lop12_sobacninh_1741752299.pdf` (2025); news.vsis.net (đề Lịch sử); hoatieu.vn 231287 (theo đoạn trích là lần 2; HTTP 403); news.laodong.vn 1697167 (ENOTFOUND).
+- **Tên miền bị chặn:** hoatieu.vn (WebFetch: HTTP 403), news.laodong.vn, docs.google.com (WebFetch: ENOTFOUND). Đọc được: khoahoc.vietjack.com (`curl`), chuvanbien.vn (WebFetch).
+- **Truy vấn đã thử (lượt đầu, WebSearch, 8; cộng 8 của phiên trước — không ra trang đúng đề):** đề thi thử tốt nghiệp THPT 2026 môn Vật lí Sở GD&ĐT Bắc Ninh lần 1 đáp án; site:khoahoc.vietjack.com "cảnh báo nhiệt độ cho một kho lạnh…"; "Một móng sắt bảo vệ chân ngựa có khối lượng 0,4 kg"…; "khung dây dẫn cứng CDEG" "MNPQ" "0,8 T" "12 A"; site:2048.vn … Sở Bắc Ninh lần 1; "một kỹ thuật viên cần kiểm tra mẫu huyết thanh được bảo quản" Kelvin; site:chuvanbien.vn LOP12 Sở Bắc Ninh lần 1 2026…; site:chuvanbien.vn "móng sắt" "chân ngựa"… Lượt dò lại: duyệt trang danh mục VietJack (không qua WebSearch).
 
 ### (b) Bảng đối chiếu
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | B | — | — | không có đáp án mạng |
-| I.2 | D | — | — | không có đáp án mạng |
-| I.3 | B | — | — | không có đáp án mạng |
-| I.4 | D | — | — | không có đáp án mạng |
-| I.5 | D | — | — | không có đáp án mạng |
-| I.6 | B | — | — | không có đáp án mạng |
-| I.7 | C | — | — | không có đáp án mạng |
-| I.8 | C | — | — | không có đáp án mạng |
-| I.9 | B | — | — | không có đáp án mạng |
-| I.10 | B | — | — | không có đáp án mạng |
-| I.11 | C | — | — | không có đáp án mạng |
-| I.12 | C | — | — | không có đáp án mạng |
-| I.13 | D | — | — | không có đáp án mạng |
-| I.14 | B | — | — | không có đáp án mạng |
-| I.15 | C | — | — | không có đáp án mạng |
-| I.16 | B | — | — | không có đáp án mạng |
-| I.17 | C | — | — | không có đáp án mạng |
-| I.18 | D | — | — | không có đáp án mạng |
-| II.1 | Đ Đ Đ S | — | — | không có đáp án mạng |
-| II.2 | Đ S Đ Đ | — | — | không có đáp án mạng |
-| II.3 | S Đ Đ Đ | — | — | không có đáp án mạng |
-| II.4 | Đ Đ S Đ | — | — | không có đáp án mạng |
-| III.1 | 9,01 | — | — | không có đáp án mạng |
-| III.2 | 964 | — | — | không có đáp án mạng |
-| III.3 | 4 | — | — | không có đáp án mạng |
-| III.4 | 7,92 | — | — | không có đáp án mạng |
-| III.5 | 8,01 | — | — | không có đáp án mạng |
-| III.6 | 0,6 | — | — | không có đáp án mạng |
+| I.1 | B | B | trang cả đề (VJ-BN) | khớp |
+| I.2 | D | D | trang cả đề (VJ-BN) | khớp |
+| I.3 | B | B | trang cả đề (VJ-BN) | khớp |
+| I.4 | D | D | trang cả đề (VJ-BN) | khớp |
+| I.5 | D | D | trang cả đề (VJ-BN) | khớp |
+| I.6 | B | B | trang cả đề (VJ-BN) | khớp |
+| I.7 | C | C | trang cả đề (VJ-BN) | khớp |
+| I.8 | C | C | trang cả đề (VJ-BN) | khớp |
+| I.9 | B | B | [q/2442362](https://khoahoc.vietjack.com/question/2442362) | khớp |
+| I.10 | B | B | [q/2442363](https://khoahoc.vietjack.com/question/2442363) | khớp |
+| I.11 | C | C | [q/2442364](https://khoahoc.vietjack.com/question/2442364) | khớp |
+| I.12 | C | C | [q/2442365](https://khoahoc.vietjack.com/question/2442365) | khớp |
+| I.13 | D | D | [q/2442366](https://khoahoc.vietjack.com/question/2442366) | khớp |
+| I.14 | B | B | [q/2442367](https://khoahoc.vietjack.com/question/2442367) | khớp |
+| I.15 | C | C | [q/2442368](https://khoahoc.vietjack.com/question/2442368) | khớp |
+| I.16 | B | B | [q/2442369](https://khoahoc.vietjack.com/question/2442369) | khớp |
+| I.17 | C | C | [q/2442370](https://khoahoc.vietjack.com/question/2442370) | khớp |
+| I.18 | D | D | [q/2442371](https://khoahoc.vietjack.com/question/2442371) | khớp |
+| II.1 | Đ Đ Đ S | Đ Đ Đ S | [q/2442372](https://khoahoc.vietjack.com/question/2442372) | khớp |
+| II.2 | Đ S Đ Đ | Đ S Đ Đ | [q/2442373](https://khoahoc.vietjack.com/question/2442373) | khớp; ý c nguồn Đ: h/T ≈ 0,857 / 0,851 / 0,867 / 0,865 / 0,875, coi như bằng nhau (sai số < 10 %); ý d nguồn ≈ 2,69 |
+| II.3 | S Đ Đ Đ | S Đ Đ Đ | [q/2442374](https://khoahoc.vietjack.com/question/2442374) | khớp; nguồn: Q = 5 918 400 J/2 h (a S); t ≈ 6,38 h < 7 h (d Đ) |
+| II.4 | Đ Đ S Đ | Đ Đ S Đ | [q/2442375](https://khoahoc.vietjack.com/question/2442375) | khớp |
+| III.1 | 9,01 | 9,01 | [q/2442376](https://khoahoc.vietjack.com/question/2442376) | khớp |
+| III.2 | 964 | 964 | [q/2442377](https://khoahoc.vietjack.com/question/2442377) | khớp |
+| III.3 | 4 | 4 | [q/2442378](https://khoahoc.vietjack.com/question/2442378) | khớp |
+| III.4 | 7,92 | 7,92 | [q/2442379](https://khoahoc.vietjack.com/question/2442379) | khớp |
+| III.5 | 8,01 | 8,01 | [q/2442380](https://khoahoc.vietjack.com/question/2442380) (cùng trang với III.4, mục "Câu hỏi cùng đoạn") | khớp; nguồn: p₂ = 92 500 Pa, đẳng tích → 8,0126 °C |
+| III.6 | 0,6 | 0,6 | [q/2442381](https://khoahoc.vietjack.com/question/2442381) | khớp; nguồn: B = 3/(10·0,5) = 0,6 T |
+
+Ghi chú bảng: "trang cả đề (VJ-BN)" = đáp án công khai trên trang cả đề; `q/<id>` = trang câu `https://khoahoc.vietjack.com/question/<id>`.
 
 ### (c) Câu mạng khác file
 
-Không có (không tìm được đáp án mạng nào của đúng đề). Mục D — II.2c (h/T dao động 2,7 %) và mục F — III.6 (0,6 không cần làm tròn): không có nguồn để đối chiếu.
+Không có (0 câu).
+- II.2c (mục D): nguồn chấm Đúng, cùng file. Lí do của nguồn: các tỉ số h/T ≈ 0,857 / 0,851 / 0,867 / 0,865 / 0,875 xấp xỉ nhau, sai số dưới 10 % nên coi như V tỉ lệ thuận với T.
+- III.6 (mục F): nguồn ghi đáp án 0,6 (B = 3/(10·0,5)), cùng file.
 
 ### (d) Tổng
 
-Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0.
+Số câu có đáp án mạng: 28/28; khớp: 28; khác: 0.
