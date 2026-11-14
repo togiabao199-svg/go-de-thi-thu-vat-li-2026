@@ -193,7 +193,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{11.6\baselineskip}
+	\NeedspaceCau{11.8\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Một lượng khí lí tưởng biến đổi trạng thái theo đồ thị như hình vẽ.
 		\begin{center}
@@ -286,7 +286,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{32.7\baselineskip}
+	\NeedspaceCau{34.9\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-ThaiNguyen-SoGD-Lan1-2]
@@ -295,47 +295,64 @@
 		Một thiết bị bao gồm một sợi dây dẫn điện đồng chất, tiết diện đều, một nam châm, một chiếc cân, một bộ nguồn điện có suất điện động không đổi (có gắn sẵn các đầu và một công tắc điện K có điện trở không đáng kể). Sợi dây có tiết diện $S=3{,}5\cdot 10^{-9}~\text{m}^2$, chiều dài $L=72{,}0$~cm và điện trở được xác định bằng công thức $R=1{,}7\cdot 10^{-8}\dfrac{L}{S}$ (với $S$ tính bằng m$^2$; $L$ tính bằng m và $R$ tính bằng $\Omega$). Bộ nguồn có suất điện động $\mathscr{E}=12{,}0$~V và điện trở trong $r=0{,}5~\Omega$. Uốn sợi dây dẫn điện thành khung dây và bố trí thí nghiệm như hình bên (khung dây được giữ bởi hai chốt A, B). Biết phần nằm ngang của sợi dây nằm giữa hai cực của nam châm có chiều dài $12{,}0$~cm. Khi bật công tắc cho dòng điện chạy trong mạch điện thì thấy số chỉ của cân thay đổi $6{,}0$~g. Lấy gia tốc trọng trường $g=9{,}8~\text{m/s}^2$.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[x=0.0048cm,y=-0.0048cm,line join=round,line cap=round,font=\footnotesize]
-				% cân
-				\fill[gray!20] (30,935)--(975,935)--(1205,620)--(260,620)--cycle;
-				\shade[top color=gray!30,bottom color=gray!55] (30,935) rectangle (975,1035);
-				\shade[left color=gray!55,right color=gray!40] (975,935)--(1205,620)--(1205,720)--(975,1035)--cycle;
-				\draw[thick] (30,935)--(975,935)--(1205,620) (30,935) rectangle (975,1035) (975,1035)--(1205,720)--(1205,620) (30,935)--(220,675) (900,858)--(1018,700) (1018,620)--(1205,620);
-				\node[font=\small] at (510,990) {CÂN};
-				% nam châm: mặt trên, mặt bên
-				\fill[VLdo!22] (220,455)--(468,455)--(588,330)--(345,330)--cycle;
-				\fill[VLxanh!22] (650,455)--(900,455)--(1018,330)--(770,330)--cycle;
-				\fill[VLdo!45] (468,455)--(468,540)--(588,415)--(588,330)--cycle;
-				\shade[left color=VLxanh!50,right color=VLxanh!40] (900,455)--(1018,330)--(1018,700)--(900,858)--cycle;
-				% nam châm: mặt trước
+			\begin{tikzpicture}[x=0.006cm,y=-0.006cm,line join=round,line cap=round,font=\footnotesize]
+				% toạ độ theo điểm ảnh của hình gốc (phóng 2 lần); nguồn sáng từ trên – trái – trước
+				% ================= CÂN =================
+				\shade[top color=gray!10,bottom color=gray!27] (30,945)--(1040,945)--(1285,625)--(275,625)--cycle;
+				% bóng nam châm đổ trên mặt cân
+				\fill[gray!50,opacity=0.55] (962,868)--(1088,705)--(1168,705)--(1042,868)--cycle;
+				\fill[gray!50,opacity=0.3] (1042,868)--(1168,705)--(1190,705)--(1064,868)--cycle;
+				\shade[left color=gray!62,right color=gray!45] (1040,945)--(1285,625)--(1285,730)--(1040,1052)--cycle;
+				\shade[top color=gray!24,bottom color=gray!50] (30,945) rectangle (1040,1052);
+				\draw[black!85,line width=0.8pt] (30,945)--(235,677) (1088,625)--(1285,625)--(1285,730)--(1040,1052) (1040,945)--(1285,625);
+				\draw[black!85,line width=0.8pt] (30,945) rectangle (1040,1052);
+				\draw[white,opacity=0.75,line width=0.5pt] (37,952)--(1033,952);
+				\draw[white,opacity=0.5,line width=0.5pt] (1047,948)--(1279,645);
+				\node at (535,1000) {CÂN};
+				% ================= NAM CHÂM CHỮ U =================
+				% mặt bên phải (tối), hai mặt trên (sáng)
+				\shade[top color=VLxanh!92,bottom color=VLxanh!68!black] (962,458)--(1088,328)--(1088,705)--(962,868)--cycle;
+				\shade[left color=VLdo!18,right color=VLdo!32] (235,458)--(498,458)--(628,328)--(363,328)--cycle;
+				\shade[left color=VLxanh!26,right color=VLxanh!42] (695,458)--(962,458)--(1088,328)--(822,328)--cycle;
+				% mặt trong của cực N (nhìn thấy qua khe)
+				\shade[top color=VLdo!66,bottom color=VLdo!86] (498,458)--(628,328)--(628,412)--(498,542)--cycle;
+				% lòng nam châm: vách trái, đáy
+				\shade[top color=VLdo!85!black,bottom color=VLdo!65] (363,542)--(447,542)--(447,622)--(363,706)--cycle;
+				\shade[top color=VLdo!42,bottom color=VLdo!24] (363,706)--(447,622)--(682,622)--(598,706)--cycle;
+				\shade[top color=VLxanh!56,bottom color=VLxanh!36] (598,706)--(682,622)--(848,622)--(848,706)--cycle;
+				% mặt trước
 				\begin{scope}
-					\clip (220,455)--(468,455)--(468,540)--(340,540)--(340,700)--(795,700)--(795,540)--(650,540)--(650,455)--(900,455)--(900,858)--(220,858)--cycle;
-					\shade[top color=VLdo!30,bottom color=VLdo!45] (200,440) rectangle (560,870);
-					\shade[top color=VLxanh!30,bottom color=VLxanh!45] (560,440) rectangle (920,870);
+					\clip (235,458)--(498,458)--(498,542)--(363,542)--(363,706)--(848,706)--(848,542)--(695,542)--(695,458)--(962,458)--(962,868)--(235,868)--cycle;
+					\shade[top color=VLdo!36,bottom color=VLdo!58] (230,450) rectangle (598,875);
+					\shade[top color=VLxanh!56,bottom color=VLxanh!82] (598,450) rectangle (970,875);
+					% vệt sáng dọc mép trái, dọc mép trên
+					\fill[white,opacity=0.22] (235,458) rectangle (262,868);
+					\fill[white,opacity=0.18] (235,458) rectangle (962,474);
 				\end{scope}
-				% lòng nam châm
-				\fill[VLdo!55] (340,540)--(420,540)--(420,615)--(340,700)--cycle;
-				\fill[gray!15] (420,615)--(795,615)--(795,700)--(340,700)--cycle;
-				\fill[VLxanh!12] (420,540)--(468,540)--(468,540)--(420,540)--cycle;
-				\draw[thick] (220,455)--(468,455)--(468,540)--(340,540)--(340,700)--(795,700)--(795,540)--(650,540)--(650,455)--(900,455)--(900,858)--(220,858)--cycle;
-				\draw[thick] (220,455)--(345,330)--(588,330)--(468,455) (588,330)--(588,415)--(468,540);
-				\draw[thick] (650,455)--(770,330)--(1018,330)--(900,455) (1018,330)--(1018,700);
-				\draw[thick] (420,540)--(420,615)--(795,615) (340,700)--(420,615);
-				\node[font=\small] at (415,505) {N};
-				\node[font=\small] at (690,505) {S};
-				% dây dẫn
-				\draw[VLdong!85!black,line width=1.3pt] (505,290)--(505,565)--(690,355)--(690,95);
-				% công tắc K
-				\draw[thick] (505,290)--(538,258);
-				\draw[thick] (530,224)--(560,232)--(608,184);
-				% bộ nguồn
-				\draw[thick] (608,140)--(608,228) (650,98)--(650,186);
-				\draw[line width=2pt] (626,152)--(626,198) (668,110)--(668,156);
-				\draw[thick] (626,175)--(650,145) (668,133)--(690,95);
-				\fill (505,290) circle (1.6pt) (690,95) circle (1.6pt);
-				\node[left,inner sep=2pt] at (500,268) {A};
-				\node[right,inner sep=2pt] at (540,280) {K};
-				\node[above right,inner sep=1pt] at (692,92) {B};
+				% nét viền
+				\draw[black!85,line width=0.8pt] (235,458)--(498,458)--(498,542)--(363,542)--(363,706)--(848,706)--(848,542)--(695,542)--(695,458)--(962,458)--(962,868)--(235,868)--cycle;
+				\draw[black!85,line width=0.8pt] (235,458)--(363,328)--(628,328)--(498,458) (628,328)--(628,412)--(498,542);
+				\draw[black!85,line width=0.8pt] (695,458)--(822,328)--(1088,328)--(962,458) (1088,328)--(1088,705)--(962,868);
+				\draw[black!85,line width=0.8pt] (447,542)--(447,622)--(848,622) (363,706)--(447,622);
+				\draw[black!45,line width=0.4pt] (598,706)--(598,868) (598,706)--(682,622);
+				\node at (440,502) {N};
+				\node at (738,502) {S};
+				% ================= KHUNG DÂY =================
+				\draw[VLdong!55!black,line width=2.2pt] (537,290)--(537,568)--(740,355)--(740,85);
+				\draw[VLdong,line width=1.35pt] (537,290)--(537,568)--(740,355)--(740,85);
+				\draw[VLdong!35!white,line width=0.3pt] (534,292)--(534,560) (737,352)--(737,90);
+				% ================= KHOÁ K (mở), BỘ NGUỒN =================
+				\draw[black!85,line width=0.8pt] (537,290)--(572,252);
+				\draw[black!85,line width=0.8pt] (563,220)--(598,227)--(646,180);
+				\draw[black!85,line width=0.8pt] (664,157)--(688,134) (706,113)--(740,85);
+				% bản cực: bản dài, mảnh ở phía K; bản ngắn, đậm ở phía B (đúng thứ tự hình gốc)
+				\draw[black!85,line width=0.8pt,line cap=butt] (646,122)--(646,205) (688,85)--(688,165);
+				\draw[black!90,line width=1.8pt,line cap=butt] (664,137)--(664,177) (706,96)--(706,134);
+				% chốt A, B
+				\foreach \p in {(537,290),(740,85)}{\shade[ball color=gray!55,draw=black!80,line width=0.3pt] \p circle (9.5);}
+				\node[left,inner sep=2pt] at (528,262) {A};
+				\node[right,inner sep=1.5pt] at (580,284) {K};
+				\node[above right,inner sep=1pt] at (744,82) {B};
 			\end{tikzpicture}
 		\end{center}
 		\NeedspaceBang{9\baselineskip}%
