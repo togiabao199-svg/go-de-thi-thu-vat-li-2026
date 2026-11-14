@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 1/35 đề đã kiểm; tổng 0 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 2/35 đề đã kiểm; tổng 0 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -11,7 +11,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | STT | Lô | Đề (mở `kiem-chung-v2.md`) | Trạng thái | Số lệch | Câu lệch (file / Fable) | Đề mơ hồ, cần thầy quyết | Lỗi gõ lời đề | Đáp án trên mạng |
 |---|---|---|---|---|---|---|---|---|
 | 1 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan3` | đang kiểm | | | | | |
-| 2 | P01 | `VatLi2026-HaNoi-LuongTheVinh-Lan1` | đang kiểm | | | | | |
+| 2 | P01 | [`VatLi2026-HaNoi-LuongTheVinh-Lan1`](../de/VatLi2026-HaNoi-LuongTheVinh-Lan1/kiem-chung-v2.md) | xong | 0 | II.2a: file S (theo đề đã sửa ¹³¹₅₃I) / Fable lần 1 Đ (theo nguyên văn đề gốc ¹³¹₅₁I). Kết luận: với lời đề trong file thì S là đúng; với nguyên văn đề gốc thì Đ. | II.2a (giữ cách sửa Z = 53, a Sai; hay theo đề gốc Z = 51, a Đúng — đáp án ý đồ của trường có thể là Đúng). | không thấy (đã so lời đề, số liệu, thứ tự phương án và thứ tự ý của cả 28 câu với ảnh trang; các chỗ khác bản gốc đều là sửa có chủ ý và đã ghi ở `kiem-chung.md`). Ghi chú nhỏ: `kiem-chung.md` ghi ¹³¹₅₁I sai "cả 4 chỗ", thực tế bản gốc ghi 6 chỗ (4 trong lời dẫn, ý b, ý d) — file đã sửa đủ cả 6. | không tìm thấy |
 | 3 | P02 | `VatLi2026-HaNoi-YenHoa-Lan1` | đang kiểm | | | | | |
 | 4 | P02 | `VatLi2026-HaTinh-CamXuyen-Lan2` | đang kiểm | | | | | |
 | 5 | P03 | `VatLi2026-HaTinh-CumLienTruong` | đang kiểm | | | | | |
@@ -19,7 +19,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 7 | P03 | `VatLi2026-HaiPhong-KinhMonII-Lan2` | đang kiểm | | | | | |
 | 8 | P04 | `VatLi2026-Hue-PhanDangLuu-Lan1` | đang kiểm | | | | | |
 | 9 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1` | đang kiểm | | | | | |
-| 10 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3` | chưa kiểm | | | | | |
+| 10 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3` | đang kiểm | | | | | |
 | 11 | P05 | `VatLi2026-HungYen-SoGD-Lan1` | chưa kiểm | | | | | |
 | 12 | P05 | `VatLi2026-NgheAn-ChuyenDHVinh-Lan1` | chưa kiểm | | | | | |
 | 13 | P06 | `VatLi2026-NgheAn-LienTruong-Lan2` | chưa kiểm | | | | | |
