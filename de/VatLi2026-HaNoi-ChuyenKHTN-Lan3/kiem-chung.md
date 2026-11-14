@@ -45,3 +45,13 @@
 
 - I.9 (máy làm nóng nước, hình thực tiễn, `% giuhinh`): dùng `\VLmanhinh`, `\VLnumvan`, `\VLongnoi`; ống nước nóng đỏ, nước lạnh xanh như ảnh (có chú thích chữ, không phải ý suy luận). Chờ phiên vẽ lại chi tiết.
 - Dàn trang: I.16 hình đặt bên phải phương án; II.3, II.4 hình đặt bên phải câu dẫn (minipage `[t]`); II.4 tách câu dẫn / bảng Phát biểu.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+- **I.9** (máy làm nóng nước, `% giuhinh`): vẽ lại bằng macro mới `\VLmaynuocnong{x}{y}{tỉ lệ}{nội dung màn hình}` — thân máy bo góc có vành, bóng đổ trên tường, bảng điều khiển gờ nổi có vệt phản quang, màn hình LCD hiện số bảy đoạn "36,7 °C" (macro `\VLsoled`, số đề dùng làm dữ kiện), núm điều chỉnh có vành khía và vạch chỉ, hai sợi dây điện phía trên, ống nước nóng (đỏ) / lạnh (xanh) có cổ nối; năm nhãn chữ có gạch chân và đường chỉ như hình gốc (vẽ ngoài macro, bám các điểm `(VLmnn-...)`). Hình 8,2 × 4,8 cm.
+- **I.16** (ống thủy tinh ấn vào chậu thủy ngân): vẽ lại chậu và hai ống có bề dày thành thủy tinh, thủy ngân tô chuyển màu có vệt sáng mặt thoáng, phần thủy ngân vào ống (đoạn $l-h$) giữ nét đứt như hình gốc; nhãn $p_0$, $l=112{,}2$, $p_1$, $h$, $l-h$ giữ nguyên, tách khỏi nét ống.
+- **I.18** (áp kế khí: bình cầu + ống nằm ngang): vẽ lại vỏ thủy tinh liền khối có bề dày, vệt sáng trên bình và ống, giọt thủy ngân có mặt khum hai đầu, đầu ống bên phải để hở như hình gốc; nhãn A giữ nguyên.
+- Giữ nguyên (sơ đồ nguyên lí, đồ thị): I.6, I.7, II.1, II.3, II.4, III.1, III.3 (đồ thị theo hàm suy từ dữ kiện), III.4.
+- Macro mới khai báo trong file đề (đề nghị chuyển vào `preamble-vatli-hinh.tex` để các đề Nghệ An Liên trường Lần 2, Hưng Yên SGD Lần 1, Lạng Sơn SGD Lần 1 dùng lại): `\VLmaynuocnong`, `\VLsoled` (kèm lệnh phụ `\VLledngang`, `\VLleddung`, `\VLledve`, bảng mã `VLledma0`…`VLledma9`, `VLledma-`).
+- Ảnh so dựng lại cho cả 11 hình (ảnh trang 300 dpi); vùng cắt đổi nhẹ: I.9 tr.1 `0.72:0.862:0.96:0.96`; I.16 tr.2 `0.84:0.64:0.95:0.755`; I.18 tr.3 `0.72:0.035:0.96:0.117`.
+- Hình chưa ưng: không có. Lưu ý: dấu thập phân trên màn hình vẽ thành dấu phẩy ("36,7") cho khớp cách ghi số của đề, ảnh gốc là dấu chấm ("36.7").
