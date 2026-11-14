@@ -49,4 +49,32 @@
 - II.3: đường sức từ vẽ nét đứt xanh giữa hai cực (bản gốc nét đứt vàng), nhãn $\vv{B}$; không ghi chiều dòng điện (học sinh suy từ cực nguồn như bản gốc).
 - III.3: bản gốc có ba ảnh (sơ đồ ray tiếng Anh, sơ đồ 3D "Railguns Magnetic Field Effect" chữ rất nhỏ, ảnh súng trên tàu). Vẽ lại sơ đồ ray (nhãn dịch sang tiếng Việt: Dòng điện, Từ trường, Đầu đạn, Thanh ray, Lực) và ảnh súng; lược sơ đồ 3D (trùng ý, chữ không đọc được).
 - III.5: bỏ mã QR, chữ nhãn hiệu, chữ "8kg" trên vỏ bình.
-- Hình thực tiễn (I.15, I.18, II.3, III.1, III.3, III.5) vẽ có khối, `% giuhinh`; chờ phiên vẽ lại chi tiết.
+- Hình thực tiễn (I.15, I.18, II.3, III.1, III.3, III.5) vẽ có khối, `% giuhinh`; đã vẽ lại chi tiết trong PHIÊN FABLE 14/11/2026 (mục cuối file).
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Chỉ sửa trong `tikzpicture` và macro riêng của đề (`\DHVdom`, `\DHVbong`, `\DHVda`, `\DHVgiot`, màu `DHVnen`); lời đề, đáp án, lời giải giữ nguyên. Chiều quay (I.17), cực nguồn, cực nam châm (II.3) giữ đúng như bản trước. Bản đề 7 trang ĐẠT, bản lời giải 11 trang.
+
+- **I.15** (`02-cau-I-15.png`): vẽ lại ảnh ống tiêm chọc kim vào lọ thuốc úp ngược: nắp nhôm hình trụ nhìn chếch có lõi cao su, cổ lọ có gờ, thân lọ thủy tinh trong, kim, đốc kim có gân, thân ống tiêm có vạch chia; nền ảnh mờ có đốm sáng.
+- **I.17** (`03-cau-I-17.png`): vẽ lại hình phối cảnh máy phát: hai cực N, S có mặt cực lõm, tay quay (trục, cần, tay cầm), khung dây ABCD nét đôi, hai vành khuyên dày, chổi quét dạng khối và dây ra có đầu cốt, trục XX′. Mũi tên chiều quay vẫn đi từ cạnh AB (phía sau, sát cực N) vòng lên trên rồi xuống phía trước như bản trước.
+- **I.18** (`04-cau-I-18.png`): vẽ lại bốn ô: ấm siêu tốc (thân thủy tinh có nước, cổ và đế thép, tay cầm bên trái, vòi bên phải như ảnh gốc), sơ đồ micro điện động (sóng âm, màng rung, cuộn dây, nam châm, vỏ, hai đầu dây), bếp từ (mặt kính đen nhìn xiên, vùng nấu, bảng điều khiển, màn hình để trống), lò nung cao tần (hộp nguồn có khe thông gió, ống nung sứ, hai dây dẫn, cuộn ống nhựa, bơm, nền xanh).
+- **II.1** (`05-cau-II-1.png`): vẽ lại mô hình máy nén khí đúng bố cục gốc: lọc hút có khe, nắp máy hai buồng, hai van, xilanh, pit-tông, thanh truyền, đĩa trục khuỷu, đai truyền, động cơ có đế, ống xả, bình chứa, ống khí nén ra, các mũi tên chiều dòng khí và chiều quay.
+- **II.3** (`06-cau-II-3.png`): vẽ lại bộ thí nghiệm: cân điện tử (thân, mặt nghiêng có màn hình trống và bốn nút, đế), đĩa cân, nam châm chữ U (bản cực N phía sau tô đỏ nhạt, bản cực S phía trước tô xanh nhạt, đáy), thanh dẫn, hai giá đỡ có khớp kẹp, dây nối, biến trở, ampe kế, nguồn (vạch dài bên trái nối ampe kế, vạch ngắn bên phải — như bản trước và như ảnh gốc phóng to).
+- **II.4** (`07-cau-II-4.png`): vẽ lại hình cắt bình nước nóng: ruột bình hai đầu chỏm cầu có đai hàn, lớp cách nhiệt gạch chéo, vỏ bên có gờ, thanh đốt uốn chữ U, mặt bích và chụp cách điện, elip nét đứt, ống xả nóng xuyên đáy, ống nước lạnh có van an toàn, móc an toàn, dây nguồn; đủ 11 nhãn như gốc.
+- **III.1** (`08-cau-III-1.png`): vẽ lại ảnh "đá vĩnh cửu": khối 4 × 3 viên thép bo góc, một viên đặt trên, một viên nằm riêng bên trái, giọt nước đọng, nền sẫm có hơi lạnh.
+- **III.3** (`09-cau-III-3.png`, `10-cau-III-3.png`): sơ đồ ray vẽ lại theo đúng gốc (hai thanh ray dạng thanh dẹt nhìn xiên, đường dòng điện nét đứt có mũi tên, đầu đạn dạng khối, dòng điện qua đầu đạn, lực); ảnh súng trên tàu vẽ lại (tháp pháo nhiều mặt, nòng dài, đầu nòng, thượng tầng tàu, lan can, biển, trời).
+- **III.5** (`11-cau-III-5.png`): vẽ lại bình gas đen: vành bảo vệ có ô khoét nhìn thấy van đồng, vai bình, đường hàn, chân đế, tem trắng để trống (bỏ mã QR, chữ nhãn hiệu, "8kg").
+
+Sửa so với bản trước (không ảnh hưởng đáp án):
+
+- **III.3, sơ đồ ray**: bản trước vẽ các vòng đường sức trên hai thanh ray cùng một chiều; ảnh gốc (và quy tắc nắm tay phải với hai dòng điện ngược chiều) cho hai chiều ngược nhau: ở cả hai thanh, đường sức đi lên ở phía giữa hai ray, vòng qua mặt trên, đi xuống ở phía ngoài. Đã vẽ lại theo gốc. Thêm dấu "−" ở đầu thanh ray phía sau như gốc (bản trước chỉ có "+").
+- **III.3, sơ đồ 3D "Railguns Magnetic Field Effect"**: vẫn lược (trùng ý với sơ đồ ray, chữ tiếng Anh quá nhỏ không đọc được, câu hỏi chỉ dùng F = BIl).
+- **I.18**: ấm siêu tốc bản trước vẽ ngược chiều (tay cầm bên phải); đã vẽ đúng như ảnh gốc.
+- **II.3**: hai thanh cực của nam châm tô theo quy ước N đỏ nhạt, S xanh nhạt (ảnh gốc: N xanh nhạt, S trắng); đề có ghi rõ N, S nên không lộ thêm thông tin.
+
+Đối chiếu ảnh gốc phóng to (400 dpi) cho hai câu đọc hình:
+
+- **I.17**: đuôi mũi tên cam ở phía sau gần đỉnh B, thân vòng lên cao gần A, đầu mũi tên (tam giác lớn) chúc xuống ở phía trước giữa khung ⇒ cạnh AB đi lên. Khớp cách đọc của bản trước (đáp án C).
+- **II.3**: vạch dài của nguồn ở bên trái (phía ampe kế), vạch ngắn ở bên phải; chữ N có nét gióng tới bản cực phía sau, chữ S tới bản cực phía trước ⇒ dòng điện trong thanh chạy từ giá trái sang giá phải, $\vec{B}$ hướng ra phía trước, lực từ lên thanh hướng xuống. Khớp cách đọc của bản trước (a S, c S, d Đ).
+
+Hình chưa ưng: I.15 và III.1 là ảnh chụp nghệ thuật (nền nhòe, phản chiếu kim loại) nên bản TikZ chỉ đạt mức minh họa có khối, không tả hết độ bóng; lò nung cao tần (I.18) và ảnh súng trên tàu (III.3) lược bớt chi tiết nhỏ (cáp, nhãn, lan can) do ảnh gốc mờ.

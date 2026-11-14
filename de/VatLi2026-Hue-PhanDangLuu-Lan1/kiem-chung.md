@@ -47,3 +47,20 @@
 - Hình thực tiễn (chờ phiên vẽ lại chi tiết): I.17 nhiệt kế hồng ngoại — màn hình để trống (số 36,8 / 29 / 35 trên ảnh không phải dữ kiện); II.1 ảnh thợ chạm khắc bình đồng → vẽ quả chuông đồng có hoa văn và bàn tay cầm đục (lược người thợ, nền xưởng); III.1 ảnh học sinh bơm bóng → vẽ bơm tay nối dây vào quả bóng rổ (lược người, sân bóng); III.4 đèn trời → vẽ đèn trời phát sáng có khung dây, ngọn lửa (lược nền trời đêm, bàn tay thả đèn); III.5 đầu cắt laser trên tấm thép có lỗ cắt, tia lửa (lược máy phía sau).
 - II.1: hình đặt bên phải danh sách 6 bước (minipage), câu có `% tachDS` để câu dẫn ở trang 4, bảng ở trang 5.
 - I.5: hình đặt bên phải phương án (minipage), lời đề sửa "như hình vẽ" → "như hình bên".
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Các hình vẽ theo toạ độ điểm ảnh của ảnh gốc (`x=…cm, y=−…cm`), mỗi cảnh cắt trong khung bo góc. Màu riêng của đề (`PDLda…`, `PDLvang`, `PDLnau…`, `PDLdoao…`, `PDLthau…`) khai báo giữa `\input{preamble-vatli-hinh}` và `\begin{document}`. Sơ đồ, đồ thị, mạch điện (I.6, I.9, I.11, I.13, II.2, II.3, II.4, III.3, III.6) giữ nguyên.
+
+- **I.5** (`01-cau-I-5.png`): vẽ lại lọ thuốc úp ngược (vai lọ vát, thuốc có chấm, nút cao su) và ống tiêm đúng dáng hình gốc (vai ống rộng, đầu gắn kim hình vòm, thân ống dài, pit-tông đen ở cuối thân, cán hai nét, đế ấn). Bố cục: câu đầu của lời đề để nguyên dòng, phần lời còn lại + 4 phương án đặt trong `minipage` 0,84 `\linewidth`, hình bên phải (0,14 `\linewidth`) — lời đề không đổi; nhờ vậy hình cao 3,3 cm mà câu vẫn nằm trọn trang 1.
+- **I.17** (`06-cau-I-17.png`): nhiệt kế hồng ngoại đúng góc nhìn nghiêng của ảnh (mặt trước cong, mặt bên, đầu đo nhô ra sau, viền màn hình dày phía trên, ba nút M / = / −, nút SCAN, biểu tượng pin). Màn hình để trống (36,8 / 29 / 35 không phải dữ kiện).
+- **II.1** (`07-cau-II-1.png`): dựng lại cả cảnh người thợ chạm bình đồng: bình đồng lớn (miệng tối, cổ chạm chìm, dải chữ triện, thân đắp nổi, quai đầu rồng), bàn tay trái chỉ ngón trỏ vào bình, tay phải cầm đục, đầu người thợ nhìn nghiêng (tóc, tai, áo đỏ), nền xưởng (người thợ phía sau, bình thứ hai, bạt xanh, bàn ghế). Thay hình "quả chuông + bàn tay" cũ.
+- **III.1** (`12-cau-III-1.png`): dựng lại cảnh học sinh bơm bóng: học sinh áo trắng, cà vạt sọc, quai ba lô, tay phải nắm tay bơm chữ T, thân bơm đen chéo xuống, tay trái giữ đầu bơm trên quả bóng rổ, quần jean, nền sân bóng (bảng rổ, hàng cây, người ở xa).
+- **III.4** (`14-cau-III-4.png`): đèn trời nhìn từ dưới lên như ảnh: thân giấy phồng, vành miệng elip, mặt trong, hai dây chéo đỡ bấc, ngọn lửa, các bàn tay giữ đèn, trời đêm có các đèn ở xa.
+- **III.5** (`15-cau-III-5.png`): đầu cắt laser đúng các tầng của ảnh (thân đồng thau, vòng đai thép, tầng giữa có núm tròn, tai kẹp, ốc tai hồng, thân dưới, bép đồng đỏ), tia lửa tại điểm cắt và vệt phản chiếu, tấm thép tối với các lỗ tròn đã cắt (mép bắt sáng), khối máy và bó dây phía sau.
+
+Hình chưa thật ưng:
+- II.1: hoa văn đắp nổi trên thân bình và quai đầu rồng chỉ vẽ cách điệu (ảnh gốc 413 × 273 điểm ảnh, mờ, không đọc được hình chạm cụ thể); gương mặt người thợ vẽ kiểu minh hoạ phẳng.
+- III.1: gương mặt học sinh vẽ kiểu minh hoạ phẳng (ảnh gốc 243 × 350 điểm ảnh).
+
+Dàn trang sau khi vẽ lại: bản đề 8 trang (ĐẠT), bản lời giải 12 trang (trang 11 trống 7,5 cm, trong giới hạn 1/3).

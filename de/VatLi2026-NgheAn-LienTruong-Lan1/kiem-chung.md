@@ -49,3 +49,17 @@
 - Hình thực tiễn (II.1 bộ thí nghiệm Charles, II.2 bình nước và ống thủy tinh, II.3 lực kế – nam châm – khung dây, II.4 hệ thống sấy) vẽ có khối, `\shade`, gắn `% giuhinh`; chờ phiên vẽ lại chi tiết.
 - II.1, II.2, II.3, III.1, III.5: hình đặt bên cạnh lời đề (hai `minipage`) để dàn trang ĐẠT.
 - II.3: cực N đỏ, S xanh (đề ghi cực). II.4: lược bớt chi tiết ống nối, đai ốc, chân đế của ảnh gốc.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ theo tọa độ điểm ảnh của ảnh gốc nhúng trong PDF (`x=...cm,y=-...cm`). Không đổi nội dung vật lí, lời đề, đáp án.
+
+- **II.1** (bộ thí nghiệm Charles): vẽ lại toàn bộ — giá đỡ có đế, hai tay kẹp và khớp nối, nhiệt kế ống mảnh đầu nhọn có móc treo, vạch chia và cột chất lỏng đỏ, thước nhựa trong có vạch, ống thủy tinh đáy kín có giọt acid và cột không khí, cốc miệng loe có nước (mặt thoáng, vệt sáng), kiềng bốn chân có chân đế đen, đèn đốt đế tròn cổ đồng và ngọn lửa; đủ 6 nhãn như hình gốc. Bố cục: bảng số liệu chuyển vào cột chữ bên trái (cạnh hình), hai `minipage` căn đỉnh, để hình lớn hơn mà trang 4 vẫn giữ trọn câu II.1 và II.2.
+- **II.2** (bình nước 20 lít và ống thủy tinh): vẽ lại bình có nắp gân, vai cong, các gờ ngang thân bình, nhãn dán có khung biểu trưng (bỏ chữ nhãn hiệu), vòi xanh lá, bóng đổ; ống thủy tinh chứa nước (chấm), nút kín ở trên, vòi nhỏ có khóa k ở đáy.
+- **II.3** (lực kế – nam châm chữ U – khung dây): vẽ lại đúng góc nhìn hình gốc (từ phía trước chếch phải): hai nhánh nam châm và mặt đáy, hai bản cực N (đỏ), S (xanh) gắn mặt trong, khung dây đồng treo giữa hai cực (P phía trước, Q phía sau như cũ), hai dây dẫn mềm, lực kế đồng hồ tròn có móc treo trên dưới, thang chia, kim đỏ (mặt số để trống).
+- **II.4** (hệ thống sấy): vẽ lại toàn bộ — bộ gia nhiệt (hộp inox, cửa sổ có thanh đốt đỏ, chân đế), ba đường ống ra có van tay vặn, đoạn ống nóng màu đỏ, ống đứng và ống ngang phía trên có khớp nối, áp kế (mặt trống, chỉ vạch), van, buồng sấy khối hộp có cửa kính, ba khay sản phẩm, bản lề và chốt cửa, chân đế; bộ ngưng tụ hình trụ có nắp, buồng kính với ống xoắn, ống nối hai bên; bơm hút khí (đầu bơm có gân, hộp đấu dây, thân động cơ, nắp xanh, đế), ống xả có đầu phun; hai mũi tên dòng khí; đủ 7 nhãn như hình gốc.
+- **I.8** (sơ đồ ống dây): chỉ trau chuốt nét (lõi tô khối, dây quấn hai lớp nét, vòng cuối nối thẳng xuống dây dẫn) theo đúng hình câu I.6 đề Lào Cai Sở GD Lần 1; GIỮ NGUYÊN chiều quấn (nét xiên ở mặt trước đi từ trên – trái xuống dưới – phải) và cực nguồn (+ bên trái). Đối chiếu ảnh gốc phóng to: cực + (bản dài) ở bên trái, dây trái nối vào mép dưới đầu trái lõi, các nét đậm xiên từ trên – trái xuống dưới – phải vắt qua lõi, dây phải đi thẳng lên trước lõi tới đỉnh vòng cuối — khớp cách đọc hiện tại (đáp án T).
+- I.17, III.1 (đồ thị), III.5 (sơ đồ khung dây): giữ nguyên.
+- Macro riêng trong file đề: `\NAong`, `\NAongmau` (ống kim loại), `\NAkhopn`, `\NAkhopd` (khớp nối), `\NAvan` (van tay vặn), màu `NAhat`.
+- Chưa ưng: II.2 khung biểu trưng trên nhãn để trống (bỏ chữ nhãn hiệu) nên bình hơi "trơn"; II.2 và II.3 đặt cạnh lời đề nên cỡ còn nhỏ (rộng khoảng 3,1 cm và 3,3 cm) để bản đề giữ 7 trang.
+- Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 10 trang.

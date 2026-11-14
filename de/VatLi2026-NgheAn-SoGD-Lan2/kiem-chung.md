@@ -39,3 +39,7 @@ Nguồn: `kho/goc/Nghe An - So GDDT - Lan 2.docx` (Sở GD&ĐT Nghệ An, KSCL k
 - III.3, III.4: "Hertz (Hz)", "Newton (N)" → "hertz (Hz)", "newton (N)".
 - III.5–III.6: "Oxygen", "Carbon dioxide" → "oxygen", "carbon dioxide".
 - Ba cặp câu dùng chung dữ kiện ("Sử dụng các thông tin sau cho Câu 1 và Câu 2"…): đoạn dữ kiện đặt trong câu đầu của cặp, mở đầu "Dùng thông tin sau cho câu 1 và câu 2:" (nhãn `NgheAn-SoGD-Lan2-III1`…`III6`).
+
+## Sửa hình theo quyết định của thầy (14/11/2026)
+
+- I.2: đổi chiều mũi tên $i_c$ ở Hình 1 cho cùng chiều vẽ với Hình 2 (bản gốc vẽ ngược nhau nên Hình 1 và Hình 2 cùng đúng, đề có hai đáp án B, C). Sau khi sửa, theo quy ước của đáp án gốc (Hình 2 đúng): Hình 1 (cực S ra xa, cần dòng ngược Hình 2) sai, Hình 3 (cực N ra xa, cần dòng cùng chiều Hình 2, vẽ ngược) sai, Hình 4 (cực N lại gần, cần dòng ngược Hình 2, vẽ cùng chiều) sai ⇒ chỉ còn đáp án B. Bỏ `% KIỂM TRA`, thay bằng ghi chú đã sửa hình.

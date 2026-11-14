@@ -40,3 +40,11 @@
 
 - II.1: dựng lại theo tọa độ hình gốc (cân, nam châm chữ U, dây, khóa K mở, bộ nguồn hai pin); tô nhánh N đỏ, nhánh S xanh như quy ước; gắn `% giuhinh`.
 - I.13, III.5: thêm chấm trạng thái viền đen theo quy ước đồ thị.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+- II.1 (cân – nam châm chữ U – khung dây – khóa K – bộ nguồn, `% giuhinh`): vẽ lại theo toạ độ điểm ảnh của ảnh nhúng trong PDF (656 × 534, phóng 2 lần), rộng 7,6 cm. Giữ đủ mọi nét của hình gốc (kể cả đoạn cạnh trái mặt cân, vách trái và đáy lòng nam châm, mặt trong cực N nhìn qua khe); tô khối theo một hướng sáng (trên – trái – trước): mặt trên sáng, mặt trước chuyển màu, mặt bên phải tối; nhánh N đỏ, nhánh S xanh (đậm hơn để bản in xám vẫn phân biệt), đáy lòng nam châm chia hai màu theo vạch giữa; bóng nam châm đổ trên mặt cân; mặt cân, mặt trước, mặt bên của cân ba độ xám, viền sáng mép trên; khung dây màu đồng hai lớp nét có vệt sáng; chốt A, B là hai núm kim loại nhỏ; khóa K mở và bộ nguồn hai pin vẽ đúng vị trí gốc.
+- **Nội dung vật lí giữ nguyên như hình TikZ trước**: thứ tự bản cực tính từ phía K đến B là dài – ngắn – dài – ngắn (bản dài mảnh = cực dương ở phía K, nối về A qua K); đoạn dây đi từ A thẳng xuống (phía trước nam châm), chạy xiên theo chiều sâu qua khe giữa hai cực ra phía sau rồi thẳng lên B; N bên trái, S bên phải.
+- Đối chiếu lại cực nguồn trên ảnh gốc (ảnh nhúng phóng 6 lần và ảnh trang 400 dpi): bốn vạch bản cực từ K đến B có chiều cao lần lượt khoảng 42, 20, 40, 18 điểm ảnh gốc, tức dài – ngắn – dài – ngắn; cách đọc "cực dương (bản dài) ở phía K" khớp ảnh gốc. Lưu ý: trên ảnh gốc bốn vạch có bề dày nét như nhau (không thấy rõ "bản ngắn đậm"), nên cực chỉ phân biệt được bằng độ dài vạch; hình vẽ lại vẽ bản ngắn đậm hơn theo kí hiệu SGK.
+- I.7 (khung dây ABCD trong từ trường), I.13, III.5 (đồ thị): sơ đồ, giữ nguyên.
+- Hình chưa ưng: không.

@@ -48,3 +48,17 @@
 - II.2 (ảnh chụp khinh khí cầu, `% giuhinh`): vẽ lại có màu (ảnh gốc trắng đen): túi khí múi đỏ – vàng, miệng túi, ngọn lửa `\VLngonlua`, dây treo, giỏ gỗ.
 - II.4: mọi đoạn quá trình cùng một màu ở cả hai hình để không gợi ý ý d).
 - Bản vẽ chi tiết, trau chuốt hình II.1, II.2 để phiên vẽ lại riêng.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ theo toạ độ điểm ảnh của ảnh gốc nhúng trong PDF (trang 3: ảnh 655×365 và 308×310 điểm ảnh), nên bố cục, góc nhìn trùng ảnh gốc.
+
+- **II.1** (`so-hinh/04-cau-II-1.png`, macro `\QNcanluctu{x}{y}{tỉ lệ}`): vẽ lại toàn bộ theo đúng góc nhìn xiên của ảnh gốc (bản cũ dựng chính diện): cân điện tử (thân có mặt bên, mặt trên, mặt phím nghiêng, đế sẫm, màn hình để trống, 4 phím xanh – cam), đĩa cân tròn, nam châm chữ U gồm gông xanh nhạt và hai bản cực (bản sau N tô đỏ, bản trước S tô xanh), đoạn dây căng giữa hai giá có kẹp và vít hãm (nét đứt ở đoạn trong khe nam châm như gốc), vòng dây mạch ngoài bo tròn, biến trở, ampe kế, nguồn; bóng đổ dưới cân và chân giá. Giữ nguyên nội dung vật lí của bản cũ: N phía sau, S phía trước; nguồn có bản dài (cực dương) ở phía ampe kế, bản ngắn ở phía giá bên phải; thứ tự mạch ngoài: giá trái → biến trở → ampe kế → nguồn → giá phải.
+- **II.2** (`so-hinh/05-cau-II-2.png`, macro `\QNkhinhkhicau{x}{y}{tỉ lệ}`): vẽ lại theo đúng ảnh chụp nhìn từ dưới lên, cắt trong khung (bản cũ là khí cầu nhìn ngang): các múi vải toả ra từ vành miệng túi (đỏ sẫm – vàng thay cho các mức xám của ảnh gốc), đường may ngang, vành đai quanh miệng túi, lòng túi tối nhìn qua miệng, ngọn lửa đầu đốt phụt vào miệng túi, khung đầu đốt, cột khung, ba người trong giỏ, giỏ mây có băng rôn (để trống chữ, ảnh gốc không đọc được). Rộng 3,9 cm (cột hình 0,22 `\linewidth`; cột chữ 0,68 để câu dẫn vẫn 8 dòng, bản đề giữ 6 trang).
+- Sáu hình còn lại (I.5, I.11, I.15, II.3, II.4, III.1) là sơ đồ, đồ thị: giữ nguyên.
+
+Đối chiếu cực nguồn II.1 trên ảnh gốc phóng to (ảnh nhúng 655×365 lấy bằng `pdfimages`, phóng 6 lần): kí hiệu nguồn có vạch DÀI, mảnh ở bên trái (phía ampe kế), vạch NGẮN, đậm ở bên phải (phía dây vòng lên giá phải); nhãn N chỉ vào bản cực phía sau, nhãn S chỉ vào bản cực phía trước. Cách đọc của bản cũ (và của lời giải ý b) khớp ảnh gốc.
+
+Chưa đưa vào hình (như bản cũ): nhãn "B" cùng dải sáng vàng và nét đứt vàng dọc bản cực N của ảnh gốc (không có mũi tên chỉ chiều, không rõ nghĩa); hai nét mảnh ngắn nối từ dây sang bản cực S (không xác định được là bộ phận gì). Kẹp giữ dây trên hai giá vẽ gọn hơn ảnh gốc (khối kẹp, vít hãm, núm kẹp).
+
+Dàn trang sau khi vẽ lại: bản đề 6 trang (ĐẠT), bản lời giải 10 trang.

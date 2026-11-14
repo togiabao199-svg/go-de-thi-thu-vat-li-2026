@@ -50,3 +50,13 @@
 - I.18 (`% giuhinh`): bộ thí nghiệm Boyle (áp kế, cảm biến nhiệt độ có màn hình, xilanh, pit-tông, tay đẩy, nhãn 1–4) tự dựng, đặt bên phải phương án. Màn hình nhiệt độ của ảnh gốc ghi "26.5°C" không phải dữ kiện của đề → để trống (quy định 13/11/2026).
 - II.2: ba đồ thị Hình a, b, c; tô màu theo nhãn đoạn: (1)–(2) đỏ, (2)–(3) xanh dương, (3)–(1) xanh lá ở cả ba hình (chỉ theo nhãn, không theo loại quá trình). (3)→(1) ở Hình c vẽ cung hyperbol pV = hằng số qua (3) và (1).
 - II.4 (`% giuhinh`): ghế nâng hạ dùng lại hình vẽ của đề Sơn La Lần 3 (cùng ảnh gốc), thêm bóng đổ; đặt bên phải câu dẫn như bản gốc.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Ảnh so dựng lại cho cả 4 hình (ảnh trang `hr-1.png` 300 dpi, `hr-2.png`, `hr-3.png` 400 dpi; vùng cắt tỉ lệ khổ trang): I.5 tr.1 `0.73:0.54:0.88:0.63`; I.18 tr.2 `0.67:0.655:0.94:0.755` (nới sang phải để đủ tay nắm); II.2 tr.3 `0.2:0.135:0.81:0.27`; II.4 tr.3 `0.73:0.445:0.94:0.59`.
+
+- I.18 (`02-cau-I-18.png`): vẽ lại toàn bộ bộ thí nghiệm Boyle theo toạ độ đo trên ảnh gốc: áp kế (vỏ xanh lam tô khối, mặt số 9 vạch lớn + vạch nhỏ, kim có đuôi và trục, chữ BAR, phản quang mặt kính, cổ nối), ống dẫn khí kim loại uốn góc vào đầu xilanh, nhánh hai ống nhỏ tới đầu cảm biến nhiệt độ, dây cáp cong mềm và đầu cắm, bộ hiển thị nhiệt độ (viền, mặt kính, màn hình để trống như bản trước vì "26.5°C" không phải dữ kiện), xilanh thủy tinh bo góc trái trên, khí lốm đốm bên trái pit-tông, pit-tông đen, thước chia độ (vạch lớn / vạch nhỏ 5 khoảng), thanh pit-tông xanh nhạt có vệt sáng, ba khớp nối, tấm chặn đầu phải, tay quay (thanh đứng, khớp trên, tay nắm xám), khối đỡ đen chữ L, đế gỗ có vân và bóng đổ; nhãn 1–4 giữ đúng vị trí bám như ảnh gốc.
+- II.4 (`04-cau-II-4.png`): ghế nâng hạ vẽ lại thành macro `\VLghenangha{x}{y}{tỉ lệ}` (khai báo đầu file đề, đề nghị chuyển vào `preamble-vatli-hinh.tex` để đề Sơn La Lần 3 dùng chung): đế tròn kim loại có vành và vệt sáng, ống chân vát mép, thanh nén mạ sáng, xilanh cắt dọc (thành xilanh, cột khí `VLxanh` nhạt, đầu thanh nén nét đậm), mặt ghế gỗ có vành, vân gỗ nhạt, bóng mặt ghế trên đầu xilanh, bóng đổ trên sàn; tỉ lệ các phần đo theo ảnh gốc. Nhãn "Mặt ghế", "Xilanh", "Thanh nén" đặt ngoài macro, bám vào `(VLghe-matghe)`, `(VLghe-xilanhW)`, `(VLghe-thanhE)`.
+- I.5, II.2 (đồ thị): giữ nguyên, đã soát lại khớp ảnh gốc.
+- Hình chưa ưng: không có. Lưu ý: ảnh gốc II.4 là hình vẽ nét đen trắng; màu gỗ của mặt ghế, màu kim loại của đế là màu tự chọn (không mang thông tin).
+- Dàn trang sau khi vẽ lại: bản đề 5 trang (ĐẠT), bản lời giải 8 trang.

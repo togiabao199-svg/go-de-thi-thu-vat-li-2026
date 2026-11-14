@@ -50,3 +50,13 @@
 - II.2: nam châm SN (`\VLnamcham`, N đỏ, S xanh; ảnh gốc S trắng, N đen), đường sức qua mạch (C), điện kế G, chiều i, "+" như hình gốc.
 - II.4: quạt điều hòa (hình thực tiễn, lược nền xanh, giọt nước trang trí của ảnh gốc) – `% giuhinh`, chờ phiên vẽ lại.
 - III.4: bộ thí nghiệm nhiệt nóng chảy (biến áp nguồn, oát kế, nhiệt lượng kế, cốc hứng, cân, giá) – màn hình cân để trống – `% giuhinh`, chờ phiên vẽ lại.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ theo toạ độ điểm ảnh của ảnh gốc (ảnh nhúng trong PDF), so hình trong `so-hinh/`; nội dung vật lí, nhãn, số liệu giữ như hình cũ.
+- II.1 (`02-cau-II-1.png`): vẽ lại nhiệt kế khí đúng tỉ lệ ảnh gốc — cốc thủy tinh có vành miệng và đáy elip, dung dịch có mặt thoáng, bầu khí chìm trong dung dịch, ống dẫn khí uốn hai góc nối vào vai nhánh A, ống chữ U (nhánh A, đoạn cong hẹp, nhánh B cao có vành miệng) chứa nước tô khối trụ, thước gỗ có vạch chia, vạch 0 đỏ với hai chấm, độ chênh h; nhãn A, B đặt trong ống và "nước" giữa hai nhánh như ảnh gốc.
+- II.4 (`04-cau-II-4.png`): vẽ lại quạt điều hòa (mặt cắt) theo dáng ảnh gốc — thân có nóc cong, cửa gió phía sau, đế và hai bánh xe; khoang cắt thấy tấm làm mát dạng tổ ong, ống dẫn nước từ máy bơm lên đỉnh tấm làm mát, hai giọt nước, hộp chứa nước, máy bơm, quạt nhìn ngang (hai cánh, bầu động cơ); ba mũi tên lượn sóng không khí nóng (cam) và ba mũi tên không khí lạnh (xanh). Lược nền xanh và vệt nước trang trí của ảnh quảng cáo.
+- III.4 (`05-cau-III-4.png`): vẽ lại bộ thí nghiệm đúng bố cục ảnh gốc (không dùng `\VLtnnongchay` vì bố cục khác: có oát kế, nguồn bên trái, giá bên phải) — biến áp nguồn (công tắc, hai núm, cọc +/−), oát kế bốn cọc, hai dây nối, nhiệt lượng kế thủy tinh có nắp, hai cọc đấu dây, hai thanh dẫn, dây nung, nước đá, ống thoát nước ở đáy, vòng kẹp và giá đỡ, cốc hứng nước, cân điện tử (đĩa cân, màn hình để trống, hai nút).
+- II.2 (`03-cau-II-2.png`, sơ đồ, không phải hình thực tiễn): chỉ vẽ lại điện kế G (hộp có bề dày, mặt kính, thang đo cung tròn rộng, vạch 0, kim lệch trái như ảnh gốc) và nối kín vòng dây (C) ở điểm thấp nhất (hình cũ hở một khe nhỏ); nam châm, đường sức, chiều $i$, dấu "+" giữ nguyên.
+- I.16: giữ nguyên.
+Hình chưa ưng: không có. Dàn trang: bản đề 6 trang (ĐẠT), bản lời giải 10 trang.

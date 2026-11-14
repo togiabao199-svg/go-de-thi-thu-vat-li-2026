@@ -47,3 +47,16 @@
 - III.5: đường nước (từ 30 °C) màu `VLdo`, đường nước đá (từ −10 °C) màu `VLxanh`; nhiệt độ cân bằng 6 °C là dữ kiện có trên đồ thị gốc.
 - III.6: gia trọng tô màu đồng, pit-tông xám, khí `VLxanh!10`.
 - Dàn trang: hình II.3, II.4, III.5, III.6 đặt bên phải câu dẫn (như bản gốc) để bản đề ĐẠT.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Bốn hình thực tiễn (`% giuhinh`) vẽ lại theo tọa độ điểm ảnh của hình gốc (cắt ở 400 dpi; trục y của `tikzpicture` hướng xuống: `x=...cm,y=-...cm`), không đổi nội dung vật lí, nhãn, số liệu. Sơ đồ / đồ thị I.3, II.3, III.5, III.6 giữ nguyên.
+
+- **I.5** (`so-hinh/02-cau-I-5.png`): ghế văn phòng vẽ lại theo ảnh chụp (tựa lưng lưới có khung đen và đệm thắt lưng ba vành, hai tay vịn vòng, đệm ngồi, cụm cơ cấu + cần gạt, trụ hơi mạ crôm, chân sao 5 nhánh, 5 bánh xe, bóng đổ); khung elip phóng to có hai đường dẫn tới trụ hơi; ống A lồng trong ống B có thành ống A chạy trong B tới miệng dưới (vành elip), nắp ống A sẫm màu như gốc. Khối khí trong B và trong lòng ống A tô cùng một màu `VLxanh` nhạt như hình gốc (bản cũ tô hai màu khác nhau). Bố cục: câu dẫn + phương án ở `minipage` trái (0,62), hình ở `minipage` phải (0,29) để câu vẫn nằm trọn trang 1.
+- **II.1** (`so-hinh/03-cau-II-1.png`): vẽ lại cả bộ thí nghiệm: đế đen nhìn chếch, bảng chia độ có khung, tấm kính, vạch chia ba cấp, giá đỡ chân ống; ống thủy tinh (cột không khí, cột dầu), đầu nối và ống dẫn sang ống chứa dầu; ống chứa dầu hình trụ trên đế vòng, ống mềm xám hình chữ C, cổ và áp kế mặt tròn (viền đen, vạch chia, kim; không ghi số); ống mềm đen có một vòng cuộn; bơm đạp chân: khung đế có hai thanh ngang trước và chân, hai trụ đứng, bàn đạp khung chữ U có thanh ngang sáng màu, thanh bản lề có chốt, xilanh nghiêng có nắp, núm và cần pit-tông, lò xo dây thép. Mũi tên chú thích như gốc.
+- **II.2** (`so-hinh/04-cau-II-2.png`): vẽ lại theo phối cảnh hình gốc: máng giàn nước nghiêng (mặt nước, mặt bên tối, đầu máng), tia nước nhỏ giọt, tấm màng tổ ong dày (mặt trước vàng – xanh ướt có vân đan, mặt bên, mặt trên), ngăn chứa nước dạng hộp có nước, quạt khung vuông nhìn xiên (lỗ tròn có thành trong, ba cánh, bầu quạt, mặt trên và mặt bên khung), mũi tên khí nóng (`VLdo`) cong đi vào màng, mũi tên khí mát từ màng vào quạt và ba luồng hơi sương sau quạt (`VLxanh` nhạt). Nhãn đặt như gốc, không đè hình (bỏ khung nét đứt bao ngoài của gốc).
+- **II.4** (`so-hinh/06-cau-II-4.png`): vẽ lại đúng bố cục gốc: giá thí nghiệm (đế rải sỏi, trụ, thanh ngang, ba khớp kẹp), nhiệt lượng kế (nắp gạch chéo, hai cọc nối dây, hai thanh dẫn, lò xo nung, nước đá viên xếp lộn xộn, vòi chảy ở đáy), cốc hứng nước dạng côn có nước ở đáy đặt trên cân điện tử (màn hình để trống, nút), oát kế 4 cọc, biến áp nguồn (màn hình trống, kí hiệu đèn, cọc +, −), bốn dây nối uốn cong như gốc (hai dây dưới của oát kế đi vào mép trên biến áp nguồn như hình gốc, bản cũ nối vào cọc +, −).
+
+Hình chưa ưng: không có. Lưu ý: II.2 khi in trắng đen, mũi tên khí nóng và khí mát cùng độ xám (phân biệt bằng nhãn "Khí nóng", "Luồng khí hơi sương" và vị trí).
+
+Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT; trang 3 trống 7,3 cm ngay trước tiêu đề Phần II, được miễn), bản lời giải 9 trang.

@@ -45,3 +45,15 @@
 - I.17: đặt hình bên phải phương án (minipage) để bản đề còn 6 trang; thêm gạch chéo giá treo, nhãn $\vv{B}$.
 - II.2, III.1 (hình thực tiễn): vẽ khối, `\shade`, `% giuhinh`; III.1 dùng `\VLtayan` (lật trái phải), áp kế vẽ riêng không ghi số (số trên mặt áp kế gốc không đọc được, tránh lộ số đọc); chờ phiên vẽ lại chi tiết.
 - II.4: mạch circuitikz (R, C), hai thanh màu đồng, `% giuhinh`.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Ảnh gốc lấy từ ảnh nhúng trong PDF (`pdfimages`), vẽ theo toạ độ điểm ảnh của ảnh gốc (`x=...cm,y=-...cm`). Nội dung vật lí (chiều $\vv{B}$, $\vv{F}$, nhãn M, N, số liệu) giữ nguyên như hình cũ.
+
+- **II.2** (`so-hinh/03-cau-II-2.png`): thay hình tự vẽ bằng macro chung `\VLghenangha` (đế tròn, ống chân, thanh nén mạ sáng, xilanh cắt dọc thấy cột khí và đầu thanh nén như hình gốc, mặt ghế tròn, bóng đổ), đặt trong `scope[yscale=1.15]` cho đúng dáng cao – mảnh của hình gốc; ba nhãn "Mặt ghế", "Xilanh", "Thanh nén" đặt đúng vị trí hình gốc. Đổi bố cục: câu dẫn bên trái (minipage 0,6), hình bên phải (minipage 0,28) để bản đề giữ 6 trang.
+- **II.3** (`so-hinh/04-cau-II-3.png`): vẽ lại theo ảnh gốc: hai thanh gỗ gắn trần có vân, móc treo chữ S kim loại (macro riêng `\VLmoctreo`), dây treo, thanh MN là trụ kim loại nằm ngang tô khối nhiều lớp (vệt sáng, dải tối, mặt đầu elip bên phải, đầu trái bo tròn), kí hiệu $\otimes\ \vv{B}$, lực $\vv{F}$ đặt tại giữa thanh. Thêm `% giuhinh` (hình dùng đơn vị riêng, không để `thu-hinh` đổi cỡ).
+- **III.1** (`so-hinh/06-cau-III-1.png`): vẽ lại toàn bộ theo ảnh gốc: áp kế mặt tròn không ghi số (macro riêng `\VLapketron`: vành kim loại sẫm, mặt trắng, vạch dài – ngắn, kim có đuôi đối trọng chỉ lên trái như ảnh gốc, đai ốc chân), ống nối cong chữ L, xilanh thủy tinh thành dày đáy cong, khí có các hạt/bọt, pit-tông và đĩa ấn kim loại bóng (dải sáng – tối), cán pit-tông, bàn tay úp ấn lên đĩa (cổ tay từ trái trên, ngón cái phía trước có móng, đầu ngón vượt mép đĩa), bóng đổ dưới đáy.
+- Giữ nguyên (sơ đồ, đồ thị, không sai so với gốc): I.13, I.17, II.4, III.6.
+- Macro riêng khai báo trong file đề: `\VLapketron{x}{y}{R}{góc kim}` (áp kế mặt tròn không số, có điểm bám `(VLapke-chan)`), `\VLmoctreo{x}{y}{tỉ lệ}` (thanh gỗ + móc chữ S); cả hai tự đặt hệ trục cm nên gọi được trong hình có trục $y$ lật — có thể đưa vào `preamble-vatli-hinh.tex`.
+- Hình chưa ưng: không có. Lưu ý: mặt ghế của macro `\VLghenangha` tô màu gỗ (ảnh gốc đen trắng, mặt ghế xám); bàn tay III.1 tô màu da (ảnh gốc là nét vẽ không tô).
+- Dàn trang: bản đề 6 trang (ĐẠT), bản lời giải 10 trang.

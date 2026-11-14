@@ -9,6 +9,39 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
+% Màu và macro hình riêng của đề (câu II.2, II.3)
+\definecolor{QNda}{RGB}{236,196,166}% da người
+\definecolor{QNkaki}{RGB}{216,208,176}% quần áo bệnh nhân
+\definecolor{QNthep}{RGB}{104,130,182}% xanh thép (đệm, dải bên bàn máy)
+\definecolor{QNtuong}{RGB}{230,237,246}% tường phòng máy
+\definecolor{QNsan}{RGB}{158,170,206}% sàn phòng máy
+% nhiệt kế có vỏ thủy tinh bao ngoài (ống vỏ rộng bo tròn hai đầu, thang chia độ bên trong, bầu dài nhỏ phía dưới), thẳng đứng;
+% (x,y) là đáy bầu, cao 8,45 x tỉ lệ, cột chất lỏng dâng tới 5,8 x tỉ lệ (không ghi số); phần nhúng trong nước (từ đáy bầu
+% lên độ cao #4, tính trước khi nhân tỉ lệ; 0 nếu không nhúng) được phủ lớp màu nước #5: \QNnhietkevo{x}{y}{tỉ lệ}{độ cao nhúng}{màu nước}
+\newcommand{\QNnhietkevo}[5]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		% bầu và cổ bầu
+		\shade[left color=gray!35,right color=gray!45,middle color=white] (-0.11,1.5)--(-0.11,0.98) .. controls (-0.22,0.9) and (-0.21,0.8) .. (-0.21,0.7)--(-0.21,0.21) arc[start angle=180,end angle=360,radius=0.21]--(0.21,0.7) .. controls (0.21,0.8) and (0.22,0.9) .. (0.11,0.98)--(0.11,1.5)--cycle;
+		\draw[gray!50!black,line width=0.35pt] (-0.11,1.5)--(-0.11,0.98) .. controls (-0.22,0.9) and (-0.21,0.8) .. (-0.21,0.7)--(-0.21,0.21) arc[start angle=180,end angle=360,radius=0.21]--(0.21,0.7) .. controls (0.21,0.8) and (0.22,0.9) .. (0.11,0.98)--(0.11,1.5);
+		\shade[left color=VLdo!70!black,right color=VLdo!60!black,middle color=VLdo!85] (-0.13,0.75)--(-0.13,0.19) arc[start angle=180,end angle=360,radius=0.13]--(0.13,0.75)--cycle;
+		% ống vỏ ngoài
+		\shade[left color=VLxanh!14,right color=VLxanh!20,middle color=white] (-0.5,1.9) arc[start angle=180,end angle=360,radius=0.5]--(0.5,7.95) arc[start angle=0,end angle=180,radius=0.5]--cycle;
+		% ống thang chia độ, vạch chia
+		\filldraw[fill=white,draw=gray!55,line width=0.25pt] (-0.13,1.5)--(-0.13,7.9)--(0.13,7.9)--(0.13,1.5);
+		\foreach \QNk in {0,...,32}{\draw[black!70,line width=0.2pt] (-0.3,1.95+0.175*\QNk)--(-0.17,1.95+0.175*\QNk) (0.17,1.95+0.175*\QNk)--(0.26,1.95+0.175*\QNk);}
+		\foreach \QNk in {0,...,6}{\draw[black!75,line width=0.35pt] (-0.36,2.39+0.875*\QNk)--(-0.17,2.39+0.875*\QNk) (0.17,2.39+0.875*\QNk)--(0.33,2.39+0.875*\QNk);}
+		% cột chất lỏng
+		\shade[left color=VLdo!75!black,right color=VLdo!75!black,middle color=VLdo!75!white] (-0.075,0.7) rectangle (0.075,5.8);
+		\fill[white,opacity=0.7] (-0.42,2.0) rectangle (-0.37,7.9);
+		% lớp nước phủ phần nhúng
+		\ifdim #4pt>0pt
+			\begin{scope}
+				\clip (-0.5,1.9) arc[start angle=180,end angle=360,radius=0.5]--(0.5,7.95)--(-0.5,7.95)--cycle (-0.11,1.5)--(-0.11,0.98) .. controls (-0.22,0.9) and (-0.21,0.8) .. (-0.21,0.7)--(-0.21,0.21) arc[start angle=180,end angle=360,radius=0.21]--(0.21,0.7) .. controls (0.21,0.8) and (0.22,0.9) .. (0.11,0.98)--(0.11,1.5)--cycle;
+				\fill[#5,opacity=0.38] (-0.6,-0.1) rectangle (0.6,#4);
+			\end{scope}
+		\fi
+		\draw[gray!50!black,line width=0.4pt] (-0.5,1.9) arc[start angle=180,end angle=360,radius=0.5]--(0.5,7.95) arc[start angle=0,end angle=180,radius=0.5]--cycle;
+	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT QUẢNG NINH -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -342,7 +375,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau[16.1\baselineskip]{26.6\baselineskip}
+	\NeedspaceCau[15.3\baselineskip]{25.3\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-QuangNinh-SoGD-Lan1-2]
@@ -351,7 +384,7 @@
 		% tachDS
 		Cho $1$~mol khí lí tưởng thực hiện quá trình biến đổi từ trạng thái (1) đến trạng thái (2) có đồ thị như hình vẽ, hai đường cong là hai đường đẳng nhiệt ứng với nhiệt độ $T_1$ và $T_2$. Biết ở điều kiện tiêu chuẩn $0\,^\circ\text{C}$ và $1$~atm, khối khí có thể tích $22{,}4$ lít. Lấy $1~\text{atm}=101\,325$~Pa.
 		\begin{center}
-			\begin{tikzpicture}[x=0.85cm,y=0.72cm,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[x=0.85cm,y=0.63cm,line join=round,line cap=round,font=\footnotesize]
 				\draw[VLmui,thick] (0,0)--(5.3,0) node[below,inner sep=3pt] {$V$};
 				\draw[VLmui,thick] (0,0)--(0,4.75) node[left,inner sep=2pt] {$p$};
 				\draw[dashed,thin,gray] (0,2)--(2,2)--(2,0) (0,3)--(2.5,3)--(2.5,0);
@@ -385,7 +418,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{21.1\baselineskip}
+	\NeedspaceCau{23.3\baselineskip}
 	\begin{ex}%[VL12-C1-TH]
 		% KIỂM TRA: bảng gốc ghi nhiệt độ nước trong bình lúc 4 phút là 51 °C (lớn hơn 50 °C ban đầu, vô lí); giữ nguyên, không ảnh hưởng các ý
 		Đặt cốc nhôm đựng $300$~ml nước ở $20\,^\circ\text{C}$ vào trong bình cách nhiệt đựng $600$~ml nước ở $50\,^\circ\text{C}$. Dùng hai nhiệt kế đo nhiệt độ của nước trong cốc và trong bình sau mỗi khoảng thời gian bằng nhau. Bỏ qua sự truyền nhiệt ra môi trường. Kết quả thu được như sau:
@@ -406,13 +439,35 @@
 			\end{minipage}\hfill%
 			\begin{minipage}[c]{0.3\linewidth}
 				\centering
-				\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
-					\VLbinhthuytinh{0}{0}{2.4}{2.45}{1.3}
-					\VLbinhthuytinh{1.15}{0.12}{1.05}{1.45}{1.22}
-					\VLnhietkett{0.55}{0.45}{3.05}{2.2}
-					\VLnhietkett{1.62}{0.45}{3.05}{2.2}
-					% phần nhiệt kế nhúng trong nước
-					\fill[VLxanh!30,opacity=0.35] (0.05,0.06) rectangle (2.35,1.28);
+				\begin{tikzpicture}[scale=0.4,line join=round,line cap=round,font=\footnotesize]
+					% bóng đổ, thủy tinh và nước trong bình lớn
+					\fill[black,opacity=0.12] (4.2,-0.02) ellipse (4.3 and 0.16);
+					\shade[left color=VLxanh!9,right color=VLxanh!7,middle color=white] (0.38,8.38)--(0.38,0.7) arc[start angle=180,end angle=270,radius=0.7]--(7.35,0) arc[start angle=270,end angle=360,radius=0.7]--(8.05,7.6) .. controls (8.12,7.95) and (8.3,8.2) .. (8.5,8.38)--cycle;
+					\shade[top color=VLxanh!22,bottom color=VLxanh!36] (0.52,3.95)--(0.52,0.7) arc[start angle=180,end angle=270,radius=0.58]--(7.33,0.12) arc[start angle=270,end angle=360,radius=0.58]--(7.91,3.95)--cycle;
+					\fill[VLxanh!48,opacity=0.7] (4.2,0.42) ellipse (3.2 and 0.2);
+					% mép sau miệng bình lớn
+					\shade[left color=VLxanh!10,right color=white,middle color=white] (4.44,8.38) ellipse (4.06 and 0.42);
+					\draw[gray!55!black,line width=0.4pt] (0.38,8.38) arc[start angle=180,end angle=0,x radius=4.06,y radius=0.42];
+					% cốc nhỏ: thủy tinh, nước, mép sau
+					\fill[VLxanh!12] (3.68,4.88)--(3.68,0.95) arc[start angle=180,end angle=270,radius=0.5]--(6.48,0.45) arc[start angle=270,end angle=360,radius=0.5]--(6.98,4.88)--cycle;
+					\shade[left color=VLxanh!62,right color=VLxanh!40,middle color=VLxanh!52] (3.8,4.38)--(3.8,0.95) arc[start angle=180,end angle=270,radius=0.38]--(6.48,0.57) arc[start angle=270,end angle=360,radius=0.38]--(6.86,4.38)--cycle;
+					\fill[VLxanh!72,opacity=0.6] (5.33,0.78) ellipse (1.25 and 0.12);
+					\fill[VLxanh!30] (5.33,4.38) ellipse (1.53 and 0.13);
+					\fill[VLxanh!6] (5.19,4.88) ellipse (1.79 and 0.22);
+					\draw[gray!55!black,line width=0.35pt] (3.4,4.88) arc[start angle=180,end angle=0,x radius=1.79,y radius=0.22];
+					% hai nhiệt kế (phần nhúng phủ màu nước)
+					\QNnhietkevo{2.0}{2.05}{1}{1.9}{VLxanh!45}
+					\QNnhietkevo{5.38}{2.05}{1}{2.33}{VLxanh!75}
+					\draw[VLxanh!55!black,line width=0.3pt] (0.52,3.95)--(1.5,3.95) (2.5,3.95)--(3.68,3.95) (6.98,3.95)--(7.91,3.95);
+					% thành cốc nhỏ, miệng có mỏ rót bên trái
+					\draw[gray!50!black,line width=0.5pt] (3.4,4.88) .. controls (3.55,4.75) and (3.66,4.6) .. (3.68,4.4)--(3.68,0.95) arc[start angle=180,end angle=270,radius=0.5]--(6.48,0.45) arc[start angle=270,end angle=360,radius=0.5]--(6.98,4.88);
+					\draw[gray!50!black,line width=0.5pt] (3.4,4.88) arc[start angle=180,end angle=360,x radius=1.79,y radius=0.22];
+					\fill[white,opacity=0.5] (3.78,1.1) rectangle (3.9,4.25);
+					% thành bình lớn, miệng có mỏ rót bên phải
+					\draw[gray!45!black,line width=0.6pt] (0.38,8.38)--(0.38,0.7) arc[start angle=180,end angle=270,radius=0.7]--(7.35,0) arc[start angle=270,end angle=360,radius=0.7]--(8.05,7.6) .. controls (8.12,7.95) and (8.3,8.2) .. (8.5,8.38);
+					\draw[gray!45!black,line width=0.6pt] (0.38,8.38) arc[start angle=180,end angle=360,x radius=4.06,y radius=0.42];
+					\fill[white,opacity=0.6] (0.6,0.9) rectangle (0.78,7.6);
+					\fill[white,opacity=0.4] (7.6,0.9) rectangle (7.72,7.2);
 				\end{tikzpicture}
 			\end{minipage}
 		\end{center}
@@ -432,55 +487,150 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[14.8\baselineskip]{23\baselineskip}
+	\NeedspaceCau[17.7\baselineskip]{25\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Khi chụp cộng hưởng từ (MRI), người bệnh không được mang các vật bằng kim loại vào phòng chụp. Từ trường thay đổi, làm xuất hiện dòng điện cảm ứng trong vòng dây kim loại. Dòng điện này có thể gây nóng, bỏng hoặc thậm chí hút chặt vật kim loại vào máy MRI với lực lớn, đe dọa nghiêm trọng đến sự an toàn của bệnh nhân.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.8,line join=round,line cap=round,font=\footnotesize]
-				% ảnh: máy MRI
-				\begin{scope}
-					\clip (0,0) rectangle (5.4,3.5);
-					\shade[top color=gray!6,bottom color=gray!18] (0,0.9) rectangle (5.4,3.5);
-					\shade[top color=VLxanh!12!gray!25,bottom color=VLxanh!8!gray!12] (0,0) rectangle (5.4,0.9);
-					\foreach \x in {1.2,2.6,4.0}{\draw[gray!25,thin] (\x,0.9)--(\x,3.5);}
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				% ảnh chụp phòng máy: tọa độ theo điểm ảnh của ảnh gốc (trục y hướng xuống)
+				\begin{scope}[x=0.0048cm,y=-0.0048cm]
+					\clip (95,70) rectangle (1480,990);
+					% tường ốp tấm, sàn
+					\shade[top color=QNtuong!70!white,bottom color=QNtuong!85!gray] (95,70) rectangle (1480,990);
+					\foreach \x in {205,465,660,825,935,1085,1265}{
+						\draw[QNtuong!55!gray,line width=0.35pt] (\x,70)--(\x,720);
+						\draw[white,line width=0.6pt] (\x+7,70)--(\x+7,720);}
+					\shade[top color=white,bottom color=QNtuong!80!gray] (1095,512)--(1245,536)--(1245,598)--(1095,572)--cycle;
+					\draw[QNtuong!45!gray,line width=0.3pt] (1095,572)--(1245,598);
+					\shade[top color=QNsan!75!white,bottom color=QNsan] (95,690) rectangle (1480,990);
 					% tủ thiết bị bên phải
-					\shade[left color=gray!12,right color=gray!30] (4.75,0.75) rectangle (5.4,3.1);
-					\foreach \y in {1.0,1.08,...,1.6,2.0,2.08,...,2.6}{\draw[gray!55,very thin] (4.85,\y)--(5.3,\y);}
-					% thân máy (gantry)
-					\fill[black,opacity=0.12] (1.4,0.72) ellipse (1.5 and 0.12);
-					\shade[left color=gray!38,right color=gray!20] (2.5,0.75)--(2.85,0.95)--(2.85,3.05)--(2.5,3.25)--cycle;
-					\shade[top color=white,bottom color=gray!32,rounded corners=10pt] (0.2,0.75) rectangle (2.55,3.25);
-					\draw[gray!55,thin,rounded corners=10pt] (0.2,0.75) rectangle (2.55,3.25);
-					\shade[inner color=white,outer color=gray!28] (1.35,2.05) circle (0.95);
-					\draw[gray!55,thin] (1.35,2.05) circle (0.95);
-					\shade[inner color=gray!70,outer color=gray!38] (1.35,2.05) circle (0.62);
-					\shade[inner color=gray!5,outer color=gray!25] (1.45,2.08) circle (0.5);
-					\fill[VLxanh!35!gray!60,rounded corners=1pt] (0.32,1.9) rectangle (0.5,2.35);
-					\fill[black!60,rounded corners=1pt] (2.12,2.3) rectangle (2.3,2.65);
-					\draw[black!70,line width=0.8pt] (1.35,3.0)--(1.33,2.75);
-					\foreach \x/\c in {1.1/VLdo,1.2/VLluc,1.3/VLxanh,1.4/VLdo}{\fill[\c!70] (\x,3.07) rectangle ++(0.06,0.04);}
-					\fill[gray!45] (0.2,0.75) rectangle (2.55,0.92);
-					% giường
-					\shade[left color=gray!30,right color=gray!15] (2.95,0.45) rectangle (4.25,1.12);
-					\foreach \y in {0.58,0.72,...,1.1}{\draw[gray!50,very thin] (3.0,\y)--(4.2,\y);}
-					\shade[top color=white,bottom color=gray!35] (1.3,1.58)--(4.6,1.27)--(4.65,1.12)--(1.35,1.42)--cycle;
-					\fill[VLxanh!45!gray!70] (2.1,1.42)--(4.6,1.19)--(4.62,1.13)--(2.12,1.36)--cycle;
-					% bệnh nhân
-					\shade[top color=yellow!25!gray!25,bottom color=yellow!35!gray!45,rounded corners=3pt] (1.7,1.52)--(3.5,1.42)--(3.55,1.7)--(1.75,1.82)--cycle;
-					\shade[top color=white,bottom color=gray!25,rounded corners=2pt] (3.45,1.4)--(4.25,1.32)--(4.3,1.57)--(3.5,1.68)--cycle;
-					\fill[white] (4.3,1.37) ellipse (0.08 and 0.17);
-					\shade[ball color=orange!30!white] (1.58,1.74) circle (0.14);
-					% bác sĩ
-					\shade[left color=gray!8,right color=gray!30] (3.15,1.6)--(3.3,2.6)--(3.85,2.6)--(3.95,1.6)--cycle;
-					\fill[gray!35] (3.35,1.6) rectangle (3.45,1.38) (3.65,1.6) rectangle (3.75,1.4);
-					\shade[ball color=orange!25!white] (3.6,2.8) circle (0.14);
-					\fill[black!75] (3.46,2.74) .. controls (3.4,2.98) and (3.62,3.04) .. (3.74,2.92) .. controls (3.7,2.86) and (3.6,2.88) .. (3.52,2.82) -- (3.5,2.68) -- cycle;
-					\draw[gray!40,line width=2.2pt] (3.35,2.45)--(2.95,2.25)--(2.4,2.45);
+					\shade[left color=QNtuong!75!gray,right color=QNtuong!45!gray] (1240,268)--(1480,278)--(1480,932)--(1240,850)--cycle;
+					\draw[gray!70,line width=0.3pt] (1240,850)--(1240,268)--(1480,278);
+					\draw[white,line width=0.5pt] (1246,275)--(1246,845);
+					\begin{scope}[line cap=butt]
+						\foreach \y in {322,336,...,462}{\draw[black!60,line width=0.55pt,dash pattern=on 0.5pt off 0.55pt] (1352,\y)--(1480,\y+4);}
+						\foreach \y in {612,626,...,752}{\draw[black!60,line width=0.55pt,dash pattern=on 0.5pt off 0.55pt] (1352,\y)--(1480,\y+6);}
+					\end{scope}
+					\draw[black!75,line width=1.3pt] (1300,870)--(1480,934);
+					% bóng dưới thân máy
+					\fill[black,opacity=0.14] (390,892) ellipse[x radius=300,y radius=22];
+					% vỏ máy phía sau (nhìn chếch từ bên trái)
+					\shade[left color=QNtuong!55!gray,right color=white] (97,860) .. controls (97,885) and (110,892) .. (135,890)--(660,880)--(700,500)--(725,116) .. controls (700,95) and (660,84) .. (610,82) .. controls (480,80) and (330,120) .. (225,185) .. controls (150,235) and (100,300) .. (97,400)--cycle;
+					\draw[gray!65,line width=0.3pt] (135,890) .. controls (110,892) and (97,885) .. (97,860)--(97,400) .. controls (100,300) and (150,235) .. (225,185) .. controls (330,120) and (480,80) .. (610,82) .. controls (660,84) and (700,95) .. (725,116);
+					\draw[gray!55,line width=0.3pt] (160,884)--(160,420) .. controls (163,330) and (200,270) .. (262,222);
+					\draw[white,line width=0.5pt] (167,880)--(167,420) .. controls (170,335) and (205,278) .. (266,230);
+					\draw[gray!45,line width=0.3pt] (205,300) .. controls (188,360) and (182,430) .. (184,520)--(184,700);
+					% khe thông gió trên vỏ máy
+					\fill[gray!60] (203,214)--(262,187)--(270,208)--(212,238)--cycle;
+					\fill[gray!60] (270,180)--(350,140)--(358,160)--(279,202)--cycle;
+					\draw[white,line width=0.3pt] (207,224)--(266,196) (274,190)--(354,149);
+					\fill[gray!55] (120,762)--(178,792)--(178,868)--(120,842)--cycle;
+					\foreach \k in {0,1,2,3}{\draw[white,line width=0.35pt] (124,778+18*\k)--(174,806+18*\k);}
+					\fill[black!55] (95,672) rectangle (104,716);
+					% mặt trước dạng vòng
+					\shade[left color=gray!40,right color=gray!14,middle color=gray!16] (607,445) ellipse[x radius=368,y radius=350];
+					\draw[gray!60,line width=0.3pt] (607,445) ellipse[x radius=368,y radius=350];
+					\draw[gray!75,line width=0.9pt] (607,445)++(168:368 and 350) arc[start angle=168,end angle=84,x radius=368,y radius=350];
+					\shade[top color=white,bottom color=gray!22,shading angle=40] (611,442) ellipse[x radius=346,y radius=330];
+					\draw[white,line width=0.9pt] (607,445)++(215:340 and 322) arc[start angle=215,end angle=300,x radius=340,y radius=322];
+					% phễu trong và lòng máy
+					\shade[top color=white,bottom color=gray!34,shading angle=35] (588,438) ellipse[x radius=250,y radius=252];
+					\draw[gray!35,line width=0.25pt] (588,438)++(60:250 and 252) arc[start angle=60,end angle=230,x radius=250,y radius=252];
+					\shade[left color=gray!42,right color=gray!12] (567,432) ellipse[x radius=127,y radius=130];
+					\draw[gray!65,line width=0.35pt] (567,432) ellipse[x radius=127,y radius=130];
+					\begin{scope}
+						\clip (567,432) ellipse[x radius=127,y radius=130];
+						\shade[top color=QNtuong!60!white,bottom color=QNtuong] (585,418) ellipse[x radius=92,y radius=108];
+						\draw[gray!45,line width=0.3pt] (585,418) ellipse[x radius=92,y radius=108];
+						\draw[gray!60,line width=0.5pt] (483,350)--(483,432) (494,345)--(494,436);
+						\draw[QNthep!80,line width=1.6pt] (567,432)++(-22:112 and 115) arc[start angle=-22,end angle=6,x radius=112,y radius=115];
+					\end{scope}
+					% đèn báo, khe laser định vị
+					\foreach \x/\c in {546/black!70,572/black!70,598/VLxanh!60!black,624/VLluc,650/black!70}{\fill[\c] (\x,151) rectangle ++(17,8);}
+					\fill[black!80] (600,184) .. controls (607,210) and (603,245) .. (591,268) .. controls (590,240) and (594,210) .. (600,184)--cycle;
+					% bảng điều khiển trái
+					\begin{scope}[shift={(292,362)},rotate=-8]
+						\shade[top color=gray!8,bottom color=QNtuong!60!gray,draw=gray!60,line width=0.3pt,rounded corners=3.2pt] (-36,-80) rectangle (36,80);
+						\fill[black!78,rounded corners=1pt] (-26,-70) rectangle (26,-28);
+						\fill[VLluc!35!black!60] (-20,-64) rectangle (20,-36);
+						\fill[QNthep!85,rounded corners=1.5pt] (-28,-4) rectangle (10,46);
+						\fill[QNthep!45] (-18,6) circle[radius=7] (-2,22) circle[radius=7] (-18,36) circle[radius=6];
+						\fill[gray!55] (-20,56) rectangle (-6,66) (2,56) rectangle (16,66);
+						\fill[QNthep!60] (16,-14) rectangle (28,30);
+					\end{scope}
+					% bảng điều khiển phải
+					\begin{scope}[shift={(893,325)},rotate=6]
+						\shade[top color=gray!10,bottom color=QNtuong!60!gray,draw=gray!60,line width=0.3pt,rounded corners=3pt] (-33,-66) rectangle (33,66);
+						\fill[black!75,rounded corners=1pt] (-26,-58) rectangle (26,-18);
+						\fill[QNthep!90,rounded corners=1.5pt] (-22,-6) rectangle (22,56);
+					\end{scope}
+					% dây cáp của bảng điều khiển
+					\draw[black!65,line width=1.1pt] (929,376) .. controls (940,420) and (926,470) .. (936,530);
+					% bác sĩ: áo blouse, tay, đầu
+					\shade[left color=white,right color=QNtuong!75!gray] (1016,258) .. controls (1050,256) and (1092,266) .. (1110,286) .. controls (1126,330) and (1128,420) .. (1120,500)--(1112,610)--(982,610) .. controls (986,520) and (978,440) .. (984,380)--(1000,292)--cycle;
+					\draw[gray!55,line width=0.3pt] (1016,258) .. controls (1050,256) and (1092,266) .. (1110,286) .. controls (1126,330) and (1128,420) .. (1120,500)--(1112,610) (982,610) .. controls (986,520) and (978,440) .. (984,386);
+					\fill[QNda!88!black] (1012,236)--(1040,236)--(1040,268)--(1028,300)--(1014,270)--cycle;
+					\fill[black!55] (1017,272)--(1026,276)--(1030,318)--(1024,318)--cycle;
+					\draw[gray!55,line width=0.3pt] (1012,262)--(1028,318)--(1034,610) (1042,262)--(1030,318);
+					\draw[gray!50,line width=0.3pt] (1098,296) .. controls (1092,380) and (1078,470) .. (1060,530) (1110,286) .. controls (1104,400) and (1100,470) .. (1092,536);
+					\shade[top color=QNda,bottom color=QNda!75!black] (1052,528) .. controls (1066,522) and (1086,526) .. (1090,540) .. controls (1092,560) and (1084,578) .. (1070,580) .. controls (1054,578) and (1046,552) .. (1052,528)--cycle;
+					\draw[gray!55,line width=5pt] (1004,300) .. controls (998,340) and (992,368) .. (982,384)--(940,354);
+					\draw[white,line width=4.3pt] (1004,300) .. controls (998,340) and (992,368) .. (982,384)--(940,354);
+					\shade[top color=QNda,bottom color=QNda!75!black] (936,340) .. controls (924,322) and (904,318) .. (900,332) .. controls (898,348) and (916,358) .. (934,356)--cycle;
+					\shade[left color=black!68,right color=black!88] (990,172) .. controls (994,136) and (1062,132) .. (1081,174) .. controls (1094,206) and (1090,242) .. (1072,256) .. controls (1056,262) and (1042,254) .. (1036,242)--(1020,200)--cycle;
+					\shade[left color=QNda!70!white,right color=QNda!92!black] (988,170) .. controls (983,182) and (981,190) .. (980,198)--(973,210)--(980,215)--(980,226) .. controls (981,238) and (989,244) .. (1000,245)--(1026,244) .. controls (1036,230) and (1040,212) .. (1036,194) .. controls (1024,178) and (1004,170) .. (988,170)--cycle;
+					\fill[black!80] (985,180) .. controls (990,158) and (1032,158) .. (1042,186) .. controls (1045,200) and (1044,214) .. (1040,224) .. controls (1036,204) and (1026,188) .. (1006,182) .. controls (998,180) and (990,180) .. (985,180)--cycle;
+					\fill[black!75] (992,203) ellipse[x radius=4,y radius=2.2];
+					\draw[black!60,line width=0.25pt] (986,197)--(997,196);
+					\draw[QNda!45!black,line width=0.3pt] (982,227)--(991,228);
+					% bệ bàn máy có gân
+					\shade[left color=gray!8,right color=gray!26] (648,630)--(648,905)--(742,990)--(1100,990)--(1100,860)--(900,700)--cycle;
+					\begin{scope}
+						\clip (648,630)--(648,905)--(742,990)--(1100,990)--(1100,860)--(900,700)--cycle;
+						\foreach \k in {0,...,9}{
+							\draw[gray!55,line width=0.35pt] (640,700+30*\k)--(1110,930+30*\k);
+							\draw[white,line width=0.5pt] (640,708+30*\k)--(1110,938+30*\k);}
+					\fill[black,opacity=0.13] (545,640)--(985,895)--(1100,900)--(1100,945)--(985,940)--(545,690)--cycle;
+					\end{scope}
+					\draw[gray!60,line width=0.3pt] (648,640)--(648,905)--(742,990);
+					\fill[black!72,rounded corners=1pt] (643,900)--(690,906)--(696,928)--(650,924)--cycle;
+					% thân bàn máy
+					\shade[top color=white,bottom color=gray!28] (528,546)--(1150,618) .. controls (1250,650) and (1350,690) .. (1390,720) .. controls (1408,750) and (1402,792) .. (1375,812)--(1110,896) .. controls (1070,916) and (1020,912) .. (985,895)--(545,640)--(530,596)--cycle;
+					\draw[gray!60,line width=0.3pt] (1150,618) .. controls (1250,650) and (1350,690) .. (1390,720) .. controls (1408,750) and (1402,792) .. (1375,812)--(1110,896) .. controls (1070,916) and (1020,912) .. (985,895)--(545,640);
+					\shade[top color=QNthep!75,bottom color=QNthep] (548,575) .. controls (700,640) and (880,720) .. (1000,758) .. controls (1065,780) and (1096,815) .. (1086,850) .. controls (1076,888) and (1030,895) .. (985,872) .. controls (850,800) and (680,690) .. (548,605)--cycle;
+					\draw[white,line width=0.5pt] (548,575) .. controls (700,640) and (880,720) .. (1000,758) .. controls (1065,780) and (1096,815) .. (1086,850);
+					% tấm nghiêng ở cuối bàn
+					\shade[top color=white,bottom color=gray!14] (1162,712)--(1228,676)--(1346,734)--(1312,772)--cycle;
+					\draw[black!60,line width=0.8pt] (1166,724)--(1310,778);
+					\draw[gray!45,line width=0.3pt] (1162,712)--(1228,676)--(1346,734);
+					% đệm nằm, gối kê chân
+					\shade[top color=gray!6,bottom color=QNtuong!50!gray] (530,548)--(880,642) .. controls (905,670) and (950,672) .. (1000,656) .. controls (1060,642) and (1110,656) .. (1150,632) .. controls (1130,600) and (1050,590) .. (975,598)--(870,560)--(560,490)--cycle;
+					\draw[gray!55,line width=0.3pt] (530,548)--(880,642) .. controls (905,670) and (950,672) .. (1000,656) .. controls (1060,642) and (1110,656) .. (1150,632);
+					\shade[top color=QNthep!55!gray!60,bottom color=QNthep!80!gray] (905,641) .. controls (940,612) and (1000,600) .. (1060,600) .. controls (1100,602) and (1140,615) .. (1148,631) .. controls (1110,652) and (1060,640) .. (1000,654) .. controls (960,664) and (925,663) .. (905,641)--cycle;
+					% bệnh nhân: gối đầu, đầu, áo, quần, tay, tất
+					\shade[top color=VLxanh!80,bottom color=VLxanh!80!black,rounded corners=1.5pt] (495,442) rectangle (554,518);
+					\fill[VLxanh!80!black,rounded corners=1pt] (652,419) rectangle (684,441);
+					\shade[top color=QNkaki!85!white,bottom color=QNkaki!78!black] (720,472)--(866,528)--(850,604)--(726,552)--cycle;
+					\draw[QNkaki!50!black,line width=0.3pt] (720,472)--(866,528) (850,604)--(726,552) (736,510)--(858,564);
+					\shade[top color=QNkaki!55!white,bottom color=QNkaki!90!black] (526,514) .. controls (528,482) and (552,462) .. (586,458) .. controls (630,452) and (680,458) .. (724,472)--(732,552) .. controls (700,548) and (660,542) .. (640,532)--(560,536)--cycle;
+					\draw[QNkaki!50!black,line width=0.3pt] (526,514) .. controls (528,482) and (552,462) .. (586,458) .. controls (630,452) and (680,458) .. (724,472)--(732,552) .. controls (700,548) and (660,542) .. (640,532);
+					\draw[QNkaki!50!black,line width=0.3pt] (598,470) .. controls (640,476) and (690,490) .. (722,506);
+					\fill[QNda!88!black] (556,446)--(590,452)--(586,466)--(556,464)--cycle;
+					\draw[QNda!70!black,line width=3.3pt] (540,522)--(600,542)--(634,552);
+					\draw[QNda,line width=2.7pt] (540,522)--(600,542)--(634,552);
+					\shade[top color=QNda,bottom color=QNda!75!black] (642,555) ellipse[x radius=15,y radius=8];
+					\shade[top color=QNkaki!60!white,bottom color=QNkaki!90!black] (522,518) .. controls (524,500) and (540,496) .. (556,502)--(562,530)--(536,532)--cycle;
+					\shade[left color=QNda!80!white,right color=QNda!88!black] (581,434) circle[radius=27];
+					\fill[gray!28] (556,424) .. controls (556,396) and (602,394) .. (608,424) .. controls (592,412) and (572,412) .. (556,424)--cycle;
+					\draw[QNda!55!black,line width=0.3pt] (570,434)--(578,435) (590,436)--(597,437);
+					\shade[left color=white,right color=gray!32,draw=gray!55,line width=0.3pt] (932,598) .. controls (926,560) and (938,516) .. (962,506) .. controls (990,500) and (1004,530) .. (1000,566) .. controls (996,594) and (960,606) .. (932,598)--cycle;
+					\shade[left color=white,right color=gray!32,draw=gray!55,line width=0.3pt] (848,606) .. controls (842,570) and (856,522) .. (884,508) .. controls (910,502) and (922,530) .. (918,570) .. controls (914,604) and (880,616) .. (848,606)--cycle;
+					\draw[gray!45,line width=0.3pt] (862,560) .. controls (876,548) and (896,548) .. (908,556) (942,554) .. controls (956,544) and (976,544) .. (990,552);
 				\end{scope}
-				\draw[gray!60] (0,0) rectangle (5.4,3.5);
+				\draw[gray!60] (95*0.0048,-70*0.0048) rectangle (1480*0.0048,-990*0.0048);
 				% từ trường và vòng dây
-				\begin{scope}[shift={(6.2,0.25)}]
+				\begin{scope}[shift={(7.944,-4.224)},scale=1.2]
 					\fill[VLxanh!8] (-0.2,-0.2) rectangle (3.0,3.0);
 					\foreach \i in {0,...,5}{\foreach \j in {0,...,5}{\VLcham{0.08+0.52*\i}{0.08+0.52*\j}}}
 					\draw[VLdong!85!black,line width=1.3pt] (1.38,1.38) circle (1.12);

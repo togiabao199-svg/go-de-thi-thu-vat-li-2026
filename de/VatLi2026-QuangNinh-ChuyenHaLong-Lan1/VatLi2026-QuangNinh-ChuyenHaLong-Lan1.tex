@@ -9,13 +9,203 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% Macro riêng của đề: hộp chữ nhật nhìn xiên (dùng trong scope có x, y (chiều sâu), z (chiều cao)):
-% \QNhop{x0}{x1}{d0}{d1}{h0}{h1}{màu}: vẽ mặt phải, mặt trên, mặt trước
-\newcommand{\QNhop}[7]{%
-	\colorlet{QNmau}{#7}%
-	\filldraw[fill=QNmau!75!black,draw=black!70,thin] (#2,#3,#5)--(#2,#4,#5)--(#2,#4,#6)--(#2,#3,#6)--cycle;
-	\filldraw[fill=QNmau!45,draw=black!70,thin] (#1,#3,#6)--(#2,#3,#6)--(#2,#4,#6)--(#1,#4,#6)--cycle;
-	\shadedraw[top color=QNmau!60,bottom color=QNmau!90!black,draw=black!70,thin] (#1,#3,#5)--(#2,#3,#5)--(#2,#3,#6)--(#1,#3,#6)--cycle;}
+% Macro riêng của đề (hình thực tiễn, vẽ theo toạ độ điểm ảnh của ảnh gốc)
+% kẹp giữ dây trên trụ giá (dùng trong \QNcanluctu, toạ độ điểm ảnh): phần sau dây \QNkepsau{x}{y}, phần trước dây \QNkeptruoc{x}{y}
+\newcommand{\QNkepsau}[2]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\draw[black!70,line width=0.9pt] (-8,-6)--(-17,-6);
+		\draw[black!85,line width=1.4pt] (-18,-14)--(-18,2);
+		\shadedraw[left color=gray!70,right color=gray!45,middle color=gray!10,draw=black!70,line width=0.3pt,rounded corners=0.8pt] (-9,-13) rectangle (9,3);
+	\end{scope}}
+\newcommand{\QNkeptruoc}[2]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\shadedraw[top color=gray!45,bottom color=gray!75,draw=black!75,line width=0.3pt] (9,-9.5) rectangle (13,-2);
+		\shadedraw[top color=white,bottom color=gray!50,draw=black!80,line width=0.35pt] (17,-6.2) ellipse (6.8 and 7.2);
+		\draw[black!70,line width=0.3pt] (17,-6.2) ellipse (3.2 and 3.5);
+		\draw[black!80,line width=0.5pt] (15.2,-8.3)--(18.8,-4.1);
+	\end{scope}}
+% BỘ THÍ NGHIỆM "CÂN DÒNG ĐIỆN" nhìn xiên: cân điện tử, nam châm chữ U (gông + hai bản cực) đặt trên đĩa cân,
+% đoạn dây dẫn căng giữa hai giá xuyên qua khe nam châm, mạch ngoài gồm biến trở, ampe kế, nguồn.
+% \QNcanluctu{x}{y}{tỉ lệ}: (x,y) góc trái dưới; tỉ lệ 1 thì rộng 7,4 cm, cao 3,9 cm (chưa kể nhãn).
+% Bản cực phía sau tô đỏ (N), bản phía trước tô xanh (S); nguồn: bản dài (cực dương) ở phía ampe kế.
+% Điểm neo nhãn: (QN-N), (QN-S) bản cực; (QN-namcham) mặt bản cực sau; (QN-can) mặt phím cân; (QN-ampe), (QN-nguon), (QN-bientro).
+\newcommand{\QNcanluctu}[3]{%
+	\colorlet{QNday}{VLdo!65!black}%
+	\colorlet{QNgong}{VLla!62}%
+	\begin{scope}[shift={(#1,#2)},x=#3*0.0135cm,y=-#3*0.0135cm]
+	\begin{scope}[shift={(-104,-313)}]
+		% bóng đổ
+		\fill[black,opacity=0.1] (399,153) ellipse (22 and 8);
+		\fill[black,opacity=0.1] (148,263) ellipse (25 and 8);
+		\fill[black,opacity=0.1] (172,186)--(352,302)--(482,250)--(488,258)--(356,313)--(166,196)--cycle;
+		% giá bên phải (sau cân)
+		\filldraw[fill=gray!55,draw=black!70,line width=0.3pt] (382,149)--(382,153) arc[start angle=180,end angle=0,x radius=17,y radius=6.5]--(416,149)--cycle;
+		\shadedraw[left color=gray!35,right color=gray!10,draw=black!70,line width=0.3pt] (399,149) ellipse (17 and 6.5);
+		\shadedraw[left color=gray!70,right color=gray!55,middle color=gray!6,draw=black!70,line width=0.3pt] (394,149)--(394,37) .. controls (394,30) and (404,30) .. (404,37)--(404,149)--cycle;
+		\QNkepsau{399}{72.6}
+		% thân cân: đế, mặt bên, mặt trên, mặt phím
+		\fill[black!72] (170,180)--(350,291)--(479,233)--(481,251)--(356,306)--(347,301)--(173,190)--cycle;
+		\shadedraw[top color=gray!10,bottom color=gray!52,draw=black!60,line width=0.3pt] (170,137)--(338,219) .. controls (346,223) and (350,230) .. (350,240)--(350,291)--(170,180)--cycle;
+		\shadedraw[left color=gray!10,right color=white,draw=black!60,line width=0.3pt] (170,137)--(285,91)--(450,176)--(341,222)--cycle;
+		\shadedraw[top color=white,bottom color=gray!20,draw=black!60,line width=0.3pt] (341,220.5)--(450,176)--(479,233)--(350,291)--(350,240) .. controls (350,230) and (347,224) .. (341,220.5)--cycle;
+		\draw[white,line width=0.8pt,opacity=0.8] (176,142)--(337,220.5);
+		% màn hình (để trống)
+		\filldraw[fill=black!78,draw=black,line width=0.3pt,rounded corners=0.8pt] (345,223.5)--(449,179.5)--(459,204)--(355,249.5)--cycle;
+		\shade[top color=VLla!20,bottom color=VLla!60] (348.2,224.9)--(447.6,182.8)--(455.8,202.6)--(356.4,246.2)--cycle;
+		\fill[white,opacity=0.35] (348.2,224.9)--(385,209.3)--(381,235.8)--(356.4,246.2)--cycle;
+		% phím bấm
+		\foreach \QNx/\QNy/\QNm in {367/263/VLluc,402/249/orange,436/235/orange,462/224/VLluc}{
+			\begin{scope}[shift={(\QNx,\QNy)}]
+				\filldraw[fill=\QNm!55!black,draw=black!75,line width=0.3pt,rounded corners=1.3pt] (-13.3,-1.2)--(6.9,-10)--(13.3,3.6)--(-6.9,12.4)--cycle;
+				\filldraw[fill=\QNm!85,draw=\QNm!45!black,line width=0.3pt,rounded corners=1.3pt] (-13.3,-2.4)--(6.9,-11.2)--(13.3,2.4)--(-6.9,11.2)--cycle;
+				\fill[white,opacity=0.35,rounded corners=0.8pt] (-10.5,-2.4)--(4.5,-9)--(6,-6)--(-9,0.6)--cycle;
+			\end{scope}}
+		% đĩa cân
+		\filldraw[fill=gray!42,draw=black!60,line width=0.3pt] (227,152)--(227,159) arc[start angle=180,end angle=0,x radius=79,y radius=37]--(385,152)--cycle;
+		\shadedraw[left color=gray!28,right color=gray!4,draw=black!60,line width=0.3pt] (306,152) ellipse (79 and 37);
+		\draw[black!22,line width=0.25pt] (306,152) ellipse (74 and 34);
+		% gông chữ U: đáy, vách sau
+		\fill[black,opacity=0.12] (232,154)--(304,194)--(388,160)--(384,152)--cycle;
+		\filldraw[fill=QNgong!80!black,draw=VLluc!45!black,line width=0.3pt] (228,150)--(300,190)--(300,193)--(228,153)--cycle;
+		\shadedraw[left color=QNgong!85,right color=QNgong!55,draw=VLluc!45!black,line width=0.3pt] (228,150)--(314,123)--(381,158)--(300,190)--cycle;
+		\shadedraw[top color=QNgong!95,bottom color=QNgong!70!black,draw=VLluc!45!black,line width=0.3pt] (228,100)--(313,74)--(314,123)--(228,150)--cycle;
+		% bản cực sau (N)
+		\filldraw[fill=VLdo!45!black,draw=black!80,line width=0.3pt] (228,100)--(312,74)--(320,78)--(236,104)--cycle;
+		\filldraw[fill=VLdo!70!black,draw=black!80,line width=0.3pt] (228,100)--(236,104)--(236,124)--(228,120)--cycle;
+		\shadedraw[top color=VLdo!70,bottom color=VLdo,draw=black!80,line width=0.3pt] (236,104)--(320,78)--(320,97)--(236,124)--cycle;
+		\draw[white,opacity=0.5,line width=0.5pt] (239,105.5)--(318,81);
+		% đoạn dây qua khe nam châm (nét đứt ở vùng giữa hai bản cực)
+		\draw[QNday,line width=1.7pt] (133,170.2)--(258,124.4) (322,100.9)--(410,68.6);
+		\draw[QNday,line width=1.7pt,dash pattern=on 2.6pt off 1.4pt,line cap=butt] (258,124.4)--(322,100.9);
+		\draw[QNday!45!white,line width=0.4pt] (133,169.4)--(256,124.2) (324,99.2)--(410,67.7);
+		% bản cực trước (S) và vách trước của gông
+		\filldraw[fill=VLxanh!80!black,draw=black!80,line width=0.3pt] (289,132)--(299,138)--(299,161)--(289,155)--cycle;
+		\shadedraw[left color=VLxanh!45,right color=VLxanh!75,draw=black!80,line width=0.3pt] (289,132)--(370,101)--(380,107)--(299,138)--cycle;
+		\shadedraw[top color=QNgong!55,bottom color=QNgong!95!black,draw=VLluc!45!black,line width=0.3pt] (300,138.4)--(381,107.4)--(381,158)--(300,190)--cycle;
+		\draw[VLluc!45!black,line width=0.7pt] (299.5,138.2)--(299.5,189.7);
+		\fill[white,opacity=0.3] (303,141)--(378,112)--(378,118)--(303,147.5)--cycle;
+		% giá bên trái
+		\filldraw[fill=gray!55,draw=black!70,line width=0.3pt] (126,254)--(126,260) arc[start angle=180,end angle=0,x radius=17,y radius=7]--(160,254)--cycle;
+		\shadedraw[left color=gray!35,right color=gray!10,draw=black!70,line width=0.3pt] (143,254) ellipse (17 and 7);
+		\shadedraw[left color=gray!70,right color=gray!55,middle color=gray!6,draw=black!70,line width=0.3pt] (138,254)--(138,133) .. controls (138,126) and (148,126) .. (148,133)--(148,254)--cycle;
+		\QNkepsau{143}{166.6}
+		\draw[QNday,line width=1.7pt] (131,171)--(150,164);
+		\QNkeptruoc{143}{166.6}
+		\QNkeptruoc{399}{72.6}
+		% dây nối mạch ngoài
+		\draw[QNday,line width=1.7pt] (133,170.2) .. controls (118,175.5) and (108,188) .. (110,201) .. controls (112,212) and (120,217) .. (130,223)--(170,249);
+		\draw[QNday,line width=1.7pt] (215,280) .. controls (240,297) and (265,307) .. (292,308) .. controls (315,309) and (335,302) .. (352,295)--(506,230.2);
+		\draw[QNday,line width=1.7pt] (543,214.6)--(564,205.8);
+		\draw[QNday,line width=1.7pt] (575,201.2)--(628,179) .. controls (643,173) and (650,165) .. (647,155) .. controls (645,147) and (638,142) .. (630,138)--(505,80) .. controls (485,70.5) and (465,65.5) .. (450,65) .. controls (435,64.5) and (422,64.5) .. (410,68.6);
+		\draw[QNday!45!white,line width=0.4pt] (131.5,169.8) .. controls (118,174.5) and (107,187) .. (109,200.5);
+		\draw[QNday!45!white,line width=0.4pt] (575.5,200.2)--(627.5,178.2) (630.5,137.2)--(505.5,79.2) .. controls (485,69.7) and (465,64.7) .. (450,64.2) .. controls (435,63.7) and (422,63.7) .. (410,67.7);
+		\draw[QNday!45!white,line width=0.4pt] (352,294.2)--(505,229.6);
+		% biến trở
+		\filldraw[fill=white,draw=black!85,line width=0.4pt] (170,238)--(215,270)--(215,291)--(170,259)--cycle;
+		\draw[black,line width=0.5pt,-{Stealth[length=3.6pt,width=2.8pt]}] (179,281)--(208,247);
+		% ampe kế
+		\filldraw[fill=white,draw=black!85,line width=0.5pt] plot[domain=0:360,samples=41,smooth cycle] ({524+7.9*cos(\x)+16.1*sin(\x)},{222-23.7*cos(\x)+5.4*sin(\x)});
+		\node[inner sep=0pt] at (524,222) {A};
+		% nguồn điện: bản dài (cực dương) phía ampe kế, bản ngắn (cực âm)
+		\draw[black!85,line width=0.6pt,line cap=butt] (564,168)--(564,238);
+		\draw[black!85,line width=1.5pt,line cap=butt] (575.3,187)--(575.3,216);
+		% điểm neo nhãn
+		\coordinate (QN-N) at (229,109);
+		\coordinate (QN-S) at (298,148);
+		\coordinate (QN-namcham) at (272,101);
+		\coordinate (QN-can) at (422,245);
+		\coordinate (QN-ampe) at (524,246);
+		\coordinate (QN-nguon) at (569,238);
+		\coordinate (QN-bientro) at (192,283);
+	\end{scope}
+	\end{scope}}
+% KHINH KHÍ CẦU nhìn từ dưới lên (như ảnh chụp, cắt trong khung): túi khí nhiều múi, vành miệng túi, lòng túi,
+% ngọn lửa đầu đốt phụt vào miệng túi, khung đầu đốt, giỏ chở người. \QNkhinhkhicau{x}{y}{tỉ lệ}: (x,y) góc trái dưới khung; tỉ lệ 1 thì khung 4,15 x 4,2 cm.
+\newcommand{\QNkhinhkhicau}[3]{%
+	\colorlet{QNmA}{VLdo!88!black}% múi sẫm
+	\colorlet{QNmB}{yellow!78!orange}% múi sáng
+	\colorlet{QNmC}{VLdo!42!black}% múi rất sẫm
+	\colorlet{QNmD}{yellow!55!white}% múi sáng nhất
+	\begin{scope}[shift={(#1,#2)},x=#3*0.0141cm,y=-#3*0.0141cm]
+	\begin{scope}[shift={(-6,-304)}]
+		\begin{scope}
+			\clip[rounded corners=1.5pt] (6,6) rectangle (300,304);
+			\shade[top color=VLxanh!14,bottom color=VLxanh!3] (0,0) rectangle (306,310);
+			% túi khí
+			\begin{scope}
+				\clip (-10,-10)--(320,-10)--(320,80)--(300,97)--(280,115)--(250,145)--(220,170)--(198,190)--(178,206) .. controls (176,209) and (172,210) .. (168,210)--(137,210) .. controls (132,210) and (129,208) .. (126,205)--(90,178)--(50,148)--(20,125)--(5,114)--(-10,103)--cycle;
+				\fill[QNmA] (-10,70.6)--(70,148)--(60,220)--(-10,220)--cycle;
+				\fill[QNmC] (-10,53)--(85,141)--(70,148)--(-10,70.6)--cycle;
+				\fill[QNmA] (-10,21)--(95,140)--(85,141)--(-10,53)--cycle;
+				\fill[QNmC] (-10,21)--(-10,-10)--(19.5,-10)--(110,137)--(95,140)--cycle;
+				\fill[QNmB] (19.5,-10)--(65,-10)--(125,134)--(110,137)--cycle;
+				\fill[QNmA] (65,-10)--(114.3,-10)--(141,135)--(125,134)--cycle;
+				\fill[QNmC] (114.3,-10)--(155.6,-10)--(158.5,135)--(141,135)--cycle;
+				\fill[QNmA!80!black] (155.6,-10)--(203.4,-10)--(175,135)--(158.5,135)--cycle;
+				\fill[QNmB] (203.4,-10)--(252.6,-10)--(191,137)--(175,135)--cycle;
+				\fill[QNmA] (252.6,-10)--(293.2,-10)--(203,140)--(191,137)--cycle;
+				\fill[QNmD] (293.2,-10)--(335,-10)--(212,141)--(203,140)--cycle;
+				\fill[QNmA] (335,-10)--(335,20)--(320,34)--(215,142)--(212,141)--cycle;
+				\fill[QNmC] (320,34)--(320,61)--(222,144)--(215,142)--cycle;
+				\fill[QNmB] (320,61)--(320,200)--(240,200)--(222,144)--cycle;
+				% đường may ngang giữa các tấm vải
+				\foreach \QNa/\QNb in {118/80,150/110,186/144,226/182,270/224}{\draw[black,opacity=0.22,line width=0.3pt] (153,160) ellipse[x radius=\QNa,y radius=\QNb];}
+				\draw[black,opacity=0.35,line width=0.25pt] (19.5,-10)--(110,137) (65,-10)--(125,134) (114.3,-10)--(141,135) (155.6,-10)--(158.5,135) (203.4,-10)--(175,135) (252.6,-10)--(191,137) (293.2,-10)--(203,140) (335,-10)--(212,141) (320,34)--(215,142) (320,61)--(222,144) (-10,21)--(95,140) (-10,53)--(85,141) (-10,70.6)--(70,148);
+				\draw[white,opacity=0.55,line width=0.5pt,dash pattern=on 0.5pt off 1.3pt] (116,-10)--(136.5,105);
+				% vành đai quanh miệng túi
+				\shade[left color=orange!70!black,right color=orange!90!yellow!85!black,draw=black!60,line width=0.3pt] (153,160) ellipse (88 and 54);
+				\draw[black,opacity=0.45,line width=0.3pt] (153,160) ellipse (88 and 54);
+				\foreach \QNt in {12,36,60,82,100,120,144,168,196,222,250,270,290,318,344}{\draw[black,opacity=0.3,line width=0.25pt] ({153+88*cos(\QNt)},{160-54*sin(\QNt)})--({152+58*cos(\QNt)},{168-30*sin(\QNt)});}
+				% khối sáng tối của cả túi (sáng từ bên phải)
+				\shade[left color=black,right color=white,opacity=0.3] (-10,-10) rectangle (320,220);
+				% lòng túi nhìn qua miệng
+				\fill[black!88] (152,168) ellipse (58 and 30);
+				\begin{scope}
+					\clip (152,168) ellipse (58 and 30);
+					\fill[QNmB!50!black] (150,140)--(88,160)--(96,186)--cycle;
+					\fill[QNmA!55!black] (150,140)--(96,186)--(116,198)--cycle;
+					\fill[QNmB!42!black] (150,140)--(116,198)--(140,202)--cycle;
+					\fill[QNmA!45!black] (152,140)--(140,202)--(166,202)--cycle;
+					\fill[QNmB!42!black] (154,140)--(166,202)--(188,197)--cycle;
+					\fill[QNmA!55!black] (154,140)--(188,197)--(206,184)--cycle;
+					\fill[QNmB!50!black] (154,140)--(206,184)--(214,162)--cycle;
+					\fill[black,opacity=0.42,even odd rule] (80,130) rectangle (224,205) (152,183) ellipse (61 and 31);
+					\fill[black,opacity=0.3,even odd rule] (80,130) rectangle (224,205) (152,176) ellipse (60 and 31);
+				\end{scope}
+				\draw[black!85,line width=0.5pt] (152,168) ellipse (58 and 30);
+				\draw[orange!45!white,opacity=0.8,line width=0.6pt] (208.5,174.7) arc[start angle=13,end angle=167,x radius=58,y radius=30];
+			\end{scope}
+			% ngọn lửa đầu đốt
+			\shade[bottom color=VLdo,top color=orange!90!yellow] plot[smooth cycle,tension=0.55] coordinates {(153,207) (148.5,197) (145.5,187) (140.5,178) (143.5,170) (137.5,163) (140.5,155) (137.5,148) (143,146) (145.5,140) (150,136.5) (155,139) (160,143) (159,150) (164.5,156) (160.5,163) (163.5,172) (158.5,180) (157.5,190) (156,199)};
+			\fill[yellow!85!orange] plot[smooth cycle,tension=0.55] coordinates {(153,203) (150.5,195) (148.5,186) (144.5,178) (147,170.5) (142.5,163) (145,156) (143,150.5) (147,149) (149,143.5) (151,141) (154,143.5) (156.5,148) (156,153) (160,157.5) (157,163) (159.5,171) (155.5,179) (155,189) (154.5,197)};
+			\fill[yellow!25!white] plot[smooth cycle,tension=0.55] coordinates {(153,199) (151.5,190) (150.5,182) (148.5,175) (150.5,168) (148,162) (150,156) (151.5,150) (154,156) (153.5,162) (156,168) (153.5,176) (154,186) (154,194)};
+			% khung đầu đốt
+			\draw[black!75,line width=0.5pt] (131,208)--(134,212) (174,208)--(172,212) (140,209)--(142,212) (166,209)--(165,212);
+			\shadedraw[top color=gray!30,bottom color=gray!70,draw=black!80,line width=0.3pt] (132,210.5) rectangle (174,214);
+			\filldraw[fill=black!78,draw=black,line width=0.3pt,rounded corners=0.5pt] (141,204) rectangle (151,216) (156,204) rectangle (166,216);
+			\fill[gray!55] (142.5,205) rectangle (144.5,215) (157.5,205) rectangle (159.5,215);
+			% người trong giỏ
+			\foreach \QNx/\QNy in {141/229,158.5/231,176/227.5}{
+				\fill[black!72] (\QNx-7,\QNy+14) .. controls (\QNx-7,\QNy+5) and (\QNx-4,\QNy+4) .. (\QNx,\QNy+4) .. controls (\QNx+4,\QNy+4) and (\QNx+7,\QNy+5) .. (\QNx+7,\QNy+14)--cycle;
+				\fill[black!70] (\QNx,\QNy) circle (4.6);
+				\fill[white,opacity=0.22] (\QNx+1.4,\QNy-1.4) circle (1.7);}
+			% cột khung giỏ
+			\draw[black!85,line width=1.1pt] (134,213)--(125.5,241) (172.5,213)--(182,235);
+			\draw[black!85,line width=0.9pt] (144,214.5)--(139,240) (163,214.5)--(168.5,236);
+			% giỏ mây: mặt đáy, mặt trước, vành, băng rôn
+			\filldraw[fill=VLgo!30!black,draw=black!85,line width=0.3pt] (119,271)--(189,270)--(190.5,280)--(134,285.5)--cycle;
+			\shadedraw[top color=VLgo!75!black,bottom color=VLgo!45!black,draw=black!85,line width=0.3pt] (121,240.5)--(184,233)--(189,270)--(119,271)--cycle;
+			\draw[VLgo!25!black,line width=0.25pt] (120.6,247)--(184.9,240) (120.2,253)--(185.8,246.5) (119.8,259)--(186.7,253) (119.5,265)--(187.8,260) (133,239)--(132,271) (146,237.5)--(146,270.8) (159,236)--(160,270.6) (172,234.4)--(174,270.3);
+			\filldraw[fill=VLgo!50!black,draw=black!85,line width=0.3pt,rounded corners=0.6pt] (119.5,238.5)--(185,230.8)--(185.5,235.3)--(120,243)--cycle;
+			\filldraw[fill=gray!12,draw=black!70,line width=0.25pt] (126.5,247.5)--(178,241.5)--(179,251.5)--(127.5,258)--cycle;
+			\draw[gray!70,line width=0.5pt] (131,251.3)--(174,246.4) (132,254.6)--(166,250.8);
+		\end{scope}
+		\draw[black!45,line width=0.3pt,rounded corners=1.5pt] (6,6) rectangle (300,304);
+		\coordinate (QN-ngonlua) at (160,160);
+		\coordinate (QN-gio) at (186,255);
+		\coordinate (QN-tuikhi) at (240,60);
+	\end{scope}
+	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT CHUYÊN HẠ LONG -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -349,58 +539,18 @@
 		\end{minipage}\hfill
 		\begin{minipage}[t]{0.43\linewidth}
 			\centering
-			\begin{tikzpicture}[scale=0.8,baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
-				\colorlet{QNday}{VLdo!65!black}
-				\begin{scope}[x={(1cm,0cm)},y={(0.9cm,0.6cm)},z={(0cm,1cm)}]
-					% bóng đổ, cân điện tử
-					\fill[gray!18] (1.0,-0.15,0)--(5.45,-0.15,0)--(5.45,1.15,0)--(1.0,1.15,0)--cycle;
-					\QNhop{1.2}{5.2}{0}{1}{0}{0.8}{gray!40}
-					\fill[gray!65] (1.2,0,0)--(5.2,0,0)--(5.2,0,0.1)--(1.2,0,0.1)--cycle;
-					% đĩa cân
-					\filldraw[fill=gray!45,draw=black!60,thin] plot[domain=0:360,samples=48] ({3.1+0.95*cos(\x)},{0.5+0.45*sin(\x)},0.8);
-					\filldraw[fill=gray!12,draw=black!60,thin] plot[domain=0:360,samples=48] ({3.1+0.95*cos(\x)},{0.5+0.45*sin(\x)},0.88);
-					% nam châm chữ U: đế, cực N (sau)
-					\QNhop{2.5}{3.8}{0.2}{0.8}{0.88}{1.1}{gray!35}
-					\QNhop{2.5}{3.8}{0.7}{0.8}{1.1}{1.95}{VLdo}
-					% giá đỡ hai bên
-					\foreach \gx in {0.3,7.0}{
-						\filldraw[fill=gray!55,draw=black!70,thin] plot[domain=0:360,samples=32] ({\gx+0.32*cos(\x)},{0.5+0.3*sin(\x)},0);
-						\shadedraw[left color=gray!30,right color=gray!70,draw=black!70,thin] (\gx-0.04,0.5,0)--(\gx+0.04,0.5,0)--(\gx+0.04,0.5,2.35)--(\gx-0.04,0.5,2.35)--cycle;
-						\filldraw[fill=gray!60,draw=black!70,thin] (\gx-0.09,0.5,1.48)--(\gx+0.09,0.5,1.48)--(\gx+0.09,0.5,1.68)--(\gx-0.09,0.5,1.68)--cycle;}
-					% đoạn dây qua nam châm
-					\draw[QNday,line width=1.7pt] (0.3,0.5,1.55)--(7.0,0.5,1.55);
-					% cực S (trước)
-					\QNhop{2.5}{3.8}{0.2}{0.3}{1.1}{1.9}{VLxanh}
-					\draw[QNday!60!white,densely dashed,line width=1.1pt] (2.27,0.5,1.55)--(3.58,0.5,1.55);
-					\coordinate (CucN) at (3.8,0.8,1.85);
-					\coordinate (CucS) at (3.15,0.2,1.35);
-					\coordinate (NamCham) at (2.55,0.25,1.88);
-					\coordinate (Can) at (4.0,0,0.2);
-				\end{scope}
-				\node[white,font=\footnotesize\bfseries] at (CucS) {S};
-				\draw[thin] (CucN)--++(0.35,0.25) node[right,inner sep=1pt] {N};
-				% màn hình, nút bấm của cân
-				\VLmanhinh{4.25}{0.55}{1.4}{0.26}{}
-				\foreach \bx/\bc in {1.95/VLluc,2.4/orange,2.85/orange,3.3/VLluc}{\filldraw[fill=\bc!80,draw=black!70,thin,rounded corners=1pt] (\bx-0.16,0.2) rectangle (\bx+0.16,0.4);}
-				% dây nối bên ngoài
-				\draw[QNday,line width=1.7pt] (0.75,1.85) .. controls (0.1,1.85) and (-0.35,1.5) .. (-0.35,0.9)--(-0.35,0) .. controls (-0.35,-0.45) and (-0.05,-0.6) .. (0.45,-0.6)--(7.7,-0.6) .. controls (8.15,-0.6) and (8.4,-0.35) .. (8.4,0.1)--(8.4,1.2) .. controls (8.4,1.65) and (8.05,1.85) .. (7.45,1.85);
-				% biến trở
-				\filldraw[fill=white,draw=black,thin] (1.3,-0.72) rectangle (1.95,-0.48);
-				\draw[VLmui,thin] (1.35,-0.9)--(1.95,-0.28);
-				% ampe kế
-				\filldraw[fill=white,draw=black,thin] (5.6,-0.6) circle (0.24);
-				\node at (5.6,-0.6) {A};
-				% nguồn (bản dài: cực dương)
-				\fill[white] (6.62,-0.75) rectangle (6.75,-0.45);
-				\draw[thick] (6.62,-0.88)--(6.62,-0.32);
-				\draw[very thick] (6.76,-0.74)--(6.76,-0.46);
-				% chú thích
-				\draw[thin] (NamCham)--(1.6,2.65) node[above,inner sep=1pt] {Nam châm chữ U};
-				\draw[thin] (Can)--(4.6,-1.15) node[below,inner sep=1pt] {Cân điện tử};
+			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
+				\QNcanluctu{0}{0}{0.955}
+				\draw[black!80,line width=0.4pt] (QN-N)--++(-0.24,0.12) node[left,inner sep=1pt] {N};
+				\draw[black!80,line width=0.4pt] (QN-S)--++(0.3,-0.14) node[right,inner sep=1pt] {S};
+				\draw[black!80,line width=0.4pt,-{Stealth[length=3.6pt,width=2.8pt]}] ($(QN-namcham)+(-0.95,0.62)$)--(QN-namcham);
+				\node[above,inner sep=1.5pt] at ($(QN-namcham)+(-0.98,0.62)$) {Nam châm chữ U};
+				\draw[black!80,line width=0.4pt,-{Stealth[length=3.6pt,width=2.8pt]}] ($(QN-can)+(0.5,-0.92)$)--(QN-can);
+				\node[below,inner sep=1.5pt] at ($(QN-can)+(0.9,-0.92)$) {Cân điện tử};
 			\end{tikzpicture}
 		\end{minipage}
 		\par
-		\NeedspaceBang{11\baselineskip}%
+		\NeedspaceBang{10.9\baselineskip}%
 		\choiceTFt
 		{Số chỉ của cân là độ lớn của lực từ tác dụng lên đoạn dây dẫn}
 		{\True Lực từ tác dụng lên nam châm có phương thẳng đứng và có chiều hướng lên trên}
@@ -421,34 +571,13 @@
 	\NeedspaceCau[11.3\baselineskip]{22.9\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
 		% giuhinh
-		\begin{minipage}[t]{0.7\linewidth}
+		\begin{minipage}[t]{0.68\linewidth}
 			Một chiếc khinh khí cầu gồm khoang chứa hàng nặng $300$~kg và phần khí cầu hình cầu chứa thể tích $V=3000~\text{m}^3$ không khí. Trên khí cầu có một lỗ thông hơi và không khí ở trong khí cầu được làm nóng bằng một ngọn lửa (hình bên). Coi thể tích phần vỏ khí cầu luôn không đổi và không khí lí tưởng có khối lượng mol là $M=29$~g/mol. Để khinh khí cầu bay lên, người ta làm không khí bên trong khinh khí cầu nóng lên, một phần khí thoát ra ngoài qua lỗ thông hơi, khi đó khí cầu nhẹ hơn. Biết ở mặt đất, áp suất và khối lượng riêng của không khí lần lượt là $p_0=1{,}013\cdot 10^5$~Pa và $D_0=1{,}23~\text{kg/m}^3$. Lấy $g=9{,}8~\text{m/s}^2$. Bỏ qua khối lượng vỏ khí cầu và thể tích của khoang hàng.
 		\end{minipage}\hfill
-		\begin{minipage}[t]{0.2\linewidth}
+		\begin{minipage}[t]{0.22\linewidth}
 			\centering
-			\begin{tikzpicture}[scale=0.82,baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
-				% túi khí: các múi xen màu
-				\begin{scope}
-					\clip (-0.62,1.0) .. controls (-1.2,1.35) and (-1.75,2.05) .. (-1.75,2.85) .. controls (-1.75,3.7) and (-0.95,4.15) .. (0,4.15) .. controls (0.95,4.15) and (1.75,3.7) .. (1.75,2.85) .. controls (1.75,2.05) and (1.2,1.35) .. (0.62,1.0)--cycle;
-					\foreach \a/\b/\c in {-1/-0.75/VLdo!80,-0.75/-0.5/yellow!75!orange,-0.5/-0.25/VLdo!80,-0.25/0/yellow!75!orange,0/0.25/VLdo!80,0.25/0.5/yellow!75!orange,0.5/0.75/VLdo!80,0.75/1/yellow!75!orange}{
-						\fill[\c] ({\a*0.62},1.0) .. controls ({\a*1.2},1.35) and ({\a*1.75},2.05) .. ({\a*1.75},2.85) .. controls ({\a*1.75},3.7) and ({\a*0.95},4.15) .. (0,4.15) .. controls ({\b*0.95},4.15) and ({\b*1.75},3.7) .. ({\b*1.75},2.85) .. controls ({\b*1.75},2.05) and ({\b*1.2},1.35) .. ({\b*0.62},1.0)--cycle;}
-					% dải viền dưới túi
-					\fill[black,opacity=0.25] (-1.75,1.0) rectangle (1.75,1.55);
-					% khối sáng tối
-					\shade[left color=black,right color=black,middle color=white,opacity=0.3] (-1.8,1.0) rectangle (1.8,4.2);
-					\fill[white,opacity=0.25] (-0.9,3.5) ellipse (0.35 and 0.18);
-				\end{scope}
-				\draw[black!70,thin] (-0.62,1.0) .. controls (-1.2,1.35) and (-1.75,2.05) .. (-1.75,2.85) .. controls (-1.75,3.7) and (-0.95,4.15) .. (0,4.15) .. controls (0.95,4.15) and (1.75,3.7) .. (1.75,2.85) .. controls (1.75,2.05) and (1.2,1.35) .. (0.62,1.0);
-				% miệng túi và ngọn lửa
-				\filldraw[fill=black!80,draw=black!70,thin] (0,1.0) ellipse (0.62 and 0.2);
-				\VLngonlua{0}{0.62}{1.05}
-				% dây treo, đầu đốt, giỏ
-				\draw[black!75,thin] (-0.58,0.94)--(-0.3,0.15) (0.58,0.94)--(0.3,0.15) (-0.25,0.86)--(-0.15,0.15) (0.25,0.86)--(0.15,0.15);
-				\filldraw[fill=gray!60,draw=black!70,thin] (-0.12,0.52) rectangle (0.12,0.64);
-				\shadedraw[top color=VLgo!80!black,bottom color=VLgo!50!black,draw=black!70,thin] (-0.36,-0.42)--(0.36,-0.42)--(0.4,0.15)--(-0.4,0.15)--cycle;
-				\fill[VLgo!40!black] (-0.42,0.1) rectangle (0.42,0.2);
-				\draw[VLgo!35!black,very thin] (-0.38,-0.15)--(0.38,-0.15);
-				\fill[gray!25] (0,-0.47) ellipse (0.35 and 0.05);
+			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
+				\QNkhinhkhicau{0}{0}{0.94}
 			\end{tikzpicture}
 		\end{minipage}
 		\par
@@ -599,7 +728,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{3.6\baselineskip}
+	\NeedspaceCau{3.9\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
 		\label{QuangNinh-ChuyenHaLong-Lan1-III2}
 		Công mà khí thực hiện được trong quá trình có độ lớn là bao nhiêu kJ (\textit{làm tròn kết quả đến chữ số hàng phần trăm})?

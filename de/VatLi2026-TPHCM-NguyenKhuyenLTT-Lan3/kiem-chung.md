@@ -46,3 +46,22 @@
 - Hình thực tiễn (I.5 tàu ngầm, I.16 thí nghiệm Rutherford, II.1 ấm đun, II.4 đèn lắc tay, III.2 tàu phá băng) vẽ khối, `\shade`, gắn `% giuhinh`; chờ phiên vẽ lại chi tiết. III.2: bỏ chữ tên hãng trên thân tàu. I.16: bỏ hai nét chỉ ngoài khung của ảnh gốc.
 - II.4: nam châm không ghi cực nên tô xám.
 - Dàn trang: hình I.4, I.5, I.8, I.13, I.16 đặt bên phải phương án (`minipage`) như bản gốc; I.13, I.16 đặt bên để bản lời giải không trống quá 1/3 trang.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ lại 5 hình thực tiễn (các câu `% giuhinh`), toạ độ lấy theo điểm ảnh của ảnh gốc nhúng trong PDF (`x=...cm,y=-...cm`); 5 sơ đồ, đồ thị còn lại (I.4, I.8, I.13, I.18, III.4) giữ nguyên. Ảnh so dựng lại cho cả 10 hình (ảnh trang 400 dpi, vùng cắt như mục Hình ở trên).
+
+- I.5 (`02-cau-I-5.png`, 4,6 × 3,3 cm): tàu ngầm chụp từ trên cao — thân tàu chéo từ góc trái trên xuống phải dưới (boong xám, mạn tối, mũi tròn), tháp chỉ huy có cột ăng-ten và các đốm sáng, hai vòng tròn trắng trên boong, cánh lái ngang, bọt trắng sau đuôi và hai bên mạn, sóng cuộn quanh mũi, mặt biển lăn tăn (cụm vệt sáng ngẫu nhiên, hạt giống cố định).
+- I.16 (`05-cau-I-16.png`, 6,1 × 4,3 cm): thí nghiệm Rutherford — màn huỳnh quang dạng vành trụ hở (mặt trong, mặt ngoài tô chuyển màu lam), lá vàng trong mờ, chùm hạt α tới qua khe hẹp và 6 tia tán xạ (4 tia đi tiếp, 2 tia bật ngược), chớp sáng trên màn, tấm khe hẹp, khối hộp nguồn phát; chùm tia tô lam như ảnh gốc (bản cũ tô đỏ). Vẫn bỏ hai nét chỉ không có chữ ở mép trên ảnh gốc.
+- II.1 (`07-cau-II-1.png`, 13,8 × 3,1 cm): ấm đun theo đúng hình bóng ảnh gốc (thân nón cụt, vòi, nắp nón có núm, quai chữ C, đế tiếp điện), tô khối bóng; bảng thông số và hai ô số chỉ cân giữ nguyên chữ, số như bản trước. Đối chiếu ảnh gốc phóng to: Model ND08; 0,8 lít; 1200 W; 220V – 50 Hz; 12 tháng; 528g; 355g — khớp hoàn toàn với hình TikZ.
+- II.4 (`08-cau-II-4.png`, 13,0 × 3,6 cm): đèn lắc tay — vỏ nhựa trong có đầu đèn loe, hai vành kính, công tắc; bộ phận phát sáng nét chấm; lõi mạch điện nâu đỏ có vân quấn; hai đệm cao su (đệm phải hai bậc); nam châm xám sần (không ghi cực nên không tô cực); cuộn dây đồng 14 vòng nhìn chếch; mũi tên quãng dịch chuyển và 7 nhãn như ảnh gốc.
+- III.2 (`09-cau-III-2.png`, 7,0 × 4,0 cm): tàu phá băng — thân lam đậm có vạch trắng, các hàng cửa sổ, xuồng cứu sinh cam, hốc neo, băng tuyết bám phần dưới thân; ống khói đen có vòng tròn trắng; nhà chứa và cần cẩu phía đuôi; thượng tầng trắng, đài chỉ huy có dải kính, vòm ra-đa, cột ra-đa, ăng-ten; boong mũi; trời, mặt băng, bóng tàu, băng vỡ quanh mũi. Vẫn bỏ chữ tên hãng trên thân tàu.
+
+Macro, màu riêng khai báo trong file đề: màu `NKlam`, `NKsang`, `NKdam` (I.16), `NKmach` (II.4); `\NKtrungang{x0}{x1}{yc}{ry}{rx}{màu trên}{màu giữa}{màu dưới}{màu mặt đầu}` — khối trụ nằm ngang nhìn chếch từ bên phải (II.4).
+
+Chưa ưng:
+- I.5: mặt biển là hoạ tiết ngẫu nhiên nên chỉ gợi được vẻ loang lổ của ảnh chụp, không giống từng mảng sóng; hình chỉ rộng 4,6 cm vì nằm trong cột 0,34 `\linewidth` cạnh phương án và trang 1 bản đề chỉ còn trống 0,3 cm.
+- III.2: hình rộng 7,0 cm (khoảng 0,43 `\linewidth`), chưa tới 0,55 `\linewidth` vì bản lời giải đang vừa khít 9 trang (trang cuối trống 0,1 cm); thượng tầng vẽ gọn hơn ảnh (ít tầng, ít lan can).
+- I.16: thu còn 6,1 cm (từ 6,6 cm) để bản lời giải giữ 9 trang.
+
+Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT; trang 3 trống 11,5 cm ngay trước tiêu đề Phần II, được miễn), bản lời giải 9 trang.

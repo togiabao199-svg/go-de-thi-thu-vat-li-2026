@@ -44,3 +44,21 @@
 - I.7, I.8 thêm nhãn "Hình 1" … "Hình 4" dưới từng hình (hình gốc chỉ xếp theo thứ tự). I.8: proton đỏ, neutron xám đen, electron xanh.
 - II.1: nam châm rotato tô N đỏ, S xanh; dây quấn trên cực stato đỏ; hình đặt cạnh lời dẫn để dàn trang ĐẠT.
 - III.4: ⊗ I / ⊙ I tô màu dòng điện (đỏ); kim la bàn lệch 60° so với hướng Tây như hình gốc.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ lại cả 7 hình thực tiễn (các câu `% giuhinh`), dò theo ảnh gốc cắt ở 300 dpi (tọa độ TikZ lấy theo điểm ảnh của ảnh gốc, trục y hướng xuống). Sơ đồ, đồ thị (I.7, I.8, I.12, I.14, I.18, II.1, III.2) giữ nguyên. Không đổi lời đề, đáp án, lời giải; `dan_trang.py` ghi lại `\NeedspaceCau` của 6 câu. Bản đề 8 trang (ĐẠT), bản lời giải 11 trang.
+
+- **I.4** (`01-cau-I-4.png`): vẽ lại toàn cảnh đúng bố cục ảnh — cảnh sát nhìn từ phía sau (mũ bảo hiểm vàng có chữ CSGT, lỗ thoáng, vành và quai mũ, khẩu trang, cổ áo, áo kaki, cầu vai, phù hiệu tay áo, cẳng tay), bàn tay nắm báng súng (bốn ngón ôm báng, ngón cái), súng bắn tốc độ (hộp ống kính, thân máy, khối ngắm phía trên, báng có vân), mặt đường có bóng cây và vạch sơn, bó vỉa sơn trắng – xanh, dải phân cách sọc đỏ trắng, hàng cây, nhà mái trắng, xe buýt và hai xe máy phía xa, tán cây góc trái, mây. Rộng 6,4 cm (hình cũ 4,6 cm).
+- **I.10** (`04-cau-I-10.png`): nồi áp suất nhìn chếch từ trên như ảnh — thân bầu inox có vệt phản chiếu đen, vành nồi, nắp vồng có gờ tròn, núm nắp nhựa đen cổ kim loại, van báo áp suất, quai trái ốp kim loại có đai đen, tay cầm phải hai tầng có nút gạt và ke màu đồng.
+- **I.13** (`06-cau-I-13.png`): ly cocktail miệng rộng đáy nón (hình cũ là ly bầu tròn), khói cuộn trên miệng ly, tràn xuống bên trái và phủ mặt bàn, làn khói mỏng bên phải; nền đen. Macro `\LTVkhoi`.
+- **II.3** (`10-cau-II-3.png`): bàn tay ấn vẽ theo dáng ảnh gốc (thay `\VLtayan`), đĩa ấn, cán, pit-tông đen, bình thủy tinh thành dày có gờ miệng, kiềng mặt lưới hai chân choãi, đèn đốt có ống đốt, đế, núm van và ống dẫn như ảnh gốc (thay `\VLdencon`).
+- **II.4** (`11-cau-II-4.png`): ảnh bình phun — tay cầm cong có rãnh ngón tay và cò bóp, núm tay bơm, cần bơm, cổ bơm có khía, nắp đen, vòi có núm vặn khía, van xả bên vai, thân nhựa trong (xilanh bơm, gioăng pit-tông, ống hút mềm bên trong), đế đen có gân. Sơ đồ cắt vẽ lại sát gốc: vòm bình, thành bình nét đôi, mặt nước gợn sóng, thành ống gạch chéo ở nửa trên, hai chốt bản lề, van k₁ (cuối ống trong) và k₂ (đáy xilanh), cán và tay cầm bơm, áp kế có vạch và cung đỏ, ống dẫn nước nét đôi, khóa k, tia phun. Nhãn cỡ `\footnotesize` (trước là `\scriptsize`).
+- **III.3** (`13-cau-III-3.png`): chậu thủy tinh thành dày có vành miệng, khối thủy ngân có vệt sáng – tối, mặt thoáng elip, ống thủy tinh đầu tròn với cột thủy ngân và phần trống phía trên, mũi tên áp suất khí quyển tô chuyển màu, kích thước h, bốn nhãn như hình gốc.
+- **III.4** (`14-cau-III-4.png`): ảnh bộ thí nghiệm — hộp đế nhựa trắng bo góc, vòng nhựa trong và cuộn dây đồng, la bàn (thân đen, mặt số có vạch chia, kim đỏ – xanh như hình cũ), giá đỡ đen, hai núm kim loại có khía (macro `\LTVnumkl`), hai phích cắm đen dây đen bên phải, hai phích cắm đen dây xám bên trái. Sơ đồ la bàn bên phải giữ nguyên (chỉ dời sang phải 0,3 cm).
+
+Lưu ý:
+
+- II.3: lời đề ghi "ngọn lửa đèn cồn" nhưng hình gốc vẽ đèn đốt có ống dẫn (kiểu đèn khí); hình vẽ lại theo hình gốc. Không ảnh hưởng đáp án.
+- II.4: trong sơ đồ gốc, mũi tên "Pit-tông" chỉ vào đoạn ống thành gạch chéo (nửa trên), mũi tên "Xilanh" chỉ vào đoạn ống dưới; hình vẽ lại giữ đúng như vậy (hình cũ vẽ pit-tông là một cán có đầu nằm trong ống gạch chéo suốt chiều dài). Không ảnh hưởng đáp án.
+- Hình chưa thật ưng: I.10 (thân và nắp inox tô chuyển màu còn phẳng hơn ảnh chụp, nắp trông vồng hơn ảnh); I.4 (hậu cảnh cây, mây, nhà ở mức cách điệu vì ảnh gốc mờ).

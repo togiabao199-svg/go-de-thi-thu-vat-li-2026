@@ -13,6 +13,97 @@
 \newcommand{\LSnhan}[3]{\draw[#1,semithick,fill=white] (#2,#3) circle (0.13) ++(-0.092,-0.092)--++(0.184,0.184) (#2,#3)++(-0.092,0.092)--++(0.184,-0.184);}
 % đĩa cân (nhìn ngang), móc treo ở (x,y), câu III.1: \LSdiacan{x}{y}
 \newcommand{\LSdiacan}[2]{\filldraw[fill=gray!15,draw=black,thick] (#1,#2)--(#1-0.78,#2-0.4)--(#1-0.56,#2-0.62)--(#1+0.56,#2-0.62)--(#1+0.78,#2-0.4)--cycle;}
+% bình tích áp của máy lọc nước (mặt cắt dọc): vỏ thép, bóng chứa nước (màng cao su đỏ, phía trên), bóng chứa khí (phía dưới, có hai van nhỏ),
+% đáy cao su, hai chân đế, cổ bình có đai ốc, ống nước ra (ống đứng), ống nối ngang tới rơ le áp suất (hộp xanh, hai đầu ống nước vào).
+% Gọi: \LSbinhtichap{x}{y}{tỉ lệ}; gốc (x,y) là điểm giữa đáy bình; khi tỉ lệ 1: thân rộng 3,4, cao 3,78, cả ống cao 4,57, chân thấp hơn đáy 0,17.
+% Macro không in chữ; nhãn gắn qua các toạ độ: (LSbt-nuoc) giữa bóng nước, (LSbt-khi) giữa bóng khí, (LSbt-ra) mép trái ống nước ra,
+% (LSbt-vao) đầu ống nước vào, (LSbt-role) điểm trên hộp rơ le.
+% Ví dụ: \LSbinhtichap{0}{0}{1} \node at (LSbt-nuoc) {Bóng chứa nước};
+\newcommand{\LSbinhtichap}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3,shift={(-1.7,0)}]
+		% bóng đổ, hai chân đế
+		\fill[black,opacity=0.1] (1.7,-0.2) ellipse (1.45 and 0.06);
+		\foreach \LSx/\LSw/\LSd in {0.91/0.2/-0.24,2.1/0.3/-0.3}{
+			\shade[left color=gray!70,right color=gray!60,middle color=gray!15] (\LSx-\LSw,0.3) .. controls (\LSx-\LSw,\LSd) and (\LSx+\LSw,\LSd) .. (\LSx+\LSw,0.3)--cycle;
+			\draw[black!80,line width=0.8pt] (\LSx-\LSw,0.3) .. controls (\LSx-\LSw,\LSd) and (\LSx+\LSw,\LSd) .. (\LSx+\LSw,0.3);}
+		% nền trong bình
+		\fill[white] (0,0.5)--(0,3.3) .. controls (0,3.48) and (0.08,3.54) .. (0.25,3.58) .. controls (0.7,3.7) and (1.2,3.78) .. (1.56,3.78)--(1.84,3.78) .. controls (2.2,3.78) and (2.7,3.7) .. (3.15,3.58) .. controls (3.32,3.54) and (3.4,3.48) .. (3.4,3.3)--(3.4,0.5) .. controls (3.38,0.2) and (2.5,0) .. (1.7,0) .. controls (0.9,0) and (0.02,0.2) .. (0,0.5)--cycle;
+		% đáy cao su (hai lớp)
+		\fill[VLdo!22] (0,0.66)--(0,0.5) .. controls (0.02,0.2) and (0.9,0) .. (1.7,0) .. controls (2.5,0) and (3.38,0.2) .. (3.4,0.5)--(3.4,0.66)--(3.3,0.66)--(3.3,0.52) .. controls (3.27,0.3) and (2.45,0.11) .. (1.7,0.11) .. controls (0.95,0.11) and (0.13,0.3) .. (0.1,0.52)--(0.1,0.66)--cycle;
+		\draw[VLdo!75!black,line width=0.7pt] (3.3,0.66)--(3.3,0.52) .. controls (3.27,0.3) and (2.45,0.11) .. (1.7,0.11) .. controls (0.95,0.11) and (0.13,0.3) .. (0.1,0.52)--(0.1,0.66);
+		% bóng chứa nước
+		\shade[top color=VLxanh!9,bottom color=VLxanh!30] (0.08,1.19)--(0.08,3.27) .. controls (0.08,3.42) and (0.14,3.47) .. (0.29,3.51) .. controls (0.72,3.62) and (1.22,3.7) .. (1.58,3.7)--(1.82,3.7) .. controls (2.18,3.7) and (2.68,3.62) .. (3.11,3.51) .. controls (3.26,3.47) and (3.32,3.42) .. (3.32,3.27)--(3.32,1.19) .. controls (2.9,1.11) and (2.3,1.095) .. (1.7,1.095) .. controls (1.1,1.095) and (0.5,1.11) .. (0.08,1.19)--cycle;
+		\fill[white,opacity=0.35] (0.2,1.35) .. controls (0.16,2.2) and (0.16,2.9) .. (0.22,3.3) .. controls (0.3,3.42) and (0.42,3.46) .. (0.5,3.47) .. controls (0.38,2.9) and (0.36,2.0) .. (0.42,1.33)--cycle;
+		\foreach \LSlw/\LSm in {1.5pt/VLdo!72!black,0.45pt/VLdo!35}{
+			\draw[\LSm,line width=\LSlw] (0.08,0.6)--(0.08,3.27) .. controls (0.08,3.42) and (0.14,3.47) .. (0.29,3.51) .. controls (0.72,3.62) and (1.22,3.7) .. (1.58,3.7)--(1.82,3.7) .. controls (2.18,3.7) and (2.68,3.62) .. (3.11,3.51) .. controls (3.26,3.47) and (3.32,3.42) .. (3.32,3.27)--(3.32,0.6);
+			\draw[\LSm,line width=\LSlw] (0.08,1.19) .. controls (0.5,1.11) and (1.1,1.095) .. (1.7,1.095) .. controls (2.3,1.095) and (2.9,1.11) .. (3.32,1.19);}
+		% bóng chứa khí
+		\shade[top color=white,bottom color=gray!12] (0.17,0.7) .. controls (0.17,0.92) and (0.26,1.035) .. (0.52,1.045)--(2.88,1.045) .. controls (3.14,1.035) and (3.23,0.92) .. (3.23,0.7)--(3.23,0.56) .. controls (3.19,0.37) and (2.45,0.18) .. (1.7,0.18) .. controls (0.95,0.18) and (0.21,0.37) .. (0.17,0.56)--cycle;
+		\draw[black!85,line width=0.9pt] (0.17,0.7) .. controls (0.17,0.92) and (0.26,1.035) .. (0.52,1.045)--(2.88,1.045) .. controls (3.14,1.035) and (3.23,0.92) .. (3.23,0.7)--(3.23,0.56) .. controls (3.19,0.37) and (2.45,0.18) .. (1.7,0.18) .. controls (0.95,0.18) and (0.21,0.37) .. (0.17,0.56)--cycle;
+		% hai van nhỏ của bóng khí
+		\foreach \LSx in {0.15,3.25}{
+			\draw[black!80,line width=0.5pt] (\LSx-0.02,0.5)--(\LSx-0.02,0.66) (\LSx+0.02,0.5)--(\LSx+0.02,0.66);
+			\filldraw[fill=white,draw=black!85,line width=0.55pt] (\LSx,0.72) circle (0.05);}
+		% vỏ thép (thành bên và vòm trên), đáy cao su ngoài
+		\draw[VLdo!75!black,line width=1.9pt] (0,0.62)--(0,0.5) .. controls (0.02,0.2) and (0.9,0) .. (1.7,0) .. controls (2.5,0) and (3.38,0.2) .. (3.4,0.5)--(3.4,0.62);
+		\foreach \LSlw/\LSm in {2pt/black!82,0.4pt/gray!55}{
+			\draw[\LSm,line width=\LSlw,line cap=butt] (0,0.6)--(0,3.3) .. controls (0,3.48) and (0.08,3.54) .. (0.25,3.58) .. controls (0.7,3.7) and (1.2,3.78) .. (1.56,3.78)--(1.84,3.78) .. controls (2.2,3.78) and (2.7,3.7) .. (3.15,3.58) .. controls (3.32,3.54) and (3.4,3.48) .. (3.4,3.3)--(3.4,0.6);}
+		% ống nước: cổ bình -> ống ngang tới rơ le; ống đứng (nước ra)
+		\foreach \LSlw/\LSm in {3.2pt/black!75,1.9pt/gray!22,0.5pt/white}{
+			\draw[\LSm,line width=\LSlw,line cap=butt,line join=miter] (1.7,3.8)--(1.7,4.2)--(2.25,4.2);
+			\draw[\LSm,line width=\LSlw,line cap=butt] (1.95,4.2)--(1.95,4.57);}
+		\draw[gray!22,line width=1.9pt,line cap=butt] (1.95,4.17)--(1.95,4.3);
+		% đai ốc cổ bình
+		\shade[left color=black!88,right color=black!80,middle color=gray!55] (1.58,3.76) rectangle (1.82,4.02);
+		\draw[black!90,line width=0.4pt] (1.58,3.76) rectangle (1.82,4.02);
+		% rơ le áp suất (hộp xanh), hai đầu ống nước vào
+		\foreach \LSy in {4.14,4.27}{\draw[black!70,line width=1.1pt,line cap=butt] (2.65,\LSy)--(2.86,\LSy);}
+		\fill[black!75] (2.38,3.95) rectangle (2.54,4.02);
+		\shade[top color=VLxanh!65,bottom color=VLxanh!90!black,rounded corners=2pt] (2.25,4.0) rectangle (2.67,4.4);
+		\draw[VLxanh!55!black,line width=0.5pt,rounded corners=2pt] (2.25,4.0) rectangle (2.67,4.4);
+		\fill[white,opacity=0.35,rounded corners=1pt] (2.29,4.29) rectangle (2.63,4.36);
+		% toạ độ gắn nhãn
+		\coordinate (LSbt-nuoc) at (1.7,2.75);
+		\coordinate (LSbt-khi) at (1.7,0.62);
+		\coordinate (LSbt-ra) at (1.86,4.48);
+		\coordinate (LSbt-vao) at (2.9,4.2);
+		\coordinate (LSbt-role) at (2.5,4.12);
+	\end{scope}}
+% khớp nối tròn của giá thí nghiệm (nhìn chính diện, có vít giữa), tâm (x,y), bán kính r: \LSkhop{x}{y}{r}
+\newcommand{\LSkhop}[3]{%
+	\shade[ball color=gray!55!black] (#1,#2) circle (#3);
+	\draw[black!90,line width=0.3pt] (#1,#2) circle (#3);
+	\shade[ball color=gray!35] (#1,#2) circle (0.45*#3);
+	\draw[black!80,line width=0.3pt] (#1-0.3*#3,#2-0.3*#3)--(#1+0.3*#3,#2+0.3*#3);}
+% đèn cồn thủy tinh (bầu thủy tinh trong, cồn bên trong, bấc, cổ sứ, ngọn lửa), tâm đáy (x,y): \LSdencon{x}{y}{tỉ lệ}
+% khi tỉ lệ 1: bầu rộng 1,04, đầu bấc ở (x; y+0,86), đỉnh ngọn lửa khoảng y+1,22
+\newcommand{\LSdencon}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		% đế thủy tinh
+		\shade[left color=gray!45,right color=gray!40,middle color=gray!8] (-0.36,0) rectangle (0.36,0.07);
+		\draw[gray!55!black,line width=0.35pt] (-0.36,0) rectangle (0.36,0.07);
+		% cồn trong bầu
+		\begin{scope}
+			\clip (-0.33,0.07) .. controls (-0.6,0.14) and (-0.58,0.44) .. (-0.3,0.54) .. controls (-0.17,0.59) and (-0.12,0.61) .. (-0.12,0.68)--(0.12,0.68) .. controls (0.12,0.61) and (0.17,0.59) .. (0.3,0.54) .. controls (0.58,0.44) and (0.6,0.14) .. (0.33,0.07)--cycle;
+			\fill[VLxanh!20!gray!8] (-0.6,0.05) rectangle (0.6,0.7);
+			\shade[top color=VLxanh!30!gray!22,bottom color=VLxanh!35!gray!42] (-0.6,0.05) rectangle (0.6,0.36);
+			\draw[VLxanh!30!gray!70,line width=0.3pt] (-0.6,0.36)--(0.6,0.36);
+			% bấc
+			\draw[gray!55!black,line width=1.3pt] (0,0.7)--(0,0.4) .. controls (0,0.2) and (0.1,0.14) .. (0.24,0.13);
+			\draw[white,line width=0.7pt] (0,0.7)--(0,0.4) .. controls (0,0.2) and (0.1,0.14) .. (0.24,0.13);
+			% vệt sáng trên bầu thủy tinh
+			\fill[white,opacity=0.75] (-0.42,0.2) .. controls (-0.44,0.32) and (-0.38,0.42) .. (-0.27,0.48) .. controls (-0.34,0.4) and (-0.37,0.3) .. (-0.36,0.2)--cycle;
+			\fill[white,opacity=0.5] (0.36,0.18) .. controls (0.4,0.28) and (0.38,0.38) .. (0.3,0.44) .. controls (0.33,0.36) and (0.34,0.27) .. (0.32,0.18)--cycle;
+		\end{scope}
+		\draw[gray!50!black,line width=0.5pt] (-0.33,0.07) .. controls (-0.6,0.14) and (-0.58,0.44) .. (-0.3,0.54) .. controls (-0.17,0.59) and (-0.12,0.61) .. (-0.12,0.68)--(0.12,0.68) .. controls (0.12,0.61) and (0.17,0.59) .. (0.3,0.54) .. controls (0.58,0.44) and (0.6,0.14) .. (0.33,0.07);
+		% cổ sứ, ống giữ bấc, đầu bấc
+		\shade[left color=gray!50,right color=gray!45,middle color=white] (-0.15,0.66) rectangle (0.15,0.76);
+		\draw[gray!50!black,line width=0.35pt,rounded corners=0.4pt] (-0.15,0.66) rectangle (0.15,0.76);
+		\shade[left color=gray!55,right color=gray!50,middle color=white] (-0.06,0.76) rectangle (0.06,0.83);
+		\draw[gray!50!black,line width=0.3pt] (-0.06,0.76) rectangle (0.06,0.83);
+		\fill[black!70] (-0.03,0.83) rectangle (0.03,0.88);
+		\VLngonlua{0}{0.85}{0.62}
+	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT LÀO CAI -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -170,19 +261,22 @@
 		\begin{center}
 			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
 				% lõi
-				\shade[top color=gray!8,bottom color=gray!35,draw=black,semithick] (0,1.0) rectangle (3.0,1.4);
+				\shade[top color=gray!30,bottom color=gray!42,middle color=gray!6] (0,1.0) rectangle (3.0,1.4);
+				\draw[black!80,semithick] (0,1.0) rectangle (3.0,1.4);
 				% dây nối, nguồn
 				\draw[semithick] (0.33,1.0)--(0.33,0)--(1.45,0) (1.58,0)--(2.75,0)--(2.75,1.0);
 				\draw[semithick] (1.45,-0.24)--(1.45,0.24);
 				\draw[line width=1.6pt] (1.56,-0.13)--(1.56,0.13);
 				\node[inner sep=1pt] at (1.33,-0.24) {$+$};
 				\node[inner sep=1pt] at (1.7,-0.24) {$-$};
-				% vòng dây: nét liền ở mặt trước, đi từ trên xuống
-				\begin{scope}[VLdong!70!black,thick]
+				% vòng dây: nét liền ở mặt trước, đi từ trên xuống; vòng cuối nối thẳng xuống dây dẫn bên phải
+				\foreach \lw/\mau in {1.3pt/VLdong!68!black,0.35pt/VLdong!45!white}{
 					\foreach \i in {0,...,6}{
 						\pgfmathsetmacro{\xt}{0.45+0.35*\i}
-						\draw (\xt-0.07,1.4) .. controls (\xt-0.08,1.58) and (\xt+0.06,1.58) .. (\xt+0.05,1.4) .. controls (\xt+0.1,1.25) and (\xt+0.17,1.1) .. (\xt+0.2,1.0) .. controls (\xt+0.22,0.86) and (\xt+0.31,0.86) .. (\xt+0.3,1.0);}
-				\end{scope}
+						\draw[\mau,line width=\lw] (\xt-0.07,1.4) .. controls (\xt-0.08,1.58) and (\xt+0.06,1.58) .. (\xt+0.05,1.4) .. controls (\xt+0.1,1.25) and (\xt+0.17,1.1) .. (\xt+0.2,1.0);}
+					\foreach \i in {0,...,5}{
+						\pgfmathsetmacro{\xt}{0.45+0.35*\i}
+						\draw[\mau,line width=\lw] (\xt+0.2,1.0) .. controls (\xt+0.22,0.86) and (\xt+0.31,0.86) .. (\xt+0.3,1.0);}}
 				% hệ trục quanh O
 				\draw[densely dotted,semithick] (3.35,1.2)--(5.45,1.2) (4.4,0.35)--(4.4,2.05);
 				\fill (4.4,1.2) circle (1.2pt);
@@ -392,7 +486,7 @@
 
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{24.7\baselineskip}
+	\NeedspaceCau{25.7\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-LaoCai-SoGD-Lan1-2]
@@ -405,41 +499,16 @@
 		\begin{minipage}[t]{0.41\linewidth}
 			\vspace{0pt}\centering
 
-			\begin{tikzpicture}[scale=0.72,line join=round,line cap=round,font=\footnotesize]
-				% tường
-				\fill[gray!18] (4.55,5.68)--(8.35,5.68)--(8.35,4.8)--(4.85,4.8)--(4.85,4.28)--(4.55,4.28)--cycle;
-				\fill[gray!18] (4.55,0.5)--(8.35,0.5)--(8.35,3.15)--(4.85,3.15)--(4.85,3.62)--(4.55,3.62)--cycle;
-				\draw[black!75] (4.55,5.68)--(8.35,5.68)--(8.35,4.8)--(4.85,4.8)--(4.85,4.28)--(4.55,4.28)--cycle;
-				\draw[black!75] (4.55,0.5)--(8.35,0.5)--(8.35,3.15)--(4.85,3.15)--(4.85,3.62)--(4.55,3.62)--cycle;
-				\node at (6.6,5.25) {tường};
-				% cửa
-				\shade[left color=gray!55,right color=gray!12,middle color=gray!8,draw=black!75,rounded corners=6pt] (4.35,3.38)--(0.2,3.38)--(0.2,4.62)--(4.35,4.62)[sharp corners]--(4.35,4.3)--(3.85,4.3)--(3.85,3.7)--(4.35,3.7)--cycle;
-				\node at (2.1,4.0) {cửa};
-				% lò xo
-				\foreach \y in {4.47,3.52}{\draw[black!70,decorate,decoration={coil,aspect=0.45,segment length=1.7pt,amplitude=2.6pt}] (4.87,\y)--(5.45,\y);}
-				% chốt sắt, tấm chặn
-				\shade[top color=gray!45,bottom color=gray!75,draw=black!75] (3.9,3.86)--(6.35,3.86)--(6.35,4.14)--(4.12,4.14)--cycle;
-				\shade[left color=gray!50,right color=gray!78,draw=black!75] (5.45,3.3) rectangle (5.65,4.66);
-				\draw[VLmui,thick] (5.82,4.47)--(6.32,4.47);
-				\draw[VLmui,thick] (5.82,3.52)--(6.32,3.52);
-				% cuộn dây (nét liền: nửa vòng phía trước; nét đứt: phía sau)
-				\begin{scope}[VLdong!65!black,thick]
-					\foreach \i in {0,...,5}{
-						\draw plot[domain=0:180,samples=20] ({6.62+0.22*\i+0.22*\x/360+0.1*sin(\x)},{3.83+0.47*cos(\x)});
-						\draw[densely dashed,semithick] plot[domain=180:360,samples=20] ({6.62+0.22*\i+0.22*\x/360+0.1*sin(\x)},{3.83+0.47*cos(\x)});}
-				\end{scope}
-				% mạch điện
-				\draw[black!80,thick] (6.62,4.3) .. controls (6.5,4.3) and (6.48,4.1) .. (6.48,3.9)--(6.48,1.5)--(6.9,1.5)--(7.2,1.78);
-				\draw[black!80,thick] (7.3,1.5)--(7.42,1.5) (7.6,1.5)--(7.98,1.5)--(7.98,3.9) .. controls (7.98,4.1) and (7.96,4.3) .. (7.94,4.3);
-				\draw[black!80,thick] (7.42,1.18)--(7.42,1.82);
-				\draw[black!80,line width=2pt] (7.58,1.34)--(7.58,1.66);
-				\node at (7.0,1.2) {S};
-				\node at (6.5,0.85) {khóa điều khiển};
-				% nhãn
-				\node (lx) at (3.5,5.1) {lò xo};
-				\draw[thin] (lx.east)--(5.05,4.58) (lx.east)--(5.05,3.64);
-				\node[left,inner sep=1.5pt] at (4.3,2.85) {chốt sắt};
-				\draw[thin] (4.3,2.85)--(4.45,3.86);
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				\VLkhoacuatu{0}{0}{0.75}
+				\node at (VLkc-tuong) {tường};
+				\node at (VLkc-cua) {cửa};
+				\node at (VLkc-S) {S};
+				\node at (VLkc-khoa) {khóa điều khiển};
+				\node[inner sep=1.5pt] (lx) at (2.55,3.95) {lò xo};
+				\draw[thin] (lx.east)--(VLkc-loxo1) (lx.east)--(VLkc-loxo2);
+				\node[left,inner sep=1.5pt] (cs) at (3.3,2.05) {chốt sắt};
+				\draw[thin] (cs.east)--(VLkc-chot);
 			\end{tikzpicture}
 		\end{minipage}
 		\NeedspaceBang{12.9\baselineskip}%
@@ -496,47 +565,70 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{20.5\baselineskip}
+	\NeedspaceCau{21.8\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Trong thí nghiệm đun nóng một mẫu gallium (Ga), một học sinh vẽ được đồ thị sự thay đổi nhiệt độ theo thời gian như hình vẽ.
 		% giuhinh
 		\begin{center}
 			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
 				% ===== bộ thí nghiệm
-				\begin{scope}[shift={(0,0)}]
-					% giá
-					\shade[top color=gray!45,bottom color=gray!80] (-0.25,0) rectangle (1.75,0.12);
-					\draw[gray!40!black,thin] (-0.25,0) rectangle (1.75,0.12);
-					\shade[left color=gray!75,right color=gray!55,middle color=gray!10] (-0.05,0.12) rectangle (0.05,3.85);
+				\begin{scope}[scale=1]
+					% đế, trụ giá
+					\fill[black,opacity=0.12] (0.95,-0.05) ellipse (1.1 and 0.05);
+					\fill[black!85,rounded corners=0.8pt] (0.02,-0.05) rectangle (0.3,0.03) (1.6,-0.05) rectangle (1.88,0.03);
+					\shade[top color=gray!60!black,bottom color=black!88,rounded corners=1.6pt] (-0.08,0) rectangle (1.98,0.17);
+					\draw[white,opacity=0.35,line width=0.5pt] (-0.02,0.14)--(1.92,0.14);
+					\shade[left color=black!80,right color=black!85,middle color=gray!45] (0.27,0.17) rectangle (0.39,4.6);
+					\fill[gray!50!black] (0.33,4.6) ellipse (0.06 and 0.02);
+					% tấm đỡ cốc, khớp có núm vặn
+					\shade[top color=gray!55!black,bottom color=black!88] (0.39,1.4) rectangle (1.86,1.47);
+					\draw[gray!65,line width=0.3pt] (0.45,1.465)--(1.84,1.465);
+					\fill[gray!55] (0.1,1.415) rectangle (0.27,1.455);
+					\shade[top color=gray!55!black,bottom color=black!90,rounded corners=1pt] (-0.04,1.32) rectangle (0.1,1.55);
+					\foreach \y in {1.36,1.41,...,1.52}{\draw[gray!55,line width=0.2pt] (-0.04,\y)--(0.1,\y);}
+					\LSkhop{0.33}{1.435}{0.12}
 					% đèn cồn
-					\begin{scope}[shift={(0.95,0.12)}]\VLdencon\end{scope}
-					% vòng đỡ cốc
-					\fill[gray!60!black] (-0.1,1.42) rectangle (0.1,1.6);
-					\shade[top color=gray!45,bottom color=gray!80] (0.1,1.47) rectangle (1.75,1.55);
+					\LSdencon{1.15}{0.17}{1}
+					% thanh treo nhiệt kế
+					\shade[top color=gray!55!black,bottom color=black!88,rounded corners=0.6pt] (0.02,4.165) rectangle (1.52,4.235);
+					\LSkhop{0.33}{4.2}{0.12}
+					\draw[black!65,line width=0.3pt] (1.15,4.165)--(1.15,4.03);
+					\draw[black!65,line width=0.3pt] (1.15,3.995) circle (0.035);
 					% cốc nước
-					\VLbinhthuytinh{0.4}{1.55}{1.1}{1.15}{0.85}
-					% ống nghiệm chứa gallium
-					\fill[white,opacity=0.75] (0.79,3.3)--(0.79,1.95) arc[start angle=180,end angle=360,radius=0.16]--(1.11,3.3)--cycle;
-					\shade[left color=gray!70,right color=gray!55,middle color=gray!15] (0.81,2.45)--(0.81,1.95) arc[start angle=180,end angle=360,radius=0.14]--(1.09,2.45)--cycle;
-					\draw[gray!60,thin] (0.95,2.45) ellipse (0.14 and 0.03);
-					\draw[black!70,semithick] (0.79,3.3)--(0.79,1.95) arc[start angle=180,end angle=360,radius=0.16]--(1.11,3.3);
-					\draw[black!70,semithick] (0.75,3.3)--(1.15,3.3);
-					% nhiệt kế
-					\VLnhietke{0.95}{2.0}{1.9}{0.7}
-					% tay kẹp ống nghiệm
-					\fill[gray!60!black] (-0.1,3.02) rectangle (0.1,3.2);
-					\shade[top color=gray!50,bottom color=gray!75,middle color=gray!10] (0.1,3.08) rectangle (0.78,3.14);
-					\fill[gray!60!black] (0.74,3.0) rectangle (0.82,3.22) (1.08,3.0) rectangle (1.16,3.22);
+					\VLbinhthuytinh{0.62}{1.47}{1.06}{1.14}{0.95}
+					% thanh kẹp ống nghiệm (phần sau ống)
+					\shade[top color=gray!55!black,bottom color=black!88,rounded corners=0.6pt] (0.02,3.065) rectangle (0.88,3.135);
+					\fill[black!70] (0.96,3.04) rectangle (1.34,3.16);
+					% ống nghiệm: lòng ống, gallium, nhiệt kế
+					\fill[white,opacity=0.72] (1.0,3.4)--(1.0,1.87) arc[start angle=180,end angle=360,radius=0.15]--(1.3,3.4)--cycle;
+					\fill[gray!30] (1.15,2.3) ellipse (0.13 and 0.03);
+					\VLnhietkett{1.15}{1.98}{1.98}{0.75}
+					\shade[left color=gray!78,right color=gray!70,middle color=gray!28,opacity=0.86] (1.02,2.3)--(1.02,1.87) arc[start angle=180,end angle=360,radius=0.13]--(1.28,2.3)--cycle;
+					\draw[gray!60!black,line width=0.3pt] (1.02,2.3) arc[start angle=180,end angle=360,x radius=0.13,y radius=0.03];
+					\fill[white,opacity=0.6] (1.045,1.95) rectangle (1.07,2.24);
+					\draw[gray!45!black,line width=0.5pt] (0.975,3.42) .. controls (0.99,3.41) and (1.0,3.39) .. (1.0,3.36)--(1.0,1.87) arc[start angle=180,end angle=360,radius=0.15]--(1.3,3.36) .. controls (1.3,3.39) and (1.31,3.41) .. (1.325,3.42);
+					\draw[gray!50!black,line width=0.3pt] (1.15,3.42) ellipse (0.175 and 0.025);
+					\fill[white,opacity=0.7] (1.03,2.72) rectangle (1.055,3.0);
+					% mặt nước và vành miệng cốc ở phía trước ống nghiệm
+					\draw[VLxanh!55!black,line width=0.3pt,opacity=0.9] (0.67,2.42) arc[start angle=180,end angle=360,x radius=0.48,y radius=0.045];
+					\shade[top color=gray!25,bottom color=gray!60,draw=gray!45!black,line width=0.4pt,rounded corners=0.8pt,opacity=0.82] (0.56,2.59) rectangle (1.74,2.7);
+					\draw[white,opacity=0.7,line width=0.5pt] (0.62,2.67)--(1.68,2.67);
+					% ngàm kẹp, vít kẹp
+					\foreach \x in {0.88,1.3}{
+						\shade[left color=gray!55!black,right color=black!90,rounded corners=0.8pt] (\x,2.96) rectangle (\x+0.12,3.24);
+						\fill[white,opacity=0.25] (\x+0.02,2.98) rectangle (\x+0.04,3.22);}
+					\foreach \x/\g in {0.94/118,1.36/62}{\draw[black!80,line width=0.5pt] (\x,3.24)--++(\g:0.13); \fill[black!80] ($(\x,3.24)+(\g:0.13)$) circle (0.022);}
+					\LSkhop{0.33}{3.1}{0.12}
 					% nhãn
-					\draw[thin] (1.0,3.6)--(1.6,3.6);
-					\node[right,inner sep=1pt] at (1.6,3.6) {Nhiệt kế};
-					\draw[thin] (1.04,2.3)--(1.6,2.75);
-					\node[right,inner sep=1pt] at (1.6,2.75) {Gallium};
-					\draw[thin] (1.35,1.95)--(1.6,2.1);
-					\node[right,inner sep=1pt] at (1.6,2.1) {nước};
+					\draw[thin] (1.25,3.72)--(1.75,3.8);
+					\node[right,inner sep=1pt] at (1.75,3.8) {Nhiệt kế};
+					\draw[thin] (1.2,2.12)--(1.9,2.72);
+					\node[right,inner sep=1pt] at (1.9,2.74) {Gallium};
+					\draw[thin] (1.5,1.82)--(1.9,1.92);
+					\node[right,inner sep=1pt] at (1.9,1.92) {nước};
 				\end{scope}
 				% ===== đồ thị
-				\begin{scope}[shift={(3.9,0.3)},x=0.08cm,y=0.032cm]
+				\begin{scope}[shift={(4.25,0.5)},x=0.085cm,y=0.036cm]
 					\draw[gray!55,thin] (0,0) grid[xstep=5,ystep=10] (50,90);
 					\draw[VLmui,thick] (0,0)--(55,0) node[right,inner sep=2pt] {$t$ (phút)};
 					\draw[VLmui,thick] (0,0)--(0,100) node[right,inner sep=2pt] {$t$ ($^\circ$C)};
@@ -563,40 +655,28 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[17.4\baselineskip]{27.2\baselineskip}
+	\NeedspaceCau[15.6\baselineskip]{25.4\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
-		Một bình tích áp được sử dụng trong máy lọc nước có hai phần: bóng chứa nước và bóng chứa khí như hình bên. Khi chưa chứa nước, bóng chứa khí chiếm toàn bộ thể tích trong bình là $18$ lít, áp suất $120$~kPa. Đường ống dẫn nước vào, ra bóng chứa nước có gắn rơ le áp suất điều khiển đóng mở mạch điện. Khi lượng nước trong bóng chứa nước tăng đến $12$ lít thì áp suất nước đạt cực đại, rơ le ngắt mạch, máy ngừng cung cấp nước vào bình. Khi lượng nước trong bình giảm còn $9$ lít, rơ le tự động đóng mạch để máy cung cấp nước trở lại. Coi nhiệt độ trong bóng chứa khí không đổi, các bóng mềm, tổng thể tích nước và khí trong bình bằng thể tích bình, mặt tiếp xúc của bóng chứa nước và chứa khí luôn có dạng phẳng.
-		\begin{center}
-			\begin{tikzpicture}[scale=0.897,line join=round,line cap=round,font=\footnotesize]
-				% chân đế
-				\foreach \x in {0.75,2.25}{\shade[top color=gray!40,bottom color=gray!75,draw=black!70] (\x-0.3,0.42) arc[start angle=180,end angle=360,x radius=0.3,y radius=0.16]--cycle;}
-				\fill[white] (0,0.75)--(0,3.1) .. controls (0,3.7) and (3,3.7) .. (3,3.1)--(3,0.75) .. controls (3,0.2) and (0,0.2) .. (0,0.75)--cycle;
-				% bóng chứa nước
-				\shade[top color=VLxanh!12,bottom color=VLxanh!28] (0.08,1.2)--(0.08,3.1) .. controls (0.08,3.62) and (2.92,3.62) .. (2.92,3.1)--(2.92,1.2)--cycle;
-				% bóng chứa khí
-				\filldraw[fill=white,draw=VLdo!75!black,semithick] (0.14,1.2)--(0.14,0.75) .. controls (0.14,0.42) and (2.86,0.42) .. (2.86,0.75)--(2.86,1.2);
-				\draw[VLdo!75!black,semithick] (0.08,1.2)--(2.92,1.2);
-				\fill[VLdo!75!black] (0.1,1.0) rectangle (0.18,1.3) (2.82,1.0) rectangle (2.9,1.3);
-				% vỏ bình
-				\draw[VLdo!75!black,line width=1.6pt] (0,0.75)--(0,3.1) .. controls (0,3.7) and (3,3.7) .. (3,3.1)--(3,0.75) .. controls (3,0.2) and (0,0.2) .. (0,0.75)--cycle;
-				\draw[VLdo!40,thin] (0.08,0.75)--(0.08,3.1) .. controls (0.08,3.6) and (2.92,3.6) .. (2.92,3.1)--(2.92,0.75) .. controls (2.92,0.3) and (0.08,0.3) .. (0.08,0.75);
-				\node at (1.5,2.7) {Bóng chứa nước};
-				\node at (1.5,0.82) {Bóng chứa khí};
-				% cổ bình, ống nước
-				\shade[left color=gray!55,right color=gray!35,middle color=gray!10,draw=black!70] (1.38,3.52) rectangle (1.62,3.85);
-				\shade[left color=gray!55,right color=gray!35,middle color=gray!10,draw=black!70] (1.42,3.85) rectangle (1.58,4.35);
-				\shade[top color=gray!15,bottom color=gray!50,draw=black!70] (1.58,4.0) rectangle (2.0,4.12);
-				\filldraw[fill=VLxanh!70,draw=black!70,rounded corners=1pt] (2.0,3.92) rectangle (2.3,4.2);
-				\draw[black!70,semithick] (2.3,4.02)--(2.42,4.02) (2.3,4.1)--(2.42,4.1);
-				% chú thích
-				\draw[VLmui,thin] (1.0,4.55)--(1.42,4.3);
-				\node[left,inner sep=1pt] at (1.05,4.58) {Ống nước ra};
-				\draw[VLmui,thin] (2.95,4.4)--(2.45,4.12);
-				\node[right,inner sep=1pt] at (2.9,4.45) {Ống nước vào};
-				\draw[thin] (2.25,3.95)--(2.65,3.75);
-				\node[right,inner sep=1pt] at (2.62,3.73) {Rơ le áp suất};
+		% giuhinh
+		\noindent\begin{minipage}[t]{0.535\linewidth}
+			Một bình tích áp được sử dụng trong máy lọc nước có hai phần: bóng chứa nước và bóng chứa khí như hình bên. Khi chưa chứa nước, bóng chứa khí chiếm toàn bộ thể tích trong bình là $18$ lít, áp suất $120$~kPa. Đường ống dẫn nước vào, ra bóng chứa nước có gắn rơ le áp suất điều khiển đóng mở mạch điện. Khi lượng nước trong bóng chứa nước tăng đến $12$ lít thì áp suất nước đạt cực đại, rơ le ngắt mạch, máy ngừng cung cấp nước vào bình. Khi lượng nước trong bình giảm còn $9$ lít, rơ le tự động đóng mạch để máy cung cấp nước trở lại. Coi nhiệt độ trong bóng chứa khí không đổi, các bóng mềm, tổng thể tích nước và khí trong bình bằng thể tích bình, mặt tiếp xúc của bóng chứa nước và chứa khí luôn có dạng phẳng.
+		\end{minipage}\hfill
+		\begin{minipage}[t]{0.385\linewidth}
+			\vspace{0pt}\centering
+
+			\begin{tikzpicture}[scale=1.1,line join=round,line cap=round,font=\footnotesize]
+				\LSbinhtichap{1.7}{0}{1}
+				\node at (LSbt-nuoc) {Bóng chứa nước};
+				\node at (LSbt-khi) {Bóng chứa khí};
+				\node[left,inner sep=1pt] at (1.3,4.1) {Ống nước ra};
+				\draw[VLmui,thin] (0.9,4.3)--(LSbt-ra);
+				\node[right,inner sep=1pt] at (2.3,4.72) {Ống nước vào};
+				\draw[VLmui,thin] (3.55,4.55)--(LSbt-vao);
+				\draw[thin] (LSbt-role)--(3.0,3.95);
+				\fill (LSbt-role) circle (0.9pt);
+				\node[right,inner sep=1pt] at (3.0,3.93) {Rơ le áp suất};
 			\end{tikzpicture}
-		\end{center}
+		\end{minipage}
 		\NeedspaceBang{10\baselineskip}%
 		\choiceTFt
 		{\True Khi nước được bơm vào bình, áp suất trong bóng khí tăng}

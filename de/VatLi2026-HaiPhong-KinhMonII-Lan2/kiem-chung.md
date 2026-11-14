@@ -44,3 +44,24 @@
 - Hình thực tiễn (II.1 bộ đo nhiệt dung riêng, II.2 cuộn dây – nam châm – điện kế, II.4 bộ thí nghiệm Boyle, III.1 mô hình máy phát điện, III.3 hạt thóc nảy mầm) vẽ khối, `\shade`, gắn `% giuhinh`; chờ phiên vẽ lại chi tiết.
 - III.5: hai đường đẳng nhiệt T₁, T₂ để cùng màu xám nét đứt (không tô màu gợi ý nhiệt độ nào cao hơn); đoạn (1) → (2) màu đỏ.
 - II.4: giữ số 23.5 °C trên màn hình cảm biến (dữ kiện dùng ở ý c)); áp kế không ghi số (bản gốc không có số).
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Ảnh gốc lấy từ ảnh nhúng trong PDF (`pdfimages`) và ảnh trang 400 dpi, phóng to từng bộ phận để đo toạ độ. Bản đề vẫn 7 trang (ĐẠT), bản lời giải 10 trang. Ảnh so dựng lại đủ 10 hình trong `so-hinh/`.
+
+- **II.1** (`03-cau-II-1.png`) — vẽ lại cả bộ dụng cụ theo đúng bố cục ảnh: cân điện tử (đĩa cân đen có bề dày, thân cân, bảng điều khiển có màn hình và hai nút bấm); biến thế nguồn (mặt trên, quai xách, vít, biển tam giác, dòng chữ thông số vẽ bằng vạch, chữ "AC/DC POWER SUPPLY", cọc và phích cắm đỏ / đen, đèn báo, hai nút bấm, núm xoay có vạch chia không ghi số, chân đế); oát kế (màn hình để trống, bốn phích cắm, dây nối); nhiệt lượng kế màu vàng chanh có nắp, khối đầu nối và dây điện trở trên nắp; nhiệt kế điện tử cắm nghiêng (màn hình để trống). Rộng 12,6 cm.
+- **II.2** (`04-cau-II-2.png`) — cuộn dây 6 vòng lệch tâm như ảnh (nửa phải vẽ trước, bị nam châm che; nửa trái vẽ sau), nam châm thẳng có khối (N đỏ, S xanh), hai dây nối xuống M và xuống đáy rồi vòng sang điện kế, điện kế dạng hộp kim loại trên đế xanh xám, mặt thang đo nửa tròn có vạch chia, chữ mA, kim lệch phải, hai cọc nối. GIỮ NGUYÊN: thứ tự che khuất của các nửa vòng dây, cực N quay vào cuộn dây, đầu dây bên phải nối M, đầu dây bên trái nối xuống dây đáy tới cọc phải của G.
+- **II.4** (`06-cau-II-4.png`) — vẽ lại theo đúng tỉ lệ hình gốc: áp kế có viền, vạch chia lớn / nhỏ, kim chỉ lệch trái, chữ bar (không ghi số); ống dẫn khí hai nét từ áp kế xuống thành trái xilanh; que đo và đầu nối cảm biến nhiệt độ, dây dẫn, màn hình hiển thị số bảy đoạn 23.5 °C (dữ kiện ý c); xilanh có thang chia, khí tô `VLxanh!10`, pit-tông, cán pit-tông có ba khớp nối, giá đỡ, tay quay, khối chặn, đế gỗ. Chữ nhãn cỡ `\footnotesize` (trước là `\scriptsize`).
+- **III.1** (`07-cau-III-1.png`) — dựng lại hai cực nam châm đúng hình khối và góc nhìn của ảnh (mặt trước, mặt trên, mặt lõm hình trụ của cực N; cực S có hai mỏm cực, mặt bên bo góc), khung dây chữ nhật màu đồng bị cực S che một phần, trục quay nét đứt, hai vành khuyên dày nhìn xiên (macro `\KMvanhkhuyen`), dây nối khung – vành, hai chổi quét, nhãn chữ nghiêng đậm. Hai `minipage` đổi thành 0,50 + 0,39 `\linewidth`.
+- **III.3** (`08-cau-III-3.png`) — ảnh hạt thóc nảy mầm: hạt thóc hình thoi bầu có gân (macro `\KMhatthoc`), hai lớp sáng – tối, mầm / rễ trắng uốn lượn (macro `\KMmam`), sinh ngẫu nhiên với hạt giống cố định. Cỡ 3,2 × 2,7 cm.
+
+Sửa nhỏ ở hình không thuộc nhóm thực tiễn (đều không ảnh hưởng đáp án):
+
+- **III.1**: mũi tên "Chiều quay" bản trước vẽ ngược chiều kim đồng hồ; hình gốc là cùng chiều kim đồng hồ (đầu mũi tên ở phía trên bên trái, hướng lên) → vẽ theo hình gốc. Câu chỉ hỏi tốc độ quay.
+- **III.6** (`10-cau-III-6.png`): thêm đầu mũi tên ở hai dây dẫn mềm tại C (hướng vào C) và D (hướng ra) như hình gốc (chiều dòng điện từ C đến D), tô màu dòng điện `VLdo`. Câu chỉ hỏi độ lớn dòng điện.
+
+Đối chiếu chiều quấn dây II.2 (phóng to ảnh gốc 535 × 336 px, xét từng kênh màu): trong vùng nam châm (mặt trước và mặt trên) không có vệt dây nào đè lên, tức nam châm che nửa bên phải của các vòng dây ⇒ nửa phải là nửa sau, nửa trái là nửa trước; đầu dây bên trái đi ra từ vòng ngoài cùng bên trái, đầu dây bên phải (nối M) đi ra từ vòng ngoài cùng bên phải. Cách đọc của bản gõ trước khớp ảnh gốc; với cách đọc này dòng điện cảm ứng ở mạch ngoài chạy từ N đến M (ý b Sai) như lời giải hiện có. Điểm còn lại vẫn là ý đồ người ra đề (mục "Điểm cần thầy xem").
+
+Hình chưa ưng: II.1 phải thu còn 12,6 cm (để 14,5 cm thì bản lời giải thành 11 trang) nên chữ "AC/DC POWER SUPPLY" rất nhỏ (3 pt); các dòng chữ nhỏ khác trên mặt máy chỉ vẽ bằng vạch vì ảnh gốc không đọc được.
+
+Macro riêng trong file đề: `\KMvanhkhuyen{x}{y}`, `\KMhatthoc{x}{y}{góc}{độ sáng}`, `\KMmam{x}{y}{hướng}{dài}{cong}`, màu `KMchanh`, `KMtrau`, `KMtoi`.

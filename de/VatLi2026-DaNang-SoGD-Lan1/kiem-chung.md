@@ -31,3 +31,18 @@ Nguồn: `kho/goc/Da Nang - So GDDT - Lan 1.docx` (mã đề 0201, có đáp án
 - I.14: ba mũi tên (1), (2), (3) vẽ cùng màu đen (bản gốc tô (2) đỏ, (3) xanh lá — trùng màu quy ước dòng điện/từ trường, lộ đáp án).
 - I.2: chùm sóng vẽ nét đứt xám như gốc (không tô màu sóng để khỏi gợi ý loại sóng).
 - II.3: cực S xanh, N đỏ (đề ghi tên cực).
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+Ảnh gốc: `word/media/` của file Word (I.2 = image5, I.10 = image45, I.14 = image59, I.16 = image64–67 ghép ngang, II.1 = image68, II.2 = image82, II.3 = image92, III.3 = image113). Các hình vẽ theo tọa độ điểm ảnh của ảnh gốc (`x=...cm, y=-...cm`). Nội dung vật lí (chiều mũi tên, cực nam châm, nhãn, số liệu) giữ như bản trước.
+- I.2 (máy dò cá): vẽ lại tàu (thân cong có bóng, ca bin, cột ăng ten, người điều khiển, màn hình có vệt cá và đáy biển), đầu dò, chùm sóng nét đứt, đàn cá 9 con có đuôi, mắt, mang; mặt nước gợn sóng, đáy biển có chấm cát.
+- I.10 (dynamo xe đạp): vẽ lại bánh xe (lốp, vành, nan hoa đan chéo), càng xe đỏ có đai kẹp, đèn xe, dây điện quấn theo càng, dynamo dạng chai (núm khía tì vào lốp, thân xám, đáy cam); hình cắt: vỏ chai trong, núm xoay khía, trục, nam châm trụ hai nửa, lõi chữ U, cuộn dây, bóng đèn có đui, hai dây nối, mũi tên chiều quay. Bốn đường gióng không có chữ của ảnh gốc (nhãn bị cắt mất) không vẽ.
+- I.14 (bàn tay trái): vẽ lại bàn tay ngửa bằng đường cong (ngón cái choãi, bốn ngón duỗi, kẽ ngón, đốt ngón, chỉ tay) — macro mới `\VLbantaytrai`; ba mũi tên (1), (2), (3) vẫn cùng màu đen.
+- I.16 (4 biển cảnh báo): kí hiệu vẽ bằng bộ macro `\VLkh...` mới (bề mặt nóng, phóng xạ, chất nổ, sóng tắt dần có mũi tên), khung bằng `\VLbiencanhbao` cỡ 1,2.
+- II.1 (thí nghiệm ống thủy tinh – giọt thủy ngân): vẽ lại cốc thủy tinh có vành, nước có elip mặt thoáng; ống thủy tinh có vạch chia và giọt thủy ngân; đũa khuấy; nhiệt kế; giá đỡ (đế, trụ, hai thanh ngang, khớp nối có vít, kẹp); kiềng bốn chân có mặt lưới; đèn khí (đế, cổ đồng, van) và ngọn lửa.
+- II.2 (bộ sạc điện thoại): vẽ lại điện thoại nằm nghiêng (thân, màn hình, nút bên, loa), bộ sạc mở vỏ (chân cắm, thân, bảng mạch, ba cuộn cảm, máy biến áp nhỏ, tụ, chip, cổng USB), đầu cắm và dây cáp; kính lúp phóng to máy biến áp (lõi, hai cuộn dây quấn, đế, dây ra, chân hàn), mũi tên hai chiều.
+- II.3 (máy phát điện): vẽ lại theo đúng bố cục ảnh gốc: nam châm S (mặt trên, mặt cực lõm có gạch bóng) và N, khung dây ABCD có hai đầu dây bẻ bậc về cổ góp, cổ góp hai nửa vành khuyên có bề dày, hai chổi quét, trục OO′ (chỉ vẽ phần ngoài khung như gốc), dây nối, bóng đèn trên đế chóp; chiều quay giữ như bản trước.
+- III.3 (súng điện từ): vẽ lại bệ hai tầng (khối đế có rãnh, tấm đế có hốc chữ nhật, miếng đệm), hai thanh ray tròn trên gờ, đầu kẹp dây, thanh kim loại màu đồng có bề dày và mũi tên dòng điện, nguồn điện (màn hình, hai núm, hai lỗ cắm), hai dây nối cong, mũi tên $I$, 8 đường sức từ đúng vị trí ảnh gốc.
+
+Macro mới khai báo trong file đề (đề xuất chuyển vào `preamble-vatli-hinh.tex`): `\VLbiencanhbao{x}{y}{cỡ}{\VLkh...}`, `\VLkhphongxa`, `\VLkhtiaset`, `\VLkhsinhhoc`, `\VLkhchamthan`, `\VLkhdaulau`, `\VLkhbematnong`, `\VLkhchatno`, `\VLkhsongtatdan`, `\VLkhraochan`, `\VLkhlyvo`, `\VLkhanmon`, `\VLkhbinhchuachay`, `\VLkhnguoichay`, `\VLkhphongxaiso` (đều `{x}{y}{cỡ}`), `\VLbantaytrai{x}{y}{tỉ lệ}`.
+
+Hình chưa ưng: II.2 các linh kiện nhỏ trên bảng mạch vẽ giản lược (ảnh gốc là nét vẽ dày đặc chi tiết); II.3 chỗ đầu dây khung nối vào cổ góp và hai chổi quét vẽ gọn hơn ảnh gốc. Bản đề 7 trang (ĐẠT), bản lời giải 10 trang.
