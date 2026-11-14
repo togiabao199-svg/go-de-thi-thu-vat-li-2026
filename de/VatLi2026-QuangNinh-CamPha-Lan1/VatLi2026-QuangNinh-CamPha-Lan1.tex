@@ -196,7 +196,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{13.2\baselineskip}
+	\NeedspaceCau{14.4\baselineskip}
 	\begin{ex}%[VL12-C2-VD]
 		Cảm biến lốp ô tô là thiết bị điện tử được thiết kế để giám sát các thông số bên trong lốp xe. Một ô tô được trang bị bộ cảm biến gồm bốn cảm biến (CB) và một màn hình hiển thị. Khi ô tô đang đứng yên, màn hình hiển thị chỉ số các thông số được cho ở bảng dưới đây:
 		% giuhinh
@@ -220,28 +220,43 @@
 			\end{minipage}\hfill%
 			\begin{minipage}[c]{0.46\linewidth}
 				\centering
-				\begin{tikzpicture}[scale=0.95,line join=round,line cap=round,font=\footnotesize]
-					% thân xe nhìn từ trên xuống, đầu xe bên phải
-					\shade[top color=VLxanh!14,bottom color=VLxanh!28,draw=VLxanh!60]
-						(0.35,0.75) .. controls (0.3,0.25) and (0.6,0.12) .. (1.2,0.12)--(4.6,0.12)
-						.. controls (5.3,0.12) and (5.55,0.6) .. (5.6,1.5) .. controls (5.55,2.4) and (5.3,2.88) .. (4.6,2.88)--(1.2,2.88)
-						.. controls (0.6,2.88) and (0.3,2.75) .. (0.35,2.25)--cycle;
-					% kính sau, kính lái, cửa sổ, gương
-					\fill[VLxanh!45] (1.25,0.85) .. controls (1.05,1.2) and (1.05,1.8) .. (1.25,2.15)--(1.55,2.0) .. controls (1.42,1.7) and (1.42,1.3) .. (1.55,1.0)--cycle;
-					\fill[VLxanh!50] (3.7,0.75) .. controls (4.05,1.0) and (4.05,2.0) .. (3.7,2.25)--(4.15,2.45) .. controls (4.6,2.0) and (4.6,1.0) .. (4.15,0.55)--cycle;
-					\fill[VLxanh!35] (1.75,2.45)--(3.6,2.45)--(3.45,2.72)--(1.9,2.72)--cycle (1.75,0.55)--(3.6,0.55)--(3.45,0.28)--(1.9,0.28)--cycle;
-					\fill[VLxanh!40] (3.75,2.9) ellipse (0.18 and 0.08) (3.75,0.1) ellipse (0.18 and 0.08);
-					\draw[VLxanh!45,thin] (5.35,0.55) .. controls (5.55,1.0) and (5.55,2.0) .. (5.35,2.45);
+				\begin{tikzpicture}[x=0.0064cm,y=-0.0064cm,line join=round,line cap=round,font=\footnotesize]
+					% (toạ độ theo điểm ảnh của hình gốc; trục y hướng xuống) thân xe nhìn từ trên xuống, đầu xe bên trái
+					\fill[black,opacity=0.06] (52,345) .. controls (52,150) and (70,88) .. (140,88) -- (990,90) .. controls (1085,100) and (1104,200) .. (1104,345) .. controls (1104,480) and (1085,588) .. (990,600) -- (140,602) .. controls (70,602) and (52,540) .. (52,345) -- cycle;
+					\shade[top color=VLxanh!15,bottom color=VLxanh!27]
+						(42,335) .. controls (42,150) and (58,78) .. (135,76) -- (478,76) .. controls (482,60) and (502,60) .. (507,76) -- (985,78)
+						.. controls (1078,90) and (1096,200) .. (1096,335) .. controls (1096,470) and (1078,580) .. (985,592) -- (507,594)
+						.. controls (502,610) and (482,610) .. (478,594) -- (135,594) .. controls (58,592) and (42,520) .. (42,335) -- cycle;
+					\draw[VLxanh!40,line width=0.5pt]
+						(42,335) .. controls (42,150) and (58,78) .. (135,76) -- (478,76) .. controls (482,60) and (502,60) .. (507,76) -- (985,78)
+						.. controls (1078,90) and (1096,200) .. (1096,335) .. controls (1096,470) and (1078,580) .. (985,592) -- (507,594)
+						.. controls (502,610) and (482,610) .. (478,594) -- (135,594) .. controls (58,592) and (42,520) .. (42,335) -- cycle;
+					% mui xe (khoang giữa) sáng hơn
+					\fill[white,opacity=0.18] (530,172) .. controls (640,160) and (740,160) .. (826,172) .. controls (812,280) and (812,390) .. (826,498) .. controls (740,510) and (640,510) .. (530,498) .. controls (512,390) and (512,280) .. (530,172) -- cycle;
+					% kính lái (trái), kính sau (phải)
+					\shade[left color=VLxanh!72,right color=VLxanh!55] (410,140) .. controls (374,230) and (374,430) .. (400,508) -- (540,482) .. controls (510,400) and (510,255) .. (545,168) -- cycle;
+					\fill[white,opacity=0.25] (403,180) .. controls (390,240) and (388,300) .. (390,350) -- (418,350) .. controls (417,300) and (420,240) .. (434,186) -- cycle;
+					\shade[left color=VLxanh!55,right color=VLxanh!72] (832,165) .. controls (808,250) and (808,415) .. (832,500) -- (900,480) .. controls (976,420) and (976,245) .. (900,184) -- cycle;
+					\fill[white,opacity=0.22] (905,225) .. controls (940,270) and (946,320) .. (943,360) -- (916,360) .. controls (918,320) and (912,275) .. (886,235) -- cycle;
+					% kính cửa hai bên
+					\fill[VLxanh!60] (488,118)--(712,122)--(712,158)--(552,158)--cycle (505,538)--(545,494)--(712,492)--(712,538)--cycle;
+					% đèn trước (trái), đèn sau (phải)
+					\fill[VLxanh!62] (95,186)--(138,186) .. controls (135,205) and (117,225) .. (98,233) .. controls (92,217) and (92,200) .. (95,186) -- cycle;
+					\fill[VLxanh!62] (95,494)--(140,494) .. controls (140,462) and (120,425) .. (98,410) .. controls (92,440) and (92,470) .. (95,494) -- cycle;
+					\draw[VLxanh!62,line width=1.8pt] (997,128) .. controls (1035,140) and (1050,162) .. (1055,245) (997,542) .. controls (1035,530) and (1050,508) .. (1055,425);
 					% đường tín hiệu
-					\draw[VLxanh!75!black,densely dotted,thick] (1.25,2.5)--(2.15,2.0) (4.65,2.5)--(3.55,2.0) (1.25,0.5)--(2.15,1.0) (4.65,0.5)--(3.55,1.0);
-					\node[font=\fontsize{4}{4}\selectfont,VLxanh!60!black,rotate=-29] at (1.83,2.45) {phát tín hiệu};
-					\node[font=\fontsize{4}{4}\selectfont,VLxanh!60!black,rotate=27] at (3.98,2.47) {phát tín hiệu};
-					\node[font=\fontsize{4}{4}\selectfont,VLxanh!60!black,rotate=29] at (1.6,0.88) {phát tín hiệu};
-					\node[font=\fontsize{4}{4}\selectfont,VLxanh!60!black,rotate=-27] at (4.2,0.86) {phát tín hiệu};
-					% màn hình, cảm biến
-					\filldraw[fill=VLxanh!70!black,draw=VLxanh!45!black] (2.15,0.85) rectangle (3.55,2.15);
-					\node[white,align=center,font=\small] at (2.85,1.5) {Màn\\hình};
-					\foreach \x/\y in {0.1/2.45,4.55/2.45,0.1/0.05,4.55/0.05}{\filldraw[fill=VLxanh!70!black,draw=VLxanh!45!black] (\x,\y) rectangle ++(1.2,0.55); \node[white,font=\small] at ($(\x,\y)+(0.6,0.275)$) {CB};}
+					\draw[VLxanh!70!black,line width=0.9pt,dash pattern=on 0pt off 2.2pt] (250,182)--(340,228) (590,217)--(712,150) (265,497)--(340,425) (590,425)--(712,497);
+					\node[font=\fontsize{4.5}{4.5}\selectfont\itshape,VLxanh!60!black,rotate=-27,inner sep=0pt] at (306,184) {phát tín hiệu};
+					\node[font=\fontsize{4.5}{4.5}\selectfont\itshape,VLxanh!60!black,rotate=29,inner sep=0pt] at (662,202) {phát tín hiệu};
+					\node[font=\fontsize{4.5}{4.5}\selectfont\itshape,VLxanh!60!black,rotate=43,inner sep=0pt] at (287,446) {phát tín hiệu};
+					\node[font=\fontsize{4.5}{4.5}\selectfont\itshape,VLxanh!60!black,rotate=-30,inner sep=0pt] at (660,442) {phát tín hiệu};
+					% màn hình, bốn cảm biến
+					\foreach \xa/\ya/\xb/\yb/\chu in {340/215/590/432/{Màn\\hình},45/78/250/185/CB,712/60/965/163/CB,55/495/265/602/CB,712/493/965/602/CB}{
+						\fill[black,opacity=0.16] (\xa+6,\ya+7) rectangle (\xb+6,\yb+7);
+						\shade[top color=VLxanh!74!gray,bottom color=VLxanh!74!gray!86!black] (\xa,\ya) rectangle (\xb,\yb);
+						\draw[VLxanh!50!black,line width=0.4pt] (\xa,\ya) rectangle (\xb,\yb);
+						\draw[white,opacity=0.35,line width=0.4pt] (\xa+3,\yb-3)--(\xa+3,\ya+3)--(\xb-3,\ya+3);
+						\node[white,align=center,font=\small,inner sep=0pt] at ({(\xa+\xb)/2},{(\ya+\yb)/2}) {\chu};}
 				\end{tikzpicture}
 			\end{minipage}
 		\end{center}
@@ -282,86 +297,18 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{11.3\baselineskip}
+	\NeedspaceCau{12.9\baselineskip}
 	\begin{ex}%[VL12-C1-NB]
 		Hình bên dưới là các dụng cụ để đo nhiệt dung riêng của nước. Dụng cụ số (3) là
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
-				% ===== cân điện tử (5) =====
-				\fill[gray!25] (1.25,-0.1) ellipse (1.35 and 0.12);
-				\shade[top color=gray!15,bottom color=gray!45,draw=gray!60] (0,0.05)--(2.5,0.05)--(2.35,0.55)--(0.15,0.55)--cycle;
-				\filldraw[fill=VLla!30,draw=black!70] (0.75,0.15) rectangle (1.75,0.42);
-				\foreach \x in {0.35,2.15}{\fill[gray!60] (\x,0.28) circle (0.06);}
-				\shade[top color=gray!40,bottom color=black!80] (1.15,0.62) ellipse (1.05 and 0.3);
-				\fill[black!75] (1.15,0.72) ellipse (0.98 and 0.25);
-				\fill[white,opacity=0.15] (0.6,0.82) ellipse (0.35 and 0.07);
-				\coordinate (L5) at (0.9,0.85);
-				% ===== biến thế nguồn (1) =====
-				\begin{scope}[shift={(3.0,0.1)}]
-					\fill[gray!25] (1.0,-0.12) ellipse (1.15 and 0.1);
-					\shade[left color=gray!35,right color=gray!20] (2.0,0)--(2.3,0.25)--(2.3,1.6)--(2.0,1.35)--cycle;
-					\fill[gray!12] (0,1.35)--(2.0,1.35)--(2.3,1.6)--(0.3,1.6)--cycle;
-					\shade[top color=white,bottom color=gray!20,draw=gray!65] (0,0) rectangle (2.0,1.35);
-					\draw[gray!55,line width=1.3pt] (0.45,1.45)--(0.5,1.85)--(1.75,1.85)--(1.8,1.45);
-					\fill[yellow!80!orange] (0.12,1.05)--(0.32,1.05)--(0.22,1.22)--cycle;
-					\draw[black!70,thin] (0.12,1.05)--(0.32,1.05)--(0.22,1.22)--cycle;
-					\filldraw[fill=white,draw=gray!60] (0.18,0.15) rectangle (0.68,0.9);
-					\foreach \x/\c in {0.3/VLdo,0.55/black!80}{\shade[ball color=\c] (\x,0.62) circle (0.08); \shade[ball color=\c] (\x,0.32) circle (0.08);}
-					\foreach \y in {0.4,0.7,1.0}{\fill[black!70] (0.95,\y) circle (0.06);}
-					\fill[VLdo] (0.95,1.0) circle (0.04);
-					\filldraw[fill=gray!8,draw=gray!60] (1.5,0.62) circle (0.38);
-					\foreach \g in {30,60,...,330}{\draw[black!60,very thin] ($(1.5,0.62)+(\g:0.3)$)--($(1.5,0.62)+(\g:0.36)$);}
-					\shade[ball color=black!70] (1.5,0.62) circle (0.22);
-					\draw[white,thin] (1.5,0.62)--++(60:0.2);
-					\coordinate (L1) at (1.1,1.85);
-				\end{scope}
-				% ===== oát kế (2) =====
-				\begin{scope}[shift={(5.55,0.1)}]
-					\fill[gray!25] (0.6,-0.1) ellipse (0.7 and 0.08);
-					\fill[gray!12] (0,0.75)--(1.2,0.75)--(1.38,0.9)--(0.18,0.9)--cycle;
-					\shade[left color=gray!35,right color=gray!20] (1.2,0)--(1.38,0.15)--(1.38,0.9)--(1.2,0.75)--cycle;
-					\shade[top color=white,bottom color=gray!20,draw=gray!65] (0,0) rectangle (1.2,0.75);
-					\VLmanhinh{0.6}{0.52}{0.75}{0.22}{}
-					\foreach \x/\c in {0.25/VLdo,0.5/black!80,0.75/VLdo,1.0/black!80}{\shade[ball color=\c] (\x,0.17) circle (0.065);}
-					\coordinate (L2) at (0.75,0.05);
-					\coordinate (Ra) at (0.75,0.17);
-					\coordinate (Rb) at (1.0,0.17);
-				\end{scope}
-				% dây từ biến thế sang oát kế
-				\draw[VLdo!85!black,line width=0.9pt] (3.3,0.72) .. controls (3.2,-0.25) and (5.3,-0.3) .. (5.8,0.27);
-				\draw[black!80,line width=0.9pt] (3.55,0.42) .. controls (3.6,-0.35) and (5.6,-0.4) .. (6.05,0.27);
-				% ===== nhiệt lượng kế (4) =====
-				\begin{scope}[shift={(7.75,0.0)}]
-					\fill[gray!25] (0,-0.05) ellipse (0.95 and 0.12);
-					\shade[left color=lime!45!yellow!70!gray,right color=lime!35!yellow!55!black,middle color=lime!25!yellow!35] (-0.8,0)--(-0.8,2.1)--(0.8,2.1)--(0.8,0) arc[start angle=0,end angle=-180,x radius=0.8,y radius=0.2]--cycle;
-					\draw[gray!55] (-0.8,0) arc[start angle=-180,end angle=0,x radius=0.8,y radius=0.2];
-					\draw[gray!55] (-0.8,0)--(-0.8,2.1) (0.8,0)--(0.8,2.1);
-					\fill[lime!30!yellow!50!gray] (0,2.1) ellipse (0.8 and 0.2);
-					\fill[lime!45!yellow!65!black] (0,2.1) ellipse (0.62 and 0.14);
-					\draw[gray!60] (0,2.1) ellipse (0.8 and 0.2);
-					\fill[white,opacity=0.35] (-0.55,0.2) rectangle (-0.38,1.9);
-					% nhiệt kế điện tử (3)
-					\begin{scope}[rotate around={-12:(0.1,2.1)}]
-						\shade[left color=black!80,right color=black!55] (0.0,2.05) rectangle (0.2,3.15);
-						\fill[black!80] (0.1,3.15) ellipse (0.1 and 0.04);
-						\filldraw[fill=VLla!35,draw=black!60,very thin] (0.04,2.45) rectangle (0.16,2.95);
-						\draw[gray!70,thin] (0.1,2.05)--(0.1,1.6);
-					\end{scope}
-					\coordinate (L4) at (0.6,0.25);
-					\coordinate (L3) at (0.12,2.95);
-					\coordinate (V1) at (-0.35,2.12);
-					\coordinate (V2) at (-0.15,2.15);
-				\end{scope}
-				% dây từ oát kế sang nhiệt lượng kế
-				\draw[VLdo!85!black,line width=0.9pt] (Ra) .. controls +(0.2,-0.5) and +(-0.5,-0.3) .. (6.95,0.6) .. controls +(0.4,0.3) and +(-0.2,-0.4) .. (V1);
-				\draw[black!80,line width=0.9pt] (Rb) .. controls +(0.2,-0.4) and +(-0.3,-0.2) .. (7.1,0.45) .. controls +(0.3,0.3) and +(0,-0.6) .. (V2);
-				% nhãn
-				\draw[thin] (L5)--(0.95,1.6) node[above,inner sep=1pt] {(5)};
-				\draw[thin] (L1)--(4.3,2.5) node[above,inner sep=1pt] {(1)};
-				\draw[thin] (L2)--(6.5,-0.55) node[below,inner sep=1pt] {(2)};
-				\draw[thin] (L3)--(7.3,3.15) node[left,inner sep=1pt] {(3)};
-				\draw[thin] (L4)--(8.75,-0.55) node[below,inner sep=1pt] {(4)};
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				\VLbodonhietdung{0}{0}{1.2}
+				\draw[thin] (VLbd-can)--++(0,0.95) node[above,inner sep=1.5pt] {(5)};
+				\draw[thin] (VLbd-nguon)--++(0.5,0.62) node[above,inner sep=1.5pt] {(1)};
+				\draw[thin] (VLbd-oatke)--++(0.12,-0.6) node[below,inner sep=1.5pt] {(2)};
+				\draw[thin] (VLbd-nhietke)--++(-0.3,0) node[left,inner sep=1.5pt] {(3)};
+				\draw[thin] (VLbd-binh)--++(0.3,-0.55) node[below,inner sep=1.5pt] {(4)};
 			\end{tikzpicture}
 		\end{center}
 		\choice
@@ -519,65 +466,21 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[11\baselineskip]{21.1\baselineskip}
+	\NeedspaceCau[11.9\baselineskip]{21.1\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Quan sát hình ảnh mô tả chuyển động Brown trong chất khí.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[scale=0.84,line join=round,line cap=round,font=\footnotesize]
-				\begin{scope}[shift={(0.45,0)}]
-					% bóng, đế kim loại
-					\fill[black,opacity=0.15] (1.6,0.2) ellipse (1.05 and 0.12);
-					\fill[gray!60] (1.6,0.22) ellipse (0.98 and 0.15);
-					\shade[left color=gray!60,right color=gray!45,middle color=gray!15] (0.62,0.22) rectangle (2.58,0.36);
-					\shade[inner color=gray!8,outer color=gray!40] (1.6,0.36) ellipse (0.98 and 0.15);
-					\shade[left color=gray!55,right color=gray!40,middle color=gray!10] (0.88,0.36) rectangle (2.32,0.47);
-					\shade[inner color=gray!5,outer color=gray!35] (1.6,0.47) ellipse (0.72 and 0.11);
-					% ống thủy tinh đựng khói
-					\shade[left color=orange!45!yellow!60,right color=orange!40!yellow!50,middle color=yellow!20] (1.0,0.55) rectangle (2.2,2.36);
-					\fill[orange!30!yellow!45] (1.6,0.55) ellipse (0.6 and 0.1);
-					\pgfmathsetseed{3}
-					\foreach \i in {1,...,60}{\fill[white,opacity=0.9] ({1.08+1.04*rnd},{0.68+1.6*rnd}) circle ({0.01+0.02*rnd});}
-					\draw[gray!65] (1.0,0.55)--(1.0,2.36) (2.2,0.55)--(2.2,2.36);
-					\draw[gray!65] (1.0,0.55) arc[start angle=180,end angle=360,x radius=0.6,y radius=0.1];
-					\draw[gray!50] (1.6,2.36) ellipse (0.6 and 0.1);
-					\draw[white,line width=1.6pt,opacity=0.85] (1.13,0.72)--(1.13,2.25);
-					\draw[white,line width=0.6pt,opacity=0.7] (2.08,0.75)--(2.08,2.2);
-					% nắp đậy thủy tinh
-					\fill[VLxanh!25,opacity=0.55] (0.55,2.42)--(2.4,2.42)--(2.75,2.66)--(0.9,2.66)--cycle;
-					\fill[VLxanh!40,opacity=0.8] (0.55,2.36)--(2.4,2.36)--(2.4,2.42)--(0.55,2.42)--cycle;
-					\fill[VLxanh!30,opacity=0.8] (2.4,2.36)--(2.75,2.6)--(2.75,2.66)--(2.4,2.42)--cycle;
-					\draw[VLxanh!55,thin] (0.55,2.42)--(2.4,2.42)--(2.75,2.66)--(0.9,2.66)--cycle;
-					\draw[white,thin,opacity=0.9] (0.95,2.62)--(2.6,2.62);
-					% ống kính hiển vi
-					\shade[left color=gray!75,right color=gray!45,middle color=white] (1.32,2.92) rectangle (1.88,3.25);
-					\fill[black!85] (1.6,2.92) ellipse (0.28 and 0.06);
-					\fill[gray!40] (1.6,2.93) ellipse (0.14 and 0.03);
-					\shade[left color=gray!70,right color=gray!40,middle color=white] (1.22,3.25) rectangle (1.98,3.4);
-					\shade[left color=gray!85,right color=gray!50,middle color=gray!20] (1.15,3.4) rectangle (2.05,3.72);
-					\foreach \x in {1.19,1.25,...,2.02}{\draw[black!60,very thin] (\x,3.42)--(\x,3.7);}
-					\shade[left color=gray!80,right color=gray!45,middle color=white] (1.15,3.72) rectangle (2.05,4.52);
-					\draw[gray!60,thin] (1.15,3.72)--(2.05,3.72) (1.15,3.4)--(2.05,3.4);
-					\fill[white,opacity=0.7] (1.4,3.78) rectangle (1.46,4.46);
-					\shade[inner color=gray!15,outer color=gray!50] (1.6,4.52) ellipse (0.45 and 0.08);
-					% ánh sáng
-					\shade[left color=yellow!60,right color=orange!85] (-0.45,1.82)--(0.1,1.82)--(0.1,1.7)--(0.42,1.9)--(0.1,2.1)--(0.1,1.98)--(-0.45,1.98)--cycle;
-				\end{scope}
-				\node at (0.3,1.35) {Ánh sáng};
-				% chú thích
-				\draw[thin] (2.5,4.0)--(3.35,4.0) node[right,align=left,inner sep=1.5pt] {Ống kính của\\kính hiển vi};
-				\draw[thin] (3.0,2.58)--(3.35,2.58) node[right,inner sep=1.5pt] {Nắp đậy thủy tinh};
-				\draw[thin] (2.65,1.9)--(3.35,1.9) node[right,inner sep=1.5pt] {Ống thủy tinh đựng khói};
-				\draw[thin] (2.2,1.2)--(3.35,1.2) node[right,inner sep=1.5pt] {Khói};
-				\node[align=center] at (2.6,-0.35) {Sơ đồ thí nghiệm quan sát chuyển\\động Brown trong không khí};
-				% quỹ đạo hạt khói
-				\begin{scope}[shift={(7.5,0.15)},scale=0.95]
-					\draw[VLxanh!80!black,semithick] (1.45,0.45) -- (1.54,0.71) -- (1.67,0.95) -- (1.66,1.06) -- (1.29,0.93) -- (1.82,1.16) -- (1.60,1.20) -- (1.77,1.10) -- (1.47,1.29) -- (1.45,1.59) -- (1.09,1.51) -- (1.18,2.02) -- (1.25,1.90) -- (1.32,1.82) -- (1.25,1.91) -- (1.07,2.02) -- (0.64,2.54) -- (0.67,2.28) -- (0.75,2.55) -- (1.13,2.86) -- (0.85,3.01) -- (1.10,2.95) -- (1.02,3.20) -- (1.40,3.31) -- (1.40,3.15) -- (1.74,2.99) -- (1.56,2.86) -- (1.55,2.76) -- (1.76,3.01) -- (1.71,3.00) -- (2.10,2.85) -- (2.08,2.83) -- (2.43,3.01) -- (2.22,3.09) -- (2.51,2.94) -- (2.74,3.00) -- (2.55,3.35) -- (2.76,3.39) -- (2.43,3.21) -- (2.70,2.94) -- (2.58,2.50) -- (2.75,2.85) -- (3.00,2.45) -- (2.76,2.44) -- (3.09,2.40) -- (2.69,1.92) -- (2.71,2.00) -- (2.41,1.84) -- (2.55,1.55) -- (2.83,1.76) -- (2.52,1.82) -- (2.67,1.49) -- (3.08,1.82) -- (3.04,1.83) -- (3.25,1.60) -- (3.38,1.44) -- (3.36,1.30) -- (3.34,1.23) -- (3.79,1.64) -- (3.60,1.06) -- (3.90,1.25) -- (4.13,1.42) -- (3.76,1.40) -- (3.83,1.88) -- (3.71,1.81) -- (3.44,2.23) -- (3.65,2.15) -- (3.47,2.22) -- (4.01,2.09) -- (4.03,2.63) -- (4.06,2.61) -- (3.85,2.49) -- (4.15,2.60) -- (4.05,2.83) -- (4.24,2.64) -- (4.73,2.90) -- (4.82,2.71) -- (4.64,2.90) -- (4.95,2.80);
-					\draw[VLxanh!80!black,semithick] (1.6,4.4) -- (1.85,4.05) -- (1.55,3.85) -- (2.0,3.7) -- (1.75,3.45) -- (2.2,3.6) -- (2.35,4.2) -- (2.6,3.9) -- (2.45,3.55) -- (2.9,3.75) -- (2.55,3.35);
-					\draw[VLxanh!80!black,semithick] (0.64,2.54) -- (0.35,2.95) -- (0.7,3.25) -- (0.45,3.6) -- (0.95,3.75) -- (1.25,3.45) -- (1.6,4.4);
-					\fill[VLxanh!80!black] (1.45,0.45) circle (1.6pt);
-				\end{scope}
-				\node[align=center] at (9.95,-0.35) {Quỹ đạo chuyển động của\\hạt khói trong không khí};
+			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				\VLtnbrown{1.55}{0}{1.25}
+				\node[below,inner sep=2pt] at (VLbr-anhsang) {Ánh sáng};
+				\draw[thin] (VLbr-ongkinh)--++(0.75,0) node[right,align=left,inner sep=1.5pt] {Ống kính của\\kính hiển vi};
+				\draw[thin] (VLbr-nap)--++(0.36,0) node[right,inner sep=1.5pt] {Nắp đậy thủy tinh};
+				\draw[thin] (VLbr-ong)--++(0.63,0) node[right,inner sep=1.5pt] {Ống thủy tinh đựng khói};
+				\draw[thin] (VLbr-khoi)--++(1.1,0) node[right,inner sep=1.5pt] {Khói};
+				\node[align=center,below] at (2.6,-0.12) {Sơ đồ thí nghiệm quan sát chuyển\\động Brown trong không khí};
+				\VLquydaobrown{7.6}{0.05}{1.0}
+				\node[align=center,below] at (9.2,-0.12) {Quỹ đạo chuyển động của\\hạt khói trong không khí};
 			\end{tikzpicture}
 		\end{center}
 		\NeedspaceBang{9.9\baselineskip}%
