@@ -1549,3 +1549,11 @@
 		\foreach \VLm/\VLw in {black!85/1.9pt,gray!50/0.5pt}{
 			\draw[\VLm,line width=\VLw] (0.02,0.27)--(0.03,0.2) .. controls (0.03,0.13) and (-0.16,0.16) .. (-0.165,0.07) .. controls (-0.17,-0.02) and (-0.08,-0.045) .. (0.0,-0.04) .. controls (0.09,-0.035) and (0.165,0.0) .. (0.165,0.08);}
 	\end{scope}}
+
+% MŨI TÊN KHỐI (luồng khí, luồng nhiệt), có bóng chuyển màu: \VLmuikhoi[kiểu tô]{x}{y}{góc}{dài}{nửa rộng thân}{dài đầu}{nửa rộng đầu}
+% (x,y): mũi nhọn; góc: hướng mũi tên (độ, so với phương ngang); kích thước tính theo đơn vị toạ độ của hình.
+% Ví dụ: \VLmuikhoi[top color=VLxanh!70,bottom color=VLxanh!70!black,draw=VLxanh!50!black]{552}{512}{35}{160}{17}{52}{36}
+\newcommand{\VLmuikhoi}[8][top color=VLdo!70,bottom color=VLdo!75!black,draw=VLdo!55!black]{%
+	\begin{scope}[shift={(#2,#3)},rotate=#4]
+		\path[line width=0.3pt,#1] (0,0)--(-#7,#8)--(-#7,#6)--(-#5,#6)--(-#5,-#6)--(-#7,-#6)--(-#7,-#8)--cycle;
+	\end{scope}}

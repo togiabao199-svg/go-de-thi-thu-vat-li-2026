@@ -56,3 +56,9 @@
 - I.14: đồ thị (p, V) lưới 4 × 4 ô, không số trên trục như gốc; quá trình (1)→(2) đỏ, (2)→(3) xanh; đặt bên phải phương án.
 - II.2 (hình thực tiễn, `% giuhinh`): bộ tản nhiệt có lá tản nhiệt, quạt có cánh, luồng khí mát (xanh) vào, khí nóng (đỏ) ra, bộ làm mát (bơm) trên giá đỡ CPU, hai ống dẫn xanh/đỏ; giữ màu như ảnh gốc (màu không là ý cần suy luận). Đặt bên phải đoạn dẫn như gốc. Chờ phiên vẽ lại chi tiết.
 - III.5: bình trụ đứng, pit-tông xám (gốc tô xanh đậm), mũi tên L và 0,6L; đặt bên phải đoạn dữ kiện như gốc.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+- II.2 (hệ thống tản nhiệt CPU, `% giuhinh`): vẽ lại theo toạ độ điểm ảnh của ảnh gốc (ảnh nhúng 336 × 296, phóng 4 lần), rộng 6,4 cm × cao 5,75 cm. Bộ tản nhiệt dạng hộp có mặt trên, mặt bên, dàn lá tản nhiệt bậc thang (nửa trên vạch trắng, nửa dưới vạch đỏ sẫm), 4 mũi tên chất lỏng mát (xanh nhạt, sang phải) và 2 mũi tên chất lỏng nóng (đỏ, sang trái) như gốc, ốc bốn góc; quạt có hai vành, thân trụ giữa, trục ốc, lòng quạt, 7 cánh xoáy, moay-ơ phẳng; ba mũi tên khối khí mát (xanh) đi vào quạt, ba mũi tên khối khí nóng (đỏ) lớn dần thoát ra sau bộ tản nhiệt; bộ làm mát hình trụ chuyển màu đỏ → xanh xám, giá đỡ chữ thập ba trụ ốc, đế mạch và CPU bên dưới; hai ống dẫn (mát xanh nhạt ở trên, nóng đỏ ở dưới) có vạch chỉ dòng chảy, khớp nối ở bộ làm mát, miệng ống ở bộ tản nhiệt. Màu giữ như ảnh gốc (đề đã nói rõ khí mát / chất lỏng nóng lên, màu không phải ý cần suy luận). Macro mới trong file đề: `\VLmuikhoi` (mũi tên khối).
+- I.14 (đồ thị p–V), III.5 (sơ đồ bình có pit-tông): sơ đồ, giữ nguyên.
+- Hình chưa ưng: không. Khác gốc có chủ ý: ba mũi tên khí nóng vẽ liền khối (gốc mỗi mũi tên có khúc đuôi gãy), ảnh gốc không có bóng đổ — thêm bóng mờ dưới ống dẫn.

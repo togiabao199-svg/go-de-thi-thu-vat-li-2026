@@ -299,7 +299,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[16.1\baselineskip]{26.2\baselineskip}
+	\NeedspaceCau[16.7\baselineskip]{26.9\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		% giuhinh
 		\begin{minipage}[t]{0.52\linewidth}
@@ -307,62 +307,116 @@
 		\end{minipage}\hfill
 		\begin{minipage}[t]{0.38\linewidth}
 			\centering
-			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},x=0.09mm,y=-0.09mm,line join=round,line cap=round,font=\footnotesize]
-				% bóng đổ
-				\fill[gray!18] (30,490) .. controls (120,560) and (420,560) .. (600,470) .. controls (560,455) and (300,500) .. (30,490);
-				% ===== bộ tản nhiệt =====
-				\begin{scope}[shift={(392,92)},yslant=-0.24]
-					\fill[gray!12,draw=gray!50!black,thin] (0,0)--(165,0)--(187,-22)--(22,-22)--cycle;
-					\shade[top color=gray!30,bottom color=gray!50,draw=gray!50!black,thin] (165,0)--(187,-22)--(187,193)--(165,215)--cycle;
-					\shade[left color=gray!8,right color=gray!22,draw=gray!50!black,thin,rounded corners=3pt] (0,0) rectangle (165,215);
-					\fill[black!82] (24,24) rectangle (141,191);
-					\foreach \y in {28,34,...,187}{\draw[gray!55,line width=0.35pt] (26,\y)--(139,\y);}
-					\foreach \p in {(11,11),(154,11),(11,204),(154,204)}{\filldraw[fill=gray!40,draw=gray!60!black,line width=0.3pt] \p circle (4);}
-					\foreach \x in {30,72,108}{\draw[-{Stealth[length=4pt,width=5pt]},line width=2.2pt,VLxanh!55!white] (\x,48+0.25*\x)--(\x+26,48+0.25*\x);}
-					\draw[-{Stealth[length=4pt,width=5pt]},line width=2.2pt,VLdo!85!white] (112,145)--(86,145);
-					\draw[-{Stealth[length=4pt,width=5pt]},line width=2.2pt,VLdo!85!white] (158,172)--(136,172);
-				\end{scope}
-				% luồng khí nóng ra
-				\foreach \a/\b in {{(565,108)}/{(600,92)},{(582,135)}/{(622,113)},{(588,182)}/{(648,148)}}{\draw[-{Triangle[length=8pt,width=11pt]},line width=4.5pt,VLdo] \a--\b;}
-				% ===== quạt =====
-				\begin{scope}[shift={(290,140)},yslant=-0.206]
-					\fill[gray!35,draw=gray!50!black,thin,rounded corners=3pt] (24,-20) rectangle (178,185);
-					\fill[gray!25,draw=gray!50!black,thin] (155,0)--(178,-20)--(178,185)--(155,205)--cycle;
-					\fill[gray!15,draw=gray!50!black,thin] (0,0)--(24,-20)--(178,-20)--(155,0)--cycle;
-					\shade[left color=white,right color=gray!25,draw=gray!50!black,thin,rounded corners=4pt] (0,0) rectangle (155,205);
-					\fill[gray!55] (78,103) ellipse (67 and 92);
-					\begin{scope}[shift={(78,103)},xscale=0.73,yscale=-1]
-						\fill[gray!35] (0,0) circle (88);
-						\foreach \a in {0,51.4,...,350}{\filldraw[fill=white,draw=gray!55!black,line width=0.35pt] (\a:24) .. controls (\a+12:55) .. (\a+38:84) .. controls (\a+55:78) .. (\a+62:72) .. controls (\a+52:45) .. (\a+42:24)--cycle;}
-						\shade[inner color=white,outer color=gray!40,draw=gray!55!black,line width=0.35pt] (0,0) circle (24);
+			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},x=0.005cm,y=-0.005cm,line join=round,line cap=round,font=\footnotesize]
+				\definecolor{PTlam}{RGB}{120,205,232}
+				\definecolor{PTlamdam}{RGB}{40,120,175}
+				% bóng đổ nhẹ
+				\fill[gray!10] (430,1010) .. controls (640,1075) and (960,1010) .. (1215,720) .. controls (1000,930) and (700,1010) .. (430,1010);
+				% ================= BỘ TẢN NHIỆT =================
+				\begin{scope}[shift={(762,158)},yslant=-0.545]
+					% mặt trên, mặt bên phải (độ sâu (78,-90))
+					\shade[top color=gray!6,bottom color=gray!16,draw=gray!55!black,line width=0.4pt,rounded corners=2pt] (0,0)--(78,-90)--(366,-90)--(288,0)--cycle;
+					\shade[left color=gray!22,right color=gray!42,draw=gray!55!black,line width=0.4pt,rounded corners=2pt] (288,0)--(366,-90)--(366,222)--(288,312)--cycle;
+					% mặt trước
+					\shade[left color=white,right color=gray!14,draw=gray!55!black,line width=0.5pt,rounded corners=3.5pt] (0,0) rectangle (288,312);
+					% dàn lá tản nhiệt
+					\fill[black!88] (43,38)--(205,38)--(205,52)--(243,52)--(243,270)--(85,270)--(85,256)--(43,256)--cycle;
+					\begin{scope}
+						\clip (43,38)--(205,38)--(205,52)--(243,52)--(243,270)--(85,270)--(85,256)--(43,256)--cycle;
+						\shade[top color=black!88,bottom color=VLdo!45!black] (43,150) rectangle (243,270);
+						\foreach \v in {46,57,...,150}{\draw[white,line width=0.45pt] (43,\v)--(243,\v);}
+						\foreach \v in {161,172,...,268}{\draw[VLdo!70!black,line width=0.45pt] (43,\v)--(243,\v);}
 					\end{scope}
-					\draw[gray!50!black,thin] (78,103) ellipse (67 and 92);
-					\foreach \p in {(10,10),(145,10),(10,195),(145,195)}{\filldraw[fill=gray!40,draw=gray!60!black,line width=0.3pt] \p circle (4);}
+					% ốc bốn góc
+					\foreach \p in {(17,17),(271,17),(17,295),(271,295)}{\filldraw[fill=gray!35,draw=gray!60!black,line width=0.3pt] \p circle (6.5); \fill[gray!70!black] \p circle (2);}
+					% chiều chất lỏng trong dàn: mát (trên, sang phải), nóng (dưới, sang trái)
+					\foreach \u in {58,125,198,270}{\VLmuikhoi[top color=PTlam!60,bottom color=PTlam,draw=PTlamdam]{\u}{90}{0}{44}{7}{22}{17}}
+					\foreach \u in {150,226}{\VLmuikhoi[top color=VLdo!45,bottom color=VLdo!90,draw=VLdo!50!black]{\u}{214}{180}{44}{7}{22}{17}}
+				\end{scope}
+				% luồng khí nóng thoát ra
+				\foreach \x/\y/\l/\w/\h/\W in {1120/180/88/17/42/34,1192/221/100/20/48/40,1270/268/150/24/60/48}{
+					\VLmuikhoi[top color=red!65!VLdo!70,bottom color=VLdo!85!black,draw=VLdo!55!black]{\x}{\y}{30}{\l}{\w}{\h}{\W}
+				}
+				% ================= QUẠT =================
+				\begin{scope}[shift={(562,283)},yslant=-0.545]
+					% vành sau (lệch (42,-59))
+					\begin{scope}[shift={(42,-59)}]
+						\shade[left color=gray!10,right color=gray!30,draw=gray!55!black,line width=0.4pt,rounded corners=3.5pt] (0,0) rectangle (295,310);
+						\foreach \p in {(275,20),(275,290)}{\filldraw[fill=gray!35,draw=gray!60!black,line width=0.3pt] \p circle (6.5); \fill[gray!70!black] \p circle (2);}
+					\end{scope}
+					% thân trụ giữa hai vành
+					\shade[left color=gray!25,right color=gray!55,draw=gray!55!black,line width=0.35pt] (148,155) ++(-45:140) arc[start angle=-45,end angle=135,radius=140] -- ++(42,-59) arc[start angle=135,end angle=-45,radius=140] -- cycle;
+					% trục ốc nối hai vành (góc trên phải)
+					\draw[gray!60!black,line width=1.1pt] (275,20)--(317,-39);
+					\draw[gray!20,line width=0.4pt] (275,20)--(317,-39);
+					% vành trước: mép dày + mặt
+					\fill[gray!45,draw=gray!55!black,line width=0.35pt,rounded corners=3.5pt] (10,-14) rectangle (305,296);
+					\shade[left color=white,right color=gray!16,draw=gray!55!black,line width=0.5pt,rounded corners=3.5pt] (0,0) rectangle (295,310);
+					% lòng quạt
+					\begin{scope}
+						\clip (148,155) circle (133);
+						\fill[gray!38] (148,155) circle (133);
+						\shade[left color=gray!20,right color=gray!60] (190,96) circle (133);
+						\fill[gray!72] (190,96) circle (118);
+						% thanh đỡ mô-tơ phía sau
+						\foreach \a in {20,110,200,290}{\draw[gray!25,line width=1.6pt] (190,96)--++(\a:125);}
+					\end{scope}
+					% cánh quạt
+					\begin{scope}[shift={(150,152)}]
+						\foreach \a in {0,51.43,...,310}{
+							\shade[shading angle=\a+200,left color=white,right color=gray!22,draw=gray!45!black,line width=0.4pt]
+								(\a:38) .. controls (\a-10:72) and (\a-4:104) .. (\a+14:125) .. controls (\a+36:133) and (\a+66:131) .. (\a+86:110) .. controls (\a+86:82) and (\a+74:56) .. (\a+52:38) -- cycle;
+						}
+						\shade[left color=white,right color=gray!28,draw=gray!45!black,line width=0.4pt] (0,0) circle (42);
+						\draw[gray!50,line width=0.3pt] (0,0) circle (33);
+					\end{scope}
+					\draw[gray!55!black,line width=0.5pt] (148,155) circle (133);
+					% ốc bốn góc
+					\foreach \p in {(20,20),(275,20),(20,290),(275,290)}{\filldraw[fill=gray!35,draw=gray!60!black,line width=0.3pt] \p circle (7); \draw[gray!70!black,line width=0.3pt] \p ++(-4,-4)--++(8,8);}
 				\end{scope}
 				% luồng khí mát vào
-				\foreach \a/\b in {{(205,272)}/{(292,252)},{(245,318)}/{(328,300)},{(285,355)}/{(362,336)}}{\draw[-{Triangle[length=8pt,width=11pt]},line width=4.5pt,VLxanh] \a--\b;}
-				% ===== giá đỡ, CPU =====
-				\filldraw[fill=brown!45,draw=brown!40!black,thin] (95,500)--(160,478)--(215,502)--(150,526)--cycle;
-				\filldraw[fill=gray!30,draw=gray!50!black,thin] (40,470)--(80,452)--(150,470)--(225,448)--(255,462)--(190,488)--(160,545)--(130,545)--(140,492)--(55,488)--cycle;
-				\foreach \x/\y in {48/472,245/460,146/540}{\shade[top color=gray!15,bottom color=gray!55,draw=gray!50!black,line width=0.3pt] (\x-7,\y) rectangle (\x+7,\y-20); \filldraw[fill=gray!20,draw=gray!50!black,line width=0.3pt] (\x,\y-20) ellipse (8 and 4);}
-				% ===== bộ làm mát (bơm) =====
-				\shade[left color=VLdo!85!white,right color=VLxanh!80!white,draw=black!70,thin] (85,398)--(85,438) arc[start angle=180,end angle=0,x radius=55,y radius=22]--(195,398)--cycle;
-				\shade[left color=VLdo!60!white,right color=VLxanh!55!white,draw=black!70,thin] (140,398) ellipse (55 and 22);
-				\fill[white,opacity=0.35] (95,405) .. controls (110,420) and (120,425) .. (135,428)--(135,452) .. controls (118,450) and (103,442) .. (95,430)--cycle;
-				% ===== ống dẫn =====
-				\draw[line width=6.5pt,VLdo!55!black] (198,462) .. controls (360,522) and (590,452) .. (588,330) .. controls (588,300) and (584,282) .. (572,268);
-				\draw[line width=5pt,VLdo!85!white] (198,462) .. controls (360,522) and (590,452) .. (588,330) .. controls (588,300) and (584,282) .. (572,268);
-				\draw[white,line width=0.7pt,dash pattern=on 3pt off 7pt] (215,470) .. controls (360,518) and (585,450) .. (585,330);
-				\draw[line width=6.5pt,VLxanh!55!black] (198,440) .. controls (330,472) and (535,432) .. (566,330) .. controls (574,300) and (578,268) .. (576,246);
-				\draw[line width=5pt,VLxanh!40!white] (198,440) .. controls (330,472) and (535,432) .. (566,330) .. controls (574,300) and (578,268) .. (576,246);
-				\draw[white,line width=0.7pt,dash pattern=on 3pt off 7pt] (215,445) .. controls (330,470) and (530,432) .. (563,330);
-				\filldraw[fill=VLdo!80!white,draw=black!70,thin] (188,432) rectangle (210,470);
+				\foreach \x/\y in {554/510,626/560,699/602}{\VLmuikhoi[top color=VLxanh!55,bottom color=VLxanh!85!black,draw=VLxanh!50!black]{\x}{\y}{35}{165}{21}{58}{43}}
+				% ================= CPU, GIÁ ĐỠ =================
+				% đế mạch và CPU
+				\filldraw[fill=gray!8,draw=gray!55!black,line width=0.4pt] (128,985)--(270,925)--(412,990)--(270,1058)--cycle;
+				\filldraw[fill=VLdo!55!brown,draw=VLdo!40!black,line width=0.4pt] (165,984)--(270,940)--(378,988)--(270,1036)--cycle;
+				% giá đỡ chữ thập
+				\filldraw[fill=white,draw=gray!50!black,line width=0.45pt,rounded corners=1.5pt] (60,922)--(108,900)--(190,912)--(360,930)--(440,900)--(492,915)--(488,940)--(425,956)--(345,985)--(312,1050)--(305,1088)--(258,1082)--(248,1040)--(225,985)--(120,962)--(64,950)--cycle;
+				\foreach \x/\y in {86/925,466/918,280/1060}{
+					\shade[left color=white,right color=gray!45,draw=gray!50!black,line width=0.35pt] (\x-11,\y)--(\x-11,\y-26) arc[start angle=180,end angle=0,x radius=11,y radius=5]--(\x+11,\y) arc[start angle=0,end angle=-180,x radius=11,y radius=5]--cycle;
+					\filldraw[fill=gray!15,draw=gray!50!black,line width=0.35pt] (\x,\y-26) ellipse (11 and 5);
+					\draw[gray!50!black,line width=0.3pt] (\x-11,\y-12) arc[start angle=180,end angle=360,x radius=11,y radius=5];
+				}
+				% ================= BỘ LÀM MÁT =================
+				\shade[left color=red!70!VLdo,right color=VLxanh!60!black,middle color=VLdo!60!VLxanh,draw=black!75,line width=0.45pt] (163,838)--(163,925) arc[start angle=180,end angle=0,x radius=112,y radius=52]--(387,838) arc[start angle=0,end angle=180,x radius=112,y radius=52]--cycle;
+				\shade[left color=red!60!VLdo!85,right color=VLxanh!50!gray,middle color=VLdo!55!VLxanh!75,draw=black!75,line width=0.45pt] (275,838) ellipse (112 and 52);
+				\fill[white,opacity=0.3] (178,850) .. controls (190,875) and (215,885) .. (235,888)--(235,958) .. controls (212,955) and (188,942) .. (178,925)--cycle;
+				\fill[white,opacity=0.35] (215,812) .. controls (250,798) and (300,798) .. (330,810) .. controls (300,806) and (250,806) .. (215,812);
+				% ================= ỐNG DẪN =================
+				% ống nóng (dưới)
+				\draw[line width=0.218cm,VLdo!55!black] (392,968) .. controls (560,1025) and (860,965) .. (1050,822) .. controls (1180,722) and (1245,610) .. (1198,548) .. controls (1178,524) and (1140,520) .. (1104,523);
+				\draw[line width=0.18cm,VLdo!90] (392,968) .. controls (560,1025) and (860,965) .. (1050,822) .. controls (1180,722) and (1245,610) .. (1198,548) .. controls (1178,524) and (1140,520) .. (1104,523);
+				\draw[line width=0.03cm,VLdo!35,line cap=butt,dash pattern=on 0.12cm off 0.14cm] (420,975) .. controls (560,1018) and (860,958) .. (1047,815) .. controls (1170,718) and (1235,612) .. (1193,553);
+				% ống mát (trên)
+				\draw[line width=0.218cm,PTlamdam] (428,935) .. controls (600,978) and (860,902) .. (1040,762) .. controls (1150,677) and (1218,560) .. (1172,495) .. controls (1152,470) and (1125,465) .. (1100,468);
+				\draw[line width=0.18cm,PTlam] (428,935) .. controls (600,978) and (860,902) .. (1040,762) .. controls (1150,677) and (1218,560) .. (1172,495) .. controls (1152,470) and (1125,465) .. (1100,468);
+				\draw[line width=0.03cm,white,line cap=butt,dash pattern=on 0.12cm off 0.14cm] (455,940) .. controls (600,972) and (860,896) .. (1037,756) .. controls (1142,675) and (1208,562) .. (1167,500);
+				% miệng ống ở bộ tản nhiệt
+				\filldraw[fill=PTlam!55,draw=PTlamdam,line width=0.4pt,rotate around={-15:(1100,468)}] (1100,468) ellipse (9 and 21);
+				\filldraw[fill=VLdo!55,draw=VLdo!55!black,line width=0.4pt,rotate around={-15:(1104,523)}] (1104,523) ellipse (9 and 21);
+				% khớp nối ở bộ làm mát (hai đoạn ống ngắn có đai)
+				\draw[line width=0.25cm,line cap=butt,PTlamdam!75!black] (383,902)--(432,937);
+				\draw[line width=0.21cm,line cap=butt,PTlamdam!70!PTlam] (383,902)--(432,937);
+				\draw[line width=0.05cm,line cap=butt,white,opacity=0.45] (390,897)--(437,931);
+				\draw[line width=0.25cm,line cap=butt,VLdo!50!black] (347,935)--(396,970);
+				\draw[line width=0.21cm,line cap=butt,red!55!VLdo!90!black] (347,935)--(396,970);
+				\draw[line width=0.05cm,line cap=butt,white,opacity=0.4] (354,930)--(401,964);
 				% nhãn
-				\node[align=center] at (590,30) {Bộ tản nhiệt};
-				\node at (330,105) {Quạt};
-				\node at (160,358) {Bộ làm mát};
-				\node at (470,535) {Ống dẫn};
-				\node at (45,565) {CPU};
+				\node at (1085,78) {Bộ tản nhiệt};
+				\node at (512,208) {Quạt};
+				\node at (290,735) {Bộ làm mát};
+				\node at (890,1052) {Ống dẫn};
+				\node at (125,1112) {CPU};
 			\end{tikzpicture}
 		\end{minipage}
 		\par\noindent
