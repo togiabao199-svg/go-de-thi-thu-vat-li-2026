@@ -10,13 +10,31 @@
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
 % Macro riêng của đề:
-% lon kim loại nằm nghiêng (thân trụ màu #4, nắp xám), tâm (#1,#2), góc xoay #3: \NKlon{x}{y}{góc}{màu}
-\newcommand{\NKlon}[4]{%
-	\begin{scope}[shift={(#1,#2)},rotate=#3]
-		\fill[#4!60!black] (0,-0.2) ellipse (0.17 and 0.06);
-		\shade[left color=#4!60!black,right color=#4!70!black,middle color=#4!45!white] (-0.17,-0.2) rectangle (0.17,0.2);
-		\filldraw[fill=gray!45,draw=gray!70!black,very thin] (0,0.2) ellipse (0.17 and 0.07);
-		\fill[gray!25] (0,0.21) ellipse (0.12 and 0.045);
+\definecolor{NKnavy}{RGB}{40,72,122}% con lăn băng chuyền
+\definecolor{NKtroi}{RGB}{78,160,222}% tay đỡ băng chuyền (xanh da trời)
+\definecolor{NKbang}{RGB}{122,142,172}% dây băng tải
+\definecolor{NKlonla}{RGB}{112,178,52}% lon xanh lá
+% lon kim loại bị bóp méo ở giữa, thấy đáy lon (đĩa xám, phía -x) và miệng lon (vành xám, phía +x):
+% \NKlon{x}{y}{góc xoay}{màu thân}{bán kính lon}; tâm lon ở (x,y), lon dài khoảng 3,1 lần bán kính
+\newcommand{\NKlon}[5]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#3,scale=#5]
+		\shade[top color=#4!88!white,bottom color=#4!68!black] (-1.0,-0.95) .. controls (-0.4,-0.9) and (-0.25,-0.55) .. (0.1,-0.6) .. controls (0.45,-0.65) and (0.7,-0.95) .. (1.15,-0.9) .. controls (1.5,-0.6) and (1.5,0.55) .. (1.15,0.85) .. controls (0.7,0.9) and (0.45,0.6) .. (0.1,0.55) .. controls (-0.25,0.5) and (-0.4,0.9) .. (-1.0,0.95) .. controls (-1.6,0.6) and (-1.6,-0.6) .. cycle;
+		\draw[#4!45!black,line width=0.3pt] (-1.0,-0.95) .. controls (-0.4,-0.9) and (-0.25,-0.55) .. (0.1,-0.6) .. controls (0.45,-0.65) and (0.7,-0.95) .. (1.15,-0.9) (1.15,0.85) .. controls (0.7,0.9) and (0.45,0.6) .. (0.1,0.55) .. controls (-0.25,0.5) and (-0.4,0.9) .. (-1.0,0.95);
+		\draw[#4!40!black,line width=0.3pt] (0.1,-0.6) .. controls (0.3,-0.2) and (-0.1,0.2) .. (0.1,0.55) (0.1,-0.6)--(0.55,-0.15) (0.1,0.55)--(-0.3,0.15);
+		\fill[white,opacity=0.4] (-0.5,-0.78) .. controls (-0.2,-0.7) and (0.2,-0.42) .. (0.85,-0.74) .. controls (0.3,-0.25) and (-0.2,-0.45) .. cycle;
+		\filldraw[fill=gray!42,draw=gray!75!black,line width=0.3pt] (1.15,-0.02) ellipse (0.37 and 0.87);
+		\fill[gray!80!black] (1.21,-0.02) ellipse (0.24 and 0.66);
+		\shade[top color=gray!32,bottom color=gray!66] (-1.0,0) ellipse (0.62 and 0.95);
+		\draw[gray!72!black,line width=0.3pt] (-1.0,0) ellipse (0.62 and 0.95);
+		\draw[gray!28,line width=0.3pt] (-1.0,0) ellipse (0.45 and 0.72);
+	\end{scope}}
+% quả ớt chuông (thân có múi, cuống): \NKotchuong{x}{y}{màu}{cỡ}; tâm quả ở (x,y), quả cao khoảng 2,6 lần cỡ
+\newcommand{\NKotchuong}[4]{%
+	\begin{scope}[shift={(#1,#2)},scale=#4]
+		\draw[green!28!black,line width=0.9pt] (0.05,-0.85) .. controls (0.1,-1.3) and (0.3,-1.45) .. (0.65,-1.5);
+		\shade[top color=#3!70!white,bottom color=#3!80!black] (-1.05,-0.3) .. controls (-1.1,-1.15) and (-0.3,-1.2) .. (0,-0.8) .. controls (0.3,-1.2) and (1.1,-1.15) .. (1.05,-0.3) .. controls (1.05,0.6) and (0.6,1.2) .. (0.25,1.1) .. controls (0.1,1.25) and (-0.15,1.25) .. (-0.3,1.1) .. controls (-0.7,1.2) and (-1.05,0.6) .. cycle;
+		\draw[#3!45!black,line width=0.3pt] (0,-0.8) .. controls (-0.25,-0.2) and (-0.25,0.6) .. (-0.3,1.1) (0,-0.8) .. controls (0.3,-0.2) and (0.3,0.6) .. (0.25,1.1);
+		\fill[white,opacity=0.45] (-0.75,-0.55) .. controls (-0.6,-0.85) and (-0.4,-0.9) .. (-0.3,-0.7) .. controls (-0.5,-0.6) and (-0.6,-0.2) .. (-0.7,0.2) .. controls (-0.85,0) and (-0.85,-0.3) .. cycle;
 	\end{scope}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT NGUYỄN KHUYẾN -- LTT -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
@@ -159,39 +177,56 @@
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.38\linewidth}
 			\centering
-			\begin{tikzpicture}[scale=0.92,line join=round,line cap=round,font=\footnotesize]
-				% bóng đổ
-				\fill[gray!18] (1.3,0.42) ellipse (1.2 and 0.38);
-				\fill[gray!18] (3.0,0.82) ellipse (1.35 and 0.45);
-				% dây cáp
-				\draw[gray!55!black,line width=1.3pt] (-0.3,1.75) .. controls (0.3,1.5) and (0.6,1.15) .. (0.55,0.95);
-				\draw[white,line width=0.4pt] (-0.3,1.78) .. controls (0.3,1.53) and (0.6,1.18) .. (0.56,0.98);
-				% đế sạc (hai đĩa liền)
-				\begin{scope}[yshift=-0.07cm]
-					\fill[black!80] (1.2,0.6) ellipse (1.0 and 0.4);
-					\fill[black!80] (2.95,1.0) ellipse (1.15 and 0.46);
-					\fill[black!80] (1.0,0.25)--(3.1,0.55)--(3.3,1.45)--(1.2,1.0)--cycle;
+			\begin{tikzpicture}[x=0.0178cm,y=-0.0178cm,line join=round,line cap=round,font=\footnotesize]
+				% đế sạc đôi hình ô van (hai đĩa sạc): đường bao mặt trên
+				\def\NKde{(147.1,166) arc[start angle=50.1,end angle=230.1,x radius=61,y radius=30] -- (160.1,87.2) arc[start angle=224.3,end angle=404.3,x radius=60,y radius=24] -- cycle}
+				% ----- bóng đổ trên mặt bàn -----
+				\begin{scope}[shift={(5,13)}]\fill[gray!25] \NKde;\end{scope}
+				\begin{scope}[shift={(2,10)}]\fill[gray!40] \NKde;\end{scope}
+				\fill[gray!25] (236,137)--(252,149)--(321,112)--(300,104)--cycle;
+				% ----- dây cáp và đầu cắm -----
+				\draw[black!72,line width=2pt] (6,66) .. controls (35,76) and (60,87) .. (84,96);
+				\draw[gray!35,line width=0.45pt] (6,65.2) .. controls (35,75.2) and (60,86.2) .. (82,94.6);
+				\draw[black!88,line width=3.4pt,line cap=butt] (80,94.6)--(98,101.2);
+				% ----- đế sạc: thành bên rồi mặt trên -----
+				\begin{scope}[shift={(0,7)}]\fill[black!93] \NKde;\end{scope}
+				\shade[top color=black!58,bottom color=black!86] \NKde;
+				% viền sáng mép đế, vành bóng trên đĩa sạc bên trái
+				\draw[gray!50,line width=0.5pt] (47.2,146) arc[start angle=174,end angle=50.1,x radius=61,y radius=30] -- (232,126.5);
+				\draw[gray!55,line width=0.5pt,opacity=0.75] (59,148) arc[start angle=170,end angle=62,x radius=50,y radius=23.5];
+				\draw[gray!30,line width=0.35pt,opacity=0.7] (50,153) arc[start angle=170,end angle=58,x radius=60,y radius=29];
+				% ----- hộp tai nghe (trắng) trên đĩa sạc trái -----
+				\fill[black,opacity=0.4] (65,131) .. controls (65,158) and (90,166) .. (124,161) .. controls (158,156) and (165,148) .. (164,126) -- cycle;
+				\def\NKhop{(62,128) .. controls (61,104) and (68,100) .. (108,98) .. controls (150,96) and (160,100) .. (160,120) .. controls (160,144) and (156,150) .. (124,155) .. controls (86,160) and (63,152) .. cycle}
+				\shade[top color=gray!5,bottom color=gray!40] \NKhop;
+				\draw[gray!62,line width=0.4pt] \NKhop;
+				% mặt trên của hộp (sáng hơn thành bên)
+				\shade[left color=white,right color=gray!6] (65,123) .. controls (64,105) and (71,103) .. (108,101) .. controls (147,99) and (157,102) .. (157,117) .. controls (157,131) and (150,135) .. (122,139) .. controls (88,143) and (66,139) .. cycle;
+				\draw[gray!28,line width=0.35pt] (65.3,127) .. controls (67,140) and (90,143.5) .. (122,139.8) .. controls (148,136) and (156.5,131) .. (157.3,120);
+				% ----- điện thoại đặt trên đĩa sạc phải -----
+				% thân máy (cạnh bên), mặt kính
+				\fill[black!90,rounded corners=3.4pt] (106.5,90.5)--(171,58)--(318.5,108.5)--(251.5,144.5)--cycle;
+				\shade[left color=white,right color=gray!14,rounded corners=3.4pt] (108,85)--(172,52)--(317,102)--(251,138)--cycle;
+				\begin{scope}
+					\clip[rounded corners=3.4pt] (108,85)--(172,52)--(317,102)--(251,138)--cycle;
+					% đĩa sạc nhìn xuyên qua máy
+					\shade[top color=black!72,bottom color=black!93] \NKde;
+					\draw[gray!55,line width=0.4pt,opacity=0.6] (160,96) arc[start angle=200,end angle=330,x radius=46,y radius=15];
+					% biểu tượng pin đang sạc (xanh lá) và các dòng chữ nhỏ trên màn hình
+					\fill[green!68!black] (203,97.5)--(229,83.5)--(240,88.5)--(214,103)--cycle;
+					\fill[green!45!white,opacity=0.75] (203,97.5)--(229,83.5)--(234,85.8)--(208,100)--cycle;
+					\draw[white,line width=0.45pt] (203,97.5)--(229,83.5)--(240,88.5)--(214,103)--cycle;
+					\draw[white,line width=0.8pt] (236.5,84)--(241.5,86.4);
+					\draw[gray!55,line width=0.4pt] (196,104) circle (2.6);
+					\foreach \a/\b/\l in {223/104.5/1,228/107.5/0.75,233/110.5/1,239/113.5/0.65,214/108.5/0.55,220/111.5/0.85}{
+						\draw[gray!58,line width=0.4pt] (\a,\b)--++(13*\l,-7*\l);}
+					% phản quang mặt kính
+					\fill[white,opacity=0.3] (112,84)--(172,54)--(212,68)--(150,98)--cycle;
 				\end{scope}
-				\shade[top color=black!55,bottom color=black!85] (1.2,0.6) ellipse (1.0 and 0.4);
-				\shade[top color=black!55,bottom color=black!85] (2.95,1.0) ellipse (1.15 and 0.46);
-				\shade[top color=black!55,bottom color=black!85] (1.05,0.22)--(3.0,0.56)--(3.2,1.44)--(1.3,0.99)--cycle;
-				\draw[white,opacity=0.35,thin] (0.35,0.75) arc[start angle=160,end angle=230,x radius=1.0,y radius=0.4];
-				% hộp tai nghe
-				\shade[top color=white,bottom color=gray!40] (0.62,0.62) .. controls (0.6,1.02) and (0.75,1.12) .. (1.2,1.12) .. controls (1.65,1.12) and (1.8,1.02) .. (1.78,0.62) .. controls (1.75,0.42) and (1.6,0.36) .. (1.2,0.36) .. controls (0.8,0.36) and (0.65,0.42) .. cycle;
-				\draw[gray!55,thin] (0.62,0.62) .. controls (0.6,1.02) and (0.75,1.12) .. (1.2,1.12) .. controls (1.65,1.12) and (1.8,1.02) .. (1.78,0.62) .. controls (1.75,0.42) and (1.6,0.36) .. (1.2,0.36) .. controls (0.8,0.36) and (0.65,0.42) .. cycle;
-				\draw[gray!50,thin] (0.64,0.86) .. controls (0.9,0.8) and (1.5,0.8) .. (1.76,0.86);
-				\fill[white,opacity=0.8] (0.95,1.0) ellipse (0.25 and 0.06);
-				% điện thoại
-				\fill[black!35] (2.0,0.97)--(3.62,0.5)--(4.3,1.24)--(2.68,1.72)--cycle;
-				\shade[top color=black!70,bottom color=black!95,rounded corners=2pt] (2.0,1.03)--(3.62,0.56)--(4.3,1.3)--(2.68,1.78)--cycle;
-				\shade[top color=gray!55!black,bottom color=black!90] (2.17,1.04)--(3.58,0.63)--(4.13,1.26)--(2.72,1.67)--cycle;
-				\fill[white,opacity=0.18] (2.2,1.06)--(2.9,0.86)--(3.35,1.42)--(2.73,1.62)--cycle;
-				% biểu tượng pin xanh
-				\begin{scope}[shift={(3.27,1.17)},rotate=-16]
-					\draw[gray!70,thin] (-0.32,-0.12) rectangle (0.32,0.12);
-					\fill[green!65!black] (-0.29,-0.09) rectangle (0.29,0.09);
-					\fill[green!80!white,opacity=0.6] (-0.29,0.01) rectangle (0.29,0.09);
-				\end{scope}
+				% viền máy: hai cạnh xa mảnh, hai cạnh gần dày có vệt sáng
+				\draw[gray!70,line width=0.55pt,rounded corners=3.4pt] (108,85)--(172,52)--(317,102);
+				\draw[black!92,line width=1.7pt,rounded corners=3.4pt] (108,85.5)--(251,139.5)--(317,103.5);
+				\draw[gray!25,line width=0.35pt] (115,90.5)--(250.5,142)--(313,108);
 			\end{tikzpicture}
 		\end{minipage}
 		\loigiai{
@@ -358,48 +393,85 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{11.4\baselineskip}
+	\NeedspaceCau{10.6\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		% giuhinh
-		\begin{minipage}[t]{0.48\linewidth}
+		\begin{minipage}[t]{0.49\linewidth}
 			Việc phân loại chất thải rắn sinh hoạt (lon nước ngọt, kim loại nói chung) nhằm thúc đẩy tăng cường tái sử dụng, tái chế chất thải, sản phẩm thải bỏ, tận dụng tối đa giá trị, kéo dài vòng đời của sản phẩm, vật liệu. Hình bên là dây chuyền xử lí rác thải bằng từ tính (bên trong có nam châm). Hãy cho biết những chất thải rắn ở trên dây chuyền khi rơi xuống vị trí 1 thuộc loại chất thải rắn của kim loại nào?
 		\end{minipage}\hfill
-		\begin{minipage}[t]{0.42\linewidth}
+		\begin{minipage}[t]{0.41\linewidth}
 			\centering
-			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},scale=0.92,line join=round,line cap=round,font=\footnotesize]
-				% dải băng chuyền phía sau
-				\fill[VLxanh!8] (0,-0.12) rectangle (4.05,2.12);
-				% ru-lô
-				\foreach \x in {1.3,4.05}{\shade[inner color=VLxanh!80!black,outer color=VLxanh!45!black] (\x,1.0) circle (1.0);}
-				% băng chuyền (vòng qua ru-lô phải)
-				\fill[VLxanh!25!white] (0,1.92)--(4.05,1.92) arc[start angle=90,end angle=-90,radius=0.92]--(0,0.08)--(0,0.24)--(4.05,0.24) arc[start angle=-90,end angle=90,radius=0.76]--(0,1.76)--cycle;
-				\draw[VLxanh!50!black,thin] (0,1.92)--(4.05,1.92) arc[start angle=90,end angle=-90,radius=0.92]--(0,0.08);
-				\draw[white,opacity=0.7] (0,1.86)--(4.05,1.86);
-				% dải sáng giữa
-				\shade[top color=VLxanh!35!white,bottom color=VLxanh!60!white] (0,0.62) rectangle (4.05,1.38);
-				\shade[top color=VLxanh!35!white,bottom color=VLxanh!60!white] (4.05,0.62) arc[start angle=-90,end angle=90,radius=0.38]--cycle;
-				\foreach \x in {1.3,4.05}{\fill[VLxanh!30!black] (\x,1.0) circle (0.2);}
-				% rác trên băng chuyền
-				\fill[gray!30,opacity=0.9] (0.45,1.95)--(0.75,2.4)--(1.1,2.35)--(1.05,1.95)--cycle;
-				\draw[gray!60,thin] (0.45,1.95)--(0.75,2.4)--(1.1,2.35)--(1.05,1.95);
-				\fill[orange!60!yellow] (1.15,1.97)--(1.32,2.62)--(1.48,1.97)--cycle;
-				\fill[magenta!30] (1.32,2.0) ellipse (0.22 and 0.07);
-				\NKlon{1.75}{2.17}{-75}{VLxanh}
-				\fill[VLxanh!20!white,draw=gray!60,thin] (2.1,1.95) rectangle (2.55,2.18);
-				\NKlon{2.75}{2.17}{80}{VLdo}
-				\fill[green!55!black] (3.05,1.95) rectangle (3.2,2.4);
-				\fill[orange!80] (3.3,2.0) ellipse (0.28 and 0.09);
-				\fill[green!45!black] (3.65,2.0) ellipse (0.2 and 0.08);
-				\NKlon{4.1}{2.17}{-80}{VLluc}
-				% lon bám theo ru-lô
-				\NKlon{4.75}{2.0}{-40}{orange}
-				\NKlon{5.12}{1.15}{-10}{VLdo}
-				% lon rơi xuống
-				\NKlon{4.5}{-0.85}{-70}{VLxanh}
-				\NKlon{5.45}{-0.45}{30}{VLdo}
-				\node at (4.6,-1.32) {$1$};
-				\node at (5.85,-0.6) {$2$};
-				\node[font=\scriptsize] at (1.85,-0.42) {dây chuyền phân loại rác bằng từ trường};
+			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},x=0.011cm,y=-0.011cm,line join=round,line cap=round,font=\footnotesize]
+				% ----- lòng băng chuyền (nền nhạt), hai con lăn -----
+				\shade[top color=VLxanh!14!white,bottom color=VLxanh!3!white] (12,66) rectangle (492,198);
+				\foreach \x in {165,492}{
+					\shade[inner color=NKnavy!78!white,outer color=NKnavy] (\x,132) circle (66);
+					\draw[NKnavy!80!black,line width=0.4pt] (\x,132) circle (66);}
+				% ----- tay đỡ (dải xanh sáng nối hai trục) -----
+				\shade[top color=NKtroi!80!white,bottom color=NKtroi!92!black] (12,93.5)--(492,93.5) arc[start angle=-90,end angle=90,radius=38.5]--(12,170.5)--cycle;
+				\draw[NKnavy,line width=0.5pt] (12,93.5)--(492,93.5) arc[start angle=-90,end angle=90,radius=38.5]--(12,170.5);
+				\draw[white,opacity=0.55,line width=0.6pt] (12,97)--(492,97) arc[start angle=-90,end angle=-10,radius=35];
+				\foreach \x in {165,492}{
+					\shade[inner color=NKnavy!85!white,outer color=NKnavy!90!black] (\x,132) circle (19);
+					\draw[NKnavy!60!black,line width=0.4pt] (\x,132) circle (19);
+					\fill[white,opacity=0.15] (\x-6,125) circle (5);}
+				% ----- dây băng tải: nhánh trên dày, vòng qua con lăn phải, nhánh dưới mảnh -----
+				\shade[top color=NKbang!70!white,bottom color=NKbang!95!black] (12,53)--(492,53) arc[start angle=-90,end angle=90,radius=74.5]--(12,202)--(12,198)--(492,198) arc[start angle=90,end angle=-90,radius=66]--(12,66)--cycle;
+				\draw[NKnavy!70!black,line width=0.5pt] (12,53)--(492,53) arc[start angle=-90,end angle=90,radius=74.5]--(12,202) (12,198)--(492,198) arc[start angle=90,end angle=-90,radius=66]--(12,66);
+				\draw[white,opacity=0.7,line width=0.5pt] (12,56.5)--(492,56.5) arc[start angle=-90,end angle=-25,radius=71];
+				% ----- rác trên băng chuyền (từ trái sang phải) -----
+				% mảnh hộp nhựa trong
+				\fill[gray!16] (52,58)--(60,40)--(78,31)--(98,38)--(104,56)--(92,67)--(66,66)--cycle;
+				\draw[gray!58,line width=0.3pt] (52,58)--(60,40)--(78,31)--(98,38)--(104,56)--(92,67)--(66,66)--cycle (60,40)--(78,50)--(98,38) (78,50)--(92,67) (52,58)--(78,50) (78,31)--(78,50) (78,50)--(104,56);
+				\fill[white] (63,43)--(76,35)--(75,48)--cycle;
+				\fill[white,opacity=0.8] (82,52)--(98,42)--(100,54)--cycle;
+				% kem ốc quế rơi úp (kem hồng chảy trên băng)
+				\fill[magenta!28!white] (92,58) .. controls (96,49) and (112,50) .. (120,47) .. controls (132,43) and (150,50) .. (154,57) .. controls (150,64) and (128,65) .. (112,64) .. controls (102,65) and (93,63) .. cycle;
+				\fill[magenta!14!white] (104,56) .. controls (112,51) and (126,50) .. (134,55) .. controls (124,58) and (112,59) .. cycle;
+				\shade[left color=orange!45!yellow,right color=orange!80!brown] (147,9)--(115,45)--(139,55)--cycle;
+				\begin{scope}
+					\clip (147,9)--(115,45)--(139,55)--cycle;
+					\foreach \k in {0,...,7}{\draw[orange!55!black,line width=0.25pt] (110+6*\k,60)--(128+6*\k,5) (160-6*\k,60)--(118-6*\k,20);}
+				\end{scope}
+				\draw[orange!50!black,line width=0.3pt] (147,9)--(115,45)--(139,55)--cycle;
+				% lon xanh dương
+				\NKlon{166}{37}{32}{VLxanh}{15}
+				% chai nhựa bóp méo (xanh nhạt, trong)
+				\fill[VLxanh!16!white] (200,46)--(207,35)--(222,29)--(238,32)--(246,43)--(238,54)--(214,55)--cycle;
+				\draw[VLxanh!45!gray,line width=0.3pt] (200,46)--(207,35)--(222,29)--(238,32)--(246,43)--(238,54)--(214,55)--cycle (207,35)--(220,43)--(238,32) (220,43)--(214,55) (220,43)--(246,43);
+				\fill[white,opacity=0.8] (210,38)--(220,32)--(219,41)--cycle;
+				\fill[VLxanh!45!gray] (196,43) rectangle (201,50);
+				% lon đỏ
+				\NKlon{266}{34}{38}{VLdo}{15.5}
+				% vỏ tôm, xương cá (hồng nhạt) nằm trên băng
+				\fill[orange!30!pink] (226,61) .. controls (232,53) and (246,52) .. (252,58) .. controls (244,57) and (236,59) .. (232,64) -- cycle;
+				\draw[orange!45!pink!80!black,line width=0.3pt] (226,61) .. controls (232,53) and (246,52) .. (252,58) (234,56)--(236,60) (240,55)--(241,59) (246,55.5)--(246,59);
+				\fill[orange!22!pink] (262,64) .. controls (270,57) and (286,56) .. (298,61) .. controls (288,61) and (274,62) .. (268,66) -- cycle;
+				% vỏ chuối
+				\fill[yellow!85!orange] (284,52) .. controls (286,43) and (294,40) .. (300,42) .. controls (296,46) and (296,52) .. (300,58) .. controls (294,60) and (287,58) .. cycle;
+				\draw[yellow!50!black,line width=0.25pt] (286,51) .. controls (289,45) and (294,42) .. (300,42);
+				% ớt chuông xanh
+				\NKotchuong{309}{27}{green!45!black}{13}
+				% củ cà rốt
+				\shade[top color=orange!70!white,bottom color=orange!90!red] (318,44) .. controls (326,34) and (344,31) .. (354,37) .. controls (356,43) and (350,48) .. (344,48) .. controls (334,49) and (324,49) .. cycle;
+				\draw[orange!60!black,line width=0.25pt] (328,40)--(330,44) (336,37)--(338,42) (345,36)--(346,40);
+				% ớt chuông cam
+				\NKotchuong{365}{25}{orange!90!yellow}{13}
+				% rau lá xanh
+				\foreach \a/\b/\g in {356/50/20,368/52/-15,380/47/35,388/53/-30,372/44/60}{
+					\fill[green!42!black,rotate around={\g:(\a,\b)}] (\a-10,\b) .. controls (\a-4,\b-7) and (\a+5,\b-6) .. (\a+10,\b) .. controls (\a+5,\b+5) and (\a-4,\b+6) .. cycle;
+					\draw[green!75!black,line width=0.25pt,rotate around={\g:(\a,\b)}] (\a-9,\b)--(\a+9,\b);}
+				% lon xanh lá
+				\NKlon{416}{39}{33}{NKlonla}{15.5}
+				% ----- lon sắt bị nam châm hút, bám theo băng tải vòng qua con lăn -----
+				\NKlon{533}{48}{14}{VLdong!60!orange}{15.5}
+				\NKlon{580}{115}{-45}{VLdo}{15.5}
+				% ----- lon rơi xuống -----
+				\NKlon{576}{230}{-83}{VLdo}{15}
+				\NKlon{484}{257}{38}{VLxanh}{15.5}
+				\node[font=\footnotesize\bfseries] at (504,291) {1};
+				\node[font=\footnotesize\bfseries] at (616,246) {2};
+				\node[font=\scriptsize,anchor=west,inner sep=0pt] at (16,223) {dây chuyền phân loại rác bằng từ trường};
 			\end{tikzpicture}
 		\end{minipage}
 		\choice
@@ -485,7 +557,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{31.3\baselineskip}
+	\NeedspaceCau{32.3\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1-2]
@@ -493,47 +565,62 @@
 	\begin{ex}%[VL12-C3-VD]
 		% KIỂM TRA: ý b) bản gốc ghi "cường độ dòng điện ... là 3 V" (sai đơn vị); sửa thành 3 A, chấm Đúng (I = 12/(3,5 + 0,5) = 3 A).
 		% giuhinh
-		\begin{minipage}[t]{0.66\linewidth}
+		\begin{minipage}[t]{0.6\linewidth}
 			Một bộ thiết bị bao gồm một sợi dây dẫn điện đồng chất, tiết diện đều, một nam châm, một chiếc cân, một bộ nguồn điện có suất điện động không đổi (có gắn sẵn các đầu và một công tắc điện K điện trở không đáng kể). Sợi dây có tiết diện $S=3{,}5\cdot 10^{-9}~\text{m}^2$, chiều dài $L=72{,}0$~cm và điện trở được xác định bằng công thức $R=1{,}7\cdot 10^{-8}\dfrac{L}{S}$, trong đó $L$ tính bằng m, $S$ tính bằng m$^2$ và $R$ tính bằng $\Omega$. Bộ nguồn điện có suất điện động $\mathscr{E}=12{,}0$~V và điện trở trong $r=0{,}5~\Omega$. Nối sợi dây vào bộ nguồn điện qua công tắc K. Để xác định cảm ứng từ giữa hai cực của nam châm, một học sinh đã uốn sợi dây dẫn điện thành khung dây và bố trí thí nghiệm như hình bên (khung dây được giữ bởi hai chốt A, B).
 		\end{minipage}\hfill
-		\begin{minipage}[t]{0.24\linewidth}
+		\begin{minipage}[t]{0.3\linewidth}
 			\centering
-				\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},scale=0.54,line join=round,line cap=round,font=\footnotesize]
-					\fill[gray!12] (-0.4,0.35)--(5.6,0.35)--(7.13,1.466)--(1.13,1.466)--cycle;
-					\shade[top color=gray!30,bottom color=gray!55] (-0.4,0) rectangle (5.6,0.35);
-					\fill[gray!60] (5.6,0)--(7.13,1.116)--(7.13,1.466)--(5.6,0.35)--cycle;
-					\draw[thick] (-0.4,0) rectangle (5.6,0.35) (-0.4,0.35)--(1.13,1.466)--(7.13,1.466)--(5.6,0.35) (5.6,0)--(7.13,1.116)--(7.13,1.466);
-					\node at (2.6,0.17) {CÂN};
-					\fill[VLxanh!45!black!60!white] (4.655,0.536)--(5.505,1.156)--(5.505,3.556)--(4.655,2.936)--cycle;
-					\fill[VLdo!22!white] (0.655,2.936)--(1.655,2.936)--(2.505,3.556)--(1.505,3.556)--cycle;
-					\fill[VLxanh!22!white] (3.655,2.936)--(4.655,2.936)--(5.505,3.556)--(4.505,3.556)--cycle;
-					\fill[gray!25] (1.655,1.486)--(3.655,1.486)--(4.505,2.106)--(2.505,2.106)--cycle;
-					\fill[VLdo!45!white] (1.655,1.486)--(2.505,2.106)--(2.505,3.556)--(1.655,2.936)--cycle;
-					\begin{scope}\clip (0.655,0.536)--(4.655,0.536)--(4.655,2.936)--(3.655,2.936)--(3.655,1.486)--(1.655,1.486)--(1.655,2.936)--(0.655,2.936)--cycle;
-					\shade[top color=VLdo!45!white,bottom color=VLdo!70!white] (0.655,0.536) rectangle (2.655,2.936);
-					\shade[top color=VLxanh!40!white,bottom color=VLxanh!65!white] (2.655,0.536) rectangle (4.655,2.936);
-					\end{scope}
-					\draw[thick] (0.655,0.536)--(4.655,0.536)--(4.655,2.936)--(3.655,2.936)--(3.655,1.486)--(1.655,1.486)--(1.655,2.936)--(0.655,2.936)--cycle;
-					\draw[thick] (0.655,2.936)--(1.505,3.556)--(2.505,3.556)--(1.655,2.936) (2.505,3.556)--(2.505,2.106)--(1.655,1.486);
-					\draw[thick] (2.505,2.106)--(3.655,2.106);
-					\draw[thick] (3.655,2.936)--(4.505,3.556)--(5.505,3.556)--(4.655,2.936) (5.505,3.556)--(5.505,1.156)--(4.655,0.536);
-					\node[font=\footnotesize\bfseries] at (1.435,2.686) {N};
-					\node[font=\footnotesize\bfseries] at (3.875,2.686) {S};
-					\draw[VLdong!75!black,line width=1.3pt] (2.155,3.736)--(2.155,2.436)--(3.005,3.056)--(3.005,4.806);
-					\draw[thick] (2.155,3.736)--(2.248,3.853);
-					\fill (2.248,3.853) circle (1.2pt);
-					\draw[thick] (2.248,3.853)--(2.294,4.264);
-					\draw[thick] (2.497,4.167)--(2.59,4.284);
-					\draw[thick] (2.449,4.396)--(2.731,4.172);
-					\draw[line width=1.6pt] (2.582,4.418)--(2.723,4.306);
-					\draw[thick] (2.605,4.592)--(2.887,4.368);
-					\draw[line width=1.6pt] (2.738,4.614)--(2.879,4.502);
-					\draw[thick] (2.653,4.362)--(2.746,4.48);
-					\draw[thick] (2.808,4.558)--(3.005,4.806);
-					\node[inner sep=1pt] at (2.611,3.859) {K};
-					\fill (2.155,3.736) circle (2pt) (3.005,4.806) circle (2pt);
-					\node[left,inner sep=3pt] at (2.155,3.736) {A};
-					\node[above right,inner sep=2pt] at (3.005,4.806) {B};
+				\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},x=0.0088cm,y=-0.0088cm,line join=round,line cap=round,font=\footnotesize]
+					% ----- cân: tấm phẳng nhìn xiên -----
+					\fill[black,opacity=0.10] (14,452)--(470,452)--(572,304)--(563,299)--(463,445)--(10,445)--cycle;
+					\shade[top color=gray!8,bottom color=gray!28] (10,406)--(463,406)--(563,260)--(110,260)--cycle;
+					\shade[top color=gray!55,bottom color=gray!78] (463,406)--(563,260)--(563,299)--(463,445)--cycle;
+					\shade[top color=gray!22,bottom color=gray!48] (10,406) rectangle (463,445);
+					\draw[white,line width=0.8pt,opacity=0.9] (13,409)--(460,409);
+					\draw[thick] (10,406) rectangle (463,445) (10,406)--(110,260)--(563,260)--(463,406) (463,445)--(563,299)--(563,260);
+					\node at (236,426) {CÂN};
+					% bóng đổ của nam châm trên mặt cân
+					\fill[black,opacity=0.16] (98,370)--(425,370)--(486,318)--(520,318)--(462,378)--(104,378)--cycle;
+					% ----- nam châm chữ C (cực N bên trái, S bên phải) -----
+					% mặt bên phải
+					\shade[top color=VLxanh!60!black,bottom color=VLxanh!40!black] (425,200)--(486,148)--(486,318)--(425,370)--cycle;
+					% mặt trên hai má cực
+					\shade[left color=VLdo!20!white,right color=VLdo!38!white] (98,200)--(213,200)--(274,148)--(159,148)--cycle;
+					\shade[left color=VLxanh!14!white,right color=VLxanh!30!white] (317,200)--(425,200)--(486,148)--(378,148)--cycle;
+					% đáy khe (mặt trên phần đế), thành trái của khe, mặt trong má cực N
+					\shade[left color=VLdo!36!white,right color=VLdo!26!white] (160,312)--(221,260)--(265,260)--(265,312)--cycle;
+					\shade[left color=VLxanh!20!white,right color=VLxanh!32!white] (265,312)--(265,260)--(372,260)--(372,312)--cycle;
+					\shade[top color=VLdo!75!black,bottom color=VLdo!55!black] (160,240)--(221,240)--(221,260)--(160,312)--cycle;
+					\shade[top color=VLdo!80!black,bottom color=VLdo!60!black] (213,200)--(274,148)--(274,188)--(213,240)--cycle;
+					% mặt trước
+					\shade[top color=VLdo!46!white,bottom color=VLdo!82!white] (98,200)--(213,200)--(213,240)--(160,240)--(160,312)--(265,312)--(265,370)--(98,370)--cycle;
+					\shade[top color=VLxanh!26!white,bottom color=VLxanh!56!white] (317,200)--(425,200)--(425,370)--(265,370)--(265,312)--(372,312)--(372,240)--(317,240)--cycle;
+					% vệt sáng mép trên mặt trước
+					\draw[white,line width=0.7pt,opacity=0.8] (101,203)--(210,203) (320,203)--(422,203) (163,315)--(369,315);
+					% nét viền
+					\draw[thick] (98,200)--(213,200)--(213,240)--(160,240)--(160,312)--(372,312)--(372,240)--(317,240)--(317,200)--(425,200)--(425,370)--(98,370)--cycle;
+					\draw[thick] (98,200)--(159,148)--(274,148)--(213,200) (274,148)--(274,188)--(213,240);
+					\draw[thick] (317,200)--(378,148)--(486,148)--(425,200) (486,148)--(486,318)--(425,370);
+					\draw[thick] (160,312)--(221,260)--(372,260) (221,240)--(221,260);
+					\node[font=\footnotesize\bfseries] at (189,221) {N};
+					\node[font=\footnotesize\bfseries] at (340,221) {S};
+					% ----- khung dây (đoạn nằm ngang nằm trong khe giữa hai cực) -----
+					\draw[VLdong!55!black,line width=1.9pt] (238,108)--(238,236)--(336,153)--(336,30);
+					\draw[VLdong!80!white,line width=0.7pt] (238,108)--(238,236)--(336,153)--(336,30);
+					% ----- mạch ngoài: chốt A, khóa K (mở), nguồn hai pin, chốt B -----
+					% thứ tự bản cực từ phía K sang B: dài -- ngắn (đậm) -- dài -- ngắn (đậm), đúng như hình gốc
+					\draw[thick] (238,108)--(252,97);
+					\draw[thick] (250,72)--(266,87)--(283,74);
+					\draw[thick] (283,50)--(283,98);
+					\draw[line width=2.4pt,line cap=butt] (295,56)--(295,75);
+					\draw[thick] (295,66)--(311,54);
+					\draw[thick] (311,30)--(311,78);
+					\draw[line width=2.4pt,line cap=butt] (323,35)--(323,54);
+					\draw[thick] (323,44)--(336,30);
+					\fill (238,108) circle (2.3pt) (336,30) circle (2.3pt);
+					\node[left,inner sep=3pt] at (232,96) {A};
+					\node[inner sep=1pt] at (274,120) {K};
+					\node[right,inner sep=3pt] at (340,22) {B};
 				\end{tikzpicture}
 		\end{minipage}
 		\par\noindent
@@ -575,6 +662,8 @@
 				\node[left,inner sep=3pt] at (0.3,1.78) {S};
 				% lõi sắt non chữ U
 				\filldraw[fill=gray!25,thick] (3.85,2.52)--(1.95,2.52) arc[start angle=90,end angle=270,radius=0.645]--(3.85,1.23)--(3.85,1.47)--(1.95,1.47) arc[start angle=270,end angle=90,radius=0.405]--(3.85,2.28)--cycle;
+				% dây nối hai cuộn dây (từ mép dưới nhánh P xuống mép dưới nhánh Q, như hình gốc)
+				\draw[VLdong!75!black,line width=1.1pt] (2.03,2.28)--(2.03,1.23);
 				% cuộn dây trên hai nhánh
 				\foreach \yc in {2.4,1.35}{
 					\foreach \x in {2.12,2.27,...,3.5}{\draw[VLdong!75!black,line width=1.5pt] (\x,\yc+0.17)--(\x+0.07,\yc-0.17);}}
@@ -621,31 +710,32 @@
 		\end{minipage}\hfill
 		\begin{minipage}[t]{0.33\linewidth}
 			\centering
-			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},scale=0.72,line join=round,line cap=round,font=\footnotesize]
-				% vỏ bình
-				\filldraw[fill=gray!30,draw=black,thick,rounded corners=20pt] (0,0) rectangle (3.6,3.7);
-				\filldraw[fill=white,draw=black,thick,rounded corners=18pt] (0.1,0.1) rectangle (3.5,3.6);
-				% bóng chứa nước
-				\shade[top color=VLxanh!12,bottom color=VLxanh!30,rounded corners=16pt] (0.18,1.12) rectangle (3.42,3.52);
-				\draw[thick,rounded corners=16pt] (0.18,1.12) rectangle (3.42,3.52);
-				% bóng chứa khí
-				\filldraw[fill=VLxanh!6,thick,rounded corners=12pt] (0.25,0.18) rectangle (3.35,1.04);
-				\node[font=\scriptsize] at (1.8,2.35) {Bóng chứa nước};
-				\node[font=\scriptsize] at (1.8,0.61) {Bóng chứa khí};
-				% cổ bình, đường ống
-				\filldraw[fill=gray!30,thick] (1.62,3.58) rectangle (1.92,4.05);
-				\fill[VLxanh!25] (1.68,3.5) rectangle (1.86,4.05);
-				\filldraw[fill=gray!30,thick] (1.32,4.05) rectangle (2.85,4.2);
-				\filldraw[fill=gray!30,thick] (1.32,4.2) rectangle (1.47,4.6);
-				\filldraw[fill=gray!30,thick] (2.7,4.2) rectangle (2.85,4.6);
-				\fill[black] (2.15,3.98) rectangle (2.47,4.3);
-				% chú thích
-				\draw[VLmui,thin] (0.95,4.85)--(1.3,4.55);
-				\node[left,inner sep=1pt] at (1.05,4.9) {Ống nước ra};
-				\draw[VLmui,thin] (2.95,4.95)--(2.86,4.6);
-				\node[right,inner sep=1pt] at (2.85,5.0) {Ống nước vào};
-				\draw[VLmui,thin] (3.15,4.05)--(2.5,4.12);
-				\node[right,inner sep=1pt] at (3.1,4.0) {Rơle áp suất};
+			\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},x=0.0039cm,y=-0.0039cm,line join=round,line cap=round,font=\footnotesize]
+				% ----- vỏ bình (cắt dọc): thành kim loại -----
+				\shade[left color=gray!28,right color=gray!58,rounded corners=19pt] (20,290) rectangle (820,1038);
+				\fill[white,rounded corners=16pt] (50,322) rectangle (790,1008);
+				% ----- bóng chứa nước, bóng chứa khí -----
+				\shade[top color=VLxanh!9,bottom color=VLxanh!34,rounded corners=15.5pt] (52,324) rectangle (788,765);
+				\draw[thick,rounded corners=15.5pt] (52,324) rectangle (788,765);
+				\shade[top color=white,bottom color=VLxanh!10,rounded corners=11pt] (66,773) rectangle (774,996);
+				\draw[thick,rounded corners=11pt] (66,773) rectangle (774,996);
+				\draw[thick] (50,880)--(66,880) (774,880)--(790,880);
+				\draw[thick,rounded corners=19pt] (20,290) rectangle (820,1038);
+				\draw[thick,rounded corners=16pt] (50,322) rectangle (790,1008);
+				\node at (415,548) {Bóng chứa nước};
+				\node at (420,887) {Bóng chứa khí};
+				% ----- cổ bình, ống nước ra (đi lên), nhánh ngang qua rơle tới ống nước vào -----
+				\fill[VLxanh!12] (396,327)--(396,123)--(473,123)--(473,20)--(517,20)--(517,123)--(742,123)--(742,167)--(446,167)--(446,327)--cycle;
+				\draw[line width=1pt] (393,324)--(393,120)--(470,120)--(470,20) (520,20)--(520,120)--(560,120) (449,324)--(449,170)--(560,170) (668,120)--(742,120) (668,170)--(742,170);
+				\draw[line width=2.6pt,line cap=butt] (389,200)--(389,290) (453,200)--(453,290);
+				\shade[top color=black!70,bottom color=black] (558,85) rectangle (668,205);
+				% ----- chú thích -----
+				\draw[VLmui,thin] (375,48)--(465,48);
+				\node[left,inner sep=1pt] at (372,45) {Ống nước ra};
+				\draw[VLmui,thin] (838,72)--(752,132);
+				\node[right,inner sep=1pt] at (606,18) {Ống nước vào};
+				\draw[VLmui,thin] (700,258)--(652,210);
+				\node[right,inner sep=1pt] at (700,266) {Rơle áp suất};
 			\end{tikzpicture}
 		\end{minipage}
 		\NeedspaceBang{10\baselineskip}%
@@ -664,7 +754,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[15.9\baselineskip]{25.1\baselineskip}
+	\NeedspaceCau[15.9\baselineskip]{25.9\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		% KIỂM TRA: ý c), d) phụ thuộc cách hiểu "hiệu suất làm nóng nước" và nhiệt lượng vỏ ấm thu (xem kiem-chung.md); gõ theo cách tính chặt: c) Sai (85%), d) Sai (1,67 giờ).
 		% giuhinh
@@ -688,28 +778,58 @@
 			\end{minipage}\hfill%
 			\begin{minipage}[b]{0.2\linewidth}
 				\centering
-				\begin{tikzpicture}[scale=0.9,line join=round,line cap=round,font=\footnotesize]
-					\fill[gray!20] (0.05,-0.02) ellipse (1.1 and 0.14);
-					% quai xách
-					\draw[gray!70,line width=1pt] (-0.42,1.12)--(-0.48,1.3) (0.48,1.12)--(0.55,1.3);
-					\draw[black!85,line width=3pt] (-0.48,1.3) .. controls (-0.55,2.05) and (0.62,2.05) .. (0.55,1.3);
-					\draw[white,opacity=0.35,line width=0.6pt] (-0.42,1.55) .. controls (-0.35,1.85) and (0.1,1.92) .. (0.3,1.85);
-					% vòi
-					\shade[top color=gray!15,bottom color=gray!65] (-0.82,0.32)--(-1.42,0.86)--(-1.5,0.8)--(-0.88,0.62)--cycle;
-					\draw[gray!60!black,thin] (-0.82,0.32)--(-1.42,0.86)--(-1.5,0.8)--(-0.88,0.62);
-					% thân ấm
-					\shade[left color=gray!65,right color=gray!55,middle color=white] (-0.92,0.08) .. controls (-1.0,0.7) and (-0.62,1.05) .. (-0.36,1.13)--(0.36,1.13) .. controls (0.62,1.05) and (1.0,0.7) .. (0.92,0.08) .. controls (0.9,0) .. (0.8,0)--(-0.8,0) .. controls (-0.9,0) .. cycle;
-					\draw[gray!55!black,thin] (-0.92,0.08) .. controls (-1.0,0.7) and (-0.62,1.05) .. (-0.36,1.13)--(0.36,1.13) .. controls (0.62,1.05) and (1.0,0.7) .. (0.92,0.08) .. controls (0.9,0) .. (0.8,0)--(-0.8,0) .. controls (-0.9,0) .. cycle;
-					\fill[white,opacity=0.75] (-0.42,0.3) .. controls (-0.5,0.6) and (-0.4,0.85) .. (-0.25,0.95) .. controls (-0.33,0.75) and (-0.36,0.5) .. cycle;
-					\draw[gray!50,thin] (-0.9,0.2)--(0.9,0.2);
-					% nắp, núm
-					\shade[top color=white,bottom color=gray!55] (-0.42,1.12) .. controls (-0.3,1.32) and (0.3,1.32) .. (0.42,1.12)--cycle;
-					\draw[gray!55!black,thin] (-0.42,1.12) .. controls (-0.3,1.32) and (0.3,1.32) .. (0.42,1.12);
-					\fill[gray!60] (-0.04,1.25) rectangle (0.04,1.33);
-					\shade[ball color=black!70] (0,1.38) ellipse (0.13 and 0.08);
-					% dây điện
-					\draw[black!80,line width=1pt] (0.88,0.28) .. controls (1.15,0.25) and (1.0,-0.05) .. (1.3,-0.1) .. controls (1.5,-0.13) and (1.5,0.05) .. (1.35,0.1);
-					\fill[black!85] (1.3,0.06) rectangle (1.5,0.18);
+				\begin{tikzpicture}[x=0.022cm,y=-0.022cm,line join=round,line cap=round,font=\footnotesize]
+					\def\NKthanam{(40,54) .. controls (33,62) and (31,80) .. (34,93) .. controls (36,102) and (48,107) .. (68,107) .. controls (88,107) and (100,102) .. (102,93) .. controls (105,80) and (103,62) .. (97,53) .. controls (85,60) and (52,60) .. cycle}
+					\def\NKnapam{(40,54) .. controls (42,44) and (54,37) .. (68,37) .. controls (82,37) and (94,43) .. (97,53) .. controls (85,60) and (52,60) .. cycle}
+					% bóng đổ
+					\fill[gray!22] (70,107.5) ellipse (42 and 4);
+					% ----- quai xách: hai tay kim loại, tay cầm nhựa đen -----
+					\draw[gray!70!black,line width=1.1pt] (39.5,53) .. controls (38,42) and (39,32) .. (40,22) (97,51) .. controls (98,42) and (97,32) .. (96,21);
+					\draw[gray!15,line width=0.35pt] (39.2,52) .. controls (37.7,42) and (38.7,32) .. (39.7,24) (96.7,50) .. controls (97.7,42) and (96.7,32) .. (95.7,23);
+					\draw[black!88,line width=3.3pt] (39.3,25) .. controls (41,9) and (54,1.5) .. (68,1.5) .. controls (82,1.5) and (95,9) .. (96.2,23);
+					\draw[white,opacity=0.45,line width=0.6pt] (42,16) .. controls (46,8) and (56,3) .. (66,2.8);
+					% ----- vòi ấm -----
+					\shade[left color=gray!22,right color=gray!62] (36,64)--(19,49.5)--(8,55.5)--(19,71) .. controls (23,80) and (27,87) .. (33,90) -- cycle;
+					\fill[gray!75!black] (22,55) .. controls (27,63) and (31,70) .. (35,76) -- (35,80) .. controls (29,72) and (24,64) .. (19,57) -- cycle;
+					\fill[white,opacity=0.6] (12,58) .. controls (17,66) and (22,75) .. (28,83) -- (30,82) .. controls (25,74) and (20,65) .. (15,57) -- cycle;
+					\draw[gray!70!black,line width=0.4pt] (36,64)--(19,49.5)--(8,55.5)--(19,71) .. controls (23,80) and (27,87) .. (33,90);
+					\fill[gray!80!black] (8.6,55.2)--(18.6,49.8)--(19.6,51.2)--(10,56.6)--cycle;
+					% ----- thân ấm inox (bóng gương) -----
+					\fill[white] \NKthanam;
+					\begin{scope}
+						\clip \NKthanam;
+						% các dải phản chiếu dọc thân: mép tối, dải sáng, dải tối giữa thân, dải đáy
+						\shade[left color=gray!78,right color=white] (30,50) rectangle (45,110);
+						\shade[left color=white,right color=gray!48] (54,50) rectangle (62.6,110);
+						\shade[left color=gray!48,right color=white] (74.4,50) rectangle (83,110);
+						\shade[left color=white,right color=gray!74] (91,50) rectangle (106,110);
+						\fill[black!90] (63.2,58) .. controls (62.5,72) and (61.5,88) .. (61,99.5) -- (76,99.5) .. controls (75.5,88) and (74.5,72) .. (73.8,58) -- cycle;
+						\shade[top color=gray!40,bottom color=gray!82] (30,99.5) .. controls (50,102.5) and (86,102.5) .. (106,99.5) -- (106,110) -- (30,110) -- cycle;
+						\draw[gray!22,line width=0.4pt] (34,99.3) .. controls (52,102.2) and (84,102.2) .. (102,99.3);
+					\end{scope}
+					\draw[gray!72!black,line width=0.45pt] \NKthanam;
+					% ----- nắp ấm, núm nhựa đen -----
+					\shade[left color=gray!68,right color=gray!62,middle color=white] \NKnapam;
+					\begin{scope}
+						\clip \NKnapam;
+						\fill[gray!55,opacity=0.35] (68,38) ellipse (22 and 5);
+						\draw[gray!45,line width=0.8pt,opacity=0.8] (41,52.5) .. controls (53,58.3) and (84,58.3) .. (96,51.5);
+						\fill[gray!72!black,opacity=0.9] (68,40.5) ellipse (10 and 2.6);
+					\end{scope}
+					\draw[gray!72!black,line width=0.45pt] \NKnapam;
+					\draw[gray!80!black,line width=0.7pt] (40,54) .. controls (52,60) and (85,60) .. (97,53);
+					\fill[black!85] (68,38.4) ellipse (7 and 2.4);
+					\fill[black!88] (64.3,30) .. controls (65,33) and (65,36) .. (63.5,38.4) -- (72.5,38.4) .. controls (71,36) and (71,33) .. (71.7,30) -- cycle;
+					\shade[top color=black!60,bottom color=black!95] (68,28.5) ellipse (9.6 and 4.6);
+					\fill[white,opacity=0.55] (65,26.6) ellipse (4.2 and 1.1);
+					% ----- đầu cắm nguồn ở thân ấm, dây điện cuộn, phích cắm -----
+					\fill[black!88!green] (101.5,78.5) .. controls (105,76.5) and (109,77) .. (111,80) -- (112,88) .. controls (110,91.5) and (106,92.5) .. (102.5,91.5) -- cycle;
+					\draw[black!85,line width=0.9pt] (111.5,85.5) .. controls (120,84.5) and (129,84) .. (132,89) .. controls (134.5,94) and (130,96.5) .. (125,96);
+					\draw[black!85,line width=0.8pt,rotate around={-14:(117,99)}] (110.2,99) ellipse (7 and 3.8) (110.6,99) ellipse (5 and 2.2) (123.8,99) ellipse (7 and 3.8) (123.4,99) ellipse (5 and 2.2);
+					\draw[black!88,line width=1.9pt,line cap=butt] (116.2,96.3)--(117.8,101.7);
+					\draw[black!85,line width=0.9pt] (105,102.5) .. controls (99,105) and (95,106.3) .. (90,106.5);
+					\draw[gray!70!black,line width=0.7pt,line cap=butt] (83.6,104.5)--(83.6,99.5) (87.6,104.5)--(87.6,99.5);
+					\fill[black!88,rounded corners=0.4pt] (81.5,104) rectangle (90.5,109.2);
 				\end{tikzpicture}
 			\end{minipage}\hfill%
 			\begin{minipage}[b]{0.34\linewidth}
