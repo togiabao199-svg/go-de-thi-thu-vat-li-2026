@@ -1803,3 +1803,182 @@
 		\coordinate (VLxe-gam) at (645,508); \coordinate (VLxe-cop) at (290,325);
 		\coordinate (VLxe-cua) at (672,340); \coordinate (VLxe-noc) at (580,121);
 	\end{scope}}
+
+%--- BỘ KÍ HIỆU BIỂN CẢNH BÁO (PHIÊN FABLE 14/11/2026) -- đề xuất chuyển vào preamble-vatli-hinh.tex
+% Mỗi kí hiệu: \VLkh...{x}{y}{cỡ}; (x,y) là TÂM kí hiệu, cỡ 1 vừa khít khung \VLbienbao (cạnh 1,5 cm).
+% Trong khung \VLbienbao (đáy từ (-0.75,0) đến (0.75,0)) đặt tâm tại (0,0.47):
+%     \VLbienbao \VLkhphongxa{0}{0.47}{1}
+% Gọi gọn cả khung lẫn kí hiệu, (x,y) là trung điểm cạnh đáy biển, cỡ 1 = cạnh 1,5 cm:
+%     \VLbiencanhbao{0}{0}{1.15}{\VLkhtiaset}
+% Kí hiệu tô bằng màu VLkh (mặc định đen), chỗ khoét tô màu nền VLkhnen (mặc định màu vàng của \VLbienbao);
+% biển nền khác thì đổi cục bộ trong scope: \colorlet{VLkh}{white}\colorlet{VLkhnen}{VLdo}.
+% Hình chỉ gồm mảng tô (nét vẽ, nếu có, tự co theo scale) nên đặt được trong scope [scale=...].
+\colorlet{VLkh}{black}
+\colorlet{VLkhnen}{yellow!85!orange}
+% hệ số co giãn hiện hành -> \VLkhs (dùng cho bề dày nét): gọi bên trong scope của kí hiệu
+\newcommand{\VLkhtinhhs}{\pgfgettransformentries{\VLkhma}{\VLkhmb}{\VLkhmc}{\VLkhmd}{\VLkhmx}{\VLkhmy}%
+	\pgfmathsetmacro{\VLkhs}{sqrt(abs(\VLkhma*\VLkhmd-\VLkhmb*\VLkhmc))}}
+% khung biển tam giác vàng + kí hiệu: \VLbiencanhbao{x}{y}{cỡ}{\VLkh...}
+\newcommand{\VLbiencanhbao}[4]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\VLkhtinhhs
+		\filldraw[fill=VLkhnen,draw=black,line width=\VLkhs*1.5pt,rounded corners=\VLkhs*2.5pt] (-0.75,0)--(0.75,0)--(0,1.3)--cycle;
+		\draw[white,line width=\VLkhs*0.5pt,rounded corners=\VLkhs*1.5pt] (-0.62,0.07)--(0.62,0.07)--(0,1.15)--cycle;
+		#4{0}{0.47}{1}
+	\end{scope}}
+% phóng xạ (cánh quạt ba lá, ISO 361: đĩa tâm bán kính R, cánh từ 1,5R đến 5R, mỗi cánh 60 độ): \VLkhphongxa{x}{y}{cỡ}
+\newcommand{\VLkhphongxa}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[VLkh] (0,0) circle (0.068);
+		\foreach \VLkhgoc in {30,150,270}{\fill[VLkh] (\VLkhgoc-30:0.102) arc[start angle=\VLkhgoc-30,end angle=\VLkhgoc+30,radius=0.102]--(\VLkhgoc+30:0.34) arc[start angle=\VLkhgoc+30,end angle=\VLkhgoc-30,radius=0.34]--cycle;}
+	\end{scope}}
+% tia sét (nguy hiểm về điện, ISO 7010 W012): \VLkhtiaset{x}{y}{cỡ}
+\newcommand{\VLkhtiaset}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[VLkh] (-0.015,0.43)--(0.155,0.43)--(0.035,0.115)--(0.135,0.115)--(0.0,-0.2)--(0.065,-0.185)--(-0.085,-0.36)--(-0.125,-0.14)--(-0.065,-0.165)--(0.015,0.02)--(-0.125,0.02)--cycle;
+	\end{scope}}
+% nguy hiểm sinh học (dựng theo kích thước chuẩn: A=1, B=3,5, C=4, D=6, E=11, F=15, G=21, H=30): \VLkhsinhhoc{x}{y}{cỡ}
+\newcommand{\VLkhsinhhoc}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3*0.0146]
+		\foreach \VLkhgoc in {90,210,330}{\fill[VLkh] (\VLkhgoc:11) circle (15);}
+		\foreach \VLkhgoc in {90,210,330}{
+			\fill[VLkhnen] (\VLkhgoc:15) circle (10.5);
+			\begin{scope}[rotate=\VLkhgoc]\fill[VLkhnen] (0,-0.5) rectangle (6,0.5) (22,-2) rectangle (27,2);\end{scope}}
+		\foreach \VLkhgoc in {90,210,330}{
+			\begin{scope}
+				\clip (\VLkhgoc:15) circle (9.5);
+				\fill[VLkh,even odd rule] (0,0) circle (13.5) (0,0) circle (10);
+			\end{scope}}
+		\fill[VLkhnen] (0,0) circle (3);
+	\end{scope}}
+% dấu chấm than (cảnh báo chung, ISO 7010 W001): \VLkhchamthan{x}{y}{cỡ}
+\newcommand{\VLkhchamthan}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[VLkh] (-0.075,0.36) arc[start angle=180,end angle=0,radius=0.075]--(0.04,-0.12) arc[start angle=0,end angle=-180,radius=0.04]--cycle;
+		\fill[VLkh] (0,-0.27) circle (0.075);
+	\end{scope}}
+% đầu lâu xương chéo (chất độc, ISO 7010 W016): \VLkhdaulau{x}{y}{cỡ}
+\newcommand{\VLkhdaulau}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\foreach \VLkhgoc in {27,153}{
+			\begin{scope}[shift={(0,-0.13)},rotate=\VLkhgoc]
+				\fill[VLkh] (-0.33,-0.032) rectangle (0.33,0.032);
+				\foreach \VLkhdau in {-1,1}{\fill[VLkh] (\VLkhdau*0.34,0.042) circle (0.05) (\VLkhdau*0.34,-0.042) circle (0.05);}
+			\end{scope}}
+		\fill[VLkhnen] (0,0.13) ellipse (0.225 and 0.215);
+		\fill[VLkhnen,rounded corners=#3*1.4pt] (-0.14,-0.19) rectangle (0.14,0.02);
+		\fill[VLkh] (0,0.13) ellipse (0.2 and 0.19);
+		\fill[VLkh] (-0.115,-0.165)--(0.115,-0.165)--(0.125,0.02)--(-0.125,0.02)--cycle;
+		\fill[VLkhnen] (-0.083,0.085) ellipse (0.06 and 0.064) (0.083,0.085) ellipse (0.06 and 0.064);
+		\fill[VLkhnen] (0,0.02) .. controls (0.02,0.0) and (0.045,-0.045) .. (0.022,-0.055) .. controls (0.012,-0.06) and (0.004,-0.05) .. (0,-0.035) .. controls (-0.004,-0.05) and (-0.012,-0.06) .. (-0.022,-0.055) .. controls (-0.045,-0.045) and (-0.02,0.0) .. cycle;
+		\fill[VLkhnen] (-0.105,-0.105) rectangle (0.105,-0.093);
+		\foreach \VLkhxx in {-0.063,-0.021,0.021,0.063}{\fill[VLkhnen] (\VLkhxx-0.006,-0.165) rectangle (\VLkhxx+0.006,-0.093);}
+	\end{scope}}
+% bề mặt nóng (ba làn hơi nóng trên mặt phẳng, ISO 7010 W017): \VLkhbematnong{x}{y}{cỡ}
+\newcommand{\VLkhbematnong}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\foreach \VLkhxx in {-0.16,0,0.16}{
+			\fill[VLkh] plot[domain=0:1,samples=40] ({\VLkhxx+0.05*sin(400*\x-200)-0.036*sqrt(sin(180*\x))},{-0.18+0.54*\x})--plot[domain=1:0,samples=40] ({\VLkhxx+0.05*sin(400*\x-200)+0.036*sqrt(sin(180*\x))},{-0.18+0.54*\x})--cycle;}
+		\fill[VLkh] (-0.31,-0.3) rectangle (0.31,-0.235);
+	\end{scope}}
+% chất nổ (quả bom nổ, ISO 7010 W002): \VLkhchatno{x}{y}{cỡ}
+\newcommand{\VLkhchatno}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\begin{scope}[shift={(-0.22,-0.21)}]
+			\foreach \VLkhgoc/\VLkhr/\VLkhw in {-4/0.64/4,9/0.4/6,21/0.6/5.5,33/0.44/6,45/0.7/5,57/0.46/6,68/0.66/5,80/0.42/6,92/0.54/5.5,106/0.32/7,-17/0.32/7}{
+				\fill[VLkh] (\VLkhgoc+3*\VLkhw:0.07)--(\VLkhgoc+0.4*\VLkhw:\VLkhr)--(\VLkhgoc-0.4*\VLkhw:\VLkhr)--(\VLkhgoc-3*\VLkhw:0.07)--cycle;}
+			\foreach \VLkhgoc/\VLkhr/\VLkhw in {15/0.54/20,39/0.6/-15,51/0.56/40,74/0.6/10,27/0.34/60,63/0.34/25,3/0.48/70,86/0.5/-30}{
+				\fill[VLkh,rotate around={\VLkhw:(\VLkhgoc:\VLkhr)}] (\VLkhgoc:\VLkhr)++(-0.022,-0.014)--++(0.04,-0.004)--++(0.008,0.026)--++(-0.03,0.012)--cycle;}
+			\fill[VLkh] (0.105,0.0) .. controls (0.11,0.06) and (0.07,0.1) .. (0.01,0.105) .. controls (-0.05,0.11) and (-0.1,0.07) .. (-0.105,0.01) .. controls (-0.11,-0.05) and (-0.07,-0.095) .. (-0.01,-0.1) .. controls (0.05,-0.105) and (0.1,-0.06) .. cycle;
+			\fill[VLkhnen] (-0.035,0.04) circle (0.022);
+		\end{scope}
+	\end{scope}}
+% sóng tắt dần có mũi tên (bức xạ, ISO 7010): \VLkhsongtatdan{x}{y}{cỡ}
+\newcommand{\VLkhsongtatdan}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\VLkhtinhhs
+		\draw[VLkh,line width=\VLkhs*0.9pt,line join=round,line cap=round] plot[domain=0:1,samples=260] ({-0.34+0.5*\x},{-0.08+(0.2-0.165*\x)*cos(2880*\x-900*\x*\x)});
+		\fill[VLkh] (0.14,-0.03)--(0.14,-0.13)--(0.19,-0.1)--(0.19,-0.16)--(0.36,-0.08)--(0.19,0.0)--(0.19,-0.06)--cycle;
+	\end{scope}}
+% rào chắn (giao nhau với đường sắt có rào chắn): \VLkhraochan{x}{y}{cỡ}
+\newcommand{\VLkhraochan}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[VLkh] (-0.34,0.03) rectangle (0.34,0.085) (-0.34,-0.17) rectangle (0.34,-0.115);
+		\foreach \VLkhxx in {-0.26,-0.13,0,0.13,0.26}{
+			\fill[VLkh] (\VLkhxx-0.026,-0.27) rectangle (\VLkhxx+0.026,0.19);
+			\fill[VLkh] (\VLkhxx,0.19) circle (0.038);}
+	\end{scope}}
+% li vỡ (hàng dễ vỡ): \VLkhlyvo{x}{y}{cỡ}
+\newcommand{\VLkhlyvo}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\fill[VLkh] (-0.2,0.31)--(-0.07,0.31)--(-0.02,0.2)--(-0.075,0.13)--(0.035,0.2)--(0.005,0.31)--(0.2,0.31) .. controls (0.2,0.08) and (0.11,0.0) .. (0.028,-0.02)--(0.028,-0.2) .. controls (0.05,-0.235) and (0.11,-0.245) .. (0.17,-0.25)--(0.17,-0.28)--(-0.17,-0.28)--(-0.17,-0.25) .. controls (-0.11,-0.245) and (-0.05,-0.235) .. (-0.028,-0.2)--(-0.028,-0.02) .. controls (-0.11,0.0) and (-0.2,0.08) .. cycle;
+	\end{scope}}
+% chất ăn mòn (hai ống nghiệm nhỏ giọt lên thanh kim loại và bàn tay): \VLkhanmon{x}{y}{cỡ}
+\newcommand{\VLkhanmon}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\VLkhtinhhs
+		% hai ống nghiệm nghiêng
+		\foreach \VLkhxx/\VLkhyy in {-0.33/0.08,-0.07/0.24}{
+			\begin{scope}[shift={(\VLkhxx,\VLkhyy)},rotate=6]
+				\draw[VLkh,line width=\VLkhs*1.1pt,line join=round,line cap=round] (0.0,0.075)--(0.0,-0.075) (0.0,0.045)--(0.3,0.045) arc[start angle=90,end angle=-90,radius=0.045]--(0.0,-0.045);
+				\fill[VLkh] (0.14,0.03)--(0.3,0.03) arc[start angle=90,end angle=-90,radius=0.03]--(0.1,-0.03)--cycle;
+			\end{scope}}
+		% giọt chất lỏng
+		\foreach \VLkhxx/\VLkhyy in {-0.02/-0.03,-0.02/-0.14,0.24/0.13,0.24/0.02}{
+			\fill[VLkh] (\VLkhxx,\VLkhyy+0.05) .. controls (\VLkhxx+0.02,\VLkhyy+0.015) and (\VLkhxx+0.03,\VLkhyy) .. (\VLkhxx+0.03,\VLkhyy-0.012) arc[start angle=0,end angle=-180,radius=0.03] .. controls (\VLkhxx-0.03,\VLkhyy) and (\VLkhxx-0.02,\VLkhyy+0.015) .. cycle;}
+		% thanh kim loại bị ăn mòn
+		\fill[VLkh] (-0.36,-0.33) rectangle (-0.02,-0.27);
+		\fill[VLkh] (-0.27,-0.27) .. controls (-0.24,-0.2) and (-0.16,-0.2) .. (-0.13,-0.27)--cycle;
+		\foreach \VLkhgoc in {35,65,115,145}{\draw[VLkh,line width=\VLkhs*0.6pt,line cap=round] ($(-0.2,-0.27)+(\VLkhgoc:0.1)$)--($(-0.2,-0.27)+(\VLkhgoc:0.15)$);}
+		% bàn tay bị ăn mòn
+		\fill[VLkh] (0.06,-0.33)--(0.37,-0.33)--(0.37,-0.2)--(0.3,-0.2)--(0.3,-0.17)--(0.2,-0.14)--(0.06,-0.14) arc[start angle=90,end angle=270,radius=0.02]--(0.17,-0.18)--(0.17,-0.2)--(0.04,-0.2) arc[start angle=90,end angle=270,radius=0.02]--(0.15,-0.24)--(0.15,-0.255)--(0.05,-0.255) arc[start angle=90,end angle=270,radius=0.018]--(0.15,-0.291)--(0.15,-0.3)--(0.07,-0.3) arc[start angle=90,end angle=270,radius=0.015]--cycle;
+		\fill[VLkhnen] (0.24,-0.17) .. controls (0.2,-0.2) and (0.22,-0.24) .. (0.25,-0.24) .. controls (0.28,-0.24) and (0.29,-0.2) .. cycle;
+		\foreach \VLkhgoc in {40,70,110,140}{\draw[VLkh,line width=\VLkhs*0.6pt,line cap=round] ($(0.24,-0.16)+(\VLkhgoc:0.05)$)--($(0.24,-0.16)+(\VLkhgoc:0.1)$);}
+	\end{scope}}
+% bình chữa cháy (tô màu VLkh; biển đỏ thì \colorlet{VLkh}{white} trong scope): \VLkhbinhchuachay{x}{y}{cỡ}
+\newcommand{\VLkhbinhchuachay}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\VLkhtinhhs
+		\fill[VLkh] (-0.05,-0.36)--(0.23,-0.36) arc[start angle=-90,end angle=0,radius=0.02]--(0.25,0.1) .. controls (0.25,0.2) and (0.17,0.25) .. (0.13,0.26)--(0.13,0.31)--(0.05,0.31)--(0.05,0.26) .. controls (0.01,0.25) and (-0.07,0.2) .. (-0.07,0.1)--(-0.07,-0.34) arc[start angle=180,end angle=270,radius=0.02]--cycle;
+		\fill[VLkh] (0.03,0.31)--(0.15,0.31)--(0.15,0.35)--(0.26,0.4)--(0.24,0.44)--(0.12,0.39)--(0.03,0.39)--cycle;
+		\draw[VLkh,line width=\VLkhs*1.5pt,line cap=round] (0.04,0.35) .. controls (-0.16,0.36) and (-0.24,0.2) .. (-0.2,0.0);
+		\fill[VLkh] (-0.25,0.02)--(-0.14,0.0)--(-0.19,-0.09)--cycle;
+	\end{scope}}
+% người chạy thoát kèm mũi tên (sang phải): \VLkhnguoichay{x}{y}{cỡ}
+\newcommand{\VLkhnguoichay}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\VLkhtinhhs
+		\fill[VLkh] (0.02,0.2) circle (0.052);
+		\draw[VLkh,line width=\VLkhs*2.6pt,line join=round,line cap=round] (-0.03,0.12)--(-0.1,-0.03) (-0.03,0.11)--(0.04,0.03)--(0.12,0.03) (-0.04,0.12)--(-0.15,0.12)--(-0.21,0.04) (-0.1,-0.03)--(-0.02,-0.11)--(0.03,-0.22) (-0.1,-0.03)--(-0.17,-0.12)--(-0.28,-0.12);
+		\fill[VLkh] (0.12,-0.105) rectangle (0.23,-0.055);
+		\fill[VLkh] (0.22,-0.14)--(0.3,-0.08)--(0.22,-0.02)--cycle;
+	\end{scope}}
+% biển phóng xạ nguy hiểm đến tính mạng (ISO 21482: cánh quạt phát tia, đầu lâu, người chạy thoát): \VLkhphongxaiso{x}{y}{cỡ}
+\newcommand{\VLkhphongxaiso}[3]{%
+	\begin{scope}[shift={(#1,#2)},scale=#3]
+		\VLkhtinhhs
+		\VLkhphongxa{0}{0.4}{0.42}
+		\foreach \VLkhgoc in {-34,-17,0,17,34}{
+			\begin{scope}[shift={(0,0.4)},rotate=\VLkhgoc]
+				\draw[VLkh,line width=\VLkhs*0.7pt,line cap=round] plot[domain=0:1,samples=40] ({0.013*sin(1440*\x)},{-0.19-0.19*\x});
+				\fill[VLkh] (-0.026,-0.375)--(0.026,-0.375)--(0,-0.44)--cycle;
+			\end{scope}}
+		\VLkhdaulau{-0.27}{-0.17}{0.46}
+		\VLkhnguoichay{0.2}{-0.17}{0.62}
+	\end{scope}}
+% bàn tay trái ngửa (quy tắc bàn tay trái): bốn ngón duỗi sang phải, ngón cái choãi lên trên; (x,y) là điểm giữa lòng bàn tay
+% (gốc các mũi tên), tỉ lệ 1: bàn tay dài khoảng 2,8 cm, cổ tay ở bên trái. Vẽ bàn tay trước, các mũi tên sau: \VLbantaytrai{x}{y}{tỉ lệ}
+\newcommand{\VLbantaytrai}[3]{%
+	\begin{scope}[shift={(#1,#2)}]
+		\begin{scope}[x=#3*0.0046cm,y=-#3*0.0046cm,shift={(-322,-400)}]
+			\def\VLtayduong{(18,332) .. controls (40,330) and (60,326) .. (75,318) .. controls (95,280) and (125,258) .. (160,244) .. controls (200,230) and (260,205) .. (300,185) .. controls (320,172) and (335,158) .. (350,150) .. controls (368,140) and (388,146) .. (388,166) .. controls (388,186) and (368,206) .. (350,222) .. controls (330,240) and (312,260) .. (302,278) .. controls (330,290) and (380,290) .. (420,291) .. controls (470,292) and (520,294) .. (555,300) .. controls (580,304) and (592,318) .. (588,330) .. controls (585,340) and (578,345) .. (570,347) .. controls (590,348) and (606,350) .. (615,353) .. controls (632,360) and (632,388) .. (612,396) .. controls (604,398) and (600,400) .. (595,402) .. controls (612,410) and (612,440) .. (592,448) .. controls (570,452) and (540,454) .. (515,458) .. controls (532,464) and (532,492) .. (512,497) .. controls (460,500) and (410,498) .. (360,503) .. controls (335,512) and (318,520) .. (296,524) .. controls (250,532) and (210,534) .. (180,530) .. controls (150,524) and (125,520) .. (100,517) .. controls (80,516) and (60,515) .. (40,514)}%
+			\shade[left color=orange!30,right color=orange!12] \VLtayduong --cycle;
+			\draw[black!85,line width=0.6pt] \VLtayduong;
+			% kẽ ngón, đốt ngón, chỉ tay
+			\draw[black!85,line width=0.5pt] (570,347) .. controls (510,345) and (450,345) .. (398,348) (612,396) .. controls (540,398) and (470,398) .. (398,401) (592,448) .. controls (520,450) and (450,450) .. (388,455) (360,503) .. controls (350,490) and (352,470) .. (372,458);
+			\draw[black!65,line width=0.35pt] (455,308)--(459,330) (506,311)--(509,331) (480,362)--(484,384) (540,361)--(543,385) (458,415)--(461,438) (518,412)--(520,436) (405,466)--(409,488) (455,464)--(457,488);
+			\draw[black!65,line width=0.4pt] (135,440) .. controls (200,442) and (265,425) .. (300,392) (226,456) .. controls (262,430) and (296,380) .. (310,318) (266,466) .. controls (300,440) and (326,390) .. (338,330) (300,492) .. controls (300,455) and (312,425) .. (322,402);
+			\draw[black!65,line width=0.4pt] (214,226) .. controls (220,262) and (262,292) .. (318,300) (100,340) .. controls (93,352) and (93,366) .. (100,378) (72,438) .. controls (78,468) and (86,488) .. (100,502) (42,430)--(56,426);
+			\draw[black!65,line width=0.35pt] (350,166) .. controls (362,152) and (380,152) .. (378,168) .. controls (374,180) and (362,186) .. (352,184);
+		\end{scope}
+	\end{scope}}
