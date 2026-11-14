@@ -116,7 +116,7 @@ Mạng của phiên (môi trường Default, mức Limited, danh sách tên mi�
 
 - VietJack có trang cả đề cho 10 đề (Lương Thế Vinh, Cẩm Xuyên, Chuyên KHTN Lần 3, Phan Đăng Lưu, Quảng Ninh SGD, Nguyễn Thị Minh Khai, Cụm CM10, Liên trường Nghệ An Lần 1, Chuyên Hạ Long, Chuyên Phan Bội Châu) và trang câu lẻ cho 7 đề (Cụm liên trường Hà Tĩnh, Thái Nguyên SGD Lần 1, Liên trường Nghệ An Lần 2, Chuyên KHTN Lần 1, Tĩnh Gia I, Nguyễn Khuyến LTT Lần 1, Nguyễn Khuyến LTT Lần 10). Đáp án cả đề trên VietJack có khi nằm sau gói VIP.
 - hoatieu.vn có trang cho ít nhất 8 đề (Hưng Yên SGD, Bắc Ninh SGD Lần 1, Hàm Rồng, Chuyên Hạ Long, Phú Thọ SGD, Cụm CM10, Liên trường Nghệ An Lần 1, Ninh Bình SGD), nhiều trang kèm file đáp án.
-- Nếu thầy cho phép các tên miền này trong thiết lập mạng của môi trường thì có thể chạy bổ sung riêng bước đối chiếu mạng cho các điểm ở mục A–D (rẻ, không phải giải lại).
+- Cuối phiên (14/11/2026) thầy đã duyệt thêm 5 tên miền `khoahoc.vietjack.com`, `hoatieu.vn`, `chuvanbien.vn`, `loigiaihay.com`, `tuyensinh247.com` vào danh sách cho phép của môi trường Default. Tuy vậy, trong phiên này lệnh đọc các trang đó (cả `curl` lẫn WebFetch) vẫn bị chế độ cấp quyền tự động của Claude Code chặn (lí do "Unauthorized Access"), nên chưa chạy bổ sung. Muốn chạy: thêm luật cho phép đọc các tên miền này (ví dụ `WebFetch(domain:khoahoc.vietjack.com)`) vào `permissions.allow` của `.claude/settings.json` trong repo, rồi chạy bổ sung riêng bước đối chiếu mạng cho các điểm ở mục A–D (rẻ, không phải giải lại); chỉ đọc phần công khai, không vượt nội dung trả phí (VIP).
 
 ### K. Quy trình
 
@@ -128,5 +128,5 @@ Mạng của phiên (môi trường Default, mức Limited, danh sách tên mi�
 
 1. Thầy quyết các điểm mục A–D (nhất là 3 ý lệch mục A, các câu sửa lời đề mục B, các mệnh đề nghi gõ nhầm mục C), rồi một phiên sửa `.tex`, `kiem-chung.md`, `TIEN-DO.md` theo quyết định.
 2. Chuyển 4 lỗi hình mục G (Yên Hòa I.13, Nguyễn Thị Minh Khai II.2, Chuyên Phan Bội Châu I.6, Chuyên ĐH Vinh III.3) cho phiên vẽ hình (phần A).
-3. Nếu mở được các tên miền ở mục J: chạy bổ sung đối chiếu mạng cho các điểm mục A–D.
+3. Khi phiên được phép đọc các trang ở mục J (tên miền đã mở trong môi trường, còn thiếu quyền đọc trang): chạy bổ sung đối chiếu mạng cho các điểm mục A–D.
 4. Sửa các sai sót nhỏ mục H cùng lúc với việc 1.
