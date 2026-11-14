@@ -52,3 +52,17 @@
 - II.3: mặt áp kế giữ thang 0 – 25 của ảnh gốc, kim chỉ 10,5 (số liệu lần đo 1 trong bảng).
 - III.5: màn hình cân để trống (ảnh gốc "000.00 g" không phải dữ kiện).
 - Hình thực tiễn I.10, I.13, II.2, II.3, III.5 vẽ có khối, `% giuhinh`; chờ phiên vẽ lại chi tiết.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Năm hình `% giuhinh` vẽ lại theo toạ độ điểm ảnh của ảnh gốc 300 dpi (`x=...cm,y=-...cm`); sơ đồ, đồ thị, bảng giữ nguyên. Bản đề 8 trang (ĐẠT), bản lời giải 11 trang như trước.
+
+- I.10 (`so-hinh/03-cau-I-10.png`): nồi áp suất inox nhìn thẳng — thân bóng có các dải phản chiếu tối, đế nhiều lớp sáng hơn, vành nắp, mặt nắp vòm có dải phản chiếu và van nhỏ, tay đòn hình cung bắc ngang nắp, trục vít mạ sáng, núm vặn nhựa đen, hai móc kẹp nắp có đai kim loại, hai tay cầm nhựa đen.
+- I.13 (`so-hinh/05-cau-I-13.png`): nam châm chữ U dựng khối đúng phối cảnh ảnh gốc (mặt trên hai cực, mặt bên, mặt trong chỗ uốn, đường chia N – S), khung dây hình bình hành với nguồn, mũi tên $I$, bốn hướng A, B, C, D đặt đúng vị trí gốc. **Sửa kí hiệu nguồn cho khớp ảnh gốc: bản dài (cực dương) ở phía trên (gần cạnh sau), bản ngắn ở phía dưới** — hình TikZ trước vẽ ngược (bản ngắn ở trên), mâu thuẫn với chiều mũi tên $I$. Chiều $I$, cực N – S, nhãn A – D không đổi nên đáp án (Hướng A) không đổi.
+- II.2 (`so-hinh/08-cau-II-2.png`): bộ thí nghiệm lực từ — bộ nguồn (13) có quai xách, bốn lỗ cắm, đèn báo, nút, núm xoay; hộp gỗ có nẹp trên, chân đế, vân gỗ; hai ampe kế (5), (6) có thang chia, kim, chữ A; hai biến trở xoay (7); hai công tắc (8), (9); trụ đỡ có rãnh, đế tròn, nhãn đỏ, dây và phích cắm đỏ; đòn cân (2), gia trọng (3), khớp nối (4); lực kế (11) có đoạn đỏ, vạch chia, con lăn và chốt neo; khung dây (10) nhìn chếch; nam châm điện (1) gồm hai tấm thép có ốc, cuộn dây đồng, đế (12). Nhãn (5)–(9) chữ trắng trên nền gỗ như ảnh gốc. Mặt ampe kế không ghi số (ảnh gốc không đọc được). Vùng cắt ảnh gốc đổi thành tr.4 `0.552:0.579:0.938:0.729` (đủ cả nhãn (1), (12) ở mép phải).
+- II.3 (`so-hinh/09-cau-II-3.png`): bộ thí nghiệm Boyle nhìn chếch như ảnh — núm kéo nhựa đen có khía, cần pit-tông, tấm mica đầu trái có đế, ống xilanh trong suốt có vệt sáng, thước chia, pit-tông có vòng đệm đỏ nâu, hai thanh ren giằng, khối mica đầu phải có lỗ dẫn khí và van khoá, áp kế vỏ đen mặt elip thang 0 – 25, kim có đối trọng chỉ 10,5 (số liệu lần đo 1), chữ N/cm².
+- III.5 (`so-hinh/12-cau-III-5.png`): cân điện tử dựng khối (mặt trên, mặt trước tối, mặt nghiêng có màn hình để trống và hai phím), nam châm chữ U (thành sau cực S màu xanh, thành trước cực N mặt sáng viền đỏ như ảnh, đáy), thanh PQ, hai kẹp, hai giá (trụ, tay ngang, đế), hai dây nối, kích thước $l$; chữ P màu trắng trên mặt tối của cân như ảnh gốc. Đồ thị $m$ – $I$ giữ nguyên, chỉ dời sang phải cho khỏi chạm dây nối.
+
+Hình chưa ưng: I.10 — các dải phản chiếu trên thân và nắp là mảng phẳng, chưa mềm như ảnh chụp inox (nhận ra đúng vật, đủ bộ phận); II.3 — khối mica đầu phải và tấm mica đầu trái đơn giản hơn ảnh (ảnh gốc mờ, không vẽ thêm chi tiết đoán).
+
+II.1 (không vẽ lại): đối chiếu ảnh gốc phóng to — M ở trên bên trái, N ở dưới bên phải, đường sức hướng lên trên sang phải, thanh MN vẽ đè lên các đường sức và có mặt đầu elip ở N: hình TikZ đúng hướng, chiều, nhãn như gốc. Thanh nằm trên mặt phẳng đường sức nên hình là nhìn từ trên xuống; khi đó $\vec l_{MN}\times\vec B$ hướng ra phía người nhìn (lên trên), dòng điện phải chạy M → N, ý b) Sai như đã gõ.
