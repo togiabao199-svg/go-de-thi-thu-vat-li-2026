@@ -262,7 +262,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{7.8\baselineskip}
+	\NeedspaceCau{8.4\baselineskip}
 	\begin{ex}%[VL12-C2-TH]
 		Trong thí nghiệm kiểm chứng định luật Boyle (hình bên), việc dịch chuyển pit-tông từ từ nhằm đảm bảo
 		% giuhinh
@@ -276,58 +276,122 @@
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.48\linewidth}
 			\centering
-			\begin{tikzpicture}[x=0.012cm,y=-0.012cm,line join=round,line cap=round,font=\footnotesize]
-				% đế gỗ và khối đỡ
-				\shade[top color=VLgo!55,bottom color=VLgo!90!black,draw=VLgo!60!black] (80,284) rectangle (486,298);
-				\fill[black!80] (100,262) rectangle (138,284);
-				% ống dẫn từ áp kế xuống đầu xilanh
-				\draw[gray!55,line width=4pt] (98,140)--(98,232)--(122,232);
-				\draw[black!60,thin] (95,140)--(95,235)--(122,235) (101,140)--(101,229)--(122,229);
-				% đầu nối cảm biến nhiệt độ
-				\draw[gray!55,line width=4pt] (98,172)--(130,172);
-				\shade[top color=VLxanh!30,bottom color=VLxanh!70,draw=black!60,rounded corners=1pt] (124,163) rectangle (142,181);
-				% dây cáp tới màn hình nhiệt độ
-				\draw[black!85,line width=1.3pt] (142,172) .. controls (172,172) and (168,125) .. (205,125);
-				% màn hình nhiệt độ (để trống)
-				\filldraw[fill=gray!25,draw=black!70,rounded corners=2pt] (205,98) rectangle (356,154);
-				\shade[top color=white,bottom color=VLxanh!12,draw=black!60,rounded corners=1pt] (213,106) rectangle (348,146);
-				% xilanh trong suốt
-				\fill[VLxanh!6] (120,197) rectangle (458,272);
-				\fill[white] (122,199) rectangle (248,270);
-				\foreach \i in {1,...,160}{\pgfmathsetmacro{\xx}{125+120*rnd}\pgfmathsetmacro{\yy}{202+66*rnd}\fill[gray!40] (\xx,\yy) circle (0.9);}
-				\draw[black!70] (120,197) rectangle (458,272);
-				\draw[white,opacity=0.9,line width=1.5pt] (255,203)--(452,203);
-				% thước chia độ
-				\foreach \k in {0,...,40}{\pgfmathsetmacro{\xx}{126+8*\k}\draw[black!70,very thin] (\xx,272)--(\xx,{mod(\k,5)==0 ? 262 : 267});}
-				% thanh pit-tông
-				\shade[top color=VLxanh!25,bottom color=VLxanh!55,draw=VLxanh!60!black,thin] (250,231) rectangle (566,243);
-				\shade[top color=VLxanh!40,bottom color=VLxanh!80!black,rounded corners=1pt] (252,226) rectangle (272,248);
-				\shade[top color=VLxanh!40,bottom color=VLxanh!80!black,rounded corners=1pt] (450,226) rectangle (470,248);
-				\shade[top color=VLxanh!40,bottom color=VLxanh!80!black,rounded corners=1pt] (556,226) rectangle (578,248);
-				% pit-tông
-				\fill[black!85] (245,197) rectangle (251,272);
-				% tấm chặn đầu phải
-				\fill[black!85] (456,178) rectangle (464,286);
-				% tay đẩy
-				\shade[left color=VLxanh!25,right color=VLxanh!55,draw=VLxanh!60!black,thin] (562,140) rectangle (572,232);
-				\shade[top color=VLxanh!40,bottom color=VLxanh!80!black,rounded corners=1pt] (558,130) rectangle (580,148);
-				\shade[top color=gray!20,bottom color=gray!65,rounded corners=1pt] (580,132) rectangle (596,146);
-				% áp kế
-				\shade[top color=VLxanh!30,bottom color=VLxanh!70,draw=black!60,rounded corners=1pt] (88,137) rectangle (108,147);
-				\shade[inner color=white,outer color=gray!55] (96,88) circle (50);
-				\draw[black!70,thick] (96,88) circle (50);
-				\fill[VLxanh!10] (96,88) circle (43);
-				\draw[gray!70] (96,88) circle (43);
-				\foreach \a in {-40,-25,...,230}{\draw[black!70,very thin] ($(96,88)+(\a:-40)$)--($(96,88)+(\a:-35)$);}
-				\node[font=\tiny\bfseries,text=black!60] at (96,118) {BAR};
-				\draw[VLxanh!60!black,line width=1.1pt] (96,88)--++(208:32);
-				\fill[VLxanh!60!black] (96,88) circle (4);
-				% nhãn
-				\draw[thin] (144,74)--(160,62) node[right,inner sep=1pt] {1};
-				\draw[thin] (346,197)--(366,178)--(380,178) node[right,inner sep=1pt] {2};
-				\draw[thin] (251,215)--(268,210)--(284,210) node[right,inner sep=1pt] {3};
-				\draw[thin] (562,152)--(552,128)--(540,128) node[left,inner sep=1pt] {4};
-			\end{tikzpicture}
+				\begin{tikzpicture}[x=0.0096cm,y=-0.0096cm,line join=round,line cap=round,font=\footnotesize]
+					\definecolor{NBnhua}{RGB}{122,142,206}% nhựa xanh lam của khớp nối, vỏ áp kế
+					\definecolor{NBthanh}{RGB}{150,205,232}% thanh pit-tông xanh nhạt
+					\tikzset{NBkhop/.style={top color=NBnhua!45,middle color=NBnhua!18,bottom color=NBnhua!95!black,draw=NBnhua!55!black,line width=0.3pt,rounded corners=0.8pt}}
+					% bóng đổ dưới đế
+					\fill[black,opacity=0.13,rounded corners=1.5pt] (213,470) rectangle (752,477);
+					% đế gỗ
+					\shade[top color=VLgo!45!orange!55,bottom color=VLgo!95!black] (207,453) rectangle (746,471);
+					\begin{scope}
+						\clip (207,453) rectangle (746,471);
+						\foreach \yy/\dd in {458/0,462.5/37,466.5/81}{\draw[VLgo!65!black,line width=0.25pt,opacity=0.55] (200+\dd,\yy) .. controls +(60,-2.2) and +(-60,2.2) .. ++(180,0) .. controls +(60,-2.2) and +(-60,2.2) .. ++(180,0) .. controls +(60,-2.2) and +(-60,2.2) .. ++(180,0);}
+						\draw[white,opacity=0.55,line width=0.5pt] (207,454)--(746,454);
+					\end{scope}
+					\draw[VLgo!55!black,line width=0.3pt] (207,453) rectangle (746,471);
+					% khối đỡ đầu xilanh
+					\shade[top color=black!62,bottom color=black!92] (234,419)--(254,419)--(254,437)--(287,437)--(287,452.6)--(234,452.6)--cycle;
+					\draw[gray!55,line width=0.3pt] (234.5,419.6)--(253.5,419.6);
+					% ống dẫn khí từ áp kế xuống đầu xilanh (ống kim loại sáng)
+					\draw[black!62,line width=3.5pt,rounded corners=1.6pt] (222,272)--(222,383.5)--(256,383.5);
+					\draw[gray!22,line width=2.5pt,rounded corners=1.6pt] (222,272)--(222,383.5)--(256,383.5);
+					\draw[white,line width=0.7pt,rounded corners=1.6pt] (220.6,272)--(220.6,382.1)--(256,382.1);
+					% nhánh rẽ tới cảm biến nhiệt độ (hai ống nhỏ)
+					\foreach \yy in {294.5,303.5}{
+						\draw[black!62,line width=1.7pt] (227,\yy)--(271,\yy);
+						\draw[gray!18,line width=0.9pt] (226,\yy)--(271,\yy);}
+					% đầu cảm biến nhiệt độ
+					\shade[NBkhop] (270,288) rectangle (280,310);
+					\shade[NBkhop] (278,285.5) rectangle (291.5,312.5);
+					\draw[NBnhua!55!black,line width=0.25pt] (282.5,286)--(282.5,312) (287,286)--(287,312);
+					% dây cáp tới bộ hiển thị nhiệt độ
+					\draw[black!85,line width=1.5pt] (291.5,299) .. controls (306,299) and (311,313) .. (325,312.5) .. controls (346,311.5) and (333,246) .. (355,244.5)--(362,244.5);
+					\draw[gray!60,line width=0.3pt] (293,298.3) .. controls (306,298.3) and (311,312.3) .. (325,311.8) .. controls (345,310.5) and (332.5,245.5) .. (355,243.8);
+					\shade[top color=gray!25,bottom color=gray!70,draw=black!60,line width=0.25pt] (361,241.5) rectangle (371,247.5);
+					% bộ hiển thị nhiệt độ (màn hình để trống)
+					\fill[black,opacity=0.12,rounded corners=1.6pt] (372.5,204.5) rectangle (569.5,298.5);
+					\shade[top color=NBnhua!38,bottom color=NBnhua!80,draw=NBnhua!60!black,line width=0.4pt,rounded corners=1.6pt] (370,202) rectangle (567,296);
+					\shade[top color=VLxanh!5,bottom color=VLxanh!17,draw=NBnhua!70!black,line width=0.3pt,rounded corners=0.6pt] (375.5,207.5) rectangle (561.5,290.5);
+					\begin{scope}
+						\clip[rounded corners=0.6pt] (375.5,207.5) rectangle (561.5,290.5);
+						\fill[white,opacity=0.55] (372,207)--(432,207)--(396,291)--(372,291)--cycle;
+						\fill[white,opacity=0.4] (446,207)--(462,207)--(426,291)--(410,291)--cycle;
+					\end{scope}
+					% xilanh thủy tinh: khí bên trái pit-tông
+					\fill[white] (254,437)--(254,338) .. controls (254,333.6) and (257.6,330) .. (262,330)--(705,330)--(705,437)--cycle;
+					\begin{scope}
+						\clip (254,437)--(254,338) .. controls (254,333.6) and (257.6,330) .. (262,330)--(429,330)--(429,437)--cycle;
+						\fill[gray!14] (254,330) rectangle (429,437);
+						\pgfmathsetseed{2026}
+						\foreach \i in {1,...,130}{\pgfmathsetmacro{\xx}{256+172*rnd}\pgfmathsetmacro{\yy}{332+103*rnd}\pgfmathsetmacro{\rr}{1.5+3*rnd}\fill[white,opacity=0.45] (\xx,\yy) circle (\rr);}
+						\foreach \i in {1,...,90}{\pgfmathsetmacro{\xx}{256+172*rnd}\pgfmathsetmacro{\yy}{332+103*rnd}\pgfmathsetmacro{\rr}{1+2.2*rnd}\fill[gray!50,opacity=0.22] (\xx,\yy) circle (\rr);}
+						\foreach \i in {1,...,220}{\pgfmathsetmacro{\xx}{256+172*rnd}\pgfmathsetmacro{\yy}{332+103*rnd}\fill[gray!65,opacity=0.75] (\xx,\yy) circle (0.6);}
+					\end{scope}
+					% ánh thủy tinh phía trong thành ống
+					\shade[top color=VLxanh!14,bottom color=white] (441,331) rectangle (704.5,342);
+					\shade[top color=white,bottom color=VLxanh!10] (441,415) rectangle (704.5,436.5);
+					% thanh pit-tông
+					\shade[top color=NBthanh!55,middle color=NBthanh!22,bottom color=NBthanh!88!black] (458,379) rectangle (846,393);
+					\draw[NBthanh!45!black,line width=0.3pt] (458,379)--(846,379) (458,393)--(846,393);
+					\draw[white,opacity=0.9,line width=0.5pt] (464,382.8)--(842,382.8);
+					% thước chia độ dọc đáy xilanh
+					\foreach \k in {-4,...,41}{\pgfmathsetmacro{\xx}{301+9.8*\k}\pgfmathtruncatemacro{\dai}{mod(\k+5,5)==0}
+						\ifnum\dai=1 \draw[black!80,line width=0.5pt] (\xx,437)--(\xx,417);\else \draw[black!75,line width=0.35pt] (\xx,437)--(\xx,429);\fi}
+					% thành xilanh
+					\draw[black!78,line width=0.55pt] (705,437)--(254,437)--(254,338) .. controls (254,333.6) and (257.6,330) .. (262,330)--(705,330);
+					% pit-tông
+					\shade[left color=black!90,right color=black!68] (429,330.3) rectangle (440.5,436.7);
+					\draw[gray!55,line width=0.25pt] (439.6,332)--(439.6,435);
+					% khớp nối pit-tông - thanh
+					\shade[NBkhop] (440.5,372) rectangle (462.5,399);
+					\draw[NBnhua!55!black,line width=0.25pt] (447,372.5)--(447,398.5);
+					% tấm chặn đầu phải
+					\shade[left color=black!90,right color=black!66] (705,307) rectangle (717.5,452.6);
+					\draw[gray!55,line width=0.25pt] (716.6,309)--(716.6,451);
+					% bạc dẫn hướng trên tấm chặn
+					\shade[NBkhop] (697,371) rectangle (726,400);
+					\draw[NBnhua!55!black,line width=0.25pt] (704.5,371.5)--(704.5,399.5) (718.5,371.5)--(718.5,399.5);
+					% tay quay: thanh đứng, khớp, tay nắm
+					\shade[left color=NBthanh!55,middle color=NBthanh!22,right color=NBthanh!88!black] (851,254) rectangle (861.5,374);
+					\draw[NBthanh!45!black,line width=0.3pt] (851,254)--(851,374) (861.5,254)--(861.5,374);
+					\draw[white,opacity=0.9,line width=0.4pt] (853.8,258)--(853.8,370);
+					\shade[NBkhop] (843,372) rectangle (870.5,399.5);
+					\draw[NBnhua!55!black,line width=0.25pt] (850,372.5)--(850,399) (863.5,372.5)--(863.5,399);
+					\shade[top color=NBthanh!55,middle color=NBthanh!22,bottom color=NBthanh!88!black,draw=NBthanh!45!black,line width=0.3pt] (861,245) rectangle (888,253.5);
+					\shade[NBkhop] (848,240.5) rectangle (864.5,257);
+					\shade[top color=gray!35,middle color=gray!12,bottom color=gray!85,draw=black!60,line width=0.3pt,rounded corners=1.2pt] (885.5,236) rectangle (929,262.5);
+					\draw[white,opacity=0.8,line width=0.5pt] (889,241.5)--(925.5,241.5);
+					% áp kế: cổ nối
+					\shade[left color=NBnhua!75,middle color=NBnhua!25,right color=NBnhua!95!black,draw=NBnhua!55!black,line width=0.3pt] (211,255) rectangle (235,273);
+					\shade[left color=NBnhua!75,middle color=NBnhua!25,right color=NBnhua!95!black,draw=NBnhua!55!black,line width=0.3pt,rounded corners=0.6pt] (208.5,271) rectangle (237.5,278);
+					% áp kế: vỏ, mặt số
+					\begin{scope}[shift={(223,189)},x=0.0096cm,y=0.0096cm]
+						\fill[black,opacity=0.10] (2.5,-3) circle (73.5);
+						\shade[top color=NBnhua!38,bottom color=NBnhua!95!black,shading angle=35] (0,0) circle (72.5);
+						\draw[NBnhua!50!black,line width=0.4pt] (0,0) circle (72.5);
+						\shade[top color=NBnhua!95!black,bottom color=NBnhua!40,shading angle=35] (0,0) circle (66.5);
+						\shade[inner color=white,outer color=VLxanh!20] (0,0) circle (64);
+						\draw[NBnhua!55!black,line width=0.3pt] (0,0) circle (64);
+						\foreach \a in {-30,-24,...,210}{\draw[NBnhua!45!black,line width=0.3pt] (\a:61.5)--(\a:55.5);}
+						\foreach \a in {-30,0,...,210}{\draw[NBnhua!35!black,line width=0.9pt,line cap=butt] (\a:61.5)--(\a:50);}
+						\node[font=\fontsize{4.5}{5}\selectfont\sffamily\bfseries,text=NBnhua!55!black,inner sep=0pt] at (0,-51) {BAR};
+						% kim
+						\fill[VLxanh!55!black] (150.5:52)--(60.5:2.6)--(-29.5:4)--(-119.5:2.6)--cycle;
+						\fill[VLxanh!60!black,rotate=-29.5] (2,-4.2) rectangle (17,4.2);
+						\filldraw[fill=white,draw=VLxanh!45!black,line width=0.4pt] (0,0) circle (4.6);
+						% phản quang mặt kính
+						\begin{scope}
+							\clip (0,0) circle (64);
+							\fill[white,opacity=0.3] (-30,52) ellipse (60 and 34);
+						\end{scope}
+					\end{scope}
+					% nhãn
+					\draw[line width=0.4pt] (292.5,201)--(327,180.5)--(345,180.5) node[right,inner sep=1pt] {1};
+					\draw[line width=0.4pt] (556,330)--(597,287)--(616,287) node[right,inner sep=1pt] {2};
+					\draw[line width=0.4pt] (436,361)--(455,350)--(475,350) node[right,inner sep=1pt] {3};
+					\draw[line width=0.4pt] (853.5,281)--(830,252)--(812,252) node[left,inner sep=1pt] {4};
+				\end{tikzpicture}
 		\end{minipage}
 		\loigiai{
 			Dịch chuyển pit-tông từ từ để khí kịp trao đổi nhiệt với môi trường, nhiệt độ khí không đổi (quá trình đẳng nhiệt).
@@ -460,38 +524,12 @@
 		\end{minipage}\hfill
 		\begin{minipage}[t]{0.29\linewidth}
 			\centering
-			\begin{tikzpicture}[x=0.0125cm,y=-0.0125cm,baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
-				% bóng đổ
-				\fill[black,opacity=0.1] (150,322) ellipse (104 and 14);
-				% đế
-				\fill[gray!35] (45,305)--(45,313) arc[start angle=180,end angle=0,x radius=100,y radius=18]--(245,305)--cycle;
-				\draw (45,305)--(45,313) arc[start angle=180,end angle=0,x radius=100,y radius=18]--(245,305);
-				\shade[inner color=gray!8,outer color=gray!30] (145,305) ellipse (100 and 18);
-				\draw (145,305) ellipse (100 and 18);
-				% khối chân thanh nén
-				\shade[left color=gray!55,right color=gray!25,middle color=gray!8] (130,282) rectangle (160,307);
-				\draw (130,282)--(130,307) arc[start angle=180,end angle=0,x radius=15,y radius=4]--(160,282);
-				\draw[fill=gray!20] (145,282) ellipse (15 and 4);
-				% thanh nén
-				\shade[left color=gray!60,right color=gray!30,middle color=gray!5] (139,128) rectangle (152,282);
-				\draw (139,128)--(139,282) (152,128)--(152,282);
-				% xilanh
-				\shade[left color=gray!50,right color=gray!20,middle color=gray!3] (130,44) rectangle (163,187);
-				\fill[VLxanh!12] (139,62) rectangle (153,128);
-				\shade[left color=gray!60,right color=gray!30,middle color=gray!5] (139,128) rectangle (153,187);
-				\draw[thick] (139,128)--(153,128);
-				\draw (139,62)--(139,187) (153,62)--(153,187) (139,62)--(153,62);
-				\draw (130,44) rectangle (163,187);
-				% mặt ghế
-				\shade[left color=VLgo!80!black,right color=VLgo!60!black,middle color=VLgo!70] (73,25)--(73,36) arc[start angle=180,end angle=0,x radius=72,y radius=10]--(217,25)--cycle;
-				\draw (73,25)--(73,36) arc[start angle=180,end angle=0,x radius=72,y radius=10]--(217,25);
-				\shade[inner color=VLgo!35,outer color=VLgo!75] (145,25) ellipse (72 and 10);
-				\draw (145,25) ellipse (72 and 10);
-				% chú thích
-				\draw[thin] (205,40)--(238,72) node[below right,inner sep=1pt] {Mặt ghế};
-				\draw[thin] (131,98)--(78,140) node[below left,inner sep=1pt] {Xilanh};
-				\draw[thin] (153,212)--(205,228) node[right,inner sep=1.5pt] {Thanh nén};
-			\end{tikzpicture}
+				\begin{tikzpicture}[baseline={([yshift=-1.2ex]current bounding box.north)},line join=round,line cap=round,font=\footnotesize]
+					\VLghenangha{0}{0}{1}
+					\draw[line width=0.4pt] (VLghe-matghe)--++(0.58,-0.62) node[below right=-1pt,inner sep=1pt] {Mặt ghế};
+					\draw[line width=0.4pt] (VLghe-xilanhW)--++(-0.52,-0.7) node[below left=-1pt,inner sep=1pt] {Xilanh};
+					\draw[line width=0.4pt] (VLghe-thanhE)--++(0.66,-0.24) node[right,inner sep=1.5pt] {Thanh nén};
+				\end{tikzpicture}
 		\end{minipage}
 		\par
 		\NeedspaceBang{8.1\baselineskip}%
