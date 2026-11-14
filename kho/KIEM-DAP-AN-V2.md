@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 17/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 18/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -29,13 +29,13 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 17 | P08 | [`VatLi2026-ThaiNguyen-SoGD-Lan1`](../de/VatLi2026-ThaiNguyen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | không (II.1c phụ thuộc cực nguồn đọc trên hình — Fable đọc độc lập trên ảnh nhúng gốc ra cùng kết quả với file: Đúng) | không thấy (I.17 phương án C được sửa có chủ ý vì bản gốc C trùng B, đã ghi `% KIỂM TRA`; 4 hình TikZ đúng quan hệ với hình gốc: chiều dòng điện I.7, chiều mũi tên I.13 và III.5, số trên trục III.5, thứ tự bản cực nguồn và cực N – S ở II.1) | không tìm thấy |
 | 18 | P08 | [`VatLi2026-ThanhHoa-HamRong-Lan1`](../de/VatLi2026-ThanhHoa-HamRong-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.4c (S nếu coi MN là đoạn dây không thuộc mạch kín có từ thông biến thiên — file và Fable cùng chọn; Đ nếu coi MN nằm trong mạch kín cấp dòng I có từ thông khác 0); III.6 (đề không cho N_A, 1 eV: 2108 với 6,02·10²³ và 1,6·10⁻¹⁹; 2107 với 6,022·10²³; 2105 với thêm 1,602·10⁻¹⁹) | không thấy (lời đề, số liệu, thứ tự phương án và ý khớp ảnh trang; 6 hình TikZ đúng quan hệ với hình gốc — chiều mũi tên I.1, I.6, I.17, số trên trục I.6, I.15, II.1; riêng I.15 file chủ ý sửa nhãn "An" của đề gốc thành "Au" ở hình và phương án B, đã ghi trong kiem-chung.md, không đổi đáp án) | không tìm thấy |
 | 19 | P09 | `VatLi2026-ThanhHoa-TinhGia1` | đang kiểm | | | | | |
-| 20 | P01 | `VatLi2026-BacNinh-SoGD-Lan1` | đang kiểm | | | | | |
+| 20 | P01 | [`VatLi2026-BacNinh-SoGD-Lan1`](../de/VatLi2026-BacNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.2c (số liệu bảng cho h/T dao động 0,852–0,875 mm/K, lệch 2,7 %; file và Fable cùng chọn Đ theo ý người ra đề, xét khắt khe có thể cãi S) | không thấy (lời đề các câu có số liệu và 10 hình khớp bản gốc: chiều I, F, dấu ⊗/⊙ ở I.5; chiều dòng điện, dấu ⊙ ở I.10; số trên trục III.1; bảng II.2) | không tìm thấy |
 | 21 | P09 | `VatLi2026-BacNinh-SoGD` | đang kiểm | | | | | |
 | 22 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan1` | đang kiểm | | | | | |
 | 23 | P02 | `VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1` | đang kiểm | | | | | |
 | 24 | P03 | `VatLi2026-HaiPhong-CumCM10-Lan1` | đang kiểm | | | | | |
 | 25 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2` | đang kiểm | | | | | |
-| 26 | P05 | `VatLi2026-LaoCai-SoGD-Lan1` | chưa kiểm | | | | | |
+| 26 | P05 | `VatLi2026-LaoCai-SoGD-Lan1` | đang kiểm | | | | | |
 | 27 | P06 | `VatLi2026-NgheAn-LienTruong-Lan1` | chưa kiểm | | | | | |
 | 28 | P06 | `VatLi2026-NinhBinh-SoGD-Lan2` | chưa kiểm | | | | | |
 | 29 | P07 | `VatLi2026-QuangNinh-ChuyenHaLong-Lan1` | chưa kiểm | | | | | |
