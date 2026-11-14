@@ -51,3 +51,14 @@
 - I.4 nam châm chữ U + khung dây có nguồn (hình thực tiễn, `% giuhinh`, N đỏ, S xanh như gốc; hướng A, B, C, D đen để không gợi ý), I.5 đồ thị t_Y – t_X, I.9 vết hạt β trong từ trường, I.17 bình cầu – ống ngang – giọt thủy ngân (bốn hình đặt bên phải phương án).
 - II.1 đồ thị p – T chu trình hình bình hành; II.2 cây con trên đất (ảnh chụp, vẽ giản lược, chờ phiên vẽ lại); II.3 chảo (ảnh chụp, đặt cạnh bảng số liệu); II.4 khung dây và vùng từ trường.
 - III.1 đồ thị i(t) (lưới 10/3 ms × 1 A như gốc); III.2 mạch cầu chì (tự dựng, đề gốc không có hình); III.6 hai bình thông nhau có khóa.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Ảnh gốc lấy bằng `pdfimages` (10 ảnh nhúng của PDF), so hình: `python3 tools/so_hinh.py de/VatLi2026-ThanhHoa-TinhGia1/VatLi2026-ThanhHoa-TinhGia1.tex <thư mục ảnh> "I.4=g-000.png,I.5=g-001.png,I.9=g-002.png,I.17=g-003.png,II.1=g-004.png,II.2=g-006.png,II.3=g-007.png,II.4=g-005.png,III.1=g-008.png,III.6=g-009.png"` (III.2 không có ảnh gốc: hình tự dựng).
+
+- **I.4** (`so-hinh/01-cau-I-4.png`): vẽ lại nam châm chữ U dạng khối nhìn xiên đúng góc nhìn ảnh gốc (mặt trước, mặt bên ngoài cực N, mặt trong cực S, mặt đáy trong, hai đầu cực có mũ màu: N đỏ cam, S xanh đậm; đường chia hai nửa N – S ở đáy chữ U; vệt sáng dọc hai nhánh); khung dây hình bình hành, nguồn điện, hai mũi tên dòng điện $I$, bốn hướng A, B, C, D giữ đúng vị trí và chiều như hình cũ (nội dung vật lí không đổi).
+- **II.2** (`so-hinh/06-cau-II-2.png`): vẽ lại cảnh cây con trong chậu sát ảnh gốc: nền đất có hạt giá thể lốm đốm (ba lớp hạt ngẫu nhiên, hạt xa nhỏ dần), nền tối phía sau, vành chậu nhựa trong, 5 cây con đúng vị trí ảnh (cụm lá lớn sát mép trái, cây giữa thân dài một lá mầm lớn còn dính vỏ hạt, cây hai lá bên phải, cây nhỏ phía dưới, cụm ba lá góc phải dưới), thân nhạt có lông tơ, lá tô chuyển màu có gân giữa và bóng đổ. Macro riêng của đề: `\TGla`, `\TGthan`, `\TGhatdat`.
+- **II.3** (`so-hinh/07-cau-II-3.png`): vẽ lại chiếc chảo đúng góc nhìn ảnh gốc: thân nhôm xám tô khối (vệt sáng, gờ đáy), vành chảo, lòng chảo phủ đá đen lốm đốm có đáy chảo và vệt sáng, tay cầm đen cong có lỗ treo, tai nối kim loại, bóng đổ.
+- Giữ nguyên (sơ đồ, đồ thị, mạch): I.5, I.9, I.17, II.1, II.4, III.1, III.2 (mạch cầu chì tự dựng do đề gốc thiếu hình), III.6.
+- Hình chưa ưng: không có hình nào chưa đạt; II.2 là ảnh chụp mờ nên lá, đất vẽ theo kiểu minh họa (không thể giống hệt từng hạt đất).
+- Dàn trang: bản đề 7 trang (ĐẠT), bản lời giải 12 trang (như trước khi vẽ lại).

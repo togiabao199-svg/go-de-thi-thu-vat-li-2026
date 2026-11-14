@@ -9,6 +9,52 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
+%===== Macro hình riêng của đề (câu II.2: cây con trong chậu) =====
+% màu lá mầm (sáng, vừa, tối) và màu đất
+\definecolor{TGlasang}{RGB}{203,236,96}
+\definecolor{TGlavua}{RGB}{160,212,52}
+\definecolor{TGlatoi}{RGB}{98,150,34}
+\definecolor{TGdat}{RGB}{58,42,32}
+% lá mầm hình trứng, gốc lá ở (x,y), trục lá nghiêng góc #3 so với phương thẳng đứng (ngược chiều kim đồng hồ),
+% dài #4, nửa rộng #5 (đơn vị của hình): \TGla{x}{y}{góc}{dài}{nửa rộng}
+\newcommand{\TGla}[5]{%
+	\begin{scope}[shift={(#1,#2)},rotate=#3]
+		\def\TGvien{(0,0) .. controls (-1.2*#5,0.1*#4) and (-1.1*#5,0.72*#4) .. (0,#4) .. controls (1.1*#5,0.72*#4) and (1.2*#5,0.1*#4) .. (0,0)}
+		\fill[black,opacity=0.22,shift={(0.07,-0.1)}] \TGvien -- cycle;
+		\shade[left color=TGlavua,right color=TGlasang,draw=TGlatoi,line width=0.3pt] \TGvien -- cycle;
+		\begin{scope}
+			\clip \TGvien -- cycle;
+			\fill[TGlatoi,opacity=0.2] (0,0) .. controls (-1.2*#5,0.1*#4) and (-1.1*#5,0.72*#4) .. (0,#4) .. controls (-0.5*#5,0.65*#4) and (-0.55*#5,0.2*#4) .. (0,0) -- cycle;
+			\fill[white,opacity=0.18] (0.3*#5,0.2*#4) .. controls (0.75*#5,0.3*#4) and (0.6*#5,0.65*#4) .. (0.12*#5,0.85*#4) .. controls (0.3*#5,0.6*#4) and (0.35*#5,0.4*#4) .. (0.3*#5,0.2*#4) -- cycle;
+		\end{scope}
+		\draw[TGlasang!55!white,line width=0.45pt,opacity=0.9] (0,0.02*#4) .. controls (0.06*#5,0.4*#4) .. (0,0.9*#4);
+		\draw[TGlatoi,line width=0.15pt,opacity=0.7] (0.03*#5,0.02*#4) .. controls (0.1*#5,0.4*#4) .. (0.02*#5,0.9*#4);
+	\end{scope}}
+% thân cây con (mảnh, nhạt màu, có lông tơ), từ (x1,y1) (gốc, dưới đất) lên (x2,y2) (ngọn): \TGthan{x1}{y1}{x2}{y2}
+\newcommand{\TGthan}[4]{%
+	\foreach \k in {0.05,0.075,...,0.96}{
+		\pgfmathsetmacro{\ga}{150+50*rnd}\pgfmathsetmacro{\gb}{-20+50*rnd}\pgfmathsetmacro{\gl}{0.1+0.08*rnd}
+		\draw[white!85!TGlavua,line width=0.15pt,opacity=0.8] ($(#1,#2)!\k!(#3,#4)$) -- ++(\ga:\gl) ($(#1,#2)!\k+0.012!(#3,#4)$) -- ++(\gb:\gl);}
+	\draw[TGlatoi!35!gray!70!black,line width=2.5pt] (#1,#2) .. controls ($(#1,#2)!0.5!(#3,#4)+(0.05,0)$) .. (#3,#4);
+	\draw[TGlavua!45!gray!45!white,line width=1.9pt] (#1,#2) .. controls ($(#1,#2)!0.5!(#3,#4)+(0.05,0)$) .. (#3,#4);
+	\draw[TGlasang!35!white,line width=0.6pt] ($(#1,#2)+(-0.035,0)$) .. controls ($(#1,#2)!0.5!(#3,#4)+(0.015,0)$) .. ($(#3,#4)+(-0.035,0)$);}
+% hạt đất / hạt giá thể hình đa giác bo tròn, rải ngẫu nhiên trong vùng 0..xmax, ymin..ymax, hạt xa (y lớn) nhỏ dần:
+% \TGhatdat{số hạt}{x max}{y min}{y max}{cỡ nhỏ nhất}{cỡ thêm}{bảng màu: 1 đất sẫm | 2 vụn nâu sáng | 3 hạt trắng (perlite)}
+\newcommand{\TGhatdat}[7]{%
+	\foreach \i in {1,...,#1}{
+		\pgfmathsetmacro{\hx}{rnd*#2}\pgfmathsetmacro{\hy}{#3+rnd*(#4-#3)}
+		\pgfmathsetmacro{\hr}{(#5+#6*rnd*rnd)*(1.2-0.75*\hy/8.5)}
+		\pgfmathsetmacro{\hg}{rnd*72}\pgfmathrandominteger{\hc}{1}{4}
+		\pgfmathsetmacro{\ra}{\hr*(0.6+0.5*rnd)}\pgfmathsetmacro{\rb}{\hr*(0.6+0.5*rnd)}\pgfmathsetmacro{\rc}{\hr*(0.6+0.5*rnd)}\pgfmathsetmacro{\rd}{\hr*(0.6+0.5*rnd)}\pgfmathsetmacro{\re}{\hr*(0.6+0.5*rnd)}
+		\ifcase#7\or
+			\ifcase\hc\or\def\hm{TGdat!55!black}\or\def\hm{TGdat!75!black}\or\def\hm{brown!35!TGdat}\or\def\hm{TGdat!85!brown}\fi
+		\or
+			\ifcase\hc\or\def\hm{brown!55!TGdat}\or\def\hm{brown!45!gray!70}\or\def\hm{brown!70!black!70}\or\def\hm{brown!30!gray!45}\fi
+		\or
+			\ifcase\hc\or\def\hm{yellow!10!gray!25}\or\def\hm{brown!18!gray!30}\or\def\hm{yellow!8!gray!18}\or\def\hm{brown!25!gray!40}\fi
+		\fi
+		\fill[\hm,shift={(\hx,\hy)},rotate=\hg,rounded corners=0.35pt] (0:\ra) -- (72:\rb) -- (144:\rc) -- (216:\rd) -- (288:\re) -- cycle;
+		\ifnum#7=3 \fill[white,opacity=0.55,shift={(\hx,\hy)},rotate=\hg] (100:0.45*\rb) circle [radius=0.3*\hr];\fi}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT TĨNH GIA I}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -56,7 +102,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{12\baselineskip}
+	\NeedspaceCau{11.5\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		% giuhinh
 		Một dây dẫn mang dòng điện được đặt giữa hai cực của một nam châm chữ U. Lực từ tác dụng lên dây dẫn có hướng như thế nào trong hình bên?
@@ -70,51 +116,69 @@
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.38\linewidth}
 			\centering
-			\begin{tikzpicture}[x=0.0072cm,y=-0.0072cm,line join=round,line cap=round,font=\footnotesize]
-				% nam châm chữ U: mặt sau (bề dày) rồi mặt trước
-				\def\Umat{(75,175)--(75,470) .. controls (75,640) and (360,640) .. (360,470) -- (360,175) -- (305,175) -- (305,470) .. controls (305,555) and (130,555) .. (130,470) -- (130,175) -- cycle}
-				\begin{scope}[shift={(-25,-60)}]
-					\begin{scope}
-						\clip (-50,0) rectangle (217,700);
-						\fill[VLdo!75!black] \Umat;
-					\end{scope}
-					\begin{scope}
-						\clip (217,0) rectangle (450,700);
-						\fill[VLxanh!75!black] \Umat;
-					\end{scope}
+			\begin{tikzpicture}[x=0.0047cm,y=-0.0047cm,line join=round,line cap=round,font=\footnotesize]
+				% nam châm chữ U nhìn xiên: mặt trước \Umat, bề dày theo vectơ (-40,-111)
+				\def\Umat{(82,283) -- (82,790) .. controls (82,1125) and (590,1125) .. (590,790) -- (590,283) -- (490,283) -- (490,790) .. controls (490,985) and (185,985) .. (185,790) -- (185,283) -- cycle}
+				% các mặt bên (quét mặt trước về phía sau)
+				\foreach \t in {1,0.96,...,0.03}{
+					\begin{scope}[shift={(-40*\t,-111*\t)}]
+						\begin{scope}
+							\clip (0,150) rectangle (335,1100);
+							\fill[VLdo!74!black] \Umat;
+						\end{scope}
+						\begin{scope}
+							\clip (335,150) rectangle (650,1100);
+							\fill[VLxanh!58] \Umat;
+						\end{scope}
+					\end{scope}}
+				% cạnh phía sau còn nhìn thấy: mép ngoài bên trái, mép trong
+				\begin{scope}
+					\clip (0,150) rectangle (185,1100);
+					\draw[black!65,line width=0.35pt] (42,172) -- (42,679) .. controls (42,1014) and (550,1014) .. (550,679);
+				\end{scope}
+				\draw[black!65,line width=0.35pt] (146,679) .. controls (146,874) and (450,874) .. (450,679) -- (450,172);
+				\draw[black!65,line width=0.35pt] (335,937) -- (296,826);
+				% mặt trước
+				\begin{scope}
+					\clip (0,150) rectangle (335,1100);
+					\shade[left color=VLdo!88!black,right color=VLdo!96!white] \Umat;
 				\end{scope}
 				\begin{scope}
-					\clip (-50,0) rectangle (217,700);
-					\shade[left color=VLdo!95!black,right color=VLdo!70] \Umat;
+					\clip (335,150) rectangle (650,1100);
+					\shade[left color=VLxanh!36,right color=VLxanh!56] \Umat;
 				\end{scope}
-				\begin{scope}
-					\clip (217,0) rectangle (450,700);
-					\shade[left color=VLxanh!45,right color=VLxanh!70] \Umat;
-				\end{scope}
-				\draw[thin,black!70] \Umat;
-				% mặt trên hai cực
-				\filldraw[fill=VLdo!65!orange,draw=black!70,thin] (50,115)--(105,115)--(130,175)--(75,175)--cycle;
-				\filldraw[fill=VLxanh!80!black,draw=black!70,thin] (280,115)--(335,115)--(360,175)--(305,175)--cycle;
-				\draw[black!70,thin] (50,115)--(50,415) (280,115)--(280,175);
-				\node[white,font=\small] at (102,245) {N};
-				\node[white,font=\small] at (332,245) {S};
-				% khung dây có dòng điện
-				\draw[thick] (517,118)--(490,40)--(165,40)--(250,285)--(575,285)--(522,132);
-				\draw[thick] (489,118)--(545,118);
-				\draw[very thick] (507,132)--(537,132);
-				\draw[VLdo,VLgiua=0.5,thick] (420,40)--(260,40);
-				\draw[VLdo,VLgiua=0.5,thick] (390,285)--(530,285);
-				\node[VLdo] at (345,64) {$I$};
-				\node[VLdo] at (470,262) {$I$};
-				% các hướng
-				\draw[VLmui] (205,160)--(205,92);
-				\draw[VLmui] (205,160)--(205,228);
-				\draw[VLmui] (205,160)--(138,160);
-				\draw[VLmui] (205,160)--(272,160);
-				\node[above,inner sep=1pt,font=\scriptsize] at (205,92) {A};
-				\node[below,inner sep=1pt,font=\scriptsize] at (205,228) {C};
-				\node[above left,inner sep=0pt,font=\scriptsize] at (138,160) {D};
-				\node[above right,inner sep=0pt,font=\scriptsize] at (272,160) {B};
+				\draw[white,opacity=0.3,line width=0.9pt] (98,345) -- (98,790) .. controls (98,900) and (125,965) .. (165,1005);
+				\draw[white,opacity=0.45,line width=0.9pt] (506,345) -- (506,770);
+				\draw[black!65,line width=0.35pt] \Umat;
+				\draw[black!65,line width=0.35pt] (335,937) -- (335,1041);
+				% đầu cực N (đỏ cam) và đầu cực S (xanh đậm)
+				\filldraw[fill=VLdo!62!black,draw=black!65,line width=0.35pt] (42,172) -- (82,283) -- (82,330) -- (42,219) -- cycle;
+				\shade[left color=VLdo!80!orange,right color=VLdo!60!orange!85!white] (82,283) rectangle (185,330);
+				\draw[black!65,line width=0.35pt] (82,283) rectangle (185,330);
+				\filldraw[fill=VLdo!55!orange!90!white,draw=black!65,line width=0.35pt] (42,172) -- (146,172) -- (185,283) -- (82,283) -- cycle;
+				\filldraw[fill=VLxanh!62!black,draw=black!65,line width=0.35pt] (450,172) -- (490,283) -- (490,330) -- (450,219) -- cycle;
+				\shade[left color=VLxanh!78!black,right color=VLxanh!92!black] (490,283) rectangle (590,330);
+				\draw[black!65,line width=0.35pt] (490,283) rectangle (590,330);
+				\filldraw[fill=VLxanh!88!black,draw=black!65,line width=0.35pt] (450,172) -- (550,172) -- (590,283) -- (490,283) -- cycle;
+				\node[white,font=\small] at (133,397) {N};
+				\node[white,font=\small] at (540,397) {S};
+				% khung dây có dòng điện, nguồn điện
+				\draw[black!80,line width=0.8pt] (880,227) -- (815,42) -- (243,42) -- (395,475) -- (968,475) -- (887,246);
+				\draw[black!80,line width=0.5pt] (818,227) -- (942,227);
+				\draw[black!80,line width=1.3pt] (846,246) -- (922,246);
+				\path[VLdo,VLgiua=0.5] (600,42) -- (480,42);
+				\path[VLdo,VLgiua=0.5] (700,475) -- (820,475);
+				\node[VLdo] at (562,95) {$I$};
+				\node[VLdo] at (772,428) {$I$};
+				% các hướng A, B, C, D
+				\draw[VLmui,line width=0.6pt] (318,255) -- (318,140);
+				\draw[VLmui,line width=0.6pt] (318,255) -- (318,368);
+				\draw[VLmui,line width=0.6pt] (318,255) -- (205,255);
+				\draw[VLmui,line width=0.6pt] (318,255) -- (426,255);
+				\node[above,inner sep=1pt,font=\scriptsize] at (318,138) {A};
+				\node[below,inner sep=1.5pt,font=\scriptsize] at (318,368) {C};
+				\node[above,inner sep=2pt,font=\scriptsize] at (232,255) {D};
+				\node[above,inner sep=2pt,font=\scriptsize] at (404,255) {B};
 			\end{tikzpicture}
 		\end{minipage}
 		\loigiai{
@@ -402,24 +466,57 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{21.4\baselineskip}
+	\NeedspaceCau{24.2\baselineskip}
 	\begin{ex}%[VL12-C4-VD]
 		Phosphorus ${}^{32}_{15}\text{P}$ là đồng vị phóng xạ $\beta^-$ với chu kì bán rã $14{,}26$ ngày. Trong phương pháp nguyên tử đánh dấu, các nhà khoa học sử dụng ${}^{32}_{15}\text{P}$ để nghiên cứu sự hấp thụ và vận chuyển phosphorus trong cây trồng. Trong một thí nghiệm, người ta tưới dung dịch nước chứa $215$~mg ${}^{32}_{15}\text{P}$ cho cây khoai tây. Sau đó, ngắt một chiếc lá cây và đo độ phóng xạ của nó thì thu được kết quả $3{,}41\cdot 10^{12}$~Bq.
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				% nền đất
-				\shade[top color=brown!55!black,bottom color=brown!80!black] (0,0) rectangle (5,2.8);
-				\foreach \x/\y/\r in {0.3/0.4/0.06,0.8/1.0/0.05,1.4/0.3/0.07,2.1/0.9/0.05,2.6/0.25/0.06,3.3/0.8/0.07,3.9/0.35/0.05,4.6/0.9/0.06,4.4/1.9/0.05,0.5/2.3/0.06,1.7/2.5/0.05,3.6/2.4/0.06,2.9/1.8/0.05,1.1/1.7/0.05}{\fill[brown!30!gray] (\x,\y) circle (\r);}
-				% cây con: thân, hai lá mầm
-				\foreach \x/\y/\h/\s in {1.0/0.35/0.7/1,2.6/0.5/0.9/1.15,3.95/0.6/0.8/1,4.65/1.7/0.5/0.75,0.45/1.6/0.45/0.7}{
-					\draw[green!45!black!70!white,line width=1.4pt] (\x,\y) .. controls (\x+0.05,\y+0.5*\h) .. (\x,\y+\h);
-					\begin{scope}[shift={(\x,\y+\h)},scale=\s]
-						\shade[top color=green!55!yellow!70,bottom color=green!50!black,draw=green!35!black,thin] (0,0) .. controls (-0.25,0.15) and (-0.45,0.55) .. (-0.75,0.75) .. controls (-0.35,0.85) and (-0.05,0.55) .. (0,0);
-						\shade[top color=green!60!yellow!75,bottom color=green!50!black,draw=green!35!black,thin] (0,0) .. controls (0.2,0.2) and (0.4,0.6) .. (0.7,0.62) .. controls (0.62,0.25) and (0.3,0.05) .. (0,0);
-						\draw[green!30!black,thin] (0,0) .. controls (-0.3,0.35) .. (-0.62,0.7) (0,0) .. controls (0.3,0.3) .. (0.6,0.55);
-					\end{scope}
-				}
+			\begin{tikzpicture}[x=0.52cm,y=0.52cm,line join=round,line cap=round,font=\footnotesize]
+				\pgfmathsetseed{2026}
+				\begin{scope}
+					\clip[rounded corners=1.5pt] (0,0) rectangle (12.54,8.52);
+					% nền đất
+					\shade[top color=TGdat!70!black,bottom color=TGdat!85!brown] (0,0) rectangle (12.54,8.52);
+					\TGhatdat{260}{12.54}{0}{8}{0.12}{0.3}{1}
+					\TGhatdat{420}{12.54}{0}{8}{0.05}{0.16}{2}
+					\TGhatdat{70}{12.54}{0}{4.6}{0.08}{0.22}{3}
+					\TGhatdat{45}{12.54}{4.2}{7.9}{0.05}{0.1}{3}
+					\TGhatdat{200}{12.54}{6.2}{8.1}{0.06}{0.16}{2}
+					% phía sau chậu: nền tối
+					\shade[top color=black!88,bottom color=black!70!TGdat] (0,8.6) -- (0,7.75) .. controls (2,7.55) and (4,7.9) .. (6.3,7.75) .. controls (7.5,7.9) and (9,7.2) .. (10.5,7.25) .. controls (11.5,7.3) and (12,6.9) .. (12.54,6.8) -- (12.54,8.6) -- cycle;
+					% vành chậu nhựa trong
+					\fill[white,opacity=0.07] (0,7.05) .. controls (3,7.05) and (6.5,6.95) .. (8.7,6.35) .. controls (10.2,5.95) and (11.6,5.1) .. (12.54,4.4) -- (12.54,8.6) -- (0,8.6) -- cycle;
+					\draw[white,opacity=0.3,line width=2.4pt] (0,7.05) .. controls (3,7.05) and (6.5,6.95) .. (8.7,6.35) .. controls (10.2,5.95) and (11.6,5.1) .. (12.54,4.4);
+					\draw[white,opacity=0.65,line width=0.4pt] (0,7.13) .. controls (3,7.13) and (6.5,7.03) .. (8.72,6.43) .. controls (10.2,6.03) and (11.6,5.2) .. (12.54,4.5);
+					% cây 2 (giữa): thân dài, một lá mầm lớn
+					\TGthan{5.0}{0.15}{4.95}{4.3}
+					\TGla{4.95}{4.15}{3}{2.75}{1.05}
+					\fill[brown!40!TGlavua] (5.05,4.6) .. controls (5.4,4.95) and (5.6,4.7) .. (5.45,4.45) .. controls (5.3,4.55) and (5.2,4.5) .. (5.05,4.6) -- cycle;
+					% cây 3 (phải, giữa)
+					\TGthan{8.62}{2.9}{8.5}{4.7}
+					\TGla{8.5}{4.6}{27}{2.15}{0.78}
+					\TGla{8.45}{4.6}{-73}{1.55}{0.55}
+					% cây 4 (nhỏ, giữa dưới)
+					\TGthan{8.42}{0.5}{8.38}{1.75}
+					\TGla{8.4}{1.65}{28}{1.35}{0.5}
+					% cây 5 (phải dưới)
+					\TGthan{10.32}{0.7}{10.28}{2.35}
+					\TGthan{11.06}{0.2}{11.0}{1.8}
+					\TGla{10.45}{2.4}{68}{1.0}{0.33}
+					\TGla{10.55}{2.45}{-8}{1.3}{0.55}
+					\TGla{10.95}{1.75}{-30}{1.55}{0.62}
+					% cụm cây 1 (trái, sát mép ảnh)
+					\TGthan{0.36}{0}{0.3}{2.1}
+					\TGthan{1.26}{0}{1.2}{2.9}
+					\TGla{-0.5}{4.6}{-38}{1.9}{0.62}
+					\TGla{1.9}{3.9}{-1}{3.35}{1.25}
+					\TGla{3.05}{4.95}{-55}{1.05}{0.36}
+					\TGla{1.35}{2.9}{-22}{3.1}{1.2}
+					\TGla{1.1}{2.75}{40}{2.2}{0.75}
+					\TGla{1.0}{2.8}{125}{1.5}{0.5}
+					\TGla{1.0}{2.95}{-80}{2.15}{0.55}
+				\end{scope}
+				\draw[gray!60,line width=0.4pt,rounded corners=1.5pt] (0,0) rectangle (12.54,8.52);
 			\end{tikzpicture}
 		\end{center}
 		\NeedspaceBang{10\baselineskip}%
@@ -460,20 +557,44 @@
 			\end{minipage}}\hfill%
 			\begin{minipage}[c]{0.25\linewidth}
 				\centering
-				\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
+				\begin{tikzpicture}[x=0.0028cm,y=-0.0028cm,line join=round,line cap=round,font=\footnotesize]
+					\pgfmathsetseed{37}
 					% bóng đổ
-					\fill[gray!25] (1.25,-0.02) ellipse (1.25 and 0.12);
-					% thân chảo
-					\shade[left color=gray!35,right color=gray!70,middle color=gray!15] (0,0.62) .. controls (0.1,0.12) and (0.35,0) .. (1.25,0) .. controls (2.15,0) and (2.4,0.12) .. (2.5,0.62) -- cycle;
-					\draw[gray!60!black,thin] (0,0.62) .. controls (0.1,0.12) and (0.35,0) .. (1.25,0) .. controls (2.15,0) and (2.4,0.12) .. (2.5,0.62);
-					% lòng chảo đen
-					\fill[gray!20] (1.25,0.62) ellipse (1.25 and 0.3);
-					\shade[inner color=gray!70!black,outer color=black!90] (1.25,0.62) ellipse (1.17 and 0.25);
-					\foreach \x/\y in {0.6/0.6,0.9/0.72,1.2/0.52,1.5/0.7,1.8/0.6,1.05/0.62,1.6/0.5,0.8/0.5,2.0/0.7,1.35/0.78}{\fill[gray!45] (\x,\y) circle (0.018);}
-					\draw[gray!55!black,thin] (1.25,0.62) ellipse (1.25 and 0.3);
-					% tay cầm
-					\shade[top color=gray!60!black,bottom color=black] (2.45,0.78) .. controls (2.8,0.85) and (3.2,1.0) .. (3.6,1.2) .. controls (3.75,1.28) and (3.82,1.15) .. (3.7,1.07) .. controls (3.3,0.85) and (2.85,0.66) .. (2.47,0.62) -- cycle;
-					\fill[gray!60] (2.42,0.62) rectangle (2.56,0.8);
+					\fill[gray!18] (560,655) ellipse [x radius=470, y radius=22];
+					\fill[gray!30] (550,652) ellipse [x radius=380, y radius=13];
+					% tay cầm (phía sau thân chảo)
+					\shade[top color=black!72,bottom color=black!95] (985,205) .. controls (1045,150) and (1110,90) .. (1195,55) .. controls (1290,18) and (1390,2) .. (1442,10) .. controls (1480,17) and (1482,58) .. (1450,70) .. controls (1375,92) and (1300,122) .. (1228,165) .. controls (1160,205) and (1105,245) .. (1070,285) -- (1030,262) -- cycle;
+					\draw[black!45,line width=0.5pt,opacity=0.9] (1065,165) .. controls (1130,110) and (1230,62) .. (1330,40);
+					\fill[white] (1368,26) .. controls (1385,20) and (1400,18) .. (1412,20) .. controls (1418,26) and (1414,33) .. (1404,35) .. controls (1392,36) and (1380,38) .. (1372,38) .. controls (1365,35) and (1364,30) .. (1368,26) -- cycle;
+					% ốc tán, tai nối tay cầm
+					\shade[left color=gray!30,right color=gray!60,draw=gray!70!black,line width=0.2pt] (978,200) -- (1002,188) -- (1048,262) -- (1022,270) -- cycle;
+					% thân chảo (mặt ngoài nhôm xám)
+					\shade[left color=gray!78,right color=gray!66,middle color=gray!46] (16,300) .. controls (25,400) and (70,505) .. (170,575) .. controls (240,625) and (330,655) .. (530,658) .. controls (720,658) and (830,628) .. (905,585) .. controls (990,530) and (1050,420) .. (1066,300) -- cycle;
+					\begin{scope}
+						\clip (16,300) .. controls (25,400) and (70,505) .. (170,575) .. controls (240,625) and (330,655) .. (530,658) .. controls (720,658) and (830,628) .. (905,585) .. controls (990,530) and (1050,420) .. (1066,300) -- cycle;
+						\shade[top color=white,bottom color=black,opacity=0.2] (0,300) rectangle (1100,670);
+						\draw[white,opacity=0.35,line width=1.6pt] (120,540) .. controls (300,640) and (780,640) .. (960,530);
+						\draw[black,opacity=0.18,line width=1.2pt] (170,585) .. controls (300,652) and (760,655) .. (900,592);
+					\end{scope}
+					\draw[gray!70!black,line width=0.3pt] (16,300) .. controls (25,400) and (70,505) .. (170,575) .. controls (240,625) and (330,655) .. (530,658) .. controls (720,658) and (830,628) .. (905,585) .. controls (990,530) and (1050,420) .. (1066,300);
+					% vành chảo
+					\shade[top color=gray!62,bottom color=gray!30,draw=gray!75!black,line width=0.3pt] (541,300) ellipse [x radius=525, y radius=167];
+					% lòng chảo phủ đá (đen, lốm đốm)
+					\begin{scope}
+						\clip (541,301) ellipse [x radius=508, y radius=156];
+						\shade[top color=black!58,bottom color=black!82] (0,130) rectangle (1100,470);
+						% đáy lòng chảo
+						\shade[inner color=black!74,outer color=black!84] (520,388) ellipse [x radius=350, y radius=76];
+						\draw[black,line width=0.8pt,opacity=0.35] (178,400) .. controls (255,470) and (795,470) .. (865,392);
+						% vệt sáng
+						\shade[inner color=white,outer color=black!70,opacity=0.3] (600,240) ellipse [x radius=140, y radius=42];
+						% đốm đá
+						\foreach \i in {1,...,900}{
+							\pgfmathsetmacro{\px}{30+1020*rnd}\pgfmathsetmacro{\py}{140+320*rnd}
+							\pgfmathsetmacro{\pr}{1.1+2.6*rnd*rnd}\pgfmathsetmacro{\pg}{30+30*rnd}
+							\fill[gray!\pg] (\px,\py) circle [radius=\pr];}
+					\end{scope}
+					\draw[black!85,line width=0.3pt] (541,301) ellipse [x radius=508, y radius=156];
 				\end{tikzpicture}
 			\end{minipage}
 		\end{center}
