@@ -46,3 +46,15 @@
 - I.17, II.3, III.2 (ảnh chụp) vẽ có khối, gắn `% giuhinh`; chờ phiên vẽ lại chi tiết. I.10: khung dây màu đồng, chiều dòng điện đỏ, vùng từ trường nền xanh nhạt (gốc khung xanh, ⊙ vàng – đỏ).
 - Dàn trang: I.10 đặt câu dẫn bên trái hình (hai `minipage` căn đỉnh), phương án dưới; I.4, I.7, I.17 đặt hình bên phải phương án; II.2 bảng số liệu và hình ngang hàng. Bản đề 7 trang (ĐẠT), bản lời giải 10 trang.
 - III.2 (ảnh chụp rèn móng sắt): vẽ giản lược (đe, móng sắt nung đỏ, búa, kìm, bàn tay), chưa sát ảnh; cần vẽ lại kĩ ở phiên vẽ lại.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Ảnh gốc lấy bằng `pdfimages` (ảnh nhúng của PDF, phóng đúng tỉ lệ hiển thị); ba hình ảnh chụp vẽ theo toạ độ phần trăm của ảnh gốc (`x=…cm, y=-…cm`) nên bố cục khớp ảnh. Nội dung vật lí, nhãn, số liệu giữ nguyên; không sửa lời đề, đáp án, lời giải.
+
+- **I.4** (thí nghiệm hạt khói): vẽ lại thành macro dùng chung `\VLtnhatkhoi{x}{y}{tỉ lệ}` (khai báo đầu file đề): đế kim loại hai tầng, ống thủy tinh thành dày đựng khói (màu vàng nâu, hạt khói lấm tấm), nắp đậy thủy tinh nhìn xiên, ống kính hiển vi cao bằng ảnh gốc (thấu kính trước, hai vòng đai, thân trụ) đặt sát nắp, mũi tên ánh sáng. Macro không ghi chữ; nhãn đặt ngoài, bám các toạ độ `(VLtnk-ongkinh)`, `(VLtnk-nap)`, `(VLtnk-ong)`, `(VLtnk-khoi)`, `(VLtnk-anhsang)`. Thêm `% giuhinh`.
+- **I.17** (đun ống thủy tinh bằng đèn cồn): vẽ lại cả cảnh theo ảnh: đèn cồn THỦY TINH (bầu dẹt, cồn, bấc, nắp sứ, ngọn lửa — bản cũ là đèn kim loại), giá chân ba màu đen (ba chân, ổ đế, ốc chỉnh thăng bằng ở chân phải), thanh trụ, khớp nối có ốc tai hồng, ngàm kẹp và núm vặn, ống thủy tinh nghiêng có thước chia và các chấm đánh dấu bên trong, nút bấc sẫm màu; nhãn (1)–(4) đặt như ảnh gốc.
+- **II.3** (máy nước nóng năng lượng mặt trời): vẽ lại đúng góc nhìn ảnh gốc (thấy mặt đầu bên PHẢI của bình; bản cũ vẽ ngược phía): bình bảo ôn inox có đai, nhãn tối để trống (bỏ chữ nhãn hiệu), 18 ống thủy tinh chân không, ống góp inox phía dưới, thanh khung bên, chân đỡ sau với ba thanh giằng, hai chân đế trước, bóng đổ.
+- **III.2** (rèn móng sắt): vẽ lại chi tiết sát ảnh: nền xưởng mờ, đe (mặt sáng có vết rỗ, mặt bên tối, đầu sừng đe), móng sắt chữ C nung đỏ với đầu dưới đã nguội đen, đầu búa và mặt búa, cán gỗ, bàn tay bốn ngón nắm cán, kìm hai càng có vệt sáng, mép bàn tay giữ kìm, tia lửa.
+- Không vẽ lại (sơ đồ, đồ thị, giữ nguyên): I.5, I.7, I.10, II.2 (hình vẽ nét sơ đồ thí nghiệm), III.1, III.4.
+- Hình chưa thật ưng: III.2 — bàn tay cầm búa vẽ cách điệu (bốn ngón thẳng đứng), ảnh gốc là nắm tay nhìn nghiêng bị mờ; I.4 — đế vẽ dạng đĩa hai tầng (theo bản ảnh rõ của đề Nghệ An Liên trường Lần 5), ảnh gốc Bắc Ninh là đế phẳng nhìn thẳng.
+- Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 10 trang.
