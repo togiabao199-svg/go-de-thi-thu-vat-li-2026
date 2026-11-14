@@ -57,3 +57,23 @@
 - Hình thực tiễn (ảnh chụp) vẽ lại đơn giản có khối, `% giuhinh`, chờ phiên vẽ lại chi tiết: I.1 cốc bia, I.2 thợ hàn, I.5 viên long não, I.9 ruộng muối, II.1 túi khí ô tô, II.2 xe đạp và líp, II.4 bộ thí nghiệm, III.1 ấm điện, III.2 cốc trà đá.
 - I.15: đồ thị vẽ theo $u=3\cos\left(\dfrac{2\pi t}{T}-\dfrac{\pi}{3}\right)$ với $T=4\cdot 10^{-2}$ s (khớp các điểm cắt trục và cực trị của hình gốc), lưới 0,5·10⁻² s × 0,75 V như gốc.
 - II.4: màn hình oát kế, cân, nhiệt kế để trống (không có số liệu trong đề).
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ lại 9 hình thực tiễn (`% giuhinh`) theo ảnh gốc (cắt từ ảnh trang 300 dpi); sơ đồ, đồ thị, bảng giữ nguyên. Không đổi lời đề, đáp án, lời giải.
+
+- I.1 (`01-cau-I-1.png`): cốc bia thủy tinh dày có quai chữ D, đế loe, lớp bọt phủ miệng cốc, hơi nước ngưng tụ (lớp mờ + giọt nước chảy) trên thành cốc, mặt bàn gỗ, nền quán mờ.
+- I.2 (`02-cau-I-2.png`): thợ hàn trong xưởng tối: mũ – mặt nạ hàn có ô kính, áo bảo hộ, tay đeo găng cầm mỏ hàn, thanh thép chéo phía trước, hồ quang (lõi trắng, quầng sáng, tia lửa).
+- I.5 (`03-cau-I-5.png`): 16 viên long não trắng (đúng vị trí như ảnh) trên mặt gỗ sáng, có bóng đổ và vệt sáng.
+- I.9 (`06-cau-I-9.png`): ruộng muối: mặt nước, bờ ruộng phía xa, 32 đống muối theo phối cảnh xa – gần (có bóng soi), hàng 8 người đội nón lá gánh muối. Đổi bố cục: câu dẫn + phương án ở cột trái (0,66), hình ở cột phải (0,25) để hình lớn (3,4 cm) mà không tốn thêm dòng.
+- II.1 (`11-cau-II-1.png`): ô tô cắt bỏ cửa bên lái: mui, trụ kính lái, gương, táp-lô, vô lăng, túi khí trắng đã phồng, hình nộm (đầu gục vào túi khí, tay, thân, đùi, chân), dây đai, ghế lái có tựa đầu, trụ giữa, hàng ghế sau.
+- II.2 (`12-cau-II-2.png`): ảnh trái — hai vận động viên đua xe đạp đổ dốc (áo đỏ – xe vàng bị cắt mép ảnh; áo sẫm – xe đen), hàng cây, dải cỏ, mặt đường; ảnh phải — cận cảnh bánh sau: lốp có gai, vành, nan hoa, bộ líp nhiều tầng, cùi đề, xích, gióng khung, tấm phản quang cam.
+- II.4 (`14-cau-II-4.png`): bộ thí nghiệm theo đúng bố cục ảnh: (5) cân điện tử đĩa đen, (1) biến thế nguồn (quai xách, hai phích đỏ – xanh, công tắc, nút, núm xoay có vạch), (2) oát kế có màn hình và 4 cọc cắm, (4) nhiệt lượng kế vàng chanh, (3) nhiệt kế điện tử cắm qua nắp, dây nối. Màn hình cân, oát kế, nhiệt kế để trống (đề không cho số).
+- III.1 (`16-cau-III-1.png`): ấm điện inox (thân xước sáng – tối, vòi, nắp, quai và đế đen) trên mặt bàn gỗ, ổ cắm trên tường có phích cắm và dây; đồ thị bên phải giữ nguyên.
+- III.2 (`17-cau-III-2.png`): hai cốc trà đá thủy tinh loe miệng có khía dọc (cốc sau đá bào nổi đầy mặt, cốc trước các viên đá), đặt trên góc ghế gỗ, nền mờ.
+
+Macro riêng của đề (khai báo đầu file): `\PBCdongmuoi{x}{y}{nửa rộng}`, `\PBCnguoiganh{x}{y}{cao}{màu áo}{màu quần}`, `\PBCxedap{màu áo}{màu khung}`, `\PBCcoctra{x}{y}{r miệng}{r đáy}{cao}{mực trà}{lệnh vẽ đá}`.
+
+Hình chưa thật ưng: I.2 (ảnh gốc rất mờ, hình vẽ lại là cách đọc hợp lí nhất về bố cục: mũ hàn – tay – hồ quang – thanh thép); II.2 ảnh trái (người đạp xe vẽ theo góc nhìn ngang hơi chếch, ảnh gốc chụp chếch từ phía trước và bị nhòe chuyển động).
+
+Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 11 trang.
