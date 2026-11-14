@@ -7,39 +7,40 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/TP HCM - Nguyen Khuyen - Le Thanh Tong -
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.4c (S nếu "hiệu suất làm nóng nước" = Q nước/A = 85 %; Đ nếu tính cả vỏ ấm = 92 %), II.4d (S theo giả thiết đề = 1,67 giờ; số 1,8 giờ chỉ ra khi coi nhiệt vỏ ấm là hao phí), II.1b (đề gốc in "3 V", file sửa 3 A chấm Đ; giữ nguyên chữ gốc thì S)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi chữ, số liệu; riêng HÌNH đồ thị II.4 (Hình 2) vẽ lại chia 5 khoảng tới 240 s (10 khoảng tới 480 s, mỗi khoảng 48 s, 15 °C) trong khi gốc chia 4 khoảng tới 240 s (8 khoảng tới 480 s, mỗi khoảng 60 s, 18,75 °C) — không ảnh hưởng đáp án; hình II.2 vẽ lại thiếu đoạn dây nối hai cuộn ở đầu trái (gốc có nét đứng nối hai nhánh)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; khớp 27 câu; khác 1 câu (1 ý Phần II). Các điểm mục C (II.4c, II.4d) khớp file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | C | C | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | C | C | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | A | A | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | D | D | — | khớp |
-| I.10 | C | C | — | khớp (thầy xem: đọc đồ thị) |
-| I.11 | C | C | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | A | A | — | khớp |
-| I.14 | D | D | — | khớp |
-| I.15 | A | A | — | khớp |
-| I.16 | B | B | — | khớp |
-| I.17 | B | B | — | khớp |
-| I.18 | C | C | — | khớp |
-| II.1 | Đ Đ S S | Đ Đ S S | — | khớp (KIỂM TRA ý b; thầy xem ý c) |
-| II.2 | Đ Đ S S | Đ Đ S S | — | khớp (thầy xem ý a) |
-| II.3 | Đ S Đ Đ | Đ S Đ Đ | — | khớp |
-| II.4 | Đ S S S | Đ S S S | — | khớp (KIỂM TRA ý c, d) |
-| III.1 | 121 | 121 | — | khớp |
-| III.2 | 0,85 | 0,85 | — | khớp |
-| III.3 | 46,7 | 46,7 | — | khớp |
-| III.4 | 281 | 281 | — | khớp |
-| III.5 | 1,9 | 1,9 | — | khớp |
-| III.6 | 0,3 | 0,3 | — | khớp |
+| I.1 | C | C | C | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | C | C | C | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | A | A | A | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | D | D | D | khớp |
+| I.10 | C | C | C | khớp (thầy xem: đọc đồ thị) |
+| I.11 | C | C | C | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | A | A | A | khớp |
+| I.14 | D | D | D | khớp |
+| I.15 | A | A | A | khớp |
+| I.16 | B | B | B | khớp |
+| I.17 | B | B | B | khớp |
+| I.18 | C | C | C | khớp |
+| II.1 | Đ Đ S S | Đ Đ S S | Đ S S S | khớp (KIỂM TRA ý b; thầy xem ý c) |
+| II.2 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (thầy xem ý a) |
+| II.3 | Đ S Đ Đ | Đ S Đ Đ | Đ S Đ Đ | khớp |
+| II.4 | Đ S S S | Đ S S S | Đ S S S | khớp (KIỂM TRA ý c, d) |
+| III.1 | 121 | 121 | 121 | khớp |
+| III.2 | 0,85 | 0,85 | 0,85 | khớp |
+| III.3 | 46,7 | 46,7 | 46,7 | khớp |
+| III.4 | 281 | 281 | 281 | khớp |
+| III.5 | 1,9 | 1,9 | 1,9 | khớp |
+| III.6 | 0,3 | 0,3 | 0,3 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -83,62 +84,55 @@ Kết quả tìm kiếm cho thấy câu II.1 (cân – nam châm, 98 mT) trùng 
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này; chỉ tìm được lời câu của II.1, II.2 (không kèm đáp án).
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Lượt 1 (WebSearch) chỉ tìm được lời câu II.1, II.2; lượt 2 dò trang danh mục VietJack thì **tìm được đúng đề, có đáp án công khai cho đủ 28 câu**.
 
 **(a) Nguồn**
 
-- Nguồn đúng đề có đáp án: không có.
-- Nguồn có lời câu khớp, KHÔNG có đáp án: [chuvanbien.vn — "50 câu trắc nghiệm đúng sai – chuyên đề từ trường, trích từ đề trường – sở"](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) (PDF 14 trang, tạo 24/11/2025; đọc được bằng WebFetch, trích chữ bằng pdftotext). Câu 4 của tuyển tập trùng nguyên văn II.1 (S = 3,5·10⁻⁹ m², L = 72,0 cm, R = 1,7·10⁻⁸·L/S, E = 12,0 V, r = 0,5 Ω, đoạn dây 10,0 cm, cân thay đổi 4,0 g, g = 9,8 m/s², bốn ý a–d, ý d "98 mT"); câu 5 trùng nguyên văn II.2 (chuông cửa "đinh đoong", lõi sắt non, đầu Q cực nam, lõi thép, thanh nhôm đàn hồi, đảo cực nguồn). Cả hai câu ghi nguồn **"Đề kiểm tra thường xuyên 2025-2026 trường Nguyễn Khuyến – Lê Thánh Tông HCM"** (gợi ý: đề "Lần 1" này có thể là đề kiểm tra thường xuyên đó). Tuyển tập không có đáp án, nên không điền được cột "Mạng". Chỉ so được 2/4 câu Phần II và chỉ phần lời câu, chưa đủ tiêu chí "đúng đề" (3–4 câu) để coi là nguồn đáp án.
-  - Điểm đáng ghi cho `% KIỂM TRA` II.1b: tuyển tập in ý b là "cường độ dòng điện chạy trong mạch điện là **3 A**" (đề gốc PDF in "3 V"), ủng hộ cách sửa "3 V" → "3 A" của file. Tuyển tập in "đào hai cực" ở II.2d (lỗi chữ của "đảo").
-- Nguồn đã xét nhưng KHÔNG đúng đề:
-  - [khoahoc.vietjack.com/question/2061691](https://khoahoc.vietjack.com/question/2061691/) (link phiên trước; curl đọc được): "Câu hỏi trong đề: Đề thi thử tốt nghiệp THPT môn Vật lí ĐGNL – Đại học Sư Phạm Hà Nội" — cùng bộ thiết bị nhưng số liệu khác (đoạn dây giữa hai cực 12,0 cm, cân thay đổi 6,0 g) và là câu tự luận; không dùng.
-  - [chuvanbien.vn `lop12_nguyenkhuyen_hcm_1741764165.pdf`](https://chuvanbien.vn/images/upload_file/2025/lop12_nguyenkhuyen_hcm_1741764165.pdf): "Đề đánh giá cuối học kì khối 12, năm học 2024 – 2025, THPT Nguyễn Khuyến" (câu 1 nhiệt kế 263 K – 383 K) — đề khác.
-  - [chuvanbien.vn `de-kiem-tra-thuong-xuyen-khoi-12-nguyen-khuyen_1759895888.pdf`](https://chuvanbien.vn/images/upload_file/2025/de-kiem-tra-thuong-xuyen-khoi-12-nguyen-khuyen_1759895888.pdf): "Đề kiểm tra thường xuyên, THCS – THPT Nguyễn Khuyến, mã đề 1202" (tạo 08/10/2025; câu 1 "thuyết động học phân tử… không có tính chất nào") — đề khác, chỉ phần nhiệt và khí.
-  - [chuvanbien.vn `LOP12_DEKTTHUONGXUYEN_NGUYENKHUYEN_2.pdf`](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKTTHUONGXUYEN_NGUYENKHUYEN_2.pdf): "Đề kiểm tra thường xuyên năm học 2025-2026, THCS – THPT Nguyễn Khuyến" (tạo 15/10/2025; câu 1 "phát biểu sai về chất lỏng") — đề khác.
-  - Theo đoạn trích tìm kiếm (không mở): chuvanbien `LOP12_DETHITHUTONGHIEP_NGUYENKHUYEN-LETHANHTONG2.pdf` (có câu máy phát điện xoay chiều, không rõ năm), `nguyen-khuyen---le-thanh-tong---hcm_1730513831.pdf` (năm học 2024 – 2025) — không phải đề này.
-- Tên miền bị chặn: vietjack.com (trang danh mục đề thi thử, WebFetch ENOTFOUND); hoatieu.vn (HTTP 403), docs.google.com (ENOTFOUND) — hai tên miền này thử ở đề Hưng Yên cùng phiên. chuvanbien.vn: WebFetch đọc được trong phiên này (phiên trước bị chặn). Không thử cách khác.
-- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 7 truy vấn của phiên trước:
-  1. site:khoahoc.vietjack.com Nguyễn Khuyến Lê Thánh Tông vật lí 2026 lần 1
-  2. "chuông cửa đơn giản" "đinh đoong" "lõi sắt non" vật lí 12 đúng sai Nguyễn Khuyến
-  3. chuvanbien.vn Nguyễn Khuyến Lê Thánh Tông thi thử tốt nghiệp 2026 vật lí lần 1 "bình tích áp"
-  4. "Nguyễn Khuyến" vật lí 12 2025-2026 "chuông cửa" "bình tích áp" "ấm điện" đề kiểm tra
-  5. "Nguyễn Khuyến" "Lê Thánh Tông" vật lí 2025-2026 kiểm tra thường xuyên đáp án "chuông cửa"
+- **Nguồn đúng đề:** [khoahoc.vietjack.com — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Nguyễn Khuyến - Lê Thánh Tông (Hồ Chí Minh) có đáp án"](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an), tìm qua [trang danh mục "Đề thi Tốt nghiệp THPT Vật lý 2026"](https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test). Các trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hồ Chí Minh !!", id 2441276–2441303 liên tiếp theo đúng thứ tự file. Đọc bằng curl (HTTP 200), chỉ phần công khai: câu 1–8 trên trang đề, các câu còn lại trên từng trang câu ("Trả lời: Giải bởi Vietjack"); I.11 đọc ở mục "Câu hỏi cùng đoạn — Câu 2" hiển thị công khai trên trang [q/2441286](https://khoahoc.vietjack.com/question/2441286/).
+- **Thứ tự câu:** trang đề VietJack xếp lại thứ tự (cặp câu chung dữ kiện I.10–I.11 thành câu 19–20; I.12–I.18 thành câu 10–16; II.1, II.2 thành câu 17–18; II.3, II.4 thành câu 21–22), còn id trang câu theo đúng thứ tự file. Đã khớp câu theo nội dung, quy về số câu của file; thứ tự phương án của cả 18 câu Phần I và thứ tự ý Phần II trùng file.
+- **Bằng chứng khớp đề:** I.1 (đưa vật lên cao), I.5 (273 °C), I.13–I.14 (5 lít nitrogen 27 °C, 3 atm; 6,21·10⁻²¹ J; 2279,8 J), I.16 (5 cm, 0,75 A, 3·10⁻² N; 0,4 – 0,8 – 1 – 1,2 T), II.1 (S = 3,5·10⁻⁹ m², L = 72,0 cm, 12,0 V, 0,5 Ω, 10,0 cm, 4,0 g, 98 mT), II.3 (bình tích áp 10 lít, 120 kPa), II.4 (ấm 1850 W / 500 W, 1,2 lít), III.1 (200 g nước 10 °C, c = 4190, 10 % hóa hơi), III.6 (MN 18 cm, 8 m/s, R = 6 Ω).
+- **II.1b (`% KIỂM TRA`):** VietJack giữ chữ gốc "cường độ dòng điện … là **3 V**" và chấm **Sai** "(sai đơn vị)" (I tính ra 3 A) — khác file (file sửa thành "3 A", chấm Đ). Ngược lại, tuyển tập chuvanbien (lượt 1, xem dưới) in ý này là "3 A".
+- **II.4c, d (mục C):** VietJack chấm **c Sai** (H = 3,78/4,44 ≈ 85,1 %, chỉ tính nước) và **d Sai** (tính cả nhiệt vỏ ấm ở tỉ lệ hiệu suất: 6007 s ≈ 1,67 giờ) — khớp file.
+- **Nguồn lời câu (lượt 1, không có đáp án):** [chuvanbien.vn — tuyển tập "50 câu trắc nghiệm đúng sai – chuyên đề từ trường, trích từ đề trường – sở"](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) (đọc bằng WebFetch, trích chữ bằng pdftotext): câu 4, câu 5 trùng nguyên văn II.1, II.2, ghi nguồn "Đề kiểm tra thường xuyên 2025-2026 trường Nguyễn Khuyến – Lê Thánh Tông HCM"; ý II.1b in "3 A".
+- **Nguồn đã xét nhưng KHÔNG đúng đề:** các trang VietJack khác cùng trường — "Vật lý 2025-2026 Nguyễn Khuyến (HCM)" (câu 1 sóng điện từ), "Vật lý 2025-2026 THPT Lê Thánh Tông (HCM)" (câu 1 đơn vị nhiệt nóng chảy riêng), "môn Vật lí THPT Nguyễn Khuyến - Lê Thánh Tông HCM - Lần 1" (40 câu, câu 1 đơn vị cảm ứng từ — đề năm trước), "môn Vật lí Nguyễn Khuyến Lê Thánh Tông - TPHCM" (40 câu, câu 1 nhiệt kế 263 K – 383 K — đề cuối học kì 2024–2025); VietJack [q/2061691](https://khoahoc.vietjack.com/question/2061691/) (đề ĐGNL ĐHSP Hà Nội, 12,0 cm, 6,0 g); ba file chuvanbien của Nguyễn Khuyến (cuối học kì 2024–2025; kiểm tra thường xuyên mã 1202; kiểm tra thường xuyên 2025–2026 bản 15/10/2025) — đề khác. Tên miền bị chặn (lượt 1): vietjack.com (trang danh mục ngoài khoahoc, ENOTFOUND), hoatieu.vn (HTTP 403), docs.google.com (ENOTFOUND).
+- **Truy vấn lượt 1** (WebSearch, standard, ngoài 7 truy vấn phiên trước): site:khoahoc.vietjack.com Nguyễn Khuyến Lê Thánh Tông vật lí 2026 lần 1; "chuông cửa đơn giản" "đinh đoong" "lõi sắt non" …; chuvanbien.vn Nguyễn Khuyến Lê Thánh Tông … "bình tích áp"; "Nguyễn Khuyến" vật lí 12 2025-2026 "chuông cửa" "bình tích áp" "ấm điện" …; "Nguyễn Khuyến" "Lê Thánh Tông" vật lí 2025-2026 kiểm tra thường xuyên đáp án "chuông cửa". Lượt 2: trang danh mục VietJack (không qua WebSearch).
+- Đáp án VietJack là đáp án do trang soạn/đăng, không rõ có phải đáp án chính thức của trường; chỉ dùng để đối chiếu.
 
-**(b) Bảng 28 câu**
+**(b) Bảng 28 câu** (Mạng = đáp án VietJack, đã quy về số câu của file; thứ tự phương án/ý trùng file)
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | C | — | — | không có đáp án mạng |
-| I.2 | A | — | — | không có đáp án mạng |
-| I.3 | D | — | — | không có đáp án mạng |
-| I.4 | C | — | — | không có đáp án mạng |
-| I.5 | C | — | — | không có đáp án mạng |
-| I.6 | A | — | — | không có đáp án mạng |
-| I.7 | A | — | — | không có đáp án mạng |
-| I.8 | D | — | — | không có đáp án mạng |
-| I.9 | D | — | — | không có đáp án mạng |
-| I.10 | C | — | — | không có đáp án mạng |
-| I.11 | C | — | — | không có đáp án mạng |
-| I.12 | C | — | — | không có đáp án mạng |
-| I.13 | A | — | — | không có đáp án mạng |
-| I.14 | D | — | — | không có đáp án mạng |
-| I.15 | A | — | — | không có đáp án mạng |
-| I.16 | B | — | — | không có đáp án mạng |
-| I.17 | B | — | — | không có đáp án mạng |
-| I.18 | C | — | — | không có đáp án mạng |
-| II.1 | Đ Đ S S | — (chỉ có lời câu, không có đáp án) | [chuvanbien, tuyển tập Đ/S từ trường, câu 4](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) | không so được; lời câu và số liệu khớp, ý b in "3 A" |
-| II.2 | Đ Đ S S | — (chỉ có lời câu, không có đáp án) | [chuvanbien, tuyển tập Đ/S từ trường, câu 5](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) | không so được; lời câu khớp |
-| II.3 | Đ S Đ Đ | — | — | không có đáp án mạng |
-| II.4 | Đ S S S | — | — | không có đáp án mạng |
-| III.1 | 121 | — | — | không có đáp án mạng |
-| III.2 | 0,85 | — | — | không có đáp án mạng |
-| III.3 | 46,7 | — | — | không có đáp án mạng |
-| III.4 | 281 | — | — | không có đáp án mạng |
-| III.5 | 1,9 | — | — | không có đáp án mạng |
-| III.6 | 0,3 | — | — | không có đáp án mạng |
+| I.1 | C | C | [trang đề, câu 1](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.2 | A | A | [trang đề, câu 2](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.3 | D | D | [trang đề, câu 3](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.4 | C | C | [trang đề, câu 4](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.5 | C | C | [trang đề, câu 5](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.6 | A | A | [trang đề, câu 6](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.7 | A | A | [trang đề, câu 7](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.8 | D | D | [trang đề, câu 8](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an) | khớp |
+| I.9 | D | D | [q/2441284](https://khoahoc.vietjack.com/question/2441284/) | khớp |
+| I.10 | C | C | [q/2441285](https://khoahoc.vietjack.com/question/2441285/) | khớp |
+| I.11 | C | C | [q/2441286](https://khoahoc.vietjack.com/question/2441286/) | khớp |
+| I.12 | C | C | [q/2441287](https://khoahoc.vietjack.com/question/2441287/) | khớp |
+| I.13 | A | A | [q/2441288](https://khoahoc.vietjack.com/question/2441288/) | khớp |
+| I.14 | D | D | [q/2441289](https://khoahoc.vietjack.com/question/2441289/) | khớp |
+| I.15 | A | A | [q/2441290](https://khoahoc.vietjack.com/question/2441290/) | khớp |
+| I.16 | B | B | [q/2441291](https://khoahoc.vietjack.com/question/2441291/) | khớp |
+| I.17 | B | B | [q/2441292](https://khoahoc.vietjack.com/question/2441292/) | khớp |
+| I.18 | C | C | [q/2441293](https://khoahoc.vietjack.com/question/2441293/) | khớp |
+| II.1 | Đ Đ S S | Đ S S S | [q/2441294](https://khoahoc.vietjack.com/question/2441294/) | **khác ý b** |
+| II.2 | Đ Đ S S | Đ Đ S S | [q/2441295](https://khoahoc.vietjack.com/question/2441295/) | khớp |
+| II.3 | Đ S Đ Đ | Đ S Đ Đ | [q/2441296](https://khoahoc.vietjack.com/question/2441296/) | khớp |
+| II.4 | Đ S S S | Đ S S S | [q/2441297](https://khoahoc.vietjack.com/question/2441297/) | khớp |
+| III.1 | 121 | 121 | [q/2441298](https://khoahoc.vietjack.com/question/2441298/) | khớp |
+| III.2 | 0,85 | 0,85 | [q/2441299](https://khoahoc.vietjack.com/question/2441299/) | khớp |
+| III.3 | 46,7 | 46,7 | [q/2441300](https://khoahoc.vietjack.com/question/2441300/) | khớp |
+| III.4 | 281 | 281 | [q/2441301](https://khoahoc.vietjack.com/question/2441301/) | khớp |
+| III.5 | 1,9 | 1,9 | [q/2441302](https://khoahoc.vietjack.com/question/2441302/) | khớp |
+| III.6 | 0,3 | 0,3 | [q/2441303](https://khoahoc.vietjack.com/question/2441303/) | khớp |
 
 **(c) Câu mạng khác file**
 
-Không có (không có đáp án mạng để so). Các điểm cần đối chiếu — mục C: II.4c (85 % / 92 %), II.4d (1,67 giờ / 1,8 giờ) — vẫn chưa đối chiếu được trên mạng. II.1b (`% KIỂM TRA`): chưa có đáp án mạng, nhưng lời câu trong tuyển tập chuvanbien in "3 A" (xem mục a).
+- II.1b: file Đ / mạng S / [q/2441294](https://khoahoc.vietjack.com/question/2441294/) / VietJack giữ "3 V" của đề gốc, tính I = 12/(3,5 + 0,5) = 3 A rồi chấm Sai vì sai đơn vị; file coi "3 V" là lỗi chữ, sửa "3 A" và chấm Đúng. Đây là khác cách xử lí lỗi in (điểm `% KIỂM TRA` II.1b), không phải khác số liệu hay tính toán; tuyển tập chuvanbien lại in "3 A".
 
-**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0 (2 câu II.1, II.2 có lời câu khớp, không có đáp án).
+**(d) Tổng:** 28/28 câu có đáp án mạng; khớp 27 câu; khác 1 câu (1 ý Phần II). Các điểm mục C (II.4c, II.4d) khớp file.

@@ -7,39 +7,40 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - Lien truong Nghe An - Lan 2.pd
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): I.8 (đề gốc in phương án A là (2/2)kT nên theo đúng chữ in không có phương án đúng; file sửa thành (3/2)kT, chọn A — Fable đồng ý); II.4c ("đồ thị thực nghiệm là một đoạn thẳng": Đ theo đường khớp, S nếu hiểu chặt các điểm đo phải thẳng hàng tuyệt đối — Fable chọn Đ như file); III.2 (5,3 kWh/m² "tính theo số giờ nắng trong một ngày": hiểu là năng lượng một ngày chia cho 2300/365 giờ nắng → 73,7 — Fable cùng cách hiểu với file)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (các chỗ sửa có chủ ý đã ghi ở kiem-chung.md: I.8 A → (3/2)kT; R thêm K⁻¹; II.4 thêm "nhiệt kế (3)", cột bảng "Δt (s)" → "τ (s)"); hình vẽ lại II.3 (toạ độ 4 trạng thái, chiều mũi tên, nét kéo dài qua O) và III.6 (bốn đường ống, chiều mũi tên) đúng quan hệ với hình gốc
-- Đáp án trên mạng: không tìm thấy (có một trang VietJack cùng ngữ liệu III.1–III.2 nhưng tên miền bị chặn: https://khoahoc.vietjack.com/question/2335645/theo-thong-ke-vung-tay-nguyen-va-nam-trung-bo-co-so-gio-nang-trong-nam-trung-binh-khoang-2300-gio-fplax)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (có một trang VietJack cùng ngữ liệu III.1–III.2 nhưng tên miền bị chặn: https://khoahoc.vietjack.com/question/2335645/theo-thong-ke-vung-tay-nguyen-va-nam-trung-bo-co-so-gio-nang-trong-nam-trung-binh-khoang-2300-gio-fplax)
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; khớp 27 câu; khác 1 câu (1 ý Phần II). Các điểm I.8 (mục B), II.4c, III.2 khớp file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | A | A | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | D | D | — | khớp |
-| I.8 | A (bản in (2/2)kT là lỗi của (3/2)kT) | A | — | khớp (KIỂM TRA) |
-| I.9 | B | B | — | khớp |
-| I.10 | D | D | — | khớp |
-| I.11 | D | D | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | B | B | — | khớp |
-| I.16 | D | D | — | khớp |
-| I.17 | B | B | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | S Đ Đ S | S Đ Đ S | — | khớp (d: thầy xem) |
-| II.2 | Đ S Đ S | Đ S Đ S | — | khớp |
-| II.3 | Đ Đ Đ S | Đ Đ Đ S | — | khớp |
-| II.4 | S Đ Đ Đ | S Đ Đ Đ | — | khớp (c: thầy xem) |
-| III.1 | 5250 | 5250 | — | khớp |
-| III.2 | 73,7 | 73,7 | — | khớp (thầy xem cách hiểu) |
-| III.3 | 962 | 962 | — | khớp |
-| III.4 | 1458 | 1458 | — | khớp |
-| III.5 | 6,1 | 6,1 | — | khớp (thầy xem: đề không cho k) |
-| III.6 | 12 | 12 | — | khớp |
+| I.1 | A | A | A | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | A | A | A | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | D | D | D | khớp |
+| I.8 | A (bản in (2/2)kT là lỗi của (3/2)kT) | A | A | khớp (KIỂM TRA) |
+| I.9 | B | B | B | khớp |
+| I.10 | D | D | D | khớp |
+| I.11 | D | D | D | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | B | B | B | khớp |
+| I.16 | D | D | D | khớp |
+| I.17 | B | B | B | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | S Đ Đ S | S Đ Đ S | S Đ Đ S | khớp (d: thầy xem) |
+| II.2 | Đ S Đ S | Đ S Đ S | Đ S Đ Đ | khớp |
+| II.3 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp |
+| II.4 | S Đ Đ Đ | S Đ Đ Đ | S Đ Đ Đ | khớp (c: thầy xem) |
+| III.1 | 5250 | 5250 | 5250 | khớp |
+| III.2 | 73,7 | 73,7 | 73,7 | khớp (thầy xem cách hiểu) |
+| III.3 | 962 | 962 | 962 | khớp |
+| III.4 | 1458 | 1458 | 1458 | khớp |
+| III.5 | 6,1 | 6,1 | 6,1 | khớp (thầy xem: đề không cho k) |
+| III.6 | 12 | 12 | 12 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 Không có câu lệch. Bảng dưới là các điểm đang `% KIỂM TRA` trong file hoặc được nêu ở TIEN-DO / kiem-chung.md ("thầy xem"), đã giải lại lần hai.
@@ -99,62 +100,55 @@ Trang liên quan:
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này.
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Lượt 1 (WebSearch) không ra; lượt 2 dò trang danh mục VietJack thì **tìm được đúng đề, có đáp án công khai cho đủ 28 câu**.
 
 **(a) Nguồn**
 
-- Nguồn đúng đề có đáp án: không có.
-- Nguồn đã xét nhưng KHÔNG đúng đề:
-  - [khoahoc.vietjack.com/question/2335645](https://khoahoc.vietjack.com/question/2335645/theo-thong-ke-vung-tay-nguyen-va-nam-trung-bo-co-so-gio-nang-trong-nam-trung-binh-khoang-2300-gio-fplax) (link phiên trước; curl đọc được, HTTP 200): trang ghi "Câu hỏi trong đề: Đề thi thử tốt nghiệp THPT môn Vật lí **Sở Quảng Nam** có đáp án". Cùng ngữ liệu máy nước nóng năng lượng mặt trời (2300 giờ, 5,3 kWh/m², 2000 mm × 1250 mm, 25 °C, 45 %) nhưng là một câu Đúng/Sai 4 ý (70 lít nước, 3,5 giờ nắng, "60,5 °C"), không phải hai câu trả lời ngắn III.1, III.2 của đề này (50 lít, 3 giờ) → không dùng làm đáp án. Ghi thêm (chỉ để thầy tham khảo cách hiểu III.2, không phải đáp án của đề này): lời giải công khai của VietJack tính công suất bức xạ lên bộ thu theo cùng cách hiểu với file — năng lượng 5,3 kWh/m² mỗi ngày, cả năm 365 ngày chia cho 2300 giờ nắng: P = 365·2·1,25·5,3/2300 ≈ 2103 W, rồi Q = 0,45·P·t.
-  - [khoahoc.vietjack.com — Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường Nghệ An đợt 2](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-nghe-an-dot-2-co-dap-an) (curl đọc được): đề khác — câu 1 "đại lượng đặc trưng cho mức độ bền vững của hạt nhân", câu 2 chiều dòng điện cảm ứng, câu 4 tương tác từ, câu 19 (II.1) "sự chuyển thể…", câu 20 lưu lượng kế điện từ; đề này chỉ có phần nhiệt và khí (câu 1 "vật được làm nóng sao cho thể tích và hình dạng không đổi", II.1 bong bóng cá). Có lẽ "đợt 2" trên VietJack là một lần thi khác của liên trường.
-  - [khoahoc.vietjack.com — … Liên trường THPT Nghệ An mã đề 3114](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-thpt-nghe-an-ma-de-3114-co-dap-an) (curl đọc được): đề khác — câu 1 "hà hơi vào gương", câu 2 đơn vị cảm ứng từ, câu 3 tương tác từ.
-  - Theo kết quả tìm kiếm: hoatieu "Đề thi thử tốt nghiệp THPT năm 2026 môn Vật lí sở Nghệ An (Lần 1)" (lần 1, 24 mã 3101–3124 — đề khác); chuvanbien `Lien_Truong_Nghe_An_Lan_2.pdf` thuộc thư mục 2022–2023 (năm khác); VietJack "(2023) Đề thi thử Vật Lý THPT Liên Trường, Nghệ An" (năm khác).
-- Tên miền bị chặn (thử trong phiên bổ sung này, ở đề Hưng Yên): hoatieu.vn (WebFetch HTTP 403), docs.google.com (ENOTFOUND). Không thử cách khác.
-- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 9 truy vấn của phiên trước:
-  1. site:khoahoc.vietjack.com liên trường Nghệ An lần 2 vật lí 2026
-  2. "Một vật được làm nóng sao cho thể tích và hình dạng của vật không thay đổi thì nội năng của vật"
-  3. site:khoahoc.vietjack.com "Bong bóng cá là một phần nội quan của con cá"
-  4. "quạt điều hòa" "0,7 g/s" "2,26" nhiệt hóa hơi riêng "949,2" vật lí
-  5. "60 PSI" "280 PSI" máy lạnh "4:1" nhiệt độ khí gas trước khi vào máy nén vật lí 12
-  6. khoahoc.vietjack.com Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường Nghệ An đợt 1
-  7. "oát kế" "0,145 kg" "16,2 W" nhiệt dung riêng của nước đúng sai "11 664" OR "11664"
-  8. site:khoahoc.vietjack.com "quạt điều hòa" "tấm làm mát" bay hơi nhiệt độ phòng giảm
+- **Nguồn đúng đề:** [khoahoc.vietjack.com — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường Anh Sơn, Đô Lương, Thanh Chương, Yên Thành (Nghệ An) có đáp án"](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe), tìm qua [trang danh mục "Đề thi Tốt nghiệp THPT Vật lý 2026"](https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test). Các trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Nghệ An !!", id 2442298–2442325 liên tiếp theo đúng thứ tự file. Đọc bằng curl (HTTP 200), chỉ phần công khai: câu 1–8 trên trang đề, câu 9–28 trên từng trang câu ("Trả lời: Giải bởi Vietjack"); III.2 đọc ở mục "Câu hỏi cùng đoạn — Câu 2" hiển thị công khai trên trang [q/2442321](https://khoahoc.vietjack.com/question/2442321/). Ghi chú tên: VietJack gọi đây là liên trường Anh Sơn – Đô Lương – Thanh Chương – Yên Thành, không ghi lần; file đặt "Liên trường Nghệ An — Lần 2" theo kiem-ke.
+- **Bằng chứng khớp đề:** đủ 28 câu cùng thứ tự với file; thứ tự phương án của cả 18 câu Phần I trùng file. Ví dụ: I.1 (vật làm nóng, thể tích và hình dạng không đổi), I.9 (1 kg nước 20 °C; 26 344 – 2634,4 – 334,4 – 3344 kJ), I.10 (Nghệ An 14 °C đến 22 °C), I.13 (máy làm nóng nước 20,3 °C, 2,50 lít/phút; 2,9 – 2,7 – 2,8 – 3,0 kW), II.1 (bong bóng cá), II.2 (quạt điều hòa 0,7 g/s, phòng 4 m × 5 m × 4 m, "8,9 °C"), II.4 (m = 0,145 kg, 16,2 W, 5 lần đo), III.1–III.2 (máy nước nóng năng lượng mặt trời, 50 lít, 25 → 50 °C, 3 giờ, 45 %), III.6 (60 PSI / 280 PSI, 4:1, 60 °C).
+- **I.8 (mục B):** VietJack in phương án A là "(2/2)kT" giống đề gốc và chấm **A** (lời giải ghi Ē_đ = (3/2)kT) — khớp file (file sửa A thành (3/2)kT).
+- **II.2d (mục C):** VietJack in "khoảng 8,9 °C" như đề gốc; lời giải tính Δt = 9,838 °C nhưng vẫn chấm **Đúng** — khác file (S). Gợi ý: người giải trên VietJack coi 8,9 là gõ nhầm của 9,8.
+- **II.4c ("thầy xem"):** VietJack chấm Đ (t là hàm bậc nhất của τ nên đồ thị là đoạn thẳng) — khớp file. II.4a: VietJack S (thứ tự đúng a, c, b, e, d; kiem-chung-v2 ghi c → a → b → e → d, cùng kết luận S).
+- **III.2 ("thầy xem cách hiểu"):** VietJack 73,7 với cùng cách hiểu như file (5,3 kWh/m² chia cho 2300/365 giờ nắng mỗi ngày ≈ 0,841 kW/m²; P ≈ 2103 W) — khớp. III.5: VietJack dùng k = 1,38·10⁻²³ J/K, ra 6,1 — khớp.
+- **Nguồn đã xét nhưng KHÔNG đúng đề:** VietJack [q/2335645](https://khoahoc.vietjack.com/question/2335645/theo-thong-ke-vung-tay-nguyen-va-nam-trung-bo-co-so-gio-nang-trong-nam-trung-binh-khoang-2300-gio-fplax) (đề Sở Quảng Nam, cùng ngữ liệu máy nước nóng nhưng là câu Đúng/Sai 70 lít, 3,5 giờ); "Liên trường Nghệ An đợt 2" (câu 1 độ bền vững hạt nhân); "Liên trường THPT Nghệ An mã đề 3114" (câu 1 hà hơi vào gương); "Liên trường Đô Lương 3, Phan Đăng Lưu, Yên Thành 2, Tân Kỳ đợt 1" (câu 1 hít 400 cm³ không khí); "Sở GD&ĐT Nghệ An lần 1" (câu 1 phương trình Clapeyron); "THPT Yên Thành 2 – Nghệ An" (câu 1 thể lỏng sang thể khí). Tên miền bị chặn (lượt 1): hoatieu.vn (HTTP 403), docs.google.com (ENOTFOUND).
+- **Truy vấn lượt 1** (WebSearch, standard, ngoài 9 truy vấn phiên trước): site:khoahoc.vietjack.com liên trường Nghệ An lần 2 vật lí 2026; "Một vật được làm nóng sao cho thể tích và hình dạng của vật không thay đổi thì nội năng của vật"; site:khoahoc.vietjack.com "Bong bóng cá là một phần nội quan của con cá"; "quạt điều hòa" "0,7 g/s" "2,26" … "949,2"; "60 PSI" "280 PSI" máy lạnh "4:1" …; khoahoc.vietjack.com … Liên trường Nghệ An đợt 1; "oát kế" "0,145 kg" "16,2 W" …; site:khoahoc.vietjack.com "quạt điều hòa" "tấm làm mát" …. Lượt 2: trang danh mục VietJack (không qua WebSearch).
+- Đáp án VietJack là đáp án do trang soạn/đăng, không rõ có phải đáp án chính thức của liên trường; chỉ dùng để đối chiếu.
 
-**(b) Bảng 28 câu**
+**(b) Bảng 28 câu** (Mạng = đáp án VietJack; thứ tự phương án/ý trùng file)
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | A | — | — | không có đáp án mạng |
-| I.2 | A | — | — | không có đáp án mạng |
-| I.3 | A | — | — | không có đáp án mạng |
-| I.4 | A | — | — | không có đáp án mạng |
-| I.5 | C | — | — | không có đáp án mạng |
-| I.6 | B | — | — | không có đáp án mạng |
-| I.7 | D | — | — | không có đáp án mạng |
-| I.8 | A | — | — | không có đáp án mạng |
-| I.9 | B | — | — | không có đáp án mạng |
-| I.10 | D | — | — | không có đáp án mạng |
-| I.11 | D | — | — | không có đáp án mạng |
-| I.12 | C | — | — | không có đáp án mạng |
-| I.13 | D | — | — | không có đáp án mạng |
-| I.14 | B | — | — | không có đáp án mạng |
-| I.15 | B | — | — | không có đáp án mạng |
-| I.16 | D | — | — | không có đáp án mạng |
-| I.17 | B | — | — | không có đáp án mạng |
-| I.18 | A | — | — | không có đáp án mạng |
-| II.1 | S Đ Đ S | — | — | không có đáp án mạng |
-| II.2 | Đ S Đ S | — | — | không có đáp án mạng |
-| II.3 | Đ Đ Đ S | — | — | không có đáp án mạng |
-| II.4 | S Đ Đ Đ | — | — | không có đáp án mạng |
-| III.1 | 5250 | — | — | không có đáp án mạng |
-| III.2 | 73,7 | — | — | không có đáp án mạng |
-| III.3 | 962 | — | — | không có đáp án mạng |
-| III.4 | 1458 | — | — | không có đáp án mạng |
-| III.5 | 6,1 | — | — | không có đáp án mạng |
-| III.6 | 12 | — | — | không có đáp án mạng |
+| I.1 | A | A | [trang đề, câu 1](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.2 | A | A | [trang đề, câu 2](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.3 | A | A | [trang đề, câu 3](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.4 | A | A | [trang đề, câu 4](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.5 | C | C | [trang đề, câu 5](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.6 | B | B | [trang đề, câu 6](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.7 | D | D | [trang đề, câu 7](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.8 | A | A | [trang đề, câu 8](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-anh-son-do-luong-thanh-chuong-yen-thanh-nghe) | khớp |
+| I.9 | B | B | [q/2442306](https://khoahoc.vietjack.com/question/2442306/) | khớp |
+| I.10 | D | D | [q/2442307](https://khoahoc.vietjack.com/question/2442307/) | khớp |
+| I.11 | D | D | [q/2442308](https://khoahoc.vietjack.com/question/2442308/) | khớp |
+| I.12 | C | C | [q/2442309](https://khoahoc.vietjack.com/question/2442309/) | khớp |
+| I.13 | D | D | [q/2442310](https://khoahoc.vietjack.com/question/2442310/) | khớp |
+| I.14 | B | B | [q/2442311](https://khoahoc.vietjack.com/question/2442311/) | khớp |
+| I.15 | B | B | [q/2442312](https://khoahoc.vietjack.com/question/2442312/) | khớp |
+| I.16 | D | D | [q/2442313](https://khoahoc.vietjack.com/question/2442313/) | khớp |
+| I.17 | B | B | [q/2442314](https://khoahoc.vietjack.com/question/2442314/) | khớp |
+| I.18 | A | A | [q/2442315](https://khoahoc.vietjack.com/question/2442315/) | khớp |
+| II.1 | S Đ Đ S | S Đ Đ S | [q/2442316](https://khoahoc.vietjack.com/question/2442316/) | khớp |
+| II.2 | Đ S Đ S | Đ S Đ Đ | [q/2442317](https://khoahoc.vietjack.com/question/2442317/) | **khác ý d** |
+| II.3 | Đ Đ Đ S | Đ Đ Đ S | [q/2442318](https://khoahoc.vietjack.com/question/2442318/) | khớp |
+| II.4 | S Đ Đ Đ | S Đ Đ Đ | [q/2442319](https://khoahoc.vietjack.com/question/2442319/) | khớp |
+| III.1 | 5250 | 5250 | [q/2442320](https://khoahoc.vietjack.com/question/2442320/) | khớp |
+| III.2 | 73,7 | 73,7 | [q/2442321](https://khoahoc.vietjack.com/question/2442321/) | khớp |
+| III.3 | 962 | 962 | [q/2442322](https://khoahoc.vietjack.com/question/2442322/) | khớp |
+| III.4 | 1458 | 1458 | [q/2442323](https://khoahoc.vietjack.com/question/2442323/) | khớp |
+| III.5 | 6,1 | 6,1 | [q/2442324](https://khoahoc.vietjack.com/question/2442324/) | khớp |
+| III.6 | 12 | 12 | [q/2442325](https://khoahoc.vietjack.com/question/2442325/) | khớp |
 
 **(c) Câu mạng khác file**
 
-Không có (không có đáp án mạng để so). Các điểm cần đối chiếu — mục B: I.8 (file sửa (2/2)kT thành (3/2)kT); mục C: II.2d (9,84 °C / đề in 8,9 °C), II.4c — vẫn chưa đối chiếu được trên mạng.
+- II.2d: file S / mạng Đ / [q/2442317](https://khoahoc.vietjack.com/question/2442317/) / VietJack tính Δt = 96·1005·Δt = 949,2 kJ → Δt ≈ 9,84 °C nhưng chấm Đúng với số in "8,9 °C". Đây đúng là điểm mục C (đề nghi gõ đảo 9,8 thành 8,9): theo chữ in thì S như file; theo ý người ra đề (nếu gõ nhầm) thì Đ như VietJack.
 
-**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0.
+**(d) Tổng:** 28/28 câu có đáp án mạng; khớp 27 câu; khác 1 câu (1 ý Phần II). Các điểm I.8 (mục B), II.4c, III.2 khớp file.

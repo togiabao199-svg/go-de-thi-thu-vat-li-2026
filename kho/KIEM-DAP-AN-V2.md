@@ -7,49 +7,129 @@ Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent c
 - **35/35 đề đã kiểm.** 32 đề không có câu / ý lệch: 29 đề trùng 28/28 ngay từ lượt giải độc lập đầu; 3 đề khác ở lượt đầu chỉ vì đề gốc lỗi, kết luận cuối là file không sai — Lương Thế Vinh II.2a (file đã sửa Z của I-131 từ 51 thành 53), Phan Đăng Lưu I.16 (A và C cùng đúng), Quảng Ninh SGD I.16 (không phương án nào đúng, mỗi bên chữa một phương án).
 - **3 câu / ý lệch** (file khác kết luận cuối của Fable), cả ba đều do đề mơ hồ — Fable nghiêng về đáp án khác nhưng không khẳng định file sai: Cụm liên trường Hà Tĩnh II.2a, Kinh Môn II II.1a, Ngô Gia Tự I.11 (mục A).
 - Không thấy câu nào file sai do tính toán. Phần còn lại là lỗi / chỗ mơ hồ của đề gốc cần thầy quyết (mục B–D), lỗi hình vẽ lại (mục G), sai sót nhỏ (mục H).
-- Đáp án trên mạng gần như không đối chiếu được: mạng của phiên chặn các trang đăng đề (mục J).
+- Đối chiếu đáp án trên mạng (lượt bổ sung 14/11/2026, sau khi mở tên miền): 33/35 đề tìm được trang đúng đề trên VietJack có đáp án công khai; 17 đề khớp file hoàn toàn; 25 câu / ý mạng khác file ở 16 đề — 7 do nguồn nhầm hoặc không có lời giải, 10 trùng điểm đã nêu ở mục A–E, 8 điểm mới. Ở mục A: nguồn trùng file ở Hà Tĩnh II.2a, Kinh Môn II II.1a; trùng Fable (D) ở Ngô Gia Tự I.11. Xem mục "Đối chiếu mạng bổ sung".
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong `.tex` (21 đề, STT 1–21) → đề có điểm "Chờ thầy quyết" (8 đề, STT 22–29) → đề chỉ có điểm "thầy xem" (6 đề, STT 30–35).
 
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Lượt bổ sung sau khi thầy mở tên miền: 8 agent (mỗi agent 4–5 đề, đề có điểm mục A–D làm trước), chỉ tìm trang đăng đúng đề, ghi đáp án từng câu kèm link vào cột "Mạng" và mục "Đối chiếu mạng bổ sung (14/11/2026)" cuối `kiem-chung-v2.md` của từng đề; không giải lại đề, không sửa `.tex`, `kiem-chung.md`. Dòng tổng của lượt này ghi thêm vào mục "Tóm tắt" đầu mỗi `kiem-chung-v2.md`.
+
+- **Nguồn**: khoahoc.vietjack.com, đọc bằng `curl`, tải lần lượt cách 1,5 s. Trang cả đề chỉ công khai đáp án câu 1–8 (các câu sau ghi "Bạn cần đăng ký gói VIP"). Đáp án các câu còn lại đọc ở trang từng câu (`/question/<id>`), nơi VietJack hiện công khai "Trả lời: Giải bởi Vietjack — Chọn đáp án X", không cần đăng nhập. Không đăng nhập, không mở phần VIP. Đề đúng phần lớn tìm qua trang danh mục https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test (WebSearch hầu như không ra). Mỗi nguồn đã so lời câu, số liệu, thứ tự phương án / ý của đủ 28 câu với file `.tex`. Đáp án VietJack là lời giải của trang, không phải đáp án chính thức của trường / sở.
+- **Kết quả**: 33/35 đề tìm được trang đúng đề có đáp án công khai (30 đề đủ 28/28 câu; Cụm liên trường Hà Tĩnh, Chuyên KHTN Lần 1, Cẩm Phả 27/28). Bắc Ninh SGD (scan): chỉ có bản đề trên chuvanbien, không có đáp án. Nguyễn Khuyến LTT Lần 10: không tìm thấy.
+- **17 đề khớp file hoàn toàn**: Yên Hòa, Kinh Môn II, Nguyễn Khuyến LTT Lần 2, Nguyễn Khuyến LTT Lần 3, Chuyên ĐH Vinh, Thái Nguyên SGD, Hàm Rồng, Bắc Ninh SGD Lần 1, Cụm CM10, Lào Cai SGD, Ninh Bình SGD Lần 1, Ninh Bình SGD Lần 2, Chuyên Hạ Long, Hà Nội SGD, Phú Thọ SGD, Quảng Ninh SGD (I.16 cùng nội dung, khác chữ cái — xem dưới), Liên trường Nghệ An Lần 1 (VietJack khớp 28/28; bảng đáp án chuvanbien khác 2 câu).
+- **25 câu / ý mạng khác file ở 16 đề** (23 theo VietJack, 2 theo bảng đáp án chuvanbien): 7 do nguồn nhầm hoặc không có lời giải, 10 trùng điểm đã nêu ở mục A–E (nguồn chọn cách hiểu / cách xử lí lỗi đề khác file), 8 điểm mới.
+
+### M1. Nguồn nhầm nhãn, tính nhầm hoặc không có lời giải — file đúng hoặc chưa rõ (7)
+
+| Đề | Câu | File | Mạng | Ghi chú |
+|---|---|---|---|---|
+| Cụm liên trường Hà Tĩnh | I.9 | B | D | Lời giải của chính nguồn: thăng hoa là rắn → hơi, tức B; nguồn nhầm chữ cái. |
+| Cẩm Phả – Lần 1 | I.6 | C | D | Lời giải ngay dưới của nguồn lại chọn C; nguồn tự mâu thuẫn. |
+| Tĩnh Gia I | I.2 | A | D | Lời giải của nguồn kết luận nhiệt độ lưỡi dao và cán "xấp xỉ bằng nhau", tức A. |
+| Chuyên Phan Bội Châu – Lần 1 | I.3 | B | C | Nguồn chọn (2/3)kT, lời giải bỏ trống công thức; SGK: E_đ = (3/2)kT (B). |
+| Chuyên KHTN – Lần 1 | II.3a | Đ | S | Nguồn viết "= 0,00004 mol" trong khi chính biểu thức của nguồn cho 0,00401 mol (nhầm bậc 10). |
+| Chuyên KHTN – Lần 3 | III.5 | −12 | −24 | Nguồn đổi cm⁻³ sang m⁻³ bằng cách nhân 10⁻⁶ (đúng là 10⁶), lệch đúng 12 bậc. |
+| Chuyên KHTN – Lần 1 | III.5 | 8 | 1 | Nguồn chỉ ghi "Đáp án: 1", không lời giải; lời câu, số liệu trùng file. Chưa rõ lí do. |
+
+### M2. Trùng điểm đã nêu ở mục A–E: nguồn chọn cách hiểu / cách xử lí lỗi đề khác file (10)
+
+| Đề | Câu | File | Mạng | Ghi chú |
+|---|---|---|---|---|
+| Ngô Gia Tự – Lần 1 | I.11 (mục A) | C | **D** | Nguồn đúng đề ghi D (trang câu không kèm lời giải); câu cùng nội dung ở loigiaihay, tuyensinh247 (hai bản) cũng D; không nguồn nào ghi C. Fable cũng D. |
+| Lương Thế Vinh – Lần 1 | II.2a (mục B) | S | Đ | Nguồn giữ nguyên ¹³¹₅₁I như đề gốc (Xe-131 có Z = 52, 79 neutron); file đã sửa Z = 53. Đáp án đang lưu hành theo nguyên văn đề là Đúng. |
+| Nguyễn Khuyến LTT – Lần 1 | II.1b (`% KIỂM TRA`) | Đ | S | Nguồn giữ chữ "3 V" của đề gốc, chấm Sai vì sai đơn vị; file sửa thành 3 A. Tuyển tập trên chuvanbien (cùng câu) in "3 A". |
+| Phan Đăng Lưu – Lần 1 | I.16 (mục D) | C | A | Đề có hai phương án đúng theo SGK; nguồn coi C sai (cho rằng chỉ phân tử khí mới chuyển động hỗn loạn không ngừng). |
+| Phan Đăng Lưu – Lần 1 | II.2a (mục C) | S | Đ | Nguồn tính 0,178 mol rồi coi "xấp xỉ 0,17" là đúng (chấm lỏng). |
+| Liên trường Nghệ An – Lần 2 | II.2d (mục C) | S | Đ | Nguồn in "8,9 °C" như đề, tính ra 9,84 °C nhưng vẫn chấm Đúng (nghi đề gõ đảo 9,8 thành 8,9). |
+| Hưng Yên SGD – Lần 1 | II.1d (mục D) | Đ | S | Nguồn cho số chỉ của cân gồm cả khối lượng cốc. |
+| Lương Đắc Bằng – Lần 1 | II.1d (mục D) | Đ | S | Nguồn: "chỉ kiểm chứng chứ không chứng minh được định luật" (cách hiểu chặt). |
+| Cẩm Phả – Lần 1 | II.3c | S | Đ | Nguồn theo cách hiểu thứ hai đã ghi trong `kiem-chung-v2.md` ("không có quỹ đạo xác định"). |
+| Cẩm Xuyên – Lần 2 | II.2c ("thầy xem", đọc hình) | Đ | S | Nguồn đồng ý chiều dòng điện như mũi tên i trên hình nhưng coi cạnh đó là nửa vòng phía trước nên gọi "ngược chiều kim đồng hồ" — khác cách đọc phối cảnh. |
+
+### M3. Điểm mới, chưa có trong mục A–D (8) — thầy quyết
+
+| Đề | Câu | File | Mạng | Ghi chú |
+|---|---|---|---|---|
+| Nguyễn Thị Minh Khai – Lần 1 | II.2c | S | Đ | Lời ý c trên trang in mômen 4·10⁻⁴ N·m như đề gốc và file, nhưng lời giải nguồn dùng 4,8·10⁻⁴ N·m → B = 0,08 T nên chấm Đúng. Nghi đề gốc in thiếu ",8": giữ S theo số in hay sửa mômen thành 4,8·10⁻⁴ (ý c thành Đ). |
+| Lương Thế Vinh – Lần 1 | II.3d | S | Đ | Mệnh đề "Nội năng … bằng tổng công A và nhiệt lượng Q": file chấm Sai vì định luật I nói về *độ biến thiên* nội năng; nguồn ghi Đúng, không lời giải. |
+| Cụm 13 trường – Lần 2 | II.2c | S | Đ | Nguồn: khí bị nén ⇒ A > 0 ⇒ ΔU = A > 0 (bỏ qua Q), trái câu "coi nhiệt độ của khí trong xilanh không đổi" của chính lời đề (file: đẳng nhiệt ⇒ ΔU = 0). |
+| Ngô Gia Tự – Lần 1 | III.4 | 150 | 200 | Nguồn lấy 40 kW (nhiệt nồi hơi nhận mỗi giây) chia 20 %; file lấy 30 kW (công suất động cơ) chia 20 %. Hai cách hiểu "hiệu suất động cơ hơi nước"; `kiem-chung-v2.md` đã ghi cách hiểu 200. |
+| Ngô Gia Tự – Lần 1 | III.5 | 32 | 34 | Cùng nhiệt lượng (≈ 1,055·10⁶ J), cùng thể tích đá tan (≈ 3,391·10⁻³ m³); khác mô hình phần đá tan: nguồn V = (4/3)πR³ + πR²(h − 2R), file V = πR²(h − R) + (2/3)πR³ (chênh (1/3)πR³). |
+| Cẩm Phả – Lần 1 | II.3b | S | Đ | Nguồn hiểu "phân tử khói" là hạt khói. |
+| Liên trường Nghệ An – Lần 1 | II.2d | S | Đ (chuvanbien) | Bảng đáp án trong PDF chuvanbien (đề "Sở GD&ĐT Nghệ An – Liên trường THPT", mã 3114), không lời giải; VietJack ghi S như file. Bản chuvanbien in công thức giống file. |
+| Liên trường Nghệ An – Lần 1 | III.6 | 640 | 427 (chuvanbien) | 427 trùng 0,32·0,8/0,6 (coi cả trọng lượng đặt ở đoạn NP); không lời giải; VietJack ghi 640 như file. |
+
+### M4. Các điểm mục A–E mà nguồn trùng file
+
+- **Mục A**: Cụm liên trường Hà Tĩnh II.2a (nguồn S; lần đo 7 có pV không xấp xỉ không đổi); Kinh Môn II II.1a (nguồn S, lí do hao phí nhiệt). Ngô Gia Tự I.11: nguồn D (M2).
+- **Mục B**:
+  - Chuyên KHTN Lần 3 I.10: bản VietJack cũng in H = 90 %, tính ra 3193 W, vẫn chọn C.
+  - Hưng Yên SGD II.2: bản VietJack in "12 kW" nhưng lời giải thế 1200 W, ra Đ Đ S S — ủng hộ cách file sửa 1,2 kW.
+  - Liên trường Nghệ An Lần 2 I.8: bản VietJack in "(2/2)kT" mà vẫn chấm A — ủng hộ cách file sửa (3/2)kT.
+  - Thái Nguyên SGD I.17: bản VietJack cũng có C trùng B, chọn A.
+  - Yên Hòa I.7: nguồn giữ λ = 34·10⁵ J/kg, chọn B; III.4: đề trên nguồn in N_A = 6,2·10²³ nhưng lời giải dùng 6,02·10²³, ra 2,97 như file.
+  - Tĩnh Gia I II.3: nguồn đúng đề có cùng lỗi in và ghi **S S S S** như file. Đáp án S Đ Đ Đ mà phiên trước dẫn là của bản lời khác (đề V-SAT, ý b, c, d khác lời). II.3d nguồn S. III.2: trang nguồn cũng không có hình mạch, tính theo mạch nối tiếp ra 0,66.
+  - Cẩm Phả III.6: trang nguồn cũng thiếu hình ("Đề bài thiếu hình, thiếu V"), không có đáp số — kích thước phòng 8 × 5 × 4 m vẫn chưa xác minh được.
+  - **Quảng Ninh SGD I.16**: nguồn chọn **B**, và bản VietJack in B = (N₂/N₁)·U₁ (dấu nhân), C = (N₁/N₂)·U₁ → đáp án gốc nhiều khả năng là B, dấu "+" ở B trên bản PDF là lỗi gõ. File chữa phương án C (cùng nội dung đáp án). Thầy quyết: chữa B (đáp án B, khớp nguồn) hay giữ.
+- **Mục C** — nguồn in cùng số và cũng chấm Sai như file, nên các số này có trong đề gốc, không phải lỗi gõ lại: Cẩm Xuyên II.3d (1282 kg); Ngô Gia Tự II.4d (in 4160); Nguyễn Khuyến LTT Lần 3 II.1b, II.1d (in 2,64·10⁶; 41 kJ); Nguyễn Khuyến LTT Lần 1 II.4c (85,1 %), II.4d (1,67 h); Phú Thọ SGD II.2b, II.2c (bản mã 0203 của Sở cũng in 75 kJ, 10,8 J); Kinh Môn II II.3d (3,33 W); Chuyên KHTN Lần 3 II.1d (12,45 T); Quảng Ninh SGD II.3d (in 2,65·10⁻⁴); Tĩnh Gia I II.3d; Cụm CM10 I.6 (in "Mười độ chia", A); Bắc Ninh SGD (scan) II.4d (đề của Sở in cùng 0,185 kg, 11,60 W, 3995 J/kg.K; không có đáp án). Khác file: Phan Đăng Lưu II.2a, Liên trường Nghệ An Lần 2 II.2d (M2).
+- **Mục D** — nguồn chọn cùng cách hiểu với file: Chuyên KHTN Lần 1 III.4 (16); Yên Hòa III.3 (78,6), II.1b (S); Cụm 13 trường I.17 (B; nguồn cũng ghi chú đề mơ hồ); Cụm liên trường Hà Tĩnh III.3 (4,65); Phan Đăng Lưu III.1 (20), III.2 (10); Kinh Môn II III.6 (2,3); Hàm Rồng II.4c (S), III.6 (2108); Hà Nội SGD II.2b (S); Hưng Yên SGD II.1c; Bắc Ninh SGD Lần 1 II.2c (Đ), III.6 (0,6); Liên trường Nghệ An Lần 1 II.1c (S), II.4d (Đ); Phú Thọ SGD II.1a (S, lí do khác); Chuyên Phan Bội Châu II.2b, II.4b (Đ); Nguyễn Thị Minh Khai II.4c (S, 99 kJ); Ninh Bình SGD Lần 2 III.5 (6,23), III.6 (1,98); Lương Đắc Bằng II.4c (S), II.3c (Đ). Khác file: Phan Đăng Lưu I.16, Hưng Yên SGD II.1d, Lương Đắc Bằng II.1d (M2). Nguyễn Khuyến LTT Lần 10 (II.3a, II.4b, III.6): không có nguồn.
+- **Mục E** (đọc hình) — nguồn trùng file: Nguyễn Thị Minh Khai I.3 (D); Cụm CM10 II.3b, c, II.4a, b; Lào Cai SGD I.6, II.1c; Chuyên ĐH Vinh I.17, II.3; Chuyên Hạ Long II.1b; Thái Nguyên SGD II.1c; Nguyễn Khuyến LTT Lần 2 II.1b; Ninh Bình SGD Lần 2 II.4a; Lương Đắc Bằng II.2d. Khác file: Cẩm Xuyên II.2c (M2).
+
+### M5. Tên đề, lần thi (bổ sung mục I)
+
+- **Bắc Ninh SGD (scan)**: **đã xác nhận** là đề kiểm tra cuối học kì I năm học 2025–2026, Vật lí 12, Sở GD&ĐT Bắc Ninh, 45 phút, mã đề 0203 (PDF trên chuvanbien, cùng mã đề, khớp 28 câu); bản trong kho đã bị đổi tiêu đề thành "khảo sát chất lượng tốt nghiệp THPT, 50 phút". Thầy quyết có giữ đề này trong bộ thi thử không.
+- **Lương Thế Vinh**: VietJack đăng đề này với tên "THCS&THPT Lương Thế Vinh – Hà Nội **lần 2**" (khớp ghi chú `kiem-ke.md`: file "Lần 2" của SieuGioi trùng nội dung file Lần 1). Thầy xem lại tên / lần của file.
+- **Nguyễn Khuyến LTT Lần 1**: tuyển tập trên chuvanbien ghi câu II.1, II.2 lấy từ "Đề kiểm tra thường xuyên 2025–2026 trường Nguyễn Khuyến – Lê Thánh Tông"; đề "Lần 1" có thể là đề kiểm tra này.
+- **Ninh Bình SGD Lần 1**: danh mục VietJack có trang riêng cho lần 2, lần 3 của Sở Ninh Bình; trang không ghi lần khớp file → ủng hộ "Lần 1".
+- Tên trên VietJack (để tra lại): Cụm liên trường Hà Tĩnh = "Sở Hà Tĩnh"; Liên trường Nghệ An Lần 2 = "Liên trường Anh Sơn – Đô Lương – Thanh Chương – Yên Thành" (không ghi lần); Liên trường Nghệ An Lần 1 = "Liên trường THPT Nghệ An mã đề 3114"; Nguyễn Khuyến LTT Lần 2 = "THPT Lê Thánh Tông (HCM)"; Nguyễn Khuyến LTT Lần 3 = "Nguyễn Khuyến (HCM)"; Hưng Yên SGD = mã đề 0209; Bắc Ninh SGD Lần 1 = mã đề 0204; Phú Thọ SGD = mã đề 0203, "khảo sát chất lượng lớp 12 (đợt 1)".
+
+### M6. Link phiên trước ghi nhầm đề, truy cập
+
+- Link phiên trước hóa ra là đề khác (đã ghi trong từng file): VietJack "Lương Thế Vinh lần 1" (/164073, đề 40 câu năm trước), "Chuyên KHTN" không hậu tố (đề đúng là trang có hậu tố `-61`), "Chuyên Hạ Long", "Chuyên ĐH Vinh" (đề năm trước), câu Thái Nguyên `question/2061691` (đề ĐGNL ĐHSP Hà Nội), câu Tĩnh Gia II.3 (bản lời khác của đề V-SAT).
+- Đọc được: khoahoc.vietjack.com (`curl`); chuvanbien.vn (WebFetch, có lúc trả 503); loigiaihay.com, tuyensinh247.com (WebFetch).
+- Bị chặn: hoatieu.vn (WebFetch 403; `curl` bị chế độ cấp quyền của phiên chặn); docs.google.com, news.laodong.vn, vietnamnet.vn, image.plo.vn, video.vietjack.com, vietjack.com (WebFetch không phân giải được tên miền). Không thử cách khác.
+- Phiên chính kiểm bằng script: 35 file `kiem-chung-v2.md` đủ 28 dòng bảng đáp án, các cột Câu / Fable / File / Khớp giữ nguyên, chỉ điền cột Mạng; mỗi file có đúng một mục "Đối chiếu mạng bổ sung". 6 agent tự báo có chạy lệnh git chỉ đọc (`git status`, `git diff`), không thay đổi repo.
+
 ## Bảng 35 đề
 
-| STT | Lô | Đề (mở `kiem-chung-v2.md`) | Trạng thái | Số lệch | Câu lệch (file / Fable) | Kết luận của Fable | Đáp án trên mạng |
+| STT | Lô | Đề (mở `kiem-chung-v2.md`) | Trạng thái | Số lệch | Câu lệch (file / Fable) | Kết luận của Fable | Đáp án trên mạng (đối chiếu bổ sung 14/11/2026) |
 |---|---|---|---|---|---|---|---|
-| 1 | P01 | [`VatLi2026-HaNoi-ChuyenKHTN-Lan3`](../de/VatLi2026-HaNoi-ChuyenKHTN-Lan3/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. I.10 giữ C (tính ra 3,19 kW, không có phương án; nhiều khả năng đề chép sai H = 90 % thay cho 95 %). II.1d Sai chắc (12,4 T). III.4 = 0,09 sát ngưỡng làm tròn. | trang VietJack đúng đề, bị chặn |
-| 2 | P01 | [`VatLi2026-HaNoi-LuongTheVinh-Lan1`](../de/VatLi2026-HaNoi-LuongTheVinh-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp theo đề đã sửa. II.2a: Sai với Z = 53 (file đã sửa), Đúng với nguyên văn Z = 51 — thầy quyết. III.2 = 200 W, III.4 = 2,7 đúng. | trang VietJack đúng đề, bị chặn |
-| 3 | P02 | [`VatLi2026-HaNoi-YenHoa-Lan1`](../de/VatLi2026-HaNoi-YenHoa-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. I.7 giữ B (theo λ = 34·10⁵ J/kg in trên đề). Hai cách hiểu: II.1b (hướng nhìn), III.3 (78,6 / 78,1). **Hình I.13 đảo cực nguồn.** | không tìm thấy |
-| 4 | P02 | [`VatLi2026-HaTinh-CamXuyen-Lan2`](../de/VatLi2026-HaTinh-CamXuyen-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.3d Sai (1282 kg / đề "khoảng 1250 kg") — thầy quyết. III.4 = 3,46, không còn mơ hồ. | trang VietJack đúng đề, bị chặn |
-| 5 | P03 | [`VatLi2026-HaTinh-CumLienTruong`](../de/VatLi2026-HaTinh-CumLienTruong/kiem-chung-v2.md) | xong | 1 | II.2a: S / Đ | Đề mơ hồ (lần đo 7 bất thường); Fable nghiêng Đ, không khẳng định file sai. III.3 = 4,65 (4,68 cũng có cơ sở). II.3c, d định tính giữ Đ. | câu II.1 trên VietJack, bị chặn |
-| 6 | P03 | [`VatLi2026-HaiPhong-Cum13Truong-Lan2`](../de/VatLi2026-HaiPhong-Cum13Truong-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. I.17 giữ B (0,7 N mỗi dây; D nếu hiểu tổng hai dây 1,4 N) — thầy quyết. | không tìm thấy |
-| 7 | P03 | [`VatLi2026-HaiPhong-KinhMonII-Lan2`](../de/VatLi2026-HaiPhong-KinhMonII-Lan2/kiem-chung-v2.md) | xong | 1 | II.1a: S / Đ | Đề mơ hồ (nguyên tắc phép đo → Đ; xét hao phí → S). II.2b, III.6 giữ như file. Điểm mới: II.3d (2,5 W của đề đúng bằng kết quả khi bỏ sót cos α). | không tìm thấy |
-| 8 | P04 | [`VatLi2026-Hue-PhanDangLuu-Lan1`](../de/VatLi2026-Hue-PhanDangLuu-Lan1/kiem-chung-v2.md) | xong | 0 | — (I.16: đề có hai phương án đúng) | I.16 A và C cùng đúng theo SGK, file gõ C — thầy quyết. II.2a Sai (0,1787 mol / "xấp xỉ 0,17"). III.2 = 10, III.1 = 20. | trang VietJack đúng đề, bị chặn; đoạn trích khớp II.1a, III.1, III.2 |
-| 9 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1b Đ (đã sửa "3 V" → 3 A). II.4c mơ hồ (85 % / 92 %), II.4d Sai. Hình II.4, II.2 lệch nhỏ. | câu II.1, II.2 trên VietJack, chuvanbien, bị chặn |
-| 10 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1b, II.1d Sai theo chữ in (II.1d: tính ra 34,1 kJ, đề in "41 kJ" — nghi mất kí tự) — thầy quyết. | không tìm thấy |
-| 11 | P05 | [`VatLi2026-HungYen-SoGD-Lan1`](../de/VatLi2026-HungYen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28 theo đề đã sửa P = 1,2 kW (giữ 12 kW thì II.2a Sai). II.1c S, II.1d Đ mơ hồ nhẹ. | hoatieu bị chặn |
-| 12 | P05 | [`VatLi2026-NgheAn-ChuyenDHVinh-Lan1`](../de/VatLi2026-NgheAn-ChuyenDHVinh-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; I.17, II.3 đọc hình độc lập khớp; không câu mơ hồ. **Hình III.3 vẽ sai chiều vòng từ trường quanh một thanh ray.** | chuvanbien bị chặn |
-| 13 | P06 | [`VatLi2026-NgheAn-LienTruong-Lan2`](../de/VatLi2026-NgheAn-LienTruong-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. Đồng ý sửa I.8 thành (3/2)kT. II.4c Đ. II.2d Sai (9,84 °C / đề ghi 8,9). | câu III.1–2 trên VietJack, bị chặn |
-| 14 | P07 | [`VatLi2026-PhuTho-NgoGiaTu-Lan1`](../de/VatLi2026-PhuTho-NgoGiaTu-Lan1/kiem-chung-v2.md) | xong | 1 | I.11: C / D | Fable nghiêng D (đoạn trích loigiaihay, tuyensinh247 cũng D); cần đối chiếu SBT KNTT bài 8. II.4d Sai (4461 / đề in 4160 — nghi 4460). | đoạn trích câu I.11 ghi D; trang bị chặn |
-| 15 | P07 | [`VatLi2026-QuangNinh-CamPha-Lan1`](../de/VatLi2026-QuangNinh-CamPha-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. III.6 = 14 chỉ đúng với hình phòng tự dựng 8 × 5 × 4 m (đề gốc mất hình) — thầy quyết. | chuvanbien có thể có hình gốc, bị chặn |
-| 16 | P08 | [`VatLi2026-QuangNinh-SoGD-Lan1`](../de/VatLi2026-QuangNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — (I.16: đề gốc không có phương án đúng) | I.16: file chữa C, đoạn trích VietJack ghi B — thầy quyết chữa phương án nào. Điểm mới: II.3d (2,56·10⁻⁴ W / đề in 2,65·10⁻⁴). III.2, III.3, III.6 đúng. | trang VietJack đúng đề, bị chặn; đoạn trích: I.16 B, II.2 Đ Đ Đ S |
-| 17 | P08 | [`VatLi2026-ThaiNguyen-SoGD-Lan1`](../de/VatLi2026-ThaiNguyen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.1c đo điểm ảnh cực nguồn khớp; không câu mơ hồ. | câu II.1 trên VietJack, bị chặn |
-| 18 | P08 | [`VatLi2026-ThanhHoa-HamRong-Lan1`](../de/VatLi2026-ThanhHoa-HamRong-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.4c Sai, mơ hồ (MN không thuộc mạch kín; trường có thể Đ). III.6 = 2108 theo hằng số SGK. | hoatieu bị chặn |
-| 19 | P09 | [`VatLi2026-ThanhHoa-TinhGia1`](../de/VatLi2026-ThanhHoa-TinhGia1/kiem-chung-v2.md) | xong | 0 | — | II.3 S S S S theo chữ in; sửa lỗi in thì S Đ Đ Đ (bản lời khác trên VietJack cũng S Đ Đ Đ) — thầy quyết. III.2 = 0,66 với mạch tự dựng. | câu II.3 (bản lời khác) trên VietJack |
-| 20 | P01 | [`VatLi2026-BacNinh-SoGD-Lan1`](../de/VatLi2026-BacNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.2c Đ mơ hồ nhẹ; III.5 = 8,01, III.6 = 0,6 đúng. | hoatieu, laodong bị chặn |
-| 21 | P09 | [`VatLi2026-BacNinh-SoGD`](../de/VatLi2026-BacNinh-SoGD/kiem-chung-v2.md) (scan) | xong | 0 | — | Khớp 28/28. II.4d Sai (3888 / 3995; 3995 ứng với m = 0,18 kg) — thầy quyết. Có thể là đề cuối học kì I (mục I). | chuvanbien bị chặn |
-| 22 | P01 | [`VatLi2026-HaNoi-ChuyenKHTN-Lan1`](../de/VatLi2026-HaNoi-ChuyenKHTN-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. III.4 = 16 (18 nếu không trừ khí còn lại) — thầy quyết. III.6 = 0,05 theo cả lời đề lẫn hình gốc. | câu I.4 trên VietJack, bị chặn |
-| 23 | P02 | [`VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1`](../de/VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.4c mơ hồ nhẹ (99 / 100 kJ). **Hình II.2 (Hình a) đảo cực nguồn.** | trang VietJack đúng đề, bị chặn; đoạn trích I.3, II.1, II.2a, II.3, II.4 khớp |
-| 24 | P03 | [`VatLi2026-HaiPhong-CumCM10-Lan1`](../de/VatLi2026-HaiPhong-CumCM10-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.3b, c, II.4a, b đọc hình khớp. I.6 = A theo lời đề "Mười độ chia" (C nếu là "Một độ chia"). | trang VietJack, hoatieu đúng đề, bị chặn; đoạn trích II.2c, d, II.4c, III.3 khớp |
-| 25 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.1b đọc chiều quấn, cực nguồn khớp. | không tìm thấy |
-| 26 | P05 | [`VatLi2026-LaoCai-SoGD-Lan1`](../de/VatLi2026-LaoCai-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; I.6, II.1c đọc hình khớp; không câu mơ hồ. | không tìm thấy |
-| 27 | P06 | [`VatLi2026-NgheAn-LienTruong-Lan1`](../de/VatLi2026-NgheAn-LienTruong-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; I.8 = B. II.1c, II.4d mơ hồ nhẹ. | trang VietJack, hoatieu đúng đề, bị chặn |
-| 28 | P06 | [`VatLi2026-NinhBinh-SoGD-Lan2`](../de/VatLi2026-NinhBinh-SoGD-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. III.5 = 6,23 (6,24 nếu R = 8,314 — đề không cho R). III.6 = 1,98. | vietnamnet, plo bị chặn |
-| 29 | P07 | [`VatLi2026-QuangNinh-ChuyenHaLong-Lan1`](../de/VatLi2026-QuangNinh-ChuyenHaLong-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.1b đọc cực nguồn khớp. | trang hoatieu, VietJack đúng đề, bị chặn |
-| 30 | P02 | [`VatLi2026-HaNoi-SoGD-Lan1`](../de/VatLi2026-HaNoi-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.2b mơ hồ ("cùng chuyển động"). | docs.google bị chặn |
-| 31 | P05 | [`VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1`](../de/VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.2b, II.4b mơ hồ nhẹ. **Hình I.6 vẽ electron thành nhãn dòng điện I.** | trang VietJack đúng đề (VIP), bị chặn |
-| 32 | P06 | [`VatLi2026-NinhBinh-SoGD-Lan1`](../de/VatLi2026-NinhBinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; không câu mơ hồ. | vietnamnet, hoatieu bị chặn |
-| 33 | P07 | [`VatLi2026-PhuTho-SoGD-Lan1`](../de/VatLi2026-PhuTho-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1a Sai, mơ hồ (lượng khí thay đổi) — thầy quyết. II.2b, II.2c Sai theo số in (75 kJ; "10,8 J"). | hoatieu bị chặn |
-| 34 | P08 | [`VatLi2026-ThanhHoa-LuongDacBang-Lan1`](../de/VatLi2026-ThanhHoa-LuongDacBang-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1d Đ, II.4c S — mơ hồ, thầy quyết. II.2d S, II.3c Đ (tính cả N vòng). | docs.google bị chặn |
-| 35 | P09 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10/kiem-chung-v2.md) (scan) | xong | 0 | — | Khớp 28/28. II.3a S (Đ nếu coi miệng ống ngang mặt thoáng), II.4b S — thầy quyết. III.6 = 0,82 (đẳng nhiệt theo lời đề). | câu II.3 trên VietJack, bị chặn |
+| 1 | P01 | [`VatLi2026-HaNoi-ChuyenKHTN-Lan3`](../de/VatLi2026-HaNoi-ChuyenKHTN-Lan3/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. I.10 giữ C (tính ra 3,19 kW, không có phương án; nhiều khả năng đề chép sai H = 90 % thay cho 95 %). II.1d Sai chắc (12,4 T). III.4 = 0,09 sát ngưỡng làm tròn. | VietJack (trang hậu tố `-61`) 28/28; khác III.5 (−24, nguồn đổi đơn vị nhầm) |
+| 2 | P01 | [`VatLi2026-HaNoi-LuongTheVinh-Lan1`](../de/VatLi2026-HaNoi-LuongTheVinh-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp theo đề đã sửa. II.2a: Sai với Z = 53 (file đã sửa), Đúng với nguyên văn Z = 51 — thầy quyết. III.2 = 200 W, III.4 = 2,7 đúng. | VietJack (tên "Lương Thế Vinh lần 2") 28/28; khác II.2a (Đ, giữ Z = 51), II.3d (Đ) |
+| 3 | P02 | [`VatLi2026-HaNoi-YenHoa-Lan1`](../de/VatLi2026-HaNoi-YenHoa-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. I.7 giữ B (theo λ = 34·10⁵ J/kg in trên đề). Hai cách hiểu: II.1b (hướng nhìn), III.3 (78,6 / 78,1). **Hình I.13 đảo cực nguồn.** | VietJack 28/28, khớp |
+| 4 | P02 | [`VatLi2026-HaTinh-CamXuyen-Lan2`](../de/VatLi2026-HaTinh-CamXuyen-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.3d Sai (1282 kg / đề "khoảng 1250 kg") — thầy quyết. III.4 = 3,46, không còn mơ hồ. | VietJack 28/28; khác II.2c (S, đọc phối cảnh); II.3d S như file |
+| 5 | P03 | [`VatLi2026-HaTinh-CumLienTruong`](../de/VatLi2026-HaTinh-CumLienTruong/kiem-chung-v2.md) | xong | 1 | II.2a: S / Đ | Đề mơ hồ (lần đo 7 bất thường); Fable nghiêng Đ, không khẳng định file sai. III.3 = 4,65 (4,68 cũng có cơ sở). II.3c, d định tính giữ Đ. | VietJack ("Sở Hà Tĩnh") 27/28; II.2a S như file; khác I.9 (D, nguồn nhầm nhãn) |
+| 6 | P03 | [`VatLi2026-HaiPhong-Cum13Truong-Lan2`](../de/VatLi2026-HaiPhong-Cum13Truong-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. I.17 giữ B (0,7 N mỗi dây; D nếu hiểu tổng hai dây 1,4 N) — thầy quyết. | VietJack 28/28; I.17 B như file; khác II.2c (Đ) |
+| 7 | P03 | [`VatLi2026-HaiPhong-KinhMonII-Lan2`](../de/VatLi2026-HaiPhong-KinhMonII-Lan2/kiem-chung-v2.md) | xong | 1 | II.1a: S / Đ | Đề mơ hồ (nguyên tắc phép đo → Đ; xét hao phí → S). II.2b, III.6 giữ như file. Điểm mới: II.3d (2,5 W của đề đúng bằng kết quả khi bỏ sót cos α). | VietJack 28/28, khớp (II.1a S như file) |
+| 8 | P04 | [`VatLi2026-Hue-PhanDangLuu-Lan1`](../de/VatLi2026-Hue-PhanDangLuu-Lan1/kiem-chung-v2.md) | xong | 0 | — (I.16: đề có hai phương án đúng) | I.16 A và C cùng đúng theo SGK, file gõ C — thầy quyết. II.2a Sai (0,1787 mol / "xấp xỉ 0,17"). III.2 = 10, III.1 = 20. | VietJack 28/28; khác I.16 (A), II.2a (Đ) |
+| 9 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1b Đ (đã sửa "3 V" → 3 A). II.4c mơ hồ (85 % / 92 %), II.4d Sai. Hình II.4, II.2 lệch nhỏ. | VietJack 28/28; khác II.1b (S, giữ chữ "3 V") |
+| 10 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1b, II.1d Sai theo chữ in (II.1d: tính ra 34,1 kJ, đề in "41 kJ" — nghi mất kí tự) — thầy quyết. | VietJack 28/28, khớp (II.1b, d S như file) |
+| 11 | P05 | [`VatLi2026-HungYen-SoGD-Lan1`](../de/VatLi2026-HungYen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28 theo đề đã sửa P = 1,2 kW (giữ 12 kW thì II.2a Sai). II.1c S, II.1d Đ mơ hồ nhẹ. | VietJack (mã 0209) 28/28; khác II.1d (S); II.2 ủng hộ sửa 1,2 kW |
+| 12 | P05 | [`VatLi2026-NgheAn-ChuyenDHVinh-Lan1`](../de/VatLi2026-NgheAn-ChuyenDHVinh-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; I.17, II.3 đọc hình độc lập khớp; không câu mơ hồ. **Hình III.3 vẽ sai chiều vòng từ trường quanh một thanh ray.** | VietJack 28/28, khớp |
+| 13 | P06 | [`VatLi2026-NgheAn-LienTruong-Lan2`](../de/VatLi2026-NgheAn-LienTruong-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. Đồng ý sửa I.8 thành (3/2)kT. II.4c Đ. II.2d Sai (9,84 °C / đề ghi 8,9). | VietJack 28/28; khác II.2d (Đ); I.8 ủng hộ sửa (3/2)kT |
+| 14 | P07 | [`VatLi2026-PhuTho-NgoGiaTu-Lan1`](../de/VatLi2026-PhuTho-NgoGiaTu-Lan1/kiem-chung-v2.md) | xong | 1 | I.11: C / D | Fable nghiêng D (đoạn trích loigiaihay, tuyensinh247 cũng D); cần đối chiếu SBT KNTT bài 8. II.4d Sai (4461 / đề in 4160 — nghi 4460). | VietJack 28/28; khác I.11 (D), III.4 (200), III.5 (34) |
+| 15 | P07 | [`VatLi2026-QuangNinh-CamPha-Lan1`](../de/VatLi2026-QuangNinh-CamPha-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. III.6 = 14 chỉ đúng với hình phòng tự dựng 8 × 5 × 4 m (đề gốc mất hình) — thầy quyết. | VietJack 27/28; khác I.6 (D, nguồn tự mâu thuẫn), II.3b, c (Đ Đ); III.6 nguồn cũng thiếu hình |
+| 16 | P08 | [`VatLi2026-QuangNinh-SoGD-Lan1`](../de/VatLi2026-QuangNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — (I.16: đề gốc không có phương án đúng) | I.16: file chữa C, đoạn trích VietJack ghi B — thầy quyết chữa phương án nào. Điểm mới: II.3d (2,56·10⁻⁴ W / đề in 2,65·10⁻⁴). III.2, III.3, III.6 đúng. | VietJack 28/28, khớp nội dung; I.16 nguồn chọn B (chữa B) |
+| 17 | P08 | [`VatLi2026-ThaiNguyen-SoGD-Lan1`](../de/VatLi2026-ThaiNguyen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.1c đo điểm ảnh cực nguồn khớp; không câu mơ hồ. | VietJack 28/28, khớp |
+| 18 | P08 | [`VatLi2026-ThanhHoa-HamRong-Lan1`](../de/VatLi2026-ThanhHoa-HamRong-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.4c Sai, mơ hồ (MN không thuộc mạch kín; trường có thể Đ). III.6 = 2108 theo hằng số SGK. | VietJack 28/28, khớp |
+| 19 | P09 | [`VatLi2026-ThanhHoa-TinhGia1`](../de/VatLi2026-ThanhHoa-TinhGia1/kiem-chung-v2.md) | xong | 0 | — | II.3 S S S S theo chữ in; sửa lỗi in thì S Đ Đ Đ (bản lời khác trên VietJack cũng S Đ Đ Đ) — thầy quyết. III.2 = 0,66 với mạch tự dựng. | VietJack 28/28; II.3 S S S S như file; khác I.2 (D, nguồn nhầm nhãn) |
+| 20 | P01 | [`VatLi2026-BacNinh-SoGD-Lan1`](../de/VatLi2026-BacNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.2c Đ mơ hồ nhẹ; III.5 = 8,01, III.6 = 0,6 đúng. | VietJack (mã 0204) 28/28, khớp |
+| 21 | P09 | [`VatLi2026-BacNinh-SoGD`](../de/VatLi2026-BacNinh-SoGD/kiem-chung-v2.md) (scan) | xong | 0 | — | Khớp 28/28. II.4d Sai (3888 / 3995; 3995 ứng với m = 0,18 kg) — thầy quyết. Có thể là đề cuối học kì I (mục I). | chuvanbien: bản đề cuối học kì I (mã 0203), không có đáp án |
+| 22 | P01 | [`VatLi2026-HaNoi-ChuyenKHTN-Lan1`](../de/VatLi2026-HaNoi-ChuyenKHTN-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. III.4 = 16 (18 nếu không trừ khí còn lại) — thầy quyết. III.6 = 0,05 theo cả lời đề lẫn hình gốc. | VietJack 27/28; khác II.3a (S, nguồn tính nhầm), III.5 (1, không lời giải) |
+| 23 | P02 | [`VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1`](../de/VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.4c mơ hồ nhẹ (99 / 100 kJ). **Hình II.2 (Hình a) đảo cực nguồn.** | VietJack 28/28; khác II.2c (Đ, lời giải nguồn dùng 4,8·10⁻⁴ N·m) |
+| 24 | P03 | [`VatLi2026-HaiPhong-CumCM10-Lan1`](../de/VatLi2026-HaiPhong-CumCM10-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.3b, c, II.4a, b đọc hình khớp. I.6 = A theo lời đề "Mười độ chia" (C nếu là "Một độ chia"). | VietJack 28/28, khớp |
+| 25 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.1b đọc chiều quấn, cực nguồn khớp. | VietJack ("Lê Thánh Tông (HCM)") 28/28, khớp |
+| 26 | P05 | [`VatLi2026-LaoCai-SoGD-Lan1`](../de/VatLi2026-LaoCai-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; I.6, II.1c đọc hình khớp; không câu mơ hồ. | VietJack 28/28, khớp |
+| 27 | P06 | [`VatLi2026-NgheAn-LienTruong-Lan1`](../de/VatLi2026-NgheAn-LienTruong-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; I.8 = B. II.1c, II.4d mơ hồ nhẹ. | VietJack (mã 3114) 28/28, khớp; bảng đáp án chuvanbien khác II.2d (Đ), III.6 (427) |
+| 28 | P06 | [`VatLi2026-NinhBinh-SoGD-Lan2`](../de/VatLi2026-NinhBinh-SoGD-Lan2/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. III.5 = 6,23 (6,24 nếu R = 8,314 — đề không cho R). III.6 = 1,98. | VietJack 28/28, khớp |
+| 29 | P07 | [`VatLi2026-QuangNinh-ChuyenHaLong-Lan1`](../de/VatLi2026-QuangNinh-ChuyenHaLong-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.1b đọc cực nguồn khớp. | VietJack 28/28, khớp |
+| 30 | P02 | [`VatLi2026-HaNoi-SoGD-Lan1`](../de/VatLi2026-HaNoi-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.2b mơ hồ ("cùng chuyển động"). | VietJack 28/28, khớp |
+| 31 | P05 | [`VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1`](../de/VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; II.2b, II.4b mơ hồ nhẹ. **Hình I.6 vẽ electron thành nhãn dòng điện I.** | VietJack 28/28; khác I.3 (C, nguồn nhầm chữ cái) |
+| 32 | P06 | [`VatLi2026-NinhBinh-SoGD-Lan1`](../de/VatLi2026-NinhBinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28; không câu mơ hồ. | VietJack 28/28, khớp |
+| 33 | P07 | [`VatLi2026-PhuTho-SoGD-Lan1`](../de/VatLi2026-PhuTho-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1a Sai, mơ hồ (lượng khí thay đổi) — thầy quyết. II.2b, II.2c Sai theo số in (75 kJ; "10,8 J"). | VietJack 28/28, khớp |
+| 34 | P08 | [`VatLi2026-ThanhHoa-LuongDacBang-Lan1`](../de/VatLi2026-ThanhHoa-LuongDacBang-Lan1/kiem-chung-v2.md) | xong | 0 | — | Khớp 28/28. II.1d Đ, II.4c S — mơ hồ, thầy quyết. II.2d S, II.3c Đ (tính cả N vòng). | VietJack 28/28; khác II.1d (S) |
+| 35 | P09 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10/kiem-chung-v2.md) (scan) | xong | 0 | — | Khớp 28/28. II.3a S (Đ nếu coi miệng ống ngang mặt thoáng), II.4b S — thầy quyết. III.6 = 0,82 (đẳng nhiệt theo lời đề). | không tìm thấy |
 
 ## Các điểm chờ thầy quyết (gom từ báo cáo 35 agent)
 
@@ -57,11 +137,11 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 
 ### A. Câu / ý lệch (file khác kết luận cuối của Fable) — 3
 
-| Đề | Câu | File | Fable | Ghi chú |
-|---|---|---|---|---|
-| Cụm liên trường Hà Tĩnh | II.2a | S | Đ (nghiêng, khoảng 2/3) | pV sáu lần đầu lệch dưới 0,7 %, riêng lần 7 lệch +12,9 %; ý d đã tách lần 7 thành số liệu nghi ngờ. Không khẳng định file sai; chọn Đ thì phải viết lại lời giải ý a. |
-| Kinh Môn II – Lần 2 | II.1a | S | Đ (nghiêng, khoảng 60 %) | "Nhiệt lượng nước thu vào bằng điện năng cung cấp": theo nguyên tắc phép đo (ý c tính đúng bằng đẳng thức này) → Đ; xét hao phí → S. Chọn Đ thì II.1 thành Đ S Đ Đ. |
-| Ngô Gia Tự – Lần 1 | I.11 | C | D | Đoạn trích tìm kiếm của loigiaihay, tuyensinh247 cũng ghi D (chưa mở được trang). `kiem-chung.md` cũ ghi chọn C "theo SBT Vật lí 12" — cần thầy đối chiếu bản in SBT KNTT bài 8. |
+| Đề | Câu | File | Fable | Mạng (14/11) | Ghi chú |
+|---|---|---|---|---|---|
+| Cụm liên trường Hà Tĩnh | II.2a | S | Đ (nghiêng, khoảng 2/3) | S (VietJack, như file) | pV sáu lần đầu lệch dưới 0,7 %, riêng lần 7 lệch +12,9 %; ý d đã tách lần 7 thành số liệu nghi ngờ. Không khẳng định file sai; chọn Đ thì phải viết lại lời giải ý a. |
+| Kinh Môn II – Lần 2 | II.1a | S | Đ (nghiêng, khoảng 60 %) | S (VietJack, lí do hao phí) | "Nhiệt lượng nước thu vào bằng điện năng cung cấp": theo nguyên tắc phép đo (ý c tính đúng bằng đẳng thức này) → Đ; xét hao phí → S. Chọn Đ thì II.1 thành Đ S Đ Đ. |
+| Ngô Gia Tự – Lần 1 | I.11 | C | D | **D** (VietJack đúng đề; loigiaihay, tuyensinh247 cũng D) | Đoạn trích tìm kiếm của loigiaihay, tuyensinh247 cũng ghi D (chưa mở được trang). `kiem-chung.md` cũ ghi chọn C "theo SBT Vật lí 12" — cần thầy đối chiếu bản in SBT KNTT bài 8. |
 
 ### B. Hai lượt giải khớp nhau, nhưng đáp án phụ thuộc cách xử lí lỗi đề gốc
 
@@ -110,7 +190,9 @@ Cẩm Xuyên II.4d (lời giải ghi 18 070 s, đúng là 18 059 s); Phan Đăng
 - Liên trường Nghệ An Lần 1: trang hoatieu (theo đoạn trích tìm kiếm) gọi là "Sở Nghệ An Lần 1", 24 mã đề 3101–3124 → ủng hộ cách đặt "Lần 1".
 - **Bắc Ninh SGD (scan)**: theo đoạn trích tìm kiếm của chuvanbien.vn (file `LOP12_DEKTCUOIKI1_SOBACNINH_SOCANTHO.pdf`), đây có thể là đề **kiểm tra cuối học kì I** Vật lí 12 của Sở Bắc Ninh (45 phút), bên sưu tầm đổi tiêu đề thành "khảo sát chất lượng tốt nghiệp THPT, 50 phút". Chưa xác nhận được (trang bị chặn) — thầy xem có giữ đề này trong bộ thi thử không.
 
-### J. Hạn chế: đối chiếu trên mạng gần như không làm được
+### J. Đối chiếu trên mạng ở lượt đầu (đã làm bổ sung — xem mục "Đối chiếu mạng bổ sung (14/11/2026)")
+
+Ghi lại tình trạng lượt đầu:
 
 Mạng của phiên (môi trường Default, mức Limited, danh sách tên miền cho phép trống) chặn các trang đăng đề: `khoahoc.vietjack.com`, `hoatieu.vn`, `chuvanbien.vn`, `loigiaihay.com`, `tuyensinh247.com`, `docs.google.com`, `vietnamnet.vn`, `image.plo.vn`, `news.laodong.vn`. Agent chỉ đọc được đoạn trích của công cụ tìm kiếm (một phần ở 5 đề: Phan Đăng Lưu, Quảng Ninh SGD, Nguyễn Thị Minh Khai, Cụm CM10, câu I.11 Ngô Gia Tự). Link đã ghi ở mục "Nguồn trên mạng" của từng `kiem-chung-v2.md`:
 
@@ -128,5 +210,5 @@ Mạng của phiên (môi trường Default, mức Limited, danh sách tên mi�
 
 1. Thầy quyết các điểm mục A–D (nhất là 3 ý lệch mục A, các câu sửa lời đề mục B, các mệnh đề nghi gõ nhầm mục C), rồi một phiên sửa `.tex`, `kiem-chung.md`, `TIEN-DO.md` theo quyết định.
 2. Chuyển 4 lỗi hình mục G (Yên Hòa I.13, Nguyễn Thị Minh Khai II.2, Chuyên Phan Bội Châu I.6, Chuyên ĐH Vinh III.3) cho phiên vẽ hình (phần A).
-3. Khi phiên được phép đọc các trang ở mục J (tên miền đã mở trong môi trường, còn thiếu quyền đọc trang): chạy bổ sung đối chiếu mạng cho các điểm mục A–D.
+3. ~~Chạy bổ sung đối chiếu mạng~~ — đã làm ngày 14/11/2026 (mục "Đối chiếu mạng bổ sung"). Thầy quyết thêm các câu mạng khác file ở M2, M3 (nhất là Ngô Gia Tự I.11, III.4, III.5; Nguyễn Thị Minh Khai II.2c; Lương Thế Vinh II.2a, II.3d; Quảng Ninh SGD I.16) và tên / lần đề ở M5 (Bắc Ninh SGD scan, Lương Thế Vinh).
 4. Sửa các sai sót nhỏ mục H cùng lúc với việc 1.

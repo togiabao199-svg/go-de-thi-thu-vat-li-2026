@@ -7,39 +7,40 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - So GDDT - Lan 1.pdf`. Giải l�
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.2b ("cùng chuyển động": khác vận tốc → S như file và Fable; hiểu là chuyển động như một khối → Đ); I.17 (A đúng; D chỉ sai vì chữ "luôn" theo câu SGK "khép kín hoặc vô hạn ở hai đầu"); I.16 (D chặt chẽ; B "không tương tác với nhau" thiếu "khi chưa va chạm"); III.6 (đề không cho v, phải lấy v = 5,6 km/s của câu III.5)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (số liệu, thứ tự phương án, thứ tự ý khớp ảnh trang; 7 hình TikZ đúng quan hệ với hình gốc: II.3 cực N trái – S phải, đầu "+" nối cạnh a, đầu "−" nối cạnh d; II.4 chiều mũi tên 1→2→3→1 trên hệ V–T; III.5 bản trên "−", bản dưới "+", B hướng ra ⊙, v sang phải)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; khớp 28 câu; khác 0 câu (0 ý Phần II). Điểm mục D (II.2b) khớp file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | — | khớp |
-| I.2 | B | B | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | B | B | — | khớp |
-| I.6 | C | C | — | khớp |
-| I.7 | D | D | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | D | D | — | khớp |
-| I.10 | D | D | — | khớp |
-| I.11 | A | A | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | B | B | — | khớp |
-| I.14 | A | A | — | khớp |
-| I.15 | D | D | — | khớp |
-| I.16 | D | D | — | khớp |
-| I.17 | A | A | — | khớp (thầy xem) |
-| I.18 | B | B | — | khớp |
-| II.1 | Đ Đ S Đ | Đ Đ S Đ | — | khớp |
-| II.2 | Đ S Đ S | Đ S Đ S | — | khớp (thầy xem ý b) |
-| II.3 | S S Đ Đ | S S Đ Đ | — | khớp (thầy xem: đọc phối cảnh hình) |
-| II.4 | Đ Đ S S | Đ Đ S S | — | khớp |
-| III.1 | 3,5 | 3,5 | — | khớp |
-| III.2 | 1,46 | 1,46 | — | khớp |
-| III.3 | 32 | 32 | — | khớp |
-| III.4 | 69,2 | 69,2 | — | khớp |
-| III.5 | 5,6 | 5,6 | — | khớp |
-| III.6 | 1,16 | 1,16 | — | khớp (thầy xem: dùng v câu III.5) |
+| I.1 | A | A | A | khớp |
+| I.2 | B | B | B | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | B | B | B | khớp |
+| I.6 | C | C | C | khớp |
+| I.7 | D | D | D | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | D | D | D | khớp |
+| I.10 | D | D | D | khớp |
+| I.11 | A | A | A | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | B | B | B | khớp |
+| I.14 | A | A | A | khớp |
+| I.15 | D | D | D | khớp |
+| I.16 | D | D | D | khớp |
+| I.17 | A | A | A | khớp (thầy xem) |
+| I.18 | B | B | B | khớp |
+| II.1 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp |
+| II.2 | Đ S Đ S | Đ S Đ S | Đ S Đ S | khớp (thầy xem ý b) |
+| II.3 | S S Đ Đ | S S Đ Đ | S S Đ Đ | khớp (thầy xem: đọc phối cảnh hình) |
+| II.4 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp |
+| III.1 | 3,5 | 3,5 | 3,5 | khớp |
+| III.2 | 1,46 | 1,46 | 1,46 | khớp |
+| III.3 | 32 | 32 | 32 | khớp |
+| III.4 | 69,2 | 69,2 | 69,2 | khớp |
+| III.5 | 5,6 | 5,6 | 5,6 | khớp |
+| III.6 | 1,16 | 1,16 | 1,16 | khớp (thầy xem: dùng v câu III.5) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 File đề không có `% KIỂM TRA`, `% ???`. TIEN-DO (dòng lô P02) ghi "thầy xem": II.2b, II.3 (khung nằm ngang), I.17 A; `kiem-chung.md` thêm III.6. Mục "Chờ thầy quyết" của TIEN-DO không nêu đề này. Không có câu lệch; bốn điểm "thầy xem" đã giải lại lần hai:
@@ -102,59 +103,53 @@ Kết quả chỉ có đề Vật lí của tỉnh khác và đề khảo sát H
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này.
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Lượt 1 (WebSearch) không ra; lượt 2 dò trang danh mục VietJack thì **tìm được đúng đề, có đáp án công khai cho đủ 28 câu**.
 
 **(a) Nguồn**
 
-- Nguồn đúng đề có đáp án: không có.
-- Nguồn đã xét nhưng KHÔNG đúng đề / không dùng được:
-  - [khoahoc.vietjack.com — Đề thi thử tốt nghiệp THPT môn Vật lí Sở Hà Nội có đáp án](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-so-ha-noi-co-dap-an) (curl đọc được, HTTP 200): đề khác — câu 1 "đồ thị nào không mô tả quá trình đẳng áp", câu 3 từ thông qua khung lớn nhất, câu 8 sóng điện từ, câu 9 truyền tải điện năng, câu 10 máy biến áp; đề này câu 1 "theo định luật Boyle, áp suất tỉ lệ thuận với nghịch đảo của thể tích", không có phần dòng điện xoay chiều.
-  - Theo kết quả tìm kiếm: hoatieu "Đáp án đề khảo sát liên trường môn Vật lí 12 sở Hà Nội 2025" (năm 2025; hoatieu bị chặn nên không kiểm); thuvienphapluat chỉ có bài đáp án khảo sát lớp 12 Hà Nội 2026 các môn Địa, Sinh, Văn, Anh, Sử, không có Vật lí; các trang VietJack Hà Nội khác (Lương Thế Vinh, Sóc Sơn, Xuân Phương, Nguyễn Thị Minh Khai, ĐGNL ĐHSP) là đề trường, không phải đề Sở.
-  - [docs.google.com …/1GrVroUIN5XOBc7_hLMESAPP748fEZSPM](https://docs.google.com/document/d/1GrVroUIN5XOBc7_hLMESAPP748fEZSPM/export?format=pdf) (hiện ở truy vấn câu III.1) và ba link docs.google của phiên trước: tên miền bị chặn (ENOTFOUND), không mở được.
-- Tên miền bị chặn (thử trong phiên bổ sung này, ở đề Hưng Yên): hoatieu.vn (WebFetch HTTP 403), docs.google.com (ENOTFOUND). Không thử cách khác.
-- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 7 truy vấn của phiên trước:
-  1. site:khoahoc.vietjack.com Sở Hà Nội vật lí 2026 thi thử tốt nghiệp
-  2. "Khi tìm hiểu về sự biến đổi nội năng của một lượng khí xác định" giả thuyết xilanh cảm biến nhiệt độ
-  3. đáp án đề khảo sát môn Vật lí lớp 12 Sở Hà Nội 2026 chi tiết
-  4. thuvienphapluat đáp án đề khảo sát Vật lý 12 Hà Nội 2026 mã đề
-  5. "125 vòng" "98,0" "0,105 s" ống dây đổi chiều cảm ứng từ suất điện động cảm ứng trung bình
-  6. khoahoc.vietjack.com "Vật lý 2025-2026" Sở GD Hà Nội khảo sát có đáp án
+- **Nguồn đúng đề:** [khoahoc.vietjack.com — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Hà Nội có đáp án"](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an), có trong [trang danh mục "Đề thi Tốt nghiệp THPT Vật lý 2026"](https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test) và [nhóm đề Hà Nội 2025-2026](https://khoahoc.vietjack.com/luyen-thi/73270/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-ha-noi). Các trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Nội !!", id 2442634–2442661 liên tiếp theo đúng thứ tự file. Đọc bằng curl (HTTP 200), chỉ phần công khai: câu 1–8 trên trang đề, câu 9–28 trên từng trang câu ("Trả lời: Giải bởi Vietjack"); III.2 đọc ở mục "Câu hỏi cùng đoạn — Câu 2" hiển thị công khai trên trang [q/2442657](https://khoahoc.vietjack.com/question/2442657/).
+- **Bằng chứng khớp đề:** đủ 28 câu cùng thứ tự với file; thứ tự phương án của cả 18 câu Phần I trùng file. Ví dụ: I.1 (định luật Boyle — "áp suất tỉ lệ thuận với nghịch đảo của thể tích"), I.8 (điện thế, suất điện động cảm ứng, từ thông, hiệu điện thế), I.14 (S₁, S₂ hai hình chữ nhật dưới đường đẳng nhiệt), I.17 ("Điện tích đứng yên không sinh ra từ trường"), II.1 (xilanh, cảm biến nhiệt độ, nước nóng / nước đá), II.3 (động cơ điện, khung dây quay quanh Δ), III.1–III.2 (ống dây 98,0 cm², 125 vòng; 3,5 V; 2,40 Ω), III.3–III.4 (pit-tông 32,0 cm², 57,0 °C, dây chịu 45,0 N), III.5–III.6 (vùng Z, E = 2,80·10³ V/m, B = 0,500 T).
+- **II.2b (mục D):** VietJack chấm **b Sai** với cùng lập luận như file ("nếu chỉ nói cùng chuyển động mà không đảm bảo cùng vận tốc thì vị trí tương đối vẫn có thể thay đổi, vẫn có dòng điện cảm ứng") — khớp file.
+- **II.3 (đọc hình), I.17, III.6 ("thầy xem"):** VietJack chấm II.3 S S Đ Đ (lực lên ab hướng xuống, lên cd hướng lên), I.17 A, III.6 = 1,16 (dùng v của câu III.5) — đều khớp file.
+- **Nguồn đã xét nhưng KHÔNG đúng đề:** VietJack "Đề thi thử tốt nghiệp THPT môn Vật lí Sở Hà Nội có đáp án" (bản cũ, câu 1 "đồ thị không mô tả quá trình đẳng áp", có máy biến áp, truyền tải điện); các đề trường Hà Nội khác trong nhóm (Yên Viên, Chuyên KHTN, Yên Hòa, Lương Thế Vinh, Nguyễn Thị Minh Khai). Lượt 1: hoatieu "Đáp án đề khảo sát liên trường môn Vật lí 12 sở Hà Nội 2025" (năm 2025; hoatieu bị chặn, HTTP 403), docs.google.com (4 link, ENOTFOUND — bị chặn), thuvienphapluat (chỉ có các môn khác).
+- **Truy vấn lượt 1** (WebSearch, standard, ngoài 7 truy vấn phiên trước): site:khoahoc.vietjack.com Sở Hà Nội vật lí 2026 thi thử tốt nghiệp; "Khi tìm hiểu về sự biến đổi nội năng của một lượng khí xác định" …; đáp án đề khảo sát môn Vật lí lớp 12 Sở Hà Nội 2026 chi tiết; thuvienphapluat đáp án đề khảo sát Vật lý 12 Hà Nội 2026 mã đề; "125 vòng" "98,0" "0,105 s" …; khoahoc.vietjack.com "Vật lý 2025-2026" Sở GD Hà Nội khảo sát có đáp án. Lượt 2: trang danh mục và nhóm đề Hà Nội trên VietJack (không qua WebSearch).
+- Đáp án VietJack là đáp án do trang soạn/đăng, không rõ có phải đáp án chính thức của Sở; chỉ dùng để đối chiếu.
 
-**(b) Bảng 28 câu**
+**(b) Bảng 28 câu** (Mạng = đáp án VietJack; thứ tự phương án/ý trùng file)
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | A | — | — | không có đáp án mạng |
-| I.2 | B | — | — | không có đáp án mạng |
-| I.3 | D | — | — | không có đáp án mạng |
-| I.4 | A | — | — | không có đáp án mạng |
-| I.5 | B | — | — | không có đáp án mạng |
-| I.6 | C | — | — | không có đáp án mạng |
-| I.7 | D | — | — | không có đáp án mạng |
-| I.8 | C | — | — | không có đáp án mạng |
-| I.9 | D | — | — | không có đáp án mạng |
-| I.10 | D | — | — | không có đáp án mạng |
-| I.11 | A | — | — | không có đáp án mạng |
-| I.12 | C | — | — | không có đáp án mạng |
-| I.13 | B | — | — | không có đáp án mạng |
-| I.14 | A | — | — | không có đáp án mạng |
-| I.15 | D | — | — | không có đáp án mạng |
-| I.16 | D | — | — | không có đáp án mạng |
-| I.17 | A | — | — | không có đáp án mạng |
-| I.18 | B | — | — | không có đáp án mạng |
-| II.1 | Đ Đ S Đ | — | — | không có đáp án mạng |
-| II.2 | Đ S Đ S | — | — | không có đáp án mạng |
-| II.3 | S S Đ Đ | — | — | không có đáp án mạng |
-| II.4 | Đ Đ S S | — | — | không có đáp án mạng |
-| III.1 | 3,5 | — | — | không có đáp án mạng |
-| III.2 | 1,46 | — | — | không có đáp án mạng |
-| III.3 | 32 | — | — | không có đáp án mạng |
-| III.4 | 69,2 | — | — | không có đáp án mạng |
-| III.5 | 5,6 | — | — | không có đáp án mạng |
-| III.6 | 1,16 | — | — | không có đáp án mạng |
+| I.1 | A | A | [trang đề, câu 1](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.2 | B | B | [trang đề, câu 2](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.3 | D | D | [trang đề, câu 3](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.4 | A | A | [trang đề, câu 4](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.5 | B | B | [trang đề, câu 5](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.6 | C | C | [trang đề, câu 6](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.7 | D | D | [trang đề, câu 7](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.8 | C | C | [trang đề, câu 8](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ha-noi-co-dap-an) | khớp |
+| I.9 | D | D | [q/2442642](https://khoahoc.vietjack.com/question/2442642/) | khớp |
+| I.10 | D | D | [q/2442643](https://khoahoc.vietjack.com/question/2442643/) | khớp |
+| I.11 | A | A | [q/2442644](https://khoahoc.vietjack.com/question/2442644/) | khớp |
+| I.12 | C | C | [q/2442645](https://khoahoc.vietjack.com/question/2442645/) | khớp |
+| I.13 | B | B | [q/2442646](https://khoahoc.vietjack.com/question/2442646/) | khớp |
+| I.14 | A | A | [q/2442647](https://khoahoc.vietjack.com/question/2442647/) | khớp |
+| I.15 | D | D | [q/2442648](https://khoahoc.vietjack.com/question/2442648/) | khớp |
+| I.16 | D | D | [q/2442649](https://khoahoc.vietjack.com/question/2442649/) | khớp |
+| I.17 | A | A | [q/2442650](https://khoahoc.vietjack.com/question/2442650/) | khớp |
+| I.18 | B | B | [q/2442651](https://khoahoc.vietjack.com/question/2442651/) | khớp |
+| II.1 | Đ Đ S Đ | Đ Đ S Đ | [q/2442652](https://khoahoc.vietjack.com/question/2442652/) | khớp |
+| II.2 | Đ S Đ S | Đ S Đ S | [q/2442653](https://khoahoc.vietjack.com/question/2442653/) | khớp |
+| II.3 | S S Đ Đ | S S Đ Đ | [q/2442654](https://khoahoc.vietjack.com/question/2442654/) | khớp |
+| II.4 | Đ Đ S S | Đ Đ S S | [q/2442655](https://khoahoc.vietjack.com/question/2442655/) | khớp |
+| III.1 | 3,5 | 3,5 | [q/2442656](https://khoahoc.vietjack.com/question/2442656/) | khớp |
+| III.2 | 1,46 | 1,46 | [q/2442657](https://khoahoc.vietjack.com/question/2442657/) | khớp |
+| III.3 | 32 | 32 | [q/2442658](https://khoahoc.vietjack.com/question/2442658/) | khớp |
+| III.4 | 69,2 | 69,2 | [q/2442659](https://khoahoc.vietjack.com/question/2442659/) | khớp |
+| III.5 | 5,6 | 5,6 | [q/2442660](https://khoahoc.vietjack.com/question/2442660/) | khớp |
+| III.6 | 1,16 | 1,16 | [q/2442661](https://khoahoc.vietjack.com/question/2442661/) | khớp |
 
 **(c) Câu mạng khác file**
 
-Không có (không có đáp án mạng để so). Điểm cần đối chiếu — mục D: II.2b ("cùng chuyển động") — vẫn chưa đối chiếu được trên mạng.
+Không có.
 
-**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0.
+**(d) Tổng:** 28/28 câu có đáp án mạng; khớp 28 câu; khác 0 câu (0 ý Phần II). Điểm mục D (II.2b) khớp file.

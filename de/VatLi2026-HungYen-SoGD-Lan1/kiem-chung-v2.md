@@ -7,39 +7,40 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hung Yen - So GDDT - Lan 1.pdf`. Giải 
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.2a (đề gốc in P = 12 kW thì a Sai, m₂ = 25,67 kg; file sửa P = 1,2 kW thì a Đúng — Fable đồng ý cách sửa); II.1c (file S, Fable S, nhưng người ra đề có thể coi Đ); II.1d (file Đ, Fable Đ theo cách hiểu cân đã trừ bì; hiểu số chỉ gồm cả cốc thì S)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi số liệu, phương án, thứ tự ý; 8 hình TikZ đúng quan hệ với hình gốc (tọa độ điểm, chiều mũi tên, nhãn trục); chỉ có I.18 phương án A bỏ chữ "đó" ("từ cơ thể đó để bay hơi" → "từ cơ thể để bay hơi") chưa ghi ở mục sửa lời đề của kiem-chung.md, không ảnh hưởng nghĩa
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; khớp 27 câu; khác 1 câu (1 ý Phần II). Các điểm mục B (II.2) và II.1c khớp file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | — | khớp |
-| I.2 | C | C | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | A | A | — | khớp |
-| I.7 | D | D | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | C | C | — | khớp |
-| I.10 | D | D | — | khớp |
-| I.11 | D | D | — | khớp |
-| I.12 | D | D | — | khớp |
-| I.13 | B | B | — | khớp |
-| I.14 | D | D | — | khớp |
-| I.15 | B | B | — | khớp |
-| I.16 | A | A | — | khớp |
-| I.17 | C | C | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | Đ S S Đ | Đ S S Đ | — | khớp (thầy xem ý c, d) |
-| II.2 | Đ Đ S S (hiểu P = 1,2 kW; đúng chữ in 12 kW thì S Đ S S) | Đ Đ S S | — | khớp (KIỂM TRA) |
-| II.3 | S Đ Đ Đ | S Đ Đ Đ | — | khớp |
-| II.4 | Đ Đ S Đ | Đ Đ S Đ | — | khớp |
-| III.1 | 50,2 | 50,2 | — | khớp |
-| III.2 | 0,67 | 0,67 | — | khớp |
-| III.3 | 2,16 | 2,16 | — | khớp |
-| III.4 | 150 | 150 | — | khớp |
-| III.5 | 85,8 | 85,8 | — | khớp |
-| III.6 | 1,33 | 1,33 | — | khớp |
+| I.1 | A | A | A | khớp |
+| I.2 | C | C | C | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | A | A | A | khớp |
+| I.7 | D | D | D | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | C | C | C | khớp |
+| I.10 | D | D | D | khớp |
+| I.11 | D | D | D | khớp |
+| I.12 | D | D | D | khớp |
+| I.13 | B | B | B | khớp |
+| I.14 | D | D | D | khớp |
+| I.15 | B | B | B | khớp |
+| I.16 | A | A | A | khớp |
+| I.17 | C | C | C | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | Đ S S Đ | Đ S S Đ | Đ S S S | khớp (thầy xem ý c, d) |
+| II.2 | Đ Đ S S (hiểu P = 1,2 kW; đúng chữ in 12 kW thì S Đ S S) | Đ Đ S S | Đ Đ S S | khớp (KIỂM TRA) |
+| II.3 | S Đ Đ Đ | S Đ Đ Đ | S Đ Đ Đ | khớp |
+| II.4 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp |
+| III.1 | 50,2 | 50,2 | 50,2 | khớp |
+| III.2 | 0,67 | 0,67 | 0,67 | khớp |
+| III.3 | 2,16 | 2,16 | 2,16 | khớp |
+| III.4 | 150 | 150 | 150 | khớp |
+| III.5 | 85,8 | 85,8 | 85,8 | khớp |
+| III.6 | 1,33 | 1,33 | 1,33 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -100,62 +101,53 @@ Kết quả gần nhưng không phải đề này: loigiaihay bài tập 319624 
 
 ## Đối chiếu mạng bổ sung (14/11/2026)
 
-Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này.
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Lượt 1 (WebSearch) không ra; lượt 2 dò trang danh mục VietJack thì **tìm được đúng đề, có đáp án công khai cho đủ 28 câu**.
 
 **(a) Nguồn**
 
-- Nguồn đúng đề có đáp án: không có.
-- Nguồn đã xét nhưng KHÔNG dùng được:
-  - [hoatieu.vn — Đề thi thử tốt nghiệp THPT 2026 môn Vật lí Hưng Yên lần 2](https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-hung-yen-232316): theo đoạn trích tìm kiếm, trang chính là đề lần 2 (mã 0201, 0226), phần mô tả có nhắc "48 mã đề thi thử lần 1 năm 2026" kèm đáp án trong file tải về. WebFetch bị từ chối (HTTP 403) → **bị chặn**; không kiểm được lời câu, không lấy được đáp án.
-  - [docs.google.com …/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8](https://docs.google.com/document/d/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8/export?format=pdf): hiện ở cả truy vấn câu II.2 (ấm nhôm, mất điện) lẫn câu III.2 (hai pit-tông, 1 mol khí) nên có thể là đề này; WebFetch báo tên miền nằm ngoài mạng cho phép (ENOTFOUND) → **bị chặn**.
-  - [khoahoc.vietjack.com — Đề thi thử tốt nghiệp THPT môn Vật lí THPT Phù Cừ – Hưng Yên](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-phu-cu-hung-yen-co-dap-an): đọc được (curl, HTTP 200) nhưng là đề khác: câu 1 "xilanh động cơ 0,7 atm, nén thể tích giảm 5 lần, áp suất 8 atm", câu 2 "70 % bề mặt Trái Đất được bao phủ bởi nước" — không có trong đề này.
-  - Theo kết quả tìm kiếm: VietJack chỉ có đề Toán, Tiếng Anh "Sở Hưng Yên lần 1", không có Vật lí; news.laodong.vn đăng đề Vật lí Sở Hưng Yên **lần 2** (đề khác); hoatieu "Đề khảo sát chất lượng Vật lí 12 chuyên Hưng Yên 2026" là đề trường chuyên (đề khác).
-- Tên miền bị chặn: hoatieu.vn (WebFetch HTTP 403), docs.google.com (WebFetch ENOTFOUND). Không thử cách khác.
-- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 8 truy vấn của phiên trước:
-  1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Hưng Yên lần 1 đáp án
-  2. site:khoahoc.vietjack.com "Hưng Yên" vật lí 2026 lần 1 thi thử
-  3. "bếp bị mất điện" "ấm nhôm" "khối lượng m1 = 200 g" vật lí thời điểm t3 đồ thị
-  4. "Giữa hai pit-tông nằm ngang có 1 mol khí lí tưởng" "10 cm" "4 kg" "4 cm" làm nóng khí
-  5. site:khoahoc.vietjack.com "máy làm nóng nước có dung tích 30 lít" 2500 W
-  6. "pit-tông cách nhiệt nặng 500 g" "24 cm" "25,6 cm" đúng sai
-  7. đáp án đề thi thử Vật lí 2026 Hưng Yên lần 1 48 mã đề tuyensinh247 vietjack
-  8. "nhiệt lượng kế có nắp kín và đáy có lỗ hở" "dây nung công suất" 12 W cân điện tử 40 g 60 g
+- **Nguồn đúng đề:** [khoahoc.vietjack.com — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Hưng Yên mã đề 0209 có đáp án"](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an), tìm qua [trang danh mục "Đề thi Tốt nghiệp THPT Vật lý 2026"](https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test). Các trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hưng Yên !!", id 2441636–2441663 liên tiếp theo đúng thứ tự file. Đọc bằng curl (HTTP 200), chỉ phần công khai: câu 1–8 lấy "Đáp án đúng là X" trên trang đề; câu 9–28 (trên trang đề bị khóa VIP) lấy trên từng trang câu, mục "Trả lời: Giải bởi Vietjack".
+- **Bằng chứng khớp đề:** đủ 28 câu cùng thứ tự với file; thứ tự phương án của cả 18 câu Phần I trùng file. Ví dụ: I.1 (hai đẳng quá trình, T₁ = 300 K, phương án 600 K – 150 K – 300 K – 900 K), I.4 (−39 °C; 234 – 39 – 313 – 324 K), II.1 (dây nung 12 W, cân 40 g rồi 60 g sau 10 phút), II.3 (xilanh 50 cm², pit-tông 500 g, 24 cm, 27 °C → 47 °C), III.1 (máy 30 lít, 2500 W, 16 → 70 °C, 90 %), III.2 (hai pit-tông, chênh tiết diện 10 cm², 4 kg, 4 cm), III.5 (nút chai, 26 °C), III.6 (0,5 kg hơi nước, 1 kg nước đá). Tên trang không ghi "lần 1", nhưng nội dung trùng file.
+- **II.2 (mục B):** trang VietJack in lời đề "P = 12 kW" như đề gốc, nhưng lời giải công khai thế 1200 W (1200·300 = …), ra m₂ ≈ 2,53 kg, P₀ = 300 W, chấm Đ Đ S S — khớp file (file sửa 12 kW thành 1,2 kW).
+- **II.1c, d (mục D):** VietJack chấm c Sai (tóm tắt lí do: phải có giai đoạn để nước đá tự tan do trao đổi nhiệt với môi trường thì mới loại được ảnh hưởng này) — khớp file; chấm **d Sai** (tóm tắt: số chỉ của cân gồm khối lượng cốc và phần nước đá tan chảy vào cốc, "đề bài lừa thí sinh") — khác file (file chấm Đ, hiểu cân đã trừ bì).
+- **Nguồn đã xét nhưng KHÔNG dùng:** các trang VietJack cùng đợt khác mã/khác đề — "Sở GD&ĐT Hưng Yên lần 1 mã đề 0239" (câu 1 "đường đẳng áp trong hệ VOT", câu khác file), "Sở GD&ĐT Hưng Yên mã đề 0204" (câu 1 "đối với khí lí tưởng, có thể bỏ qua đại lượng nào"), "Sở Hưng Yên lần 2", "THPT Phù Cừ – Hưng Yên" (câu 1 xilanh động cơ 0,7 atm). Lượt 1: hoatieu.vn (WebFetch HTTP 403, bị chặn), docs.google.com …/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8 (ENOTFOUND, bị chặn), news.laodong.vn (đề Hưng Yên lần 2), hoatieu "Chuyên Hưng Yên 2026" (đề trường chuyên).
+- **Truy vấn lượt 1** (WebSearch, standard, ngoài 8 truy vấn phiên trước): đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Hưng Yên lần 1 đáp án; site:khoahoc.vietjack.com "Hưng Yên" vật lí 2026 lần 1 thi thử; "bếp bị mất điện" "ấm nhôm" "khối lượng m1 = 200 g" …; "Giữa hai pit-tông nằm ngang có 1 mol khí lí tưởng" …; site:khoahoc.vietjack.com "máy làm nóng nước có dung tích 30 lít" 2500 W; "pit-tông cách nhiệt nặng 500 g" "24 cm" "25,6 cm" đúng sai; đáp án đề thi thử Vật lí 2026 Hưng Yên lần 1 48 mã đề …; "nhiệt lượng kế có nắp kín và đáy có lỗ hở" …. Lượt 2: trang danh mục VietJack (không qua WebSearch).
+- Đáp án VietJack là đáp án do trang soạn/đăng, không rõ có phải đáp án chính thức của Sở; chỉ dùng để đối chiếu.
 
-**(b) Bảng 28 câu**
+**(b) Bảng 28 câu** (Mạng = đáp án VietJack, đã quy về phương án/ý của file; thứ tự phương án trùng nên không phải đổi chữ)
 
 | Câu (file) | File | Mạng | Link | So sánh |
 |---|---|---|---|---|
-| I.1 | A | — | — | không có đáp án mạng |
-| I.2 | C | — | — | không có đáp án mạng |
-| I.3 | D | — | — | không có đáp án mạng |
-| I.4 | A | — | — | không có đáp án mạng |
-| I.5 | A | — | — | không có đáp án mạng |
-| I.6 | A | — | — | không có đáp án mạng |
-| I.7 | D | — | — | không có đáp án mạng |
-| I.8 | D | — | — | không có đáp án mạng |
-| I.9 | C | — | — | không có đáp án mạng |
-| I.10 | D | — | — | không có đáp án mạng |
-| I.11 | D | — | — | không có đáp án mạng |
-| I.12 | D | — | — | không có đáp án mạng |
-| I.13 | B | — | — | không có đáp án mạng |
-| I.14 | D | — | — | không có đáp án mạng |
-| I.15 | B | — | — | không có đáp án mạng |
-| I.16 | A | — | — | không có đáp án mạng |
-| I.17 | C | — | — | không có đáp án mạng |
-| I.18 | A | — | — | không có đáp án mạng |
-| II.1 | Đ S S Đ | — | — | không có đáp án mạng |
-| II.2 | Đ Đ S S | — | — | không có đáp án mạng |
-| II.3 | S Đ Đ Đ | — | — | không có đáp án mạng |
-| II.4 | Đ Đ S Đ | — | — | không có đáp án mạng |
-| III.1 | 50,2 | — | — | không có đáp án mạng |
-| III.2 | 0,67 | — | — | không có đáp án mạng |
-| III.3 | 2,16 | — | — | không có đáp án mạng |
-| III.4 | 150 | — | — | không có đáp án mạng |
-| III.5 | 85,8 | — | — | không có đáp án mạng |
-| III.6 | 1,33 | — | — | không có đáp án mạng |
+| I.1 | A | A | [trang đề, câu 1](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.2 | C | C | [trang đề, câu 2](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.3 | D | D | [trang đề, câu 3](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.4 | A | A | [trang đề, câu 4](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.5 | A | A | [trang đề, câu 5](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.6 | A | A | [trang đề, câu 6](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.7 | D | D | [trang đề, câu 7](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.8 | D | D | [trang đề, câu 8](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-hung-yen-ma-de-0209-co-dap-an) | khớp |
+| I.9 | C | C | [q/2441644](https://khoahoc.vietjack.com/question/2441644/) | khớp |
+| I.10 | D | D | [q/2441645](https://khoahoc.vietjack.com/question/2441645/) | khớp |
+| I.11 | D | D | [q/2441646](https://khoahoc.vietjack.com/question/2441646/) | khớp |
+| I.12 | D | D | [q/2441647](https://khoahoc.vietjack.com/question/2441647/) | khớp |
+| I.13 | B | B | [q/2441648](https://khoahoc.vietjack.com/question/2441648/) | khớp |
+| I.14 | D | D | [q/2441649](https://khoahoc.vietjack.com/question/2441649/) | khớp |
+| I.15 | B | B | [q/2441650](https://khoahoc.vietjack.com/question/2441650/) | khớp |
+| I.16 | A | A | [q/2441651](https://khoahoc.vietjack.com/question/2441651/) | khớp |
+| I.17 | C | C | [q/2441652](https://khoahoc.vietjack.com/question/2441652/) | khớp |
+| I.18 | A | A | [q/2441653](https://khoahoc.vietjack.com/question/2441653/) | khớp |
+| II.1 | Đ S S Đ | Đ S S S | [q/2441654](https://khoahoc.vietjack.com/question/2441654/) | **khác ý d** |
+| II.2 | Đ Đ S S | Đ Đ S S | [q/2441655](https://khoahoc.vietjack.com/question/2441655/) | khớp |
+| II.3 | S Đ Đ Đ | S Đ Đ Đ | [q/2441656](https://khoahoc.vietjack.com/question/2441656/) | khớp |
+| II.4 | Đ Đ S Đ | Đ Đ S Đ | [q/2441657](https://khoahoc.vietjack.com/question/2441657/) | khớp |
+| III.1 | 50,2 | 50,2 | [q/2441658](https://khoahoc.vietjack.com/question/2441658/) | khớp |
+| III.2 | 0,67 | 0,67 | [q/2441659](https://khoahoc.vietjack.com/question/2441659/) | khớp |
+| III.3 | 2,16 | 2,16 | [q/2441660](https://khoahoc.vietjack.com/question/2441660/) | khớp |
+| III.4 | 150 | 150 | [q/2441661](https://khoahoc.vietjack.com/question/2441661/) | khớp |
+| III.5 | 85,8 | 85,8 | [q/2441662](https://khoahoc.vietjack.com/question/2441662/) | khớp |
+| III.6 | 1,33 | 1,33 | [q/2441663](https://khoahoc.vietjack.com/question/2441663/) | khớp |
 
 **(c) Câu mạng khác file**
 
-Không có (không có đáp án mạng để so). Các điểm cần đối chiếu — mục B: II.2 (file sửa P = 12 kW thành 1,2 kW), mục D: II.1c, II.1d — vẫn chưa đối chiếu được trên mạng.
+- II.1d: file Đ / mạng S / [q/2441654](https://khoahoc.vietjack.com/question/2441654/) / VietJack hiểu số chỉ cân gồm cả khối lượng cốc nên chấm Sai; file hiểu cân đã trừ bì (số chỉ 40 g, 60 g là nước đá tan). Đây đúng là điểm mục D (II.1d hai cách hiểu); đáp án mạng theo cách hiểu thứ hai. Không phải do khác số liệu hay lỗi in.
 
-**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0.
+**(d) Tổng:** 28/28 câu có đáp án mạng; khớp 27 câu; khác 1 câu (1 ý Phần II). Các điểm mục B (II.2) và II.1c khớp file.
