@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - THPT chuyen Phan Boi Chau - La
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | A (đoạn trích VietJack) | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | B | B | — | khớp |
-| I.4 | C | C | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | D | D | — | khớp |
-| I.7 | B | B | — | khớp |
-| I.8 | A | A | — | khớp |
-| I.9 | C | C | — | khớp |
-| I.10 | B | B | — | khớp |
-| I.11 | A | A | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | C | C | — | khớp |
-| I.14 | A | A | — | khớp |
-| I.15 | D | D | — | khớp (thầy xem: đọc đồ thị) |
-| I.16 | A | A | — | khớp |
-| I.17 | B | B | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | Đ S Đ Đ | Đ S Đ Đ | — | khớp (thầy xem: c) |
-| II.2 | Đ Đ Đ S | Đ Đ Đ S | — | khớp (thầy xem: b) |
-| II.3 | Đ Đ S S | Đ Đ S S | — | khớp (thầy xem: b) |
-| II.4 | Đ Đ S Đ | Đ Đ S Đ | — | khớp (thầy xem: b, c) |
-| III.1 | 1,6 | 1,6 | — | khớp |
-| III.2 | 6 | 6 | — | khớp |
-| III.3 | 0,6 (0,60) | 0,60 | — | khớp (thầy xem: cách ghi) |
-| III.4 | 22,2 | 22,2 | — | khớp |
-| III.5 | 27,7 | 27,7 | — | khớp |
-| III.6 | 52 (52,0) | 52,0 | — | khớp (thầy xem: cách ghi) |
+| I.1 | A | A | A | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | B | B | C (khóa VietJack; phương án C của nguồn = (2/3)kT, cùng thứ tự file) | khớp |
+| I.4 | C | C | C | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | D | D | D | khớp |
+| I.7 | B | B | B | khớp |
+| I.8 | A | A | A | khớp |
+| I.9 | C | C | C | khớp |
+| I.10 | B | B | B | khớp |
+| I.11 | A | A | A | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | C | C | C | khớp |
+| I.14 | A | A | A | khớp |
+| I.15 | D | D | D | khớp (thầy xem: đọc đồ thị) |
+| I.16 | A | A | A | khớp |
+| I.17 | B | B | B | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | Đ S Đ Đ | Đ S Đ Đ | Đ S Đ Đ | khớp (thầy xem: c) |
+| II.2 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp (thầy xem: b) |
+| II.3 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (thầy xem: b) |
+| II.4 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp (thầy xem: b, c) |
+| III.1 | 1,6 | 1,6 | 1,6 | khớp |
+| III.2 | 6 | 6 | 6 | khớp |
+| III.3 | 0,6 (0,60) | 0,60 | 0,60 | khớp (thầy xem: cách ghi) |
+| III.4 | 22,2 | 22,2 | 22,2 | khớp |
+| III.5 | 27,7 | 27,7 | 27,7 | khớp |
+| III.6 | 52 (52,0) | 52,0 | 52,0 | khớp (thầy xem: cách ghi) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 File không có `% KIỂM TRA`, `% ???`; không có câu lệch. Các điểm "thầy xem" ghi ở TIEN-DO và `kiem-chung.md`:
@@ -80,8 +80,58 @@ Ghi thêm:
 - II.4a Đ: dụng cụ (2) có màn hình, mắc giữa biến thế nguồn (1) và nhiệt lượng kế (4): oát kế.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng đọc được.
 - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-phan-boi-chau-nghe-an-lan-1-co-dap-an — VietJack, đúng đề (đoạn trích tìm kiếm khớp câu cốc bia, long não, túi khí 87 g – 37 °C – 107,34 kPa); tên miền bị chặn trong phiên (ENOTFOUND), đáp án cần gói VIP; đoạn trích chỉ lộ I.1 chọn "hơi nước trong không khí ngưng tụ" (= A).
 - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DETHITHUTOTNGHIEPTHPT_CHUYENPHANBOICHAU.pdf, https://chuvanbien.vn/images/upload_file/2025/lop12_phanboichau_1741773479.pdf — đề chuyên Phan Bội Châu năm 2024–2025, KHÔNG phải đề này (tên miền cũng bị chặn).
 - https://loigiaihay.com/giai-sbt-vat-li-12-bai-11-phuong-trinh-trang-thai-cua-khi-li-tuong-trang-32-33-34-ket-noi-tri-thuc-a171366.html — bài túi khí gốc trong SBT Vật lí 12 KNTT bài 11 (100 g NaN₃, 24,0 lít/mol, 48 lít, 30 °C): cùng dạng II.1, số liệu khác; chỉ dùng xác nhận cách làm (n(N₂) từ phương trình, p = nRT/V).
 - Truy vấn đã thử: "đề thi thử tốt nghiệp THPT 2026 Vật lí chuyên Phan Bội Châu Nghệ An lần 1 đáp án lời giải"; "túi khí" "87 g" NaN3 "107,34 kPa" "48 lít"; "Bán kính của đĩa gấp 3 lần bán kính nhỏ nhất của líp" "50,9 km/h" "vẫn phải bơm đến 8 lần"; "Phan Bội Châu" … "máy lọc không khí" "U23 = 24 V" "0,032"; "Thuốc súng có khối lượng riêng" "gấp 100 lần" "30 g/mol" "1000 K"; … lời giải chi tiết "trà đá vỉa hè"; "Cốc bia lạnh để trong không khí" "viên long não" "túi khí" "87 g"; "tự làm một nhiệt kế" "ống thủy tinh thành mỏng".
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+### a) Nguồn
+- **Nguồn đúng đề:** VietJack, "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Chuyên Phan Bội Châu (Nghệ An) lần 1 có đáp án" (28 câu, 50 phút, không ghi mã đề): https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-phan-boi-chau-nghe-an-lan-1-co-dap-an/238189 . Trên trang cả đề chỉ câu 1–8 hiện công khai "Lời giải — Đáp án đúng là X", câu 9–20 hiện "Bạn cần đăng ký gói VIP", câu 21–28 không hiện. Nhưng trang từng câu `https://khoahoc.vietjack.com/question/2441580` … `2441607` hiện công khai "Trả lời: Giải bởi Vietjack" cho câu chính của trang (không khóa VIP) — đủ 28 câu; dòng "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Nghệ An"; 20 trang có link từ trang cả đề, 8 trang cuối là id liền kề, đã kiểm lời câu khớp. (Ghi chú cũ "đáp án cần gói VIP" chỉ đúng với trang cả đề.)
+- **Bằng chứng đúng đề (so với file `.tex`):** I.11 miếng đồng 400 g giảm 2 °C, bảng nhiệt dung riêng (sắt 440, đồng 380, đất 800, thủy tinh 840), phương án 304 / 352 / 3520 / 3040 J; I.13–I.14 sóng dừng AB = 60 cm, 0,05 s; I.15–I.16 R = 12 Ω; II.1 túi khí 87 g NaN₃, 37 °C, 48 lít, 107,34 kPa; II.2 đĩa gấp 3 líp, bánh 30 cm, 2,5 vòng/s, 50,9 km/h, 1,8 atm → 2,4 atm, 0,15V, "8 lần"; II.3 máy lọc không khí, lưới cách 10 cm, 24 V, 0,032 µJ; II.4 oát kế 14,25; 14,23; 14,19… W, 25 g; III.1 hao phí 18,4 %; III.3 a = 0,4 mm, D = 2 m, 0,48 µm, 17 vân; III.5 thuốc súng 1 g/cm³, 100 lần, 30 g/mol, 1000 K; III.6 75 kJ, 23 kJ. Thứ tự 28 câu, thứ tự phương án và ý a–d trùng file (I.3 đã giải mã MathML của nguồn: A 3/(2kT), B (3/2)kT, C (2/3)kT, D 2/(3kT) — trùng file).
+- **II.2b, II.4b (mục D của `kho/KIEM-DAP-AN-V2.md`):** nguồn chấm cả hai Đúng như file — II.2b "năng lượng cơ bắp → chuyển động cho xích … → làm bánh xe quay"; II.4b "bảng công suất P (W) làm tròn đến hàng phần trăm → độ chính xác 0,01 W". Các điểm "thầy xem" khác: I.15 D (25 Hz), II.1c Đ (48 lít), II.3b Đ, II.4c S, III.3 0,60, III.6 52,0 — đều trùng file.
+- **Nguồn đã xét nhưng không đúng đề:** chuvanbien.vn `LOP12_DETHITHUTOTNGHIEPTHPT_CHUYENPHANBOICHAU.pdf` và `lop12_phanboichau_1741773479.pdf` (đề chuyên Phan Bội Châu năm 2024–2025, theo mục cũ; phiên này không mở lại).
+- **Tên miền bị chặn:** không gặp ở đề này (chỉ dùng khoahoc.vietjack.com).
+- **Truy vấn:** không cần truy vấn mới — dùng link VietJack đã ghi ở mục "Nguồn trên mạng".
+- **Mức tin cậy:** đáp án là lời giải của VietJack ("Giải bởi Vietjack"), không phải bảng đáp án chính thức của trường; là nguồn độc lập với file.
+
+### b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | A | https://khoahoc.vietjack.com/question/2441580 | khớp |
+| I.2 | D | D | https://khoahoc.vietjack.com/question/2441581 | khớp |
+| I.3 | B | C (khóa VietJack; phương án C của nguồn = (2/3)kT, cùng thứ tự file) | https://khoahoc.vietjack.com/question/2441582 | khác — khóa nguồn chọn (2/3)kT, lời giải nguồn không hiện công thức (xem mục c) |
+| I.4 | C | C | https://khoahoc.vietjack.com/question/2441583 | khớp |
+| I.5 | A | A | https://khoahoc.vietjack.com/question/2441584 | khớp |
+| I.6 | D | D | https://khoahoc.vietjack.com/question/2441585 | khớp |
+| I.7 | B | B | https://khoahoc.vietjack.com/question/2441586 | khớp |
+| I.8 | A | A | https://khoahoc.vietjack.com/question/2441587 | khớp |
+| I.9 | C | C | https://khoahoc.vietjack.com/question/2441588 | khớp |
+| I.10 | B | B | https://khoahoc.vietjack.com/question/2441589 | khớp |
+| I.11 | A | A | https://khoahoc.vietjack.com/question/2441590 | khớp |
+| I.12 | A | A | https://khoahoc.vietjack.com/question/2441591 | khớp |
+| I.13 | C | C | https://khoahoc.vietjack.com/question/2441592 | khớp |
+| I.14 | A | A | https://khoahoc.vietjack.com/question/2441593 | khớp |
+| I.15 | D | D | https://khoahoc.vietjack.com/question/2441594 | khớp — nguồn: T = 8 ô · 0,5·10⁻² s = 0,04 s |
+| I.16 | A | A | https://khoahoc.vietjack.com/question/2441595 | khớp |
+| I.17 | B | B | https://khoahoc.vietjack.com/question/2441596 | khớp |
+| I.18 | A | A | https://khoahoc.vietjack.com/question/2441597 | khớp |
+| II.1 | Đ S Đ Đ | Đ S Đ Đ | https://khoahoc.vietjack.com/question/2441598 | khớp — nguồn: c n(N₂) = 2 mol → 48 lít; d 107,34 kPa |
+| II.2 | Đ Đ Đ S | Đ Đ Đ S | https://khoahoc.vietjack.com/question/2441599 | khớp — nguồn: b Đ (năng lượng cơ bắp → … làm bánh xe quay); c 14,14 m/s = 50,9 km/h; d N = 4 lần |
+| II.3 | Đ Đ S S | Đ Đ S S | https://khoahoc.vietjack.com/question/2441600 | khớp — nguồn: c E = 240 V/m; d Wđ = 1,04·10⁻⁷ J |
+| II.4 | Đ Đ S Đ | Đ Đ S Đ | https://khoahoc.vietjack.com/question/2441601 | khớp — nguồn: b Đ ("bảng công suất làm tròn đến hàng phần trăm → độ chính xác 0,01 W"); d λ = 341 520 J/kg |
+| III.1 | 1,6 | 1,6 | https://khoahoc.vietjack.com/question/2441602 | khớp |
+| III.2 | 6 | 6 | https://khoahoc.vietjack.com/question/2441603 | khớp |
+| III.3 | 0,60 | 0,60 | https://khoahoc.vietjack.com/question/2441604 | khớp — nguồn ghi 0,60 |
+| III.4 | 22,2 | 22,2 | https://khoahoc.vietjack.com/question/2441605 | khớp |
+| III.5 | 27,7 | 27,7 | https://khoahoc.vietjack.com/question/2441606 | khớp |
+| III.6 | 52,0 | 52,0 | https://khoahoc.vietjack.com/question/2441607 | khớp — nguồn ghi 52,0 |
+
+### c) Câu mạng khác file
+- **I.3** — file B / mạng C / https://khoahoc.vietjack.com/question/2441582 / Phương án của nguồn (MathML) cùng thứ tự file: A 3/(2kT), B (3/2)kT, C (2/3)kT, D 2/(3kT). Nguồn ghi "Đáp án đúng là C", lời giải chỉ có chữ "Động năng trung bình của một phân tử khí:" rồi bỏ trống công thức. SGK Vật lí 12 KNTT bài 12 (quan hệ giữa động năng phân tử và nhiệt độ) viết Eđ = (3/2)kT, tức phương án B như file; khóa nguồn nhiều khả năng nhầm chữ cái. Không phải do bản đề khác số liệu; không phải điểm mục A–D.
+
+### d) Tổng
+Có đáp án mạng 28/28 câu; khớp 27 câu; khác 1 câu (I.3 — khóa nguồn nghi nhầm). Phần II khớp cả 16 ý, kể cả II.2b, II.4b (mục D).

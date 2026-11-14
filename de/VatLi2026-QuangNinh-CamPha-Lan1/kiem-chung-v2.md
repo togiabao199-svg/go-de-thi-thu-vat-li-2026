@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Quang Ninh - THPT Cam Pha - Lan 1.pdf`. 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | — | khớp |
-| I.2 | B | B | — | khớp |
-| I.3 | C | C | — | khớp |
-| I.4 | B | B | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | C | C | — | khớp |
-| I.7 | B | B | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | D | D | — | khớp |
-| I.10 | A | A | — | khớp |
-| I.11 | D | D | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | D | D | — | khớp |
-| I.15 | C | C | — | khớp |
-| I.16 | A | A | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | Đ S Đ Đ | Đ S Đ Đ | — | khớp (c "thầy xem") |
-| II.2 | S Đ S Đ | S Đ S Đ | — | khớp |
-| II.3 | S S S Đ | S S S Đ | — | khớp (c "thầy xem") |
-| II.4 | S Đ Đ S | S Đ Đ S | — | khớp (a, d "thầy xem") |
-| III.1 | 700 | 700 | — | khớp |
-| III.2 | 150 | 150 | — | khớp |
-| III.3 | 8 | 8 | — | khớp |
-| III.4 | 15 | 15 | — | khớp |
-| III.5 | 249 | 249 | — | khớp |
-| III.6 | 14 (nếu phòng 8 × 5 × 4 m) | 14 | — | khớp (KIỂM TRA: đề gốc thiếu hình) |
+| I.1 | A | A | A | khớp |
+| I.2 | B | B | B | khớp |
+| I.3 | C | C | C | khớp |
+| I.4 | B | B | B | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | C | C | D (khóa VietJack; lời giải của nguồn lại ghi "C. sai") | khớp |
+| I.7 | B | B | B | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | D | D | D | khớp |
+| I.10 | A | A | A | khớp |
+| I.11 | D | D | D | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | D | D | D | khớp |
+| I.15 | C | C | C | khớp |
+| I.16 | A | A | A | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | Đ S Đ Đ | Đ S Đ Đ | Đ S Đ Đ | khớp (c "thầy xem") |
+| II.2 | S Đ S Đ | S Đ S Đ | S Đ S Đ | khớp |
+| II.3 | S S S Đ | S S S Đ | S Đ Đ Đ (b, c khác file) | khớp (c "thầy xem") |
+| II.4 | S Đ Đ S | S Đ Đ S | S Đ Đ S | khớp (a, d "thầy xem") |
+| III.1 | 700 | 700 | 700 | khớp |
+| III.2 | 150 | 150 | 150 | khớp |
+| III.3 | 8 | 8 | 8 | khớp |
+| III.4 | 15 | 15 | 15 | khớp |
+| III.5 | 249 | 249 | 249 | khớp |
+| III.6 | 14 (nếu phòng 8 × 5 × 4 m) | 14 | — (VietJack: "Đề bài thiếu hình, thiếu V", không có đáp số) | khớp (KIỂM TRA: đề gốc thiếu hình) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -76,6 +76,7 @@ Giải thích thêm:
 - III.3: ΔT(K) = Δt(°C) (KNTT 12 bài 3). III.4: định luật I nhiệt động lực học, công khí thực hiện khi dãn đẳng áp A = pΔV (KNTT 12 bài 2).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng của chính đề THPT Cẩm Phả lần 1 (2025–2026). Các truy vấn đã thử (WebSearch, 9 truy vấn):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí THPT Cẩm Phả Quảng Ninh lần 1 đáp án lời giải — chỉ ra đề Sở Quảng Ninh và đề chính thức 2026.
 2. "Một căn phòng hở có kích thước như hình vẽ" "điều kiện tiêu chuẩn" "20" "29 g/mol" "Khối lượng không khí đã ra khỏi phòng".
@@ -90,3 +91,55 @@ Không tìm thấy đáp án trên mạng của chính đề THPT Cẩm Phả l�
 Trang bị chặn / không mở (ghi lại, không cố vượt):
 - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_30CAUTRACNGHIEMTRALOINGAN-KHILITUONG.pdf — tên miền chuvanbien.vn ngoài danh sách mạng được phép của phiên; có khả năng chứa câu "căn phòng hở" (III.6) kèm hình kích thước.
 - https://docs.google.com/document/d/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8/export?format=pdf và https://docs.google.com/document/d/1LEI_3e3SCxiItANFCEmIhDVc6Esb0O-5/export?format=pdf — xuất hiện trong kết quả tìm kiếm, chưa mở thử (phiên chính báo docs.google.com bị chặn), chưa rõ có đúng đề hay không.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+### a) Nguồn
+- **Nguồn đúng đề:** VietJack, "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Cẩm Phả (Quảng Ninh) lần 1 có đáp án" (28 câu, 50 phút, không ghi mã đề): https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-cam-pha-quang-ninh-lan-1-co-dap-an/238190 . Trang cả đề hiện công khai "Lời giải — Đáp án đúng là X" cho câu 1–8, câu 9–20 khóa VIP, câu 21–28 không hiện. Đáp án đủ 28 câu đọc ở trang từng câu `https://khoahoc.vietjack.com/question/2441608` … `2441635` (mục "Trả lời: Giải bởi Vietjack" công khai cho câu chính của trang; dòng "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Quảng Ninh"; 20 trang đầu có link từ trang cả đề, 8 trang cuối là id liền kề, đã kiểm lời câu khớp).
+- **Bằng chứng đúng đề (so với file `.tex`):** I.13 cảm biến lốp 2,5 bar – 30 °C → 42 °C, phương án 2,5 / 2,8 / 2,7 / 2,6; I.18 T₁ = 300 K, phương án 600 / 450 / 900 / 1200 K; II.1 nước muối, nhiệt kế 20–110 °C, độ phân giải ±0,1 °C; II.2 xilanh khí hydrogen, Q = 119 J, áp suất phụ p₀/9, "3,6 lít", "39 J"; II.4 "4 m³", "927 K"; III.1 12 g, 4 lít, 7 °C, 1,2 g/lít; III.4 4,98 kJ, 1,23 kJ, 2,5·10⁵ Pa; III.6 nguyên văn "Một căn phòng hở có kích thước như hình vẽ … 1,013·10⁵ Pa … 20 °C … 29 g/mol". Thứ tự 28 câu, thứ tự phương án và ý a–d trùng file. Khác chữ không đổi nghĩa: nguồn ghi "cylinder", "piston", "Hidro", "độ Kenvin" (file đã đổi theo thuật ngữ SGK).
+- **III.6 (mục B của `kho/KIEM-DAP-AN-V2.md`):** trang câu của nguồn (https://khoahoc.vietjack.com/question/2441635) cũng KHÔNG có hình căn phòng (phần đề không có ảnh nào; các ảnh trên trang thuộc câu liên quan). Lời giải nguồn dừng ở Δm = M·(pV/R)·(1/273 − 1/293) kèm ghi chú "(Đề bài thiếu hình, thiếu V)", "Đáp số:" để trống. Vậy bản đề đăng trên mạng cũng mất hình; không tìm được kích thước phòng gốc, 8 × 5 × 4 m của file vẫn chưa xác minh được.
+- **Nguồn đã xét nhưng không đúng đề / không dùng:** chuvanbien.vn `LOP12_30CAUTRACNGHIEMTRALOINGAN-KHILITUONG.pdf` (WebFetch đọc được; tuyển tập 30 câu trả lời ngắn khí lí tưởng, 6 trang; chỉ có bài "căn phòng thể tích 30 m³, 17 °C → 27 °C", không có câu "căn phòng hở … như hình vẽ" — không phải đề này); các trang VietJack "Sở GD&ĐT Quảng Ninh", "Chuyên Hạ Long" trong kết quả tìm kiếm (đề khác).
+- **Tên miền bị chặn:** docs.google.com (WebFetch: ENOTFOUND, ngoài danh sách mạng của phiên) — hai link docs.google ghi ở mục "Nguồn trên mạng" vẫn chưa mở được.
+- **Truy vấn đã thử (WebSearch, 7):** "đề thi thử tốt nghiệp THPT 2026 Vật lí THPT Cẩm Phả Quảng Ninh lần 1 có đáp án"; `site:khoahoc.vietjack.com "Cẩm Phả" vật lý 2025-2026`; "Cảm biến lốp ô tô là thiết bị điện tử được thiết kế để giám sát các thông số bên trong lốp xe"; "bỏ thêm một ít muối vào nước thì nước nóng nhanh hơn" "nhiệt dung riêng của nước muối nhỏ hơn" đề thi thử; "Một căn phòng hở có kích thước như hình vẽ" không khí điều kiện tiêu chuẩn 20 °C ra khỏi phòng; khoahoc.vietjack.com thi-online "Cẩm Phả" Quảng Ninh vật lý lần 1 có đáp án; "căn phòng hở" "kích thước như hình vẽ" "điều kiện tiêu chuẩn" "29 g/mol". Trang VietJack đúng đề không hiện trong kết quả tìm kiếm; tìm được bằng cách thử đường dẫn theo mẫu tên trang của VietJack (curl, HTTP 200).
+- **Mức tin cậy:** đáp án là lời giải của VietJack ("Giải bởi Vietjack"), không phải bảng đáp án chính thức của trường; là nguồn độc lập với file.
+
+### b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | A | https://khoahoc.vietjack.com/question/2441608 | khớp |
+| I.2 | B | B | https://khoahoc.vietjack.com/question/2441609 | khớp |
+| I.3 | C | C | https://khoahoc.vietjack.com/question/2441610 | khớp |
+| I.4 | B | B | https://khoahoc.vietjack.com/question/2441611 | khớp |
+| I.5 | A | A | https://khoahoc.vietjack.com/question/2441612 | khớp |
+| I.6 | C | D (khóa VietJack; lời giải của nguồn lại ghi "C. sai") | https://khoahoc.vietjack.com/question/2441613 | khác — nguồn mâu thuẫn nội bộ (khóa D, lời giải nói C sai) |
+| I.7 | B | B | https://khoahoc.vietjack.com/question/2441614 | khớp |
+| I.8 | D | D | https://khoahoc.vietjack.com/question/2441615 | khớp |
+| I.9 | D | D | https://khoahoc.vietjack.com/question/2441616 | khớp |
+| I.10 | A | A | https://khoahoc.vietjack.com/question/2441617 | khớp |
+| I.11 | D | D | https://khoahoc.vietjack.com/question/2441618 | khớp |
+| I.12 | A | A | https://khoahoc.vietjack.com/question/2441619 | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2441620 | khớp |
+| I.14 | D | D | https://khoahoc.vietjack.com/question/2441621 | khớp |
+| I.15 | C | C | https://khoahoc.vietjack.com/question/2441622 | khớp |
+| I.16 | A | A | https://khoahoc.vietjack.com/question/2441623 | khớp |
+| I.17 | A | A | https://khoahoc.vietjack.com/question/2441624 | khớp |
+| I.18 | A | A | https://khoahoc.vietjack.com/question/2441625 | khớp |
+| II.1 | Đ S Đ Đ | Đ S Đ Đ | https://khoahoc.vietjack.com/question/2441626 | khớp — nguồn lập luận c giống file (nhiệt lượng kế bên nước muối thu nhiều hơn) |
+| II.2 | S Đ S Đ | S Đ S Đ | https://khoahoc.vietjack.com/question/2441627 | khớp |
+| II.3 | S S S Đ | S Đ Đ Đ (b, c khác file) | https://khoahoc.vietjack.com/question/2441628 | khác ý b, c — b, c: cách hiểu khác (xem mục c) |
+| II.4 | S Đ Đ S | S Đ Đ S | https://khoahoc.vietjack.com/question/2441629 | khớp — nguồn cũng chấm a Sai vì "4 ℓ chứ không phải 4 m³" |
+| III.1 | 700 | 700 | https://khoahoc.vietjack.com/question/2441630 | khớp |
+| III.2 | 150 | 150 | https://khoahoc.vietjack.com/question/2441631 | khớp — lời giải nguồn ghi "h = 150 cm" (nhầm đơn vị), đáp án 150 |
+| III.3 | 8 | 8 | https://khoahoc.vietjack.com/question/2441632 | khớp — ô "Đáp án" của nguồn ghi nhầm 150, dòng "Đáp số" ghi 8 |
+| III.4 | 15 | 15 | https://khoahoc.vietjack.com/question/2441633 | khớp |
+| III.5 | 249 | 249 | https://khoahoc.vietjack.com/question/2441634 | khớp |
+| III.6 | 14 | — (VietJack: "Đề bài thiếu hình, thiếu V", không có đáp số) | https://khoahoc.vietjack.com/question/2441635 | nguồn không có đáp số; trang câu không có hình (xem mục a) |
+
+### c) Câu mạng khác file
+- **I.6** — file C / mạng D / https://khoahoc.vietjack.com/question/2441613 / Nguồn mâu thuẫn nội bộ: khóa ghi "Đáp án đúng là D" nhưng lời giải ngay dưới viết "C. sai. Các chất khí chuyển động hỗn loạn và khoảng cách của nó là rất lớn so với kích thước của nó" (tức chọn C như file). Thứ tự phương án của nguồn trùng file. Nhiều khả năng khóa nguồn gõ nhầm chữ cái; không phải điểm mục A–D.
+- **II.3b** — file S / mạng Đ / https://khoahoc.vietjack.com/question/2441628 / Nguồn chấm Đúng, lời giải chỉ nhắc lại mệnh đề ("Kính hiển vi được dùng để quan sát chuyển động của phân tử khói"), tức hiểu "phân tử khói" là hạt khói. File chấm Sai theo nghĩa chặt (kính hiển vi thấy hạt khói, không thấy phân tử). Cách hiểu khác về chữ "phân tử khói"; điểm mới, chưa có trong mục A–D.
+- **II.3c** — file S / mạng Đ / https://khoahoc.vietjack.com/question/2441628 / Nguồn chấm Đúng, lời giải chỉ nhắc lại mệnh đề ("Các hạt khói không có quỹ đạo nên chuyển động của hạt khói là ngẫu nhiên"). Đúng cách hiểu thứ hai đã nêu ở mục Tóm tắt của file này ("nếu người ra đề hiểu 'không có quỹ đạo xác định' thì thành Đúng"); chưa có trong mục A–D của `kho/KIEM-DAP-AN-V2.md`. Nguồn chấm cả II.3 là S Đ Đ Đ, file S S S Đ.
+- (Không tính là khác) **III.6** — file 14 / mạng không có đáp số / https://khoahoc.vietjack.com/question/2441635 / Nguồn xác nhận đề thiếu hình, thiếu thể tích phòng (điểm mục B), không có thêm dữ kiện.
+
+### d) Tổng
+Có đáp án mạng 27/28 câu (III.6 không có); khớp 25 câu; khác 2 câu: I.6 (nguồn mâu thuẫn nội bộ) và II.3 (2 ý b, c — cách hiểu khác). Tính theo ý ở Phần II: 16 ý có đáp án, khác 2 ý. Không câu nào khác do tính toán.

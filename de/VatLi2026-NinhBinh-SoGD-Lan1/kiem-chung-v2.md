@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ninh Binh - So GDDT - Lan 1.pdf`. Giải
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | C | C | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | B | B | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | A | A | — | khớp |
-| I.7 | B | B | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | D | D | — | khớp (thầy xem) |
-| I.10 | A | A | — | khớp |
-| I.11 | A | A | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | B | B | — | khớp |
-| I.14 | D | D | — | khớp |
-| I.15 | A | A | — | khớp |
-| I.16 | B | B | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | D | D | — | khớp |
-| II.1 | Đ S S Đ | Đ S S Đ | — | khớp |
-| II.2 | S Đ Đ S | S Đ Đ S | — | khớp |
-| II.3 | S S S Đ | S S S Đ | — | khớp (thầy xem ý d) |
-| II.4 | S Đ S S | S Đ S S | — | khớp (thầy xem ý a) |
-| III.1 | 1,25 | 1,25 | — | khớp |
-| III.2 | 1,5 | 1,5 | — | khớp |
-| III.3 | 160 | 160 | — | khớp |
-| III.4 | 2,3 | 2,3 | — | khớp |
-| III.5 | 2,42 | 2,42 | 2,42 (bài tương tự, VietJack, chỉ đọc đoạn trích) | khớp |
-| III.6 | 499 | 499 | — | khớp |
+| I.1 | C | C | C | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | B | B | B | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | A | A | A | khớp |
+| I.7 | B | B | B | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | D | D | D | khớp (thầy xem) |
+| I.10 | A | A | A | khớp |
+| I.11 | A | A | A | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | B | B | B | khớp |
+| I.14 | D | D | D | khớp |
+| I.15 | A | A | A | khớp |
+| I.16 | B | B | B | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | D | D | D | khớp |
+| II.1 | Đ S S Đ | Đ S S Đ | Đ S S Đ | khớp |
+| II.2 | S Đ Đ S | S Đ Đ S | S Đ Đ S | khớp |
+| II.3 | S S S Đ | S S S Đ | S S S Đ | khớp (thầy xem ý d) |
+| II.4 | S Đ S S | S Đ S S | S Đ S S | khớp (thầy xem ý a) |
+| III.1 | 1,25 | 1,25 | 1,25 | khớp |
+| III.2 | 1,5 | 1,5 | 1,5 | khớp |
+| III.3 | 160 | 160 | 160 | khớp |
+| III.4 | 2,3 | 2,3 | 2,3 | khớp |
+| III.5 | 2,42 | 2,42 | 2,42 | khớp |
+| III.6 | 499 | 499 | 499 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 Không có câu lệch. File đề không có `% KIỂM TRA`, `% ???`. Ba điểm "thầy xem" (TIEN-DO dòng P06 và mục "Điểm cần thầy xem" của `kiem-chung.md`) đã giải lại lần hai:
@@ -78,6 +78,7 @@ Ghi chú thêm (không phải câu lệch):
 - II.4d (S): khí bị nén (thể tích giảm) thì khí nhận công, không sinh công.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng của chính đề này (chi tiết ở `/tmp/VatLi2026-NinhBinh-SoGD-Lan1/mang.md`).
 
 Truy vấn đã thử (8): "đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Ninh Bình lần 1 đáp án lời giải"; câu ghế nâng hạ ("Tổng khối lượng của mặt ghế và xi lanh là 6 kg" "54 kg" "12 cm"); câu khí cầu ("khí cầu có lỗ hở phía dưới" "28 °C" "51 °C"); "Sở GD&ĐT Ninh Bình khảo sát chất lượng lớp 12 lần 1 năm học 2025-2026 môn Vật lí"; câu phổi ("dung tích của phổi là 2,40 lít" "101,70" "101,01"); câu cốc kim loại ("Để cốc nước ở nơi có nắng và gió"); "Ninh Bình lần 1 2026 Vật lí ghế nâng hạ bằng khí thanh nén đáp án"; câu không khí 29 g/mol tốc độ căn quân phương.
@@ -89,3 +90,51 @@ Trang có thể liên quan nhưng không mở được (tên miền ngoài danh 
 - https://docs.google.com/document/d/1ZJuY_-_rdRplEhKDAqFx8BlhcOP7IPO9/export?format=pdf — xuất hiện trong kết quả tìm kiếm, không rõ nội dung.
 
 Kết quả không đúng đề (bỏ): thuvienphapluat.vn (đáp án Sở Ninh Bình 2026 lần 3, lần 4); chuvanbien.vn (đề khảo sát Sở Ninh Bình năm học 2024–2025).
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+### a) Nguồn
+- **Nguồn đúng đề:** VietJack, "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Ninh Bình có đáp án" (28 câu, 50 phút; tiêu đề KHÔNG ghi lần, không ghi mã đề): https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-ninh-binh-co-dap-an/238185 . Câu 1–8 có đáp án công khai trên trang cả đề; đủ 28 câu đọc ở trang từng câu `https://khoahoc.vietjack.com/question/2441404` … `2441431` (mục "Trả lời: Giải bởi Vietjack" công khai cho câu chính; dòng "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Ninh Bình"; 20 trang có link từ trang cả đề, 8 trang cuối là id liền kề, đã kiểm lời câu khớp).
+- **Bằng chứng đúng đề, đúng Lần 1 (so với file `.tex`):** I.3 khí cầu 28 °C → 51 °C, phương án 45,1 / 7,1 / 82,1 / 7,6 %; I.11 3,3·10⁵ J/kg, 500 g, phương án 165 kJ / 660 kJ / 165 J / 660 J; I.13 năm bước (1)–(5) và bốn phương án sắp xếp; II.3 2 kg nước 30 °C, 200 g đồng 500 °C, "115 °C"; II.4 ghế nâng hạ, mặt ghế + xilanh 6 kg, học sinh 54 kg, hạ 12 cm, S = 30 cm², "20 cm", "2·10⁵ Pa"; III.1 1000 W, 7 phút, 20 → 100 °C; III.2 10 lít hydrogen, 5·10⁶ Pa, 7 °C → 17 °C; III.4 500 W, 165 g (nguồn tính Δm = 65 g); III.5 phổi 2,40 lít, 101,70·10³ / 101,01·10³ Pa; III.6 29 g/mol, 17 °C. Thứ tự 28 câu, phương án và ý a–d trùng file Lần 1 (`VatLi2026-NinhBinh-SoGD-Lan2` là đề khác), nên trang này là đề của file dù tiêu đề không ghi lần.
+- **Điểm "thầy xem":** I.9 nguồn chọn D; II.3d nguồn chấm Đúng (kèm nhận xét lời ý d chưa chuẩn thuật ngữ: "đề chính xác phải là: Miếng đồng truyền nhiệt cho nước"); II.4a nguồn chấm Sai với p = 1,2·10⁵ Pa (có tính áp suất khí quyển, như file) — cả ba trùng file. III.5: mục cũ chỉ có bài tương tự (question/1739216); nay có đáp án đúng đề: 2,42.
+- **Tên miền bị chặn:** vietnamnet.vn (WebFetch: ENOTFOUND, ngoài danh sách mạng của phiên) — trang https://vietnamnet.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-ly-nam-2026-cua-tinh-ninh-binh-kem-dap-an-2518260.html chưa mở được, chưa biết lần mấy. hoatieu.vn (HTTP 403 khi thử ở đề Cụm CM10) và docs.google.com (ENOTFOUND khi thử ở đề Cẩm Phả): không thử lại.
+- **Truy vấn:** không cần WebSearch mới. Trang VietJack tìm bằng cách thử đường dẫn theo mẫu tên trang của VietJack (curl): `…-so-gddt-ninh-binh-lan-1-co-dap-an` (404), `…-so-gddt-ninh-binh-co-dap-an` (200).
+- **Mức tin cậy:** đáp án là lời giải của VietJack ("Giải bởi Vietjack"), không phải bảng đáp án chính thức của Sở; là nguồn độc lập với file.
+
+### b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | C | C | https://khoahoc.vietjack.com/question/2441404 | khớp |
+| I.2 | A | A | https://khoahoc.vietjack.com/question/2441405 | khớp |
+| I.3 | B | B | https://khoahoc.vietjack.com/question/2441406 | khớp — nguồn: 301/324 = 92,9 % → 7,1 % |
+| I.4 | A | A | https://khoahoc.vietjack.com/question/2441407 | khớp |
+| I.5 | C | C | https://khoahoc.vietjack.com/question/2441408 | khớp |
+| I.6 | A | A | https://khoahoc.vietjack.com/question/2441409 | khớp |
+| I.7 | B | B | https://khoahoc.vietjack.com/question/2441410 | khớp |
+| I.8 | C | C | https://khoahoc.vietjack.com/question/2441411 | khớp |
+| I.9 | D | D | https://khoahoc.vietjack.com/question/2441412 | khớp — nguồn chọn D như file |
+| I.10 | A | A | https://khoahoc.vietjack.com/question/2441413 | khớp |
+| I.11 | A | A | https://khoahoc.vietjack.com/question/2441414 | khớp |
+| I.12 | A | A | https://khoahoc.vietjack.com/question/2441415 | khớp |
+| I.13 | B | B | https://khoahoc.vietjack.com/question/2441416 | khớp |
+| I.14 | D | D | https://khoahoc.vietjack.com/question/2441417 | khớp |
+| I.15 | A | A | https://khoahoc.vietjack.com/question/2441418 | khớp |
+| I.16 | B | B | https://khoahoc.vietjack.com/question/2441419 | khớp |
+| I.17 | A | A | https://khoahoc.vietjack.com/question/2441420 | khớp |
+| I.18 | D | D | https://khoahoc.vietjack.com/question/2441421 | khớp |
+| II.1 | Đ S S Đ | Đ S S Đ | https://khoahoc.vietjack.com/question/2441422 | khớp |
+| II.2 | S Đ Đ S | S Đ Đ S | https://khoahoc.vietjack.com/question/2441423 | khớp |
+| II.3 | S S S Đ | S S S Đ | https://khoahoc.vietjack.com/question/2441424 | khớp — nguồn: b t = 34,2 °C; d Đ, kèm nhận xét "Câu d) đề chính xác phải là: Miếng đồng truyền nhiệt cho nước" |
+| II.4 | S Đ S S | S Đ S S | https://khoahoc.vietjack.com/question/2441425 | khớp — nguồn: a p = 10⁵ + 6·10/(30·10⁻⁴) = 1,2·10⁵ Pa (tính p₀ như file); b chiều dài lúc ngồi 8 cm → lúc trống 20 cm; c 3·10⁵ Pa |
+| III.1 | 1,25 | 1,25 | https://khoahoc.vietjack.com/question/2441426 | khớp |
+| III.2 | 1,5 | 1,5 | https://khoahoc.vietjack.com/question/2441427 | khớp — nguồn: 1,482 g |
+| III.3 | 160 | 160 | https://khoahoc.vietjack.com/question/2441428 | khớp |
+| III.4 | 2,3 | 2,3 | https://khoahoc.vietjack.com/question/2441429 | khớp |
+| III.5 | 2,42 | 2,42 | https://khoahoc.vietjack.com/question/2441430 | khớp — nguồn: 101,70·2,40/101,01 ≈ 2,42 |
+| III.6 | 499 | 499 | https://khoahoc.vietjack.com/question/2441431 | khớp — nguồn: 499,3 m/s |
+
+### c) Câu mạng khác file
+Không có.
+
+### d) Tổng
+Có đáp án mạng 28/28 câu; khớp 28 câu; khác 0 câu. Phần II khớp cả 16 ý.

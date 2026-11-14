@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hai Phong - Cum chuyen mon so 10 - Lan 1
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | A | A | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | C | C | — | khớp |
-| I.5 | D | D | — | khớp |
-| I.6 | A | A | — | khớp |
-| I.7 | C | C | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | C | C | — | khớp |
-| I.10 | A | A | — | khớp |
-| I.11 | B | B | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | A | A | — | khớp |
-| I.15 | B | B | — | khớp |
-| I.16 | A | A | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | C | C | — | khớp |
-| II.1 | Đ S Đ S | Đ S Đ S | — | khớp |
-| II.2 | Đ S S Đ | Đ S S Đ | — — S Đ (đoạn trích VietJack) | khớp |
-| II.3 | Đ Đ S S | Đ Đ S S | — | khớp (b, c: thầy xem) |
-| II.4 | S Đ Đ S | S Đ Đ S | — — Đ — (đoạn trích VietJack) | khớp (a, b: thầy xem) |
-| III.1 | 6,07 | 6,07 | — | khớp |
-| III.2 | 64 | 64 | — | khớp |
-| III.3 | 1519 | 1519 | 1519 (đoạn trích VietJack) | khớp |
-| III.4 | 2874 | 2874 | — | khớp |
-| III.5 | 33,4 | 33,4 | — | khớp |
-| III.6 | 5268 | 5268 | — | khớp |
+| I.1 | A | A | A | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | C | C | C | khớp |
+| I.5 | D | D | D | khớp |
+| I.6 | A | A | A | khớp |
+| I.7 | C | C | C | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | C | C | C | khớp |
+| I.10 | A | A | A | khớp |
+| I.11 | B | B | B | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | A | A | A | khớp |
+| I.15 | B | B | B | khớp |
+| I.16 | A | A | A | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | C | C | C | khớp |
+| II.1 | Đ S Đ S | Đ S Đ S | Đ S Đ S | khớp |
+| II.2 | Đ S S Đ | Đ S S Đ | Đ S S Đ | khớp |
+| II.3 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (b, c: thầy xem) |
+| II.4 | S Đ Đ S | S Đ Đ S | S Đ Đ S | khớp (a, b: thầy xem) |
+| III.1 | 6,07 | 6,07 | 6,07 | khớp |
+| III.2 | 64 | 64 | 64 | khớp |
+| III.3 | 1519 | 1519 | 1519 | khớp |
+| III.4 | 2874 | 2874 | 2874 | khớp |
+| III.5 | 33,4 | 33,4 | 33,4 | khớp |
+| III.6 | 5268 | 5268 | 5268 | khớp |
 
 File đề không có dòng `% KIỂM TRA` / `% ???` nào. TIEN-DO (dòng lô P03 và mục "Chờ thầy quyết") nêu: "thầy xem: II.4a,b phụ thuộc chiều quấn nam châm điện trên hình gốc; II.3b,c chiều lực từ suy từ hình phối cảnh".
 
@@ -83,6 +83,7 @@ Giải thích thêm:
 - II.4a: quy tắc nắm tay phải cho ống dây (SGK 12 KNTT bài 14); II.4b: quy tắc bàn tay trái (bài 15); II.4c, d: cổ góp (hai bán khuyên) đổi chiều dòng điện trong khung sau mỗi nửa vòng, không đổi chiều dòng qua nam châm điện; d còn sai ở "do hiện tượng cảm ứng điện từ".
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-cum-chuyen-mon-so-10-hai-phong-co-dap-an — VietJack, đúng đề (tiêu đề khớp; hai trang câu lẻ khớp lời và số liệu II.2, III.3). Tên miền bị chặn trong phiên (ENOTFOUND), không mở được; chỉ có đoạn trích của công cụ tìm kiếm:
   - https://khoahoc.vietjack.com/question/2442513/mot-binh-tich-ap-duoc-su-dung-trong-may-loc-nuoc-gom-khoang-bong-chua — II.2c: 120 kPa → Sai; II.2d: 42,9 % → Đúng.
   - https://khoahoc.vietjack.com/question/2442518/mot-khung-day-dan-phang-co-dien-tich-s-100-cm2-gom-200-vong-day-quay-deu-voi-toc-do-2400-vong-phut-t — III.3: y = 1519.
@@ -90,3 +91,52 @@ Giải thích thêm:
 - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-lien-truong-hai-phong-247552 — Hoatieu, mô tả là đề của Cụm chuyên môn số 10 Hải Phòng lần 1 kèm 24 mã đề Word và bảng đáp án (đăng 09/03/2026). Tên miền bị chặn (ENOTFOUND), không mở được. Đây là nguồn nên mở tay để chốt II.4a,b, II.3b,c và I.6.
 - Mức tin cậy phần lấy được: thấp – trung bình (qua đoạn trích tóm tắt, chưa đọc trang gốc); cả bốn điểm lấy được đều khớp file và Fable.
 - Truy vấn đã thử (8): tên cụm + "lần 1" + "đáp án"; câu đặc trưng II.2 (bình tích áp, 70 kPa, 42,9 %; 168 kPa); câu đặc trưng II.4 (hai nam châm điện, đầu C cực nam; "nhìn từ cổ góp vào cuộn dây"); câu I.1 (chuông điện, búa gõ); câu III.3 ("lần thứ 2026", y/120); câu II.3 (cân lực từ, "số chỉ của cân sẽ giảm"). Chi tiết ở `/tmp/VatLi2026-HaiPhong-CumCM10-Lan1/mang.md`.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+### a) Nguồn
+- **Nguồn đúng đề:** VietJack, "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Cụm chuyên môn số 10 (Hải Phòng) có đáp án" (28 câu, 50 phút; tiêu đề không ghi lần, không ghi mã đề): https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-cum-chuyen-mon-so-10-hai-phong-co-dap-an/238253 . Câu 1–8: đáp án công khai ngay trên trang cả đề ("Lời giải — Đáp án đúng là X"). Câu 9–28 (trên trang cả đề khóa VIP hoặc không hiện): đọc ở trang từng câu `https://khoahoc.vietjack.com/question/2442502` … `2442521` (mục "Trả lời: Giải bởi Vietjack" công khai cho câu chính; dòng "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hải Phòng"; 12 trang có link từ trang cả đề, 8 trang cuối là id liền kề, đã kiểm lời câu khớp).
+- **Bằng chứng đúng đề (so với file `.tex`):** I.6 nguyên văn "Mười độ chia trong thang Celsius (10 °C) bằng 1/n …", phương án 10 / 1000 / 100 / 27,3; I.14 2,2·10⁵ Pa, 0,5 m³, 6,6·10⁻²⁴ kg, v² = 400², phương án 31,25·10²² / 42,23·10²⁴ / 31,25·10²⁴ / 16,52·10²²; I.18 2 lít, 1,5 atm, 27 °C → 0,6 lít, 9 atm; II.2 bình tích áp 12 lít, 70 kPa, 10 lít / 5 lít, "168 kPa", "8 lít", "42,9 %"; II.3 cân lực từ, dây 10 cm, "0,2·10⁻³ T"; II.4 mô hình động cơ hai nam châm điện, đầu C / D, "nhìn từ cổ góp vào cuộn dây"; III.3 100 cm², 200 vòng, 2400 vòng/phút, lần thứ 2026, y/120. Thứ tự 28 câu, thứ tự phương án và ý a–d trùng file.
+- **I.6 (mục C của `kho/KIEM-DAP-AN-V2.md`):** bản đề trên nguồn cũng ghi "Mười độ chia (10 °C)" và nguồn chọn A (n = 10), như file. Không phải lỗi gõ của file; đáp án A khớp lời đề in.
+- **II.4a, b; II.3b, c ("thầy xem", phụ thuộc đọc hình):** nguồn chấm II.4 a Sai, b Đúng (nắm tay phải: C cực bắc, D cực nam; khung quay ngược chiều kim đồng hồ) và II.3 b Đúng, c Sai — trùng file và lượt giải độc lập của Fable.
+- **Nguồn đã xét / bị chặn:** hoatieu.vn (https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-lien-truong-hai-phong-247552, bảng đáp án chính thức 24 mã đề) — WebFetch bị từ chối (HTTP 403), không đọc được; không thử cách khác.
+- **Truy vấn:** không cần truy vấn mới — dùng link VietJack đã ghi ở mục "Nguồn trên mạng"; trang này cũng hiện trong kết quả WebSearch `khoahoc.vietjack.com thi-online "Cẩm Phả" Quảng Ninh vật lý lần 1 có đáp án` (14/11/2026).
+- **Mức tin cậy:** đáp án là lời giải của VietJack ("Giải bởi Vietjack"), không phải bảng đáp án chính thức của cụm; là nguồn độc lập với file. Bảng chính thức (hoatieu) vẫn chưa đối chiếu được.
+
+### b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | A | trang cả đề (câu 1/28) | khớp |
+| I.2 | A | A | trang cả đề (câu 2/28) | khớp |
+| I.3 | D | D | trang cả đề (câu 3/28) | khớp |
+| I.4 | C | C | trang cả đề (câu 4/28) | khớp |
+| I.5 | D | D | trang cả đề (câu 5/28) | khớp |
+| I.6 | A | A | trang cả đề (câu 6/28) | khớp — nguồn cũng in "Mười độ chia … (10 °C)", lời giải n = 100/10 = 10 |
+| I.7 | C | C | trang cả đề (câu 7/28) | khớp |
+| I.8 | D | D | trang cả đề (câu 8/28) | khớp |
+| I.9 | C | C | https://khoahoc.vietjack.com/question/2442502 | khớp |
+| I.10 | A | A | https://khoahoc.vietjack.com/question/2442503 | khớp — nguồn: xẻ rãnh làm dòng Foucault giảm → dao động lâu hơn |
+| I.11 | B | B | https://khoahoc.vietjack.com/question/2442504 | khớp |
+| I.12 | A | A | https://khoahoc.vietjack.com/question/2442505 | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2442506 | khớp |
+| I.14 | A | A | https://khoahoc.vietjack.com/question/2442507 | khớp |
+| I.15 | B | B | https://khoahoc.vietjack.com/question/2442508 | khớp |
+| I.16 | A | A | https://khoahoc.vietjack.com/question/2442509 | khớp |
+| I.17 | A | A | https://khoahoc.vietjack.com/question/2442510 | khớp |
+| I.18 | C | C | https://khoahoc.vietjack.com/question/2442511 | khớp |
+| II.1 | Đ S Đ S | Đ S Đ S | https://khoahoc.vietjack.com/question/2442512 | khớp |
+| II.2 | Đ S S Đ | Đ S S Đ | https://khoahoc.vietjack.com/question/2442513 | khớp — nguồn: c 120 kPa; d 4/7 = 57,1 % → thoát 42,9 % |
+| II.3 | Đ Đ S S | Đ Đ S S | https://khoahoc.vietjack.com/question/2442514 | khớp — nguồn: b Đ (bàn tay trái), c S (định luật III Newton, cân tăng), d S (B = 20·10⁻³ T) |
+| II.4 | S Đ Đ S | S Đ Đ S | https://khoahoc.vietjack.com/question/2442515 | khớp — nguồn: a S (nắm tay phải: C cực bắc, D cực nam), b Đ (ngược chiều kim đồng hồ) |
+| III.1 | 6,07 | 6,07 | https://khoahoc.vietjack.com/question/2442516 | khớp |
+| III.2 | 64 | 64 | https://khoahoc.vietjack.com/question/2442517 | khớp — nguồn: T ≥ 337,21 K → 64,21 °C |
+| III.3 | 1519 | 1519 | https://khoahoc.vietjack.com/question/2442518 | khớp |
+| III.4 | 2874 | 2874 | https://khoahoc.vietjack.com/question/2442519 | khớp |
+| III.5 | 33,4 | 33,4 | https://khoahoc.vietjack.com/question/2442520 | khớp |
+| III.6 | 5268 | 5268 | https://khoahoc.vietjack.com/question/2442521 | khớp |
+
+### c) Câu mạng khác file
+Không có.
+
+### d) Tổng
+Có đáp án mạng 28/28 câu; khớp 28 câu; khác 0 câu. Phần II khớp cả 16 ý, kể cả các ý "thầy xem" II.3b, c, II.4a, b; I.6 khớp (A).
