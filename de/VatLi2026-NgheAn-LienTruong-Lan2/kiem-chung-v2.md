@@ -80,6 +80,8 @@ Ghi thêm (không phải câu lệch):
 - II.4a (S): thứ tự đúng c → a → b → e → d (đổ nước và cân, nối mạch, bật nguồn, khuấy và đọc số liệu, tắt nguồn).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng (của chính đề này). Truy vấn đã thử (WebSearch, 14/11/2026):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí liên trường Nghệ An lần 2 đáp án lời giải
 2. "bong bóng cá" "quạt điều hòa" "0,7 g/s" "8,9" nhiệt độ phòng giảm đúng sai vật lí
@@ -94,3 +96,65 @@ Không tìm thấy đáp án trên mạng (của chính đề này). Truy vấn 
 Trang liên quan:
 - https://khoahoc.vietjack.com/question/2335645/theo-thong-ke-vung-tay-nguyen-va-nam-trung-bo-co-so-gio-nang-trong-nam-trung-binh-khoang-2300-gio-fplax — VietJack, câu hỏi cùng ngữ liệu máy nước nóng năng lượng mặt trời (III.1–III.2). Không mở được: tên miền khoahoc.vietjack.com bị chặn trong phiên, không cố vượt; chưa biết là đúng đề này hay đề khác dùng chung ngữ liệu (kiem-chung.md ghi đề Bắc Ninh Cụm HH-NSL-TD1 Lần 2 có câu cùng số liệu).
 - Các kết quả còn lại (hoatieu.vn, chuvanbien.vn, tuyensinhso.vn, thuvienphapluat.vn) là đề của đơn vị khác (Sở Nghệ An lần 1, liên trường Bắc Ninh, Tuyên Quang…) hoặc môn khác (Tiếng Anh liên trường Nghệ An): không dùng.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này.
+
+**(a) Nguồn**
+
+- Nguồn đúng đề có đáp án: không có.
+- Nguồn đã xét nhưng KHÔNG đúng đề:
+  - [khoahoc.vietjack.com/question/2335645](https://khoahoc.vietjack.com/question/2335645/theo-thong-ke-vung-tay-nguyen-va-nam-trung-bo-co-so-gio-nang-trong-nam-trung-binh-khoang-2300-gio-fplax) (link phiên trước; curl đọc được, HTTP 200): trang ghi "Câu hỏi trong đề: Đề thi thử tốt nghiệp THPT môn Vật lí **Sở Quảng Nam** có đáp án". Cùng ngữ liệu máy nước nóng năng lượng mặt trời (2300 giờ, 5,3 kWh/m², 2000 mm × 1250 mm, 25 °C, 45 %) nhưng là một câu Đúng/Sai 4 ý (70 lít nước, 3,5 giờ nắng, "60,5 °C"), không phải hai câu trả lời ngắn III.1, III.2 của đề này (50 lít, 3 giờ) → không dùng làm đáp án. Ghi thêm (chỉ để thầy tham khảo cách hiểu III.2, không phải đáp án của đề này): lời giải công khai của VietJack tính công suất bức xạ lên bộ thu theo cùng cách hiểu với file — năng lượng 5,3 kWh/m² mỗi ngày, cả năm 365 ngày chia cho 2300 giờ nắng: P = 365·2·1,25·5,3/2300 ≈ 2103 W, rồi Q = 0,45·P·t.
+  - [khoahoc.vietjack.com — Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường Nghệ An đợt 2](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-nghe-an-dot-2-co-dap-an) (curl đọc được): đề khác — câu 1 "đại lượng đặc trưng cho mức độ bền vững của hạt nhân", câu 2 chiều dòng điện cảm ứng, câu 4 tương tác từ, câu 19 (II.1) "sự chuyển thể…", câu 20 lưu lượng kế điện từ; đề này chỉ có phần nhiệt và khí (câu 1 "vật được làm nóng sao cho thể tích và hình dạng không đổi", II.1 bong bóng cá). Có lẽ "đợt 2" trên VietJack là một lần thi khác của liên trường.
+  - [khoahoc.vietjack.com — … Liên trường THPT Nghệ An mã đề 3114](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-thpt-nghe-an-ma-de-3114-co-dap-an) (curl đọc được): đề khác — câu 1 "hà hơi vào gương", câu 2 đơn vị cảm ứng từ, câu 3 tương tác từ.
+  - Theo kết quả tìm kiếm: hoatieu "Đề thi thử tốt nghiệp THPT năm 2026 môn Vật lí sở Nghệ An (Lần 1)" (lần 1, 24 mã 3101–3124 — đề khác); chuvanbien `Lien_Truong_Nghe_An_Lan_2.pdf` thuộc thư mục 2022–2023 (năm khác); VietJack "(2023) Đề thi thử Vật Lý THPT Liên Trường, Nghệ An" (năm khác).
+- Tên miền bị chặn (thử trong phiên bổ sung này, ở đề Hưng Yên): hoatieu.vn (WebFetch HTTP 403), docs.google.com (ENOTFOUND). Không thử cách khác.
+- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 9 truy vấn của phiên trước:
+  1. site:khoahoc.vietjack.com liên trường Nghệ An lần 2 vật lí 2026
+  2. "Một vật được làm nóng sao cho thể tích và hình dạng của vật không thay đổi thì nội năng của vật"
+  3. site:khoahoc.vietjack.com "Bong bóng cá là một phần nội quan của con cá"
+  4. "quạt điều hòa" "0,7 g/s" "2,26" nhiệt hóa hơi riêng "949,2" vật lí
+  5. "60 PSI" "280 PSI" máy lạnh "4:1" nhiệt độ khí gas trước khi vào máy nén vật lí 12
+  6. khoahoc.vietjack.com Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường Nghệ An đợt 1
+  7. "oát kế" "0,145 kg" "16,2 W" nhiệt dung riêng của nước đúng sai "11 664" OR "11664"
+  8. site:khoahoc.vietjack.com "quạt điều hòa" "tấm làm mát" bay hơi nhiệt độ phòng giảm
+
+**(b) Bảng 28 câu**
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | — | — | không có đáp án mạng |
+| I.2 | A | — | — | không có đáp án mạng |
+| I.3 | A | — | — | không có đáp án mạng |
+| I.4 | A | — | — | không có đáp án mạng |
+| I.5 | C | — | — | không có đáp án mạng |
+| I.6 | B | — | — | không có đáp án mạng |
+| I.7 | D | — | — | không có đáp án mạng |
+| I.8 | A | — | — | không có đáp án mạng |
+| I.9 | B | — | — | không có đáp án mạng |
+| I.10 | D | — | — | không có đáp án mạng |
+| I.11 | D | — | — | không có đáp án mạng |
+| I.12 | C | — | — | không có đáp án mạng |
+| I.13 | D | — | — | không có đáp án mạng |
+| I.14 | B | — | — | không có đáp án mạng |
+| I.15 | B | — | — | không có đáp án mạng |
+| I.16 | D | — | — | không có đáp án mạng |
+| I.17 | B | — | — | không có đáp án mạng |
+| I.18 | A | — | — | không có đáp án mạng |
+| II.1 | S Đ Đ S | — | — | không có đáp án mạng |
+| II.2 | Đ S Đ S | — | — | không có đáp án mạng |
+| II.3 | Đ Đ Đ S | — | — | không có đáp án mạng |
+| II.4 | S Đ Đ Đ | — | — | không có đáp án mạng |
+| III.1 | 5250 | — | — | không có đáp án mạng |
+| III.2 | 73,7 | — | — | không có đáp án mạng |
+| III.3 | 962 | — | — | không có đáp án mạng |
+| III.4 | 1458 | — | — | không có đáp án mạng |
+| III.5 | 6,1 | — | — | không có đáp án mạng |
+| III.6 | 12 | — | — | không có đáp án mạng |
+
+**(c) Câu mạng khác file**
+
+Không có (không có đáp án mạng để so). Các điểm cần đối chiếu — mục B: I.8 (file sửa (2/2)kT thành (3/2)kT); mục C: II.2d (9,84 °C / đề in 8,9 °C), II.4c — vẫn chưa đối chiếu được trên mạng.
+
+**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0.

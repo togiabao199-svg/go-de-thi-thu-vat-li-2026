@@ -85,6 +85,7 @@ Cách xử lí của file (sửa thành ¹³¹₅₃I, a Sai với 77 neutron, c
 - Các câu tính toán (I.7, I.15–I.18, II.1b, d, II.2b–d, II.4c, d, III.1–III.6) đã khớp, phép tính ở `kiem-chung.md` và ở bảng trên.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng (không có nguồn nào đọc được đáp án từng câu).
 
 Truy vấn đã thử (WebSearch, sau khi ghi xong lời giải độc lập):
@@ -100,3 +101,56 @@ Trang liên quan:
 - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-luong-the-vinh-ha-noi-lan-1-co-dap-an/164073 — VietJack, "Đề thi thử tốt nghiệp THPT môn Vật lí THPT Lương Thế Vinh - Hà Nội lần 1 có đáp án". KHÔNG mở được: máy chủ khoahoc.vietjack.com nằm ngoài danh sách mạng được phép của phiên (WebFetch báo không phân giải được tên miền, curl qua proxy bị từ chối 403); chưa xác nhận được có đúng đề 2026 này không; theo mô tả kết quả tìm kiếm thì đáp án nằm sau gói VIP. Muốn đối chiếu ý II.2a thì cần cho phép tên miền này trong thiết lập mạng của phiên hoặc thầy mở trang trực tiếp.
 - https://sieugioi.com/120-de-thi-thu-tot-nghiep-thpt-2026-mon-vat-li-so-gddt-va-truong-chuyen/ — trang danh mục của nguồn file PDF, không có đáp án đọc được.
 - https://dethi.edu.vn/de-thi-thu-thpt-quoc-gia-mon-vat-ly-lan-1-ma-de-001-truong-thpt-luong-the-vinh-co-dap-an-18578/ — đề "THPT Quốc gia" dạng cũ (mã đề 001), không phải đề này.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung: chỉ đọc đáp án công khai trên mạng, không giải lại đề, không sửa đáp án.
+
+### (a) Nguồn
+**Không tìm thấy đáp án trên mạng** cho đúng đề này.
+
+Nguồn đã xét nhưng **KHÔNG đúng đề** (đã mở được, so lời câu):
+- https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-luong-the-vinh-ha-noi-lan-1-co-dap-an/164073 — VietJack "Đề thi thử tốt nghiệp THPT môn Vật lí THPT Lương Thế Vinh - Hà Nội lần 1 có đáp án": đề **40 câu** (60 phút, cấu trúc cũ), câu 1 "Đường sức từ của từ trường đều là các đường", câu 2 "Khi nhiệt độ một vật tăng 1 °C…", câu 3 "đơn vị của nhiệt hóa hơi riêng", câu 4 "Dòng điện Foucault không xuất hiện…", câu 5 "từ thông giảm đều từ 0,2 Wb xuống 0,1 Wb trong 0,02 s"…; không câu nào trong 20 câu hiện trên trang trùng file (không có súng bắn tốc độ, iodine-131, nồi áp suất, chai sữa, phong vũ biểu…). Đây là đề khác (id câu 1739916–1739957, đăng từ năm trước). Đúng như phiên chính nghi.
+- https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-truong-luong-the-vinh-ha-noi-co-dap-an — VietJack "… trường Lương Thế Vinh - Hà Nội có đáp án": đề 28 câu nhưng khác nội dung (câu 1 "Từ trường là dạng vật chất…", câu 2 đồ thị (p, T), câu 3 "Nhiệt độ sôi của nước biển…", câu 15 "Thả 12 viên nước đá…"); không trùng câu nào của file.
+
+Tên miền bị chặn: không thử thêm tên miền ngoài khoahoc.vietjack.com (không tìm được trang nào khác đăng đúng đề để thử).
+
+Truy vấn đã thử (WebSearch): `site:khoahoc.vietjack.com "Lương Thế Vinh" vật lý 2025-2026 lần 1` (ra hai trang VietJack trên, đều sai đề); `"Súng bắn tốc độ của cảnh sát giao thông phát ra" vật lí`; `"chai sữa hoàn toàn giống nhau" "bình cách nhiệt" "bắt đầu nhỏ hơn 30" vật lí 2026`; `site:khoahoc.vietjack.com "iodine-131" "30,0 mCi" xuất viện` (chỉ ra trang câu https://khoahoc.vietjack.com/question/2482415/... — đã mở: câu Đúng/Sai môn Toán về hàm m(t) của I-131 trong "24 Đề ôn thi Tốt nghiệp THPT Toán (về đích) năm 2026", không phải đề này); `đề thi thử tốt nghiệp 2026 vật lí THPT Lương Thế Vinh Hà Nội lần 2 đáp án "bình phun nước tưới cây"` (thử tên "lần 2" vì `kho/kiem-ke.md` ghi đề trùng file "Lương Thế Vinh – Lần 2"); `site:khoahoc.vietjack.com "101 vạch" nhiệt kế thủy ngân mờ vạch chia`. Không truy vấn nào ra trang đăng đúng đề.
+
+### (b) Bảng đối chiếu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | D | — | — | không có đáp án mạng |
+| I.2 | C | — | — | không có đáp án mạng |
+| I.3 | A | — | — | không có đáp án mạng |
+| I.4 | B | — | — | không có đáp án mạng |
+| I.5 | D | — | — | không có đáp án mạng |
+| I.6 | A | — | — | không có đáp án mạng |
+| I.7 | D | — | — | không có đáp án mạng |
+| I.8 | B | — | — | không có đáp án mạng |
+| I.9 | C | — | — | không có đáp án mạng |
+| I.10 | D | — | — | không có đáp án mạng |
+| I.11 | D | — | — | không có đáp án mạng |
+| I.12 | B | — | — | không có đáp án mạng |
+| I.13 | A | — | — | không có đáp án mạng |
+| I.14 | B | — | — | không có đáp án mạng |
+| I.15 | A | — | — | không có đáp án mạng |
+| I.16 | C | — | — | không có đáp án mạng |
+| I.17 | D | — | — | không có đáp án mạng |
+| I.18 | A | — | — | không có đáp án mạng |
+| II.1 | S Đ S Đ | — | — | không có đáp án mạng |
+| II.2 | S Đ S S | — | — | không có đáp án mạng |
+| II.3 | Đ Đ Đ S | — | — | không có đáp án mạng |
+| II.4 | Đ S Đ S | — | — | không có đáp án mạng |
+| III.1 | 2,42 | — | — | không có đáp án mạng |
+| III.2 | 200 | — | — | không có đáp án mạng |
+| III.3 | 752 | — | — | không có đáp án mạng |
+| III.4 | 2,7 | — | — | không có đáp án mạng |
+| III.5 | 20 | — | — | không có đáp án mạng |
+| III.6 | 5 | — | — | không có đáp án mạng |
+
+### (c) Câu mạng khác file
+Không có (không có đáp án mạng). Điểm mục B (II.2a: Z của I-131 là 51 hay 53) chưa đối chiếu được trên mạng.
+
+### (d) Tổng
+0/28 câu có đáp án mạng; 0 khớp, 0 khác.

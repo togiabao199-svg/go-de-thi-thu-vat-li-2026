@@ -75,6 +75,70 @@ Các điểm khác đã soát lại, không có vấn đề: I.4 (mũi tên quy 
 - II.4a Đ: T(K) = t(°C) + 273 = 25 + 273 = 298 K.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng. Truy vấn đã thử (WebSearch): (1) đề thi thử tốt nghiệp THPT 2026 Vật lí Nguyễn Khuyến Lê Thánh Tông lần 1 đáp án lời giải; (2) "ấm điện có thông số như hình 1 để đun 1,2 lít nước ở nhiệt độ phòng" "hiệu suất làm nóng nước là 92%"; (3) "chuông cửa đơn giản" "lõi sắt non" "đầu Q là cực nam" "thanh nhôm đàn hồi"; (4) "ấm điện" "1850 W khi nước chưa sôi" "500 W khi nước sôi" "1,2 lít nước" 1,8 giờ; (5) "Nguyễn Khuyến" "Lê Thánh Tông" đề thi thử Vật lí 2026 lần 1 "bình tích áp" "chuông cửa" "khối sắt A"; (6) "sợi dây dẫn điện đồng chất" "một chiếc cân" "số chỉ của cân thay đổi 4,0 g" "98 mT"; (7) vietjack "ấm điện có thông số như hình 1" "vỏ ấm làm bằng inox".
 
 Kết quả tìm kiếm cho thấy câu II.1 (cân – nam châm, 98 mT) trùng lời với một câu trong đề kiểm tra học kì 1 2024–2025 Trường Hoa Lư (Ninh Bình) đăng trên chuvanbien.vn và một câu hỏi trên khoahoc.vietjack.com (question/2061691); câu II.2 (chuông cửa) có trong đề kiểm tra thường xuyên khối 12 Nguyễn Khuyến 2025–2026 trên chuvanbien.vn. Cả hai trang đều bị mạng của phiên chặn (chuvanbien.vn: ENOTFOUND / proxy 403; khoahoc.vietjack.com: ENOTFOUND), không mở được nên không lấy được đáp án nào; không cố vượt. Muốn đối chiếu tiếp cần cho phép hai tên miền này trong thiết lập mạng của phiên.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này; chỉ tìm được lời câu của II.1, II.2 (không kèm đáp án).
+
+**(a) Nguồn**
+
+- Nguồn đúng đề có đáp án: không có.
+- Nguồn có lời câu khớp, KHÔNG có đáp án: [chuvanbien.vn — "50 câu trắc nghiệm đúng sai – chuyên đề từ trường, trích từ đề trường – sở"](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) (PDF 14 trang, tạo 24/11/2025; đọc được bằng WebFetch, trích chữ bằng pdftotext). Câu 4 của tuyển tập trùng nguyên văn II.1 (S = 3,5·10⁻⁹ m², L = 72,0 cm, R = 1,7·10⁻⁸·L/S, E = 12,0 V, r = 0,5 Ω, đoạn dây 10,0 cm, cân thay đổi 4,0 g, g = 9,8 m/s², bốn ý a–d, ý d "98 mT"); câu 5 trùng nguyên văn II.2 (chuông cửa "đinh đoong", lõi sắt non, đầu Q cực nam, lõi thép, thanh nhôm đàn hồi, đảo cực nguồn). Cả hai câu ghi nguồn **"Đề kiểm tra thường xuyên 2025-2026 trường Nguyễn Khuyến – Lê Thánh Tông HCM"** (gợi ý: đề "Lần 1" này có thể là đề kiểm tra thường xuyên đó). Tuyển tập không có đáp án, nên không điền được cột "Mạng". Chỉ so được 2/4 câu Phần II và chỉ phần lời câu, chưa đủ tiêu chí "đúng đề" (3–4 câu) để coi là nguồn đáp án.
+  - Điểm đáng ghi cho `% KIỂM TRA` II.1b: tuyển tập in ý b là "cường độ dòng điện chạy trong mạch điện là **3 A**" (đề gốc PDF in "3 V"), ủng hộ cách sửa "3 V" → "3 A" của file. Tuyển tập in "đào hai cực" ở II.2d (lỗi chữ của "đảo").
+- Nguồn đã xét nhưng KHÔNG đúng đề:
+  - [khoahoc.vietjack.com/question/2061691](https://khoahoc.vietjack.com/question/2061691/) (link phiên trước; curl đọc được): "Câu hỏi trong đề: Đề thi thử tốt nghiệp THPT môn Vật lí ĐGNL – Đại học Sư Phạm Hà Nội" — cùng bộ thiết bị nhưng số liệu khác (đoạn dây giữa hai cực 12,0 cm, cân thay đổi 6,0 g) và là câu tự luận; không dùng.
+  - [chuvanbien.vn `lop12_nguyenkhuyen_hcm_1741764165.pdf`](https://chuvanbien.vn/images/upload_file/2025/lop12_nguyenkhuyen_hcm_1741764165.pdf): "Đề đánh giá cuối học kì khối 12, năm học 2024 – 2025, THPT Nguyễn Khuyến" (câu 1 nhiệt kế 263 K – 383 K) — đề khác.
+  - [chuvanbien.vn `de-kiem-tra-thuong-xuyen-khoi-12-nguyen-khuyen_1759895888.pdf`](https://chuvanbien.vn/images/upload_file/2025/de-kiem-tra-thuong-xuyen-khoi-12-nguyen-khuyen_1759895888.pdf): "Đề kiểm tra thường xuyên, THCS – THPT Nguyễn Khuyến, mã đề 1202" (tạo 08/10/2025; câu 1 "thuyết động học phân tử… không có tính chất nào") — đề khác, chỉ phần nhiệt và khí.
+  - [chuvanbien.vn `LOP12_DEKTTHUONGXUYEN_NGUYENKHUYEN_2.pdf`](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKTTHUONGXUYEN_NGUYENKHUYEN_2.pdf): "Đề kiểm tra thường xuyên năm học 2025-2026, THCS – THPT Nguyễn Khuyến" (tạo 15/10/2025; câu 1 "phát biểu sai về chất lỏng") — đề khác.
+  - Theo đoạn trích tìm kiếm (không mở): chuvanbien `LOP12_DETHITHUTONGHIEP_NGUYENKHUYEN-LETHANHTONG2.pdf` (có câu máy phát điện xoay chiều, không rõ năm), `nguyen-khuyen---le-thanh-tong---hcm_1730513831.pdf` (năm học 2024 – 2025) — không phải đề này.
+- Tên miền bị chặn: vietjack.com (trang danh mục đề thi thử, WebFetch ENOTFOUND); hoatieu.vn (HTTP 403), docs.google.com (ENOTFOUND) — hai tên miền này thử ở đề Hưng Yên cùng phiên. chuvanbien.vn: WebFetch đọc được trong phiên này (phiên trước bị chặn). Không thử cách khác.
+- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 7 truy vấn của phiên trước:
+  1. site:khoahoc.vietjack.com Nguyễn Khuyến Lê Thánh Tông vật lí 2026 lần 1
+  2. "chuông cửa đơn giản" "đinh đoong" "lõi sắt non" vật lí 12 đúng sai Nguyễn Khuyến
+  3. chuvanbien.vn Nguyễn Khuyến Lê Thánh Tông thi thử tốt nghiệp 2026 vật lí lần 1 "bình tích áp"
+  4. "Nguyễn Khuyến" vật lí 12 2025-2026 "chuông cửa" "bình tích áp" "ấm điện" đề kiểm tra
+  5. "Nguyễn Khuyến" "Lê Thánh Tông" vật lí 2025-2026 kiểm tra thường xuyên đáp án "chuông cửa"
+
+**(b) Bảng 28 câu**
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | C | — | — | không có đáp án mạng |
+| I.2 | A | — | — | không có đáp án mạng |
+| I.3 | D | — | — | không có đáp án mạng |
+| I.4 | C | — | — | không có đáp án mạng |
+| I.5 | C | — | — | không có đáp án mạng |
+| I.6 | A | — | — | không có đáp án mạng |
+| I.7 | A | — | — | không có đáp án mạng |
+| I.8 | D | — | — | không có đáp án mạng |
+| I.9 | D | — | — | không có đáp án mạng |
+| I.10 | C | — | — | không có đáp án mạng |
+| I.11 | C | — | — | không có đáp án mạng |
+| I.12 | C | — | — | không có đáp án mạng |
+| I.13 | A | — | — | không có đáp án mạng |
+| I.14 | D | — | — | không có đáp án mạng |
+| I.15 | A | — | — | không có đáp án mạng |
+| I.16 | B | — | — | không có đáp án mạng |
+| I.17 | B | — | — | không có đáp án mạng |
+| I.18 | C | — | — | không có đáp án mạng |
+| II.1 | Đ Đ S S | — (chỉ có lời câu, không có đáp án) | [chuvanbien, tuyển tập Đ/S từ trường, câu 4](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) | không so được; lời câu và số liệu khớp, ý b in "3 A" |
+| II.2 | Đ Đ S S | — (chỉ có lời câu, không có đáp án) | [chuvanbien, tuyển tập Đ/S từ trường, câu 5](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_40CAUTRACNGHIEMDUNGSAI-TUTRUONG.pdf) | không so được; lời câu khớp |
+| II.3 | Đ S Đ Đ | — | — | không có đáp án mạng |
+| II.4 | Đ S S S | — | — | không có đáp án mạng |
+| III.1 | 121 | — | — | không có đáp án mạng |
+| III.2 | 0,85 | — | — | không có đáp án mạng |
+| III.3 | 46,7 | — | — | không có đáp án mạng |
+| III.4 | 281 | — | — | không có đáp án mạng |
+| III.5 | 1,9 | — | — | không có đáp án mạng |
+| III.6 | 0,3 | — | — | không có đáp án mạng |
+
+**(c) Câu mạng khác file**
+
+Không có (không có đáp án mạng để so). Các điểm cần đối chiếu — mục C: II.4c (85 % / 92 %), II.4d (1,67 giờ / 1,8 giờ) — vẫn chưa đối chiếu được trên mạng. II.1b (`% KIỂM TRA`): chưa có đáp án mạng, nhưng lời câu trong tuyển tập chuvanbien in "3 A" (xem mục a).
+
+**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0 (2 câu II.1, II.2 có lời câu khớp, không có đáp án).

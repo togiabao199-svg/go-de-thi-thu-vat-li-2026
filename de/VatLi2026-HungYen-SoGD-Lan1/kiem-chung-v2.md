@@ -79,6 +79,8 @@ Giải thích thêm:
 Các câu tính toán còn lại (I.1, I.4, I.6, II.3c,d, II.4c,d, III.1–III.6) khớp cả phép tính lẫn kết quả với lời giải trong file; đã tính lại bằng Python (`/tmp/VatLi2026-HungYen-SoGD-Lan1/tinh.py`). I.1 đọc lưới ảnh gốc 300 dpi: (1) V = 4 ô, p = 1 ô; (2) V = 4, p = 4; (3) V = 2, p = 4. I.6 xem ảnh gốc 600 dpi: Hình 2 có mũi tên đứng hướng lên tại 4T₀ và mũi tên trên đoạn xiên hướng về (T₀, p₀).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng. Đã thử 8 truy vấn WebSearch (chi tiết ở `/tmp/VatLi2026-HungYen-SoGD-Lan1/mang.md`):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Hưng Yên lần 1 đáp án lời giải
 2. "Một bếp điện có công suất" "cấp nhiệt cho một ấm nhôm có khối lượng" "từ thời điểm 5 phút đến thời điểm 8 phút bếp bị mất điện"
@@ -95,3 +97,65 @@ Trang có thể liên quan nhưng tên miền bị chặn trong phiên (không m
 - https://docs.google.com/document/d/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8/export?format=pdf — hiện ở truy vấn 3 và 5 (có thể chứa câu xilanh hai pit-tông / chu trình 1 mol).
 
 Kết quả gần nhưng không phải đề này: loigiaihay bài tập 319624 (bếp 1500 W, ấm nhôm, số liệu khác); đề KSCL Bắc Ninh (dây nung 10 W, cân điện tử); đề thi thử Sở Thái Bình 2025 (đo nhiệt nóng chảy riêng, 288 J/g).
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này.
+
+**(a) Nguồn**
+
+- Nguồn đúng đề có đáp án: không có.
+- Nguồn đã xét nhưng KHÔNG dùng được:
+  - [hoatieu.vn — Đề thi thử tốt nghiệp THPT 2026 môn Vật lí Hưng Yên lần 2](https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-hung-yen-232316): theo đoạn trích tìm kiếm, trang chính là đề lần 2 (mã 0201, 0226), phần mô tả có nhắc "48 mã đề thi thử lần 1 năm 2026" kèm đáp án trong file tải về. WebFetch bị từ chối (HTTP 403) → **bị chặn**; không kiểm được lời câu, không lấy được đáp án.
+  - [docs.google.com …/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8](https://docs.google.com/document/d/11LbwpfP_ongZ2CZQwzYR9dRy133UfBE8/export?format=pdf): hiện ở cả truy vấn câu II.2 (ấm nhôm, mất điện) lẫn câu III.2 (hai pit-tông, 1 mol khí) nên có thể là đề này; WebFetch báo tên miền nằm ngoài mạng cho phép (ENOTFOUND) → **bị chặn**.
+  - [khoahoc.vietjack.com — Đề thi thử tốt nghiệp THPT môn Vật lí THPT Phù Cừ – Hưng Yên](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-phu-cu-hung-yen-co-dap-an): đọc được (curl, HTTP 200) nhưng là đề khác: câu 1 "xilanh động cơ 0,7 atm, nén thể tích giảm 5 lần, áp suất 8 atm", câu 2 "70 % bề mặt Trái Đất được bao phủ bởi nước" — không có trong đề này.
+  - Theo kết quả tìm kiếm: VietJack chỉ có đề Toán, Tiếng Anh "Sở Hưng Yên lần 1", không có Vật lí; news.laodong.vn đăng đề Vật lí Sở Hưng Yên **lần 2** (đề khác); hoatieu "Đề khảo sát chất lượng Vật lí 12 chuyên Hưng Yên 2026" là đề trường chuyên (đề khác).
+- Tên miền bị chặn: hoatieu.vn (WebFetch HTTP 403), docs.google.com (WebFetch ENOTFOUND). Không thử cách khác.
+- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 8 truy vấn của phiên trước:
+  1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Hưng Yên lần 1 đáp án
+  2. site:khoahoc.vietjack.com "Hưng Yên" vật lí 2026 lần 1 thi thử
+  3. "bếp bị mất điện" "ấm nhôm" "khối lượng m1 = 200 g" vật lí thời điểm t3 đồ thị
+  4. "Giữa hai pit-tông nằm ngang có 1 mol khí lí tưởng" "10 cm" "4 kg" "4 cm" làm nóng khí
+  5. site:khoahoc.vietjack.com "máy làm nóng nước có dung tích 30 lít" 2500 W
+  6. "pit-tông cách nhiệt nặng 500 g" "24 cm" "25,6 cm" đúng sai
+  7. đáp án đề thi thử Vật lí 2026 Hưng Yên lần 1 48 mã đề tuyensinh247 vietjack
+  8. "nhiệt lượng kế có nắp kín và đáy có lỗ hở" "dây nung công suất" 12 W cân điện tử 40 g 60 g
+
+**(b) Bảng 28 câu**
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | — | — | không có đáp án mạng |
+| I.2 | C | — | — | không có đáp án mạng |
+| I.3 | D | — | — | không có đáp án mạng |
+| I.4 | A | — | — | không có đáp án mạng |
+| I.5 | A | — | — | không có đáp án mạng |
+| I.6 | A | — | — | không có đáp án mạng |
+| I.7 | D | — | — | không có đáp án mạng |
+| I.8 | D | — | — | không có đáp án mạng |
+| I.9 | C | — | — | không có đáp án mạng |
+| I.10 | D | — | — | không có đáp án mạng |
+| I.11 | D | — | — | không có đáp án mạng |
+| I.12 | D | — | — | không có đáp án mạng |
+| I.13 | B | — | — | không có đáp án mạng |
+| I.14 | D | — | — | không có đáp án mạng |
+| I.15 | B | — | — | không có đáp án mạng |
+| I.16 | A | — | — | không có đáp án mạng |
+| I.17 | C | — | — | không có đáp án mạng |
+| I.18 | A | — | — | không có đáp án mạng |
+| II.1 | Đ S S Đ | — | — | không có đáp án mạng |
+| II.2 | Đ Đ S S | — | — | không có đáp án mạng |
+| II.3 | S Đ Đ Đ | — | — | không có đáp án mạng |
+| II.4 | Đ Đ S Đ | — | — | không có đáp án mạng |
+| III.1 | 50,2 | — | — | không có đáp án mạng |
+| III.2 | 0,67 | — | — | không có đáp án mạng |
+| III.3 | 2,16 | — | — | không có đáp án mạng |
+| III.4 | 150 | — | — | không có đáp án mạng |
+| III.5 | 85,8 | — | — | không có đáp án mạng |
+| III.6 | 1,33 | — | — | không có đáp án mạng |
+
+**(c) Câu mạng khác file**
+
+Không có (không có đáp án mạng để so). Các điểm cần đối chiếu — mục B: II.2 (file sửa P = 12 kW thành 1,2 kW), mục D: II.1c, II.1d — vẫn chưa đối chiếu được trên mạng.
+
+**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0.

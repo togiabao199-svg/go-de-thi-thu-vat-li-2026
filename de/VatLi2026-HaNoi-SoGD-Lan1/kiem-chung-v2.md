@@ -82,6 +82,8 @@ Giải thích thêm:
 - II.4 Đ Đ S S: 1→2 đẳng áp (đường kéo dài qua O, định luật Charles, KNTT 12 bài 10); 2→3 đẳng tích, T giảm ⇒ p giảm; 3→1 đẳng nhiệt nén: ΔU = 0, A > 0 ⇒ Q < 0 (toả nhiệt); nội năng là hàm trạng thái ⇒ về trạng thái đầu thì không đổi.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng của đúng đề này. Truy vấn đã thử (WebSearch, 14/11/2026):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Hà Nội lần 1 đáp án "Z là vùng không gian tồn tại một điện trường đều và một từ trường đều"
 2. đáp án đề khảo sát chất lượng lớp 12 môn Vật lí Sở GD&ĐT Hà Nội 2026 "đường sức từ luôn là những đường cong khép kín" "Điện tích đứng yên không sinh ra từ trường"
@@ -97,3 +99,62 @@ Kết quả chỉ có đề Vật lí của tỉnh khác và đề khảo sát H
 - https://docs.google.com/document/d/11MaQbdS3zItZGVWOSHV0mjgpuDutdqCC/export?format=pdf (truy vấn 7, chưa rõ nội dung)
 - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_KHAOSATCHATLUONGGIUAKI2_SOHANOI.pdf (theo trích đoạn là đề khảo sát giữa kì 2 của Sở Hà Nội — đề khác)
 - https://loigiaihay.com/ly-thuyet-tu-truong-vat-li-12-ket-noi-tri-thuc-a169177.html (lý thuyết bài 14 Từ trường, định tra câu chữ SGK cho I.17 — không mở được; câu "khép kín hoặc vô hạn ở hai đầu" ghi theo trí nhớ về SGK, thầy đối chiếu sách khi quyết I.17)
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ tìm và đọc đáp án trên mạng (không giải lại, không sửa đáp án). Kết quả: **không tìm thấy đáp án trên mạng** của chính đề này.
+
+**(a) Nguồn**
+
+- Nguồn đúng đề có đáp án: không có.
+- Nguồn đã xét nhưng KHÔNG đúng đề / không dùng được:
+  - [khoahoc.vietjack.com — Đề thi thử tốt nghiệp THPT môn Vật lí Sở Hà Nội có đáp án](https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-so-ha-noi-co-dap-an) (curl đọc được, HTTP 200): đề khác — câu 1 "đồ thị nào không mô tả quá trình đẳng áp", câu 3 từ thông qua khung lớn nhất, câu 8 sóng điện từ, câu 9 truyền tải điện năng, câu 10 máy biến áp; đề này câu 1 "theo định luật Boyle, áp suất tỉ lệ thuận với nghịch đảo của thể tích", không có phần dòng điện xoay chiều.
+  - Theo kết quả tìm kiếm: hoatieu "Đáp án đề khảo sát liên trường môn Vật lí 12 sở Hà Nội 2025" (năm 2025; hoatieu bị chặn nên không kiểm); thuvienphapluat chỉ có bài đáp án khảo sát lớp 12 Hà Nội 2026 các môn Địa, Sinh, Văn, Anh, Sử, không có Vật lí; các trang VietJack Hà Nội khác (Lương Thế Vinh, Sóc Sơn, Xuân Phương, Nguyễn Thị Minh Khai, ĐGNL ĐHSP) là đề trường, không phải đề Sở.
+  - [docs.google.com …/1GrVroUIN5XOBc7_hLMESAPP748fEZSPM](https://docs.google.com/document/d/1GrVroUIN5XOBc7_hLMESAPP748fEZSPM/export?format=pdf) (hiện ở truy vấn câu III.1) và ba link docs.google của phiên trước: tên miền bị chặn (ENOTFOUND), không mở được.
+- Tên miền bị chặn (thử trong phiên bổ sung này, ở đề Hưng Yên): hoatieu.vn (WebFetch HTTP 403), docs.google.com (ENOTFOUND). Không thử cách khác.
+- Truy vấn đã thử (WebSearch, chế độ standard), ngoài 7 truy vấn của phiên trước:
+  1. site:khoahoc.vietjack.com Sở Hà Nội vật lí 2026 thi thử tốt nghiệp
+  2. "Khi tìm hiểu về sự biến đổi nội năng của một lượng khí xác định" giả thuyết xilanh cảm biến nhiệt độ
+  3. đáp án đề khảo sát môn Vật lí lớp 12 Sở Hà Nội 2026 chi tiết
+  4. thuvienphapluat đáp án đề khảo sát Vật lý 12 Hà Nội 2026 mã đề
+  5. "125 vòng" "98,0" "0,105 s" ống dây đổi chiều cảm ứng từ suất điện động cảm ứng trung bình
+  6. khoahoc.vietjack.com "Vật lý 2025-2026" Sở GD Hà Nội khảo sát có đáp án
+
+**(b) Bảng 28 câu**
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | — | — | không có đáp án mạng |
+| I.2 | B | — | — | không có đáp án mạng |
+| I.3 | D | — | — | không có đáp án mạng |
+| I.4 | A | — | — | không có đáp án mạng |
+| I.5 | B | — | — | không có đáp án mạng |
+| I.6 | C | — | — | không có đáp án mạng |
+| I.7 | D | — | — | không có đáp án mạng |
+| I.8 | C | — | — | không có đáp án mạng |
+| I.9 | D | — | — | không có đáp án mạng |
+| I.10 | D | — | — | không có đáp án mạng |
+| I.11 | A | — | — | không có đáp án mạng |
+| I.12 | C | — | — | không có đáp án mạng |
+| I.13 | B | — | — | không có đáp án mạng |
+| I.14 | A | — | — | không có đáp án mạng |
+| I.15 | D | — | — | không có đáp án mạng |
+| I.16 | D | — | — | không có đáp án mạng |
+| I.17 | A | — | — | không có đáp án mạng |
+| I.18 | B | — | — | không có đáp án mạng |
+| II.1 | Đ Đ S Đ | — | — | không có đáp án mạng |
+| II.2 | Đ S Đ S | — | — | không có đáp án mạng |
+| II.3 | S S Đ Đ | — | — | không có đáp án mạng |
+| II.4 | Đ Đ S S | — | — | không có đáp án mạng |
+| III.1 | 3,5 | — | — | không có đáp án mạng |
+| III.2 | 1,46 | — | — | không có đáp án mạng |
+| III.3 | 32 | — | — | không có đáp án mạng |
+| III.4 | 69,2 | — | — | không có đáp án mạng |
+| III.5 | 5,6 | — | — | không có đáp án mạng |
+| III.6 | 1,16 | — | — | không có đáp án mạng |
+
+**(c) Câu mạng khác file**
+
+Không có (không có đáp án mạng để so). Điểm cần đối chiếu — mục D: II.2b ("cùng chuyển động") — vẫn chưa đối chiếu được trên mạng.
+
+**(d) Tổng:** 0/28 câu có đáp án mạng; khớp 0; khác 0.
