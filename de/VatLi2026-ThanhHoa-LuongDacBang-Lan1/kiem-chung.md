@@ -52,3 +52,23 @@
 - I.13: vẽ đúng tỉ lệ thật (A ở −17,8 °C, đường thẳng cắt trục F tại 32 °F; hai số này không ghi trên hình như bản gốc).
 - III.4: giữ chữ trên lốp (350 kPa là dữ kiện đề; 51 PSI, 615 kg, 1356 LBS như ảnh gốc, không trùng đáp số).
 - Macro riêng của đề `\LDBphieu` (bộ phễu – máy đun – cốc của I.16) khai báo trong file đề.
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ lại cả 7 hình thực tiễn (các câu `% giuhinh`) theo ảnh gốc 300 dpi; nội dung vật lí, nhãn, số liệu giữ như bản trước. Sơ đồ, đồ thị (I.2, I.6, I.7, I.13, I.14, II.2, II.3) giữ nguyên.
+
+- **I.8** (bếp từ): vẽ lại theo đúng bố cục ảnh gốc — khối nước trong suốt có bọt và các vạch nhiệt đỏ, đáy nồi nóng đỏ ở giữa với 8 vòng xoáy dòng Foucault, cuộn dây phẳng dạng xoắn ốc màu cam nối nguồn AC, ba vòng từ trường quanh dây, mặt bếp nét đứt, 4 chú thích có đường gióng gấp khúc; hình phải: bếp từ mặt kính có sọc phản quang, hai nút vàng, nồi inox hai quai có nước và bọt.
+- **I.16** (phễu nước đá): macro `\LDBphieu` vẽ lại — giá đỡ (đế, trụ, thanh ngang, khớp nối), phễu thủy tinh có cuống, viên nước đá bo góc, hai má kẹp, máy đun nhúng 4 lỗ có dây điện, cốc có vành loe và nước gạch ngang (`\LDBcocmo`); cân điện tử có đĩa cân, màn hình số bảy đoạn 97,0 g / 12,0 g, ba nút (`\LDBcan`).
+- **II.1** (bình cầu – áp kế): bếp nhiệt có mặt đen, hai núm răng cưa, hai nút, chân đế; cốc vành loe chứa nước; bình cầu cổ ngắn có nút, ống dẫn gấp khúc tới áp kế mặt tròn (vạch chia, kim, trụ, đế); nhiệt kế cột đỏ bầu dài.
+- **II.4** (đun cốc nước trên kiềng): tấm lót, giá đỡ đế chữ nhật nhìn xiên, khớp nối có ốc tai hồng và hai chốt, tay kẹp hai má bọc cao su đỏ giữ nhiệt kế, cốc có mỏ chứa nước, lưới tản nhiệt có đĩa sứ, kiềng ba chân, đèn khí có ống cao su. Giữ như bản trước: vẽ đèn khí theo ảnh gốc (lời đề nói bếp điện 470 W), không vẽ ngọn lửa. Hai minipage đổi thành 0,64 / 0,34 `\linewidth` để hình lớn hơn.
+- **III.1** (đầu cắt laze): đầu cắt bằng đồng thau nhiều tầng (nắp, vành có lỗ ốc, thân, vòng nhôm, vòng dưới có núm vặn hai bên và núm tròn, thân dưới, vòi phun đồng đỏ), ống dẫn và giá kẹp bên trái, tia lửa cắt và ánh phản chiếu, tấm thép có các đường cắt cong, nền tối chuyển sáng xanh xám bên trái.
+- **III.4** (hông lốp xe): các dải đồng tâm của lốp (gai lốp, dải chữ TEMPERATURE A, dải gân dọc, hai gờ nổi, hông lốp có chữ dập nổi), mép lốp, vành hợp kim tô chuyển sáng có hốc và nan hoa; hai elip đỏ và chữ "Áp suất lốp tối đa" như ảnh gốc. Số trên lốp giữ như bản trước (350 kPa là dữ kiện đề).
+- **III.6** (máy ICD): thân người, cổ, vai; động mạch đỏ, tĩnh mạch xanh hai bên cổ và dưới đòn; tim hai phần (tâm nhĩ có tiểu nhĩ, tâm thất có hai buồng); hai dây điện cực trắng từ bộ tạo xung qua tĩnh mạch vào tim; bộ tạo xung có đầu nối trắng; ba chú thích.
+
+Chỉnh kèm để dàn trang ĐẠT: II.2 giảm đơn vị trục tung của đồ thị từ 1,5 cm xuống 1,38 cm (nội dung đồ thị không đổi); II.1 vẽ ở cỡ 5,2 × 4,7 cm.
+
+Macro, màu riêng khai báo trong file đề: `\LDBphieu`, `\LDBcocmo`, `\LDBvienda`, `\LDBcan`, `\LDBvom`, `\LDBtru`, `\LDBp`; kiểu tô `LDBvang`, `LDBbac`, `LDBdongdo`; màu `LDBnuoc`, `LDBnuocnhat`, `LDBbot`, `LDBxoay`, `LDBcam`, `LDBday`, `LDBnen`, `LDBda`, `LDBtim`.
+
+Hình chưa ưng: III.1 và III.4 là ảnh chụp nên bản vẽ chỉ đạt mức minh họa (đủ bộ phận, đúng bố cục, chưa có chất liệu như ảnh); III.4 chữ trên lốp cỡ `\footnotesize` nên to hơn ảnh gốc, vành xe sáng hơn ảnh.
+
+Kết quả: bản đề 8 trang (ĐẠT), bản lời giải 11 trang.
