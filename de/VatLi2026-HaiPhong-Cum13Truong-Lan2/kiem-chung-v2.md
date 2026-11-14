@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hai Phong - Cum 13 truong - Lan 2.pdf`. 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | C | C | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | B | B | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | C | C | — | khớp |
-| I.7 | B | B | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | B | B | — | khớp |
-| I.10 | A | A | — | khớp |
-| I.11 | C | C | — | khớp |
-| I.12 | B | B | — | khớp |
-| I.13 | C | C | — | khớp |
-| I.14 | C | C | — | khớp |
-| I.15 | C | C | — | khớp |
-| I.16 | A | A | — | khớp |
-| I.17 | B | B | — | khớp (KIỂM TRA: đề mơ hồ mỗi dây / tổng hai dây) |
-| I.18 | B | B | — | khớp |
-| II.1 | S Đ Đ Đ | S Đ Đ Đ | — | khớp |
-| II.2 | Đ S S Đ | Đ S S Đ | — | khớp |
-| II.3 | Đ Đ Đ S | Đ Đ Đ S | — | khớp |
-| II.4 | Đ Đ S S | Đ Đ S S | — | khớp (thầy xem: cách hiểu r, R) |
-| III.1 | 16,7 | 16,7 | — | khớp (thầy xem: "cách nhiệt") |
-| III.2 | 80 | 80 | — | khớp |
-| III.3 | 100 | 100 | — | khớp |
-| III.4 | 1,79 | 1,79 | — | khớp |
-| III.5 | 775 | 775 | — | khớp |
-| III.6 | 6,25 | 6,25 | — | khớp |
+| I.1 | C | C | C | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | B | B | B | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | C | C | C | khớp |
+| I.7 | B | B | B | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | B | B | B | khớp |
+| I.10 | A | A | A | khớp |
+| I.11 | C | C | C | khớp |
+| I.12 | B | B | B | khớp |
+| I.13 | C | C | C | khớp |
+| I.14 | C | C | C | khớp |
+| I.15 | C | C | C | khớp |
+| I.16 | A | A | A | khớp |
+| I.17 | B | B | B | khớp (KIỂM TRA: đề mơ hồ mỗi dây / tổng hai dây) |
+| I.18 | B | B | B | khớp |
+| II.1 | S Đ Đ Đ | S Đ Đ Đ | S Đ Đ Đ | khớp |
+| II.2 | Đ S S Đ | Đ S S Đ | Đ S Đ Đ | khớp |
+| II.3 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp |
+| II.4 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (thầy xem: cách hiểu r, R) |
+| III.1 | 16,7 | 16,7 | 16,7 | khớp (thầy xem: "cách nhiệt") |
+| III.2 | 80 | 80 | 80 | khớp |
+| III.3 | 100 | 100 | 100 | khớp |
+| III.4 | 1,79 | 1,79 | 1,79 | khớp |
+| III.5 | 775 | 775 | 775 | khớp |
+| III.6 | 6,25 | 6,25 | 6,25 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -75,6 +75,8 @@ Giải thích thêm (giải lại lần hai cho các điểm trên):
 - II.4a (Đ): định luật Lenz + quy tắc bàn tay phải (SGK 12 KNTT bài 16): từ thông hướng vào tăng → dòng cảm ứng ngược chiều kim đồng hồ → qua R từ P đến M.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng cho đúng đề này. Các truy vấn đã thử (WebSearch, 14/11/2026):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí cụm 13 trường THPT Hải Phòng lần 2 đáp án
 2. "máy khử rung tim (ICD)" "vòng dây diện tích 20" "Suất điện động cảm ứng trong ICD" đáp án
@@ -90,3 +92,58 @@ Kết quả gần nhất, KHÔNG phải đề này (không dùng làm đáp án)
 - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-hai-phong-231340 — đề Vật lí lần 2 của Sở GD&ĐT Hải Phòng (mã 0201–0208), không phải Cụm 13 trường; không mở được trang (tên miền hoatieu.vn nằm ngoài danh sách mạng cho phép của phiên), không cố vượt.
 - https://khoahoc.vietjack.com/question/1738977/d-khi-hoc-sinh-ngoi-tren-ghe-ap-suat-cua-khi-trong-xi-lanh-la-2105-pa và https://khoahoc.vietjack.com/question/1738976/c-khi-ghe-de-trong-cot-khi-trong-xi-lanh-dai-20-cm — bài "ghế thợ cắt tóc" bản khác số liệu (tiết diện 30 cm², hạ 12 cm; kết quả 1,2·10⁵ Pa, 3·10⁵ Pa, 20 cm): cùng cách giải với câu II.2 (p = p₀ + mg/S, định luật Boyle), chỉ xác nhận phương pháp.
 - 2048.vn, khoahoc.vietjack.com chỉ có đề Tiếng Anh của Cụm 13 trường THPT Hải Phòng, không có môn Vật lí.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Chỉ đối chiếu, không giải lại, không sửa file đề. Đọc bằng `curl` phần công khai của khoahoc.vietjack.com (không đăng nhập, không vượt nội dung VIP), mỗi lần tải cách nhau 1,5 s.
+
+### (a) Nguồn
+- **Nguồn đúng đề**: VietJack — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Cụm 13 trường THPT Hải Phòng lần 2 có đáp án" ([c13-de]; 28 câu, không ghi mã đề). Trang từng câu có mã 2442522–2442549 (câu 1 → 28, đúng thứ tự file), dòng "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hải Phòng !!", ngày đăng 26–29/04/2026.
+  - Bằng chứng khớp (lời câu, số liệu, thứ tự phương án và thứ tự ý trùng file): I.2 (máy khử rung tim ICD, 20 cm², 2,0 ms; 1,0 / 1,5 / 2,0 / 5,0 mV), I.5 (8·10⁵ J, 4,2·10⁵ J; 1,22 / 0,42 / 0,38 / 0,80 MJ), I.13 (tan 43° / tan 28°; 0,75 / 1,25 / 1,75 / 0,8), I.17 (MN 50 cm, 100 g, B = 0,2 T, 10 A; 1 / 0,7 / 0,5 / 1,4 N), II.1 (1,5 lít, 20 °C, ấm nhôm 600 g, 35 phút, 20 %; 1 223 040 J; 776,53 W; 1 630 720 J), II.2 (ghế thợ cắt tóc 6 kg, 50 cm², 54 kg, hạ 6 cm, "coi nhiệt độ của khí trong xilanh không đổi"), II.4 (l = 0,4 m, MN sang trái v, PQ sang phải 2v; 0,12 A; 0,24 μC; 0,072 W), III.1 (xilanh "cách nhiệt", 20 cm, 1,5 bar → 2,0 bar), III.6 (Ax, Qy, 0,50 T, 0,10 kg, 0,40 m, 0,25 Ω; giữ nguyên chữ gốc "đạt được bằng nhiêu m/s").
+  - Câu 1–8: đáp án đọc trên trang cả đề (công khai, "Đáp án đúng là X"); câu 9 trở đi trên trang cả đề bị khóa VIP nên đọc ở trang từng câu ("Trả lời: Giải bởi Vietjack"); 8 câu cuối (mã 2442542–2442549) không có link trên trang đề, mở theo mã liền kề, đã kiểm dòng "Câu hỏi trong đề" và lời câu.
+  - Lưu ý: đáp án trên VietJack là lời giải của VietJack ("Giải bởi Vietjack"), trang không nói là đáp án chính thức của cụm trường.
+- Nguồn đã xét nhưng không đúng đề: hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-hai-phong-231340 (theo tiêu đề / đoạn trích tìm kiếm: đề Sở GD&ĐT Hải Phòng lần 2, mã 0201–0208 — không phải Cụm 13; không mở); VietJack "Cụm chuyên môn số 10 (Hải Phòng)" (cụm khác; không mở); 2048.vn chỉ có đề Tiếng Anh của Cụm 13 trường.
+- Tên miền bị chặn: không gặp (chỉ dùng khoahoc.vietjack.com; không dùng WebFetch).
+- Truy vấn WebSearch đã thử (phiên này): "Cụm 13 trường THPT Hải Phòng lần 2" Vật lý 2025-2026 đáp án (không trả về trang VietJack của đề; trang đề tìm thấy qua danh sách "đề liên quan" trên VietJack); cộng 9 truy vấn của phiên trước (mục "Nguồn trên mạng").
+
+### (b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | C | C | [trang đề (câu 1)][c13-de] | khớp |
+| I.2 | A | A | [trang đề (câu 2)][c13-de] | khớp |
+| I.3 | B | B | [trang đề (câu 3)][c13-de] | khớp |
+| I.4 | A | A | [trang đề (câu 4)][c13-de] | khớp |
+| I.5 | C | C | [trang đề (câu 5)][c13-de] | khớp |
+| I.6 | C | C | [trang đề (câu 6)][c13-de] | khớp |
+| I.7 | B | B | [trang đề (câu 7)][c13-de] | khớp |
+| I.8 | C | C | [trang đề (câu 8)][c13-de] | khớp |
+| I.9 | B | B | [vj 2442530](https://khoahoc.vietjack.com/question/2442530) | khớp |
+| I.10 | A | A | [vj 2442531](https://khoahoc.vietjack.com/question/2442531) | khớp |
+| I.11 | C | C | [vj 2442532](https://khoahoc.vietjack.com/question/2442532) | khớp |
+| I.12 | B | B | [vj 2442533](https://khoahoc.vietjack.com/question/2442533) | khớp |
+| I.13 | C | C | [vj 2442534](https://khoahoc.vietjack.com/question/2442534) | khớp |
+| I.14 | C | C | [vj 2442535](https://khoahoc.vietjack.com/question/2442535) | khớp |
+| I.15 | C | C | [vj 2442536](https://khoahoc.vietjack.com/question/2442536) | khớp |
+| I.16 | A | A | [vj 2442537](https://khoahoc.vietjack.com/question/2442537) | khớp |
+| I.17 | B | B | [vj 2442538](https://khoahoc.vietjack.com/question/2442538) | khớp (mạng: T = 0,707 N mỗi dây; có ghi chú "nếu hỏi tổng 2 dây thì 1,4 N" — mục D) |
+| I.18 | B | B | [vj 2442539](https://khoahoc.vietjack.com/question/2442539) | khớp |
+| II.1 | S Đ Đ Đ | S Đ Đ Đ | [vj 2442540](https://khoahoc.vietjack.com/question/2442540) | khớp |
+| II.2 | Đ S S Đ | Đ S Đ Đ | [vj 2442541](https://khoahoc.vietjack.com/question/2442541) | KHÁC ý c — mạng: "khí bị nén, nhận công A > 0 ⇒ ΔU = A > 0" ⇒ Đúng; a, b, d khớp |
+| II.3 | Đ Đ Đ S | Đ Đ Đ S | [vj 2442542](https://khoahoc.vietjack.com/question/2442542) | khớp |
+| II.4 | Đ Đ S S | Đ Đ S S | [vj 2442543](https://khoahoc.vietjack.com/question/2442543) | khớp (mạng: U = e₁ − Ir = 0,01 V, q = 0,2 μC; P_R = 7,2·10⁻³ W) |
+| III.1 | 16,7 | 16,7 | [vj 2442544](https://khoahoc.vietjack.com/question/2442544) | khớp (mạng tính đẳng nhiệt như file) |
+| III.2 | 80 | 80 | [vj 2442545](https://khoahoc.vietjack.com/question/2442545) | khớp |
+| III.3 | 100 | 100 | [vj 2442546](https://khoahoc.vietjack.com/question/2442546) | khớp |
+| III.4 | 1,79 | 1,79 | [vj 2442547](https://khoahoc.vietjack.com/question/2442547) | khớp |
+| III.5 | 775 | 775 | [vj 2442548](https://khoahoc.vietjack.com/question/2442548) | khớp |
+| III.6 | 6,25 | 6,25 | [vj 2442549](https://khoahoc.vietjack.com/question/2442549) | khớp |
+
+[c13-de]: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-cum-13-truong-thpt-hai-phong-lan-2-co-dap-an
+
+### (c) Câu mạng khác file
+- **II.2c** ("Quá trình ghế hạ xuống, nội năng của khí tăng lên"): file S / mạng Đ / [vj 2442541](https://khoahoc.vietjack.com/question/2442541). Lời câu trên VietJack trùng file, có câu "Coi nhiệt độ của khí trong xilanh không đổi". Lời giải VietJack: "ghế hạ xuống ⇒ khí bị nén ⇒ nhận công A > 0 ⇒ ΔU = A > 0" (bỏ qua nhiệt lượng Q), trong khi chính lời giải đó dùng định luật Boyle (đẳng nhiệt) cho ý d. Không phải bản đề khác số liệu hay lỗi in: là cách lập luận khác của nguồn, tự mâu thuẫn với giả thiết đẳng nhiệt của đề. Không thuộc mục A–D (điểm mới, để thầy biết; về đáp án vẫn như kết luận cũ của `kiem-chung-v2.md`: S).
+
+Ghi chú điểm mục D: I.17 VietJack chọn **B** (T = 0,707 N mỗi dây), kèm lưu ý của chính nguồn: "nếu đề hỏi lực căng mỗi dây thì 0,707 N; nếu hỏi tổng lực căng 2 dây thì 1,4 N" — nguồn cũng thấy đề mơ hồ, nhưng chọn cùng cách hiểu với file.
+
+### (d) Tổng
+Có đáp án mạng 28/28 câu; khớp 27/28; khác 1 (II.2 ý c — điểm mới, không thuộc mục A–D).

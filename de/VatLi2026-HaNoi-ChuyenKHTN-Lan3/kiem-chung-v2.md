@@ -15,34 +15,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT chuyen KHTN - Lan 3.pdf`. 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | D | D | — | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | C | C | — | khớp |
-| I.4 | C | C | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | B | B | — | khớp |
-| I.10 | C | C | — | khớp (KIỂM TRA) |
-| I.11 | D | D | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | A | A | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | B | B | — | khớp |
-| I.16 | B | B | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | D | D | — | khớp |
-| II.1 | Đ Đ S S | Đ Đ S S | — | khớp (d: thầy xem) |
-| II.2 | Đ Đ Đ Đ | Đ Đ Đ Đ | — | khớp |
-| II.3 | Đ Đ S S | Đ Đ S S | — | khớp (c: thầy xem) |
-| II.4 | S Đ S Đ | S Đ S Đ | a S, b Đ, d Đ (tóm tắt gián tiếp) | khớp |
-| III.1 | 433 | 433 | — | khớp |
-| III.2 | 581 | 581 | — | khớp |
-| III.3 | 200 | 200 | — | khớp (hình: thầy xem) |
-| III.4 | 0,09 | 0,09 | — | khớp (thầy xem) |
-| III.5 | -12 | -12 | — | khớp |
-| III.6 | 0,77 | 0,77 | — | khớp |
+| I.1 | D | D | D | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | C | C | C | khớp |
+| I.4 | C | C | C | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | B | B | B | khớp |
+| I.10 | C | C | C | khớp (KIỂM TRA) |
+| I.11 | D | D | D | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | A | A | A | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | B | B | B | khớp |
+| I.16 | B | B | B | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | D | D | D | khớp |
+| II.1 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (d: thầy xem) |
+| II.2 | Đ Đ Đ Đ | Đ Đ Đ Đ | Đ Đ Đ Đ | khớp |
+| II.3 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (c: thầy xem) |
+| II.4 | S Đ S Đ | S Đ S Đ | S Đ S Đ | khớp |
+| III.1 | 433 | 433 | 433 | khớp |
+| III.2 | 581 | 581 | 581 | khớp |
+| III.3 | 200 | 200 | 200 | khớp (hình: thầy xem) |
+| III.4 | 0,09 | 0,09 | 0,09 | khớp (thầy xem) |
+| III.5 | -12 | -12 | -24 | khớp |
+| III.6 | 0,77 | 0,77 | 0,77 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -84,7 +84,70 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT chuyen KHTN - Lan 3.pdf`. 
 - III.2: SGK 12, bài "Áp suất khí theo mô hình động học phân tử" / "Động năng phân tử" (KNTT bài 12): v_cqp = √(3RT/M) với M là khối lượng mol PHÂN TỬ (O₂: 32 g/mol).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng của chính đề này.
 - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-khtn-ha-noi-co-dap-an (VietJack, "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Chuyên KHTN Hà Nội có đáp án") và https://khoahoc.vietjack.com/question/2486905/hinh-ben-mo-ta-cau-tao-co-ban-cua-mot-may-quang-pho-khoi-duoc-su-dung-de-do-khoi-luong-cua-mot-ion-m (câu II.4, trùng nguyên văn câu dẫn): nhiều khả năng đúng đề, nhưng máy chủ khoahoc.vietjack.com nằm ngoài danh sách mạng cho phép của phiên (WebFetch báo không phân giải được tên miền, curl qua proxy bị từ chối 403) và trang đòi gói VIP để xem đáp án. Không cố vượt. Muốn đối chiếu cần cho phép máy chủ này trong thiết lập mạng.
 - Tóm tắt của công cụ tìm kiếm về bài máy quang phổ khối (VietJack câu 2331452, tuyensinh247 bài 784267 — cùng bài gốc, lời và thứ tự ý có thể khác đề này): x = 2√(2mU/(|q|B²)), m ≈ 3,4·10⁻²⁵ kg (Đúng); "tốc độ ion bị thay đổi bởi lực từ" (Sai); v = √(2|q|U/m). Khớp II.4 trong file. Mức tin cậy trung bình (không đọc được trang gốc).
 - Truy vấn đã thử (12): tên trường + "đợt 3 / lần 3" + "đáp án"; câu đặc trưng trong ngoặc kép của I.10, I.16, I.17, II.1, II.3, II.4; bài gốc máy làm nóng nước H = 95 % (không tìm thấy trang xác nhận). Chi tiết ở `/tmp/VatLi2026-HaNoi-ChuyenKHTN-Lan3/mang.md`.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Chỉ đối chiếu, không giải lại, không sửa file đề. Đọc bằng `curl` phần công khai của khoahoc.vietjack.com (không đăng nhập, không vượt nội dung VIP), mỗi lần tải cách nhau 1,5 s.
+
+### (a) Nguồn
+- **Nguồn đúng đề**: VietJack — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Chuyên KHTN Hà Nội có đáp án", đường dẫn có hậu tố **`-61`** ([khtn3-de]; 28 câu, không ghi mã đề, không ghi "lần"). Trang từng câu có mã 2486884–2486911 theo đúng thứ tự câu của file (trang cả đề hiển thị cặp câu dùng chung dữ kiện I.9–I.10 ở cuối Phần I, nhưng mã câu vẫn theo thứ tự gốc); dòng "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Nội !!", ngày đăng 20–21/05/2026.
+  - Bằng chứng khớp (lời câu, số liệu, thứ tự phương án và thứ tự ý trùng file): I.1 (²³₁₁Na; 34 / 12 / 11 / 23), I.7 (khung 10 cm, 500 vòng; 225 mW / 0,09 mW / 22,5 mW / 9 W), I.9–I.10 (t₁ = 20,2 °C, μ = 2,50 lít/phút, c = 4180, **H = 90 %**; 2,7 / 2,8 / 3,0 / 2,9 kW), I.16 (ống 112,2 cm, p₀ = 75,0 cmHg), I.18 (0,1 cm², 20 cm / 130 cm), II.1 (r = 5,3·10⁻¹¹ m; ý d B = 4,0 T), II.4 (B = 80 mT, U = 1000 V, x = 1,6254 m, 3,4·10⁻²⁵ kg), III.1 (V₁ = 0,2 l, V₂ = 1,0 l, T₁ = 300 K, T₄ = 450 K), III.5 (μ = 2,4·10⁷ cm⁻³, 29 °C, k = 1,38·10⁻²³ J/K).
+  - Câu 1–8: đáp án đọc trên trang cả đề (công khai); câu 9 trở đi trên trang cả đề bị khóa VIP nên đọc ở trang từng câu ("Trả lời: Giải bởi Vietjack"). Hai cặp câu dùng chung dữ kiện (I.9–I.10, III.1–III.2): trang của câu đầu hiển thị công khai đáp án cả câu sau ở mục "Câu hỏi cùng đoạn".
+  - Lưu ý: đáp án trên VietJack là lời giải của VietJack ("Giải bởi Vietjack"), trang không nói là đáp án chính thức của trường.
+- **Nguồn đã xét nhưng KHÔNG đúng đề** (cùng tên trường, khác đề — đã mở trang, so câu 1–3):
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-khtn-ha-noi-co-dap-an (link phiên trước ghi ở mục "Nguồn trên mạng"): câu 1 "Tập hợp ba thông số nào sau đây xác định trạng thái của một lượng khí…", câu 2 "Xung quanh vật nào sau đây không có từ trường?" — đề khác.
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-khtn-ma-de-102-co-dap-an: câu 1 "Hệ thức ΔU = A + Q khi Q < 0 và A > 0…" — đề khác.
+  - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-khtn-ha-noi-ma-de-101-co-dap-an: câu 1 "Đặt điện xoay chiều u = 200√2cos(100πt)…" — đề khác.
+- Tên miền bị chặn: không gặp (chỉ dùng khoahoc.vietjack.com; không dùng WebFetch).
+- Truy vấn WebSearch đã thử: (1) đề thi thử tốt nghiệp 2026 vật lí THPT chuyên KHTN lần 3 đáp án; (2) "máy quang phổ khối" "1,6254" ion "80 mT" chuyên KHTN đáp án; (3) "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Chuyên KHTN Hà Nội có đáp án" (chỉ trả về trang không hậu tố — đề khác). Trang đúng đề (hậu tố `-61`) tìm thấy qua danh sách "đề liên quan" trên trang VietJack.
+
+### (b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | D | D | [trang đề (câu 1)][khtn3-de] | khớp |
+| I.2 | D | D | [trang đề (câu 2)][khtn3-de] | khớp |
+| I.3 | C | C | [trang đề (câu 3)][khtn3-de] | khớp |
+| I.4 | C | C | [trang đề (câu 4)][khtn3-de] | khớp |
+| I.5 | A | A | [trang đề (câu 5)][khtn3-de] | khớp |
+| I.6 | B | B | [trang đề (câu 6)][khtn3-de] | khớp |
+| I.7 | A | A | [trang đề (câu 7)][khtn3-de] | khớp |
+| I.8 | C | C | [trang đề (câu 8)][khtn3-de] | khớp |
+| I.9 | B | B | [vj 2486892](https://khoahoc.vietjack.com/question/2486892) | khớp |
+| I.10 | C | C | [vj 2486893](https://khoahoc.vietjack.com/question/2486893) | khớp (đáp án ở mục "Câu hỏi cùng đoạn"; mạng cũng in H = 90 %, tính 3193 W, chọn C — mục B) |
+| I.11 | D | D | [vj 2486894](https://khoahoc.vietjack.com/question/2486894) | khớp |
+| I.12 | C | C | [vj 2486895](https://khoahoc.vietjack.com/question/2486895) | khớp |
+| I.13 | A | A | [vj 2486896](https://khoahoc.vietjack.com/question/2486896) | khớp |
+| I.14 | B | B | [vj 2486897](https://khoahoc.vietjack.com/question/2486897) | khớp |
+| I.15 | B | B | [vj 2486898](https://khoahoc.vietjack.com/question/2486898) | khớp |
+| I.16 | B | B | [vj 2486899](https://khoahoc.vietjack.com/question/2486899) | khớp (lời giải mạng: 61,6 cm là chiều dài cột khí; cột thủy ngân 50,6 cm) |
+| I.17 | A | A | [vj 2486900](https://khoahoc.vietjack.com/question/2486900) | khớp |
+| I.18 | D | D | [vj 2486901](https://khoahoc.vietjack.com/question/2486901) | khớp |
+| II.1 | Đ Đ S S | Đ Đ S S | [vj 2486902](https://khoahoc.vietjack.com/question/2486902) | khớp (ý d: mạng 12,45 T, S như file — mục C) |
+| II.2 | Đ Đ Đ Đ | Đ Đ Đ Đ | [vj 2486903](https://khoahoc.vietjack.com/question/2486903) | khớp |
+| II.3 | Đ Đ S S | Đ Đ S S | [vj 2486904](https://khoahoc.vietjack.com/question/2486904) | khớp |
+| II.4 | S Đ S Đ | S Đ S Đ | [vj 2486905](https://khoahoc.vietjack.com/question/2486905) | khớp |
+| III.1 | 433 | 433 | [vj 2486906](https://khoahoc.vietjack.com/question/2486906) | khớp |
+| III.2 | 581 | 581 | [vj 2486907](https://khoahoc.vietjack.com/question/2486907) | khớp (đáp án ở mục "Câu hỏi cùng đoạn" của trang đoạn văn) |
+| III.3 | 200 | 200 | [vj 2486908](https://khoahoc.vietjack.com/question/2486908) | khớp |
+| III.4 | 0,09 | 0,09 | [vj 2486909](https://khoahoc.vietjack.com/question/2486909) | khớp |
+| III.5 | -12 | -24 | [vj 2486910](https://khoahoc.vietjack.com/question/2486910) | KHÁC — mạng đổi μ = 2,4·10⁷ cm⁻³ thành 2,4·10⁷·10⁻⁶ m⁻³ (đổi đơn vị ngược chiều); lời câu, số liệu trùng file |
+| III.6 | 0,77 | 0,77 | [vj 2486911](https://khoahoc.vietjack.com/question/2486911) | khớp |
+
+[khtn3-de]: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-khtn-ha-noi-co-dap-an-61
+
+### (c) Câu mạng khác file
+- **III.5**: file −12 / mạng −24 / [vj 2486910](https://khoahoc.vietjack.com/question/2486910). Lời câu và số liệu trên VietJack trùng file (μ = 2,4·10⁷ cm⁻³, 29 °C, p₀ = 10⁵ Pa, k = 1,38·10⁻²³ J/K). Lời giải VietJack viết p/p₀ = μkT/p₀ với μ = 2,4·10⁷·10⁻⁶ (nhân 10⁻⁶ khi đổi cm⁻³ sang m⁻³, đúng ra phải nhân 10⁶) nên lệch đúng 12 bậc. Không phải do bản đề khác số liệu hay cách hiểu khác: là lỗi đổi đơn vị của lời giải trên mạng; file giữ −12. Không thuộc mục A–D.
+
+Ghi chú các điểm mục B–C:
+- I.10 (mục B): bản đăng trên VietJack cũng in **H = 90 %** (không phải 95 %); VietJack tính P ≈ 3193 W ≈ 3,193 kW và vẫn chọn **C (3,0 kW)** như file. Như vậy con số 90 % có ở cả nguồn VietJack, không phải lỗi riêng của bản SieuGioi; khả năng đề gốc của trường ghi 90 % (chép lệch so với bài 95 % quen thuộc) vẫn để thầy quyết.
+- II.1d (mục C): VietJack dùng B = 2π·10⁻⁷·I/r ≈ 12,45 T ⇒ **Sai**, như file (không dùng công thức dây thẳng).
+- Ngoài mục A–D: III.4 VietJack 0,09 (cùng cặp điểm (2 s; 3) và (18 s; 15)), II.3c Sai (khối lượng đá tăng trong phút đầu ⇒ đá dưới 0 °C) — như file.
+
+### (d) Tổng
+Có đáp án mạng 28/28 câu; khớp 27/28; khác 1 (III.5 — lỗi đổi đơn vị của lời giải trên mạng).

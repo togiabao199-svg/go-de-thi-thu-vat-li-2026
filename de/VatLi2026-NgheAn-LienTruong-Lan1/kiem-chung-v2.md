@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - Lien truong Nghe An - Lan 1.pd
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | D | D | — | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | D | D | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | D | D | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | B | B | — | khớp (thầy xem) |
-| I.9 | A | A | — | khớp |
-| I.10 | B | B | — | khớp |
-| I.11 | A | A | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | C | C | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | C | C | — | khớp |
-| I.16 | B | B | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | Đ Đ S Đ | Đ Đ S Đ | — | khớp (thầy xem ý c) |
-| II.2 | Đ S Đ S | Đ S Đ S | — | khớp |
-| II.3 | S S Đ Đ | S S Đ Đ | — | khớp |
-| II.4 | Đ S S Đ | Đ S S Đ | — | khớp (thầy xem ý d) |
-| III.1 | 233 | 233 | — | khớp |
-| III.2 | 3,36 | 3,36 | — | khớp |
-| III.3 | 4,25 | 4,25 | — | khớp (thầy xem) |
-| III.4 | 17 | 17 | — | khớp (thầy xem) |
-| III.5 | 192 | 192 | — | khớp |
-| III.6 | 640 | 640 | — | khớp |
+| I.1 | D | D | D | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | D | D | D | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | D | D | D | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | B | B | B | khớp (thầy xem) |
+| I.9 | A | A | A | khớp |
+| I.10 | B | B | B | khớp |
+| I.11 | A | A | A | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | C | C | C | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | C | C | C | khớp |
+| I.16 | B | B | B | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp (thầy xem ý c) |
+| II.2 | Đ S Đ S | Đ S Đ S | Đ S Đ S (VietJack); Đ S Đ Đ (bảng đáp án chuvanbien) | khớp |
+| II.3 | S S Đ Đ | S S Đ Đ | S S Đ Đ | khớp |
+| II.4 | Đ S S Đ | Đ S S Đ | Đ S S Đ | khớp (thầy xem ý d) |
+| III.1 | 233 | 233 | 233 | khớp |
+| III.2 | 3,36 | 3,36 | 3,36 | khớp |
+| III.3 | 4,25 | 4,25 | 4,25 | khớp (thầy xem) |
+| III.4 | 17 | 17 | 17 | khớp (thầy xem) |
+| III.5 | 192 | 192 | 192 | khớp |
+| III.6 | 640 | 640 | 640 (VietJack); 427 (bảng đáp án chuvanbien) | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 File đề không có dòng `% KIỂM TRA` / `% ???`. Không có câu lệch. Bảng dưới là các điểm "thầy xem" ghi ở `kiem-chung.md` và `kho/TIEN-DO.md` (đã giải lại lần hai).
@@ -81,6 +81,7 @@ Giải thích thêm:
 - II.4a: thăng hoa là chuyển trực tiếp từ thể rắn sang thể hơi (SGK 12, bài Sự chuyển thể). II.4b: chuyển thể thu nhiệt dù nhiệt độ không đổi (Q = Lm). II.4c: nhiệt thăng hoa riêng ≈ nhiệt nóng chảy riêng + nhiệt hóa hơi riêng (≈ 2,8 MJ/kg) lớn hơn nhiệt hóa hơi riêng (≈ 2,3–2,5 MJ/kg).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng (không mở được trang nào có đáp án; các tên miền dưới đây nằm ngoài danh sách được phép của phiên, không cố vượt).
 
 - https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-thpt-nghe-an-ma-de-3114-co-dap-an — VietJack, "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường THPT Nghệ An mã đề 3114 có đáp án". Đoạn trích của công cụ tìm kiếm cho thấy câu 19 khớp nguyên văn (thí nghiệm Charles, giọt acid sulfuric, đủ 4 ý) → đúng đề; đáp án bị khóa, tên miền bị chặn.
@@ -88,3 +89,72 @@ Không tìm thấy đáp án trên mạng (không mở được trang nào có �
 - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-so-nghe-an-230439 — hoatieu.vn, "Đề thi thử tốt nghiệp THPT năm 2026 môn Vật lí sở Nghệ An (Lần 1)", theo đoạn trích gồm 24 mã đề 3101–3124 kèm đáp án (mã 3114 nằm trong dải này, nhiều khả năng cùng đề — cũng là một căn cứ cho việc đặt "Lần 1"); bị chặn.
 
 Truy vấn đã thử (9): tên đề + "đông trùng hạ thảo" sấy thăng hoa; câu khinh khí cầu trong ngoặc kép; "bể nuôi cá giống" + "3,80 mm" "4,10 mm"; tên đề + "liên trường" + đáp án lời giải chi tiết; câu thanh dẫn gấp khúc "16,0 cm"; câu ống thủy tinh có nút kín và vòi có khóa; "Liên trường THPT Nghệ An đợt 1" Vật lí; câu dẫn đông trùng hạ thảo trong ngoặc kép; "giọt acid sulfuric" + Charles + "tốc độ căn quân phương" (truy vấn này ra trang VietJack mã đề 3114). Chi tiết ở `/tmp/VatLi2026-NgheAn-LienTruong-Lan1/mang.md`.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ đối chiếu đáp án trên mạng (không giải lại, không sửa `.tex`). Chỉ đọc phần công khai, không đăng nhập; trang VietJack đọc bằng `curl`, tải lần lượt cách nhau khoảng 1,6 s.
+
+### (a) Nguồn
+
+**Nguồn đúng đề 1 — VietJack (lời giải công khai cả 28 câu):**
+- Trang cả đề: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-thpt-nghe-an-ma-de-3114-co-dap-an — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Liên trường THPT Nghệ An mã đề 3114 có đáp án" (28 câu, 50 phút; công khai lời giải câu 1–8).
+- Trang câu `khoahoc.vietjack.com/question/2443114` … `2443141` (mục "Trả lời: Giải bởi Vietjack" công khai; dòng "Câu hỏi trong đề" ghi nhóm "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Nghệ An"). Đáp án III.2 và III.6 nằm ở mục "Câu hỏi cùng đoạn" (cũng "Giải bởi Vietjack", công khai) trên trang câu III.1 (2443136) và III.5 (2443140); id 2443137, 2443141 trỏ về đúng hai trang này. VietJack đánh số liên tục 1–28 (Phần II mỗi câu một trang gồm 4 ý); thứ tự câu, phương án, ý trùng file.
+- Bằng chứng khớp: I.1 (hà hơi vào gương), I.8 (kim nam châm thử tại O, 4 phương án điểm B/T/Đ/N), I.13 (giảm 7 °C; 280/268/7/273 K), II.1 (bảng 25…65 °C – 9,5…10,8 cm), II.2 (L₀, L₁, L₂; công thức ý d), II.4 (đông trùng hạ thảo, sấy lạnh 20–30 °C, sấy thăng hoa −20 đến −5 °C), III.3–4 (h = 4,0 m; R = 3,80 mm; 4,10 mm; N₂ 80,0 %, O₂ 20,0 %, tan gấp 2,00 lần), III.5–6 (MN = NP = PQ = 16,0 cm; B = 0,50 T; I = 4,00 A; cos α = 0,80).
+
+**Nguồn đúng đề 2 — chuvanbien.vn (file đề kèm bảng đáp án):**
+- https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf — đọc bằng WebFetch (một lần; công cụ trả về tệp PDF, trích chữ bằng `pdftotext`, xem ảnh trang 4 để đọc công thức). PDF 7 trang (tạo ngày 04/03/2026). Đầu đề: "SỞ GD&ĐT NGHỆ AN – LIÊN TRƯỜNG THPT – KỲ THI THỬ TỐT NGHIỆP THPT NĂM 2026 – Môn thi: VẬT LÍ – ĐỀ CHÍNH THỨC – (Đề thi có 4 trang) – **Mã đề 3114**". Trang 7 là bảng "Đáp án" (chỉ bảng, không có lời giải; không ghi rõ do Liên trường hay do bên đăng soạn).
+- Lời câu, số liệu, thứ tự câu / phương án / ý trùng file (đã so cả 18 câu Phần I, 4 câu Phần II, 6 câu Phần III). Khác lời duy nhất thấy được: **II.4d** bản chuvanbien có thêm cụm "(bao gồm số phân tử hút qua bơm hút và số phân tử đi vào bộ ngưng tụ)" sau "số phân tử nước bị hút khỏi buồng sấy"; bản SieuGioi trong `kho/goc/` và file `.tex` không có cụm này.
+
+**Mục I (tên, lần thi theo nguồn):** VietJack gọi là "Liên trường THPT Nghệ An mã đề 3114", năm học 2025-2026, không ghi lần; bản chuvanbien ghi "SỞ GD&ĐT NGHỆ AN – LIÊN TRƯỜNG THPT", "KỲ THI THỬ TỐT NGHIỆP THPT NĂM 2026", cũng không ghi lần (file tạo 04/03/2026). Không nguồn nào đọc được ghi số lần; căn cứ "Lần 1" vẫn chỉ là đoạn trích tìm kiếm của hoatieu.vn ghi ở phiên trước (trang hoatieu nay bị chặn, xem dưới). Lưu ý: bản SieuGioi trong `kho/goc/` có dòng "Lần 3, năm 2025 - 2026" — theo CLAUDE.md đây là dòng tiêu đề mẫu của SieuGioi, không dùng làm căn cứ.
+
+**Nguồn đã xét nhưng không dùng:** https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-so-nghe-an-230439 (phiên trước, đoạn trích: "Sở Nghệ An (Lần 1)", mã 3101–3124) — không mở lại vì tên miền hoatieu.vn **bị chặn** (WebFetch trả HTTP 403 ở lần thử duy nhất, thử ở đề Phú Thọ SGD Lần 1).
+
+**Tên miền bị chặn:** `hoatieu.vn` (HTTP 403). `chuvanbien.vn` đọc được qua WebFetch (một lần).
+
+**Truy vấn đã thử (bổ sung):** WebSearch "Đông trùng hạ thảo tươi có hàm lượng nước" sấy thăng hoa vật lí đúng sai (không ra trang đề); hai link VietJack, chuvanbien lấy từ mục "Nguồn trên mạng" của phiên trước.
+
+### (b) Bảng đối chiếu 28 câu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | D | D | [VJ 2443114](https://khoahoc.vietjack.com/question/2443114/vao-mua-dong-khi-ha-hoi-vao-guong-thi-thay-guong-bi-mo-di-nguyen-nhan); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.2 | D | D | [VJ 2443115](https://khoahoc.vietjack.com/question/2443115/trong-he-si-don-vi-cua-cam-ung-tu-la-3rmkv); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.3 | D | D | [VJ 2443116](https://khoahoc.vietjack.com/question/2443116/tuong-tac-nao-sau-day-la-tuong-tac-tu-y4auu); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.4 | D | D | [VJ 2443117](https://khoahoc.vietjack.com/question/2443117/trong-cac-nha-may-nhiet-dien-hoi-nuoc-duoc-su-dung-de-lam-quay-tuabin); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.5 | C | C | [VJ 2443118](https://khoahoc.vietjack.com/question/2443118/quan-sat-chuyen-dong-cua-cac-hat-khoi-trong-ong-thuy-tinh-bang-kinh-hi); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.6 | D | D | [VJ 2443119](https://khoahoc.vietjack.com/question/2443119/trong-thi-nghiem-xac-dinh-nhiet-dung-rieng-cua-nuoc-thao-tac-nao-sau-d); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.7 | A | A | [VJ 2443120](https://khoahoc.vietjack.com/question/2443120/khi-co-xat-mot-dong-xu-len-mat-ban-nham-dong-xu-nong-len-ket-luan-nao); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.8 | B | B | [VJ 2443121](https://khoahoc.vietjack.com/question/2443121/trong-so-do-nhu-hinh-ve-ben-neu-dat-mot-kim-cham-thu-tai-diem-o-thi-cu); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.9 | A | A | [VJ 2443122](https://khoahoc.vietjack.com/question/2443122/doi-voi-mot-khoi-khi-li-tuong-xac-dinh-trong-qua-trinh-dang-nhiet-tich); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.10 | B | B | [VJ 2443123](https://khoahoc.vietjack.com/question/2443123/mot-doan-day-dan-mang-dong-dien-dat-nam-ngang-trong-mot-tu-truong-deu); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.11 | A | A | [VJ 2443124](https://khoahoc.vietjack.com/question/2443124/khinh-khi-cau-co-mot-lo-ho-o-phia-duoi-de-trao-doi-khi-voi-moi-truong); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.12 | C | C | [VJ 2443125](https://khoahoc.vietjack.com/question/2443125/thiet-bi-nao-sau-day-hoat-dong-khong-phai-la-ung-dung-cua-tuong-tac-tu); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.13 | C | C | [VJ 2443126](https://khoahoc.vietjack.com/question/2443126/khi-nhiet-do-cua-mot-vat-giam-7-circ-c-thi-theo-thang-nhiet-do-kelvin); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.14 | B | B | [VJ 2443127](https://khoahoc.vietjack.com/question/2443127/trong-thi-nghiem-tao-tu-pho-cua-nam-cham-thang-mot-hoc-sinh-thuc-hien); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.15 | C | C | [VJ 2443128](https://khoahoc.vietjack.com/question/2443128/vao-buoi-sang-nhiet-do-khong-khi-trong-mot-phong-hoc-la-20-circ-rm-c-v); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.16 | B | B | [VJ 2443129](https://khoahoc.vietjack.com/question/2443129/mot-xilanh-chua-luong-khi-li-tuong-xac-dinh-o-nhiet-do-khong-doi-neu-t); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.17 | A | A | [VJ 2443130](https://khoahoc.vietjack.com/question/2443130/mot-khoi-khi-li-tuong-thuc-hien-chu-trinh-nhu-hinh-ve-trang-thai-co-nh); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| I.18 | A | A | [VJ 2443131](https://khoahoc.vietjack.com/question/2443131/dong-nang-tinh-tien-trung-binh-cua-phan-tu-khi-duoc-xac-dinh-bang-he-t); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| II.1 | Đ Đ S Đ | Đ Đ S Đ | [VJ 2443132](https://khoahoc.vietjack.com/question/2443132/mot-nhom-hoc-sinh-thuc-hien-thi-nghiem-kiem-chung-dinh-luat-charles-bo); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn (ý c Sai — điểm mục D) |
+| II.2 | Đ S Đ S | Đ S Đ S (VietJack); Đ S Đ Đ (chuvanbien) | [VJ 2443133](https://khoahoc.vietjack.com/question/2443133/khi-lay-nuoc-tu-mot-binh-dang-nut-kin-ta-chi-lay-duoc-mot-it-du-trong); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | VietJack khớp; **chuvanbien khác ở ý d** (Đ / file S) |
+| II.3 | S S Đ Đ | S S Đ Đ | [VJ 2443134](https://khoahoc.vietjack.com/question/2443134/mot-nhom-hoc-sinh-thuc-hien-thi-nghiem-khao-sat-luc-tu-tac-dung-len-do); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| II.4 | Đ S S Đ | Đ S S Đ | [VJ 2443135](https://khoahoc.vietjack.com/question/2443135/dong-trung-ha-thao-tuoi-co-ham-luong-nuoc-chiem-tu-85-den-90-khoi-luong-sau-quy-trinh-che-bien-do-am); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn (ý d Đúng — điểm mục D) |
+| III.1 | 233 | 233 | [VJ 2443136](https://khoahoc.vietjack.com/question/2443136/nhiet-do-ban-dau-cua-nuoc-da-tinh-theo-thang-do-k-la-bao-nhieu-ket-qua); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| III.2 | 3,36 | 3,36 | [VJ 2443136](https://khoahoc.vietjack.com/question/2443136/nhiet-do-ban-dau-cua-nuoc-da-tinh-theo-thang-do-k-la-bao-nhieu-ket-qua); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn (VietJack: lời giải ở mục "Câu hỏi cùng đoạn" trên trang câu III.1) |
+| III.3 | 4,25 | 4,25 | [VJ 2443138](https://khoahoc.vietjack.com/question/2443138/trong-nuoi-trong-thuy-san-viec-suc-khi-de-hoa-tan-oxygen-vao-nuoc-la-c); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| III.4 | 17 | 17 | [VJ 2443139](https://khoahoc.vietjack.com/question/2443139/trong-nuoi-trong-thuy-san-viec-suc-khi-de-hoa-tan-oxygen-vao-nuoc-la-c-coe3h); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| III.5 | 192 | 192 | [VJ 2443140](https://khoahoc.vietjack.com/question/2443140/do-lon-luc-tu-tac-dung-len-doan-day-mn-la-x10-3-n-gia-tri-cua-x-la-bao-nhieu); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | khớp cả hai nguồn |
+| III.6 | 640 | 640 (VietJack); 427 (chuvanbien) | [VJ 2443140](https://khoahoc.vietjack.com/question/2443140/do-lon-luc-tu-tac-dung-len-doan-day-mn-la-x10-3-n-gia-tri-cua-x-la-bao-nhieu); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) | VietJack khớp (lời giải ở mục "Câu hỏi cùng đoạn" trên trang câu III.5); **chuvanbien khác** (427) |
+
+### (c) Câu mạng khác file
+
+- **II.2d** — file S / VietJack S / chuvanbien **Đ** (bảng đáp án ghi II.2: Đ S Đ Đ). Link: [VJ 2443133](https://khoahoc.vietjack.com/question/2443133/khi-lay-nuoc-tu-mot-binh-dang-nut-kin-ta-chi-lay-duoc-mot-it-du-trong); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) trang 7. Lời giải VietJack: Boyle p₀(L₀ − L₁) = (p₀ − DgL₂)(L₀ − L₂) ⇒ p₀ = DgL₂(L₀ − L₂)/(L₁ − L₂), khác công thức của ý d ⇒ Sai. Bảng chuvanbien không kèm lời giải; ảnh trang 4 của bản chuvanbien in công thức ý d đúng như file: p = DgL₂(L₀ − L₁)/(L₁ − L₂). Nhận xét: không phải do khác bản đề hay lỗi in (công thức in giống nhau ở cả ba bản); hai nguồn mâu thuẫn nhau, VietJack và cả hai lượt giải trong repo cùng ra Sai. Điểm mới, không thuộc mục A–D.
+- **III.6** — file 640 / VietJack 640 / chuvanbien **427**. Link: [VJ 2443140](https://khoahoc.vietjack.com/question/2443140/do-lon-luc-tu-tac-dung-len-doan-day-mn-la-x10-3-n-gia-tri-cua-x-la-bao-nhieu) (mục "Câu hỏi cùng đoạn"); [chuvanbien](https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_THITHUTNTHPT_SONGHEAN.pdf) trang 7. Lời giải VietJack: chỉ lực từ lên NP (F = BIL = 0,32 N) gây moment quanh trục MQ; mỗi đoạn nặng P/3; cân bằng moment ⇒ P = 0,64 N ⇒ 640. Bảng chuvanbien không kèm lời giải; con số 427 trùng 0,32·0,8/0,6 ≈ 0,427 N (= F_NP·cot α, ứng với cân bằng moment khi coi cả trọng lượng P đặt ở đoạn NP) — chỉ là nhận xét về con số, không có lời giải nguồn để xác nhận. Lời câu III.5–6 ở bản chuvanbien giống file ("Một thanh dẫn đồng chất, tiết diện đều, trọng lượng P…"). Điểm mới, không thuộc mục A–D.
+
+Các điểm mục D của `kho/KIEM-DAP-AN-V2.md` (đều khớp file, cả hai nguồn):
+- **II.1c**: cả hai nguồn **S**. Lời giải VietJack: h/T ≈ 0,032 cm/K ở mọi lần đo ⇒ Δh/Δt ≈ 0,032 cm/°C không đổi ⇒ mỗi độ tăng thêm những khoảng bằng nhau ⇒ Sai.
+- **II.4d**: cả hai nguồn **Đ**. Lời giải VietJack: p không đổi, T tăng ⇒ n = pV/(RT) giảm ⇒ số phân tử bị hút ra lớn hơn số thoát ra. Bản chuvanbien có thêm cụm giải thích "(bao gồm số phân tử hút qua bơm hút và số phân tử đi vào bộ ngưng tụ)" làm lời ý chặt hơn — thầy có thể cân nhắc bổ sung vào lời đề (file theo bản SieuGioi, không có cụm này).
+
+### (d) Tổng
+
+Có đáp án mạng cho **28/28** câu (VietJack 28/28; bảng đáp án chuvanbien 28/28). VietJack khớp file **28/28**. Bảng chuvanbien khớp **26/28**, khác **2** (II.2 ý d: Đ / file S; III.6: 427 / file 640). Theo câu: 26 câu khớp cả hai nguồn, 2 câu có một nguồn khác file.

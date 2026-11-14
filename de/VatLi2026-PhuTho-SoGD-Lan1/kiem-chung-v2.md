@@ -76,6 +76,7 @@ Các ý còn lại của II.1: m₀ = p₀VM/(RT₀) = 10⁵·498,6·0,029/(8,31
 - II.4a (S): động năng có đơn vị jun (J); oát (W) là đơn vị công suất.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng của chính đề này. Truy vấn đã thử (WebSearch, 14/11/2026):
 1. đề thi thử tốt nghiệp THPT 2026 Vật lí Sở GD&ĐT Phú Thọ lần 1 đáp án lời giải
 2. "khí cầu có thể tích luôn không đổi là 498,6" "khối lượng vỏ 145 kg"
@@ -90,3 +91,67 @@ Trang liên quan nhưng không mở được (tên miền ngoài danh sách cho 
 - https://hoatieu.vn/de-khao-sat-chat-luong-mon-vat-li-12-phu-tho-249503 — "Đề khảo sát chất lượng môn Vật lí 12 Phú Thọ 2026" (đợt 1 năm học 2025-2026 của Sở, file tải có nhiều mã đề kèm bảng đáp án theo mô tả của công cụ tìm kiếm); CHƯA xác nhận được có đúng đề này không. Nếu thầy mở được, cần xem trước hết ý II.1a, II.2b, II.2c.
 - https://chuvanbien.vn/images/upload_file/2025/lop12_sophutho_1741764527.pdf — đề Sở Phú Thọ đăng tháng 3/2025 (năm học trước, nhiều khả năng là đề khác).
 - https://khoahoc.vietjack.com/question/2312820/noi-ap-suat-co-van-la-1-lo-tron-co-dien-tich-1cm2 — bài nồi áp suất cùng dạng với III.1 nhưng số liệu khác (k = 1300 N/m), không phải đề này.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ đối chiếu đáp án trên mạng (không giải lại, không sửa `.tex`). Chỉ đọc phần công khai, không đăng nhập; trang VietJack đọc bằng `curl`, tải lần lượt cách nhau khoảng 1,6 s.
+
+### (a) Nguồn
+
+**Nguồn đúng đề (chỉ có đề, KHÔNG có đáp án công khai):**
+- https://khoahoc.vietjack.com/chi-tiet-de-thi/5770/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-1 — VietJack (mục tài liệu), "Đề thi thử Tốt nghiệp THPT Vật Lí 2025 - 2026 Sở Phú Thọ (đợt 1)". Bản xem trước công khai là tệp PDF trên cùng tên miền (https://khoahoc.vietjack.com/upload/documents/admission_post/6515428/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-1-17787270036a05385b32ca5.pdf, 6 trang, tạo từ Word ngày 14/05/2026): đầu đề "SỞ GD & ĐT PHÚ THỌ – TRƯỜNG THPT … – ĐỀ KHẢO SÁT CHẤT LƯỢNG HỌC SINH LỚP 12 THPT (ĐỢT 1) NĂM HỌC 2026 – Môn: Vật lý – ĐỀ CHÍNH THỨC – **Mã đề 0203**", có đủ 28 câu nhưng **không có bảng đáp án / lời giải** (kết thúc ở "---- HẾT ----"). Bản DOCX "đầy đủ đáp án" chỉ tải được với gói VIP — không dùng.
+- Bằng chứng khớp đúng đề: đủ 28 câu cùng lời, số liệu, thứ tự câu / phương án / ý với file, ví dụ I.1 (mô hình động học phân tử, bình kín), I.14 (T₁ = 200 K; 200/400/600/300 K), I.16 (bóng thám không 10 m, 0,03 atm, 200 K; 2,12/2,71/3,56/1,78 m), II.1 (khí cầu 498,6 m³, vỏ 145 kg, 127 °C), II.2 (CPU 21 W, 0,4 lít/phút, 80 %), II.3 (nút chai 2,3 cm², 30 °C → 99 °C, 2,59 N), II.4 (0,87 g, 2,9 s, 0,8 bar, 17 °C), III.1 (390 N/m), III.5–6 (pit-tông 600 g, 0,6L, 600 K).
+- Ghi nhận cho mục C: bản mã 0203 này cũng in ý II.2b "75 kJ" và ý II.2c "… nội năng tăng 10,8 J" đúng như bản SieuGioi trong `kho/goc/` — tức lỗi số liệu nằm ngay trong đề của Sở, không phải do bên đăng gõ nhầm (khả năng "bản của Sở in 10,08 kJ" ghi ở mục C không còn). Tên kì thi theo nguồn: "Khảo sát chất lượng học sinh lớp 12 THPT (đợt 1)" của Sở GD&ĐT Phú Thọ — khớp cách đặt "Lần 1".
+
+**Bản lời khác (KHÔNG coi là đúng đề):**
+- https://khoahoc.vietjack.com/question/2312812/mot-he-thong-tan-nhiet-cho-cpu-co-cau-truc-nhu-hinh-ben-bo-lam-mat-tiep-xuc-truc-tiep-voi-cpu — câu hệ thống tản nhiệt CPU trong "Đề thi thử tốt nghiệp THPT môn Vật lí Sở Bà Rịa Vũng Tàu có đáp án" (lời giải công khai). Khác số liệu: công suất CPU 210 W; ý b "750 kJ"; ý c là mệnh đề khác (lưu lượng chất lỏng và lưu lượng khí quyết định hiệu suất làm mát); ý d "6 °C". Đáp án nguồn đó: Đ – S – Đ – Đ; ý b ghi Sai vì Q = 210·3600 = 756 kJ ≠ 750 kJ — cùng kiểu lệch 0,6 kJ / 6 kJ như ý II.2b của đề Phú Thọ (75,6 kJ / "75 kJ"), bản gốc cho Sai. Chỉ là tham khảo cách chấm của câu gốc, không phải đáp án của đề này.
+- https://khoahoc.vietjack.com/question/2312820/noi-ap-suat-co-van-la-1-lo-tron-co-dien-tich-1cm2 (đã ghi ở phiên trước) — câu nồi áp suất cùng dạng III.1, số liệu khác (1300 N/m), không mở.
+
+**Nguồn đã xét nhưng KHÔNG đúng đề:**
+- https://khoahoc.vietjack.com/chi-tiet-de-thi/5750/de-thi-thu-tot-nghiep-thpt-vat-li-2025-2026-so-gddt-phu-tho-dot-2 — Sở Phú Thọ **đợt 2** (Câu 1 về dòng điện xoay chiều i = 6√2cos100πt; Câu 4 đẳng áp 1,2 m³…) — đề khác.
+- https://khoahoc.vietjack.com/thi-online/2023-de-thi-thu-vat-li-so-gd-phu-tho-lan-1-co-dap-an/122351 (theo đoạn trích tìm kiếm) — đề năm 2023, khác năm.
+
+**Tên miền bị chặn:** `hoatieu.vn` — thử WebFetch một lần trang https://hoatieu.vn/de-khao-sat-chat-luong-mon-vat-li-12-phu-tho-249503: HTTP 403, không thử lại. Không có đoạn trích tìm kiếm nào nêu đáp án của đề.
+
+**Truy vấn đã thử (bổ sung):** WebSearch: "khí cầu có thể tích luôn không đổi là 498,6" đáp án; "Một hệ thống tản nhiệt cho CPU" "0,4 lít/phút" "21 W" vật lí; Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở Phú Thọ lần 1 có đáp án vietjack; "Nhiệt lượng CPU tỏa ra trong một giờ khi hoạt động bình thường là 75 kJ"; "Quá trình bơm không khí từ bên ngoài vào khí cầu là quá trình đẳng nhiệt" — không ra trang có đáp án. Ô tìm kiếm VietJack (`khoahoc.vietjack.com/search/query`): "Một khí cầu có thể tích luôn không đổi là 498,6"; "hệ thống tản nhiệt cho CPU lưu lượng chất lỏng"; "người A trung bình mỗi nhịp hít không khí vào phổi"; "bóng thám không …"; "Nồi áp suất … 390 N/m"; "Một người đi biển tìm thấy một cái chai kín có nút …"; "Sở Phú Thọ Vật lý 2025-2026"; "Phú Thọ vật lí 2026"; "Sở Phú Thọ Vật Lí đợt 1" (truy vấn cuối ra trang tài liệu đúng đề nói trên). Không có trang câu (`/question/…`) hay trang thi online (`/thi-online/…`) nào của đề này trên VietJack.
+
+### (b) Bảng đối chiếu 28 câu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | B | — | — | không có đáp án công khai |
+| I.2 | B | — | — | không có đáp án công khai |
+| I.3 | D | — | — | không có đáp án công khai |
+| I.4 | A | — | — | không có đáp án công khai |
+| I.5 | A | — | — | không có đáp án công khai |
+| I.6 | D | — | — | không có đáp án công khai |
+| I.7 | A | — | — | không có đáp án công khai |
+| I.8 | D | — | — | không có đáp án công khai |
+| I.9 | B | — | — | không có đáp án công khai |
+| I.10 | A | — | — | không có đáp án công khai |
+| I.11 | B | — | — | không có đáp án công khai |
+| I.12 | D | — | — | không có đáp án công khai |
+| I.13 | D | — | — | không có đáp án công khai |
+| I.14 | B | — | — | không có đáp án công khai |
+| I.15 | C | — | — | không có đáp án công khai |
+| I.16 | C | — | — | không có đáp án công khai |
+| I.17 | C | — | — | không có đáp án công khai |
+| I.18 | C | — | — | không có đáp án công khai |
+| II.1 | S Đ Đ Đ | — | — | không có đáp án công khai |
+| II.2 | Đ S S Đ | — | — | không có đáp án công khai |
+| II.3 | Đ Đ S S | — | — | không có đáp án công khai |
+| II.4 | S Đ Đ Đ | — | — | không có đáp án công khai |
+| III.1 | 144 | — | — | không có đáp án công khai |
+| III.2 | 422 | — | — | không có đáp án công khai |
+| III.3 | 504 | — | — | không có đáp án công khai |
+| III.4 | 777 | — | — | không có đáp án công khai |
+| III.5 | 2,4 | — | — | không có đáp án công khai |
+| III.6 | 0,45 | — | — | không có đáp án công khai |
+
+### (c) Câu mạng khác file
+
+Không có (không tìm thấy đáp án công khai của đề này). Các điểm mục C, D của `kho/KIEM-DAP-AN-V2.md` (II.1a, II.2b, II.2c) chưa đối chiếu được; chỉ xác nhận thêm: số "75 kJ" (II.2b) và "10,8 J" (II.2c) in đúng như vậy trong bản mã 0203 của Sở trên VietJack.
+
+### (d) Tổng
+
+**Không tìm thấy đáp án trên mạng**: 0/28 câu có đáp án công khai (đã tìm thấy đúng đề — mã 0203, bản PDF xem trước trên VietJack — nhưng không kèm đáp án; bản có đáp án nằm sau gói VIP hoặc trên hoatieu.vn bị chặn).
