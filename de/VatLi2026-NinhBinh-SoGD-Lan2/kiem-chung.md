@@ -51,3 +51,7 @@
 - **Đối chiếu II.4 a) với ảnh gốc** (ảnh nhúng 432 × 366 điểm ảnh, phóng to 3 lần): bản cực S (xanh) ở phía sau – bên trái, bản cực N (đỏ, mặt ngoài gông xám ghi chữ N) ở phía trước – bên phải; dây đi từ giá trái – phía trước (đầu A) đến giá phải – phía sau (đầu B), song song hai bản cực. Từ trường hướng từ N sang S (ra xa người nhìn, chếch trái); lực từ lên dây hướng xuống ⇒ dòng điện từ B đến A. Cách đọc của bản gõ khớp ảnh gốc.
 - Các hình còn lại (I.1, I.4, I.11, I.12, I.15, II.2, II.3, III.1, III.3, III.4, III.6) là sơ đồ, đồ thị: giữ nguyên.
 - Cỡ hình: II.1 rộng 12,3 cm, cao 4,25 cm; II.4 rộng 8,2 cm, cao 6,6 cm (lớn hơn thì câu II.4 nhảy sang trang 6, trang 5 trống quá giới hạn). Bản đề 7 trang (ĐẠT), bản lời giải 11 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.4a (Đ), III.5 (6,23), III.6 (1,98): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

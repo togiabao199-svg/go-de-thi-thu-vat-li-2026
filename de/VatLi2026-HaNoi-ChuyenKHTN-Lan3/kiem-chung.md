@@ -55,3 +55,7 @@
 - Macro mới khai báo trong file đề (đề nghị chuyển vào `preamble-vatli-hinh.tex` để các đề Nghệ An Liên trường Lần 2, Hưng Yên SGD Lần 1, Lạng Sơn SGD Lần 1 dùng lại): `\VLmaynuocnong`, `\VLsoled` (kèm lệnh phụ `\VLledngang`, `\VLleddung`, `\VLledve`, bảng mã `VLledma0`…`VLledma9`, `VLledma-`).
 - Ảnh so dựng lại cho cả 11 hình (ảnh trang 300 dpi); vùng cắt đổi nhẹ: I.9 tr.1 `0.72:0.862:0.96:0.96`; I.16 tr.2 `0.84:0.64:0.95:0.755`; I.18 tr.3 `0.72:0.035:0.96:0.117`.
 - Hình chưa ưng: không có. Lưu ý: dấu thập phân trên màn hình vẽ thành dấu phẩy ("36,7") cho khớp cách ghi số của đề, ảnh gốc là dấu chấm ("36.7").
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.10 (C, H = 90 % như đề in), II.1d (S), III.4 (0,09), III.5 (−12): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

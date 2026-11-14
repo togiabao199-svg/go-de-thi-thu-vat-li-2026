@@ -64,3 +64,9 @@ Hình chưa thật ưng:
 - III.1: gương mặt học sinh vẽ kiểu minh hoạ phẳng (ảnh gốc 243 × 350 điểm ảnh).
 
 Dàn trang sau khi vẽ lại: bản đề 8 trang (ĐẠT), bản lời giải 12 trang (trang 11 trống 7,5 cm, trong giới hạn 1/3).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **I.16: C → A.** Lời giải ghi thêm: phương án C (các phân tử chuyển động hỗn loạn không ngừng) cũng là một nội dung của mô hình động học phân tử trong SGK — đề có hai phương án đúng. Giữ `% KIỂM TRA` cho câu này (sửa lời ghi chú theo đáp án A).
+- **II.2 a): sửa lời đề "xấp xỉ bằng 0,17 mol" thành "0,18 mol"; Sai → Đúng** (n = 3·10⁵·1,5·10⁻³/(8,31·303) ≈ 0,179 mol). Câu II.2 thành Đ Đ S S. Viết lại lời giải ý a, bỏ `% KIỂM TRA` của ý này.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — III.1 (20), III.2 (10): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

@@ -62,3 +62,7 @@ Vẽ theo toạ độ điểm ảnh của ảnh gốc nhúng trong PDF (trang 3:
 Chưa đưa vào hình (như bản cũ): nhãn "B" cùng dải sáng vàng và nét đứt vàng dọc bản cực N của ảnh gốc (không có mũi tên chỉ chiều, không rõ nghĩa); hai nét mảnh ngắn nối từ dây sang bản cực S (không xác định được là bộ phận gì). Kẹp giữ dây trên hai giá vẽ gọn hơn ảnh gốc (khối kẹp, vít hãm, núm kẹp).
 
 Dàn trang sau khi vẽ lại: bản đề 6 trang (ĐẠT), bản lời giải 10 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.1b (Đ): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

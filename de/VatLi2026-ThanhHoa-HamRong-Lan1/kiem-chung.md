@@ -44,3 +44,7 @@
 - I.1: điện trường (E₁, vòng E₂) màu VLdo, từ trường (vòng B₁, B₂) màu VLxanh.
 - I.6: vẽ đúng tỉ lệ (đường thẳng qua −273 °C), không ghi số ở mức thể tích cuối (như gốc).
 - I.13: bốn vòng dây cùng một đường kính, nửa khuất nét đứt, màu đồng.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.4c (S), III.6 (2108): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

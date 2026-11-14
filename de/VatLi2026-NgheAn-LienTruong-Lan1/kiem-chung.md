@@ -63,3 +63,7 @@ Vẽ theo tọa độ điểm ảnh của ảnh gốc nhúng trong PDF (`x=...cm
 - Macro riêng trong file đề: `\NAong`, `\NAongmau` (ống kim loại), `\NAkhopn`, `\NAkhopd` (khớp nối), `\NAvan` (van tay vặn), màu `NAhat`.
 - Chưa ưng: II.2 khung biểu trưng trên nhãn để trống (bỏ chữ nhãn hiệu) nên bình hơi "trơn"; II.2 và II.3 đặt cạnh lời đề nên cỡ còn nhỏ (rộng khoảng 3,1 cm và 3,3 cm) để bản đề giữ 7 trang.
 - Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 10 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.8 (B), II.1c (S), II.2d (S), II.4d (Đ), III.6 (640): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

@@ -56,3 +56,8 @@
 1 hình gốc (III.6, hệ thống sưởi bằng nước nóng) và 1 bảng số liệu (II.4, gõ bằng `tabular`). So hình: `so-hinh/01-cau-III-6.png`, vùng cắt ảnh trang 4 (300 dpi) `0.57:0.72:0.92:0.90`.
 
 - III.6: vẽ lại sơ đồ lò sưởi (vỏ có gạch chéo, hai cửa gió, ống nước có cánh tản nhiệt, động cơ quạt trên chân đế, quạt). Mũi tên không khí nóng tô `VLdo`, không khí lạnh `VLxanh`, ống nước tô chuyển đỏ nhạt dần (nước nóng → nước ấm). Nhãn "Không khí lạnh đi vào" gộp một dòng (bản gốc hai dòng) để không đè nhãn "Quạt".
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **I.11: C → D.** (1), (3) là nguyên nhân khuếch tán; (2) bảo đảm hai khí không phản ứng, không tạo chất mới nên thu được hỗn hợp khí. Viết lại lời giải.
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.4a (S), II.4d (S, giữ `% KIỂM TRA`), III.4 (150), III.5 (32): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

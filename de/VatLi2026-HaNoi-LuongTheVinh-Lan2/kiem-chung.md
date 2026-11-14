@@ -1,4 +1,4 @@
-# Kiểm chứng đáp án – VatLi2026-HaNoi-LuongTheVinh-Lan1
+# Kiểm chứng đáp án – VatLi2026-HaNoi-LuongTheVinh-Lan2
 
 Đề gốc (PDF SieuGioi, THPT Lương Thế Vinh – Hà Nội, lần 1 năm học 2025 – 2026, không có mã đề) không có đáp án, không có lời giải: mọi câu tự giải, các câu có số liệu tính kiểm bằng Python.
 
@@ -62,3 +62,9 @@ Lưu ý:
 - II.3: lời đề ghi "ngọn lửa đèn cồn" nhưng hình gốc vẽ đèn đốt có ống dẫn (kiểu đèn khí); hình vẽ lại theo hình gốc. Không ảnh hưởng đáp án.
 - II.4: trong sơ đồ gốc, mũi tên "Pit-tông" chỉ vào đoạn ống thành gạch chéo (nửa trên), mũi tên "Xilanh" chỉ vào đoạn ống dưới; hình vẽ lại giữ đúng như vậy (hình cũ vẽ pit-tông là một cán có đầu nằm trong ống gạch chéo suốt chiều dài). Không ảnh hưởng đáp án.
 - Hình chưa thật ưng: I.10 (thân và nắp inox tô chuyển màu còn phẳng hơn ảnh chụp, nắp trông vồng hơn ảnh); I.4 (hậu cảnh cây, mây, nhà ở mức cách điệu vì ảnh gốc mờ).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- **II.2 a): giữ Z = 53 đã sửa (đề gốc in ¹³¹₅₁I ở 6 chỗ), sửa lời ý a "79 neutron" thành "77 neutron"; Sai → Đúng** (¹³¹₅₃I → e⁻ + ¹³¹₅₄Xe, Xe có 131 − 54 = 77 neutron). Câu II.2 thành Đ Đ S S. Viết lại lời giải ý a, bỏ `% KIỂM TRA` của câu.
+- **Đổi tên đề: `VatLi2026-HaNoi-LuongTheVinh-Lan1` → `VatLi2026-HaNoi-LuongTheVinh-Lan2`** (VietJack đăng đề này với tên "Lương Thế Vinh – Hà Nội lần 2"; file "Lần 2" của SieuGioi trùng nội dung). Đổi thư mục, file, dòng 1 khung tiêu đề (`… LƯƠNG THẾ VINH -- LẦN 2`), `\tenchuong` (`THPT Lương Thế Vinh, Hà Nội -- Lần 2`), mọi `\label`/`\ref`, thành phẩm (xóa bản Lan1).
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.3d (S), III.2 (200), III.4 (2,7): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

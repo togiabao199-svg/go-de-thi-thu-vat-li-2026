@@ -72,3 +72,7 @@ Macro, màu riêng khai báo trong file đề: `\LDBphieu`, `\LDBcocmo`, `\LDBvi
 Hình chưa ưng: III.1 và III.4 là ảnh chụp nên bản vẽ chỉ đạt mức minh họa (đủ bộ phận, đúng bố cục, chưa có chất liệu như ảnh); III.4 chữ trên lốp cỡ `\footnotesize` nên to hơn ảnh gốc, vành xe sáng hơn ảnh.
 
 Kết quả: bản đề 8 trang (ĐẠT), bản lời giải 11 trang.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.1d (Đ), II.2d (S), II.3c (Đ), II.4c (S): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

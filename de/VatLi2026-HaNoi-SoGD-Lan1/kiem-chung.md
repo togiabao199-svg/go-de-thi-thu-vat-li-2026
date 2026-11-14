@@ -46,3 +46,7 @@
 ## Dàn trang
 
 Bản đề 6 trang (ĐẠT), bản lời giải 9 trang (trang cuối trống 6,9 cm).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.2b (S), II.3: giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

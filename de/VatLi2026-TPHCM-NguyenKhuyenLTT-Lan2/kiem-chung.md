@@ -61,3 +61,7 @@
 - **III.3 (bánh xe đạp trong từ trường)** — vẽ lại: lốp đen có vệt sáng, vành kim loại hai lớp, 20 nan hoa đan chéo nối hai đĩa moay-ơ (lớp sau nhạt, lớp trước đậm), moay-ơ, trục thép xuyên qua bánh xe (nửa sau bị vành che), ống lót đồng thau, hai tiếp điểm đồng thau dạng trụ (một tì vào vành, một tì vào trục) và dây nối. Giữ chiều $\vv{B}$ (hướng lên phải), chiều quay $\omega$, vị trí hai tiếp điểm, nhãn như hình cũ; bánh xe nghiêng theo ảnh gốc (hình cũ nghiêng ngược lại vài độ, không mang thông tin).
 - Sơ đồ / đồ thị I.4, I.8, III.6 giữ nguyên.
 - Hình chưa ưng: không có hình nào phải để lại. II.2 hai quạt vẽ theo phép chiếu xiên (affine) nên không co phối cảnh như ảnh render 3D gốc; khuỷu nối ống dưới vào đáy khối tản nhiệt vẽ gọn hơn ảnh.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — II.1b (S, đọc hình): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

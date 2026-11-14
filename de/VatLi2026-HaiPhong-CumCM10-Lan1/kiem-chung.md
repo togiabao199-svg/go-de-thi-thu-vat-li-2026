@@ -65,3 +65,7 @@ Bản đề tăng cỡ hình II.1 (14,4 × 8,1 cm) và II.2 (9,5 × 6,1 cm) đ�
 Hình chưa ưng: II.1 — bơm nước và van hằng nhiệt mới ở mức khối kim loại đơn giản (ảnh gốc là chi tiết đúc phức tạp), nhãn "Van hằng nhiệt", "Quạt" sát hình vì chữ `\footnotesize` lớn hơn chữ ảnh gốc; I.10 — chữ S, N trên mặt cực để đứng (ảnh gốc in nghiêng theo mặt), tấm kim loại để màu xám nhôm (ảnh gốc Hình 2 tô xanh).
 
 Macro mới trong file đề: `\VLguitar{x}{y}{tỉ lệ}{góc xoay}{màu thân}` (dùng chung được, có các điểm `(VLguitar-pu1..3)`, `(VLguitar-pu3p)`, `(VLguitar-dau)`, `(VLguitar-than)`); macro riêng `\CMnamchamU`, `\CMgiatreo`, `\CMdaytreo`, `\CMtam`, `\CMthanh`, `\CMvanh`, `\CMdaydong`, `\CMong`, `\CMongkl`.
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.6 (A, "Mười độ chia"), II.3b, c, II.4a, b (đọc hình): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.

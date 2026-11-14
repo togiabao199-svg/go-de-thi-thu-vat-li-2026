@@ -56,3 +56,7 @@
 - Sơ đồ, đồ thị còn lại (I.2, I.5, I.10, I.18, II.2, III.1): giữ nguyên.
 - Macro riêng thêm vào file đề: `\LSbinhtichap{x}{y}{tỉ lệ}` (bình tích áp, có toạ độ gắn nhãn `(LSbt-nuoc)`, `(LSbt-khi)`, `(LSbt-ra)`, `(LSbt-vao)`, `(LSbt-role)`), `\LSkhop{x}{y}{r}` (khớp nối tròn của giá thí nghiệm), `\LSdencon{x}{y}{tỉ lệ}` (đèn cồn thủy tinh).
 - Dàn trang sau khi vẽ lại: bản đề 7 trang (ĐẠT), bản lời giải 10 trang. Cỡ hình: II.1 6,67 × 4,32 cm; II.3 10,51 × 4,72 cm; II.4 5,96 × 5,80 cm (đứng cạnh câu dẫn cao hơn hình nên không tốn thêm chiều cao trang).
+
+## Chốt đáp án (thầy duyệt 14/11/2026)
+
+- Các điểm còn lại ở `kho/KIEM-DAP-AN-V2.md` — I.6, II.1c (đọc hình): giữ như file, thầy chốt 14/11/2026. Các `% KIỂM TRA` khác giữ nguyên.
