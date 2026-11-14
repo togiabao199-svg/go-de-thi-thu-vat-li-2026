@@ -9,9 +9,34 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-% màu riêng của đề: da người, vải kaki
-\definecolor{HPda}{RGB}{238,196,160}
-\definecolor{HPkaki}{RGB}{226,206,160}
+\usetikzlibrary{fadings}% vùng sáng, bóng mờ dần (I.5, I.14)
+% vệt mờ tròn: đậm ở tâm, trong suốt dần tới mép hình, dùng path fading=HPhaimo
+\tikzfading[name=HPhaimo,inner color=transparent!0,outer color=transparent!100]
+% màu riêng của đề (vẽ lại hình thực tiễn 14/11/2026): I.5 cảnh sát giao thông, I.14 sạc không dây
+\definecolor{HPhaitroi}{RGB}{150,198,242}
+\definecolor{HPhaila}{RGB}{50,90,36}
+\definecolor{HPhailasang}{RGB}{170,184,98}
+\definecolor{HPhaiduong}{RGB}{84,96,118}
+\definecolor{HPhaiduongsang}{RGB}{206,200,190}
+\definecolor{HPhaida}{RGB}{214,156,116}
+\definecolor{HPhaidatoi}{RGB}{96,50,36}
+\definecolor{HPhaimu}{RGB}{210,163,94}
+\definecolor{HPhaiao}{RGB}{247,239,206}
+\definecolor{HPhaichu}{RGB}{44,54,116}
+\definecolor{HPhaido}{RGB}{128,30,36}
+% mũ bảo hiểm bóng: đổ bóng tròn nhiều nấc (tâm là điểm sáng)
+\pgfdeclareradialshading{HPhaimuSh}{\pgfpoint{0bp}{0bp}}{color(0bp)=(white!90!HPhaimu); color(4bp)=(white!62!HPhaimu); color(9bp)=(HPhaimu!62!white); color(16bp)=(HPhaimu); color(28bp)=(HPhaimu!82!brown!86!black); color(50bp)=(HPhaimu!55!brown!62!black)}
+% vệt bóng mép mờ: đậm đều tới 0,84 bán kính hình rồi mờ dần tới mép (bóng đổ của đế sạc), dùng path fading=HPhaimep
+\pgfdeclareradialshading{HPhaimepS}{\pgfpoint{0bp}{0bp}}{color(0bp)=(pgftransparent!0); color(21bp)=(pgftransparent!0); color(25bp)=(pgftransparent!100); color(50bp)=(pgftransparent!100)}
+\pgfdeclarefading{HPhaimep}{\pgfuseshading{HPhaimepS}}
+\definecolor{HPhaitham}{RGB}{138,124,134}
+\definecolor{HPhaitay}{RGB}{238,204,194}
+\definecolor{HPhaihong}{RGB}{232,58,142}
+\definecolor{HPhaicam}{RGB}{238,82,62}
+\definecolor{HPhaimanxanh}{RGB}{78,140,226}
+% vệt mờ theo chiều ngang: đậm ở mép trái, trong suốt từ khoảng 45% bề rộng hình (đầu gần màn hình điện thoại), dùng path fading=HPhaidau
+\pgfdeclarehorizontalshading{HPhaidauS}{100bp}{color(0bp)=(pgftransparent!0); color(27bp)=(pgftransparent!0); color(48bp)=(pgftransparent!100); color(100bp)=(pgftransparent!100)}
+\pgfdeclarefading{HPhaidau}{\pgfuseshading{HPhaidauS}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT HẢI PHÒNG -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -74,67 +99,259 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{15\baselineskip}
+	\NeedspaceCau{16.4\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Trong hình vẽ bên cho biết một cảnh sát giao thông đang dùng súng bắn tốc độ rađa để kiểm tra tốc độ của các phương tiện giao thông trên đường. Sóng phát ra từ súng truyền đi theo hướng Bắc sang Nam. Ở thời điểm $t$, tại một điểm $M$ trên đường truyền sóng, vectơ cảm ứng từ $\vv{B}$ có hướng thẳng đứng từ dưới lên trên thì vectơ cường độ điện trường $\vv{E}$ có hướng
 		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round,font=\footnotesize]
-				\begin{scope}
-					\clip[rounded corners=2pt] (0,0) rectangle (5.4,3.5);
-					% trời, mây
-					\shade[top color=VLxanh!40,bottom color=white] (0,1.4) rectangle (5.4,3.5);
-					\fill[white] (1.0,3.05) circle (0.32) (1.4,3.2) circle (0.38) (1.85,3.05) circle (0.3) (0.35,2.5) circle (0.22) (0.65,2.55) circle (0.28) (4.9,3.2) circle (0.35);
-					% nhà, cây phía xa
-					\fill[gray!15] (1.25,1.5) rectangle (1.85,1.9);
-					\fill[gray!35] (1.18,1.9)--(1.55,2.1)--(1.92,1.9)--cycle;
-					\shade[top color=VLla!80!black,bottom color=VLla!45!black] (1.9,1.5) .. controls (2.0,1.95) and (2.3,2.05) .. (2.6,2.0) .. controls (2.9,2.25) and (3.4,2.25) .. (3.7,2.05) .. controls (4.0,2.2) and (4.4,2.0) .. (4.6,1.8)--(4.6,1.5)--cycle;
-					\shade[top color=VLla!80!black,bottom color=VLla!45!black] (0,3.5)--(0,2.9) .. controls (0.3,3.0) and (0.4,3.2) .. (0.8,3.5)--cycle;
-					% đường
-					\shade[top color=gray!40,bottom color=gray!65] (0,0)--(5.4,0)--(5.4,1.42)--(0,1.52)--cycle;
-					\fill[gray!25] (0,0)--(0.5,0)--(0.06,1.5)--(0,1.5)--cycle;
-					\draw[white,line width=0.8pt] (0.5,0)--(0.06,1.5);
-					\fill[white] (0.75,1.47)--(0.88,1.47)--(2.9,0.62)--(2.72,0.62)--cycle;
-					% dải phân cách
-					\foreach \x [count=\k] in {2.1,2.28,...,5.3}{\ifodd\k\relax\fill[white] (\x,1.44) rectangle (\x+0.18,1.6);\else\fill[VLdo!80] (\x,1.44) rectangle (\x+0.18,1.6);\fi}
-					% xe phía xa
-					\fill[VLla!60!black] (0.62,1.5) rectangle (1.02,1.78);
-					\fill[white!80!VLxanh] (0.67,1.62) rectangle (0.97,1.74);
-					\fill[black!75] (0.3,1.38) rectangle (0.42,1.6) (1.05,1.3) rectangle (1.18,1.55);
-				\end{scope}
-				% cảnh sát: lưng, vai
-				\shade[top color=HPkaki!90!white,bottom color=HPkaki!80!black] (3.55,0)--(3.7,0.85) .. controls (3.85,1.15) and (4.1,1.3) .. (4.4,1.35)--(5.4,1.4)--(5.4,0)--cycle;
-				\draw[HPkaki!55!black,very thin] (4.35,1.3) .. controls (4.5,0.9) and (4.7,0.6) .. (4.9,0.4);
-				\filldraw[fill=VLxanh!60,draw=VLxanh!40!black,very thin] (3.95,0.35)--(4.25,0.42)--(4.22,0.78)--(4.08,0.85)--(3.92,0.72)--cycle;
-				\fill[yellow!80!orange] (4.08,0.6) circle (0.06);
-				\draw[VLdo!70!black,line width=1.2pt] (4.4,1.32) .. controls (4.2,1.2) and (4.05,1.15) .. (3.9,1.18);
-				% tay, súng bắn tốc độ
-				\shade[left color=HPda!80!black,right color=HPda] (3.45,0)--(3.35,1.25)--(3.6,1.32)--(3.72,0)--cycle;
-				\fill[black!80] (3.3,1.3) rectangle (3.42,1.75);
-				\shade[top color=black!70,bottom color=black!90,rounded corners=1.5pt] (2.75,1.72) rectangle (3.75,2.3);
-				\fill[gray!55,rounded corners=1pt] (2.85,1.8) rectangle (3.35,2.2);
-				\shade[left color=black!85,right color=black!60] (3.55,1.95) rectangle (4.0,2.35);
-				\shade[top color=HPda,bottom color=HPda!75!black,rounded corners=2pt] (3.22,1.22) rectangle (3.52,1.5);
-				% mũ bảo hiểm
-				\fill[black!80] (4.05,1.55) .. controls (4.1,1.4) and (4.5,1.35) .. (5.0,1.42)--(5.0,1.62)--cycle;
-				\shade[ball color=HPkaki!85!yellow] (4.75,2.2) ellipse (0.75 and 0.68);
-				\fill[black!80] (4.05,1.82) .. controls (4.25,1.65) and (4.9,1.6) .. (5.45,1.72)--(5.45,1.8) .. controls (4.9,1.69) and (4.3,1.75) .. (4.06,1.9)--cycle;
-				\fill[black!75] (4.05,1.95) rectangle (4.13,2.35);
-				\fill[black!80] (4.32,2.0) circle (0.06);
-				\node[VLxanh!70!black,font=\scriptsize\bfseries] at (4.88,2.4) {CSGT};
-			\end{tikzpicture}
-		\end{center}
+		\par\noindent
+		\begin{minipage}[c]{0.42\linewidth}
 		\choice
 		{từ đông sang tây}
 		{từ trên xuống dưới}
 		{từ dưới lên trên}
 		{\True từ tây sang đông}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.56\linewidth}
+			\centering
+			\begin{tikzpicture}[x=0.0365cm,y=-0.0365cm,line join=round,line cap=round,font=\footnotesize]
+				\pgfmathsetseed{1405}
+				\begin{scope}
+					\clip (0,0) rectangle (245,167);
+					% ===== trời, mây (toạ độ theo điểm ảnh gốc 245 x 167, trục y hướng xuống)
+					\shade[top color=HPhaitroi,bottom color=HPhaitroi!8!white] (0,0) rectangle (245,82);
+					% mây: các vệt trắng mờ dần ra mép (đáy mây xám xanh nhạt)
+					\foreach \x/\y/\a/\b in {58/27/13/4,82/25/14/4,104/30/12/4,122/33/9/3,24/49/11/3.5,40/57/10/3,110/46/12/3,70/46/14/3,228/32/10/3}
+						{\fill[HPhaitroi!60!gray!50!white,path fading=HPhaimo,opacity=0.8] (\x,\y) ellipse[x radius=2*\a,y radius=2*\b];}
+					\foreach \x/\y/\a/\b/\o in {50/15/10/9/1,60/7/13/10/1,75/3/14/10/1,91/3/13/9/1,105/9/12/9/1,117/17/11/8/1,127/23/8/6/1,66/18/12/8/1,83/15/13/8/1,99/19/12/7/1,111/25/10/6/1,121/29/8/4.5/0.9,64/37/10/6/0.85,80/39/11/6/0.85,95/41/10/5/0.8,107/38/9/5/0.8,119/38/9/5/0.8,131/34/7/4/0.75,6/42/7/5/0.9,17/38/9/6/0.9,29/40/9/6/0.9,41/45/8/5/0.85,52/49/7/4/0.8,9/52/9/6/0.85,22/52/10/6/0.85,35/55/9/5/0.8,47/58/8/4/0.75,4/60/7/4/0.75,212/27/7/4/0.85,221/21/9/6/0.95,232/14/10/8/1,243/11/9/8/1,241/25/9/6/0.95,228/28/8/4/0.85,240/36/8/4/0.8,152/31/6/3/0.6,165/32/7/3.5/0.6}
+						{\fill[white,path fading=HPhaimo,opacity=\o] (\x,\y) ellipse[x radius=2*\a,y radius=2*\b];}
+					\foreach \x/\y/\a/\b in {62/8/9/6,77/5/10/6,92/5/9/5,106/11/8/5,72/15/9/4,90/14/9/4,20/41/6/4,32/43/6/3,235/14/7/5,85/38/7/3}
+						{\fill[white,path fading=HPhaimo] (\x,\y) ellipse[x radius=2*\a,y radius=2*\b];}
+					% dây điện, cột điện
+					\draw[gray!50,line width=0.3pt] (116,1) .. controls (140,12) and (160,22) .. (186,34);
+					\draw[gray!45,line width=0.25pt] (120,6) .. controls (142,16) and (162,25) .. (186,37);
+					\shade[left color=gray!30,right color=gray!55] (157.9,0) rectangle (159.1,38);
+					% ===== nhà, cây ở xa
+					\fill[gray!12] (0,60) rectangle (16,74);
+					\fill[gray!20] (16,62) rectangle (28,74);
+					\fill[gray!30] (2,64) rectangle (5.5,67.5) (8.5,64) rectangle (12,67.5) (19,66) rectangle (25,68.5);
+					\fill[gray!28] (24,56) rectangle (48,57.2) (24,59.8) rectangle (48,60.6);
+					\draw[gray!35,line width=0.3pt] (26,57.2)--(26,72) (46,57.2)--(46,72);
+					% nhà mái trắng
+					\fill[HPhaiao!50!gray!30!white] (61,53) rectangle (90,64);
+					\fill[gray!38] (64,56.5) rectangle (67.5,60.5) (71.5,56.5) rectangle (75,60.5) (79.5,56.5) rectangle (83,60.5);
+					\shade[top color=white,bottom color=gray!18] (59,53.6)--(62.5,46.8)--(83,46.2)--(92.5,54.4)--(83,54.4)--cycle;
+					\draw[gray!35,line width=0.3pt] (59,53.6)--(62.5,46.8)--(83,46.2)--(92.5,54.4) (83,46.2)--(83,54.4);
+					% hàng cây xa bên trái
+					\foreach \x/\y/\a/\b in {44/66/5/6,51/63/6/6,58/64/5/6,65/62/5/6,72/64/4/5,79/63/5/6,87/62/5/6,94/63/5/7,100/62/4/6}
+						{\fill[HPhaila!40!HPhailasang!85!white] (\x,\y) ellipse[x radius=\a,y radius=\b];}
+					\foreach \i in {1,...,80}{\pgfmathsetmacro{\px}{40+62*rnd}\pgfmathsetmacro{\py}{57+14*rnd}\pgfmathtruncatemacro{\t}{25+60*rnd}
+						\fill[HPhailasang!\t!HPhaila,opacity=0.75] (\px,\py) ellipse[x radius=0.7+1*rnd,y radius=0.6+0.7*rnd];}
+					\fill[orange!75!yellow] (54,64) circle (1.5) (57,66.5) circle (1) (52.5,67) circle (0.8);
+					\fill[HPhaila!65!black] (40,69.8) rectangle (104,74);
+					\foreach \x in {45,52,58,63,70,77,84,90,96,102}{\fill[black!50] (\x,68.5) rectangle (\x+1,74);}
+					\fill[VLdo!45!white] (68,67.8) rectangle (75.5,72) (100,68.5) rectangle (105,72);
+					\fill[white!90!gray] (114,67.5) rectangle (122,73);
+					% khối cây lớn phía sau súng
+					\begin{scope}
+						\clip (92,76)--(95,63)--(100,57)--(107,54)--(113,49)--(119,46)--(125,43)--(131,40)--(138,38.5)--(146,36)--(153,34.5)--(161,33.5)--(169,34.5)--(176,36)--(186,38)--(186,76)--cycle;
+						\fill[HPhaila!60!HPhailasang] (90,30) rectangle (188,77);
+						\foreach \i in {1,...,340}{\pgfmathsetmacro{\px}{91+96*rnd}\pgfmathsetmacro{\py}{32+45*rnd}
+							\pgfmathtruncatemacro{\t}{max(5,min(95,118-1.9*(\py-33)+50*(rnd-0.5)))}
+							\fill[HPhailasang!\t!HPhaila] (\px,\py) ellipse[x radius=1.1+1.5*rnd,y radius=0.8+1*rnd];}
+					\end{scope}
+					\foreach \x/\y in {96/62,99/58,103/55.5,107.5/53.2,112/50,116.5/47.6,121.5/45.4,126.5/42.8,131.5/40.2,136.5/38.8,141.5/37.6,146.5/36.2,151.5/35,156.5/34.2,161.5/33.8,166.5/34.4,171.5/35.4,176.5/36.6,181.5/37.6}
+						{\fill[HPhailasang!75!HPhaila] (\x+2*rnd-1,\y+1.5*rnd-0.5) circle (1.2+1.3*rnd);\fill[HPhailasang!50!white,opacity=0.8] (\x-0.7,\y-0.9) ellipse[x radius=0.8,y radius=0.6];}
+					% cây, nhà bên phải mũ
+					\fill[HPhaila!55!HPhailasang] (235,54)--(236,40)--(239,32)--(245,27)--(245,54)--cycle;
+					\foreach \i in {1,...,30}{\pgfmathsetmacro{\px}{236+9*rnd}\pgfmathsetmacro{\py}{29+24*rnd}\pgfmathtruncatemacro{\t}{20+60*rnd}\fill[HPhailasang!\t!HPhaila] (\px,\py) circle (0.6+0.9*rnd);}
+					\fill[gray!25] (236,50) rectangle (245,77);
+					\fill[gray!65] (236,50)--(245,48)--(245,53.5)--(236,55)--cycle;
+					\fill[gray!45] (238.5,58) rectangle (245,73);
+					\fill[gray!18] (240,60) rectangle (243,66);
+					% cột đèn bên đường
+					\draw[gray!45,line width=0.5pt] (82.6,12)--(82.6,74);
+					% tán cây góc trái phía trên
+					\fill[HPhaila!45!black] (0,0)--(45,0)--(41,4)--(34,9)--(27,14)--(21,19)--(18,27)--(14,30)--(11,25)--(6,22)--(0,23)--cycle;
+					\foreach \x/\y in {1/21,5/22,9/23.5,12/27,14/30.5,16/26,18/21.5,22/18,26/14.5,30/11.5,34/8.5,38/5.5,42/2.5,46/1,30/3,20/7,9/10,4/15,25/2,36/1,15/12,6/4}
+						{\foreach \j in {1,...,7}{\pgfmathtruncatemacro{\t}{22+38*rnd}\fill[HPhaila!\t!black] (\x+4.4*rnd-2.2,\y+4.4*rnd-2.2) ellipse[x radius=0.8+1.1*rnd,y radius=0.6+0.8*rnd];}}
+					\foreach \x/\y/\a/\b in {8/8/1.4/0.7,20/5/0.9/0.5,13/15/1/0.6,27/9/0.7/0.4,31/4/0.8/0.4}{\fill[HPhaitroi!45!white] (\x,\y) ellipse[x radius=\a,y radius=\b];}
+					\foreach \j in {1,...,12}{\fill[HPhaila!35!black] (66+10*rnd,0.3+4.5*rnd) ellipse[x radius=0.8+0.9*rnd,y radius=0.6+0.6*rnd];}
+					% ===== mặt đường
+					\shade[top color=HPhaiduong!72!white,bottom color=HPhaiduong!92!black] (0,70) rectangle (245,167);
+					\fill[HPhaiduongsang!85!HPhaiduong] (0,71)--(245,71)--(245,77)--(120,83.5)--(100,87)--(60,88.5)--(36,89.5)--(0,87)--cycle;
+					% dải phân cách sơn sọc đỏ trắng
+					\shade[top color=white,bottom color=white!85!gray] (38,73.5)--(100,74.5)--(160,75.5)--(245,76.5)--(245,91)--(160,86)--(100,81)--(38,78)--cycle;
+					\begin{scope}
+						\clip (84,74)--(160,75.5)--(245,76.5)--(245,91)--(160,86)--(84,80.5)--cycle;
+						\foreach \x/\w/\s in {86/2.3/1.5,91.5/2.5/1.6,97/2.6/1.7,102.5/2.8/1.8,108/2.9/1.9,113.5/3/2,119/3.1/2.1,145/3.8/2.8,152/4/3,159/4.2/3.2,166.5/4.4/3.4,174/4.6/3.6,207/5.4/6,218/5.6/6.5,229/5.8/7,240/6/7.5}
+							{\fill[VLdo!65!orange!62!white] (\x,73)--(\x+\w,73)--(\x+\w-\s,92)--(\x-\s,92)--cycle;}
+					\end{scope}
+					\draw[gray!40,line width=0.3pt] (38,78)--(100,81)--(160,86)--(245,91);
+					\draw[white,line width=0.4pt] (38,73.5)--(100,74.5)--(160,75.5)--(245,76.5);
+					% vệt nắng, bóng cây trên mặt đường
+					\fill[HPhaiduongsang] plot[smooth cycle,tension=0.45] coordinates {(28,131) (35,126.5) (43,122) (52,121.5) (60,118.6) (70,120) (80,116.8) (92,117) (104,115.6) (118,115.4) (134,114.6) (152,113.4) (152,146) (132,144.8) (112,143.8) (92,142.6) (72,141.4) (54,139) (41,135.8) (31,133.4)};
+					\fill[HPhaiduongsang] (150,101)--(176,99)--(225,90)--(245,90)--(245,167)--(150,167)--cycle;
+					\draw[HPhaiduong!85!black,line width=0.8pt] (99,115.8)--(152,143.5);
+					\draw[HPhaiduong!85!black,line width=0.55pt] (72,141.2)--(152,120);
+					\foreach \i in {1,...,70}{\fill[HPhaiduong!70!black,opacity=0.2] (40+110*rnd,92+75*rnd) circle (0.3);}
+					% vạch sơn
+					\fill[white!85!HPhaiduong] (35,89.2)--(38,88.6)--(130,110.3)--(129,113.2)--cycle;
+					\fill[white!45!HPhaiduong,opacity=0.5] (37,90.6)--(60,92.6)--(59.5,93.8)--(37,92)--cycle;
+					% lề đường trái: vỉa hè, rãnh nước (từng tấm), bó vỉa
+					\fill[gray!40!brown!35!HPhaiduong] (0,86)--(5,88)--(9,99)--(27,167)--(0,167)--cycle;
+					\foreach \i in {1,...,40}{\pgfmathsetmacro{\py}{94+73*rnd}\fill[black!40!brown,opacity=0.18] ({rnd*(\py-82)*0.28},\py) ellipse[x radius=0.6+0.8*rnd,y radius=0.4+0.4*rnd];}
+					\shade[left color=HPhaitroi!45!gray,right color=HPhaitroi!35!white] (7,98)--(14,98)--(49,167)--(27,167)--cycle;
+					\foreach \t in {0.12,0.3,0.48,0.66,0.84}{\draw[HPhaiduong!70!black,line width=0.35pt,opacity=0.7] ({7+20*\t},{98+69*\t})--({14+35*\t},{98+69*\t});}
+					\fill[white,opacity=0.4] (10.5,106)--(12.5,106)--(23,129)--(20,129)--cycle (26,141)--(29.5,141)--(37,158)--(33.5,158)--cycle;
+					\draw[HPhaiduong!60!black,line width=0.45pt] (14,98)--(49,167);
+					\draw[white!65!gray,line width=0.35pt] (7,98)--(27,167);
+					\foreach \x/\y/\r in {12/112/1.1,17/124/1.4,21/132/0.9,26/142/1.2,30/152/1,35/160/1.5,39/165/0.9}{\fill[black!65,opacity=0.5] (\x,\y) ellipse[x radius=\r,y radius=0.7*\r];}
+					% rác bên lề
+					\fill[white!88!gray] (0.5,95.5) .. controls (1,93) and (4.5,92.5) .. (6,94.5) .. controls (7,96.5) and (5,99.5) .. (2.5,99.5) .. controls (1,99.3) and (0.4,97.5) .. (0.5,95.5)--cycle;
+					\fill[white!80!HPhaitroi] (6,101) .. controls (7.5,99) and (10.5,99.5) .. (11,102) .. controls (11.5,105) and (9.5,107.5) .. (7.5,107) .. controls (5.5,106) and (5.2,103) .. (6,101)--cycle;
+					\fill[HPhaitroi!40!gray] (4.6,100.4) ellipse (1.3 and 1);
+					% xe buýt, xe máy, người ở xa
+					\fill[white!88!gray] (0,72.5) rectangle (6,78);
+					\fill[black,opacity=0.22] (34,81.6) ellipse (10 and 1.4);
+					\shade[top color=white,bottom color=white!85!gray,rounded corners=1.2pt] (25.5,65.5) rectangle (42.5,80.5);
+					\fill[VLla!80!black!75!white] (25.5,74) rectangle (42.5,79.2);
+					\fill[HPhaiduong!50!white,rounded corners=0.6pt] (26.8,67.8) rectangle (41.2,73.2);
+					\fill[white,opacity=0.35] (27.5,68.2)--(31,68.2)--(29,72.8)--(27.5,72.8)--cycle;
+					\fill[black!60] (28.5,66.1) rectangle (39.5,67.2);
+					\fill[orange!80!yellow] (29.2,66.3) rectangle (33,67);
+					\fill[black!55] (25.8,79) rectangle (42.2,80.6);
+					\fill[yellow!45!white] (27.4,76.6) circle (0.8) (40.6,76.6) circle (0.8);
+					\fill[black!75] (26.3,80.2) rectangle (28.9,82.3) (39.1,80.2) rectangle (41.7,82.3);
+					\fill[black,opacity=0.3] (36.3,90.3) ellipse (4.6 and 1);
+					\fill[HPhaiduong!55!black,rounded corners=0.8pt] (34.4,80) rectangle (38.3,87.3);
+					\fill[black!75,rounded corners=0.5pt] (35.6,86) rectangle (37.1,90.6);
+					\fill[HPhaichu!50!black!80!white,rounded corners=1pt] (33.2,74.3) rectangle (39,81.2);
+					\draw[HPhaichu!50!black!80!white,line width=0.9pt] (33.6,77)--(32.8,80.3) (38.6,77)--(39.6,80.3);
+					\fill[black!70] (36.1,72.3) circle (1.9);
+					\fill[white!80!yellow] (36.35,81.6) circle (0.6);
+					\fill[black,opacity=0.25] (10,84.6) ellipse (2.6 and 0.6);
+					\fill[black!60,rounded corners=0.8pt] (8.3,75) rectangle (11.7,81);
+					\fill[black!68] (10,73.6) circle (1.6);
+					\fill[black!72] (9.3,80.6) rectangle (10.7,84.4);
+					\fill[gray!55] (18.6,81.5) rectangle (20.4,84);
+					\fill[VLdo!30!white,rounded corners=0.6pt] (18.1,76) rectangle (20.9,81.8);
+					\fill[black!55] (19.5,74.6) circle (1.3);
+					% ===== súng bắn tốc độ
+					% hộp lớn phía sau
+					\shade[top color=black!58,bottom color=black!90,rounded corners=2.5pt] (146,63.5)--(160,63.4) .. controls (166.2,64) and (166.6,79) .. (161,81.2)--(150,81.8)--(146,79.2)--cycle;
+					\fill[gray!60!black,rounded corners=1pt] (151,70.6) rectangle (160.4,77.8);
+					\fill[white,opacity=0.16] (152,71.2)--(156,71.2)--(153.5,77.2)--(152,77.2)--cycle;
+					\fill[white,opacity=0.3] (149,64.6) rectangle (161,65.8);
+					% ống ngắm, khối trên
+					\shade[top color=black!52,bottom color=black!88,rounded corners=1.5pt] (127.5,68.5)--(131,66.6)--(144,65.5)--(147.2,65.5)--(147.2,79.6)--(135,76.6)--(127.5,75.6)--cycle;
+					\fill[gray!45!white] (131,66.5)--(144,65.4)--(144.3,67.6)--(131,68.4)--cycle;
+					\fill[white] (128.4,71.2) rectangle (134,74.4);
+					\fill[white!85!VLdo] (145.2,67.5) rectangle (146.8,74.6);
+					% thân giữa
+					\shade[left color=black!78,right color=black!92] (131,76)--(147.2,78)--(147.2,93.6)--(131,93.6)--cycle;
+					% đầu phát (mặt trước)
+					\fill[black!88,rounded corners=2.6pt] (118.4,74.4) rectangle (134.9,92.9);
+					\shade[top color=gray!50!HPhaitroi!60!white,bottom color=gray!55!black,rounded corners=2pt] (119.7,75.6) rectangle (133.7,91.7);
+					\fill[white,opacity=0.35,rounded corners=1pt] (120.4,76.2) rectangle (133,77.9);
+					\fill[white,opacity=0.1] (121.5,78.2) rectangle (124.6,91);
+					\fill[black,opacity=0.2] (119.7,86)--(133.7,88)--(133.7,91.7)--(119.7,91.7)--cycle;
+					% ống kính, núm
+					\filldraw[fill=black!75,draw=gray!55,line width=0.35pt] (134.7,86) circle (2.9);
+					\shade[inner color=white,outer color=VLxanh!40!gray] (134.3,85.6) circle (1.7);
+					\filldraw[fill=black!88,draw=gray!45,line width=0.35pt] (142.8,86.4) circle (3.1);
+					\shade[inner color=gray!70,outer color=black!80] (142.2,85.7) circle (1.5);
+					% giá đỡ, cò, báng cầm
+					\shade[top color=gray!55,bottom color=black!90] (125.5,92.4) rectangle (146.6,99.6);
+					\fill[black!88,rounded corners=0.6pt] (125.4,93) rectangle (128.9,98.8);
+					\shade[left color=black!62,right color=black!92,rounded corners=1.2pt] (129.8,98.4)--(136.7,98.4)--(136.3,113.6)--(130.4,114.1)--cycle;
+					\foreach \y in {100.6,102.6,...,112.6}{\draw[gray!50,line width=0.3pt] (130.6,\y)--(136,\y);}
+					% bàn tay phải nắm báng
+					\shade[top color=HPhaida!65!white,bottom color=HPhaida!85!black] (135,99.4) .. controls (138.5,98.5) and (142,98.6) .. (145.5,100)--(145.5,113.6) .. controls (141.5,115.2) and (138,114.8) .. (135.6,113.2) .. controls (135,109) and (134.8,104) .. (135,99.4)--cycle;
+					\draw[HPhaida!55!black,line width=0.3pt] (135.6,103.5) .. controls (138.5,102.8) and (141.5,103) .. (144.5,104) (135.7,107.6) .. controls (138.5,107) and (141.5,107.3) .. (144.5,108.3);
+					\foreach \y in {98.6,101.8,105}{\shade[top color=HPhaida!60!white,bottom color=HPhaida!78!black] (132,\y) .. controls (129.5,\y-0.3) and (127.4,\y+0.3) .. (127.3,\y+1.6) .. controls (127.3,\y+2.9) and (129.5,\y+3.2) .. (132,\y+2.9)--cycle;}
+					% ===== cảnh sát giao thông
+					% cẳng tay phải (trong bóng, giữa hai tay)
+					\fill[HPhaidatoi] (163.6,112.3) .. controls (168,111.4) and (174,111.8) .. (181,114)--(182,119) .. controls (179,121) and (176,125) .. (173.5,130) .. controls (172,134) and (171,138) .. (169,141.5) .. controls (167.8,137) and (167,131) .. (166,125) .. controls (165.3,121) and (164.4,118) .. (163.6,116)--cycle;
+					\fill[HPhaida!50!HPhaidatoi] (163.6,112.5) .. controls (165.5,112.1) and (167.5,112) .. (169.5,112.2)--(168.5,117.5) .. controls (166.8,118) and (165.4,118.2) .. (164.2,118)--cycle;
+					\draw[black!70,line width=0.5pt] (159.5,112.8) .. controls (166,112.6) and (172,114) .. (178,116.8);
+					% áo sơ mi vàng kem
+					\fill[HPhaiao] (152,167)--(152.5,154)--(154.5,147.5)--(159,144)--(166,141)--(169,135)--(172,127)--(176,120)--(180,113.5)--(185,105)--(190,100)--(197,101)--(206,97)--(215,92.5)--(222,89)--(226,96)--(231,102)--(235,108)--(237.5,118)--(237.5,135)--(236,150)--(235,160)--(236,167)--cycle;
+					\shade[left color=HPhaiao,right color=HPhaiao!62!gray!85!brown] (198,100.5)--(206,97)--(215,92.5)--(222,89)--(226,96)--(231,102)--(235,108)--(237.5,118)--(237.5,135)--(236,150)--(235,160)--(236,167)--(206,167) .. controls (210,152) and (214,138) .. (214,126) .. controls (213,116) and (207,107) .. (198,100.5)--cycle;
+					\fill[HPhaiao!48!gray!80!brown,path fading=HPhaimo,opacity=0.9] (222,100) ellipse (28 and 20);
+					\draw[HPhaiao!45!gray!70!brown,line width=1pt,opacity=0.75] (196,167) .. controls (202,156) and (208,146) .. (214,137);
+					\draw[HPhaiao!45!gray!70!brown,line width=0.6pt,opacity=0.6] (207,102) .. controls (218,106) and (228,115) .. (234,128);
+					\draw[HPhaiao!45!gray!70!brown,line width=0.6pt,opacity=0.5] (218,120) .. controls (224,132) and (228,147) .. (229,167);
+					\draw[white,line width=0.8pt,opacity=0.6] (186,150) .. controls (192,140) and (196,132) .. (198,122);
+					% gáy, cổ áo, quai mũ
+					\fill[HPhaidatoi] (182,85)--(224,82)--(222,88.5)--(215,92.5)--(206,97)--(197,101)--(190,100)--(185,95)--cycle;
+					\fill[HPhaida!45!HPhaidatoi] (191,95) .. controls (194,94) and (198,93.6) .. (201,94.2)--(204.5,97.4)--(197,101)--(190,100.5)--cycle;
+					\draw[HPhaiao!60!gray!80!brown,line width=0.5pt] (190,100.3)--(197,101.2)--(206,97.2)--(215,92.7)--(222,89.2);
+					\fill[black!88] (179,84)--(185,86)--(190,94)--(191,99.5)--(186.5,99)--(182,93)--cycle;
+					% cầu vai (dây bện đỏ sẫm – trắng – xanh đậm)
+					\begin{scope}
+						\clip[rounded corners=2pt] (203,98.4)--(208.2,102.6)--(181.2,120.6)--(176.4,116.4)--cycle;
+						\fill[HPhaido] (170,90) rectangle (215,125);
+						\foreach \t [count=\i] in {0.03,0.085,...,1.02}{\pgfmathsetmacro{\cx}{205.6-26.6*\t}\pgfmathsetmacro{\cy}{100.4+18.2*\t}
+							\ifodd\i\def\HPhaimau{white}\else\def\HPhaimau{HPhaichu}\fi
+							\draw[\HPhaimau,line width=0.4pt,opacity=0.75] (\cx-0.8,\cy-2.3)--(\cx+0.8,\cy+2.3);}
+						\fill[white,opacity=0.25] (203,98.4)--(176.4,116.4)--(177.4,117.4)--(204,99.4)--cycle;
+						\fill[black,opacity=0.3] (208.2,102.6)--(181.2,120.6)--(179.4,119.2)--(206.4,101.2)--cycle;
+					\end{scope}
+					% phù hiệu tay áo
+					\filldraw[fill=white!92!VLxanh,draw=HPhaido!55!gray,line width=0.45pt] (171.5,130.5) .. controls (175,128.5) and (178,127.5) .. (180.5,127) .. controls (183,132) and (184,137) .. (183.5,141) .. controls (182.5,146) and (180,150) .. (176.5,152) .. controls (172.5,151) and (169.5,149) .. (168,146) .. controls (168.5,140) and (169.5,135) .. (171.5,130.5)--cycle;
+					\shade[top color=VLxanh!35!white,bottom color=VLxanh!72!white] (172.5,132) .. controls (175,130.5) and (177.5,129.5) .. (179.5,129) .. controls (181.5,133) and (182,137) .. (181.6,140.5) .. controls (180.8,144.5) and (178.8,147.5) .. (176.4,149.5) .. controls (173.5,148.6) and (171.4,147) .. (170,144.8) .. controls (170.4,140) and (171.2,136) .. (172.5,132)--cycle;
+					\fill[yellow!80!orange] (176,137.5) circle (1.9);
+					\fill[VLdo] (176,137.5) circle (0.8);
+					\fill[yellow!70!orange] (173.8,142.6) rectangle (178.6,143.8);
+					% mũ bảo hiểm
+					\begin{scope}
+						\clip (178,86) .. controls (174,78) and (173.5,62) .. (175.5,52) .. controls (179,38) and (191,28) .. (206,27.5) .. controls (222,27.5) and (235,38) .. (237.5,54) .. controls (239,66) and (236.5,75) .. (232,80) .. controls (215,82.5) and (195,85) .. (178,86)--cycle;
+						\shade[shading=HPhaimuSh] (201,43) circle (60);
+						\fill[HPhaimu!55!brown!70!black,opacity=0.3] (242,70) ellipse (12 and 26);
+						\fill[HPhaimu!55!brown!70!black,opacity=0.3] (206,86) ellipse (42 and 7);
+						\fill[white,opacity=0.4] (182,48) ellipse (2 and 6);
+					\end{scope}
+					\draw[HPhaidatoi!85!black,line width=0.7pt] (178,86) .. controls (174,78) and (173.5,62) .. (175.5,52) .. controls (176.2,49) and (177,46.5) .. (178,44.5);
+					\fill[black!82!brown] (181,86.6) .. controls (200,85) and (220,82.6) .. (233,79)--(230.5,83.6) .. controls (215,85.6) and (198,87.6) .. (184,88.9)--cycle;
+					\filldraw[fill=HPhaimu!78!brown,draw=HPhaimu!40!black,line width=0.4pt] (181.5,76.6) ellipse (4.9 and 5.7);
+					\fill[white,opacity=0.3] (179.6,72.2) ellipse (1.6 and 1);
+					\fill[black!92] (181.3,76.9) ellipse (3.2 and 4.1);
+					% lưỡi trai kính, dây kính
+					\fill[HPhaichu!40!black] (176.2,47) .. controls (172.5,49.8) and (169,52) .. (167.2,55.6) .. controls (167.4,59.4) and (169.6,61) .. (172.2,60.6) .. controls (174,58.8) and (175.2,56) .. (175.6,53)--cycle;
+					\fill[white,opacity=0.3] (168.8,55.4) .. controls (170.6,53.6) and (172.6,51.8) .. (174.4,50.6)--(174.2,51.5) .. controls (172.6,53) and (170.8,54.6) .. (169.4,56.2)--cycle;
+					\draw[black!75,line width=0.55pt] (168.4,61.6) .. controls (167,65.6) and (167.4,69.6) .. (169.2,73.4);
+					\draw[black!65,line width=0.45pt] (172.2,62.6) .. controls (171.2,66.6) and (171.6,69.6) .. (173,72.6);
+					\node[white,opacity=0.55,font=\fontsize{13.5}{13.5}\selectfont\bfseries,rotate=2,inner sep=0pt] at (204,60.2) {CSGT};
+					\node[HPhaichu,font=\fontsize{13.5}{13.5}\selectfont\bfseries,rotate=2,inner sep=0pt] at (203.7,59.9) {CSGT};
+					% cẳng tay trái, nắm tay (gần máy ảnh, ngón cái dựng lên): tô khối trong vùng cắt theo đường bao
+					\begin{scope}
+						\clip (143.5,167) .. controls (144,160) and (145.5,150) .. (147.5,142) .. controls (149,135) and (149.6,128) .. (149.2,122) .. controls (148.8,119.5) and (147.8,117.5) .. (146.6,116) .. controls (145,112) and (144.2,104) .. (144.3,99) .. controls (144.5,95.5) and (146,93.4) .. (148.5,93) .. controls (149.8,92.8) and (150.8,92.7) .. (151.5,92.3) .. controls (151.9,90.6) and (153,89.1) .. (154.8,89) .. controls (156.8,89.1) and (157.7,90.8) .. (158,93) .. controls (158.3,96.5) and (158.8,100) .. (159.8,102.5) .. controls (161,104.5) and (161.4,107.5) .. (161.2,111) .. controls (161,114) and (160.3,116.5) .. (159.9,119) .. controls (159.9,124) and (160.4,130) .. (160.1,136) .. controls (159.8,141) and (158,145.5) .. (155.6,148.5) .. controls (154,152) and (153.4,158) .. (153.6,167)--cycle;
+						\shade[left color=HPhaida!78!black,right color=HPhaida!85!white] (142,86) rectangle (163,168);
+						\fill[HPhaidatoi,path fading=HPhaimo,opacity=0.9] (155,140) ellipse (11 and 13);
+						\fill[HPhaida!40!white,path fading=HPhaimo,opacity=0.9] (146.5,160) ellipse (7 and 17);
+						\fill[white,path fading=HPhaimo,opacity=0.5] (155,109) ellipse (7 and 10);
+						\fill[white,path fading=HPhaimo,opacity=0.3] (156,127) ellipse (5 and 10);
+						\fill[HPhaidatoi,path fading=HPhaimo,opacity=0.45] (143.5,104) ellipse (4 and 16);
+						\foreach \y in {95.8,101.2,106.4,111.2}{\fill[white,path fading=HPhaimo,opacity=0.55] (147.2,\y) ellipse (2.8 and 2.6);}
+						\draw[HPhaidatoi!75!HPhaida,line width=0.35pt] (144.2,98.6) .. controls (145.6,99.4) and (146.8,99.5) .. (148.4,99.1) (144.2,103.8) .. controls (145.5,104.5) and (146.8,104.6) .. (148.4,104.2) (144.5,108.9) .. controls (145.8,109.6) and (147,109.7) .. (148.6,109.3);
+						% ngón cái: khe tối, viền sáng, móng
+						\fill[HPhaidatoi,path fading=HPhaimo,opacity=0.6] (151.3,97) ellipse (1.6 and 7);
+						\draw[HPhaidatoi,line width=0.7pt] (151.5,92.6) .. controls (151.5,95.6) and (152,98.6) .. (152.7,101.6);
+						\draw[HPhaidatoi!60!HPhaida,line width=0.35pt] (152.6,101.8) .. controls (155,103) and (158,103.2) .. (160,102.5);
+						\fill[white,path fading=HPhaimo,opacity=0.5] (155.6,96.5) ellipse (1.6 and 6);
+						\filldraw[fill=HPhaida!30!white,draw=HPhaida!55!black,line width=0.25pt] (153.1,90.5) .. controls (153.7,89.5) and (155.7,89.4) .. (156.7,90.7)--(156.5,92.4) .. controls (155.3,92.8) and (154.2,92.8) .. (153.3,92.4)--cycle;
+						\draw[HPhaidatoi!55!HPhaida,line width=0.3pt] (149.6,120.5) .. controls (152.5,121.4) and (156.5,121.4) .. (160,120.3);
+					\end{scope}
+				\end{scope}
+				\draw[black!55,line width=0.3pt] (0,0) rectangle (245,167);
+			\end{tikzpicture}
+		\end{minipage}
 		\loigiai{
 			Ba vectơ $\vv{E}$, $\vv{B}$, $\vv{v}$ tạo thành tam diện thuận ($\vv{v}$ cùng chiều $\vv{E}\times\vv{B}$). Với $\vv{v}$ hướng từ Bắc sang Nam, $\vv{B}$ hướng lên thì $\vv{E}$ hướng từ tây sang đông.
 		}
 	\end{ex}
 
-	\NeedspaceCau{3.6\baselineskip}
+	\NeedspaceCau{3.5\baselineskip}
 	\begin{ex}%[VL12-C4-NB]
 		Chất phóng xạ X có hằng số phóng xạ $\lambda$. Ban đầu ($t=0$), một mẫu có $N_0$ hạt nhân X. Tại thời điểm $t$, số hạt nhân X còn lại trong mẫu là
 		\choice
@@ -249,48 +466,117 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{16.5\baselineskip}
+	\NeedspaceCau{14.1\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Sạc không dây được ứng dụng để sạc pin điện thoại có nguyên tắc hoạt động dựa trên hiện tượng cảm ứng điện từ. Khi sạc pin chỉ cần đặt điện thoại lên đĩa sạc đã kết nối nguồn điện như hình. Tương tự như máy biến áp, loại sạc này cũng có cuộn dây sơ cấp và cuộn dây thứ cấp. Hai cuộn dây này gồm
 		% giuhinh
-		\begin{center}
-			\begin{tikzpicture}[line join=round,line cap=round]
-				\begin{scope}
-					\clip[rounded corners=2pt] (0,0) rectangle (4.3,3.2);
-					\shade[top color=gray!40!violet!25,bottom color=gray!65] (0,0) rectangle (4.3,3.2);
-					\foreach \i in {1,...,14}{\draw[gray!45,very thin] (0,{0.2*\i}) .. controls (1.5,{0.2*\i+0.08}) and (2.8,{0.2*\i-0.06}) .. (4.3,{0.2*\i+0.03});}
-				\end{scope}
-				% đĩa sạc
-				\fill[black!35,opacity=0.5] (2.75,0.62) ellipse (1.3 and 0.4);
-				\shade[left color=gray!35,right color=gray!45,middle color=white] (1.5,0.82)--(1.5,0.95) arc[start angle=180,end angle=360,x radius=1.25,y radius=0.38]--(4.0,0.82) arc[start angle=0,end angle=-180,x radius=1.25,y radius=0.38]--cycle;
-				\shade[inner color=white,outer color=gray!20] (2.75,0.95) ellipse (1.25 and 0.38);
-				\draw[gray!55,thin] (2.75,0.95) ellipse (1.25 and 0.38);
-				\draw[gray!45,thin] (2.75,0.97) ellipse (0.85 and 0.25);
-				\shade[inner color=VLxanh!70,outer color=VLxanh!10] (2.75,0.98) ellipse (0.5 and 0.15);
-				% điện thoại
-				\begin{scope}[shift={(2.25,2.25)},rotate=17]
-					\fill[black!85,rounded corners=4pt] (-1.25,-0.55) rectangle (1.25,0.55);
-					\shade[left color=VLdo!75,right color=violet!45,middle color=VLdo!45!white,rounded corners=2.5pt] (-1.17,-0.47) rectangle (1.17,0.47);
-					\fill[white,opacity=0.25] (-1.1,0.4)--(0.2,0.4)--(-0.5,-0.4)--(-1.1,-0.4)--cycle;
-					\filldraw[fill=VLla!70!green,draw=white,thin] (0.55,0.15) rectangle (0.85,0.3);
-				\end{scope}
-				% bàn tay
-				\shade[left color=HPda!70!black,right color=HPda] (0,1.25) .. controls (0.5,1.2) and (0.95,1.4) .. (1.25,1.75)--(1.35,2.05) .. controls (1.0,2.3) and (0.6,2.5) .. (0,2.55)--cycle;
-				\shade[top color=HPda,bottom color=HPda!80!black,rounded corners=3pt] (0,2.55) .. controls (0.5,2.95) and (1.0,2.95) .. (1.55,2.75)--(1.6,2.55) .. controls (1.0,2.65) and (0.5,2.5) .. (0.05,2.25)--cycle;
-				\foreach \y in {1.55,1.8}{\draw[HPda!60!black,very thin] (0.3,\y) .. controls (0.7,\y+0.05) and (1.0,\y+0.12) .. (1.2,\y+0.2);}
-			\end{tikzpicture}
-		\end{center}
+		\par\noindent
+		\begin{minipage}[c]{0.6\linewidth}
 		\choice
 		{\True cuộn sơ cấp ở trong đĩa sạc và thứ cấp ở trong điện thoại}
 		{cuộn sơ cấp và thứ cấp cùng ở trong điện thoại}
 		{cuộn sơ cấp và thứ cấp cùng ở trong đĩa sạc}
 		{cuộn sơ cấp ở trong điện thoại và thứ cấp trong đĩa sạc}
+		\end{minipage}\hfill
+		\begin{minipage}[c]{0.38\linewidth}
+			\centering
+			\begin{tikzpicture}[x=0.0295cm,y=-0.0295cm,line join=round,line cap=round]
+				\pgfmathsetseed{1914}
+				\begin{scope}
+					\clip (0,0) rectangle (214,183);
+					% ===== thảm vải xám tím, vân hạt (toạ độ theo điểm ảnh gốc 214 x 183, trục y hướng xuống)
+					\shade[top color=HPhaitham!80!white,bottom color=HPhaitham!80!black] (0,0) rectangle (214,183);
+					\fill[white,path fading=HPhaimo,opacity=0.3] (30,10) ellipse (110 and 45);
+					\fill[black,path fading=HPhaimo,opacity=0.2] (30,183) ellipse (90 and 40);
+					\foreach \i in {1,...,30}{\pgfmathsetmacro{\o}{0.12+0.1*rnd}\fill[white,path fading=HPhaimo,opacity=\o] (214*rnd,183*rnd) ellipse[x radius=8+10*rnd,y radius=5+6*rnd];}
+					\foreach \i in {1,...,30}{\pgfmathsetmacro{\o}{0.12+0.1*rnd}\fill[black,path fading=HPhaimo,opacity=\o] (214*rnd,183*rnd) ellipse[x radius=8+10*rnd,y radius=5+6*rnd];}
+					\foreach \i in {1,...,560}{\fill[white,opacity=0.12] (214*rnd,183*rnd) ellipse[x radius=0.35+0.5*rnd,y radius=0.3+0.3*rnd];}
+					\foreach \i in {1,...,560}{\fill[black,opacity=0.12] (214*rnd,183*rnd) ellipse[x radius=0.35+0.5*rnd,y radius=0.3+0.3*rnd];}
+					% ===== đế sạc không dây: bóng đổ, thành bên, gờ ngoài dày, rãnh vòng, lòng trong lõm phát sáng xanh
+					\fill[black,path fading=HPhaimep,opacity=0.6] (126.5,145.5) ellipse (71 and 41);
+					\begin{scope}[rotate around={2.5:(128,140)}]
+						\shade[top color=gray!50,bottom color=black!80] (128,143.8) ellipse (66 and 37.4);
+						\shade[top color=gray!28,bottom color=white] (128,140) ellipse (66 and 37);
+						\fill[white,path fading=HPhaimo,opacity=0.95] (118,166) ellipse (56 and 10);
+						\fill[gray!50,path fading=HPhaimo,opacity=0.35] (126,175) ellipse (50 and 3.5);
+						\fill[gray!60,path fading=HPhaimo,opacity=0.5] (131,111.5) ellipse (46 and 7);
+						\draw[gray!60,line width=0.35pt] (128,140) ellipse (66 and 37);
+						\draw[white,line width=0.6pt,opacity=0.9] (64.6,141) arc[start angle=178,end angle=110,x radius=65,y radius=36];
+						\shade[top color=gray!30!VLxanh!14!white,bottom color=white!94!gray] (130,135) ellipse (48 and 25);
+						\fill[VLxanh!30!white,path fading=HPhaimo] (128.5,133) ellipse (40 and 22);
+						\fill[VLxanh!55!white,path fading=HPhaimo] (128.5,133) ellipse (21 and 12);
+						\draw[gray!35,line width=0.3pt] (130,134.5) ellipse (39 and 20);
+						\draw[gray!45,line width=0.6pt] (82,135) arc[start angle=180,end angle=360,x radius=48,y radius=25];
+						\draw[black!65,line width=1pt] (178,135) arc[start angle=0,end angle=180,x radius=48,y radius=25];
+						\draw[white,line width=0.6pt,opacity=0.9] (176.6,137.9) arc[start angle=6,end angle=174,x radius=47,y radius=25];
+					\end{scope}
+					\draw[black!72,line width=0.65pt] (159.6,151.2)--(163.4,159.6);
+					\fill[VLxanh!50!white] (161.5,155.4) circle (0.55);
+					% ===== bàn tay (phần dưới điện thoại): bóng đổ, lòng bàn tay, các ngón đỡ, đầu ngón lộ dưới cạnh máy
+					\fill[black,path fading=HPhaimo,opacity=0.3] (55,128) ellipse (62 and 13);
+					\shade[top color=HPhaitay!90!white,bottom color=HPhaitay!80!black] (0,36)--(22,36)--(24,92)--(12,98)--(0,100)--cycle;
+					\shade[top color=HPhaitay,bottom color=HPhaitay!78!VLdo!85!black] (0,86)--(40,88)--(60,86)--(80,82)--(97,79) .. controls (101,78.4) and (104,78.8) .. (106.4,80.2) .. controls (110.4,82) and (113.4,85.6) .. (113.6,90) .. controls (113.8,94) and (112.2,97.6) .. (108.6,99.6) .. controls (103,102.6) and (97,104.2) .. (92,105.6) .. controls (85,107.6) and (80,109.4) .. (76,111) .. controls (70,113.4) and (65,115.8) .. (60,118.4) .. controls (54,121.6) and (49,124.6) .. (45,127.4) .. controls (40,130.8) and (35,134) .. (30,137.4) .. controls (25,140.8) and (20,144) .. (15,147.4) .. controls (10,150.6) and (5,153.4) .. (0,156)--cycle;
+					\fill[white,path fading=HPhaimo,opacity=0.6] (100,90) ellipse (16 and 10);
+					\fill[white,path fading=HPhaimo,opacity=0.35] (35,112) ellipse (30 and 16);
+					\draw[HPhaitay!62!black,line width=0.4pt] (106.6,99.8) .. controls (100,100.6) and (90,100.8) .. (80,103.2) .. controls (70,105.8) and (60,110) .. (50,116);
+					\draw[HPhaitay!68!black,line width=0.3pt] (88,95) .. controls (89.6,97.4) and (89.8,100.4) .. (88.8,103) (92.6,93.6) .. controls (94,96) and (94.2,98.6) .. (93.4,101) (72,97) .. controls (73.6,99.6) and (73.8,102.6) .. (72.6,105.4) (76,108.6) .. controls (77,110) and (77.2,111) .. (76.8,112);
+					\filldraw[fill=HPhaitay!45!white,draw=HPhaitay!60!black,line width=0.25pt] (106.8,81.4) .. controls (109.6,82.4) and (111.8,85) .. (112.2,88.2) .. controls (110.4,88.6) and (108.6,87.8) .. (107.4,86.4) .. controls (106.6,85) and (106.4,83) .. (106.8,81.4)--cycle;
+					% ===== điện thoại: khung kim loại lộ ở cạnh dưới, mặt kính, màn hình tràn viền, tai thỏ
+					\fill[gray!40] (98.6,80.6)--(202,33.4)--(202.6,37.6) .. controls (202.4,39.6) and (200.8,40.8) .. (198.6,41.8)--(107.6,85.6) .. controls (104,86.6) and (101,85) .. (98.6,80.6)--cycle;
+					\draw[white,line width=0.55pt,opacity=0.85] (199.6,38.4)--(104.4,83);
+					\draw[black!70,line width=0.5pt] (198.6,41.8)--(107.6,85.6);
+					\draw[black!55,line width=0.4pt,dash pattern=on 1.4pt off 2.6pt] (195.6,41.6)--(111,82.4);
+					\fill[black!88] (52,41.4)--(156.6,1.6) .. controls (159.6,0.6) and (162.6,0.9) .. (165,2.6)--(200.6,30) .. controls (202.8,31.8) and (202.6,34.2) .. (200.2,35.4)--(99.8,81.4) .. controls (98.8,81.8) and (98,81.4) .. (97.8,80.4)--cycle;
+					\begin{scope}
+						\clip (52.6,42)--(156.6,2.4) .. controls (158.8,1.7) and (160.6,2.2) .. (162,3.4)--(194.4,30.2) .. controls (196,31.6) and (195.6,32.8) .. (194,33.6)--(100.6,78.6) .. controls (99.8,79) and (99.2,78.8) .. (99,78)--cycle;
+						% hình nền: xanh lam ở nửa dưới chuyển dần sang hồng tím ở nửa trên (dải đặc nối tiếp, song song cạnh dài), đầu gần đỏ cam
+						\fill[HPhaimanxanh] (40,0) rectangle (205,90);
+						\fill[HPhaihong] ($(110,84)!0.62!(46,32)$)--($(206,38)!0.62!(160,-4)$)--(160,-4)--(46,32)--cycle;
+						\foreach \a [evaluate=\a as \p using {int(100-(\a-0.4)/0.22*100)}] in {0.4,0.42,...,0.61}
+							{\fill[HPhaimanxanh!\p!HPhaihong] ($(110,84)!\a!(46,32)$)--($(206,38)!\a!(160,-4)$)--($(206,38)!\a+0.025!(160,-4)$)--($(110,84)!\a+0.025!(46,32)$)--cycle;}
+						\begin{scope}[rotate around={24.7:(127,39)}]
+							\fill[HPhaicam,path fading=HPhaidau,fading angle=24.7] (45,0) rectangle (200,80);
+						\end{scope}
+						\fill[HPhaihong!80!violet,path fading=HPhaimo,opacity=0.6] (150,12) ellipse (40 and 9);
+						\fill[HPhaimanxanh!35!white,path fading=HPhaimo,opacity=0.9] (114,69) ellipse (32 and 15);
+						\fill[orange!45!yellow!40!white,path fading=HPhaimo,opacity=0.8] (88,64) ellipse (24 and 13);
+						\fill[white,opacity=0.12] (118,22)--(150,6)--(153,8)--(121,24.5)--cycle;
+						% biểu tượng pin đang sạc
+						\begin{scope}[rotate around={24.7:(150.5,26.5)}]
+							\fill[white,path fading=HPhaimo,opacity=0.8] (150.5,26.5) ellipse (14 and 10);
+							\filldraw[fill=VLluc!45!green!75!white,draw=white,line width=0.3pt,rounded corners=1.2pt] (144,22.6) rectangle (156.4,30.4);
+							\fill[white] (156.4,25.1) rectangle (157.9,27.9);
+							\fill[white] (151.6,23.6)--(148.2,27)--(150.4,27)--(149.2,29.4)--(152.8,26)--(150.6,26)--cycle;
+						\end{scope}
+					\end{scope}
+					% tai thỏ (liền dải đen đầu máy), ánh sáng trên mép kính
+					\fill[black!88,rounded corners=1.2pt] (172.6,12.6)--(184.8,22.2)--(181.4,24.6)--(169,15)--cycle;
+					\fill[white,opacity=0.35] (163.6,3)--(200,30.6)--(199.4,31.4)--(163,3.8)--cycle;
+					\draw[white,opacity=0.25,line width=0.4pt] (54,41.8)--(156,3.2);
+					% ===== bàn tay (phần trên): ngón trỏ co (trong bóng, ửng đỏ ánh màn hình), ngón cái đặt trên màn hình
+					\shade[left color=HPhaitay!76!black,right color=HPhaicam!40!HPhaitay] (22,52) .. controls (35,48.6) and (50,46.2) .. (60,45) .. controls (62.4,52) and (63.2,62) .. (62.6,72) .. controls (62,80) and (59,86.6) .. (54,90.4) .. controls (48,93.6) and (38,94.2) .. (30,93) .. controls (23,91.4) and (18,87.4) .. (16,81) .. controls (14,74) and (14.2,66) .. (15.6,60) .. controls (16.6,56) and (19,53.4) .. (22,52)--cycle;
+					\fill[HPhaicam,path fading=HPhaimo,opacity=0.6] (60,64) ellipse (12 and 28);
+					\fill[white,path fading=HPhaimo,opacity=0.25] (28,70) ellipse (11 and 15);
+					\fill[HPhaitay!40!black,path fading=HPhaimo,opacity=0.35] (40,90) ellipse (22 and 6);
+					\draw[HPhaitay!55!black,line width=0.35pt,opacity=0.8] (18.2,56) .. controls (15.4,62) and (14.2,72) .. (16,81) .. controls (18,87.4) and (23,91.4) .. (30,93) .. controls (38,94.4) and (47,93.6) .. (53,90.6);
+					% ngón cái
+					\shade[top color=HPhaitay!55!white,bottom color=HPhaitay!92!VLdo] (0,17.5) .. controls (8,15.4) and (14,14) .. (20,14) .. controls (28,14) and (34,15.2) .. (40,17) .. controls (48,19.2) and (54,21) .. (60,23) .. controls (67,25.2) and (74,27.4) .. (80,29.4) .. controls (85,31) and (89,32) .. (92,33.4) .. controls (95.2,34.8) and (96.8,36.6) .. (96.2,38.6) .. controls (95.6,40.6) and (93.4,41.6) .. (90,42.2) .. controls (82,43.2) and (75,43.4) .. (70,43.8) .. controls (64,44.4) and (60,45) .. (55,46) .. controls (49,47.2) and (44,48) .. (40,49) .. controls (34,50.6) and (29,51.6) .. (25,53) .. controls (19,55) and (13,56.4) .. (8,58) .. controls (5,59) and (2,59.6) .. (0,60)--cycle;
+					\fill[HPhaicam,path fading=HPhaimo,opacity=0.5] (74,43) ellipse (24 and 4);
+					\fill[white,path fading=HPhaimo,opacity=0.65] (40,22) ellipse (30 and 7);
+					\draw[HPhaitay!62!black,line width=0.35pt] (8,58) .. controls (19,55) and (29,51.6) .. (40,49) .. controls (49,47) and (60,44.8) .. (72,43.6);
+					\draw[HPhaitay!70!black,line width=0.3pt] (52.6,21.6) .. controls (51.2,28) and (51,36) .. (52.4,46.4);
+					\filldraw[fill=HPhaitay!35!white,draw=HPhaitay!60!black,line width=0.3pt] (84,33.6) .. controls (88,32.4) and (92.6,33.2) .. (95,35.2) .. controls (96.2,36.6) and (95.8,38.8) .. (93.8,39.8) .. controls (91,40.8) and (87.4,40.6) .. (84.6,39.4) .. controls (83.2,37.6) and (83,35.4) .. (84,33.6)--cycle;
+					\fill[white,opacity=0.6] (86,34.6) .. controls (89,34) and (92,34.4) .. (93.6,35.6) .. controls (91,35.4) and (88.6,35.4) .. (86,35.8)--cycle;
+				\end{scope}
+				\draw[black!55,line width=0.3pt] (0,0) rectangle (214,183);
+			\end{tikzpicture}
+		\end{minipage}
 		\loigiai{
 			Cuộn sơ cấp trong đĩa sạc nối với nguồn tạo từ trường biến thiên; cuộn thứ cấp trong điện thoại nhận năng lượng nhờ cảm ứng điện từ.
 		}
 	\end{ex}
 
-	\NeedspaceCau{6.5\baselineskip}
+	\NeedspaceCau{6.1\baselineskip}
 	\begin{ex}%[VL12-C3-NB]
 		Máy biến áp là thiết bị
 		\choice
@@ -378,7 +664,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{30.5\baselineskip}
+	\NeedspaceCau{30.8\baselineskip}
 	\subsection*{\indam{PHẦN II. Câu trắc nghiệm đúng sai. Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-HaiPhong-SoGD-Lan2-2]
@@ -461,7 +747,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau[16.9\baselineskip]{31.5\baselineskip}
+	\NeedspaceCau[16.5\baselineskip]{31.5\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Trong y học, để chẩn đoán các bệnh lý về mạch máu như: phát hiện tắc nghẽn hoặc hẹp động mạch, người ta sử dụng máy đo lưu lượng máu điện từ (Electromagnetic Blood Flowmeter). Cấu tạo của máy gồm hai thành phần chính: cuộn dây tạo ra từ trường đều vuông góc với dòng chảy của mạch máu; hai điện cực được gắn ở hai vị trí tiếp xúc với mô xung quanh mạch máu để đo hiệu điện thế cảm ứng. Trong máu chứa nhiều ion và các hạt tích điện, nên khi máu chảy, các ion này di chuyển trong từ trường đều chịu tác dụng của lực từ có độ lớn $F=|q|vB$, có phương vuông góc với cảm ứng từ $\vv{B}$ và với vận tốc $\vv{v}$ của các hạt. Lực này làm cho các hạt điện tích dương và âm bị lệch về hai phía đối diện của thành mạch máu. Điều này tạo ra một hiệu điện thế cảm ứng giữa hai điện cực đặt tại thành mạch và được xác định nhờ biểu thức $U=Bvd$, với $d$ là đường kính của mạch máu.
 		\begin{center}
