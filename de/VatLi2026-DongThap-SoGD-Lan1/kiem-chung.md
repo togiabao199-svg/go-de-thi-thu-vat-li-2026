@@ -33,3 +33,18 @@ Ghi chú thêm:
 - III.3: màn hình bếp để trống số (ảnh gốc ghi "2000" — chính là công suất P = 2000 W học sinh phải tính; phiên chính bỏ để không lộ kết quả trung gian).
 - I.10: nam châm N đỏ, S xanh (trùng màu gốc và quy ước). Vòng dây màu đồng, đòn bẩy, quả nặng xám.
 - So hình: `so-hinh/` (II.4 ghép ảnh gốc Hình I.1 + Hình I.2 thành một ảnh để so).
+
+## Vẽ lại hình thực tiễn (14/11/2026, Opus 5.5)
+Vẽ lại theo toạ độ điểm ảnh của ảnh gốc `image15.png` (455 × 246, trục y lật, `x=0.021cm,y=-0.021cm`: rộng 9,56 cm ≈ 0,55 `\linewidth`); chỉ sửa `tikzpicture` câu III.3 và khai báo riêng của đề; lời đề, `\shortans`, `\loigiai`, các hình khác giữ nguyên. Ảnh so: `so-hinh/11-cau-III-3.png`.
+- III.3 — bếp điện ba vùng nấu nhìn xiên từ trước – trái – trên, đúng phối cảnh ảnh gốc: bốn góc mặt kính, mép trước, mép dưới thân inox đo trên ảnh; các vòng của vùng nấu khớp elip đo từ ảnh (tâm, bán trục, góc nghiêng).
+  - Mặt kính đen bóng bo góc, chuyển màu đen → xám sẫm về góc sau bên phải (vệt phản chiếu, độ sáng đo khớp ảnh gốc), viền kính mảnh, mép sau có viền sáng mờ; mép trước dày có cạnh vát sáng và bề dày tối, bo theo hai góc.
+  - Thân inox: mặt trước chuyển màu kim loại (sáng ở giữa, tối dần về hai đầu và xuống dưới), viền sáng ngay dưới mép kính, cạnh dưới tối, cạnh đầu trái, đầu phải; 23 khe tản nhiệt dọc đầu bo tròn, gân sáng giữa các khe; bóng đổ mờ dần dưới thân và bên phải.
+  - Vùng nấu trái (mâm nhiệt hồng ngoại đang đỏ): hai vòng viền xám, nền đỏ sẫm có quầng đỏ, dây nung xoắn hai cuộn vẽ bằng hạt sáng – tối (cuộn trong 11 vòng, tối dần vào tâm; cuộn ngoài 3 vòng, sáng nhất), vòng xám chia hai vùng, tâm tối, que cảm biến nhiệt tối chạy từ tâm ra mép, có bóng.
+  - Hai vùng nấu từ: vòng chấm trắng kép (vùng giữa phía sau nhỏ, vùng phải phía trước lớn).
+  - Bảng điều khiển cảm ứng: hai đèn LED đỏ; màn hình kính tối viền mảnh **để trống (không ghi "2000")**; biểu tượng đỏ hai bên màn hình; nút −, nút + (vòng đỏ, dấu trắng), chấm trắng nhỏ dưới nút −; thanh trượt 7 vạch LED cao dần và vạch nhỏ phía trên; mũi tên hai đầu; ổ khoá (trái), đồng hồ hẹn giờ (phải) màu xám nhạt; các biểu tượng nghiêng theo phối cảnh mặt kính.
+  - Dấu tam giác cảnh báo ở góc trên trái mặt kính.
+  - Bỏ chữ hãng (Midea), "Inverter", "High Light"; dòng chữ cạnh tam giác cảnh báo, "Slide to adjust", nhãn model thay bằng vạch mờ.
+- Khai báo riêng thêm trong file đề (giữa `\input{preamble-vatli-hinh}` và `\begin{document}`): màu `DTkinh`, `DTkinhsang`, `DTdomam`, `DTdovua`, `DTdotoi`, `DTnenmam`, `DTled`; shading `DTinoxngang` (mặt inox), `DTbong` (bóng đổ); `\usetikzlibrary{fadings}` (làm mờ hai đầu bóng đổ). Chuyển màu theo phương xiên dùng `transform canvas`; đã biên dịch thử bằng xelatex và pdflatex (gói zip), hình ra đúng.
+- Còn khác gốc: dây nung là hai đường xoắn đều, hạt đều đặn hơn ảnh chụp; que cảm biến rõ nét hơn; biểu tượng khoá, đồng hồ, hai biểu tượng đỏ cạnh màn hình vẽ giản lược (trên ảnh gốc chỉ vài điểm ảnh); không có chữ hãng, model.
+- `so-hinh/` dựng lại đủ 11 ảnh có ô ảnh gốc (lần trước chỉ III.3 có ô gốc): `"I.3=image1.png,I.6=image2.png,I.10=image3.png,I.11=image4.png,I.16=image5.png,I.18=image10.png,II.1=image11.png,II.2=image12.png,II.4=II4-ghep.png,III.3=image15.png"` (`II4-ghep.png` = image13 | image14, dùng cho cả hai hình câu II.4); đã soát từng cặp gốc – TikZ đúng câu.
+- Dàn trang sau khi vẽ lại: hình III.3 cỡ 9,56 × 5,33 cm (`% giuhinh`); bản đề 8 trang ĐẠT (trang 7: III.1–III.3, trang 8: III.4–III.6; trống cuối trang 2,5 / 6,1 / 1,9 / 6,9 (trước tiêu đề phần, được miễn) / 1,7 / 0,7 / 1,0 cm); bản lời giải 11 trang (trang trống nhiều nhất 5,5 cm, dưới 1/4 trang).
