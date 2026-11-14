@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 15/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 16/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -26,14 +26,14 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 14 | P07 | [`VatLi2026-PhuTho-NgoGiaTu-Lan1`](../de/VatLi2026-PhuTho-NgoGiaTu-Lan1/kiem-chung-v2.md) | xong | 1 | I.11: file C / Fable D (các trang trên mạng, theo tóm tắt tìm kiếm, cũng ghi D; chưa mở được trang để đọc nguyên văn) | I.11 (C nếu chỉ tính nguyên nhân động học phân tử, D nếu tính cả điều kiện không phản ứng hoá học); II.4d (đề in 4160 → Sai, nếu bản gốc định in 4460 thì Đúng); II.4a (chấm Sai theo thứ tự (II), (I), (III), (IV)); III.4 (150 kW theo "hiệu suất động cơ", cách hiểu khác 200 kW) | không thấy (các chỗ sửa chữ đều đã ghi ở kiem-chung.md; hình III.6 vẽ lại đúng chiều các mũi tên nước nóng vào – nước ấm ra, không khí lạnh vào – không khí nóng ra) | không tìm thấy |
 | 15 | P07 | [`VatLi2026-QuangNinh-CamPha-Lan1`](../de/VatLi2026-QuangNinh-CamPha-Lan1/kiem-chung-v2.md) | xong | 0 | không | III.6 (đề gốc mất hình kích thước phòng; file tự dựng 8 m × 5 m × 4 m → 14, không xác minh được kích thước gốc); II.3c (file Sai, hợp SGK; nếu người ra đề hiểu "không có quỹ đạo xác định" thì thành Đúng); II.4a (file Sai theo bẫy đơn vị 4 m³ / 4 lít; nếu coi "m³" là lỗi in thì thành Đúng) | không thấy (ghi chú nhỏ: lưới đồ thị II.1 vẽ 9 hàng ô, hình gốc 8 hàng — trục không có số nên không ảnh hưởng đáp án; hình III.6 là hình tự dựng, đã có `% KIỂM TRA`) | không tìm thấy |
 | 16 | P08 | `VatLi2026-QuangNinh-SoGD-Lan1` | đang kiểm | | | | | |
-| 17 | P08 | `VatLi2026-ThaiNguyen-SoGD-Lan1` | đang kiểm | | | | | |
+| 17 | P08 | [`VatLi2026-ThaiNguyen-SoGD-Lan1`](../de/VatLi2026-ThaiNguyen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | không (II.1c phụ thuộc cực nguồn đọc trên hình — Fable đọc độc lập trên ảnh nhúng gốc ra cùng kết quả với file: Đúng) | không thấy (I.17 phương án C được sửa có chủ ý vì bản gốc C trùng B, đã ghi `% KIỂM TRA`; 4 hình TikZ đúng quan hệ với hình gốc: chiều dòng điện I.7, chiều mũi tên I.13 và III.5, số trên trục III.5, thứ tự bản cực nguồn và cực N – S ở II.1) | không tìm thấy |
 | 18 | P08 | `VatLi2026-ThanhHoa-HamRong-Lan1` | đang kiểm | | | | | |
 | 19 | P09 | `VatLi2026-ThanhHoa-TinhGia1` | đang kiểm | | | | | |
 | 20 | P01 | `VatLi2026-BacNinh-SoGD-Lan1` | đang kiểm | | | | | |
 | 21 | P09 | `VatLi2026-BacNinh-SoGD` | đang kiểm | | | | | |
 | 22 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan1` | đang kiểm | | | | | |
 | 23 | P02 | `VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1` | đang kiểm | | | | | |
-| 24 | P03 | `VatLi2026-HaiPhong-CumCM10-Lan1` | chưa kiểm | | | | | |
+| 24 | P03 | `VatLi2026-HaiPhong-CumCM10-Lan1` | đang kiểm | | | | | |
 | 25 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2` | chưa kiểm | | | | | |
 | 26 | P05 | `VatLi2026-LaoCai-SoGD-Lan1` | chưa kiểm | | | | | |
 | 27 | P06 | `VatLi2026-NgheAn-LienTruong-Lan1` | chưa kiểm | | | | | |
