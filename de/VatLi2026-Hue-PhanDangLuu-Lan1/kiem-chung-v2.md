@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hue - THPT Phan Dang Luu - Lan 1.pdf`. G
 - Câu lệch: không (I.16: file C / Fable lần 1 A — xem mục đề mơ hồ).
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): I.16 (A và C cùng đúng theo SGK; file gõ C); II.2a (n = 0,1787 mol, đề ghi "xấp xỉ 0,17": tính chặt là Sai như file, nhưng có thể đáp án của trường là Đúng do cắt số); III.2 (10 J theo ý người ra đề — khớp lời giải trên mạng; 15 J nếu chỉ xét giai đoạn nhận nhiệt và công; 0 J nếu coi khí lí tưởng trở về đúng trạng thái đầu); III.1 (20 theo cả hai cách hiểu hợp lí; 54 chỉ khi "áp suất dư + bóng rỗng").
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (số liệu, phương án, thứ tự ý của 28 câu khớp ảnh trang; các chỗ sửa chữ đã ghi ở `kiem-chung.md`). Ghi chú nhỏ về lời giải II.2d: viết "(2) → (5) đẳng áp" trong khi chu trình không có đoạn (2) → (5) (hai trạng thái chỉ cùng áp suất 10⁵ Pa); kết quả 454,5 K vẫn đúng.
-- Đáp án trên mạng: tìm thấy một phần — VietJack đăng đúng đề này (từng câu, mã 2443046–2443073), ví dụ https://khoahoc.vietjack.com/question/2443069/mot-khoi-khi-trong-xilanh-duoc-dat-nam-ngang-duoc-day-kin-bang-mot-pis ; máy phiên này bị chặn mạng tới vietjack nên chỉ lấy được qua tóm tắt kết quả tìm kiếm: II.1a Đúng, III.1 = 20, III.2 = 10.
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): tìm thấy một phần — VietJack đăng đúng đề này (từng câu, mã 2443046–2443073), ví dụ https://khoahoc.vietjack.com/question/2443069/mot-khoi-khi-trong-xilanh-duoc-dat-nam-ngang-duoc-day-kin-bang-mot-pis ; máy phiên này bị chặn mạng tới vietjack nên chỉ lấy được qua tóm tắt kết quả tìm kiếm: II.1a Đúng, III.1 = 20, III.2 = 10.
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 26/28; khác 2 (I.16 — mục D; II.2 ý a — mục C). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

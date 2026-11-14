@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/TP HCM - Nguyen Khuyen - Le Thanh Tong -
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.3a (file S, Fable S; Đ nếu coi "miệng ống" ngang mặt thoáng); II.4b (file S, Fable S; Đ nếu chấm lỏng "có nhận nhiệt từ dây nung"); III.6 (đề vừa ghi "cách nhiệt" vừa cho "nhiệt độ không đổi": đẳng nhiệt 0,82, đoạn nhiệt cần γ đề không cho); I.12 (B "ngưng kết lại" gần nghĩa C "ngưng tụ", chọn C)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (các chỗ sửa lỗi chữ bản gốc đã ghi ở kiem-chung.md; 8 hình TikZ đúng quan hệ so với hình gốc: nhãn T₁, T₂ ở I.3, số trên trục và thứ tự các đoạn ở III.5, bảng số liệu II.1, I.15)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 0/28 câu; khớp 0; khác 0. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

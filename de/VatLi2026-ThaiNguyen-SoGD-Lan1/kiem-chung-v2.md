@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Thai Nguyen - So GDDT - Lan 1.pdf`. Gi�
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không (II.1c phụ thuộc cực nguồn đọc trên hình — Fable đọc độc lập trên ảnh nhúng gốc ra cùng kết quả với file: Đúng)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (I.17 phương án C được sửa có chủ ý vì bản gốc C trùng B, đã ghi `% KIỂM TRA`; 4 hình TikZ đúng quan hệ với hình gốc: chiều dòng điện I.7, chiều mũi tên I.13 và III.5, số trên trục III.5, thứ tự bản cực nguồn và cực N – S ở II.1)
-- Đáp án trên mạng: không tìm thấy (hai trang có thể liên quan là hoatieu.vn và khoahoc.vietjack.com bị chặn trong phiên, xem mục Nguồn trên mạng)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (hai trang có thể liên quan là hoatieu.vn và khoahoc.vietjack.com bị chặn trong phiên, xem mục Nguồn trên mạng)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Số câu có đáp án mạng: 28/28; khớp: 28; khác: 0. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

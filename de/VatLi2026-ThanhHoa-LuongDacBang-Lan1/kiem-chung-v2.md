@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Thanh Hoa - THPT Luong Dac Bang - Lan 1.
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.1d (chữ "chứng minh được định luật": file và Fable cùng chọn Đ, hiểu chặt "5 lần đo chỉ kiểm chứng" thì S); II.4c (câu chữ "nếu tính thêm hao phí… so với khi bỏ qua hao phí": file và Fable cùng chọn S, hiểu thành "thực tế có hao phí nên giá trị đo lớn hơn giá trị thật" thì Đ); II.3c (ΔΦ tính cả N = 1000 vòng → Đ, file và Fable cùng chọn; tính một vòng thì 10⁻⁶ Wb → S)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (đã soát lời đề, số liệu, thứ tự phương án các câu II.1–II.4, III.1–III.6, I.2, I.6, I.7, I.9, I.12–I.14, I.16, I.18; mã TikZ các hình I.2, I.6, I.7, I.13, I.14, II.2, II.3 đúng quan hệ so với hình gốc: chiều mũi tên chu trình, chiều I, chiều B, kí hiệu ⊙/⊗, số trên trục)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 27 câu; khác 1 câu (II.1, ở ý d). Tính theo ý: Phần II 16 ý, khớp 15, khác 1 (II.1d). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

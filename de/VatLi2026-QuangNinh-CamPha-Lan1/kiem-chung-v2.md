@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Quang Ninh - THPT Cam Pha - Lan 1.pdf`. 
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): III.6 (đề gốc mất hình kích thước phòng; file tự dựng 8 m × 5 m × 4 m → 14, không xác minh được kích thước gốc); II.3c (file Sai, hợp SGK; nếu người ra đề hiểu "không có quỹ đạo xác định" thì thành Đúng); II.4a (file Sai theo bẫy đơn vị 4 m³ / 4 lít; nếu coi "m³" là lỗi in thì thành Đúng)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (ghi chú nhỏ: lưới đồ thị II.1 vẽ 9 hàng ô, hình gốc 8 hàng — trục không có số nên không ảnh hưởng đáp án; hình III.6 là hình tự dựng, đã có `% KIỂM TRA`)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 27/28 câu (III.6 không có); khớp 25 câu; khác 2 câu: I.6 (nguồn mâu thuẫn nội bộ) và II.3 (2 ý b, c — cách hiểu khác). Tính theo ý ở Phần II: 16 ý có đáp án, khác 2 ý. Không câu nào khác do tính toán. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

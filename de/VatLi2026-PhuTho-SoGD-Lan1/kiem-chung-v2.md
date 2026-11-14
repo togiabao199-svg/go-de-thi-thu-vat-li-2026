@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Phu Tho - So GDDT - Lan 1.pdf`. Giải l
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.1a (file S vì lượng khí trong khí cầu thay đổi / Đ nếu chỉ xét "nhiệt độ khí giữ 27 °C"); nhẹ hơn: II.2b (75,6 kJ so với "75 kJ", theo số in là S), II.2c (10 080 J so với "10,8 J", theo số in là S; chỉ thành Đ nếu bản của Sở in "10,08 kJ")
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (3 hình vẽ lại I.14, II.2, III.5 đúng quan hệ với hình gốc: tọa độ lưới và chiều mũi tên I.14, chiều luồng khí và màu ống II.2, vị trí phần 1 trên – phần 2 dưới và mốc 0,6L ở III.5)
-- Đáp án trên mạng: không tìm thấy (trang có thể đúng đề nhưng tên miền bị chặn: https://hoatieu.vn/de-khao-sat-chat-luong-mon-vat-li-12-phu-tho-249503)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (trang có thể đúng đề nhưng tên miền bị chặn: https://hoatieu.vn/de-khao-sat-chat-luong-mon-vat-li-12-phu-tho-249503)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng (nguồn đúng đề, VietJack) cho **28/28** câu; **28 khớp**, **0 khác**. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

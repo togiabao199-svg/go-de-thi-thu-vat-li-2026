@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Bac Ninh - So GDDT - Lan 1.pdf`. Giải 
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.2c (số liệu bảng cho h/T dao động 0,852–0,875 mm/K, lệch 2,7 %; file và Fable cùng chọn Đ theo ý người ra đề, xét khắt khe có thể cãi S)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (lời đề các câu có số liệu và 10 hình khớp bản gốc: chiều I, F, dấu ⊗/⊙ ở I.5; chiều dòng điện, dấu ⊙ ở I.10; số trên trục III.1; bảng II.2)
-- Đáp án trên mạng: không tìm thấy (các trang có thể chứa đề đều bị chặn tên miền: hoatieu.vn, news.laodong.vn, news.vsis.net)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (các trang có thể chứa đề đều bị chặn tên miền: hoatieu.vn, news.laodong.vn, news.vsis.net)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Số câu có đáp án mạng: 28/28; khớp: 28; khác: 0. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

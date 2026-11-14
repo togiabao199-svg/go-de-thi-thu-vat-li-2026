@@ -12,7 +12,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hai Phong - THPT Kinh Mon II - Lan 1.pdf
   - II.4d (chữ "chứng minh" định luật Boyle; chọn Đ như đề tham khảo 2025 của Bộ, khớp file);
   - III.6 (I = 2,25 A nằm đúng giữa 2,2 và 2,3; file và Fable cùng ghi 2,3).
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi số liệu, phương án, thứ tự ý. Ghi nhận nhỏ: `kiem-chung.md` ghi "bỏ dòng trống '…'" ở bảng số liệu II.1 nhưng file .tex vẫn giữ dòng `\dots` (đúng như bản gốc, không ảnh hưởng đáp án); I.9, III.5 lời đề vẫn ghi "hình bên" trong khi hình đặt phía dưới câu dẫn.
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28/28; khác 0. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

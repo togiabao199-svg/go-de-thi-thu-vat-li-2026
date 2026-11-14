@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ninh Binh - So GDDT - Lan 1.pdf`. Giải
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (lời đề, số liệu, thứ tự phương án / ý của 28 câu khớp ảnh trang gốc; 4 hình TikZ I.5, I.18, II.2, II.4 đúng quan hệ so với hình gốc: đường p₂ dốc hơn p₁, vị trí nhãn (1)(2)(3) và chiều mũi tên ở cả ba Hình a, b, c)
-- Đáp án trên mạng: không tìm thấy (các trang có thể đăng đề này — vietnamnet.vn, hoatieu.vn — nằm ngoài mạng được phép của phiên, không mở được; chỉ có một bài tương tự câu III.5 trên VietJack cho 2,42)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (các trang có thể đăng đề này — vietnamnet.vn, hoatieu.vn — nằm ngoài mạng được phép của phiên, không mở được; chỉ có một bài tương tự câu III.5 trên VietJack cho 2,42)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28 câu; khác 0 câu. Phần II khớp cả 16 ý. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

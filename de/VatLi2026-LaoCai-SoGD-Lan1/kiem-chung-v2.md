@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Lao Cai - So GDDT - Lan 1.pdf`. Giải l
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không (I.6 và II.1c phụ thuộc cách đọc cực nguồn, chiều quấn trên hình gốc mờ; Fable đọc độc lập ra cùng kết quả với file)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (đã soát lời, số liệu, thứ tự phương án 28 câu và 10 hình TikZ: cực nguồn, chiều quấn, chiều mũi tên, số trên trục đều đúng hình gốc)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28/28; khác file 0 câu. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

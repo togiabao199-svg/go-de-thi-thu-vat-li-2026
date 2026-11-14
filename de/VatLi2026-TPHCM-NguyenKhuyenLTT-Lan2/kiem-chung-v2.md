@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/TP HCM - Nguyen Khuyen - Le Thanh Tong -
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không (II.1b phụ thuộc đọc chiều quấn + cực nguồn trên hình nhỏ, Fable đọc độc lập cũng ra Sai; III.2 lời đề lỏng nhưng mọi cách hiểu đều cho a = 2)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (số liệu, phương án, thứ tự ý khớp ảnh trang; hình TikZ II.1 giữ đúng cực nguồn, vị trí khoá S, chiều quấn; hình III.6 đúng ô lưới (1) = (V₀; p₀ = 4 ô), (2) = (4V₀; 1 ô); I.4, I.8, III.3 đúng quan hệ)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28/28; khác 0. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

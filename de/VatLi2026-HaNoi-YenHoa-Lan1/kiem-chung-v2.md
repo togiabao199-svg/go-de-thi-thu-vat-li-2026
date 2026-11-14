@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT Yen Hoa - Lan 1.pdf`. Gi�
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.1b (hình không nói hướng nhìn: nhìn từ trên xuống → S, nhìn từ dưới lên → Đ; file và Fable cùng chọn S); III.3 (78,6 nếu dùng hết toàn bộ khí / 78,1 nếu trừ khí còn lại ở áp suất khí quyển; file và Fable cùng chọn 78,6); III.4 (đề gốc in N_A = 6,2·10²³: tính qua k ra 2,97, tính qua R rồi nhân N_A = 6,2·10²³ ra 3,06; file đã sửa N_A thành 6,02·10²³ nên chỉ còn 2,97); III.5 (tan α chỉ có nghĩa khi coi 1 g ứng 1 A trên hai trục; file và Fable cùng hiểu như vậy → 34,7)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): lời đề không thấy lỗi. Lỗi HÌNH vẽ lại câu I.13: kí hiệu nguồn điện bị đảo cực so với hình gốc (hình gốc: vạch dài – cực dương – nằm phía trên / phía xa, vạch ngắn phía dưới; TikZ: vạch ngắn đậm phía trên, vạch dài phía dưới), nên trong hình vẽ lại cực nguồn mâu thuẫn với hai mũi tên I (dòng điện đi ra từ cực âm). Đáp án theo mũi tên I không đổi (hướng A), nhưng học sinh suy chiều dòng điện từ kí hiệu nguồn sẽ ra hướng C. Cần đổi chỗ hai vạch (dòng 366–367 của file .tex).
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Số câu có đáp án mạng: 28/28; khớp: 28; khác: 0. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

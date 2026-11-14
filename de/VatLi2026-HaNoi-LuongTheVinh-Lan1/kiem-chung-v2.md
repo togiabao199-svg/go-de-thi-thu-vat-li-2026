@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT Luong The Vinh - Lan 1.pdf
 - Câu lệch: II.2a: file S (theo đề đã sửa ¹³¹₅₃I) / Fable lần 1 Đ (theo nguyên văn đề gốc ¹³¹₅₁I). Kết luận: với lời đề trong file thì S là đúng; với nguyên văn đề gốc thì Đ.
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.2a (giữ cách sửa Z = 53, a Sai; hay theo đề gốc Z = 51, a Đúng — đáp án ý đồ của trường có thể là Đúng).
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (đã so lời đề, số liệu, thứ tự phương án và thứ tự ý của cả 28 câu với ảnh trang; các chỗ khác bản gốc đều là sửa có chủ ý và đã ghi ở `kiem-chung.md`). Ghi chú nhỏ: `kiem-chung.md` ghi ¹³¹₅₁I sai "cả 4 chỗ", thực tế bản gốc ghi 6 chỗ (4 trong lời dẫn, ý b, ý d) — file đã sửa đủ cả 6.
-- Đáp án trên mạng: không tìm thấy (trang VietJack có thể là đúng đề nhưng máy không được phép truy cập, đáp án ở đó nằm sau gói VIP).
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (trang VietJack có thể là đúng đề nhưng máy không được phép truy cập, đáp án ở đó nằm sau gói VIP).
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; 26 khớp, 2 khác (II.2a — mục B, nguồn theo nguyên văn Z = 51; II.3d — "nội năng" hay "độ biến thiên nội năng"). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

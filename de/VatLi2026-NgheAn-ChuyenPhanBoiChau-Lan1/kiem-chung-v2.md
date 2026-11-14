@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - THPT chuyen Phan Boi Chau - La
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.2b (Đ theo ý truyền động; S nếu xét xe chạy đều hoặc hiệu suất cơ thể); II.4b (Đ nếu "độ chính xác" = độ chia nhỏ nhất 0,01 W; S nếu phân biệt với độ phân giải); II.1a (Đ theo ý người ra đề; vải túi khí thật gần như không dãn) — Fable giữ Đ cả ba như file
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): lời đề không thấy sai số liệu; HÌNH I.6 vẽ lại sai quan hệ: hai kí hiệu ở dây bên trái và bên phải của hình gốc là electron (⊖ xoay 90°, SGK 11 KNTT hình 24.3) nhưng TikZ vẽ thành chữ "I" màu đỏ (dòng điện) và giữ chiều mũi tên của electron (trái đi lên về cực dương, phải đi xuống từ cực âm) nên đọc thành dòng điện mạch ngoài chạy vào cực dương, ngược chiều quy ước — nên đổi lại thành ⊖ màu đen như ba electron ở dây dưới (không ảnh hưởng đáp án D); lời giải II.2c ghi 14,14 m/s, với π = 3,14 là 14,13 m/s (vẫn 50,9 km/h)
-- Đáp án trên mạng: không tìm thấy (có trang đúng đề https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-phan-boi-chau-nghe-an-lan-1-co-dap-an nhưng tên miền bị chặn, đáp án cần gói VIP; đoạn trích tìm kiếm chỉ lộ I.1 = A, khớp)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (có trang đúng đề https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-chuyen-phan-boi-chau-nghe-an-lan-1-co-dap-an nhưng tên miền bị chặn, đáp án cần gói VIP; đoạn trích tìm kiếm chỉ lộ I.1 = A, khớp)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 27 câu; khác 1 câu (I.3 — khóa nguồn nghi nhầm). Phần II khớp cả 16 ý, kể cả II.2b, II.4b (mục D). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

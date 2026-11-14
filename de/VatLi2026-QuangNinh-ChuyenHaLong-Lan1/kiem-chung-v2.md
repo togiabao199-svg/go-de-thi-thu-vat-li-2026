@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Quang Ninh - THPT chuyen Ha Long - Lan 1
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không (II.1b không mơ hồ nhưng phụ thuộc đọc cực nguồn trên hình gốc nhỏ; Fable đọc độc lập ảnh phóng to 800 dpi cũng ra Đ như file)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (số liệu, phương án, thứ tự ý khớp ảnh trang; các hình vẽ lại I.5, I.11, I.15, II.1, II.3, II.4, III.1 đúng quan hệ với hình gốc — cực nguồn, cực N/S, chiều mũi tên, số trên trục)
-- Đáp án trên mạng: không tìm thấy (hai trang có đề — hoatieu.vn, khoahoc.vietjack.com — không mở được từ máy này, đã ghi link)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (hai trang có đề — hoatieu.vn, khoahoc.vietjack.com — không mở được từ máy này, đã ghi link)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng (nguồn đúng đề, VietJack) cho **28/28** câu; **28 khớp**, **0 khác**. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

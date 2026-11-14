@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Phu Tho - THPT Ngo Gia Tu - Lan 1.pdf`. 
 - Câu lệch: I.11: file C / Fable D (các trang trên mạng, theo tóm tắt tìm kiếm, cũng ghi D; chưa mở được trang để đọc nguyên văn)
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): I.11 (C nếu chỉ tính nguyên nhân động học phân tử, D nếu tính cả điều kiện không phản ứng hoá học); II.4d (đề in 4160 → Sai, nếu bản gốc định in 4460 thì Đúng); II.4a (chấm Sai theo thứ tự (II), (I), (III), (IV)); III.4 (150 kW theo "hiệu suất động cơ", cách hiểu khác 200 kW)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (các chỗ sửa chữ đều đã ghi ở kiem-chung.md; hình III.6 vẽ lại đúng chiều các mũi tên nước nóng vào – nước ấm ra, không khí lạnh vào – không khí nóng ra)
-- Đáp án trên mạng: không tìm thấy đáp án của cả đề; riêng câu I.11 tìm thấy câu gốc ở https://loigiaihay.com/bai-tap-260504.html và https://tuyensinh247.com/bai-tap-720743.html (trang bị chặn, chỉ có tóm tắt tìm kiếm: đáp án D)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy đáp án của cả đề; riêng câu I.11 tìm thấy câu gốc ở https://loigiaihay.com/bai-tap-260504.html và https://tuyensinh247.com/bai-tap-720743.html (trang bị chặn, chỉ có tóm tắt tìm kiếm: đáp án D)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 25/28; khác 3 câu (I.11, III.4, III.5). II.4d (mục C): nguồn đúng đề cũng in "4160" và chấm Sai như file — không có dấu hiệu bản của trường in 4460. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

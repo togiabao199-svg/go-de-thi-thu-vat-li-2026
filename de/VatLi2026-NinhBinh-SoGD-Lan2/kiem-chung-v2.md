@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ninh Binh - So GDDT - Lan 2.pdf`. Giải
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): III.5 (đề không cho R: R = 8,31 → 6,23 như file; R = 8,314 → 6,24); III.1 (đề không cho g: g = 9,8 ra đúng 2,45, làm tròn nửa lên 2,5; g = 10 ra 2,5)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (13 hình TikZ đã soát quan hệ: chiều dòng điện, ⊗/⊙, cực N/S, chiều đường sức, số trên trục đều khớp hình gốc; chỉ có `kiem-chung.md` ghi thiếu III.3 trong mục đổi "hàng phần chục" → "hàng phần mười")
-- Đáp án trên mạng: không tìm thấy (vietnamnet.vn, image.plo.vn bị chặn trong phiên; link ghi ở mục cuối)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (vietnamnet.vn, image.plo.vn bị chặn trong phiên; link ghi ở mục cuối)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28 câu; khác 0 câu (Phần II 16/16 ý khớp). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

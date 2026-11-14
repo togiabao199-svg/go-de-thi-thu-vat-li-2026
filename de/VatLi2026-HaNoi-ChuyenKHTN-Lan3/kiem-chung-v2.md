@@ -10,7 +10,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT chuyen KHTN - Lan 3.pdf`. 
   - II.1d: về vật lí Sai chắc chắn (12,4 T); lưu ý số 4,0 T của đề đúng bằng kết quả khi áp nhầm công thức dây dẫn thẳng B = 2·10⁻⁷·I/r = 3,96 T, nên khóa của trường (không có trong tay) có thể ghi Đ nếu người ra đề nhầm công thức. File giữ S là đúng.
   - III.4: 0,09 đúng với hai điểm chấm (2; 3) và (18; 15), nhưng λ = 0,0854 s⁻¹ nằm sát ngưỡng làm tròn 0,085 (xem dưới).
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (đã soát số liệu, phương án, thứ tự ý của cả 28 câu so với ảnh trang; các chỗ sửa chữ đã ghi trong `kiem-chung.md` đều hợp lí)
-- Đáp án trên mạng: không tìm thấy (có một trang VietJack nhiều khả năng đăng đề này nhưng máy không truy cập được; chỉ có tóm tắt gián tiếp cho câu II.4, khớp)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (có một trang VietJack nhiều khả năng đăng đề này nhưng máy không truy cập được; chỉ có tóm tắt gián tiếp cho câu II.4, khớp)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 27/28; khác 1 (III.5 — lỗi đổi đơn vị của lời giải trên mạng). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

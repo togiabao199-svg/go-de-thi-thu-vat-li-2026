@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - Lien truong Nghe An - Lan 1.pd
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.1c (file S theo định luật Charles; nếu chỉ nhìn số đo thô 0,1 / 0,2 cm mỗi 5 °C thì có thể cho là Đ — Fable giữ S); II.4d (file Đ theo N = pV/(kT); lời ý chưa chặt nhưng không thấy cách hiểu nào khác hợp lí — Fable giữ Đ)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (số liệu, phương án, thứ tự ý khớp ảnh trang; hình I.8, I.17, II.3, III.1, III.5 vẽ lại đúng quan hệ: cực nguồn, chiều quấn dây, cực N–S, vị trí P–Q, chiều mũi tên chu trình; I.8 chỉ khác nhỏ ở dây nối đầu phải — gốc vẽ đè lên lõi tới đỉnh vòng cuối, TikZ dừng ở mép dưới lõi và thừa một móc nhỏ — không đổi chiều dòng điện, không đổi đáp án)
-- Đáp án trên mạng: không tìm thấy (có trang đúng đề nhưng tên miền bị chặn: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-thpt-nghe-an-ma-de-3114-co-dap-an)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (có trang đúng đề nhưng tên miền bị chặn: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-lien-truong-thpt-nghe-an-ma-de-3114-co-dap-an)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng cho **28/28** câu (VietJack 28/28; bảng đáp án chuvanbien 28/28). VietJack khớp file **28/28**. Bảng chuvanbien khớp **26/28**, khác **2** (II.2 ý d: Đ / file S; III.6: 427 / file 640). Theo câu: 26 câu khớp cả hai nguồn, 2 câu có một nguồn khác file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

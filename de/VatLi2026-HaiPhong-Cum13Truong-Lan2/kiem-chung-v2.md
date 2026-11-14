@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hai Phong - Cum 13 truong - Lan 2.pdf`. 
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): I.17 ("lực căng của dây treo": mỗi dây 0,7 N = B như file; tổng hai dây 1,4 N = D). Lưu ý nhẹ, không đổi đáp án: III.1 (đề ghi "xilanh cách nhiệt" nhưng yêu cầu coi nhiệt độ không đổi), III.4 ("tăng bao nhiêu lần" hiểu là V₂/V₁), III.6 (đề gốc hỏi "tốc độ … đạt được", file đã thêm chữ "lớn nhất").
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (số liệu, phương án, thứ tự ý của 28 câu khớp ảnh trang; các chỗ sửa lời đề đều đã ghi ở `kiem-chung.md`)
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 27/28; khác 1 (II.2 ý c — điểm mới, không thuộc mục A–D). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

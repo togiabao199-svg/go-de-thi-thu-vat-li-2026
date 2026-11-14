@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Hai Phong - Cum chuyen mon so 10 - Lan 1
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không có câu mơ hồ về lời; II.4a,b (chiều quấn nam châm điện) và II.3b,c (hình phối cảnh) phụ thuộc cách đọc hình gốc — Fable đọc độc lập ra cùng kết quả với file (II.4: S Đ; II.3: Đ S), nên đối chiếu thêm bảng đáp án chính thức (trang hoatieu bị chặn)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy; hình vẽ lại I.11, II.3, II.4 giữ đúng số trên trục, cực pin (− trái, + phải), mũi tên dòng điện, chiều quấn, vị trí N / S / P / Q
-- Đáp án trên mạng: tìm thấy trang đúng đề nhưng bị chặn, không mở được: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-cum-chuyen-mon-so-10-hai-phong-co-dap-an và https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-lien-truong-hai-phong-247552 (chỉ lấy được qua đoạn trích: II.2c S, II.2d Đ, II.4c Đ, III.3 = 1519 — đều khớp)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): tìm thấy trang đúng đề nhưng bị chặn, không mở được: https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-cum-chuyen-mon-so-10-hai-phong-co-dap-an và https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-lien-truong-hai-phong-247552 (chỉ lấy được qua đoạn trích: II.2c S, II.2d Đ, II.4c Đ, III.3 = 1519 — đều khớp)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28 câu; khác 0 câu. Phần II khớp cả 16 ý, kể cả các ý "thầy xem" II.3b, c, II.4a, b; I.6 khớp (A). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Nghe An - THPT chuyen DH Vinh - Lan 1.pd
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): không (I.17 và II.3a,c,d phụ thuộc đọc hình gốc — Fable đọc độc lập trên ảnh nhúng phóng to ra đúng kết quả của file; II.4d, III.2 đề thiếu c và D của nước nhưng đáp án không đổi với c = 4180 ÷ 4200 J/(kg·K))
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): lời đề không thấy lỗi; HÌNH III.3 (sơ đồ ray vẽ lại): các vòng mũi tên từ trường quanh hai thanh ray vẽ cùng một chiều vòng, hình gốc hai thanh vòng ngược chiều nhau (dòng điện hai ray ngược chiều) và hình vẽ lại thiếu dấu "−" ở đầu thanh ray phía sau — không ảnh hưởng đáp án; hình I.17 (N, S, A–B–C–D, chiều quay) và II.3 (cực nguồn, N, S) đúng quan hệ với hình gốc
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; 28 khớp, 0 khác. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

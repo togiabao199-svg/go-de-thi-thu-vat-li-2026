@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Tinh - THPT Cam Xuyen - Lan 1.pdf`. G
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.3d (tính chặt 1282 kg, đề ghi "vào khoảng 1250 kg": file và Fable cùng gõ Sai; nếu người ra đề coi "vào khoảng" là xấp xỉ thì Đúng). III.4 không còn coi là mơ hồ: Fable kết luận 3,46 (M − 2m = 25 g tròn số, đúng chữ "tổng lượng nước trong cốc"); 2,93 chỉ là cách hiểu phụ.
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi số liệu, phương án, thứ tự ý. Hai điểm nhỏ không ảnh hưởng đáp án: (1) hình II.2 vẽ lại để nét đứt của đường sức suốt bề ngang vòng dây, hình gốc chỉ đứt ở nửa phải (phần đường sức đã xuyên qua mặt vòng dây); (2) lời giải II.4d ghi 8/(4,43·10⁻⁴) ≈ 18 070 s, tính đúng theo số đã làm tròn là 18 059 s (số chưa làm tròn 4,427·10⁻⁴ mới ra 18 070 s); kết quả 5,02 giờ không đổi.
-- Đáp án trên mạng: không tìm thấy bản mở được. VietJack có mục "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Cẩm Xuyên (Hà Tĩnh) lần 2 có đáp án" nhưng tên miền khoahoc.vietjack.com bị chặn trong phiên (ngoài danh sách mạng cho phép).
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy bản mở được. VietJack có mục "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Cẩm Xuyên (Hà Tĩnh) lần 2 có đáp án" nhưng tên miền khoahoc.vietjack.com bị chặn trong phiên (ngoài danh sách mạng cho phép).
+- **Đối chiếu mạng bổ sung (14/11/2026):** 28/28 câu có đáp án mạng; 27 khớp, 1 khác (II.2c — cách đọc phối cảnh hình). Điểm mục C (II.3d) và `% KIỂM TRA` III.4: nguồn trùng file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

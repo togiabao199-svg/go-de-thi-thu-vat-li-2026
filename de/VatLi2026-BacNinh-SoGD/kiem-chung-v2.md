@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Bac Ninh - So GDDT - chua ro lan.pdf`. G
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.4d (theo số liệu in m = 0,185 kg thì c ≈ 3888 J/(kg.K) → Sai như file; con số 3995 của đề lại đúng bằng kết quả khi m = 0,18 kg → người ra đề có thể để Đúng)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi số liệu, phương án, thứ tự ý; hình vẽ lại (I.16, II.1, II.4) đúng quan hệ với hình gốc; chỉ có I.16 bốn phương án thêm chữ "trạng thái" ("từ trạng thái (1) sang (2)", gốc: "từ (1) sang (2)") chưa ghi ở mục sửa lời đề, không đổi nghĩa
-- Đáp án trên mạng: không tìm thấy (chỉ thấy bản đề, không có đáp án, tên miền bị chặn: https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKTCUOIKI1_SOBACNINH_SOCANTHO.pdf)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (chỉ thấy bản đề, không có đáp án, tên miền bị chặn: https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DEKTCUOIKI1_SOBACNINH_SOCANTHO.pdf)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Số câu có đáp án mạng: 0/28; khớp: 0; khác: 0. Lời câu, số liệu: 28/28 câu khớp bản đề CVB (khác hai phương án nhiễu I.1 D, I.18 A — không đổi đáp án). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

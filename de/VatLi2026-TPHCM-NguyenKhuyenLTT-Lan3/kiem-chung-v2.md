@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/TP HCM - THPT Nguyen Khuyen - Lan 3.pdf`
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.1d (theo chữ in "41 kJ" thì Sai; tính đúng ra 34,1 kJ — nghi bản gốc là "34,1 kJ" bị in mất chữ, khi đó ý d Đúng); II.4d (định tính, Fable cũng chọn Sai); III.4 (3,4 khi tính đủ ba giai đoạn; 3,1 nếu người ra đề bỏ giai đoạn khung nằm trọn trong từ trường)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy
-- Đáp án trên mạng: không tìm thấy
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28/28; khác file 0 câu. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

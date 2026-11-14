@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Thanh Hoa - THPT Tinh Gia I.pdf`. Giải
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.3b (đề in "từ 30 °C" nhưng 95 860,8 J ứng với 20 → 100 °C: theo chữ in S, coi là lỗi in thì Đ); II.3c (đề in đơn vị J/(g.K), số 832,125 đúng với J/(kg.K): theo chữ in S, coi là lỗi in thì Đ); II.3d (1 258 286,4 J là nhiệt lượng cả chảo thu, đề viết "mà nhôm thu vào": theo chữ in S, ý người ra đề nhiều khả năng Đ — bản cùng gốc trên VietJack ghi đáp án S Đ Đ Đ); III.2 (đề gốc thiếu hình mạch, file tự dựng mạch nối tiếp → 0,66)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi gõ số liệu, phương án, thứ tự ý; hình vẽ lại (I.4 cực nguồn + chiều I, I.9 chiều cong hai vết, II.1 mũi tên chu trình, II.4 nhãn đỉnh + dấu ⊗, III.1 lưới và pha đồ thị, III.6) đúng quan hệ với hình gốc; hai chỗ file SỬA có chủ ý (đã ghi trong kiem-chung.md, đáp án không đổi): II.1d "(1) → (3)" của gốc thành "(1) → (2)", III.3 kí hiệu ⁹⁵₉₂Mo của gốc thành ⁹⁵₄₂Mo
-- Đáp án trên mạng: không tìm thấy (đề này); chỉ có câu II.3 bản lời khác trên VietJack (tên miền bị chặn, không mở): https://khoahoc.vietjack.com/question/2468808/mot-cai-chao-lam-bang-hop-kim-nhom-va-dong-co-nhiet-do-ban-dau-la-khoi
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (đề này); chỉ có câu II.3 bản lời khác trên VietJack (tên miền bị chặn, không mở): https://khoahoc.vietjack.com/question/2468808/mot-cai-chao-lam-bang-hop-kim-nhom-va-dong-co-nhiet-do-ban-dau-la-khoi
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng (nguồn đúng đề, VietJack) cho **28/28** câu; **27 khớp**, **1 khác** (I.2: nguồn ghi D nhưng lời giải của nguồn ứng với A). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

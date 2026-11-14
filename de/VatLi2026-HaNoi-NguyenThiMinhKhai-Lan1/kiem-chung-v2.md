@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Chua ro tinh - THPT Nguyen Thi Minh Khai
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.4c (nhiệt mỗi giây 99 kJ so với phát biểu 100 kJ — file và Fable cùng chọn S; nếu coi là xấp xỉ thì Đ; chưa thấy đáp án mạng cho ý này)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): HÌNH II.2 (Hình a) vẽ lại ĐẢO CỰC NGUỒN — gốc: mỗi pin bản ngắn bên trái (nối nêm phía sau), bản dài (+) bên phải (nối biến trở), có 2 pin; TikZ `(4.7,1.2) to[battery1] (5.5,1.2)` cho bản dài (+) bên trái, chỉ 1 pin → theo hình vẽ lại quy tắc bàn tay trái cho lực từ lên X hướng LÊN, mâu thuẫn Hình b và đáp án a) S (hình gốc cho lực hướng xuống, khớp đáp án); lời đề các câu khác không thấy sai số liệu
-- Đáp án trên mạng: tìm thấy: https://khoahoc.vietjack.com/question/2443095/de-do-cam-ung-tu-trong-long-mot-nam-cham-mot-ban-hoc-sinh-bo-tri-thi-n-izlu9 (VietJack có đủ đề, mỗi câu một trang mã 2443076–2443103; tên miền bị chặn, chỉ đọc được đoạn trích của I.3, II.1, II.2a, II.3b–d, II.4a,b,d — đều khớp)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): tìm thấy: https://khoahoc.vietjack.com/question/2443095/de-do-cam-ung-tu-trong-long-mot-nam-cham-mot-ban-hoc-sinh-bo-tri-thi-n-izlu9 (VietJack có đủ đề, mỗi câu một trang mã 2443076–2443103; tên miền bị chặn, chỉ đọc được đoạn trích của I.3, II.1, II.2a, II.3b–d, II.4a,b,d — đều khớp)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 27 câu; khác 1 câu (II.2, ở ý c). Tính theo ý: Phần II 16 ý, khớp 15, khác 1 (II.2c). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Noi - THPT chuyen KHTN - Lan 1.pdf`. 
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): III.4 (16 nếu trừ khí còn lại trong bình ở 10⁵ Pa — file và Fable chọn; 18 nếu coi dùng hết khí — đáp án gốc của trường có thể theo cách này)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (hình III.6 ghi "12 cm" thay cho "10cm" của hình gốc là chủ ý theo lời đề, đáp số vẫn 0,05; trong hình III.6 hai đầu pin hở nhẹ với dây nối — chỉ là thẩm mĩ, cực (+)/(−), chiều B đúng như gốc)
-- Đáp án trên mạng: không tìm thấy (chỉ có một trang câu lẻ I.4 trên vietjack, tên miền bị chặn: https://khoahoc.vietjack.com/question/2082349/bon-doan-day-dan-a-b-c-d-co-cung-chieu-dai-l-duoc-dat-vuong-goc-voi-vecto-cam-ung-tu-trong-tu-truong)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (chỉ có một trang câu lẻ I.4 trên vietjack, tên miền bị chặn: https://khoahoc.vietjack.com/question/2082349/bon-doan-day-dan-a-b-c-d-co-cung-chieu-dai-l-duoc-dat-vuong-goc-voi-vecto-cam-ung-tu-trong-tu-truong)
+- **Đối chiếu mạng bổ sung (14/11/2026):** 27/28 câu có đáp án mạng (thiếu II.4); 25 khớp, 2 khác (II.3a — nguồn tính nhầm bậc 10; III.5 — nguồn ghi 1, không lời giải). Điểm mục D (III.4): nguồn trùng file (16). Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

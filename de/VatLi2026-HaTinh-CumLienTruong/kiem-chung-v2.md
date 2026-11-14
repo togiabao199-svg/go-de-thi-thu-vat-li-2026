@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Tinh - Cum lien truong Ha Tinh.pdf`. 
 - Câu lệch: II.2a: file S / Fable Đ (đề mơ hồ — số liệu lần đo 7 bất thường; cả hai cách đều bảo vệ được, Fable nghiêng Đ theo ý người ra đề, không khẳng định file sai)
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.2a (S / Đ); III.3 (4,65 / 4,68 — file và Fable cùng chọn 4,65); II.3c và II.3d (ý định tính về phương pháp khoa học — file và Fable cùng chọn Đ, không có đáp án gốc để đối chiếu)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy lỗi số liệu, phương án, thứ tự ý. Một chỗ sửa chữ chưa ghi trong mục "Sửa lời đề" của `kiem-chung.md`: I.13 bản gốc "và nhiệt T₁ = 300 K" → file gõ "và nhiệt độ T₁ = 300 K" (sửa đúng).
-- Đáp án trên mạng: không tìm thấy (chỉ thấy câu II.1 đăng trên VietJack nhưng phiên này không mở được trang; xem mục Nguồn trên mạng)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (chỉ thấy câu II.1 đăng trên VietJack nhưng phiên này không mở được trang; xem mục Nguồn trên mạng)
+- **Đối chiếu mạng bổ sung (14/11/2026):** 27/28 câu có đáp án mạng (thiếu II.1); 26 khớp, 1 khác (I.9 — lỗi nhãn của nguồn). Hai điểm mục A (II.2a) và D (III.3) của đề này: nguồn trùng file. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |

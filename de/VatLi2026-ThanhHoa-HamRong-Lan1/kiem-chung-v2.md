@@ -7,7 +7,8 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Thanh Hoa - THPT Ham Rong - Lan 1.pdf`. 
 - Câu lệch: không
 - Câu đề mơ hồ, hai cách hiểu đều chấp nhận được (file không sai nhưng cần thầy quyết): II.4c (S nếu coi MN là đoạn dây không thuộc mạch kín có từ thông biến thiên — file và Fable cùng chọn; Đ nếu coi MN nằm trong mạch kín cấp dòng I có từ thông khác 0); III.6 (đề không cho N_A, 1 eV: 2108 với 6,02·10²³ và 1,6·10⁻¹⁹; 2107 với 6,022·10²³; 2105 với thêm 1,602·10⁻¹⁹)
 - Lỗi gõ lời đề so với bản gốc (nếu thấy): không thấy (lời đề, số liệu, thứ tự phương án và ý khớp ảnh trang; 6 hình TikZ đúng quan hệ với hình gốc — chiều mũi tên I.1, I.6, I.17, số trên trục I.6, I.15, II.1; riêng I.15 file chủ ý sửa nhãn "An" của đề gốc thành "Au" ở hình và phương án B, đã ghi trong kiem-chung.md, không đổi đáp án)
-- Đáp án trên mạng: không tìm thấy (trang có thể chứa đề kèm đáp án https://hoatieu.vn/de-thi-thu-thpt-mon-vat-li-ham-rong-thanh-hoa-230846 bị chặn tên miền, không mở được)
+- Đáp án trên mạng (phiên trước, khi mạng còn bị chặn): không tìm thấy (trang có thể chứa đề kèm đáp án https://hoatieu.vn/de-thi-thu-thpt-mon-vat-li-ham-rong-thanh-hoa-230846 bị chặn tên miền, không mở được)
+- **Đối chiếu mạng bổ sung (14/11/2026):** Có đáp án mạng 28/28 câu; khớp 28/28 (III.4 khớp giá trị 7,1 = 7,10); khác file 0 câu. Chi tiết, link từng câu ở mục "Đối chiếu mạng bổ sung" cuối file.
 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
