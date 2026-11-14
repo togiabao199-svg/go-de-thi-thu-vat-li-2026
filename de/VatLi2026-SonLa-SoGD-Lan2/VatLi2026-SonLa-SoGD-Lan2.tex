@@ -440,13 +440,17 @@
 				\SLcuonde{2.35}{0.25}{0.8}{0.65}
 				\SLcuonde{3.25}{0.25}{0.8}{0.65}
 				\fill[gray!55] (3.15,0.48) rectangle (3.25,0.72);
-				\coordinate (C2a) at (2.5,0.9); \coordinate (C2b) at (2.95,0.9);
-				\coordinate (C1a) at (3.45,0.9); \coordinate (C1b) at (3.9,0.9);
-				% dây nối
-				\draw[VLxanh,line width=0.9pt] (D1) .. controls +(-0.3,-0.9) and +(-0.4,-0.6) .. (1.6,-0.15) .. controls +(0.5,0.3) and +(0,-0.6) .. (C2a);
-				\draw[VLdo,line width=0.9pt] (D2) .. controls +(0.1,0.4) and +(-0.3,0.4) .. (C2b);
-				\draw[VLxanh,line width=0.9pt] (C1a) .. controls +(0,0.9) and +(-0.6,-0.4) .. (3.6,2.3) .. controls +(0.4,0.3) and +(0,-0.5) .. (4.45,3.05);
-				\draw[VLdo,line width=0.9pt] (C1b) .. controls +(0.2,-0.9) and +(-1.2,-0.4) .. (5.6,-0.05) .. controls +(1.0,0.3) and +(0,-0.6) .. (K1);
+				% chốt nối dây trên nắp cuộn (2) và cuộn (1)
+				\foreach \x in {2.5,2.95,3.45,3.9}{%
+					\fill[black!75] (\x-0.05,0.9) rectangle (\x+0.05,1.0);
+					\filldraw[fill=VLdong!55!white,draw=black!70,very thin] (\x,1.03) ellipse (0.075 and 0.045);}
+				\coordinate (C2a) at (2.5,1.04); \coordinate (C2b) at (2.95,1.04);
+				\coordinate (C1a) at (3.45,1.04); \coordinate (C1b) at (3.9,1.04);
+				% dây nối (mỗi dây đi vào một chốt, không chạy ngang qua mặt cuộn dây)
+				\draw[VLxanh,line width=0.9pt] (D1) .. controls +(-0.3,-0.9) and +(-0.4,-0.6) .. (1.6,-0.15) .. controls +(0.45,0.2) and +(0,-0.45) .. (2.2,0.7) .. controls +(0,0.35) and +(-0.12,0.25) .. (C2a);
+				\draw[VLdo,line width=0.9pt] (D2) .. controls +(0.1,0.5) and +(-0.15,0.55) .. (C2b);
+				\draw[VLxanh,line width=0.9pt] (C1a) .. controls +(-0.15,0.9) and +(-0.6,-0.4) .. (3.6,2.3) .. controls +(0.4,0.3) and +(0,-0.5) .. (4.45,3.05);
+				\draw[VLdo,line width=0.9pt] (C1b) .. controls +(0.45,0.2) and +(-0.25,0.3) .. (4.45,0.45) .. controls +(0.25,-0.3) and +(-1.0,0) .. (5.6,-0.05) .. controls +(1.0,0.3) and +(0,-0.6) .. (K1);
 				\draw[VLdo,line width=0.9pt] (B6t) .. controls +(-0.2,0.6) and +(0,-0.6) .. (4.75,3.05);
 				\draw[VLdo,line width=0.9pt] (B6p) .. controls +(0.1,0.6) and +(0,-0.6) .. (5.25,3.05);
 				\draw[VLxanh,line width=0.9pt] (K2) .. controls +(0.4,0.9) and +(0,-0.9) .. (5.55,3.05);
