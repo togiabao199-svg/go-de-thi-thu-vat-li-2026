@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Tinh - Cum lien truong Ha Tinh.pdf`. 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | D | D | — | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | A | A | — | khớp |
-| I.4 | A | A | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | C | C | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | B | B | — | khớp |
-| I.10 | B | B | — | khớp |
-| I.11 | B | B | — | khớp |
-| I.12 | A | A | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | A | A | — | khớp |
-| I.16 | C | C | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | Đ Đ Đ S | Đ Đ Đ S | — | khớp |
-| II.2 | Đ Đ S Đ | S Đ S Đ | — | LỆCH ý a (KIỂM TRA) |
-| II.3 | Đ S Đ Đ | Đ S Đ Đ | — | khớp (c, d: thầy xem) |
-| II.4 | Đ Đ Đ S | Đ Đ Đ S | — | khớp |
-| III.1 | 26,4 | 26,4 | — | khớp |
-| III.2 | 1,92 | 1,92 | — | khớp |
-| III.3 | 4,65 | 4,65 | — | khớp (KIỂM TRA) |
-| III.4 | 28,4 | 28,4 | — | khớp |
-| III.5 | 1,14 | 1,14 | — | khớp |
-| III.6 | 0,6 | 0,6 | — | khớp |
+| I.1 | D | D | D | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | A | A | A | khớp |
+| I.4 | A | A | A | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | C | C | C | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | B | B | D (lời giải nguồn ứng với B) | khớp |
+| I.10 | B | B | B | khớp |
+| I.11 | B | B | B | khớp |
+| I.12 | A | A | A | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | A | A | A | khớp |
+| I.16 | C | C | C | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | Đ Đ Đ S | Đ Đ Đ S | — (lời giải dạng ảnh, bị chặn) | khớp |
+| II.2 | Đ Đ S Đ | S Đ S Đ | S Đ S Đ | LỆCH ý a (KIỂM TRA) |
+| II.3 | Đ S Đ Đ | Đ S Đ Đ | Đ S Đ Đ | khớp (c, d: thầy xem) |
+| II.4 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp |
+| III.1 | 26,4 | 26,4 | 26,4 | khớp |
+| III.2 | 1,92 | 1,92 | 1,92 | khớp |
+| III.3 | 4,65 | 4,65 | 4,65 | khớp (KIỂM TRA) |
+| III.4 | 28,4 | 28,4 | 28,4 | khớp |
+| III.5 | 1,14 | 1,14 | 1,14 | khớp |
+| III.6 | 0,6 | 0,6 | 0,6 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -86,8 +86,63 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Ha Tinh - Cum lien truong Ha Tinh.pdf`. 
 Các câu tính toán còn lại (I.2, I.5, I.10, I.12, I.13, II.1a–c, III.1, III.2, III.5, III.6) đã khớp, phép tính ghi ở `kiem-chung.md`; Fable tính lại bằng Python cho cùng kết quả (III.6: N = l/(πD) → L = 0,605 m; tính đúng chiều dài vòng xoắn √((πD)² + p²) → L = 0,600 m; đều 0,6).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng.
 - Câu II.1 (mỏ uranium ở Kazakhstan, khớp nguyên văn số liệu và 4 ý) có đăng trên VietJack: https://khoahoc.vietjack.com/question/2490362/tai-mot-mo-uranium-o-kazakhstan-nguoi-ta-khai-thac-duoc-1-00-tan-quang — nhưng phiên này không truy cập được khoahoc.vietjack.com (host ngoài danh sách mạng cho phép), đoạn trích của công cụ tìm kiếm không hiện đáp án của trang; không dùng làm nguồn. Nếu thầy mở được trang này (và các câu cùng đề trên VietJack) thì có thể có đáp án cho II.2a, II.3c,d, III.3.
 - hoatieu.vn (trang "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí sở Hà Tĩnh", https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-ha-tinh-232313): cũng không truy cập được, chưa rõ có phải đề cụm liên trường.
 - Các truy vấn đã thử (8): tên đề + "Kazakhstan" "1,00 tấn quặng"; "Panasonic CU/CS" "U12XKH" dàn nóng; "ST6440W" "Vintage Edison" ống xoắn; "cụm liên trường" Hà Tĩnh mã đề 0223 Robert Brown "mâu thuẫn nhận thức"; "Robert Boyle" "ống chữ J" "29,0 inch Hg"; "Độ lệch tuyệt đối của pV ở lần đo thứ 7"; "Tại một mỏ uranium ở Kazakhstan" (ra trang VietJack); hai truy vấn giới hạn khoahoc.vietjack.com cho câu điều hòa và câu Brown (không ra câu của đề).
 - Ghi chú phụ: trang Panasonic Việt Nam ghi máy CS/CU-U12XKH-8 công suất lạnh 3,50 kW (khớp số liệu đề; đây là công suất lạnh danh định của máy thật).
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung: chỉ đọc đáp án công khai trên mạng, không giải lại đề, không sửa đáp án.
+
+### (a) Nguồn
+- **Nguồn đúng đề**: VietJack, bộ câu hỏi "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Tĩnh" (đăng 24/05/2026), 28 trang câu liên tiếp `https://khoahoc.vietjack.com/question/2490344/...` đến `.../question/2490371/...` (câu I.1 = 2490344, …, I.18 = 2490361, II.1–II.4 = 2490362–2490365, III.1–III.6 = 2490366–2490371). Mỗi trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Tĩnh"; đáp án đọc ở khối công khai "Trả lời: Giải bởi Vietjack — Đáp án đúng là X" (Phần I), "a) Đúng/Sai…" (Phần II), "Đáp án: …" (Phần III). Trang tổng của đề trong luyện thi: https://khoahoc.vietjack.com/luyen-thi/73273/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-ha-tinh (link `thi-online/.../241584` cũ nay chuyển về trang danh sách đề Hà Tĩnh, không có đáp án).
+- **Bằng chứng khớp đề**: khớp nguyên văn và số liệu cả 28 câu, cùng thứ tự câu và thứ tự phương án / ý với file `.tex`; ví dụ I.1 (động năng ×2, mật độ ×3, D "tăng 6 lần"), I.15 (2 %, 1 %, 1,5 %; A = 4,5 %), II.1 (mỏ uranium Kazakhstan 1,00 tấn, 0,200 %, 99,3 %), II.2 (bảng 7 lần đo h / V: 0,0/48,0 … 72,5/15,5, p₀ = 29,0 inch Hg), III.3 (Panasonic CU/CS-U12XKH-8, 3,50 kW, 1,18 kW, 32,0 W), III.5–III.6 (đèn ST6440W). Nguồn còn giữ lỗi chữ của đề gốc ở I.13 ("nhiệt T₁"). VietJack đặt tên bộ là "Hà Tĩnh" (danh sách đề Hà Tĩnh của VietJack ghi "… Sở Hà Tĩnh"), không ghi "cụm liên trường"; không có mã đề.
+- **Đọc được / không đọc được**: 27/28 câu có đáp án dạng chữ công khai. II.1: lời giải là ảnh trên `video.vietjack.com` — WebFetch thử một lần bị chặn (tên miền ngoài danh sách mạng cho phép), nên không có đáp án. Ảnh lời giải của I.5, III.2 cũng trên `video.vietjack.com` nhưng đáp án đã ghi bằng chữ trên trang.
+- **Tên miền bị chặn**: `video.vietjack.com` (ảnh lời giải). Không cần thử hoatieu.vn (trang "sở Hà Tĩnh" trên hoatieu theo đoạn trích tìm kiếm là đề sở, chưa rõ có phải đề này).
+- **Truy vấn đã thử**: link trang câu II.1 ghi ở mục "Nguồn trên mạng" (mở được, dẫn tới 6 câu cùng đề, suy ra dải id liên tiếp và kiểm từng trang); WebSearch `"Tại một mỏ uranium ở Kazakhstan" "1,00 tấn quặng" đáp án` (không ra trang đề); `đề thi thử tốt nghiệp THPT 2026 vật lí cụm liên trường Hà Tĩnh đáp án "Robert Boyle" "ống chữ J"` (chỉ ra các trang hoatieu đề sở / tỉnh khác).
+
+### (b) Bảng đối chiếu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | D | D | https://khoahoc.vietjack.com/question/2490344 | khớp |
+| I.2 | D | D | https://khoahoc.vietjack.com/question/2490345 | khớp |
+| I.3 | A | A | https://khoahoc.vietjack.com/question/2490346 | khớp |
+| I.4 | A | A | https://khoahoc.vietjack.com/question/2490347 | khớp |
+| I.5 | C | C | https://khoahoc.vietjack.com/question/2490348 | khớp |
+| I.6 | B | B | https://khoahoc.vietjack.com/question/2490349 | khớp |
+| I.7 | C | C | https://khoahoc.vietjack.com/question/2490350 | khớp |
+| I.8 | D | D | https://khoahoc.vietjack.com/question/2490351 | khớp |
+| I.9 | B | D (lời giải nguồn: "thăng hoa là chuyển từ thể rắn → thể hơi" = B) | https://khoahoc.vietjack.com/question/2490352 | khác chữ cái; nguồn tự mâu thuẫn |
+| I.10 | B | B | https://khoahoc.vietjack.com/question/2490353 | khớp |
+| I.11 | B | B | https://khoahoc.vietjack.com/question/2490354 | khớp |
+| I.12 | A | A | https://khoahoc.vietjack.com/question/2490355 | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2490356 | khớp |
+| I.14 | B | B | https://khoahoc.vietjack.com/question/2490357 | khớp |
+| I.15 | A | A | https://khoahoc.vietjack.com/question/2490358 | khớp |
+| I.16 | C | C | https://khoahoc.vietjack.com/question/2490359 | khớp |
+| I.17 | A | A | https://khoahoc.vietjack.com/question/2490360 | khớp |
+| I.18 | A | A | https://khoahoc.vietjack.com/question/2490361 | khớp |
+| II.1 | Đ Đ Đ S | — (lời giải dạng ảnh trên video.vietjack.com, bị chặn) | https://khoahoc.vietjack.com/question/2490362 | không có đáp án |
+| II.2 | S Đ S Đ | S Đ S Đ | https://khoahoc.vietjack.com/question/2490363 | khớp (cả ý a — mục A) |
+| II.3 | Đ S Đ Đ | Đ S Đ Đ | https://khoahoc.vietjack.com/question/2490364 | khớp (cả c, d) |
+| II.4 | Đ Đ Đ S | Đ Đ Đ S | https://khoahoc.vietjack.com/question/2490365 | khớp |
+| III.1 | 26,4 | 26,4 | https://khoahoc.vietjack.com/question/2490366 | khớp |
+| III.2 | 1,92 | 1,92 | https://khoahoc.vietjack.com/question/2490367 | khớp |
+| III.3 | 4,65 | 4,65 | https://khoahoc.vietjack.com/question/2490368 | khớp (mục D) |
+| III.4 | 28,4 | 28,4 | https://khoahoc.vietjack.com/question/2490369 | khớp |
+| III.5 | 1,14 | 1,14 | https://khoahoc.vietjack.com/question/2490370 | khớp |
+| III.6 | 0,6 | 0,6 | https://khoahoc.vietjack.com/question/2490371 | khớp |
+
+Ghi chú các điểm mục A, D của `kho/KIEM-DAP-AN-V2.md`:
+- **II.2a (mục A)**: nguồn ghi **Sai**, lí do: "tích pV của lần 7 không phải xấp xỉ không đổi" (nguồn lập bảng pV giống file: 1392; 1393,7; 1400,7; 1392; 1392; 1392; 1573,25). Cả câu II.2 nguồn ghi S Đ S Đ, trùng file (c: trung bình ≈ 1,42·10³; d: lần 7 là điểm dị thường cần rà soát lại đầu tiên).
+- **III.3 (mục D)**: nguồn ghi **4,65**, phép tính chính 3,5 + 1,18 − 0,032 = 4,648 kW — cùng cách hiểu với file (trừ công suất quạt dàn lạnh).
+- II.3c, d ("thầy xem"): nguồn ghi c Đúng (thí nghiệm hạt vô cơ để bác bỏ nguyên nhân "sự sống", thí nghiệm đổi nhiệt độ để khám phá liên hệ với nhiệt), d Đúng — trùng file.
+
+### (c) Câu mạng khác file
+- I.9: file B / mạng D / https://khoahoc.vietjack.com/question/2490352 / nguồn cùng thứ tự phương án (D là "Hơi nước → nước đá" — ngưng kết), nhưng lời giải của chính nguồn viết "thăng hoa là quá trình chuyển từ thể rắn → thể hơi (khí)", tức phương án B: lỗi chọn nhầm chữ cái của nguồn, không phải đề khác. Không thuộc mục A–D; file B đúng.
+
+### (d) Tổng
+27/28 câu có đáp án mạng (thiếu II.1); 26 khớp, 1 khác (I.9 — lỗi nhãn của nguồn). Hai điểm mục A (II.2a) và D (III.3) của đề này: nguồn trùng file.
