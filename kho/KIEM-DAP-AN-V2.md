@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 10/35 đề đã kiểm; tổng 2 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 11/35 đề đã kiểm; tổng 2 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -20,7 +20,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 8 | P04 | [`VatLi2026-Hue-PhanDangLuu-Lan1`](../de/VatLi2026-Hue-PhanDangLuu-Lan1/kiem-chung-v2.md) | xong | 0 | không (I.16: file C / Fable lần 1 A — xem mục đề mơ hồ). | I.16 (A và C cùng đúng theo SGK; file gõ C); II.2a (n = 0,1787 mol, đề ghi "xấp xỉ 0,17": tính chặt là Sai như file, nhưng có thể đáp án của trường là Đúng do cắt số); III.2 (10 J theo ý người ra đề — khớp lời giải trên mạng; 15 J nếu chỉ xét giai đoạn nhận nhiệt và công; 0 J nếu coi khí lí tưởng trở về đúng trạng thái đầu); III.1 (20 theo cả hai cách hiểu hợp lí; 54 chỉ khi "áp suất dư + bóng rỗng"). | không thấy (số liệu, phương án, thứ tự ý của 28 câu khớp ảnh trang; các chỗ sửa chữ đã ghi ở `kiem-chung.md`). Ghi chú nhỏ về lời giải II.2d: viết "(2) → (5) đẳng áp" trong khi chu trình không có đoạn (2) → (5) (hai trạng thái chỉ cùng áp suất 10⁵ Pa); kết quả 454,5 K vẫn đúng. | tìm thấy một phần — VietJack đăng đúng đề này (từng câu, mã 2443046–2443073), ví dụ https://khoahoc.vietjack.com/question/2443069/mot-khoi-khi-trong-xilanh-duoc-dat-nam-ngang-duoc-day-kin-bang-mot-pis ; máy phiên này bị chặn mạng tới vietjack nên chỉ lấy được qua tóm tắt kết quả tìm kiếm: II.1a Đúng, III.1 = 20, III.2 = 10. |
 | 9 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1` | đang kiểm | | | | | |
 | 10 | P04 | [`VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3`](../de/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3/kiem-chung-v2.md) | xong | 0 | không | II.1d (theo chữ in "41 kJ" thì Sai; tính đúng ra 34,1 kJ — nghi bản gốc là "34,1 kJ" bị in mất chữ, khi đó ý d Đúng); II.4d (định tính, Fable cũng chọn Sai); III.4 (3,4 khi tính đủ ba giai đoạn; 3,1 nếu người ra đề bỏ giai đoạn khung nằm trọn trong từ trường) | không thấy | không tìm thấy |
-| 11 | P05 | `VatLi2026-HungYen-SoGD-Lan1` | đang kiểm | | | | | |
+| 11 | P05 | [`VatLi2026-HungYen-SoGD-Lan1`](../de/VatLi2026-HungYen-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.2a (đề gốc in P = 12 kW thì a Sai, m₂ = 25,67 kg; file sửa P = 1,2 kW thì a Đúng — Fable đồng ý cách sửa); II.1c (file S, Fable S, nhưng người ra đề có thể coi Đ); II.1d (file Đ, Fable Đ theo cách hiểu cân đã trừ bì; hiểu số chỉ gồm cả cốc thì S) | không thấy lỗi số liệu, phương án, thứ tự ý; 8 hình TikZ đúng quan hệ với hình gốc (tọa độ điểm, chiều mũi tên, nhãn trục); chỉ có I.18 phương án A bỏ chữ "đó" ("từ cơ thể đó để bay hơi" → "từ cơ thể để bay hơi") chưa ghi ở mục sửa lời đề của kiem-chung.md, không ảnh hưởng nghĩa | không tìm thấy |
 | 12 | P05 | `VatLi2026-NgheAn-ChuyenDHVinh-Lan1` | đang kiểm | | | | | |
 | 13 | P06 | [`VatLi2026-NgheAn-LienTruong-Lan2`](../de/VatLi2026-NgheAn-LienTruong-Lan2/kiem-chung-v2.md) | xong | 0 | không | I.8 (đề gốc in phương án A là (2/2)kT nên theo đúng chữ in không có phương án đúng; file sửa thành (3/2)kT, chọn A — Fable đồng ý); II.4c ("đồ thị thực nghiệm là một đoạn thẳng": Đ theo đường khớp, S nếu hiểu chặt các điểm đo phải thẳng hàng tuyệt đối — Fable chọn Đ như file); III.2 (5,3 kWh/m² "tính theo số giờ nắng trong một ngày": hiểu là năng lượng một ngày chia cho 2300/365 giờ nắng → 73,7 — Fable cùng cách hiểu với file) | không thấy (các chỗ sửa có chủ ý đã ghi ở kiem-chung.md: I.8 A → (3/2)kT; R thêm K⁻¹; II.4 thêm "nhiệt kế (3)", cột bảng "Δt (s)" → "τ (s)"); hình vẽ lại II.3 (toạ độ 4 trạng thái, chiều mũi tên, nét kéo dài qua O) và III.6 (bốn đường ống, chiều mũi tên) đúng quan hệ với hình gốc | không tìm thấy |
 | 14 | P07 | `VatLi2026-PhuTho-NgoGiaTu-Lan1` | đang kiểm | | | | | |
@@ -28,7 +28,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 16 | P08 | `VatLi2026-QuangNinh-SoGD-Lan1` | đang kiểm | | | | | |
 | 17 | P08 | `VatLi2026-ThaiNguyen-SoGD-Lan1` | đang kiểm | | | | | |
 | 18 | P08 | `VatLi2026-ThanhHoa-HamRong-Lan1` | đang kiểm | | | | | |
-| 19 | P09 | `VatLi2026-ThanhHoa-TinhGia1` | chưa kiểm | | | | | |
+| 19 | P09 | `VatLi2026-ThanhHoa-TinhGia1` | đang kiểm | | | | | |
 | 20 | P01 | `VatLi2026-BacNinh-SoGD-Lan1` | chưa kiểm | | | | | |
 | 21 | P09 | `VatLi2026-BacNinh-SoGD` | chưa kiểm | | | | | |
 | 22 | P01 | `VatLi2026-HaNoi-ChuyenKHTN-Lan1` | chưa kiểm | | | | | |
