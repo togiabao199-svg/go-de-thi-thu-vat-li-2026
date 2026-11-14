@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Thanh Hoa - THPT Ham Rong - Lan 1.pdf`. 
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | C | C | — | khớp |
-| I.2 | D | D | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | B | B | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | D | D | — | khớp |
-| I.7 | B | B | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | D | D | — | khớp |
-| I.10 | C | C | — | khớp |
-| I.11 | C | C | — | khớp |
-| I.12 | C | C | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | A | A | — | khớp (thầy xem: "An" → "Au") |
-| I.16 | A | A | — | khớp |
-| I.17 | D | D | — | khớp |
-| I.18 | B | B | — | khớp |
-| II.1 | Đ Đ S Đ | Đ Đ S Đ | — | khớp |
-| II.2 | Đ Đ S Đ | Đ Đ S Đ | — | khớp |
-| II.3 | Đ Đ Đ Đ | Đ Đ Đ Đ | — | khớp (thầy xem: cả bốn Đ) |
-| II.4 | Đ Đ S S | Đ Đ S S | — | khớp (KIỂM TRA ý c) |
-| III.1 | 2 | 2 | — | khớp |
-| III.2 | 50 | 50 | — | khớp |
-| III.3 | 50 | 50 | — | khớp |
-| III.4 | 7,10 | 7,10 | — | khớp |
-| III.5 | 10 | 10 | — | khớp |
-| III.6 | 2108 | 2108 | — | khớp (KIỂM TRA) |
+| I.1 | C | C | C | khớp |
+| I.2 | D | D | D | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | B | B | B | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | D | D | D | khớp |
+| I.7 | B | B | B | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | D | D | D | khớp |
+| I.10 | C | C | C | khớp |
+| I.11 | C | C | C | khớp |
+| I.12 | C | C | C | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | A | A | A | khớp (thầy xem: "An" → "Au") |
+| I.16 | A | A | A | khớp |
+| I.17 | D | D | D | khớp |
+| I.18 | B | B | B | khớp |
+| II.1 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp |
+| II.2 | Đ Đ S Đ | Đ Đ S Đ | Đ Đ S Đ | khớp |
+| II.3 | Đ Đ Đ Đ | Đ Đ Đ Đ | Đ Đ Đ Đ | khớp (thầy xem: cả bốn Đ) |
+| II.4 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp (KIỂM TRA ý c) |
+| III.1 | 2 | 2 | 2 | khớp |
+| III.2 | 50 | 50 | 50 | khớp |
+| III.3 | 50 | 50 | 50 | khớp |
+| III.4 | 7,10 | 7,10 | 7,1 (= 7,10) | khớp |
+| III.5 | 10 | 10 | 10 | khớp |
+| III.6 | 2108 | 2108 | 2108 | khớp (KIỂM TRA) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -78,8 +78,67 @@ Giải lại lần hai các điểm `% KIỂM TRA`:
 - III.5: định luật 1 nhiệt động lực học ΔU = A + Q (A > 0 khi khí nhận công).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng.
 
 - Trang có thể đúng đề nhưng không mở được: https://hoatieu.vn/de-thi-thu-thpt-mon-vat-li-ham-rong-thanh-hoa-230846 ("Đề thi thử THPT 2026 môn Vật lí Hàm Rồng Thanh Hóa", HoaTieu; theo tóm tắt của công cụ tìm kiếm là đề khảo sát THPT Hàm Rồng mã 0221, đáp án nằm trong file tải về; tóm tắt lại ghi ngày 11/04/2025 và "có phần cho biết các hằng số" trong khi đề gốc trong kho không có khối "Cho biết" → chưa chắc cùng đề). Tên miền hoatieu.vn nằm ngoài danh sách mạng được phép của phiên (lỗi phân giải tên miền), không cố vượt; thầy có thể tự mở để đối chiếu II.4c.
 - Truy vấn đã thử (WebSearch, 8 lượt): "đề thi khảo sát chất lượng Vật lý 12 THPT Hàm Rồng Thanh Hóa 2025-2026 mã đề 0221 đáp án"; "hai vành khuyên trong cấu tạo của máy" + "Cấu tạo của máy phù hợp với mô hình thực tế nào sau đây"; "ấm siêu tốc" "220 V" "1600 W" 20 24 29 36 43 50 57 "4570"; "Hàm Rồng" đề thi thử 2026 Vật lí lần 1 "38,9698"; "Một đoạn dây dẫn thẳng MN có chiều dài 20 cm, khối lượng 10 gam được treo nằm ngang bằng hai sợi dây mảnh" "rơi tự do"; "điều trị ung thư tuyến giáp" "50 mCi" "8,02 ngày" "27,3"; "Hàm Rồng" + "Hình bên dùng để mô tả điều gì"; "Khí lí tưởng không tuân theo nội dung vắn tắt nào sau đây của mô hình động học phân tử".
 - Trang liên quan nhưng không phải đề này (không dùng làm đáp án): https://2048.vn/question/doan-day-dan-mn-co-chieu-dai-1-20cm-khoi-luong-m-10g-2163962 (bài dây MN 20 cm, 10 g, B = 0,5 T của đề Cụm Phú Thọ — bài gốc mà II.4 phỏng theo, không có ý c, d); https://khoahoc.vietjack.com/question/2311701/mot-doan-day-dan-mn-chieu-dai-l-20cm-luong-m-10-g (tên miền vietjack bị chặn, không mở); https://chuvanbien.vn/upload_images/files/Tuyen-tap-de-thi-truong-so/2022-2023/Ham_Rong_Thanh_Hoa.pdf (đề Hàm Rồng năm 2022–2023, khác đề); https://loigiaihay.com/ly-thuyet-mo-hinh-dong-hoc-phan-tu-chat-khi-vat-li-12-ket-noi-tri-thuc-a166229.html (lý thuyết KNTT về khí lí tưởng, căn cứ cho I.12).
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ đối chiếu đáp án công khai trên mạng; không giải lại đề, không sửa `.tex`.
+
+### (a) Nguồn
+
+- **Nguồn đúng đề (VietJack):** "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Hàm Rồng (Thanh Hóa) có đáp án", trang cả đề https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-ham-rong-thanh-hoa-co-dap-an/240641 (28 câu; trang cả đề chỉ hiện lời giải vài câu đầu, phần sau khóa VIP — không dùng phần khóa). Đáp án đọc trên 28 trang câu công khai `https://khoahoc.vietjack.com/question/<id>` với id **2478825 → 2478852** (trang cả đề liệt kê các id này; trên từng trang câu dòng "Câu hỏi trong đề" ghi "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Thanh Hóa"). Thứ tự câu, phương án, ý trùng file: 2478825–2478842 = I.1–I.18; 2478843–2478846 = II.1–II.4 (mỗi trang một câu 4 ý); 2478847–2478852 = III.1–III.6.
+- **Bằng chứng khớp lời câu và số liệu:** I.3 (T = 3,8 ngày, sau 15,2 ngày còn 2,24 g; 17,92 / 8,96 / 5,60 / 35,84 g); I.10 (λ = 3,4·10⁵ J/kg, c = 2,09·10³, 50 g ở −20 °C; 190 / 36 / 19 / 1,9 kJ); I.14 (38,9698 amu và 38,9656 amu); I.15 (đồ thị năng lượng liên kết riêng, phương án A. U, B. "An", C. W, D. Mo — nguồn cũng in "An", file sửa "Au"); I.16 (hai vành khuyên); II.2 (¹³¹I, 8,02 ngày, 50 mCi, 1,09·10⁻¹⁷ g, 27,3 mCi); II.3 (ấm 220 V – 1600 W, 0,5 kg, dãy 20; 24; 29; 36; 43; 50; 57 °C, 4570 J/(kg.K)); II.4 (MN 20 cm, 10 g, 0,5 T, dây treo cách điện); III.6 (600 MW, 30 %, 200 MeV, 24 h).
+- **Chỗ chữ của nguồn khác file (không đổi đáp án):** I.15 phương án B nguồn in "An" (file sửa thành "Au"); II.4b nguồn in "góc 45 °C" (file "45°"); III.4 nguồn ghi đáp án "7,1" dù lời câu yêu cầu làm tròn hàng phần trăm (file 7,10 — cùng giá trị).
+- **Mã đề:** nguồn không ghi mã đề (file: mã gốc 0221).
+- **Nguồn đã xét nhưng không đúng đề / không đọc được:** https://hoatieu.vn/de-thi-thu-thpt-mon-vat-li-ham-rong-thanh-hoa-230846 — WebFetch trả **HTTP 403 (bị chặn)**; theo đoạn trích tìm kiếm trang này là đề KSCL THPT Hàm Rồng mã 0221 nhưng ngày đăng 11/04/2025 (có thể là đề năm học trước hoặc cùng đề đăng lại — chưa xác định được). Các nguồn liên quan khác đã ghi ở phiên trước (2048.vn bài MN của Cụm Phú Thọ; đề Hàm Rồng 2022–2023 trên chuvanbien) không phải đề này.
+- **Tên miền bị chặn:** hoatieu.vn (WebFetch 403).
+- **Truy vấn đã thử (lượt bổ sung):** WebSearch "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Hàm Rồng Thanh Hóa có đáp án"; `"Trong một máy phát điện xoay chiều, người ta thấy có hai vành khuyên trong cấu tạo của máy"`; `"38,9698" "38,9656" amu phản ứng bắn phá hạt nhân`; `site:khoahoc.vietjack.com Hàm Rồng vật lý 2025-2026` (ra trang cả đề). Tải tuần tự id 2478824–2478853, cách nhau 1,5 s (2478824, 2478853 thuộc đề Toán khác).
+
+### (b) Bảng đối chiếu 28 câu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | C | C | https://khoahoc.vietjack.com/question/2478825 | khớp |
+| I.2 | D | D | https://khoahoc.vietjack.com/question/2478826 | khớp |
+| I.3 | D | D | https://khoahoc.vietjack.com/question/2478827 | khớp |
+| I.4 | B | B | https://khoahoc.vietjack.com/question/2478828 | khớp |
+| I.5 | A | A | https://khoahoc.vietjack.com/question/2478829 | khớp |
+| I.6 | D | D | https://khoahoc.vietjack.com/question/2478830 | khớp |
+| I.7 | B | B | https://khoahoc.vietjack.com/question/2478831 | khớp |
+| I.8 | D | D | https://khoahoc.vietjack.com/question/2478832 | khớp |
+| I.9 | D | D | https://khoahoc.vietjack.com/question/2478833 | khớp |
+| I.10 | C | C | https://khoahoc.vietjack.com/question/2478834 | khớp |
+| I.11 | C | C | https://khoahoc.vietjack.com/question/2478835 | khớp |
+| I.12 | C | C | https://khoahoc.vietjack.com/question/2478836 | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2478837 | khớp |
+| I.14 | B | B | https://khoahoc.vietjack.com/question/2478838 | khớp |
+| I.15 | A | A | https://khoahoc.vietjack.com/question/2478839 | khớp (nguồn in "An", file "Au") |
+| I.16 | A | A | https://khoahoc.vietjack.com/question/2478840 | khớp |
+| I.17 | D | D | https://khoahoc.vietjack.com/question/2478841 | khớp |
+| I.18 | B | B | https://khoahoc.vietjack.com/question/2478842 | khớp |
+| II.1 | Đ Đ S Đ | Đ Đ S Đ | https://khoahoc.vietjack.com/question/2478843 | khớp 4/4 |
+| II.2 | Đ Đ S Đ | Đ Đ S Đ | https://khoahoc.vietjack.com/question/2478844 | khớp 4/4 (c: nguồn tính 4,02·10⁻⁷ g) |
+| II.3 | Đ Đ Đ Đ | Đ Đ Đ Đ | https://khoahoc.vietjack.com/question/2478845 | khớp 4/4 (c: 1600·10/(0,5·7) ≈ 4570) |
+| II.4 | Đ Đ S S | Đ Đ S S | https://khoahoc.vietjack.com/question/2478846 | khớp 4/4 (c: nguồn chấm Sai) |
+| III.1 | 2 | 2 | https://khoahoc.vietjack.com/question/2478847 | khớp |
+| III.2 | 50 | 50 | https://khoahoc.vietjack.com/question/2478848 | khớp |
+| III.3 | 50 | 50 | https://khoahoc.vietjack.com/question/2478849 | khớp |
+| III.4 | 7,10 | 7,1 | https://khoahoc.vietjack.com/question/2478850 | khớp giá trị (nguồn ghi 7,1; 28,41075/4 = 7,1027) |
+| III.5 | 10 | 10 | https://khoahoc.vietjack.com/question/2478851 | khớp |
+| III.6 | 2108 | 2108 | https://khoahoc.vietjack.com/question/2478852 | khớp (nguồn lấy N_A = 6,02·10²³, 1 MeV = 1,6·10⁻¹³ J) |
+
+### (c) Câu mạng khác file
+
+Không có. Hai điểm mục D của đề này đều được nguồn xác nhận như file:
+- **II.4c** (`% KIỂM TRA`): nguồn chấm **Sai** — "MN treo bằng dây cách điện nên là đoạn mạch hở: chỉ có suất điện động cảm ứng ở hai đầu, không có dòng điện cảm ứng" — trùng cách hiểu của file.
+- **III.6** (`% KIỂM TRA`, đề không cho N_A, 1 eV): nguồn ra **2108** với N_A = 6,02·10²³ mol⁻¹ và 1 MeV = 1,6·10⁻¹³ J — trùng file.
+
+### (d) Tổng
+
+Có đáp án mạng 28/28 câu; khớp 28/28 (III.4 khớp giá trị 7,1 = 7,10); khác file 0 câu.

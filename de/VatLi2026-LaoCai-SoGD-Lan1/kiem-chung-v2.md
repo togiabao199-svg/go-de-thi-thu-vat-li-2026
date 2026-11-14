@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Lao Cai - So GDDT - Lan 1.pdf`. Giải l
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | B | B | — | khớp |
-| I.2 | B | B | — | khớp |
-| I.3 | D | D | — | khớp |
-| I.4 | B | B | — | khớp |
-| I.5 | C | C | — | khớp (thầy xem) |
-| I.6 | A | A | — | khớp (thầy xem) |
-| I.7 | C | C | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | A | A | — | khớp |
-| I.10 | B | B | — | khớp |
-| I.11 | A | A | — | khớp |
-| I.12 | D | D | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | C | C | — | khớp |
-| I.15 | C | C | — | khớp |
-| I.16 | C | C | — | khớp |
-| I.17 | A | A | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | S S Đ Đ | S S Đ Đ | — | khớp (c: thầy xem) |
-| II.2 | S S Đ S | S S Đ S | — | khớp |
-| II.3 | S S Đ Đ | S S Đ Đ | — | khớp |
-| II.4 | Đ S S Đ | Đ S S Đ | — | khớp |
-| III.1 | 2 | 2 | — | khớp (thầy xem) |
-| III.2 | 507 | 507 | — | khớp |
-| III.3 | 59 | 59 | — | khớp |
-| III.4 | 3,6 | 3,6 | — | khớp |
-| III.5 | 98 | 98 | — | khớp |
-| III.6 | 3,39 | 3,39 | — | khớp (thầy xem) |
+| I.1 | B | B | B | khớp |
+| I.2 | B | B | B | khớp |
+| I.3 | D | D | D | khớp |
+| I.4 | B | B | B | khớp |
+| I.5 | C | C | C | khớp (thầy xem) |
+| I.6 | A | A | A | khớp (thầy xem) |
+| I.7 | C | C | C | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | A | A | A | khớp |
+| I.10 | B | B | B | khớp |
+| I.11 | A | A | A | khớp |
+| I.12 | D | D | D | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | C | C | C | khớp |
+| I.15 | C | C | C | khớp |
+| I.16 | C | C | C | khớp |
+| I.17 | A | A | A | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | S S Đ Đ | S S Đ Đ | S S Đ Đ | khớp (c: thầy xem) |
+| II.2 | S S Đ S | S S Đ S | S S Đ S | khớp |
+| II.3 | S S Đ Đ | S S Đ Đ | S S Đ Đ | khớp |
+| II.4 | Đ S S Đ | Đ S S Đ | Đ S S Đ | khớp |
+| III.1 | 2 | 2 | 2 | khớp (thầy xem) |
+| III.2 | 507 | 507 | 507 | khớp |
+| III.3 | 59 | 59 | 59 | khớp |
+| III.4 | 3,6 | 3,6 | 3,6 | khớp |
+| III.5 | 98 | 98 | 98 | khớp |
+| III.6 | 3,39 | 3,39 | 3,39 | khớp (thầy xem) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 File đề không có dòng `% KIỂM TRA` / `% ???` nào. Không có câu lệch. Bảng dưới là các điểm "thầy xem" ghi ở `kiem-chung.md` và `kho/TIEN-DO.md` (I.6, II.1c: chiều quấn + cực nguồn; I.5: kí hiệu ⊕; III.1; III.6), đã giải lại lần hai trên ảnh gốc trích từ PDF (pdfimages) và phóng to.
@@ -78,6 +78,8 @@ Ghi thêm (không lệch, để thầy biết độ nhạy):
 - II.4a, b: đẳng nhiệt pV = hằng số; mật độ phân tử μ = N/V giảm khi V tăng (N không đổi).
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 Không tìm thấy đáp án trên mạng của chính đề này (Sở GD&ĐT Lào Cai, thi thử tốt nghiệp THPT 2025 – 2026, mã 0201). Các truy vấn đã thử (WebSearch):
 1. đề thi thử tốt nghiệp THPT 2026 môn Vật lí Sở GD&ĐT Lào Cai lần 1 đáp án "khóa cửa điện từ" "bình tích áp"
 2. "Hình bên mô tả cấu tạo của một khóa cửa điện từ dùng trong các hệ thống kiểm soát ra vào"
@@ -94,3 +96,58 @@ Kết quả gần nhất (không phải đề này, không dùng làm nguồn):
 - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-cum-truong-phia-bac-tinh-lao-cai-250492 — đề Cụm các trường phía Bắc tỉnh Lào Cai (đề khác).
 - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-hoa-hoc-so-lao-cai-249563 và https://vndoc.com/de-thi-thu-tot-nghiep-thpt-2026-mon-tieng-anh-so-gd-dt-lao-cai-lan-1-377139 — Sở Lào Cai nhưng môn Hóa học, Tiếng Anh.
 - Một số link docs.google.com hiện trong kết quả truy vấn 2 và 4 (docs.google.com/document/d/1xSdx0EKAw4NKCLk170G_KNMtPyQKxORx, …/1fNoIcfSihLwy5M0sP3vINLf0N6gVQKG3DQf5VDeOiiM, …/18PCuK2o_iAnaizDAcWbQb3F50NVsz_ddkYT_rn-daGM, …/1uqEQ-G7wfbFsurSpHk_USejerbF1ltfDOCdPPZjCnsY): tên miền bị chặn, không mở, chưa rõ có đúng đề hay không.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ đối chiếu đáp án công khai trên mạng; không giải lại đề, không sửa `.tex`.
+
+### (a) Nguồn
+
+- **Nguồn đúng đề (VietJack):** "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Lào Cai có đáp án", trang cả đề https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-lao-cai-co-dap-an/238269 (28 câu; trang cả đề chỉ hiện lời giải vài câu đầu, phần sau khóa VIP — không dùng phần khóa). Đáp án đọc trên 28 trang câu công khai `https://khoahoc.vietjack.com/question/<id>`, mỗi trang ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Lào Cai": id **2443276 → 2443301** = I.1 … III.4 (26 câu liền nhau: 2443276–2443293 = I.1–I.18; 2443294–2443297 = II.1–II.4, mỗi trang một câu 4 ý; 2443298–2443301 = III.1–III.4); **III.5 = 2443310**, **III.6 = 2443311** (id 2443302, 2443303 trả 404; III.6 tìm qua link trên trang câu, III.5 bằng id liền kề, đều kiểm đúng dòng "Câu hỏi trong đề"). Thứ tự câu, phương án, ý trùng file.
+- **Bằng chứng khớp lời câu và số liệu:** I.1 (p = ⅓·μ·m·v², bốn phương án ⅔ / ⅓ / 3 / 3/2 cùng thứ tự); I.2 (điểm ba 0,01 °C, 612 Pa, bốn phát biểu, "Số phát biểu đúng là" 1 / 3 / 4 / 2); I.9 (hồ bơi 22 °C, không khí 25 °C); II.1 (khóa cửa điện từ, có cả câu "Xác định theo chiều nhìn trong hình vẽ, cuộn dây đặt bên phải cửa" như file); II.3 (gallium 50 g, 368,4 J/(kg.K), 79 600 J/kg, "434,84 kJ"); II.4 (bình tích áp 18 lít, 120 kPa, 12 lít, 9 lít, 10,8 lít, 20 %); III.2 (2 dm³, 1 atm, 27 °C → 0,2 dm³, tăng thêm 25 atm); III.3 (5 lít 70 °C, 3 lít 25 °C, rót 2 lít); III.5 (75 dm³, 4,01·10⁵ Pa, 37 °C → 22 °C, 2,81·10⁵ Pa); III.6 (cánh 3 m, 6 vòng/s, 20 μT).
+- **Chỗ chữ của nguồn khác file (không đổi đáp án):** nguồn viết "Gali" (file "gallium"), "vector" (file "vectơ"); không thấy khác biệt số liệu.
+- **Mã đề:** nguồn không ghi mã đề (file: mã gốc 0201).
+- **Nguồn đã xét nhưng không đúng đề:** https://khoahoc.vietjack.com/question/2309374/… (bình tích áp 10 lít; 8 lít; 5 lít — số liệu khác, đã ghi ở phiên trước); hoatieu.vn "Cụm trường phía Bắc tỉnh Lào Cai" (đề khác). Id liền kề 2443275, 2443304–2443309, 2443312–2443316 thuộc đề Toán khác.
+- **Tên miền bị chặn / không thử:** hoatieu.vn, docs.google.com (không dùng; các link docs.google ở phiên trước chưa rõ đúng đề).
+- **Truy vấn đã thử (lượt bổ sung):** WebSearch `site:khoahoc.vietjack.com Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Lào Cai` (không ra); `"Một thợ hàn dùng bình có thể tích 75" oxygen "4,01" rò rỉ vietjack` (không ra); `khoahoc.vietjack.com "thợ hàn" bình "75" oxygen …` (không ra). Trang cả đề tìm bằng đường dẫn theo mẫu tên đề VietJack (`de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-lao-cai-co-dap-an`), sau đó kiểm câu 1 khớp file. Tải tuần tự, cách nhau 1,5 s.
+
+### (b) Bảng đối chiếu 28 câu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | B | B | https://khoahoc.vietjack.com/question/2443276 | khớp |
+| I.2 | B | B | https://khoahoc.vietjack.com/question/2443277 | khớp (3 phát biểu đúng) |
+| I.3 | D | D | https://khoahoc.vietjack.com/question/2443278 | khớp |
+| I.4 | B | B | https://khoahoc.vietjack.com/question/2443279 | khớp |
+| I.5 | C | C | https://khoahoc.vietjack.com/question/2443280 | khớp (Hình 3) |
+| I.6 | A | A | https://khoahoc.vietjack.com/question/2443281 | khớp (điểm T; nguồn: dòng điện ở các vòng phía ngoài đi xuống, B trong ống từ trái sang phải) |
+| I.7 | C | C | https://khoahoc.vietjack.com/question/2443282 | khớp |
+| I.8 | C | C | https://khoahoc.vietjack.com/question/2443283 | khớp |
+| I.9 | A | A | https://khoahoc.vietjack.com/question/2443284 | khớp |
+| I.10 | B | B | https://khoahoc.vietjack.com/question/2443285 | khớp |
+| I.11 | A | A | https://khoahoc.vietjack.com/question/2443286 | khớp |
+| I.12 | D | D | https://khoahoc.vietjack.com/question/2443287 | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2443288 | khớp |
+| I.14 | C | C | https://khoahoc.vietjack.com/question/2443289 | khớp |
+| I.15 | C | C | https://khoahoc.vietjack.com/question/2443290 | khớp |
+| I.16 | C | C | https://khoahoc.vietjack.com/question/2443291 | khớp |
+| I.17 | A | A | https://khoahoc.vietjack.com/question/2443292 | khớp |
+| I.18 | A | A | https://khoahoc.vietjack.com/question/2443293 | khớp (Hình 3) |
+| II.1 | S S Đ Đ | S S Đ Đ | https://khoahoc.vietjack.com/question/2443294 | khớp 4/4 (c: cực Bắc ở đầu phải) |
+| II.2 | S S Đ S | S S Đ S | https://khoahoc.vietjack.com/question/2443295 | khớp 4/4 (b: T₃ = 800/3 K) |
+| II.3 | S S Đ Đ | S S Đ Đ | https://khoahoc.vietjack.com/question/2443296 | khớp 4/4 |
+| II.4 | Đ S S Đ | Đ S S Đ | https://khoahoc.vietjack.com/question/2443297 | khớp 4/4 (c: 240 kPa; d: 1728/2160 → thoát 20 %) |
+| III.1 | 2 | 2 | https://khoahoc.vietjack.com/question/2443298 | khớp |
+| III.2 | 507 | 507 | https://khoahoc.vietjack.com/question/2443299 | khớp |
+| III.3 | 59 | 59 | https://khoahoc.vietjack.com/question/2443300 | khớp (lần 1: 43 °C) |
+| III.4 | 3,6 | 3,6 | https://khoahoc.vietjack.com/question/2443301 | khớp |
+| III.5 | 98 | 98 | https://khoahoc.vietjack.com/question/2443310 | khớp (nguồn dùng trực tiếp 4,01·10⁵ và 2,81·10⁵ Pa làm áp suất khí) |
+| III.6 | 3,39 | 3,39 | https://khoahoc.vietjack.com/question/2443311 | khớp (nguồn: e = B·6πR²/1 s, π = 3,14, R = 3 m) |
+
+### (c) Câu mạng khác file
+
+Không có. Các điểm "thầy xem" của đề này được nguồn xác nhận như file: I.6 (A, điểm T) và II.1c (Đúng) — nguồn đọc cùng chiều dòng điện trên các vòng phía ngoài (đi xuống) và cùng kết luận B trong cuộn dây hướng sang phải; III.5 (98, coi số đo là áp suất tuyệt đối); III.6 (3,39, hiểu 3 m là chiều dài cánh = bán kính).
+
+### (d) Tổng
+
+Có đáp án mạng 28/28 câu; khớp 28/28; khác file 0 câu.

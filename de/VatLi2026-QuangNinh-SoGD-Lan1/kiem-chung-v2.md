@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Quang Ninh - So GDDT - Lan 1.pdf`. Giả
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | B | B | — | khớp |
-| I.2 | A | A | — | khớp |
-| I.3 | B | B | — | khớp |
-| I.4 | B | B | — | khớp |
-| I.5 | A | A | — | khớp |
-| I.6 | B | B | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | D | D | — | khớp |
-| I.9 | B | B | — | khớp |
-| I.10 | C | C | (lập luận nhiều giai đoạn, không rõ chữ cái) | khớp |
-| I.11 | A | A | — | khớp |
-| I.12 | D | D | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | B | B | — | khớp |
-| I.15 | A | A | — | khớp |
-| I.16 | D (đề gốc lỗi, đoán phương án D bị gõ hỏng) | C (đã chữa phương án C) | "B", nội dung U₂ = (N₂/N₁)·U₁ | khớp về nội dung, khác chữ cái (KIỂM TRA) |
-| I.17 | C | C | — | khớp |
-| I.18 | A | A | — | khớp |
-| II.1 | S Đ Đ S | S Đ Đ S | — | khớp |
+| I.1 | B | B | B | khớp |
+| I.2 | A | A | A | khớp |
+| I.3 | B | B | B | khớp |
+| I.4 | B | B | B | khớp |
+| I.5 | A | A | A | khớp |
+| I.6 | B | B | B | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | D | D | D | khớp |
+| I.9 | B | B | B | khớp |
+| I.10 | C | C | C | khớp |
+| I.11 | A | A | A | khớp |
+| I.12 | D | D | D | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | B | B | B | khớp |
+| I.15 | A | A | A | khớp |
+| I.16 | D (đề gốc lỗi, đoán phương án D bị gõ hỏng) | C (đã chữa phương án C) | C về nội dung (nguồn ghi B: bản VietJack in B = (N₂/N₁)·U₁, C = (N₁/N₂)·U₁) | khớp về nội dung, khác chữ cái (KIỂM TRA) |
+| I.17 | C | C | C | khớp |
+| I.18 | A | A | A | khớp |
+| II.1 | S Đ Đ S | S Đ Đ S | S Đ Đ S | khớp |
 | II.2 | Đ Đ Đ S | Đ Đ Đ S | Đ Đ Đ S | khớp (KIỂM TRA) |
-| II.3 | Đ Đ S S | Đ Đ S S | — | khớp |
-| II.4 | Đ S S Đ | Đ S S Đ | — | khớp |
-| III.1 | 298 | 298 | — | khớp |
-| III.2 | 608 | 608 | — | khớp (KIỂM TRA) |
-| III.3 | 0,44 | 0,44 | — | khớp (KIỂM TRA) |
-| III.4 | 60 | 60 | — | khớp |
-| III.5 | 3,6 | 3,6 | — | khớp |
-| III.6 | 2,15 | 2,15 | — | khớp (KIỂM TRA) |
+| II.3 | Đ Đ S S | Đ Đ S S | Đ Đ S S | khớp |
+| II.4 | Đ S S Đ | Đ S S Đ | Đ S S Đ | khớp |
+| III.1 | 298 | 298 | 298 | khớp |
+| III.2 | 608 | 608 | 608 | khớp (KIỂM TRA) |
+| III.3 | 0,44 | 0,44 | 0,44 | khớp (KIỂM TRA) |
+| III.4 | 60 | 60 | 60 | khớp |
+| III.5 | 3,6 | 3,6 | 3,6 | khớp |
+| III.6 | 2,15 | 2,15 | 2,15 | khớp (KIỂM TRA) |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 | Câu | File | Fable lần 1 | Mạng (link) | Kết luận của Fable | Căn cứ |
@@ -80,6 +80,8 @@ Giải thích thêm:
 - III.4: lực từ bằng 0 khi dây song song đường sức (F = BIl·sin α) — KNTT Bài 15.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
+
 - Đúng đề nhưng KHÔNG mở được (tên miền khoahoc.vietjack.com bị chặn trong phiên, lỗi ENOTFOUND); chỉ đọc được đoạn trích do công cụ tìm kiếm trả về, mức tin cậy thấp – trung bình:
   - https://khoahoc.vietjack.com/question/2443373/mot-soi-day-thang-dai-co-dinh-nam-ngang-co-dong-dien-khong-doi-chay-qu — câu I.10; lời giải chia nhiều giai đoạn (lại gần: từ thông tăng; qua vùng đường sức đổi chiều: dòng cảm ứng đảo chiều), không thấy chữ cái đáp án.
   - https://khoahoc.vietjack.com/question/2443379/mot-may-bien-ap-li-tuong-cuon-so-cap-co-rm-n-1-vong-day-cuon-thu-cap-c — câu I.16; đáp án ghi "B", A = (N₁/N₂)·U₁, D = (N₁/U₁)·N₂.
@@ -88,3 +90,59 @@ Giải thích thêm:
 - https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-quang-ninh-231310 — "Đề thi thử tốt nghiệp THPT 2026 môn Vật lí Quảng Ninh" (mô tả: 24 mã đề kèm bảng đáp án); tên miền hoatieu.vn bị chặn, chưa xác định có phải đề này không.
 - Không phải đề này: https://khoahoc.vietjack.com/question/2272746/mot-binh-khi-helium-tinh-khiet-hinh-tru-dung-de-bom-bong-bay-co-cac-thong-so-nhu-hinh-ve (bình helium 31 cm; 6,5 cm; 12 bar).
 - Truy vấn đã thử (11): tên kì thi + "bơm bóng bay" "21.7 cm" 17 bar; câu dây thẳng – khung abcd trong ngoặc kép; "củ khoai lang cỡ vừa" "92,87 Bq"; "nam châm thử" "nam châm chữ U" "Vị trí (2)" + Quảng Ninh; "Trên mỗi mét vuông tại bề mặt Trái Đất nơi nhận được neutrino"; "Đặt cốc nhôm đựng 300 ml nước" "bình cách nhiệt đựng 600 ml nước"; MRI "0,6 T" "1,4 T" "0,25 s" (2 truy vấn); "chuỗi phản ứng tổng hợp hạt nhân proton-proton" "26,7 MeV"; câu dẫn máy biến áp trong ngoặc kép (2 truy vấn). Chi tiết ở `/tmp/VatLi2026-QuangNinh-SoGD-Lan1/mang.md`.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Bước bổ sung chỉ đối chiếu đáp án công khai trên mạng; không giải lại đề, không sửa `.tex`.
+
+### (a) Nguồn
+
+- **Nguồn đúng đề (VietJack):** "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Quảng Ninh có đáp án", trang cả đề https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-quang-ninh-co-dap-an/238270 (28 câu, 18 – 4 – 6; trang cả đề chỉ hiện lời giải vài câu đầu, phần sau khóa VIP — không dùng phần khóa). Đáp án đọc trên 28 trang câu công khai `https://khoahoc.vietjack.com/question/<id>` với id **2443364 → 2443391** (mỗi trang ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Quảng Ninh", mục "Trả lời: Giải bởi Vietjack — Đáp án đúng là …"). Thứ tự câu, thứ tự phương án, thứ tự ý trùng file: 2443364–2443381 = I.1–I.18; 2443382–2443385 = II.1–II.4 (mỗi trang một câu 4 ý); 2443386–2443391 = III.1–III.6 (III.1–2, III.3–4, III.5–6 hiện theo cặp "Câu hỏi cùng đoạn").
+- **Bằng chứng khớp lời câu và số liệu:** I.1 (nóng chảy −114 °C, sôi 78 °C, hỏi ở 90 °C; bốn phương án như file); I.3 (27 °C → 63 °C; 2,24 / 1,12 / 1,21 / 2,68 lần); I.14 (bình helium cao 108 cm, đường kính 21,7 cm, 17 bar, bóng 1,5 dm³, 1 bar; 571 / 426 / 412 / 352); II.3 (MRI: vòng dây 100 cm², 4 Ω, B 0,6 T → 1,4 T trong 0,25 s; ý c "3,2 V", ý d "2,65·10⁻⁴ W" như file); II.4 (⁴⁰K 0,0117 %, T = 1,25·10⁹ năm, 500 mg potassium/củ); III.1–III.2 (323 °C, 16 dm³, 3·10⁵ Pa); III.5–III.6 (4·10²⁶ W, 90 %, 26,7 MeV, 1,5·10¹¹ m).
+- **Chỗ chữ của nguồn khác file (không đổi đáp án, trừ I.16 ở mục c):** I.16 nguồn in A = N₁/N₂ + U₁, **B = (N₂/N₁)·U₁ (dấu nhân)**, C = (N₁/N₂)·U₁, D = (N₁/U₁)·N₂ — tức bản VietJack có phương án đúng ở B, còn bản SieuGioi in "+" ở B; file giữ B = N₂/N₁ + U₁ và chữa C thành (N₂/N₁)·U₁. II.4d nguồn in "92,9 Bq", file (theo bản SieuGioi) "92,87 Bq" — cả hai cùng Đúng.
+- **Mã đề:** nguồn không ghi mã đề. Trên VietJack còn "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Quảng Ninh mã đề 0214 có đáp án" (https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-so-gddt-quang-ninh-ma-de-0214-co-dap-an/238280, id câu 2443875…): **không phải đề này** (câu 1 là phản ứng ⁴₂He + ¹⁴₇N → ¹₁H + X, câu 3 hỏi đơn vị nhiệt hóa hơi riêng) — không dùng. Trang nhóm https://khoahoc.vietjack.com/thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-quang-ninh/238947 chỉ là danh sách 4 đề Quảng Ninh (Cẩm Phả, Chuyên Hạ Long, Sở, Sở mã 0214).
+- **Nguồn đã xét nhưng không đúng đề:** https://khoahoc.vietjack.com/question/2272746/… (bình helium 31 cm; 6,5 cm; 12 bar — số liệu khác, đã ghi ở phiên trước). Id liền kề 2443362, 2443363, 2443392, 2443393 thuộc đề Toán 9 khác.
+- **Tên miền bị chặn / không thử:** hoatieu.vn (trang https://hoatieu.vn/de-thi-thu-tot-nghiep-thpt-mon-vat-li-quang-ninh-231310 chưa mở được; không dùng curl theo quy định). Lần này `curl` tới khoahoc.vietjack.com đọc được (HTTP 200).
+- **Truy vấn đã thử (lượt bổ sung):** WebSearch `khoahoc.vietjack.com "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Sở GD&ĐT Quảng Ninh mã đề 0214"` (ra trang cả đề 238270); tải tuần tự các id 2443362–2443393, cách nhau 1,5 s.
+
+### (b) Bảng đối chiếu 28 câu
+
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | B | B | https://khoahoc.vietjack.com/question/2443364 | khớp |
+| I.2 | A | A | https://khoahoc.vietjack.com/question/2443365 | khớp |
+| I.3 | B | B | https://khoahoc.vietjack.com/question/2443366 | khớp |
+| I.4 | B | B | https://khoahoc.vietjack.com/question/2443367 | khớp |
+| I.5 | A | A | https://khoahoc.vietjack.com/question/2443368 | khớp |
+| I.6 | B | B | https://khoahoc.vietjack.com/question/2443369 | khớp |
+| I.7 | A | A | https://khoahoc.vietjack.com/question/2443370 | khớp |
+| I.8 | D | D | https://khoahoc.vietjack.com/question/2443371 | khớp |
+| I.9 | B | B | https://khoahoc.vietjack.com/question/2443372 | khớp |
+| I.10 | C | C | https://khoahoc.vietjack.com/question/2443373 | khớp (nguồn: adcba → dabcd → adcba) |
+| I.11 | A | A | https://khoahoc.vietjack.com/question/2443374 | khớp |
+| I.12 | D | D | https://khoahoc.vietjack.com/question/2443375 | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2443376 | khớp |
+| I.14 | B | B | https://khoahoc.vietjack.com/question/2443377 | khớp (426) |
+| I.15 | A | A | https://khoahoc.vietjack.com/question/2443378 | khớp |
+| I.16 | C (đã chữa: (N₂/N₁)·U₁) | C về nội dung (nguồn ghi **B**; B của nguồn = (N₂/N₁)·U₁) | https://khoahoc.vietjack.com/question/2443379 | khớp nội dung, khác chữ cái (xem mục c) |
+| I.17 | C | C | https://khoahoc.vietjack.com/question/2443380 | khớp |
+| I.18 | A | A | https://khoahoc.vietjack.com/question/2443381 | khớp |
+| II.1 | S Đ Đ S | S Đ Đ S | https://khoahoc.vietjack.com/question/2443382 | khớp 4/4 (d: T₂ = 15T₁/8) |
+| II.2 | Đ Đ Đ S | Đ Đ Đ S | https://khoahoc.vietjack.com/question/2443383 | khớp 4/4 (d: 313 K) |
+| II.3 | Đ Đ S S | Đ Đ S S | https://khoahoc.vietjack.com/question/2443384 | khớp 4/4 (c: 0,032 V; d: 2,56·10⁻⁴ W ≠ 2,65·10⁻⁴) |
+| II.4 | Đ S S Đ | Đ S S Đ | https://khoahoc.vietjack.com/question/2443385 | khớp 4/4 |
+| III.1 | 298 | 298 | https://khoahoc.vietjack.com/question/2443386 | khớp |
+| III.2 | 608 | 608 | https://khoahoc.vietjack.com/question/2443387 | khớp (nguồn: T max tại V = 14 dm³) |
+| III.3 | 0,44 | 0,44 | https://khoahoc.vietjack.com/question/2443388 | khớp |
+| III.4 | 60 | 60 | https://khoahoc.vietjack.com/question/2443389 | khớp |
+| III.5 | 3,6 | 3,6 | https://khoahoc.vietjack.com/question/2443390 | khớp |
+| III.6 | 2,15 | 2,15 | https://khoahoc.vietjack.com/question/2443391 | khớp (nguồn lấy 1 MeV = 1,6·10⁻¹³ J) |
+
+### (c) Câu mạng khác file
+
+- **I.16** — file: C (phương án C đã chữa thành U₂ = (N₂/N₁)·U₁) / mạng: "Đáp án đúng là B", lời giải U₁/U₂ = N₁/N₂ ⇒ U₂ = (N₂/N₁)·U₁ / https://khoahoc.vietjack.com/question/2443379 / Nhận xét: **cùng nội dung đáp án, khác chữ cái** do hai cách chữa lỗi in (mục B của `kho/KIEM-DAP-AN-V2.md`). Bản VietJack in B bằng dấu nhân và giữ C = (N₁/N₂)·U₁ như bản SieuGioi, nên nhiều khả năng đề của Sở có đáp án B và dấu "+" ở B là lỗi gõ của bản SieuGioi. Nếu thầy theo bản này: sửa B thành (N₂/N₁)·U₁, trả C về (N₁/N₂)·U₁, `\True` ở B — thầy quyết.
+- Không có câu nào khác nội dung. Các điểm mục C, F của đề này: II.3d nguồn cũng in "2,65·10⁻⁴ W" và chấm **Sai** (tính ra 2,56·10⁻⁴ W) — như file; vì bản VietJack chép độc lập với bản SieuGioi (khác ở I.16) nên số 2,65 nhiều khả năng có trong đề gốc. III.2 (608), III.3 (0,44), III.6 (2,15) nguồn ra đúng các số file đã gõ.
+
+### (d) Tổng
+
+Có đáp án mạng 28/28 câu; khớp 28/28 về nội dung (27 câu trùng cả chữ cái; I.16 trùng nội dung, khác chữ cái do cách chữa lỗi in); khác file 0 câu.
