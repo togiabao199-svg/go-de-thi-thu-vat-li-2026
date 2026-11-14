@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 22/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 23/35 đề đã kiểm; tổng 3 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -32,7 +32,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 20 | P01 | [`VatLi2026-BacNinh-SoGD-Lan1`](../de/VatLi2026-BacNinh-SoGD-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.2c (số liệu bảng cho h/T dao động 0,852–0,875 mm/K, lệch 2,7 %; file và Fable cùng chọn Đ theo ý người ra đề, xét khắt khe có thể cãi S) | không thấy (lời đề các câu có số liệu và 10 hình khớp bản gốc: chiều I, F, dấu ⊗/⊙ ở I.5; chiều dòng điện, dấu ⊙ ở I.10; số trên trục III.1; bảng II.2) | không tìm thấy |
 | 21 | P09 | [`VatLi2026-BacNinh-SoGD`](../de/VatLi2026-BacNinh-SoGD/kiem-chung-v2.md) | xong | 0 | không | II.4d (theo số liệu in m = 0,185 kg thì c ≈ 3888 J/(kg.K) → Sai như file; con số 3995 của đề lại đúng bằng kết quả khi m = 0,18 kg → người ra đề có thể để Đúng) | không thấy lỗi số liệu, phương án, thứ tự ý; hình vẽ lại (I.16, II.1, II.4) đúng quan hệ với hình gốc; chỉ có I.16 bốn phương án thêm chữ "trạng thái" ("từ trạng thái (1) sang (2)", gốc: "từ (1) sang (2)") chưa ghi ở mục sửa lời đề, không đổi nghĩa | không tìm thấy |
 | 22 | P01 | [`VatLi2026-HaNoi-ChuyenKHTN-Lan1`](../de/VatLi2026-HaNoi-ChuyenKHTN-Lan1/kiem-chung-v2.md) | xong | 0 | không | III.4 (16 nếu trừ khí còn lại trong bình ở 10⁵ Pa — file và Fable chọn; 18 nếu coi dùng hết khí — đáp án gốc của trường có thể theo cách này) | không thấy (hình III.6 ghi "12 cm" thay cho "10cm" của hình gốc là chủ ý theo lời đề, đáp số vẫn 0,05; trong hình III.6 hai đầu pin hở nhẹ với dây nối — chỉ là thẩm mĩ, cực (+)/(−), chiều B đúng như gốc) | không tìm thấy |
-| 23 | P02 | `VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1` | đang kiểm | | | | | |
+| 23 | P02 | [`VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1`](../de/VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1/kiem-chung-v2.md) | xong | 0 | không | II.4c (nhiệt mỗi giây 99 kJ so với phát biểu 100 kJ — file và Fable cùng chọn S; nếu coi là xấp xỉ thì Đ; chưa thấy đáp án mạng cho ý này) | HÌNH II.2 (Hình a) vẽ lại ĐẢO CỰC NGUỒN — gốc: mỗi pin bản ngắn bên trái (nối nêm phía sau), bản dài (+) bên phải (nối biến trở), có 2 pin; TikZ `(4.7,1.2) to[battery1] (5.5,1.2)` cho bản dài (+) bên trái, chỉ 1 pin → theo hình vẽ lại quy tắc bàn tay trái cho lực từ lên X hướng LÊN, mâu thuẫn Hình b và đáp án a) S (hình gốc cho lực hướng xuống, khớp đáp án); lời đề các câu khác không thấy sai số liệu | tìm thấy: https://khoahoc.vietjack.com/question/2443095/de-do-cam-ung-tu-trong-long-mot-nam-cham-mot-ban-hoc-sinh-bo-tri-thi-n-izlu9 (VietJack có đủ đề, mỗi câu một trang mã 2443076–2443103; tên miền bị chặn, chỉ đọc được đoạn trích của I.3, II.1, II.2a, II.3b–d, II.4a,b,d — đều khớp) |
 | 24 | P03 | `VatLi2026-HaiPhong-CumCM10-Lan1` | đang kiểm | | | | | |
 | 25 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan2` | đang kiểm | | | | | |
 | 26 | P05 | `VatLi2026-LaoCai-SoGD-Lan1` | đang kiểm | | | | | |
@@ -40,7 +40,7 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 28 | P06 | `VatLi2026-NinhBinh-SoGD-Lan2` | đang kiểm | | | | | |
 | 29 | P07 | `VatLi2026-QuangNinh-ChuyenHaLong-Lan1` | đang kiểm | | | | | |
 | 30 | P02 | `VatLi2026-HaNoi-SoGD-Lan1` | đang kiểm | | | | | |
-| 31 | P05 | `VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1` | chưa kiểm | | | | | |
+| 31 | P05 | `VatLi2026-NgheAn-ChuyenPhanBoiChau-Lan1` | đang kiểm | | | | | |
 | 32 | P06 | `VatLi2026-NinhBinh-SoGD-Lan1` | chưa kiểm | | | | | |
 | 33 | P07 | `VatLi2026-PhuTho-SoGD-Lan1` | chưa kiểm | | | | | |
 | 34 | P08 | `VatLi2026-ThanhHoa-LuongDacBang-Lan1` | chưa kiểm | | | | | |
