@@ -69,3 +69,8 @@ Vẽ theo toạ độ điểm ảnh của ảnh gốc (ảnh nhúng trong PDF, p
 Bố cục: I.15 hai cột 0,49 / 0,41 `\linewidth`; II.1 hai cột 0,6 / 0,3 `\linewidth` (hình rộng 5,0 cm; thử 5,5 cm thì trang 5 bản đề trống 8,5 cm nên giữ 5,0 cm). Dàn trang: bản đề 7 trang ĐẠT, bản lời giải 11 trang (lưu ý trang 5 trống 7,5 cm).
 
 Hình chưa ưng: I.6 — ảnh gốc mờ, phân giải thấp (329 × 190 điểm ảnh) nên các dòng chữ trên màn hình điện thoại chỉ vẽ thành nét gạch; hộp tai nghe vẽ dạng khối bo tròn, không có chi tiết bản lề / đèn báo (ảnh gốc không thấy rõ). I.15 — rác hữu cơ vẽ giản lược hơn ảnh gốc (ảnh gốc là tranh minh họa nhiều chi tiết nhỏ).
+
+## Sửa hình theo báo cáo phiên kiểm đáp án (14/11/2026)
+
+- II.4 (Hình 2, đồ thị): bản trước chia trục hoành 10 khoảng 48 s (4 điểm trung gian trên đoạn đun); hình gốc chia 8 khoảng 60 s (3 điểm trung gian ở 60, 120, 180 s). Đã vẽ lại theo gốc; các mốc 25 °C, 100 °C, 240 s, 480 s không đổi nên đáp án không đổi.
+- II.2: nét dây nối hai cuộn dây ở đầu trái lõi sắt (thiếu ở bản trên `main`) đã được thêm trong lúc vẽ lại hình (PHIÊN FABLE), đúng gốc.
