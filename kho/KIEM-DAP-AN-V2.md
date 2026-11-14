@@ -2,7 +2,7 @@
 
 Phiên 14/11/2026, nhánh `claude/great-knuth-6gcmjx`. Mỗi đề một agent con giải lại độc lập 28 câu từ ảnh trang đề gốc (ghi đáp án trước khi mở file `.tex`), tìm đáp án trên mạng, soát câu lý thuyết theo SGK, rồi so với `\True`, `\shortans` trong file đề. Kết quả từng đề: `de/<tên đề>/kiem-chung-v2.md` (bảng đáp án Fable 28 câu, bảng câu lệch / câu đang `% KIỂM TRA`, căn cứ lý thuyết, nguồn trên mạng). Phiên này KHÔNG sửa file `.tex`, `kiem-chung.md`, `kho/TIEN-DO.md`: mọi thay đổi đáp án chờ thầy quyết.
 
-**Tiến độ: 0/35 đề đã kiểm; tổng 0 câu / ý lệch (file khác kết luận cuối của Fable).**
+**Tiến độ: 1/35 đề đã kiểm; tổng 0 câu / ý lệch (file khác kết luận cuối của Fable).**
 
 Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự làm: đề có `% KIỂM TRA` trong file `.tex` (21 đề) → đề có điểm ở mục "Chờ thầy quyết" của TIEN-DO (8 đề) → đề chỉ có điểm "thầy xem" (6 đề).
 
@@ -15,10 +15,10 @@ Cách đếm "lệch": Phần I, III theo câu; Phần II theo ý. Thứ tự l�
 | 3 | P02 | `VatLi2026-HaNoi-YenHoa-Lan1` | đang kiểm | | | | | |
 | 4 | P02 | `VatLi2026-HaTinh-CamXuyen-Lan2` | đang kiểm | | | | | |
 | 5 | P03 | `VatLi2026-HaTinh-CumLienTruong` | đang kiểm | | | | | |
-| 6 | P03 | `VatLi2026-HaiPhong-Cum13Truong-Lan2` | đang kiểm | | | | | |
+| 6 | P03 | [`VatLi2026-HaiPhong-Cum13Truong-Lan2`](../de/VatLi2026-HaiPhong-Cum13Truong-Lan2/kiem-chung-v2.md) | xong | 0 | không | I.17 ("lực căng của dây treo": mỗi dây 0,7 N = B như file; tổng hai dây 1,4 N = D). Lưu ý nhẹ, không đổi đáp án: III.1 (đề ghi "xilanh cách nhiệt" nhưng yêu cầu coi nhiệt độ không đổi), III.4 ("tăng bao nhiêu lần" hiểu là V₂/V₁), III.6 (đề gốc hỏi "tốc độ … đạt được", file đã thêm chữ "lớn nhất"). | không thấy (số liệu, phương án, thứ tự ý của 28 câu khớp ảnh trang; các chỗ sửa lời đề đều đã ghi ở `kiem-chung.md`) | không tìm thấy |
 | 7 | P03 | `VatLi2026-HaiPhong-KinhMonII-Lan2` | đang kiểm | | | | | |
 | 8 | P04 | `VatLi2026-Hue-PhanDangLuu-Lan1` | đang kiểm | | | | | |
-| 9 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1` | chưa kiểm | | | | | |
+| 9 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan1` | đang kiểm | | | | | |
 | 10 | P04 | `VatLi2026-TPHCM-NguyenKhuyenLTT-Lan3` | chưa kiểm | | | | | |
 | 11 | P05 | `VatLi2026-HungYen-SoGD-Lan1` | chưa kiểm | | | | | |
 | 12 | P05 | `VatLi2026-NgheAn-ChuyenDHVinh-Lan1` | chưa kiểm | | | | | |
