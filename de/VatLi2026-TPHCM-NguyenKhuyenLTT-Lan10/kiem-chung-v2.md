@@ -77,6 +77,7 @@ Giải thích thêm:
 - II.4a (Đ): bước 1 chưa bật nguồn, nước đá tan nhờ nhiệt nhận từ môi trường. II.4c (S): dây nung làm tan M − m trong t phút, 2(M − m) trong 2t phút.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 Không tìm thấy đáp án trên mạng của chính đề này (8 truy vấn WebSearch, chi tiết ở `/tmp/VatLi2026-TPHCM-NguyenKhuyenLTT-Lan10/mang.md`):
 1. đề thi thử tốt nghiệp THPT 2026 vật lí Nguyễn Khuyến Lê Thánh Tông lần 10 đáp án lời giải
 2. "Phong vũ biểu thủy ngân được phát minh bởi Evangelista Torricelli" "Áp suất khí quyển bằng áp suất ở miệng ống"
@@ -93,3 +94,60 @@ Link ghi nhận, không mở (tên miền bị chặn hoặc ngoài danh sách c
 - https://chuvanbien.vn/upload_images/files/File_de_truong_so/LOP12_DETHITHUTONGHIEP_NGUYENKHUYEN-LETHANHTONG2.pdf — đề Nguyễn Khuyến – Lê Thánh Tông năm 2024–2025 (đề khác).
 - https://vietjack.com/on-thi-dai-hoc/de-thi-thu-nam-2023.jsp — mục lục có đề Vật lí 2025–2026 Nguyễn Khuyến – Lê Thánh Tông, không rõ lần mấy.
 - thukhoadaihoc.vn (đề gốc ghi "ĐÁP ÁN + LỜI GIẢI CHI TIẾT xem tại Website") — không phân giải được tên miền trong phiên, không cố vượt.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+**Không tìm thấy đáp án trên mạng** của chính đề này (lần bổ sung 14/11/2026). Không giải lại, không sửa file đề.
+
+### (a) Nguồn
+- Nguồn đúng đề: không tìm thấy.
+- **Nguồn đã xét, KHÔNG đúng đề** (đọc được bằng `curl` tới `khoahoc.vietjack.com`, chỉ phần công khai):
+  - https://khoahoc.vietjack.com/question/2311983/phong-vu-bieu-thuy-ngan-duoc-phat-minh-boi-evangelista-torricelli-vao-nam-1643-la-thiet-bi-dung-de-d — link phiên trước ghi cho II.3. Trang thuộc "Đề thi thử tốt nghiệp THPT môn Lí Sở Hà Tĩnh có đáp án" (không phải Nguyễn Khuyến – Lê Thánh Tông). Cùng lời dẫn phong vũ biểu nhưng khác ý: a) "Áp suất khí quyển bằng áp suất ở lớp màng đàn hồi" (nguồn: Sai), d) số liệu 760 / 748 mmHg, 52 mm, 750 → 765 mmHg (nguồn: Sai, tính ra 762,48). Ý b cùng lời, ý c gần cùng lời với file (nguồn: Đúng, Đúng — trùng file nhưng không tính là đáp án của đề này). Không dùng để đối chiếu II.3a.
+  - Các đề Nguyễn Khuyến / Lê Thánh Tông trên danh mục đề Vật lí 2026 của VietJack (https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test), đã mở trang cả đề và so câu 1 với file (câu 1 của đề này: "Công thức nào sau đây mô tả đúng định luật Boyle?"), không đề nào khớp:
+    - `thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-hcm-co-dap-an/241248` (câu 1 về sóng điện từ);
+    - `thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-le-thanh-tong-hcm-co-dap-an/240636` (câu 1 đơn vị nhiệt nóng chảy riêng; câu 2 nội năng);
+    - `thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-lan-18-co-dap-an/238187` (lần 18; câu 1 truyền nhiệt và thực hiện công);
+    - `thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an/238181` (câu 1 cách làm thay đổi nội năng);
+    - `thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-thpt-le-thanh-tong-ho-chi-minh-co-dap-an/238180` (câu 1 đơn vị từ thông);
+    - `thi-online/de-thi-thu-tot-nghiep-thpt-mon-vat-li-nguyen-khuyen-le-thanh-tong-tphcm-co-dap-an/164055`, `.../de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-nguyen-khuyen-le-thanh-tong-hcm-co-dap-an/227779`, `.../de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-nguyen-khuyen-le-thanh-tong-ho-chi-minh-co-dap-an/234787`, `.../de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-nguyen-khuyen-le-thanh-tong-ho-chi-minh-lan-6-co-dap-an/234898` (câu 1 khác hẳn); `.../de-thi-thu-tot-nghiep-thpt-mon-vat-li-thpt-nguyen-khuyen-le-thanh-tong-hcm-lan-1-co-dap-an/163879` (tiêu đề trang ghi "môn Hóa"; câu 1 về đơn vị cảm ứng từ, khác).
+  - Danh mục không có đề nào ghi "lần 10".
+- **Tên miền bị chặn** trong phiên (WebFetch báo không phân giải được tên miền): `image.plo.vn`, `vietnamnet.vn` (thử cho đề khác); sau đó không thử thêm tên miền nào. `thukhoadaihoc.vn` (nơi đề gốc ghi có đáp án) không thử lại.
+- **Truy vấn đã thử** (WebSearch, ngày 14/11/2026, ngoài 8 truy vấn của phiên trước): (1) "quạt hơi nước" "0,5 g/s" "43,2 kg" "15,55" đúng sai; (2) khoahoc.vietjack.com Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Nguyễn Khuyến Lê Thánh Tông lần 10; (3) "ghế văn phòng có thể nâng hạ độ cao" "ống A có thể trượt lên xuống" khí lí tưởng; (4) "cột thủy ngân cao 9,9 cm" nhiệt kế "2 cm và 22 cm" em bé sốt; (5) "Nguyễn Khuyến" "Lê Thánh Tông" "lần 10" vật lí 2026 đề thi thử đáp án. Không kết quả nào là đề này.
+
+### (b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | A | — | — | không có đáp án mạng |
+| I.2 | C | — | — | không có đáp án mạng |
+| I.3 | C | — | — | không có đáp án mạng |
+| I.4 | A | — | — | không có đáp án mạng |
+| I.5 | D | — | — | không có đáp án mạng |
+| I.6 | C | — | — | không có đáp án mạng |
+| I.7 | A | — | — | không có đáp án mạng |
+| I.8 | B | — | — | không có đáp án mạng |
+| I.9 | B | — | — | không có đáp án mạng |
+| I.10 | C | — | — | không có đáp án mạng |
+| I.11 | D | — | — | không có đáp án mạng |
+| I.12 | C | — | — | không có đáp án mạng |
+| I.13 | B | — | — | không có đáp án mạng |
+| I.14 | C | — | — | không có đáp án mạng |
+| I.15 | A | — | — | không có đáp án mạng |
+| I.16 | A | — | — | không có đáp án mạng |
+| I.17 | D | — | — | không có đáp án mạng |
+| I.18 | A | — | — | không có đáp án mạng |
+| II.1 | Đ Đ S Đ | — | — | không có đáp án mạng |
+| II.2 | S S Đ Đ | — | — | không có đáp án mạng |
+| II.3 | S Đ Đ Đ | — | — | không có đáp án mạng (trang Sở Hà Tĩnh cùng lời dẫn nhưng khác ý a, d: không dùng) |
+| II.4 | Đ S S Đ | — | — | không có đáp án mạng |
+| III.1 | 0,88 | — | — | không có đáp án mạng |
+| III.2 | 60 | — | — | không có đáp án mạng |
+| III.3 | 0,12 | — | — | không có đáp án mạng |
+| III.4 | 2,4 | — | — | không có đáp án mạng |
+| III.5 | 0,77 | — | — | không có đáp án mạng |
+| III.6 | 0,82 | — | — | không có đáp án mạng |
+
+### (c) Câu mạng khác file
+Không có (không có đáp án mạng). Các điểm mục D (II.3a, II.4b, III.6) vẫn chưa có nguồn đối chiếu.
+
+### (d) Tổng
+Có đáp án mạng 0/28 câu; khớp 0; khác 0.

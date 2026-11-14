@@ -12,34 +12,34 @@ Ngày 14/11/2026. Đề gốc: `kho/goc/Chua ro tinh - THPT Nguyen Thi Minh Khai
 ## Bảng đáp án 28 câu
 | Câu | Fable (độc lập) | File | Mạng | Khớp |
 |---|---|---|---|---|
-| I.1 | D | D | — | khớp |
-| I.2 | C | C | — | khớp |
+| I.1 | D | D | D | khớp |
+| I.2 | C | C | C | khớp |
 | I.3 | D | D | D | khớp (thầy xem) |
-| I.4 | D | D | — | khớp |
-| I.5 | C | C | — | khớp |
-| I.6 | D | D | — | khớp |
-| I.7 | A | A | — | khớp |
-| I.8 | C | C | — | khớp |
-| I.9 | A | A | — | khớp |
-| I.10 | A | A | — | khớp |
-| I.11 | B | B | — | khớp |
-| I.12 | D | D | — | khớp |
-| I.13 | D | D | — | khớp |
-| I.14 | A | A | — | khớp |
-| I.15 | A | A | — | khớp |
-| I.16 | D | D | — | khớp |
-| I.17 | B | B | — | khớp |
-| I.18 | D | D | — | khớp |
+| I.4 | D | D | D | khớp |
+| I.5 | C | C | C | khớp |
+| I.6 | D | D | D | khớp |
+| I.7 | A | A | A | khớp |
+| I.8 | C | C | C | khớp |
+| I.9 | A | A | A | khớp |
+| I.10 | A | A | A | khớp |
+| I.11 | B | B | B | khớp |
+| I.12 | D | D | D | khớp |
+| I.13 | D | D | D | khớp |
+| I.14 | A | A | A | khớp |
+| I.15 | A | A | A | khớp |
+| I.16 | D | D | D | khớp |
+| I.17 | B | B | B | khớp |
+| I.18 | D | D | D | khớp |
 | II.1 | S S Đ Đ | S S Đ Đ | S S Đ Đ | khớp |
-| II.2 | S S S Đ | S S S Đ | S – – – | khớp (thầy xem a, c; hình vẽ lại đảo cực nguồn) |
-| II.3 | S Đ Đ S | S Đ Đ S | – Đ Đ S | khớp (thầy xem d) |
-| II.4 | S Đ S Đ | S Đ S Đ | S Đ – Đ | khớp (thầy xem: I = 10 A; ý c 99 / 100 kJ) |
-| III.1 | 0,5 | 0,5 | — | khớp |
-| III.2 | 0,15 | 0,15 | — | khớp |
-| III.3 | 45 | 45 | — | khớp |
-| III.4 | 1,6 | 1,6 | — | khớp |
-| III.5 | 0,22 | 0,22 | — | khớp |
-| III.6 | 0,58 | 0,58 | — | khớp |
+| II.2 | S S S Đ | S S S Đ | S S Đ Đ | khớp (thầy xem a, c; hình vẽ lại đảo cực nguồn) |
+| II.3 | S Đ Đ S | S Đ Đ S | S Đ Đ S | khớp (thầy xem d) |
+| II.4 | S Đ S Đ | S Đ S Đ | S Đ S Đ | khớp (thầy xem: I = 10 A; ý c 99 / 100 kJ) |
+| III.1 | 0,5 | 0,5 | 0,5 | khớp |
+| III.2 | 0,15 | 0,15 | 0,15 | khớp |
+| III.3 | 45 | 45 | 45 | khớp |
+| III.4 | 1,6 | 1,6 | 1,6 | khớp |
+| III.5 | 0,22 | 0,22 | 0,22 | khớp |
+| III.6 | 0,58 | 0,58 | 0,58 | khớp |
 
 ## Các câu lệch, câu đang `% KIỂM TRA` / "thầy xem"
 File không có `% KIỂM TRA`, `% ???`. Các điểm "thầy xem" lấy từ `kho/TIEN-DO.md` (dòng đề P02 và mục "Chờ thầy quyết": I.3 phụ thuộc chiều quấn dây; II.4 I = 10 A) và mục "Điểm cần thầy xem" của `kiem-chung.md` (I.3, II.2a, II.2c, II.3d, II.4).
@@ -77,6 +77,7 @@ Giải thích thêm về hình II.2: trong circuitikz (bản cài trên máy, kh
 - II.4a: độ tăng nhiệt độ theo thang Kelvin bằng theo thang Celsius: ΔT = Δt = 30 K.
 
 ## Nguồn trên mạng
+(Bổ sung 14/11/2026: xem mục "Đối chiếu mạng bổ sung" cuối file.)
 - VietJack — "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Nguyễn Thị Minh Khai (Hà Nội) lần 1 có đáp án" (liệt kê tại https://khoahoc.vietjack.com/trac-nghiem/tot-nghiep-thpt/mon-Vat-ly/de-thi-tot-nghiep-thpt-vat-ly-2026?type=test). Đúng đề (khớp lời câu, số liệu các câu 3, 16, 18, 19, 20, 21, 22). Mỗi câu một trang, mã = 2443075 + số câu gốc; các link thấy được:
   - câu 3 (I.3): https://khoahoc.vietjack.com/question/2443078/cho-mot-ong-day-dat-co-dinh-va-mot-nam-cham-thu-duoc-treo-nhu-hinh-ben-kawuv — đáp án D.
   - câu 16 (I.16): https://khoahoc.vietjack.com/question/2443091/mot-nhom-hoc-sinh-su-dung-bo-thi-nghiem-co-so-do-nhu-hinh-duoi-de-do-n — không đọc được đáp án.
@@ -87,3 +88,55 @@ Giải thích thêm về hình II.2: trong circuitikz (bản cài trên máy, kh
   - câu 22 (II.4): trang mã 2443097 (không thấy link đầy đủ) — a) S, b) Đ, d) tính với 99 kJ ra ≈ 0,79; kết luận ý c bị cắt.
 - Mức tin cậy: trung bình. Tên miền khoahoc.vietjack.com bị chặn trong phiên (WebFetch báo không phân giải được), không cố vượt; chỉ đọc qua đoạn trích của công cụ tìm kiếm nên không lấy được đáp án các câu còn lại. Cần mở khoahoc.vietjack.com trong thiết lập mạng nếu muốn đối chiếu đủ 28 câu.
 - Đã thử 9 truy vấn (tên trường + "lần 1" + "đáp án"; câu đặc trưng trong ngoặc kép của các câu 3, 19, 20, 21, 22, 27; giới hạn tên miền vietjack). Chi tiết ở `/tmp/VatLi2026-HaNoi-NguyenThiMinhKhai-Lan1/mang.md`.
+
+## Đối chiếu mạng bổ sung (14/11/2026)
+
+Chỉ đối chiếu với đáp án công khai trên mạng; không giải lại, không sửa file đề. Trang tải bằng `curl` lần lượt (cách nhau 1,5 s), chỉ đọc phần công khai (dòng "Trả lời: Giải bởi Vietjack" của câu chính trên mỗi trang câu), không đăng nhập.
+
+### (a) Nguồn
+- **Nguồn đúng đề: VietJack** — đề "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 THPT Nguyễn Thị Minh Khai (Hà Nội) lần 1" (mã phần 238588), nằm trong nhóm https://khoahoc.vietjack.com/luyen-thi/73270/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-ha-noi (tiêu đề nhóm "Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Nội"; trang câu ghi "Câu hỏi trong đề: Đề thi thử Tốt nghiệp THPT Vật lý 2025-2026 Hà Nội !!" và trỏ về `thi-online/de-thi-thu-tot-nghiep-thpt-vat-ly-2025-2026-ha-noi/238588`, chính là phần Nguyễn Thị Minh Khai lần 1 trong nhóm). Mỗi câu một trang, mã trang 2443076–2443103 ứng với câu 1–28 của đề gốc theo đúng thứ tự (Phần II mỗi câu một trang gồm 4 ý). Cả 28 trang đều hiện công khai đáp án của câu chính.
+  - Bằng chứng khớp đề (lời câu và số liệu, so với file `.tex`): I.16 (m = 28 g, oát kế 14,24 W, phương án 3,33 / 3,43 / 3,46 / 3,39·10⁵ J/kg), I.18 (S = 1 m², v = 10 m/s, B = 0,1 T, R = 2 Ω, phương án 0,5 / 0,25 / 1,0 / 0,75 V), II.1 (7,0 °C, 37,0 °C, 20 lần/phút, 0,50 lít, 7,23 %, 1,30 kg/m³, 1,02·10³ J/(kg.K)), II.3 (200 vòng, r = 1 Ω, 0,3 m², B = 0,05t, R = 5 Ω, bình 1,0 lít, 250 K, 100 J; ý d: t = 160 s, 600 K), II.4 (U_AK = 1,0·10⁴ V, I = 10 A, 25 → 55 °C; ý c 100 kJ, ý d 0,79 lít/giây), III.5 (0,25 kg trà 80 °C, 10 °C, 10 %, 3,33·10⁵ J/kg).
+  - Thứ tự câu, thứ tự phương án Phần I và thứ tự ý Phần II trùng file (đã so cả 18 câu Phần I); không có mã đề trên trang. Không cần quy đổi chữ cái.
+  - Lưu ý: lời ý c câu II.2 trên trang mạng in "mômen có độ lớn 4.10⁻⁴ N.m" giống đề gốc và file, nhưng lời giải trên trang lại dùng 4,8·10⁻⁴ N·m (xem mục c).
+- Nguồn đã xét, không dùng: không có (phiên trước chỉ có đoạn trích tìm kiếm của chính các trang này).
+- Tên miền bị chặn: không gặp ở đề này (chỉ cần `khoahoc.vietjack.com`, đọc được).
+- Truy vấn: không cần truy vấn mới; dùng mã trang đã ghi ở mục "Nguồn trên mạng" (2443075 + số câu gốc), mỗi trang đều kiểm dòng "Câu hỏi trong đề" và lời câu.
+
+### (b) Bảng đối chiếu 28 câu
+| Câu (file) | File | Mạng | Link | So sánh |
+|---|---|---|---|---|
+| I.1 | D | D | https://khoahoc.vietjack.com/question/2443076/mot-khoi-khi-li-tuong-thuc-hien-qua-trinh-bien-doi-tu-trang-thai-1-san | khớp |
+| I.2 | C | C | https://khoahoc.vietjack.com/question/2443077/khi-hai-vat-duoc-dat-tiep-xuc-voi-nhau-nang-luong-nhiet-chi-truyen-tu-xo0j0 | khớp |
+| I.3 | D | D | https://khoahoc.vietjack.com/question/2443078/cho-mot-ong-day-dat-co-dinh-va-mot-nam-cham-thu-duoc-treo-nhu-hinh-ben-kawuv | khớp — mục E (đọc hình chiều quấn dây): mạng cũng D |
+| I.4 | D | D | https://khoahoc.vietjack.com/question/2443079/dat-mot-doan-day-dan-dai-l-mang-dong-dien-cuong-do-i-vao-trong-mot-tu | khớp |
+| I.5 | C | C | https://khoahoc.vietjack.com/question/2443080/mot-doan-day-dan-thang-dai-10-cm-mang-dong-dien-5-a-dat-trong-tu-truon | khớp |
+| I.6 | D | D | https://khoahoc.vietjack.com/question/2443081/chi-ra-cong-thuc-dung-cua-dinh-luat-cu-long-xac-dinh-do-lon-cua-luc-tu | khớp |
+| I.7 | A | A | https://khoahoc.vietjack.com/question/2443082/ki-hieu-don-vi-cua-cuong-do-dien-truong-la | khớp |
+| I.8 | C | C | https://khoahoc.vietjack.com/question/2443083/dun-nong-khoi-khi-trong-mot-binh-kin-cac-phan-tu-khi-gjk0t | khớp |
+| I.9 | A | A | https://khoahoc.vietjack.com/question/2443084/trong-he-don-vi-si-don-vi-cua-nhiet-dung-rieng-la | khớp |
+| I.10 | A | A | https://khoahoc.vietjack.com/question/2443085/mot-khoi-khi-li-tuong-co-n-mol-ap-suat-p-the-tich-v-nhiet-do-tuyet-doi | khớp |
+| I.11 | B | B | https://khoahoc.vietjack.com/question/2443086/mot-khoi-khi-li-tuong-xac-dinh-co-ap-suat-bang-ap-suat-khi-quyen-neu-g | khớp |
+| I.12 | D | D | https://khoahoc.vietjack.com/question/2443087/mot-vong-day-dan-kin-duoc-dat-trong-tu-truong-co-vecto-cam-ung-tu-vec | khớp |
+| I.13 | D | D | https://khoahoc.vietjack.com/question/2443088/hai-dong-dien-i-1-va-i-2-chay-trong-hai-day-dan-thang-nam-trong-mat-ph | khớp |
+| I.14 | A | A | https://khoahoc.vietjack.com/question/2443089/xet-khoi-khi-chua-trong-mot-binh-kin-gom-n-phan-tu-chuyen-dong-hon-loa | khớp |
+| I.15 | A | A | https://khoahoc.vietjack.com/question/2443090/mot-vong-day-dan-hinh-tron-duoc-dat-trong-tu-truong-deu-co-duong-suc-t | khớp |
+| I.16 | D | D | https://khoahoc.vietjack.com/question/2443091/mot-nhom-hoc-sinh-su-dung-bo-thi-nghiem-co-so-do-nhu-hinh-duoi-de-do-n | khớp |
+| I.17 | B | B | https://khoahoc.vietjack.com/question/2443092/cac-duong-suc-tu-xung-quanh-day-dan-thang-co-dong-dien-khong-doi-chay | khớp |
+| I.18 | D | D | https://khoahoc.vietjack.com/question/2443093/khung-day-hinh-vuong-abcd-co-dien-tich-s-1-rm-rm-m-2-duoc-lam-tu-mot-s | khớp |
+| II.1 | S S Đ Đ | S S Đ Đ | https://khoahoc.vietjack.com/question/2443094/vao-nhung-ngay-lanh-co-the-con-nguoi-can-tieu-hao-nang-luong-qua-duong-ewkvp | khớp |
+| II.2 | S S S Đ | S S Đ Đ | https://khoahoc.vietjack.com/question/2443095/de-do-cam-ung-tu-trong-long-mot-nam-cham-mot-ban-hoc-sinh-bo-tri-thi-n-izlu9 | KHÁC — khác ở ý c (file S, mạng Đ); a (lực từ hướng xuống), b, d khớp |
+| II.3 | S Đ Đ S | S Đ Đ S | https://khoahoc.vietjack.com/question/2443096/khung-day-gom-200-vong-co-dien-tro-r-1-omega-phan-dien-tich-khung-day-duoc-dat-trong-tu-truong-vuong | khớp — d S (mạng tính T′ = 625 K) |
+| II.4 | S Đ S Đ | S Đ S Đ | https://khoahoc.vietjack.com/question/2443097/hinh-anh-duoi-day-la-ong-phat-tia-x-khi-soi-nung-ff-duoc-dot-nong-electron-buc-xa-nhiet-ra-khoi-cath | khớp — c S (mạng: 0,99·10⁵ J = 99 kJ), điểm mục D khớp file |
+| III.1 | 0,5 | 0,5 | https://khoahoc.vietjack.com/question/2443098/nguoi-ta-cung-cap-mot-nhiet-luong-1-5-j-cho-chat-khi-dung-trong-mot-xilanh-dat-nam-ngang-khi-no-ra-d-3xn8h | khớp |
+| III.2 | 0,15 | 0,15 | https://khoahoc.vietjack.com/question/2443099/mot-khung-day-dan-kin-phang-co-dien-tich-20-rm-c-rm-m-2-duoc-dat-trong | khớp |
+| III.3 | 45 | 45 | https://khoahoc.vietjack.com/question/2443100/mot-doan-day-dan-thang-dai-1-m-mang-dong-dien-10-a-dat-trong-mot-tu-truong-deu-co-cam-ung-tu-0-1-t-t | khớp |
+| III.4 | 1,6 | 1,6 | https://khoahoc.vietjack.com/question/2443101/mot-dien-tich-diem-q-2-10-7-c-dat-tai-diem-a-trong-moi-truong-co-hang-ufbhs | khớp |
+| III.5 | 0,22 | 0,22 | https://khoahoc.vietjack.com/question/2443102/vao-mua-he-nguoi-ha-noi-thuong-co-thoi-quen-thuong-thuc-tra-da-trong-c | khớp |
+| III.6 | 0,58 | 0,58 | https://khoahoc.vietjack.com/question/2443103/hai-binh-co-the-tich-bang-nhau-chua-cung-mot-loai-khi-coi-la-khi-li-tu | khớp |
+
+### (c) Câu mạng khác file
+- **II.2c** — file **S** / mạng **Đ** / https://khoahoc.vietjack.com/question/2443095/de-do-cam-ung-tu-trong-long-mot-nam-cham-mot-ban-hoc-sinh-bo-tri-thi-n-izlu9 — Lời ý c trên trang mạng giống đề gốc và file (mômen 4·10⁻⁴ N·m, kết luận 0,08 T), nhưng lời giải của trang lấy mômen **4,8·10⁻⁴ N·m**: F = 4,8·10⁻⁴ / 0,08 = 6·10⁻³ N → B = 6·10⁻³ / (1,5·0,05) = 0,08 T → Đúng. Với số in 4·10⁻⁴ thì B ≈ 0,067 T → Sai như file. Không phải chỗ mơ hồ cách hiểu; nghi đề gốc in thiếu ",8" (4,8·10⁻⁴ cho đúng tròn 0,08 T) hoặc đáp án của nguồn tính theo bản đề khác số liệu. Đây là **điểm mới** (cùng dạng mục C của `kho/KIEM-DAP-AN-V2.md`: mệnh đề lệch số liệu, đáp án của trường có thể là Đúng), chưa có trong mục A–D; thầy quyết giữ S theo số in hay sửa mômen thành 4,8·10⁻⁴ N·m (khi đó ý c Đ).
+- Các điểm mục D, E của đề này đều khớp mạng: I.3 (mục E) mạng D; II.4c (mục D, 99 / 100 kJ) mạng S, tính 99 kJ; II.2a mạng S (lực từ hướng xuống), khớp file.
+
+### (d) Tổng
+Có đáp án mạng 28/28 câu; khớp 27 câu; khác 1 câu (II.2, ở ý c). Tính theo ý: Phần II 16 ý, khớp 15, khác 1 (II.2c).
