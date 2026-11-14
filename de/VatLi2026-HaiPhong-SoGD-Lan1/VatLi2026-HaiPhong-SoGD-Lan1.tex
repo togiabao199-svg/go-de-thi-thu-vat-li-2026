@@ -18,6 +18,32 @@
 	\node[font=\fontsize{5}{5}\selectfont\bfseries,inner sep=0] at (0,#1+0.62) {#2};
 	\filldraw[fill=black!75,draw=gray] (-0.08,#1+0.95) circle (0.05) (0.08,#1+0.95) circle (0.05);
 	\fill[black!70] (-0.06,#1+0.22) rectangle (0.06,#1+0.29);}
+% màu riêng hình thực tiễn câu I.5 (máy chụp CT) và III.1 (tàu ngầm hạt nhân)
+\definecolor{HPmotvien}{RGB}{30,36,50}
+\definecolor{HPmott1}{RGB}{214,212,213}
+\definecolor{HPmott2}{RGB}{244,242,239}
+\definecolor{HPmott3}{RGB}{238,235,231}
+\definecolor{HPmots1}{RGB}{172,175,182}
+\definecolor{HPmots2}{RGB}{232,228,224}
+\definecolor{HPmotxanhxam}{RGB}{112,124,145}
+\definecolor{HPmotxanhtoi}{RGB}{52,67,92}
+\definecolor{HPmotxam}{RGB}{205,204,203}
+\definecolor{HPmotdem}{RGB}{118,140,174}
+\definecolor{HPmotda}{RGB}{232,166,120}
+\definecolor{HPmotao}{RGB}{150,168,194}
+\definecolor{HPmotquan}{RGB}{176,198,228}
+\definecolor{HPmotvang}{RGB}{255,198,30}
+\definecolor{HPmotcam}{RGB}{235,110,20}
+\definecolor{HPmotxanhnhat}{RGB}{140,180,230}
+\definecolor{HPmotxanh}{RGB}{20,110,205}
+\definecolor{HPmotthan}{RGB}{44,50,58}
+\definecolor{HPmotthansang}{RGB}{118,122,126}
+\definecolor{HPmotkim}{RGB}{212,170,82}
+\definecolor{HPmotdongvang}{RGB}{178,140,78}
+\definecolor{HPmotman}{RGB}{70,175,225}
+\definecolor{HPmotaolinh}{RGB}{36,52,82}
+\definecolor{HPmotla}{RGB}{90,200,170}
+\pgfdeclareradialshading{HPmotbong}{\pgfpoint{0bp}{0bp}}{color(0bp)=(black!50); color(9bp)=(black!34); color(17bp)=(black!14); color(25bp)=(white); color(50bp)=(white)}% bóng đổ mềm (III.1): \shade tô vùng trong elip từ 0 đến 25bp (mép elip) nên mép trắng hẳn
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT HẢI PHÒNG -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -95,78 +121,312 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{20.1\baselineskip}
+	\NeedspaceCau{25.1\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Trong chụp cắt lớp điện toán theo trục (Computerised axial tomography, gọi tắt là CT), một chùm tia X hình quạt được phát ra từ nguồn quay quanh phần cần chụp của cơ thể bệnh nhân, đồng thời các đầu thu (detector) đo cường độ tia X sau khi đi xuyên qua các mô khác nhau. Dữ liệu thu được gửi đến máy tính xử lí để tạo ra hình ảnh theo các lát cắt ngang.
 		% giuhinh
-		\par\noindent
-		\begin{minipage}[c]{0.5\linewidth}
+		\par\smallskip\noindent
+		\begin{minipage}[c]{0.42\linewidth}
 			Biết rằng cường độ tia X sau khi đi qua vật chất tuân theo định luật suy giảm: $I=I_0e^{-\mu x}$. Trong đó: $I_0$ là cường độ ban đầu, $I$ là cường độ sau khi xuyên qua vật, $\mu$ là hệ số hấp thụ (phụ thuộc vào loại mô) và $x$ là bề dày vật chất đi qua. Nhận định nào sau đây là đúng về nguyên lí tạo ảnh khi chụp CT?
 		\end{minipage}\hfill
-		\begin{minipage}[c]{0.48\linewidth}
+		\begin{minipage}[c]{0.56\linewidth}
 			\centering
-				\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
-					% sàn
-					\fill[gray!10] (-0.6,0) rectangle (8.0,0.35);
-					% khung máy (gantry): mặt bên rồi mặt trước
-					\shade[left color=gray!50,right color=gray!30,rounded corners=14pt] (-0.5,0.32) rectangle (2.9,4.35);
-					\shade[left color=gray!28,right color=gray!6,rounded corners=14pt] (0,0.2) rectangle (3.3,4.15);
-					\draw[gray!55,rounded corners=14pt] (0,0.2) rectangle (3.3,4.15);
-					\fill[gray!35,rounded corners=2pt] (0.2,0.2) rectangle (3.1,0.42);
-					% lỗ chụp
-					\filldraw[fill=white,draw=gray!45,line width=1.2pt] (1.65,2.3) ellipse (1.32 and 1.48);
-					\shade[inner color=gray!8,outer color=gray!42] (1.5,2.3) ellipse (1.08 and 1.24);
-					\draw[gray!35] (1.5,2.3) ellipse (1.08 and 1.24);
-					% bảng điều khiển hai bên
-					\filldraw[fill=gray!55,draw=gray!70,rounded corners=1.5pt] (0.06,1.75) rectangle (0.27,2.75);
-					\foreach \y in {1.9,2.1,...,2.65}{\fill[orange!80!yellow] (0.165,\y) circle (0.045);}
-					\filldraw[fill=gray!55,draw=gray!70,rounded corners=1.5pt] (3.0,2.35) rectangle (3.22,3.35);
-					\foreach \y in {2.5,2.7,...,3.25}{\fill[orange!80!yellow] (3.11,\y) circle (0.045);}
-					\draw[VLxanh!70,semithick] (0.165,2.98) circle (0.07) (3.11,3.55) circle (0.07);
-					% chân bàn
-					\shade[top color=gray!20,bottom color=gray!50] (3.5,0.35) rectangle (5.3,1.0);
-					\fill[gray!38] (5.3,0.35)--(5.65,0.55)--(5.65,1.15)--(5.3,1.0)--cycle;
-					\shade[top color=gray!12,bottom color=gray!35] (3.7,1.0) rectangle (5.2,1.35);
-					\foreach \y in {0.55,0.75}{\draw[gray!50] (3.6,\y)--(5.2,\y);}
-					% bàn chụp và bệnh nhân
-					\begin{scope}[shift={(0.35,1.78)},rotate=-6]
-						\fill[gray!55] (0.2,-0.17)--(6.45,-0.17)--(6.45,-0.33)--(0.2,-0.33)--cycle;
-						\shade[top color=white,bottom color=gray!28] (0.2,-0.17)--(6.45,-0.17)--(6.8,0.24)--(0.55,0.24)--cycle;
-						\fill[VLxanh!30!gray!55] (0.45,-0.1)--(4.6,-0.1)--(4.85,0.17)--(0.7,0.17)--cycle;
-						\shade[left color=yellow!75!orange,right color=orange!70!yellow] (5.0,-0.12)--(6.25,-0.12)--(6.5,0.17)--(5.25,0.17)--cycle;
-						\foreach \x in {5.15,5.3,...,6.2}{\draw[orange!60!black,very thin] (\x,-0.1)--(\x+0.22,0.15);}
-						% bệnh nhân
-						\fill[orange!35!white!88!brown] (0.62,0.17) circle (0.18);
-						\fill[black!75] (0.5,0.2) arc[start angle=110,end angle=250,radius=0.17]--cycle;
-						\shade[top color=VLxanh!25!white,bottom color=VLxanh!55!gray,rounded corners=4pt] (0.8,-0.05) rectangle (2.15,0.33);
-						\fill[orange!35!white!88!brown] (1.1,0.33) rectangle (1.7,0.36);
-						\shade[top color=VLxanh!25!white,bottom color=VLxanh!55!gray,rounded corners=3pt] (2.1,-0.03) rectangle (3.6,0.29);
-						\draw[VLxanh!50!gray!70!black,very thin] (2.15,0.13)--(3.55,0.13);
-						\fill[orange!35!white!88!brown] (3.6,0.0) rectangle (3.72,0.27);
-						\fill[orange!35!white!88!brown] (3.76,0.2) ellipse (0.08 and 0.17) (3.76,-0.02) ellipse (0.07 and 0.13);
+				\begin{tikzpicture}[x={\linewidth/632},y={-\linewidth/632},line join=round,line cap=round,font=\footnotesize]
+					\useasboundingbox (0,0) rectangle (632,422);
+					\clip[rounded corners=5pt] (0,0) rectangle (632,422);
+					% ===== nền: tường, sàn lát gạch
+					\shade[left color=HPmott1,middle color=HPmott2,right color=HPmott3] (0,0) rectangle (632,280);
+					\draw[white,line width=0.8pt,opacity=0.8] (35,0)--(35,112) (0,70)--(35,70) (612,150)--(612,276) (570,236)--(632,240) (400,0)--(400,24);
+					\fill[HPmots2] (0,236)--(632,278)--(632,422)--(0,422)--cycle;
+					\shade[left color=HPmots1,right color=HPmots2] (0,236)--(130,245)--(130,422)--(0,422)--cycle;
+					\begin{scope}[HPmots2!80!black,line width=0.35pt]
+						\draw (0,262)--(40,280) (0,300)--(60,330) (0,350)--(150,422) (110,368)--(230,422) (0,392)--(240,350) (90,422)--(250,385);
+						\draw (470,330)--(632,410) (520,300)--(632,352) (560,284)--(632,318) (430,420)--(632,350) (520,422)--(632,382) (500,345)--(632,300);
 					\end{scope}
-					% bóng phát tia X và chùm tia hình quạt
-					\filldraw[fill=gray!55,draw=gray!75,rounded corners=1pt] (1.2,3.75)--(2.1,3.75)--(1.95,3.42)--(1.35,3.42)--cycle;
-					\fill[gray!35] (1.38,3.62) rectangle (1.92,3.7);
-					\fill[VLdo] (1.65,3.4) ellipse (0.16 and 0.05);
-					\fill[yellow!80!orange,opacity=0.5] (1.65,3.38)--(1.2,1.98)--(2.25,1.88)--cycle;
-					\foreach \i in {1,...,6}{\draw[yellow!70!orange,semithick] (1.65,3.38)--({1.25+0.17*\i},{1.97-0.016*\i});}
-					\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.75,2.05)--(2.95,2.75);
-					\draw[yellow!85!orange,line width=1.4pt,VLmui] (1.45,2.05)--(0.32,2.4);
-					% máy tính xử lí
-					\filldraw[fill=white,draw=gray!60,rounded corners=2pt] (4.55,2.65) rectangle (7.8,4.3);
-					\shade[left color=gray!50,right color=gray!25] (4.7,2.85) rectangle (5.2,4.1);
-					\foreach \y in {3.3,3.5,...,3.95}{\draw[gray!70] (4.78,\y)--(5.12,\y);}
-					\fill[gray!25] (5.3,2.8)--(7.65,2.8)--(7.5,3.05)--(5.45,3.05)--cycle;
-					\filldraw[fill=black!80,draw=gray!50] (5.85,3.25) rectangle (7.4,4.15);
-					\fill[black!55] (6.55,3.1) rectangle (6.7,3.25);
-					\fill[VLxanh!25!black] (5.95,3.33) rectangle (7.3,4.07);
-					\fill[gray!55] (6.6,3.7) ellipse (0.36 and 0.27);
-					\fill[orange!55!gray] (6.6,3.7) ellipse (0.22 and 0.15);
-					\fill[gray!80] (6.6,3.7) circle (0.05);
-					\fill[gray!45] (5.6,2.88)--(6.9,2.88)--(6.8,3.0)--(5.7,3.0)--cycle;
-					\draw[VLxanh!45,line width=1.6pt,VLmui] (3.4,3.25) .. controls (3.85,3.55) .. (4.45,3.5);
-					\draw[VLxanh!45,line width=1.6pt,VLmui] (5.6,1.75) .. controls (6.1,1.95) .. (6.35,2.55);
+					\fill[HPmotxanhtoi,opacity=0.18] (20,372) .. controls (60,385) and (150,375) .. (220,365)--(220,350)--(30,345)--cycle;
+					\fill[HPmotxanhtoi,opacity=0.15] (440,375) .. controls (480,385) and (480,410) .. (455,422)--(440,422)--cycle;
+					% ===== khung máy (gantry)
+					% đế, vách dưới màu xanh xám
+					\shade[top color=HPmotxanhtoi,bottom color=HPmotxanhxam] (25,300)--(26,336) .. controls (27,346) and (33,352) .. (42,357)--(68,371) .. controls (72,374) and (78,375) .. (88,375)--(176,358)--(250,345)--(250,250)--(73,250)--cycle;
+					\shade[top color=HPmotxanhtoi!80!white,bottom color=HPmotxanhxam!70!white,opacity=0.8] (78,300) .. controls (100,330) and (150,350) .. (215,352)--(176,358)--(88,375)--(82,340)--cycle;
+					\fill[HPmotxanhtoi!85!HPmotxanhxam] (25,303)--(65,331)--(70,373) .. controls (60,370) and (48,362) .. (42,357) .. controls (33,352) and (27,346) .. (26,336)--cycle;
+					\shade[left color=HPmotxanhxam!60!white,right color=HPmotxanhxam] (65,331)--(74,333)--(80,374)--(70,373)--cycle;
+					\draw[HPmotvien,line width=0.7pt] (25,303)--(26,336) .. controls (27,346) and (33,352) .. (42,357)--(68,371) .. controls (72,374) and (78,375) .. (88,375)--(176,358)--(215,350);
+					\draw[HPmotvien,line width=0.5pt] (25,303)--(65,331) .. controls (68,333) and (72,334) .. (80,331);
+					% mặt bên khung máy: phần trên xám trắng, phần chân xanh xám
+					\fill[HPmotxam!85!white] plot[smooth,tension=0.5] coordinates {(25,303) (21,270) (18,240) (16,200) (16,170) (18,140) (22,115) (26,100) (30,90) (34,80) (41,70) (49,60) (59,50) (80,37) (100,28) (130,18) (160,12) (180,10) (200,11) (230,15) (260,22) (290,32) (310,42) (330,52)}--(73,262)--(76,300)--(80,331)--(65,333)--cycle;
+					\shade[top color=HPmotxanhxam!75!white,bottom color=HPmotxanhxam!95!white] (16,182)--(30,188)--(55,199)--(62,199)--(70,202)--(73,262)--(76,300)--(80,331)--(65,333)--(25,303)--(21,270)--(18,240)--(16,200)--cycle;
+					\shade[left color=HPmotxanhxam!80!white,right color=white!90!gray] (52,198)--(62,199)--(66,262)--(70,331)--(64,332)--(56,262)--cycle;
+					% viền vành ngoài (sáng)
+					\fill[white!90!gray] plot[smooth,tension=0.5] coordinates {(16,182) (16,170) (18,140) (22,115) (26,100) (30,90) (34,80) (41,70) (49,60) (59,50) (80,37) (100,28) (130,18) (160,12) (176,10)}--plot[smooth,tension=0.5] coordinates {(150,20) (120,30) (90,44) (66,54) (57,60) (48,70) (41,80) (33,100) (27,120) (25,150) (25,185)}--cycle;
+					% rãnh xám xanh trên nóc
+					\shade[left color=HPmotxanhxam!95!white,right color=HPmotxanhxam!45!white] (73,68) .. controls (95,52) and (130,28) .. (178,13)--(205,20) .. controls (160,34) and (125,52) .. (103,76) .. controls (100,79) and (97,78) .. (94,77)--cycle;
+					\draw[white,line width=0.6pt,opacity=0.8] (104,72) .. controls (125,52) and (160,34) .. (200,24);
+					\draw[HPmotvien,line width=0.45pt] (73,68) .. controls (95,52) and (130,28) .. (178,13)--(205,20) .. controls (160,34) and (125,52) .. (103,76) .. controls (100,79) and (97,78) .. (94,77)--cycle;
+					% tấm bên sáng phía trên màn hình
+					\shade[top color=white,bottom color=HPmotxam] (56,73)--(90,86) .. controls (84,98) and (77,110) .. (69,121)--(37,110) .. controls (42,97) and (48,85) .. cycle;
+					\fill[white,opacity=0.55,rounded corners=3pt] (60,81)--(80,89)--(70,108)--(50,101)--cycle;
+					\draw[HPmotvien,line width=0.45pt] (56,73)--(90,86) .. controls (84,98) and (77,110) .. (69,121)--(37,110) .. controls (42,97) and (48,85) .. cycle;
+					% bảng điều khiển bên hông (màn hình nhỏ, nút)
+					\filldraw[fill=HPmotxanhxam!70!white,draw=HPmotvien,line width=0.4pt,rounded corners=2pt] (32,115)--(63,124)--(55,186)--(24,177)--cycle;
+					\fill[HPmotxanhtoi!85!black,rounded corners=1.5pt] (34,120)--(60,128)--(53,182)--(27,173)--cycle;
+					\fill[HPmotxanhxam!60!white,rounded corners=1pt] (35,123)--(58,130)--(56,140)--(33,133)--cycle;
+					\draw[HPmotcam,line width=0.6pt] (37,128)--(46,131) (50,133)--(55,134);
+					\fill[HPmotvang] (46,128) rectangle (49,135);
+					\fill[HPmotxanhxam!45!white,rounded corners=1pt] (32,138)--(56,145)--(55,151)--(31,144)--cycle;
+					\fill[white] (37,141) circle (1.2) (46,144) rectangle (50,148);
+					\fill[HPmotxanhxam!80!white,rounded corners=1pt] (31,149)--(55,155)--(53,170)--(29,164)--cycle;
+					\filldraw[fill=HPmotvang!90!white,draw=HPmotvang!60!black,line width=0.3pt,rounded corners=1.5pt] (36,151) rectangle (43,165);
+					\fill[HPmotvang!80!white] (32,150) rectangle (35,151.5) (31,155) rectangle (34,156.5) (31,160) rectangle (34,161.5);
+					\draw[white,line width=0.4pt] (47,158) circle (2);
+					\draw[white!80!gray,line width=0.4pt] (34,172) rectangle (40,177);
+					% ===== mặt trước khung máy
+					\begin{scope}
+						\clip[rotate around={-43.9:(221.5,181.5)}] (221.5,181.5) ellipse (152.1 and 171.4);
+						\shade[left color=HPmotxam!50!white,middle color=white,right color=white] (55,0) rectangle (395,360);
+						\shade[left color=HPmotxam!35!white,right color=HPmotxam!75!gray] (95,240) rectangle (255,360);
+						\shade[top color=white,bottom color=white,middle color=HPmotxam!35!white,opacity=0.6] (60,200) rectangle (100,320);
+					\end{scope}
+					% gờ vát mép ngoài (xám)
+					\shade[top color=white!80!gray,bottom color=HPmotxam!70!gray] plot[domain=108.4:269.9,samples=30] ({221.5+109.60*cos(\x)-118.85*sin(\x)},{181.5+105.47*cos(\x)+123.50*sin(\x)})--plot[smooth,tension=0.5] coordinates {(338,58) (315,44) (290,35) (260,30) (230,32) (200,38) (170,48) (145,60) (125,74) (108,90) (97,105) (87,125) (80,150) (78,175) (77,200) (79,230) (82,262)}--cycle;
+					\draw[HPmotvien,line width=0.8pt] plot[domain=50:275,samples=40] ({221.5+109.60*cos(\x)-118.85*sin(\x)},{181.5+105.47*cos(\x)+123.50*sin(\x)});
+					\draw[HPmotvien,line width=0.8pt] plot[domain=264.6:337.4,samples=16] ({221.5+109.60*cos(\x)-118.85*sin(\x)},{181.5+105.47*cos(\x)+123.50*sin(\x)});
+					\draw[HPmotvien,line width=0.7pt] plot[smooth,tension=0.5] coordinates {(25,303) (21,270) (18,240) (16,200) (16,170) (18,140) (22,115) (26,100) (30,90) (34,80) (41,70) (49,60) (59,50) (80,37) (100,28) (130,18) (160,12) (180,10) (200,11) (230,15) (260,22) (290,32) (310,42) (330,52)};
+					\draw[HPmotvien,line width=0.4pt] plot[smooth,tension=0.5] coordinates {(34,309) (31,280) (28,250) (26,210) (25,180) (25,150) (27,120) (33,100) (41,80) (48,70) (57,60) (66,54) (90,44) (120,30) (150,20) (176,11)};
+					\draw[HPmotvien,line width=0.7pt] (73,262)--(76,300)--(80,331)--(86,374);
+					\draw[HPmotvien,line width=0.4pt] (16,182)--(30,188)--(55,199)--(62,199)--(70,202)--(92,203);
+					% khe nối, hai gờ nổi trên mặt trước
+					\draw[HPmotvien,line width=0.4pt] plot[domain=95.8:341.9,samples=41] ({229.9+102.27*cos(\x)-93.37*sin(\x)},{184.1+79.61*cos(\x)+119.94*sin(\x)});
+					\draw[HPmotvien,line width=0.4pt] (160,252) .. controls (150,275) and (135,292) .. (110,307);
+					\filldraw[fill=HPmotxam!80!white,draw=HPmotvien,line width=0.4pt,rounded corners=1.5pt] (121,108)--(141,83)--(146,86)--(126,111)--cycle;
+					\filldraw[fill=HPmotxam!80!white,draw=HPmotvien,line width=0.4pt,rounded corners=1.5pt] (328,66)--(332,64)--(352,90)--(347,93)--cycle;
+					% ===== lòng máy (bore)
+					\begin{scope}
+						\clip[rotate around={-24.9:(232.4,187.2)}] (232.4,187.2) ellipse (91.9 and 109.9);
+						\shade[left color=HPmotxam!50!gray,right color=HPmotxam!92!white] (135,75) rectangle (330,300);
+						\shade[top color=HPmotvien,bottom color=HPmotxam!80!white] (135,236) rectangle (330,300);
+						\fill[HPmotxanhtoi!75!black] plot[smooth cycle,tension=0.6] coordinates {(168,135) (180,119) (200,109) (228,104) (252,106) (268,113) (280,126) (286,142) (288,162) (286,185) (280,205) (265,215) (230,215) (190,200) (170,170)};
+						\fill[white!97!HPmotxam] plot[smooth cycle,tension=0.6] coordinates {(148,172) (151,158) (158,145) (168,133) (182,122) (200,116) (220,113) (240,114) (252,120) (258,132) (260,150) (260,170) (256,190) (240,205) (200,210) (165,200) (150,185)};
+						\draw[HPmotxam!40!gray,line width=0.4pt] plot[smooth,tension=0.5] coordinates {(255,103) (274,112) (285,128) (290,150) (292,172) (290,200)};
+						\draw[HPmotxam!40!gray,line width=0.4pt] plot[smooth,tension=0.5] coordinates {(272,108) (290,120) (300,136) (306,155) (308,175) (305,200)};
+						\draw[white,line width=0.7pt] plot[smooth,tension=0.5] coordinates {(165,132) (180,116) (200,104) (240,98) (280,105) (300,118) (313,136) (320,160) (321,190)};
+					\end{scope}
+					\draw[HPmotvien,line width=0.8pt,rotate around={-24.9:(232.4,187.2)}] (232.4,187.2) ellipse (91.9 and 109.9);
+					% ===== bệ bàn nhiều tầng trên đế
+					\shade[top color=HPmotxanhxam!75!white,bottom color=HPmotxanhtoi!90!white] (213,352) .. controls (213,346) and (216,344) .. (222,344)--(400,356) .. controls (440,366) and (452,380) .. (452,398)--(448,414)--(440,422)--(345,422)--(232,385) .. controls (220,381) and (213,377) .. (213,370)--cycle;
+					\draw[HPmotvien,line width=0.6pt] (213,352) .. controls (213,346) and (216,344) .. (222,344) (232,385) .. controls (220,381) and (213,377) .. (213,370)--(213,352) (345,422)--(232,385) (452,398)--(448,414)--(440,422) (400,356) .. controls (440,366) and (452,380) .. (452,398);
+					\draw[white!70!HPmotxanhxam,line width=0.6pt] (218,372)--(340,413);
+					% tầng dưới
+					\shade[top color=HPmotxanhxam!45!white,bottom color=HPmotxanhxam!85!white,rounded corners=2.5pt] (241,357.8)--(350,405.8)--(405,393.7)--(405,408.7)--(350,420.8)--(241,372.8)--cycle;
+					\draw[HPmotvien,line width=0.5pt,rounded corners=2.5pt] (241,357.8)--(350,405.8)--(405,393.7)--(405,408.7)--(350,420.8)--(241,372.8)--cycle;
+					\draw[white,line width=0.5pt] (244,368)--(350,415.5)--(402,404);
+					% rãnh tối giữa các tầng
+					\fill[HPmotxanhtoi!80!white] (241,343.8)--(350,391.8)--(405,379.7)--(405,393.7)--(350,405.8)--(241,357.8)--cycle;
+					% tầng giữa
+					\shade[top color=white!92!gray,bottom color=HPmotxam!95!black,rounded corners=2.5pt] (241,318.8)--(350,366.8)--(405,354.7)--(405,379.7)--(350,391.8)--(241,343.8)--cycle;
+					\fill[HPmotxam!70!gray,opacity=0.6] (350,366.8)--(405,354.7)--(405,379.7)--(350,391.8)--cycle;
+					\draw[HPmotvien,line width=0.5pt,rounded corners=2.5pt] (241,318.8)--(350,366.8)--(405,354.7)--(405,379.7)--(350,391.8)--(241,343.8)--cycle;
+					\draw[HPmotvien,line width=0.35pt] (243,330.5)--(350,377.6)--(403,366);
+					\draw[white,line width=0.5pt] (244,333)--(350,380)--(402,368.5);
+					% tầng trên (có mặt trên nằm dưới bóng bàn)
+					\fill[HPmotxam!55!gray] (241,286)--(350,325.8)--(405,313.7)--(405,328.7)--(350,340.8)--(241,292.8)--cycle;
+					\shade[top color=white,bottom color=HPmotxam!85!white,rounded corners=2.5pt] (241,292.8)--(350,340.8)--(405,328.7)--(405,347.7)--(350,359.8)--(241,311.8)--cycle;
+					\fill[HPmotxam!45!gray,opacity=0.75] (350,340.8)--(405,328.7)--(405,347.7)--(350,359.8)--cycle;
+					\draw[HPmotvien,line width=0.5pt,rounded corners=2.5pt] (249,283)--(241,292)--(241,311.8)--(350,359.8)--(405,347.7);
+					\draw[HPmotvien,line width=0.4pt] (243,294)--(350,341.5)--(405,329.5);
+					\draw[HPmotvien,line width=0.35pt] (258,300)--(258,318) (290,314)--(290,332);
+					\fill[HPmotxanhtoi!60!white] (241,311.8)--(350,359.8)--(405,347.7)--(405,354.7)--(350,366.8)--(241,318.8)--cycle;
+					% ===== bàn chụp
+					% mặt bên (trên sáng, dưới xám) và đáy
+					\shade[top color=white,bottom color=HPmotxam!85!white] plot[smooth,tension=0.45] coordinates {(140,212) (170,225) (200,236) (300,279) (380,312) (440,341) (470,349) (500,347) (530,336) (560,321) (583,307) (597,295)} .. controls (603,290) and (608,292) .. (609,300) .. controls (609,306) and (606,310) .. (601,312)--plot[smooth,tension=0.45] coordinates {(600,303) (584,318) (560,333) (530,347) (500,359) (470,362) (440,356) (380,329) (300,294) (200,249) (170,235) (140,223)}--cycle;
+					\shade[top color=HPmotxam!90!white,bottom color=HPmotxam!65!gray] plot[smooth,tension=0.45] coordinates {(140,223) (170,235) (200,249) (300,294) (380,329) (440,356) (470,362) (500,359) (530,347) (560,333) (584,318) (600,303)} .. controls (603,300) and (609,302) .. (609,300) .. controls (609,306) and (606,310) .. (601,312)--plot[smooth,tension=0.45] coordinates {(601,312) (585,328) (560,344) (530,358) (500,370) (470,371) (440,366) (380,339) (300,303) (200,255) (170,241) (140,229)}--cycle;
+					\draw[HPmotvien,line width=0.4pt] plot[smooth,tension=0.45] coordinates {(140,223) (170,235) (200,249) (300,294) (380,329) (440,356) (470,362) (500,359) (530,347) (560,333) (584,318) (600,303)};
+					\draw[HPmotvien,line width=0.75pt] plot[smooth,tension=0.45] coordinates {(140,229) (170,241) (200,255) (300,303) (380,339) (440,366) (470,371) (500,370) (530,358) (560,344) (585,328) (601,312)} .. controls (606,310) and (609,306) .. (609,300) .. controls (609,292) and (604,287) .. (597,285)--(560,279);
+					% mặt trên bàn
+					\shade[top color=white!92!gray,bottom color=white] (140,178)--(505,266)--(560,279)--(597,285) .. controls (601,286) and (601,292) .. (597,295)--plot[smooth,tension=0.45] coordinates {(597,295) (583,307) (560,321) (530,336) (500,347) (470,349) (440,341) (380,312) (300,279) (200,236) (170,225) (140,212)}--cycle;
+					\draw[HPmotvien,line width=0.5pt] plot[smooth,tension=0.45] coordinates {(140,212) (170,225) (200,236) (300,279) (380,312) (440,341) (470,349) (500,347) (530,336) (560,321) (583,307) (597,295)} .. controls (601,292) and (601,286) .. (597,285);
+					\draw[HPmotvien,line width=0.4pt] (505,266)--(560,279)--(597,285);
+					% rãnh tối dọc mép bàn
+					\fill[HPmotxanhtoi!85!white] (140,201.6)--(415,322.6)--(425,329)--(415,329.3)--(140,211.8)--cycle;
+					\draw[white,line width=0.4pt,opacity=0.8] (140,212.5)--(412,330.5);
+					% dải đầu thu phát sáng ở cuối bàn
+					\begin{scope}
+						\clip (398,314)--(503,282)--(556,280)--(582,286)--(441,324)--(420,325)--cycle;
+						\shade[left color=HPmotcam!85!black,right color=HPmotvang!85!white] (395,270) rectangle (600,330);
+						\foreach \t in {0,0.035,...,1}{\draw[yellow!55!white,line width=0.5pt,opacity=0.9] ($(398,314)!\t!(556,280)$)--++(50,20);}
+						\foreach \t in {0.017,0.07,...,1}{\draw[HPmotcam!55!black,line width=0.7pt,opacity=0.5] ($(398,314)!\t!(556,280)$)--++(35,14);}
+						\pgfmathsetseed{3}
+						\foreach \i in {1,...,14}{\fill[white] ({410+140*rnd},{290+20*rnd}) circle (0.8);}
+					\end{scope}
+					\filldraw[fill=HPmotxanhtoi!80!white,draw=HPmotvien,line width=0.55pt] (440,323)--(580,286) .. controls (585,285) and (586,292) .. (582,294)--(448,343) .. controls (442,345) and (437,342) .. (437,337)--(437,327) .. controls (437,325) and (438,323) .. cycle;
+					\begin{scope}
+						\clip (443,327)--(578,290)--(579,292)--(448,338)--(441,335)--cycle;
+						\shade[left color=HPmotcam!50!black,right color=HPmotvang!75!white] (436,280) rectangle (590,345);
+						\foreach \t in {0.05,0.12,...,1}{\fill[HPmotvang!55!white,opacity=0.85] ($(443,327)!\t!(578,290)$)--++(6,-1.6)--++(3,8)--++(-6,1.8)--cycle;}
+					\end{scope}
+					\fill[HPmotvang!70!white,draw=HPmotvien!60!white,line width=0.3pt] (449,333.5) circle (2.4) (459,332) ellipse (4 and 2.6);
+					% đệm xanh
+					\shade[top color=HPmotdem!80!white,bottom color=HPmotdem!85!black] (140,189)--(396,297.5) .. controls (399,298) and (399,307) .. (397,308.3)--(140,196)--cycle;
+					\shade[left color=HPmotdem!85!black,right color=HPmotdem!95!black] (396,297.5)--(500,265) .. controls (505,264) and (507,275) .. (502,277)--(399,308.3) .. controls (397,309) and (397,299) .. (396,297.5)--cycle;
+					\shade[top color=HPmotdem!50!white,bottom color=HPmotdem!72!white] (140,150)--(500,265)--(396,297.5)--(140,189)--cycle;
+					\draw[HPmotvien,line width=0.55pt] (140,196)--(397,308.3) .. controls (399,309) and (400,309) .. (402,308)--(502,277) .. controls (507,275) and (505,264) .. (500,265)--(440,247);
+					\draw[HPmotvien,line width=0.35pt] (140,189)--(396,297.5)--(500,265);
+					% ===== bệnh nhân nằm ngửa
+					% bóng người trên đệm
+					\fill[HPmotdem!60!black,opacity=0.35] plot[smooth cycle,tension=0.6] coordinates {(185,205) (240,228) (300,252) (360,272) (400,286) (430,282) (425,272) (380,262) (300,236) (240,214) (195,198)};
+					% tay xa (trái) dọc thân
+					\filldraw[fill=HPmotda!92!black,draw=HPmotvien,line width=0.4pt] (246,182) .. controls (264,183) and (286,187) .. (304,191) .. controls (311,193) and (316,195) .. (316,197.5) .. controls (313,199) and (306,198.5) .. (300,197) .. controls (283,194) and (264,191) .. (248,189)--cycle;
+					\draw[HPmotda!50!black,line width=0.3pt] (300,194) .. controls (305,195) and (309,196) .. (312,197);
+					% quần: chân xa
+					\shade[top color=HPmotquan!65!white,bottom color=HPmotquan!95!black] (252,196) .. controls (262,191) and (280,193) .. (300,198) .. controls (325,204) and (350,212) .. (372,223) .. controls (385,229) and (396,234) .. (404,240)--(404,252) .. controls (396,255) and (388,253) .. (380,249) .. controls (360,242) and (335,233) .. (305,222)--(270,215)--cycle;
+					\draw[HPmotvien,line width=0.5pt] (252,196) .. controls (262,191) and (280,193) .. (300,198) .. controls (325,204) and (350,212) .. (372,223) .. controls (385,229) and (396,234) .. (404,240)--(404,252) .. controls (396,255) and (388,253) .. (380,249) .. controls (360,242) and (335,233) .. (305,222);
+					% quần: chân gần
+					\shade[top color=HPmotquan!75!white,bottom color=HPmotquan!90!black] (247,214) .. controls (250,203) and (258,199) .. (270,200) .. controls (290,205) and (305,215) .. (325,226) .. controls (345,237) and (365,247) .. (376,253)--(374,272) .. controls (366,276) and (356,274) .. (346,268) .. controls (330,260) and (305,252) .. (285,245) .. controls (268,238) and (255,232) .. (250,226)--cycle;
+					\draw[HPmotvien,line width=0.5pt] (250,226) .. controls (255,232) and (268,238) .. (285,245) .. controls (305,252) and (330,260) .. (346,268) .. controls (356,274) and (366,276) .. (374,272)--(376,253);
+					\draw[HPmotvien,line width=0.45pt] (300,215) .. controls (320,224) and (345,236) .. (376,253);
+					\begin{scope}[HPmotquan!40!HPmotvien,line width=0.35pt]
+						\draw (262,203) .. controls (268,210) and (272,220) .. (271,230) (282,206) .. controls (290,213) and (296,220) .. (298,228) (305,203) .. controls (312,207) and (318,212) .. (322,218);
+						\draw (330,212) .. controls (335,216) and (338,220) .. (340,226) (345,215) .. controls (352,220) and (357,226) .. (358,232) (366,224) .. controls (370,229) and (374,235) .. (375,240);
+						\draw (310,238) .. controls (318,243) and (322,248) .. (324,254) (330,236) .. controls (338,242) and (343,250) .. (345,258) (290,232) .. controls (296,236) and (300,241) .. (302,247) (352,250) .. controls (357,256) and (360,262) .. (361,268);
+						\draw (385,238) .. controls (388,242) and (390,246) .. (390,250) (263,222) .. controls (272,226) and (280,229) .. (288,231);
+					\end{scope}
+					\draw[HPmotvien,line width=0.4pt] (254,197) .. controls (262,195) and (272,196) .. (280,199) (258,193)--(259,199) (266,193)--(266,198);
+					% bóng chân trên đệm
+					\fill[HPmotdem!55!black,opacity=0.3] (418,272) .. controls (430,262) and (452,258) .. (458,266) .. controls (460,274) and (440,280) .. (418,280)--cycle;
+					% bàn chân xa
+					\filldraw[fill=HPmotda!88!black,draw=HPmotvien,line width=0.5pt] (421,264) .. controls (419,258) and (420,252) .. (422,248) .. controls (424,243) and (427,238) .. (430,235) .. controls (432,232) and (436,231) .. (438,234) .. controls (440,234) and (442,235) .. (443,237) .. controls (444,238) and (445,240) .. (445,243) .. controls (446,247) and (445,252) .. (443,256) .. controls (441,261) and (437,266) .. (433,268) .. controls (429,270) and (424,270) .. (421,264)--cycle;
+					\draw[HPmotvien,line width=0.3pt] (437.5,235.5)--(437,240) (441,237)--(440.5,241) (443.5,240)--(442.5,243.5);
+					\draw[HPmotda!45!black,line width=0.3pt] (425,262) .. controls (430,264) and (435,262) .. (439,257) (432,244) .. controls (430,250) and (430,255) .. (431,259);
+					% bàn chân gần
+					\filldraw[fill=HPmotda,draw=HPmotvien,line width=0.5pt] (373,256) .. controls (380,255) and (389,252) .. (396,249) .. controls (401,247) and (405,245) .. (409,243) .. controls (409,240) and (412,239) .. (414,241) .. controls (414,238) and (417,237) .. (418,239) .. controls (418,235) and (421,233) .. (424,234) .. controls (427,235) and (428,238) .. (427,242) .. controls (427,250) and (425,260) .. (421,268) .. controls (418,275) and (414,279) .. (409,281) .. controls (403,281) and (398,277) .. (393,273) .. controls (387,270) and (380,269) .. (373,268)--cycle;
+					\draw[HPmotvien,line width=0.3pt] (418,239)--(417.5,243.5) (414,241)--(413.5,245) (410,243)--(410,246.5);
+					\draw[HPmotda!50!black,line width=0.3pt] (391,262) .. controls (393,259) and (396,258) .. (399,259) (408,256) .. controls (411,260) and (413,264) .. (413,268) (400,266) .. controls (404,268) and (407,271) .. (409,276);
+					% áo cộc tay
+					\shade[top color=HPmotao!70!white,bottom color=HPmotao!92!black] (205,181)--(214,184)--(222,181) .. controls (224,190) and (230,204) .. (240,216) .. controls (234,218) and (225,217) .. (216,212) .. controls (212,216) and (207,220) .. (200,219) .. controls (192,216) and (187,208) .. (187,199) .. controls (188,191) and (195,185) .. cycle;
+					\draw[HPmotvien,line width=0.5pt] (205,181)--(214,184)--(222,181) .. controls (224,190) and (230,204) .. (240,216) .. controls (234,218) and (225,217) .. (216,212) .. controls (212,216) and (207,220) .. (200,219) .. controls (192,216) and (187,208) .. (187,199) .. controls (188,191) and (195,185) .. cycle;
+					\draw[HPmotao!40!HPmotvien,line width=0.3pt] (216,212) .. controls (213,205) and (210,198) .. (204,192) (220,190) .. controls (225,197) and (229,205) .. (231,212) (194,203) .. controls (198,206) and (203,209) .. (207,214);
+					% bụng để trần (sáng lên dưới chùm tia)
+					\shade[top color=HPmotda!75!white,bottom color=HPmotda!85!black] (222,181) .. controls (234,180) and (244,183) .. (250,187) .. controls (250,198) and (249,210) .. (248,222) .. controls (245,222) and (242,219) .. (240,216) .. controls (230,204) and (224,190) .. cycle;
+					\draw[HPmotda!40!black,line width=0.3pt] (238,190) .. controls (241,192) and (244,192) .. (247,190) (240,198) .. controls (243,200) and (246,200) .. (248,198) (242,206) .. controls (244,208) and (246,208) .. (248,206) (244,186)--(245,214);
+					\draw[HPmotvien,line width=0.45pt] (250,187) .. controls (250,198) and (249,210) .. (248,222);
+					% tay gần (phải) dọc thân
+					\filldraw[fill=HPmotda,draw=HPmotvien,line width=0.5pt] (203,218) .. controls (208,213) and (214,212) .. (221,215) .. controls (232,220) and (242,224) .. (251,227) .. controls (257,228) and (263,231) .. (267,237) .. controls (270,241) and (270,246) .. (265,247) .. controls (261,248) and (257,246) .. (253,242) .. controls (247,241) and (240,240) .. (232,237) .. controls (222,233) and (212,229) .. (205,225)--cycle;
+					\draw[HPmotvien,line width=0.3pt] (256,241)--(263,247) (259,237)--(267,244) (253,233) .. controls (255,236) and (257,238) .. (260,240);
+					\draw[HPmotda!50!black,line width=0.3pt] (215,224) .. controls (223,227) and (230,229) .. (237,233) (222,218) .. controls (226,220) and (229,222) .. (231,225);
+					% đầu
+					\filldraw[fill=HPmotda,draw=HPmotvien,line width=0.5pt] (190,162) .. controls (195,160) and (199,161) .. (202,163) .. controls (205,165) and (207,167) .. (208,169) .. controls (210,171) and (212,173) .. (215,176) .. controls (220,179) and (226,181) .. (230,180)--(224,183)--(212,185) .. controls (205,186) and (198,189) .. (193,192) .. controls (186,188) and (182,180) .. (183,172) .. controls (184,167) and (187,163) .. cycle;
+					\fill[HPmotvien!90!white] (190,162) .. controls (186,161) and (180,161) .. (176,164) .. controls (171,169) and (169,178) .. (171,186) .. controls (173,192) and (179,196) .. (186,196) .. controls (190,196) and (193,194) .. (193,192) .. controls (188,190) and (185,186) .. (184,180) .. controls (183,174) and (185,168) .. (189,165)--cycle;
+					\filldraw[fill=HPmotda!90!black,draw=HPmotvien,line width=0.35pt] (185,181) .. controls (182,180) and (181,184) .. (184,186) .. controls (186,187) and (188,186) .. (188,184);
+					\draw[HPmotvien,line width=0.5pt] (187,170) .. controls (189,167) and (192,166) .. (195,166);
+					\draw[HPmotvien,line width=0.35pt] (192,170) .. controls (194,171) and (196,170) .. (198,168);
+					\draw[HPmotvien,line width=0.3pt] (201,166)--(203,167) (203,171) .. controls (205,171) and (206,172) .. (207,173);
+					\draw[HPmotda!55!black,line width=0.3pt] (198,178) .. controls (204,180) and (210,181) .. (215,180);
+					% ===== bóng phát tia X
+					\shade[top color=HPmotxanhxam!55!white,bottom color=HPmotxanhxam!35!white,draw=HPmotvien,line width=0.6pt,rounded corners=3pt] (193,42) .. controls (225,32) and (255,31) .. (284,38)--(272,86) .. controls (250,84) and (230,86) .. (212,92)--(205,96)--cycle;
+					\shade[top color=HPmotxanhxam!95!black,bottom color=HPmotxanhxam!80!white,rounded corners=3pt] (194,42) .. controls (225,32) and (255,31) .. (283,38)--(281,48) .. controls (255,44) and (225,45) .. (197,53)--cycle;
+					\draw[HPmotvien,line width=0.5pt] (197,53) .. controls (225,45) and (255,44) .. (281,48);
+					\draw[white,line width=0.5pt,opacity=0.8] (199,57) .. controls (225,50) and (255,49) .. (279,52);
+					\shade[top color=HPmotxanhxam!30!white,bottom color=HPmotxanhtoi,draw=HPmotvien,line width=0.5pt,rounded corners=2pt] (225,57)--(255,56)--(253,72)--(227,73)--cycle;
+					\fill[white,opacity=0.35] (227,59)--(252,58)--(240,66)--(228,66)--cycle;
+					\shade[top color=HPmotxanhxam!80!white,bottom color=HPmotxanhtoi] (210,90) .. controls (230,84) and (250,82) .. (272,84)--(271,88) .. controls (250,87) and (230,89) .. (212,94)--cycle;
+					% ống chuẩn trực và quầng cam
+					\shade[left color=HPmotxanhtoi,right color=HPmotxanhtoi,middle color=HPmotxanhxam!60!white,draw=HPmotvien,line width=0.4pt] (222,88)--(252,86)--(251,96) .. controls (245,101) and (230,101) .. (223,97)--cycle;
+					\fill[HPmotxam!70!white] (237,88) ellipse (14 and 3);
+					\shade[inner color=yellow!80!white,outer color=HPmotcam] (237,99) ellipse (9 and 3.5);
+					% ===== chùm tia X hình quạt
+					\shade[top color=HPmotcam,bottom color=yellow!40!white,opacity=0.75] (229,99)--(246,99)--(262,180) .. controls (245,186) and (230,186) .. (214,180)--cycle;
+					\foreach \a/\b in {231/216,233/221,235/226,237/231,239/236,241/241,243/246,245/251,247/256}{\draw[HPmotvang!80!HPmotcam,line width=0.45pt,opacity=0.85] (\a,100)--(\b,182);}
+					\foreach \a/\b in {232/219,236/229,240/239,244/249}{\draw[white,line width=0.35pt,opacity=0.7] (\a,104)--(\b,180);}
+					\shade[inner color=white,outer color=HPmotvang!60!white,opacity=0.45] (240,188) ellipse (17 and 10);
+					\pgfmathsetseed{7}
+					\foreach \i in {1,...,90}{\pgfmathsetmacro{\xx}{205+100*rnd}\pgfmathsetmacro{\yy}{120+95*rnd}\fill[HPmotvang!70!HPmotcam,opacity=0.85] (\xx,\yy) circle (0.9);}
+					\foreach \i in {1,...,40}{\pgfmathsetmacro{\xx}{228+30*rnd}\pgfmathsetmacro{\yy}{185+30*rnd}\fill[white] (\xx,\yy) circle (0.7);}
+					% tia xanh nhạt (chiều quay) trong lòng máy
+					\shade[top color=HPmotxanhnhat!90!white,bottom color=HPmotxanhnhat!25!white,opacity=0.8] (219,104)--(224,107)--(185,162)--(173,163)--cycle;
+					% ===== hai bảng đầu thu
+					\begin{scope}
+						\filldraw[fill=HPmotxam!60!gray,draw=HPmotvien,line width=0.5pt] (108,143) .. controls (115,141) and (125,141) .. (133,145) .. controls (128,170) and (126,195) .. (123,216) .. controls (115,218) and (106,218) .. (99,215) .. controls (100,190) and (103,165) .. cycle;
+						\foreach \x/\y/\r in {114/152/3.6,124/153/3.6,111/165/3.6,121/166/3.6,108/181/4.6,118/181/4.6,107/196/3.6,116/195/3.6,107/207/3.6,116/206/3.6}{\filldraw[fill=HPmotcam!75!yellow,draw=HPmotvien!70!HPmotcam,line width=0.35pt] (\x,\y) circle (\r);\fill[yellow!70!white] (\x-0.8,\y-0.8) circle (\r*0.35);}
+						\foreach \x/\y in {110/173,115/173,120/173,110/189,115/189}{\fill[HPmotvang!80!white] (\x-1.5,\y-1.2) rectangle (\x+1.5,\y+1.2);}
+						\fill[HPmotcam] (106,213) circle (1.3) (116,212) circle (1.3);
+						\draw[HPmotxanh,line width=1.1pt] (121,131) circle (4.6);
+					\end{scope}
+					\begin{scope}
+						\filldraw[fill=HPmotxam!60!gray,draw=HPmotvien,line width=0.5pt] (341,121) .. controls (348,118) and (356,117) .. (362,118) .. controls (365,140) and (367,160) .. (367,177) .. controls (361,180) and (354,181) .. (348,180) .. controls (346,160) and (344,140) .. cycle;
+						\foreach \x/\y/\r in {350/129/3.3,358/127/3.3,352/139/3.3,360/138/3.3,355/151/4.2,362/150/4.2,355/162/3.3,363/161/3.3,356/171/3.3,363/170/3.3}{\filldraw[fill=HPmotcam!75!yellow,draw=HPmotvien!70!HPmotcam,line width=0.35pt] (\x,\y) circle (\r);\fill[yellow!70!white] (\x-0.8,\y-0.8) circle (\r*0.35);}
+						\draw[HPmotxanh,line width=1.1pt] (349,110) circle (4.6);
+					\end{scope}
+					% ===== mũi tên vàng
+					\fill[HPmotvang,draw=HPmotvang!70!HPmotcam,line width=0.3pt] (247,88)--(322,128)--(318,123)--(343,143)--(312,146)--(318,138)--(245,93)--cycle;
+					\fill[HPmotvang,draw=HPmotvang!70!HPmotcam,line width=0.3pt] (200,183)--(148,180)--(150,172)--(124,183)--(150,194)--(148,187)--(200,186)--cycle;
+					% dải vàng kép từ bảng phải xuống dải đầu thu ở cuối bàn
+					\fill[HPmotvang,draw=HPmotcam!80!HPmotvang,line width=0.25pt] (354,150.5)--(527,272)--(530,276)--(538,286)--(524,276.5)--(352,153.5)--cycle;
+					\fill[HPmotvang,draw=HPmotcam!80!HPmotvang,line width=0.25pt] (360,148)--(533,268)--(541,273)--(550,286)--(536,277)--(358,151)--cycle;
+					\fill[yellow!45!white,opacity=0.8] (355,151.5)--(530,274.5)--(529,275.5)--(354,152.5)--cycle;
+					% ===== mũi tên cong xanh nhạt về máy tính
+					\shade[left color=white!90!HPmotxanhnhat,right color=HPmotxanhnhat] (378,154) .. controls (388,144) and (398,141) .. (409,140.5)--(408,135)--(420,141)--(409,147.5)--(409,144.5) .. controls (399,145) and (390,148) .. (382,157)--cycle;
+					\shade[bottom color=white!92!HPmotxanhnhat,top color=HPmotxanhnhat] (452,222) .. controls (474,210) and (491,197) .. (499,184)--(494,182.5)--(505,170)--(507,187)--(503,185.5) .. controls (496,201) and (478,214) .. (456,226)--cycle;
+					% ===== khung máy tính xử lí (góc trên phải)
+					\begin{scope}
+						\clip[rounded corners=4pt] (420,24) rectangle (613,172);
+						\shade[left color=HPmott2,right color=white] (420,24) rectangle (613,172);
+						\fill[white,opacity=0.7] (592,24) rectangle (606,125);
+						% gầm bàn tối, chân bàn
+						\fill[HPmotxanhtoi!70!black] (420,145) rectangle (613,172);
+						\shade[left color=HPmotxam!70!gray,right color=HPmotxam!40!gray] (424,150) rectangle (433,172);
+						\shade[left color=HPmotxam!70!gray,right color=HPmotxam!40!gray] (597,150) rectangle (605,172);
+						% mặt bàn và mép trước
+						\shade[top color=white!90!gray,bottom color=white] (421,133)--(474,121)--(613,108)--(613,142)--(560,170)--(421,143)--cycle;
+						\shade[top color=HPmotxam!85!white,bottom color=HPmotxam!55!gray] (421,143)--(560,170)--(613,142)--(613,149)--(562,176)--(421,150)--cycle;
+						\draw[HPmotvien,line width=0.4pt] (421,143)--(560,170)--(613,142);
+						\draw[white,line width=0.4pt] (422,141.5)--(560,168.3)--(612,141);
+						% tủ máy chủ hai tầng
+						\shade[left color=HPmotxam!95!white,right color=HPmotxam!65!gray] (420,24) rectangle (474,133);
+						\draw[HPmotvien,line width=0.45pt] (474,24)--(474,124) (424,24)--(424,135);
+						\filldraw[fill=HPmotxam!55!gray,draw=HPmotvien,line width=0.45pt,rounded corners=1pt] (430,27) rectangle (471,79);
+						\fill[HPmotvien!95!white] (437,32.5) rectangle (467.5,75);
+						\foreach \y in {36,41.7,47.5,53.3,59,64.8,70.5}{\fill[HPmotxam!45!gray] (439,\y-0.9) rectangle (465.5,\y+1.6);\fill[HPmotxam!85!white] (440,\y-0.4) rectangle (451,\y+0.9);\fill[white] (454,\y+0.3) circle (0.8);}
+						\fill[HPmotxam!75!white] (431,75.5) rectangle (470,78.5);
+						\fill[HPmotxam!40!gray] (432,76.4) circle (0.7) (436,76.4) circle (0.7);
+						\filldraw[fill=HPmotxam!55!gray,draw=HPmotvien,line width=0.45pt,rounded corners=1pt] (430.5,83) rectangle (471,129);
+						\fill[HPmotvien!95!white] (438,88) rectangle (467,127);
+						\foreach \y in {91.7,99,106.7,114,121.7}{\fill[HPmotxam!45!gray] (440,\y-2) rectangle (465,\y+2.4);\fill[HPmotcam] (454,\y+0.2) circle (1);}
+						\fill[HPmotcam!80!yellow] (447,85.5) circle (0.8) (451,85.5) circle (0.8);
+						% màn hình
+						\fill[HPmotxam!40!gray] (578,49)--(585,49)--(584,120)--(577,119)--cycle;
+						\shade[top color=HPmotxam!80!white,bottom color=HPmotxam!55!gray,draw=HPmotvien,line width=0.5pt] (476,36.7)--(582,47.5)--(578,120)--(475,104)--cycle;
+						\fill[HPmotvien!95!black] (481.7,43.3)--(574,52.5)--(572.5,110.8)--(480.8,98.3)--cycle;
+						\shade[left color=HPmotxanhtoi!75!black,right color=HPmotxanhtoi!55!black] (483,45)--(572.5,54)--(571,109)--(482.3,96.8)--cycle;
+						\fill[white,opacity=0.12] (483,45)--(520,48.7)--(495,98.3)--(482.3,96.8)--cycle;
+						% chữ trên màn (vạch nhỏ)
+						\foreach \x/\y/\w in {485/47/20,485/51/12,485/55/9,485/59/13,485/63/8,485/67/11,485/71/7,485/75/10,560/57/11,559/61/12,561/65/9,560/69/11,562/73/8,559/77/12,485/91/13,486/94.5/9,551/103/17,553/106.5/13,500/47.8/60}{\fill[HPmotxanhnhat!85!white] (\x,\y) rectangle (\x+\w,\y+1);}
+						% lát cắt CT ổ bụng
+						\filldraw[fill=HPmotxam!45!gray,draw=HPmotxam!85!white,line width=0.5pt] (525,78) ellipse (27.5 and 20.5);
+						\fill[HPmotvien!88!HPmotcam] (525,78) ellipse (24.5 and 17.8);
+						\shade[inner color=HPmotxam!45!gray,outer color=HPmotxam!20!gray] (512,76) ellipse (10.5 and 13.5);
+						\draw[white!85!gray,line width=0.35pt] (514,86)--(513,76)--(508,68) (513,76)--(518,67) (513,80)--(506,83) (510,72)--(505,66) (516,71)--(519,63);
+						\shade[inner color=HPmotcam!60!HPmotda,outer color=HPmotcam!50!black] (538,78) ellipse (12 and 15.5);
+						\draw[HPmotcam!40!black,line width=0.3pt] (533,68) .. controls (538,73) and (542,77) .. (546,79) (531,84) .. controls (537,86) and (542,89) .. (545,92);
+						\fill[HPmotda!80!HPmotcam] (521,73) .. controls (527,72) and (531,76) .. (530,81) .. controls (526,82) and (520,80) .. (517,77)--cycle;
+						\fill[white] (528,84) circle (3) (523,90) circle (3.2);
+						\fill[HPmotxam!40!gray] (523,90) circle (1.3);
+						\fill[white!90!gray] (523,93.5) ellipse (5 and 1.6);
+						% chân đế màn hình
+						\shade[left color=HPmotxam!70!gray,right color=HPmotxam!45!gray,draw=HPmotvien,line width=0.4pt] (518,110)--(541,112)--(540,126)--(519,125)--cycle;
+						\shade[top color=HPmotxam!55!gray,bottom color=HPmotxanhtoi!70!white,draw=HPmotvien,line width=0.45pt] (497,126) .. controls (500,121) and (510,119) .. (520,119)--(546,120) .. controls (552,121) and (555,125) .. (553,129) .. controls (550,133) and (542,135) .. (532,135)--(507,134) .. controls (500,133) and (496,130) .. cycle;
+						% bàn phím
+						\filldraw[fill=HPmotxanhtoi!85!black,draw=HPmotvien,line width=0.5pt,rounded corners=1.5pt] (439,136)--(470,125)--(545,142)--(518,155)--cycle;
+						\foreach \t in {0.055,0.11,...,0.95}{\draw[HPmotxanhxam!80!white,line width=0.25pt] ($(441,136)!\t!(519,154)$)--($(471,126.5)!\t!(543,142)$);}
+						\foreach \t in {0.2,0.4,0.6,0.8}{\draw[HPmotxanhxam!80!white,line width=0.25pt] ($(441,136)!\t!(471,126.5)$)--($(519,154)!\t!(543,142)$);}
+						\draw[HPmotxanhxam!60!white,line width=0.4pt] (520,152.5)--(543,141.5);
+						% chuột, dây
+						\filldraw[fill=HPmotxanhnhat!25!HPmotxam,draw=HPmotvien,line width=0.5pt,rotate around={-15:(558,151)}] (558,151) ellipse (10 and 5.5);
+						\draw[HPmotvien,line width=0.3pt] (553,149) .. controls (556,147) and (560,146) .. (563,147);
+						\fill[white,opacity=0.6,rotate around={-15:(556,150)}] (556,150) ellipse (4 and 1.6);
+						\draw[HPmotvien,line width=0.5pt] (553,127) .. controls (562,129) and (568,134) .. (577,137) .. controls (588,141) and (600,139) .. (612,141);
+						\draw[HPmotvien,line width=0.4pt] (580,139) .. controls (585,134) and (592,136) .. (590,140) .. controls (588,145) and (581,144) .. (583,140) (590,141) .. controls (595,143) and (600,144) .. (606,143);
+					\end{scope}
+					\draw[HPmotvien,line width=0.9pt,rounded corners=4pt] (420,24) rectangle (613,172);
 				\end{tikzpicture}
 		\end{minipage}
 		\choice
@@ -705,7 +965,7 @@
 	\end{ex}
 	\Closesolutionfile{ans}
 
-	\NeedspaceCau{11.3\baselineskip}
+	\NeedspaceCau{22.1\baselineskip}
 	\subsection*{\indam{PHẦN III. Câu trắc nghiệm trả lời ngắn. Thí sinh trả lời từ câu 1 đến câu 6.}}
 	\setcounter{ex}{0}
 	\Opensolutionfile{ans}[ans/VatLi2026-HaiPhong-SoGD-Lan1-3]
@@ -713,39 +973,383 @@
 	\begin{ex}%[VL12-C4-VD]
 		Tàu ngầm hạt nhân sử dụng năng lượng từ phản ứng phân hạch $^{235}_{\phantom{2}92}\text{U}$. Biết mỗi phản ứng phân hạch tỏa ra năng lượng $200$~MeV. Hiệu suất của lò phản ứng là $25\,\%$. Cho khối lượng mol của nguyên tử $^{235}_{\phantom{2}92}\text{U}$ là $235$~g/mol.
 		% giuhinh
-		\par\noindent
-		\begin{minipage}[c]{0.6\linewidth}
-			Nếu công suất của lò phản ứng hạt nhân trên tàu là $400$~MW thì khối lượng $^{235}_{\phantom{2}92}\text{U}$ cần dùng trong một ngày bằng bao nhiêu kg (làm tròn kết quả đến chữ số hàng phần trăm)?
-		\end{minipage}\hfill
-		\begin{minipage}[c]{0.38\linewidth}
-			\centering
-				\begin{tikzpicture}[scale=0.85,line join=round,line cap=round,font=\footnotesize]
-					% tháp chỉ huy
-					\shade[top color=black!55,bottom color=black!80] (1.45,1.72)--(1.55,2.3)--(2.1,2.3)--(2.25,1.72)--cycle;
-					\draw[black!70,semithick] (1.65,2.3)--(1.65,2.6) (1.75,2.3)--(1.75,2.5) (1.85,2.3)--(1.85,2.55);
-					\fill[black!75] (1.2,2.0)--(2.5,2.0)--(2.45,2.06)--(1.25,2.06)--cycle;
-					% bánh lái, chân vịt
-					\shade[top color=black!55,bottom color=black!80] (5.0,1.25)--(5.25,1.95)--(5.45,1.95)--(5.4,1.2)--cycle;
-					\shade[top color=black!55,bottom color=black!80] (5.0,0.95)--(5.25,0.3)--(5.45,0.3)--(5.4,1.0)--cycle;
-					\fill[VLdong!70!yellow!70!black] (5.62,1.08) ellipse (0.06 and 0.32);
-					\fill[VLdong!60!yellow!60!black] (5.62,1.08) ellipse (0.15 and 0.07);
-					% thân tàu
-					\shade[top color=black!55,bottom color=black!85,middle color=black!65] (0,1.0) .. controls (0,1.55) and (0.55,1.75) .. (1.3,1.77)--(3.9,1.75) .. controls (4.6,1.7) and (5.05,1.3) .. (5.55,1.15)--(5.55,0.98) .. controls (5.05,0.85) and (4.6,0.38) .. (3.9,0.32)--(1.3,0.27) .. controls (0.55,0.28) and (0,0.45) .. (0,1.0)--cycle;
-					% mặt cắt bên trong
-					\fill[VLgo!40!black!70] (0.35,1.0) .. controls (0.35,1.38) and (0.7,1.55) .. (1.3,1.57)--(3.85,1.55) .. controls (4.2,1.5) and (4.3,1.2) .. (4.3,1.0) .. controls (4.3,0.75) and (4.15,0.55) .. (3.85,0.5)--(1.3,0.47) .. controls (0.7,0.48) and (0.35,0.65) .. (0.35,1.0)--cycle;
-					\foreach \x in {0.95,1.55,2.3,3.4}{\draw[black!80,semithick] (\x,0.5)--(\x,1.56);}
-					\draw[black!80,semithick] (0.45,1.0)--(1.55,1.0) (2.3,0.95)--(4.25,0.95);
-					\foreach \y in {0.62,0.78,1.15,1.3,1.45}{\draw[VLgo!60,thin] (0.55,\y)--(0.9,\y);}
-					\foreach \x/\y in {1.05/0.6,1.25/0.6,1.05/1.1,1.3/1.15,2.45/0.6,2.75/0.62,3.05/0.6,3.55/0.62,3.85/0.6,3.6/1.1,3.9/1.1}{\filldraw[fill=VLgo!70!black,draw=VLgo!40!black,very thin] (\x,\y) rectangle ++(0.18,0.22);}
-					% lò phản ứng
-					\shade[inner color=yellow!75,outer color=VLdo,rounded corners=2pt] (1.7,0.58) rectangle (2.15,1.48);
-					\draw[gray!60!black,thin,rounded corners=2pt] (1.7,0.58) rectangle (2.15,1.48);
-					% phòng điều khiển
-					\fill[VLxanh!30!black] (2.4,1.05) rectangle (3.3,1.5);
-					\foreach \x in {2.45,2.75,3.05}{\fill[VLxanh!55!white] (\x,1.25) rectangle ++(0.2,0.18);}
-					\foreach \x in {2.6,2.9,3.2}{\fill[black!85] (\x,1.12) circle (0.06);}
-				\end{tikzpicture}
-		\end{minipage}
+		\begin{center}
+			\begin{tikzpicture}[x={0.6\linewidth/239},y={-0.6\linewidth/239},line join=round,line cap=round,font=\footnotesize]
+				\useasboundingbox (0,0) rectangle (239,143);
+				% bóng đổ mềm dưới thân tàu: các elip không xoay (bóng mờ dần tới trắng ở mép), pha trộn multiply
+				\foreach \cx/\cy/\rx/\ry/\o in {140/125.5/40/5/0.8,166/129.5/46/6.5/0.9,191/133.5/46/7.5/1,213/138/30/5.5/0.8}{\shade[shading=HPmotbong,blend mode=multiply,opacity=\o] (\cx,\cy) ellipse [x radius=\rx,y radius=\ry];}
+				% bánh lái đứng phía trên, phía dưới
+				\shade[left color=HPmotthan!80!white,right color=HPmotthan!95!black,draw=black!80,line width=0.3pt] (206,78)--(211.3,55)--(223.2,56.3)--(223.4,90)--(214,86)--cycle;
+				\fill[HPmotthansang!60!HPmotthan,opacity=0.5] (213,58)--(221.4,59)--(221.4,80)--(209.5,77)--cycle;
+				\shade[left color=HPmotthan!85!white,right color=HPmotthan!95!black,draw=black!80,line width=0.3pt] (206,112.5)--(210.6,131.5)--(222.6,134.5)--(222.8,106)--(214,104)--cycle;
+				% thân tàu
+				\shade[top color=HPmotthan!80!HPmotthansang,bottom color=HPmotthan!65!black,middle color=HPmotthan!90!black] plot[smooth,tension=0.55] coordinates {(1.5,57) (2.5,50) (5,45.5) (9,42) (14,39.8) (20,38.6) (30,38.2) (40,38.4) (52,39) (65,39.8) (80,41.5) (100,43.5) (120,45) (140,46.2) (150,47.6) (160,49.5) (170,52.5) (180,57) (186,61) (192,65) (198,69.5) (204,75) (209,80) (214,84.5) (218,88)} -- (218,102) -- plot[smooth,tension=0.55] coordinates {(216,104) (212,107.5) (206,111.5) (200,114.5) (194,117.5) (188,120.3) (184,121.5) (176,123.2) (168,124.8) (160,125.5) (150,125.5) (140,125) (130,123.5) (120,120.5) (110,117.5) (100,114) (90,110.5) (80,107) (70,102.5) (60,98) (50,94) (40,89.5) (30,85) (20,81) (14,78) (10,74) (6,69) (3,63) (1.5,57)};
+				% dải sáng trên lưng, mũi được chiếu sáng
+				\fill[white,opacity=0.13] plot[smooth,tension=0.55] coordinates {(4,48) (9,43) (14,40.5) (20,39) (40,39.2) (80,42) (120,45.4) (150,48.3) (170,53.4) (186,62)} -- plot[smooth,tension=0.55] coordinates {(184,63) (168,56) (150,50.5) (120,47.4) (80,44) (40,41.5) (20,41.4) (13,43.5) (8,47.5) (5,52)} -- cycle;
+				\shade[left color=HPmotdongvang!60!HPmotthansang,right color=HPmotthan,opacity=0.85] plot[smooth,tension=0.55] coordinates {(2,56) (3,50) (5.5,46) (9,43)} -- (11,47) -- (9.5,52) -- (10,58) -- (12,63) -- plot[smooth,tension=0.55] coordinates {(11,69.5) (7,66) (3.5,61)} -- cycle;
+				\draw[black!85,line width=0.35pt] plot[smooth,tension=0.55] coordinates {(1.5,57) (2.5,50) (5,45.5) (9,42) (14,39.8) (20,38.6) (30,38.2) (40,38.4) (52,39) (65,39.8) (80,41.5) (100,43.5) (120,45) (140,46.2) (150,47.6) (160,49.5) (170,52.5) (180,57) (186,61) (192,65) (198,69.5) (204,75) (209,80) (214,84.5) (218,88)};
+				\draw[black!85,line width=0.35pt] plot[smooth,tension=0.55] coordinates {(216,104) (212,107.5) (206,111.5) (200,114.5) (194,117.5) (188,120.3) (184,121.5) (176,123.2) (168,124.8) (160,125.5) (150,125.5) (140,125) (130,123.5) (120,120.5) (110,117.5) (100,114) (90,110.5) (80,107) (70,102.5) (60,98) (50,94) (40,89.5) (30,85) (20,81) (14,78) (10,74) (6,69) (3,63) (1.5,57)};
+				% ===== mặt cắt bổ dọc: nội thất
+				\begin{scope}
+					\clip plot[smooth cycle,tension=0.5] coordinates {(9.5,52) (12,47.5) (16,44.2) (22,42.6) (40,42.8) (70,43.8) (100,45.8) (130,48.2) (150,51) (162,54.2) (172,59) (180,65) (186,71.5) (189.5,78.5) (191,86.5) (190,95) (186.5,103) (180.5,110) (172,115) (162,118) (150,119) (140,117.5) (130,115) (120,112) (110,108.5) (100,104.8) (90,101) (80,97) (70,93) (60,88.8) (50,84.5) (40,80) (30,75.5) (22,71.5) (16,67.5) (12,63) (10,58)};
+					\fill[black!88] (0,30) rectangle (200,130);
+					% khoang mũi
+					\fill[HPmotthan!55!black] (8,40) rectangle (21,78);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white] (11.2,48) rectangle (13.8,60);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white] (14.7,50) rectangle (16.9,58.5);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white] (17.4,47) rectangle (19.8,61);
+					\fill[HPmotkim!85!white] (11,52.5) rectangle (14,53.5) (17.5,49) rectangle (19.8,50);
+					\draw[HPmotcam!80!black,line width=0.6pt] (9.5,62.5)--(21,65);
+					\draw[HPmotxanhnhat!45!HPmotthan,line width=0.5pt] (10,65.5)--(21,68.5);
+					\fill[HPmotxanhnhat!60!HPmotthan] (12.5,57) circle (0.9);
+					% khoang ngư lôi: 5 quả ngư lôi trên giá
+					\fill[HPmotthan!50!black] (21,40) rectangle (43.5,84);
+					\draw[HPmotkim!35!black,line width=0.4pt] (22,48.2)--(43,50.8);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (24.5,44.6) .. controls (23.6,44.6) and (23.6,47.5) .. (24.5,47.5)--(37.5,50) .. controls (40.6,50) and (41,47.1) .. (37.5,47)--cycle;
+					\draw[HPmotkim!30!black,line width=0.25pt] (28,45)--(28,47.9) (34,45.5)--(34,48.4);
+					\fill[white,opacity=0.35] (25,45.2)--(37,47.5)--(37,48.1)--(25,45.8)--cycle;
+					\draw[HPmotkim!35!black,line width=0.4pt] (22,53.6)--(43,56.2);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (24.5,50) .. controls (23.6,50) and (23.6,52.9) .. (24.5,52.9)--(37.5,55.4) .. controls (40.6,55.4) and (41,52.5) .. (37.5,52.4)--cycle;
+					\draw[HPmotkim!30!black,line width=0.25pt] (28,50.4)--(28,53.3) (34,50.9)--(34,53.8);
+					\fill[white,opacity=0.35] (25,50.6)--(37,52.9)--(37,53.5)--(25,51.2)--cycle;
+					\draw[HPmotkim!35!black,line width=0.4pt] (22,59)--(43,61.6);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (24.5,55.4) .. controls (23.6,55.4) and (23.6,58.3) .. (24.5,58.3)--(37.5,60.8) .. controls (40.6,60.8) and (41,57.9) .. (37.5,57.8)--cycle;
+					\draw[HPmotkim!30!black,line width=0.25pt] (28,55.8)--(28,58.7) (34,56.3)--(34,59.2);
+					\fill[white,opacity=0.35] (25,56)--(37,58.3)--(37,58.9)--(25,56.6)--cycle;
+					\draw[HPmotkim!35!black,line width=0.4pt] (22,64.4)--(43,67);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (24.5,60.8) .. controls (23.6,60.8) and (23.6,63.7) .. (24.5,63.7)--(37.5,66.2) .. controls (40.6,66.2) and (41,63.3) .. (37.5,63.2)--cycle;
+					\draw[HPmotkim!30!black,line width=0.25pt] (28,61.2)--(28,64.1) (34,61.7)--(34,64.6);
+					\fill[white,opacity=0.35] (25,61.4)--(37,63.7)--(37,64.3)--(25,62)--cycle;
+					\draw[HPmotkim!35!black,line width=0.4pt] (22,69.8)--(43,72.4);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (24.5,66.2) .. controls (23.6,66.2) and (23.6,69.1) .. (24.5,69.1)--(37.5,71.6) .. controls (40.6,71.6) and (41,68.7) .. (37.5,68.6)--cycle;
+					\draw[HPmotkim!30!black,line width=0.25pt] (28,66.6)--(28,69.5) (34,67.1)--(34,70);
+					\fill[white,opacity=0.35] (25,66.8)--(37,69.1)--(37,69.7)--(25,67.4)--cycle;
+					\draw[HPmotcam!75!black,line width=0.6pt] (21,73) .. controls (30,75) and (37,78) .. (43.5,81);
+					\draw[HPmotxanhnhat!55!HPmotthan,line width=0.45pt] (21,76) .. controls (30,78) and (37,81) .. (43.5,84);
+					% khoang máy: thiết bị, ống dẫn đỏ, xanh, tua-bin
+					\fill[HPmotthan!55!black] (43.5,40) rectangle (69,98);
+					\shade[top color=HPmotthan!50!HPmotkim,bottom color=HPmotthan!80!black,draw=HPmotkim!45!black,line width=0.2pt] (45,45) rectangle (50.5,52.5);
+					\shade[top color=HPmotthan!50!HPmotkim,bottom color=HPmotthan!80!black,draw=HPmotkim!45!black,line width=0.2pt] (51.5,44.5) rectangle (56.5,53.5);
+					\shade[top color=HPmotthan!50!HPmotkim,bottom color=HPmotthan!80!black,draw=HPmotkim!45!black,line width=0.2pt] (57.5,45) rectangle (62,52);
+					\shade[top color=HPmotthan!50!HPmotkim,bottom color=HPmotthan!80!black,draw=HPmotkim!45!black,line width=0.2pt] (63,45.5) rectangle (68,52);
+					\shade[inner color=yellow!90!white,outer color=HPmotkim] (47.7,49.5) circle (1.3);
+					\shade[inner color=white,outer color=HPmotkim!80!white] (60,49) circle (1.1);
+					\fill[HPmotkim!70!white] (53,47) rectangle (55.6,48) (53,49.5) rectangle (55.6,50.5);
+					\draw[HPmotcam!85!black,line width=0.75pt] (44,57.5) .. controls (52,58.5) and (60,60) .. (69,61.5);
+					\draw[HPmotcam!65!black,line width=0.55pt] (44,60.5) .. controls (52,61.5) and (60,63) .. (69,64.5);
+					\draw[HPmotcam!70!black,line width=0.45pt] (48,58.4)--(48,66.8);
+					\draw[HPmotcam!70!black,line width=0.45pt] (53,58.9)--(53,67.8);
+					\draw[HPmotcam!70!black,line width=0.45pt] (58.5,59.5)--(58.5,68.9);
+					\draw[HPmotcam!70!black,line width=0.45pt] (64,60)--(64,70);
+					\draw[HPmotxanhnhat!75!HPmotthan,line width=0.75pt] (44,66) .. controls (52,67.5) and (60,69) .. (69,71.5);
+					\draw[HPmotxanhnhat!60!HPmotthan,line width=0.6pt] (44,69.5) .. controls (52,71) and (60,73) .. (69,76);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (46,74)--(68,78.5)--(68,83.5)--(46,79)--cycle;
+					\draw[HPmotkim!30!black,line width=0.3pt] (50,74.8)--(50,79.8);
+					\draw[HPmotkim!30!black,line width=0.3pt] (56,76)--(56,81);
+					\draw[HPmotkim!30!black,line width=0.3pt] (62,77.3)--(62,82.3);
+					\fill[white,opacity=0.3] (47,75)--(67,79.2)--(67,80)--(47,75.8)--cycle;
+					\draw[HPmotxanhnhat!55!HPmotthan,line width=0.55pt] (44,82) .. controls (52,84.5) and (60,87) .. (69,90.5);
+					\draw[HPmotcam!80!black,line width=0.65pt] (44,84.5) .. controls (52,87) and (60,89.5) .. (69,93);
+					\draw[HPmotkim!60!black,line width=0.4pt] (44,87) .. controls (52,89.5) and (60,92) .. (69,95.5);
+					\filldraw[fill=white!85!HPmotkim,draw=HPmotkim!40!black,line width=0.2pt] (47,63.5) circle (0.9);
+					\filldraw[fill=white!85!HPmotkim,draw=HPmotkim!40!black,line width=0.2pt] (56,64.5) circle (0.9);
+					\filldraw[fill=white!85!HPmotkim,draw=HPmotkim!40!black,line width=0.2pt] (65.5,66) circle (0.9);
+					\draw[HPmotcam!75!black,line width=0.5pt] (44,63.5) .. controls (52,65) and (60,66.5) .. (69,68.5);
+					\draw[HPmotcam!85!black,line width=0.6pt] (44,72.5) .. controls (52,74) and (60,75.5) .. (69,77.5);
+					\draw[HPmotxanhnhat!70!HPmotthan,line width=0.5pt] (44,86.5) .. controls (52,88) and (60,89.5) .. (69,91.5);
+					\draw[HPmotkim!70!black,line width=0.5pt] (46,66)--(46,74);
+					\draw[HPmotxanhnhat!70!HPmotthan,line width=0.5pt] (51,60)--(51,73);
+					\draw[HPmotkim!70!black,line width=0.5pt] (60,61)--(60,75);
+					\draw[HPmotxanhnhat!70!HPmotthan,line width=0.5pt] (66.5,62)--(66.5,77);
+					\filldraw[fill=HPmotcam!80!black,draw=HPmotkim!50!black,line width=0.2pt] (51,66.5) circle (0.8);
+					\filldraw[fill=HPmotcam!80!black,draw=HPmotkim!50!black,line width=0.2pt] (60,68.5) circle (0.8);
+					\filldraw[fill=HPmotcam!80!black,draw=HPmotkim!50!black,line width=0.2pt] (46,70) circle (0.8);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white] (62.5,53) rectangle (65,58);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white] (45.5,53) rectangle (47.5,57.5);
+					% lò phản ứng: bình trụ đầu vòm, lõi rực sáng
+					\fill[HPmotthan!50!black] (69,40) rectangle (95,106);
+					\shade[left color=HPmotxanhnhat!25!HPmotthan,right color=HPmotthan!85!black,middle color=HPmotxanhnhat!45!HPmotthansang] (70.5,87)--(70.5,56) .. controls (70.5,50) and (75,48.4) .. (80,48.4) .. controls (85,48.4) and (89.5,50) .. (89.5,56)--(89.5,87)--cycle;
+					\shade[inner color=yellow!85!white,outer color=HPmotcam!90!black] (73.3,57.5) rectangle (86.7,83.5);
+					\shade[top color=HPmotcam!85!black,bottom color=yellow!60!white,opacity=0.45] (73.3,57.5) rectangle (86.7,62);
+					\foreach \x in {75.3,77.7,80.1,82.5,84.9}{\draw[yellow!50!white,line width=0.3pt,opacity=0.75] (\x,59)--(\x,82);}
+					\fill[white,opacity=0.5] (78.5,66) rectangle (81.5,76);
+					\shade[inner color=white,outer color=HPmotthansang!80!white] (76.5,52) circle (1.6);
+					\draw[HPmotkim,line width=0.5pt] (70.5,87)--(70.5,56) .. controls (70.5,50) and (75,48.4) .. (80,48.4) .. controls (85,48.4) and (89.5,50) .. (89.5,56)--(89.5,87);
+					\draw[HPmotkim!70!black,line width=0.35pt] (70.5,57.3)--(89.5,57.3) (70.5,84)--(89.5,84);
+					\shade[top color=HPmotthan!65!white,bottom color=HPmotthan!90!black] (70,87) .. controls (70,93) and (74,95.5) .. (80,95.5) .. controls (86,95.5) and (90,93) .. (90,87)--cycle;
+					\draw[HPmotkim!55!black,line width=0.3pt] (71.5,89.5)--(88.5,89.5) (73.5,92.5)--(86.5,92.5);
+					\draw[HPmotcam!80!black,line width=0.6pt] (69.5,80) .. controls (66,85) and (66,91) .. (69.5,96) (90.5,78) .. controls (94,84) and (94,91) .. (90.5,98);
+					\draw[HPmotxanhnhat!60!HPmotthan,line width=0.5pt] (71,78) .. controls (67.5,82) and (67,87) .. (68.5,92) (89,76) .. controls (92.5,80) and (92.5,86) .. (91.5,90);
+					\draw[HPmotkim!80!black,line width=0.4pt] (70,57) .. controls (67,57) and (66,55) .. (66,52) (90,57) .. controls (93,57) and (94,55) .. (94,52);
+					% vách ngăn
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (20.9,40) rectangle (22.3,78);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (42.8,40) rectangle (44.2,86);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (68.3,40) rectangle (69.7,98);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (92.9,42) rectangle (94.3,106);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (95.9,42) rectangle (97.3,108);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (121.1,44) rectangle (122.5,116);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (146.3,86) rectangle (147.7,122);
+					\shade[left color=HPmotkim!35!black,right color=HPmotkim!35!black,middle color=HPmotkim!75!white] (160.1,50) rectangle (161.5,122);
+					% phòng điều khiển: vách màn hình, bàn điều khiển
+					\fill[HPmotaolinh!45!black] (97.3,44)--(121.1,46.9)--(121.1,87.2)--(97.3,84.3)--cycle;
+					\fill[HPmotthan!70!black] (97.3,44)--(121.1,45.9)--(121.1,52.4)--(97.3,50.5)--cycle;
+					\fill[HPmotkim!45!HPmotthansang] (97.3,48.9)--(121.1,50.8)--(121.1,52)--(97.3,50.1)--cycle;
+					\shade[top color=HPmotman!80!white,bottom color=HPmotman!65!black] (97.3,51.5)--(121.1,53.4)--(121.1,70.6)--(97.3,68.7)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (97.6,51.9)--(101,52.2)--(101,59.7)--(97.6,59.4)--cycle;
+					\fill[white,opacity=0.6] (98,52.5)--(99.6,52.6)--(99.6,53.5)--(98,53.4)--cycle;
+					\fill[white,opacity=0.35] (98,57.7)--(100.5,57.9)--(100.5,58.5)--(98,58.3)--cycle;
+					\fill[white,opacity=0.5] (99.3,55.8) circle (0.5);
+					\fill[HPmotman!80!black,opacity=0.75] (101.6,52.2)--(104.9,52.5)--(104.9,60)--(101.6,59.7)--cycle;
+					\fill[white,opacity=0.6] (102,52.8)--(103.6,52.9)--(103.6,53.8)--(102,53.7)--cycle;
+					\fill[white,opacity=0.35] (102,58)--(104.4,58.2)--(104.4,58.8)--(102,58.6)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (105.5,52.6)--(108.9,52.8)--(108.9,60.3)--(105.5,60.1)--cycle;
+					\fill[white,opacity=0.6] (105.9,53.1)--(107.5,53.2)--(107.5,54.1)--(105.9,54)--cycle;
+					\fill[white,opacity=0.35] (105.9,58.3)--(108.4,58.5)--(108.4,59.1)--(105.9,58.9)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (109.5,52.9)--(112.9,53.1)--(112.9,60.6)--(109.5,60.4)--cycle;
+					\fill[white,opacity=0.6] (109.9,53.4)--(111.5,53.5)--(111.5,54.4)--(109.9,54.3)--cycle;
+					\fill[white,opacity=0.35] (109.9,58.6)--(112.4,58.8)--(112.4,59.4)--(109.9,59.2)--cycle;
+					\fill[white,opacity=0.5] (111.2,56.8) circle (0.5);
+					\fill[HPmotman!55!white,opacity=0.75] (113.5,53.2)--(116.8,53.5)--(116.8,61)--(113.5,60.7)--cycle;
+					\fill[white,opacity=0.6] (113.9,53.7)--(115.5,53.9)--(115.5,54.8)--(113.9,54.6)--cycle;
+					\fill[white,opacity=0.35] (113.9,58.9)--(116.3,59.1)--(116.3,59.7)--(113.9,59.5)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (117.4,53.5)--(120.8,53.8)--(120.8,61.3)--(117.4,61)--cycle;
+					\fill[white,opacity=0.6] (117.8,54)--(119.4,54.2)--(119.4,55.1)--(117.8,54.9)--cycle;
+					\fill[white,opacity=0.35] (117.8,59.2)--(120.3,59.4)--(120.3,60)--(117.8,59.8)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (97.6,60.2)--(101,60.5)--(101,68.6)--(97.6,68.3)--cycle;
+					\fill[white,opacity=0.6] (98,60.8)--(99.6,60.9)--(99.6,61.8)--(98,61.7)--cycle;
+					\fill[white,opacity=0.35] (98,66.6)--(100.5,66.8)--(100.5,67.4)--(98,67.2)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (101.6,60.5)--(104.9,60.8)--(104.9,68.9)--(101.6,68.6)--cycle;
+					\fill[white,opacity=0.6] (102,61.1)--(103.6,61.2)--(103.6,62.1)--(102,62)--cycle;
+					\fill[white,opacity=0.35] (102,66.9)--(104.4,67.1)--(104.4,67.7)--(102,67.5)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (105.5,60.9)--(108.9,61.1)--(108.9,69.2)--(105.5,69)--cycle;
+					\fill[white,opacity=0.6] (105.9,61.4)--(107.5,61.5)--(107.5,62.4)--(105.9,62.3)--cycle;
+					\fill[white,opacity=0.35] (105.9,67.2)--(108.4,67.4)--(108.4,68)--(105.9,67.8)--cycle;
+					\fill[white,opacity=0.5] (107.2,65) circle (0.5);
+					\fill[HPmotman!80!black,opacity=0.75] (109.5,61.2)--(112.9,61.4)--(112.9,69.5)--(109.5,69.3)--cycle;
+					\fill[white,opacity=0.6] (109.9,61.7)--(111.5,61.8)--(111.5,62.7)--(109.9,62.6)--cycle;
+					\fill[white,opacity=0.35] (109.9,67.5)--(112.4,67.7)--(112.4,68.3)--(109.9,68.1)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (113.5,61.5)--(116.8,61.8)--(116.8,69.9)--(113.5,69.6)--cycle;
+					\fill[white,opacity=0.6] (113.9,62)--(115.5,62.2)--(115.5,63.1)--(113.9,62.9)--cycle;
+					\fill[white,opacity=0.35] (113.9,67.8)--(116.3,68)--(116.3,68.6)--(113.9,68.4)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (117.4,61.8)--(120.8,62.1)--(120.8,70.2)--(117.4,69.9)--cycle;
+					\fill[white,opacity=0.6] (117.8,62.3)--(119.4,62.5)--(119.4,63.4)--(117.8,63.2)--cycle;
+					\fill[white,opacity=0.35] (117.8,68.1)--(120.3,68.3)--(120.3,68.9)--(117.8,68.7)--cycle;
+					\fill[white,opacity=0.5] (119.1,66) circle (0.5);
+					\shade[top color=HPmotthansang!80!white,bottom color=HPmotthan] (97.3,70.2)--(121.1,73.1)--(121.1,75)--(97.3,72.1)--cycle;
+					\fill[HPmotcam!80!white] (98.3,71.1) circle (0.45);
+					\fill[HPmotla!80!white] (100.3,71.4) circle (0.45);
+					\fill[HPmotla!80!white] (102.3,71.6) circle (0.45);
+					\fill[HPmotcam!80!white] (104.2,71.8) circle (0.45);
+					\fill[HPmotla!80!white] (106.2,72.1) circle (0.45);
+					\fill[HPmotla!80!white] (108.2,72.3) circle (0.45);
+					\fill[HPmotcam!80!white] (110.2,72.5) circle (0.45);
+					\fill[HPmotla!80!white] (112.2,72.8) circle (0.45);
+					\fill[HPmotla!80!white] (114.2,73) circle (0.45);
+					\fill[HPmotcam!80!white] (116.1,73.3) circle (0.45);
+					\fill[HPmotla!80!white] (118.1,73.5) circle (0.45);
+					\fill[HPmotla!80!white] (120.1,73.7) circle (0.45);
+					\fill[HPmotthan!85!black] (97.3,72.1)--(121.1,75.7)--(121.1,81.9)--(97.3,78.3)--cycle;
+					\shade[top color=HPmotkim!65!white,bottom color=HPmotkim!40!black] (97.3,78.3)--(121.1,82.6)--(121.1,84.2)--(97.3,79.9)--cycle;
+					% phòng điều khiển: vách màn hình, bàn điều khiển
+					\fill[HPmotaolinh!45!black] (122.5,46)--(160.1,50.5)--(160.1,94)--(122.5,89.5)--cycle;
+					\fill[HPmotthan!70!black] (122.5,46)--(160.1,49)--(160.1,56)--(122.5,53)--cycle;
+					\fill[HPmotkim!45!HPmotthansang] (122.5,51.4)--(160.1,54.4)--(160.1,55.6)--(122.5,52.6)--cycle;
+					\shade[top color=HPmotman!80!white,bottom color=HPmotman!65!black] (122.5,54)--(160.1,57)--(160.1,75)--(122.5,72)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (122.8,54.4)--(126.4,54.7)--(126.4,62.5)--(122.8,62.2)--cycle;
+					\fill[white,opacity=0.6] (123.2,55)--(124.9,55.1)--(124.9,56)--(123.2,55.9)--cycle;
+					\fill[white,opacity=0.35] (123.2,60.5)--(125.9,60.7)--(125.9,61.3)--(123.2,61.1)--cycle;
+					\fill[white,opacity=0.5] (124.6,58.5) circle (0.5);
+					\fill[HPmotman!80!black,opacity=0.75] (127,54.8)--(130.6,55)--(130.6,62.8)--(127,62.6)--cycle;
+					\fill[white,opacity=0.6] (127.4,55.3)--(129,55.4)--(129,56.3)--(127.4,56.2)--cycle;
+					\fill[white,opacity=0.35] (127.4,60.8)--(130.1,61)--(130.1,61.6)--(127.4,61.4)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (131.2,55.1)--(134.7,55.4)--(134.7,63.2)--(131.2,62.9)--cycle;
+					\fill[white,opacity=0.6] (131.6,55.6)--(133.2,55.8)--(133.2,56.7)--(131.6,56.5)--cycle;
+					\fill[white,opacity=0.35] (131.6,61.1)--(134.2,61.3)--(134.2,61.9)--(131.6,61.7)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (135.3,55.4)--(138.9,55.7)--(138.9,63.5)--(135.3,63.2)--cycle;
+					\fill[white,opacity=0.6] (135.7,56)--(137.4,56.1)--(137.4,57)--(135.7,56.9)--cycle;
+					\fill[white,opacity=0.35] (135.7,61.5)--(138.4,61.7)--(138.4,62.3)--(135.7,62.1)--cycle;
+					\fill[white,opacity=0.5] (137.1,59.5) circle (0.5);
+					\fill[HPmotman!55!white,opacity=0.75] (139.5,55.8)--(143.1,56)--(143.1,63.8)--(139.5,63.6)--cycle;
+					\fill[white,opacity=0.6] (139.9,56.3)--(141.6,56.4)--(141.6,57.3)--(139.9,57.2)--cycle;
+					\fill[white,opacity=0.35] (139.9,61.8)--(142.6,62)--(142.6,62.6)--(139.9,62.4)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (143.7,56.1)--(147.3,56.4)--(147.3,64.2)--(143.7,63.9)--cycle;
+					\fill[white,opacity=0.6] (144.1,56.6)--(145.8,56.8)--(145.8,57.7)--(144.1,57.5)--cycle;
+					\fill[white,opacity=0.35] (144.1,62.1)--(146.8,62.3)--(146.8,62.9)--(144.1,62.7)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (147.9,56.4)--(151.4,56.7)--(151.4,64.5)--(147.9,64.2)--cycle;
+					\fill[white,opacity=0.6] (148.3,57)--(149.9,57.1)--(149.9,58)--(148.3,57.9)--cycle;
+					\fill[white,opacity=0.35] (148.3,62.5)--(150.9,62.7)--(150.9,63.3)--(148.3,63.1)--cycle;
+					\fill[white,opacity=0.5] (149.7,60.5) circle (0.5);
+					\fill[HPmotman!80!black,opacity=0.75] (152,56.8)--(155.6,57)--(155.6,64.8)--(152,64.6)--cycle;
+					\fill[white,opacity=0.6] (152.4,57.3)--(154.1,57.4)--(154.1,58.3)--(152.4,58.2)--cycle;
+					\fill[white,opacity=0.35] (152.4,62.8)--(155.1,63)--(155.1,63.6)--(152.4,63.4)--cycle;
+					\fill[HPmotman!55!white,opacity=0.75] (156.2,57.1)--(159.8,57.4)--(159.8,65.2)--(156.2,64.9)--cycle;
+					\fill[white,opacity=0.6] (156.6,57.6)--(158.3,57.8)--(158.3,58.7)--(156.6,58.5)--cycle;
+					\fill[white,opacity=0.35] (156.6,63.1)--(159.3,63.3)--(159.3,63.9)--(156.6,63.7)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (122.8,63)--(126.4,63.3)--(126.4,71.9)--(122.8,71.6)--cycle;
+					\fill[white,opacity=0.6] (123.2,63.6)--(124.9,63.7)--(124.9,64.6)--(123.2,64.5)--cycle;
+					\fill[white,opacity=0.35] (123.2,69.9)--(125.9,70.1)--(125.9,70.7)--(123.2,70.5)--cycle;
+					\fill[HPmotla!70!HPmotman,opacity=0.75] (127,63.4)--(130.6,63.6)--(130.6,72.2)--(127,72)--cycle;
+					\fill[white,opacity=0.6] (127.4,63.9)--(129,64)--(129,64.9)--(127.4,64.8)--cycle;
+					\fill[white,opacity=0.35] (127.4,70.2)--(130.1,70.4)--(130.1,71)--(127.4,70.8)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (131.2,63.7)--(134.7,64)--(134.7,72.6)--(131.2,72.3)--cycle;
+					\fill[white,opacity=0.6] (131.6,64.2)--(133.2,64.4)--(133.2,65.3)--(131.6,65.1)--cycle;
+					\fill[white,opacity=0.35] (131.6,70.5)--(134.2,70.7)--(134.2,71.3)--(131.6,71.1)--cycle;
+					\fill[white,opacity=0.5] (132.9,68.1) circle (0.5);
+					\fill[HPmotla!70!HPmotman,opacity=0.75] (135.3,64)--(138.9,64.3)--(138.9,72.9)--(135.3,72.6)--cycle;
+					\fill[white,opacity=0.6] (135.7,64.6)--(137.4,64.7)--(137.4,65.6)--(135.7,65.5)--cycle;
+					\fill[white,opacity=0.35] (135.7,70.9)--(138.4,71.1)--(138.4,71.7)--(135.7,71.5)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (139.5,64.4)--(143.1,64.6)--(143.1,73.2)--(139.5,73)--cycle;
+					\fill[white,opacity=0.6] (139.9,64.9)--(141.6,65)--(141.6,65.9)--(139.9,65.8)--cycle;
+					\fill[white,opacity=0.35] (139.9,71.2)--(142.6,71.4)--(142.6,72)--(139.9,71.8)--cycle;
+					\fill[HPmotla!70!HPmotman,opacity=0.75] (143.7,64.7)--(147.3,65)--(147.3,73.6)--(143.7,73.3)--cycle;
+					\fill[white,opacity=0.6] (144.1,65.2)--(145.8,65.4)--(145.8,66.3)--(144.1,66.1)--cycle;
+					\fill[white,opacity=0.35] (144.1,71.5)--(146.8,71.7)--(146.8,72.3)--(144.1,72.1)--cycle;
+					\fill[white,opacity=0.5] (145.5,69.1) circle (0.5);
+					\fill[HPmotman!80!black,opacity=0.75] (147.9,65)--(151.4,65.3)--(151.4,73.9)--(147.9,73.6)--cycle;
+					\fill[white,opacity=0.6] (148.3,65.6)--(149.9,65.7)--(149.9,66.6)--(148.3,66.5)--cycle;
+					\fill[white,opacity=0.35] (148.3,71.9)--(150.9,72.1)--(150.9,72.7)--(148.3,72.5)--cycle;
+					\fill[HPmotla!70!HPmotman,opacity=0.75] (152,65.4)--(155.6,65.6)--(155.6,74.2)--(152,74)--cycle;
+					\fill[white,opacity=0.6] (152.4,65.9)--(154.1,66)--(154.1,66.9)--(152.4,66.8)--cycle;
+					\fill[white,opacity=0.35] (152.4,72.2)--(155.1,72.4)--(155.1,73)--(152.4,72.8)--cycle;
+					\fill[HPmotman!80!black,opacity=0.75] (156.2,65.7)--(159.8,66)--(159.8,74.6)--(156.2,74.3)--cycle;
+					\fill[white,opacity=0.6] (156.6,66.2)--(158.3,66.4)--(158.3,67.3)--(156.6,67.1)--cycle;
+					\fill[white,opacity=0.35] (156.6,72.5)--(159.3,72.7)--(159.3,73.3)--(156.6,73.1)--cycle;
+					\fill[white,opacity=0.5] (158,70.1) circle (0.5);
+					\shade[top color=HPmotthansang!80!white,bottom color=HPmotthan] (122.5,73.5)--(160.1,78)--(160.1,79.9)--(122.5,75.4)--cycle;
+					\fill[HPmotcam!80!white] (123.5,74.4) circle (0.45);
+					\fill[HPmotla!80!white] (125.6,74.7) circle (0.45);
+					\fill[HPmotla!80!white] (127.7,74.9) circle (0.45);
+					\fill[HPmotcam!80!white] (129.8,75.2) circle (0.45);
+					\fill[HPmotla!80!white] (131.9,75.4) circle (0.45);
+					\fill[HPmotla!80!white] (134,75.7) circle (0.45);
+					\fill[HPmotcam!80!white] (136.1,75.9) circle (0.45);
+					\fill[HPmotla!80!white] (138.2,76.2) circle (0.45);
+					\fill[HPmotla!80!white] (140.3,76.4) circle (0.45);
+					\fill[HPmotcam!80!white] (142.3,76.7) circle (0.45);
+					\fill[HPmotla!80!white] (144.4,76.9) circle (0.45);
+					\fill[HPmotla!80!white] (146.5,77.2) circle (0.45);
+					\fill[HPmotcam!80!white] (148.6,77.4) circle (0.45);
+					\fill[HPmotla!80!white] (150.7,77.7) circle (0.45);
+					\fill[HPmotla!80!white] (152.8,77.9) circle (0.45);
+					\fill[HPmotcam!80!white] (154.9,78.2) circle (0.45);
+					\fill[HPmotla!80!white] (157,78.4) circle (0.45);
+					\fill[HPmotla!80!white] (159.1,78.7) circle (0.45);
+					\fill[HPmotthan!85!black] (122.5,75.4)--(160.1,81)--(160.1,89.1)--(122.5,83.5)--cycle;
+					\shade[top color=HPmotkim!65!white,bottom color=HPmotkim!40!black] (122.5,83.5)--(160.1,90.3)--(160.1,91.9)--(122.5,85.1)--cycle;
+					% boong dưới: giá ống, thùng hàng
+					\fill[HPmotthan!55!black] (96.6,79) rectangle (147,124);
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (98,83.5)--(120.5,87.5)--(120.5,90.1)--(98,86.1)--cycle;
+					\fill[white,opacity=0.35] (98.5,83.9)--(120,87.8)--(120,88.3)--(98.5,84.4)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (98,88)--(120.5,92)--(120.5,94.6)--(98,90.6)--cycle;
+					\fill[white,opacity=0.35] (98.5,88.4)--(120,92.3)--(120,92.8)--(98.5,88.9)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (98,92.5)--(120.5,96.5)--(120.5,99.1)--(98,95.1)--cycle;
+					\fill[white,opacity=0.35] (98.5,92.9)--(120,96.8)--(120,97.3)--(98.5,93.4)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (98,97)--(120.5,101)--(120.5,103.6)--(98,99.6)--cycle;
+					\fill[white,opacity=0.35] (98.5,97.4)--(120,101.3)--(120,101.8)--(98.5,97.9)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (98,101.5)--(120.5,105.5)--(120.5,108.1)--(98,104.1)--cycle;
+					\fill[white,opacity=0.35] (98.5,101.9)--(120,105.8)--(120,106.3)--(98.5,102.4)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (123,89.5)--(146,93.6)--(146,96.6)--(123,92.5)--cycle;
+					\fill[white,opacity=0.35] (123.5,89.9)--(145.5,93.8)--(145.5,94.3)--(123.5,90.4)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (123,94.8)--(146,98.9)--(146,101.9)--(123,97.8)--cycle;
+					\fill[white,opacity=0.35] (123.5,95.2)--(145.5,99.1)--(145.5,99.6)--(123.5,95.7)--cycle;
+					\shade[top color=HPmotkim!75!white,bottom color=HPmotkim!35!black,middle color=HPmotkim] (123,100)--(146,104.1)--(146,107.1)--(123,103)--cycle;
+					\fill[white,opacity=0.35] (123.5,100.4)--(145.5,104.3)--(145.5,104.8)--(123.5,100.9)--cycle;
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (125.5,105.5) rectangle (133.5,111.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (134.5,107) rectangle (140,112.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (140,108) rectangle (146,114);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (124.5,112.5) rectangle (134.5,117);
+					\fill[HPmotkim!50!black] (97,106.5)--(147,116.5)--(147,117.5)--(97,107.5)--cycle;
+					% khoang đuôi: tủ thiết bị, máy móc
+					\fill[HPmotthan!55!black] (147,50) rectangle (195,126);
+					\fill[HPmotthan!80!black] (161.5,58)--(190,62.3)--(190,66.3)--(161.5,62)--cycle;
+					\shade[inner color=HPmotkim!90!white,outer color=HPmotkim!40!black] (162.5,61.5) rectangle (170,64);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white,draw=HPmotkim!30!black,line width=0.2pt] (162,65) rectangle (168.5,90);
+					\draw[HPmotkim!35!black,line width=0.25pt] (162.4,69)--(168.1,69);
+					\draw[HPmotkim!35!black,line width=0.25pt] (162.4,74)--(168.1,74);
+					\draw[HPmotkim!35!black,line width=0.25pt] (162.4,79)--(168.1,79);
+					\draw[HPmotkim!35!black,line width=0.25pt] (162.4,84)--(168.1,84);
+					\draw[HPmotkim!35!black,line width=0.25pt] (162.4,89)--(168.1,89);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white,draw=HPmotkim!30!black,line width=0.2pt] (172.5,64) rectangle (177,90);
+					\draw[HPmotkim!35!black,line width=0.25pt] (172.9,68)--(176.6,68);
+					\draw[HPmotkim!35!black,line width=0.25pt] (172.9,73)--(176.6,73);
+					\draw[HPmotkim!35!black,line width=0.25pt] (172.9,78)--(176.6,78);
+					\draw[HPmotkim!35!black,line width=0.25pt] (172.9,83)--(176.6,83);
+					\draw[HPmotkim!35!black,line width=0.25pt] (172.9,88)--(176.6,88);
+					\shade[left color=HPmotkim!45!black,right color=HPmotkim!40!black,middle color=HPmotkim!90!white,draw=HPmotkim!30!black,line width=0.2pt] (182.5,75) rectangle (187.5,91);
+					\draw[HPmotkim!35!black,line width=0.25pt] (182.9,79)--(187.1,79);
+					\draw[HPmotkim!35!black,line width=0.25pt] (182.9,84)--(187.1,84);
+					\draw[HPmotkim!35!black,line width=0.25pt] (182.9,89)--(187.1,89);
+					\fill[HPmotthan!90!black] (169,62) rectangle (171.5,92);
+					\shade[top color=HPmotla!75!HPmotman,bottom color=HPmotman!45!black] (177.8,71.5) rectangle (181.8,87);
+					\foreach \y in {73.5,76.5,79.5,82.5}{\fill[white!70!HPmotla] (178.6,\y) rectangle (181,\y+1.2);}
+					\shade[inner color=HPmotcam!80!yellow,outer color=HPmotkim!40!black] (178,88.5) rectangle (184,90.5);
+					\filldraw[fill=HPmotthan!80!black,draw=HPmotkim!60!black,line width=0.3pt] (187,72) .. controls (189.5,74) and (190,80) .. (189.5,86) .. controls (189,89) and (187.5,90) .. (186.5,89)--cycle;
+					\shade[top color=HPmotkim!65!white,bottom color=HPmotkim!40!black] (161,91)--(190,94.5)--(190,96)--(161,92.5)--cycle;
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (148.5,91) rectangle (153.5,99);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (154.5,92) rectangle (159,99);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (149,100.5) rectangle (155.5,108.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (156,101) rectangle (160.5,109.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (162,95) rectangle (168.5,103.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (169.5,96) rectangle (174.5,103.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (176,96.5) rectangle (182,104.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (183,97.5) rectangle (187,104.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (162,104.5) rectangle (167,111.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (168,105) rectangle (176,111.5);
+					\shade[top color=HPmotkim!70!white,bottom color=HPmotkim!35!black,draw=HPmotkim!30!black,line width=0.2pt] (177,105.5) rectangle (183,111.5);
+					\fill[HPmotla!70!white] (151,95) circle (0.6);
+					\fill[HPmotla!70!white] (165,99) circle (0.6);
+					\fill[HPmotla!70!white] (179,100.5) circle (0.6);
+					\fill[HPmotla!70!white] (171.5,108) circle (0.6);
+					\shade[top color=HPmotthansang!75!white,bottom color=HPmotthan!80!black] (148,112.5)--(183,111)--(181,115.5)--(148,118.5)--cycle;
+					\draw[HPmotkim!55!black,line width=0.4pt] (148,112.5)--(183,111) (148,103)--(161,103.5);
+					% thủy thủ ngồi quay lưng trước bàn điều khiển
+					\foreach \x/\y in {106/60.3,116.5/62.6,132.5/66.2,143.5/66.8,153.5/67.2}{
+						\fill[HPmotaolinh] (\x-4.3,\y+15.5) .. controls (\x-4.5,\y+9.5) and (\x-4,\y+4.8) .. (\x-2.3,\y+3.6) .. controls (\x-1,\y+3) and (\x+1,\y+3) .. (\x+2.3,\y+3.6) .. controls (\x+4,\y+4.8) and (\x+4.5,\y+9.5) .. (\x+4.3,\y+15.5)--cycle;
+						\fill[HPmotaolinh!50!white,opacity=0.6] (\x-3,\y+4.6) .. controls (\x-2.8,\y+8) and (\x-2.6,\y+11) .. (\x-2.7,\y+14.5)--(\x-3.8,\y+14.5) .. controls (\x-3.9,\y+10.5) and (\x-3.7,\y+6.5) .. cycle;
+						\fill[HPmotaolinh!60!white,opacity=0.5] (\x-2,\y+3.8) .. controls (\x-0.5,\y+3.4) and (\x+0.5,\y+3.4) .. (\x+2,\y+3.8)--(\x+1.5,\y+4.8)--(\x-1.5,\y+4.8)--cycle;
+						\draw[HPmotaolinh!40!black,line width=0.25pt] (\x,\y+4.2)--(\x,\y+14.5) (\x-4,\y+11) .. controls (\x-5.2,\y+12) and (\x-5.8,\y+13) .. (\x-6,\y+14) (\x+4,\y+11) .. controls (\x+5.2,\y+12) and (\x+5.8,\y+13) .. (\x+6,\y+14);
+						\fill[HPmotda!45!black] (\x-0.9,\y+2) rectangle (\x+0.9,\y+3.6);
+						\fill[black!88] (\x,\y) ellipse (1.7 and 2.1);
+						\fill[HPmotda!60!black] (\x+1.6,\y+0.6) ellipse (0.3 and 0.6) (\x-1.6,\y+0.6) ellipse (0.3 and 0.6);
+						\fill[HPmotthan!80!black] (\x-3.9,\y+15.5) rectangle (\x+3.9,\y+18);}
+				\end{scope}
+				% mép cắt vỏ tàu (bề dày vỏ: dải đồng xỉn, viền sáng)
+				\draw[HPmotkim!45!HPmotthan,line width=1.5pt] plot[smooth cycle,tension=0.5] coordinates {(9.5,52) (12,47.5) (16,44.2) (22,42.6) (40,42.8) (70,43.8) (100,45.8) (130,48.2) (150,51) (162,54.2) (172,59) (180,65) (186,71.5) (189.5,78.5) (191,86.5) (190,95) (186.5,103) (180.5,110) (172,115) (162,118) (150,119) (140,117.5) (130,115) (120,112) (110,108.5) (100,104.8) (90,101) (80,97) (70,93) (60,88.8) (50,84.5) (40,80) (30,75.5) (22,71.5) (16,67.5) (12,63) (10,58)};
+				\draw[HPmotkim!80!white,line width=0.45pt] plot[smooth cycle,tension=0.5] coordinates {(9.5,52) (12,47.5) (16,44.2) (22,42.6) (40,42.8) (70,43.8) (100,45.8) (130,48.2) (150,51) (162,54.2) (172,59) (180,65) (186,71.5) (189.5,78.5) (191,86.5) (190,95) (186.5,103) (180.5,110) (172,115) (162,118) (150,119) (140,117.5) (130,115) (120,112) (110,108.5) (100,104.8) (90,101) (80,97) (70,93) (60,88.8) (50,84.5) (40,80) (30,75.5) (22,71.5) (16,67.5) (12,63) (10,58)};
+				\draw[HPmotkim!70!white,line width=0.3pt,dash pattern=on 0.5pt off 0.8pt] plot[smooth,tension=0.5] coordinates {(14,70) (22,74) (30,78) (40,82.5) (50,87) (60,91.3) (70,95.5) (80,99.5) (90,103.5) (100,107.3) (110,111) (120,114.5) (130,117.5) (140,120) (150,121.5) (162,120.5) (172,117.5)};
+				% đuôi thon, vành bao quanh trục chân vịt
+				\shade[top color=HPmotthan!80!white,bottom color=HPmotthan!85!black] (205,77)--(214,84.5)--(219,88)--(219,101)--(214,104.5)--(206,111.5)--(198,99)--cycle;
+				\shade[left color=HPmotthan!90!black,right color=HPmotthan!70!white,draw=black!85,line width=0.3pt] (212,87) .. controls (214.5,85.5) and (219,85.8) .. (221,88) .. controls (223,91) and (223,98) .. (221,101.5) .. controls (219,103.5) and (215,103.5) .. (212.5,101.5) .. controls (211,98) and (211,91) .. cycle;
+				\fill[black!85] (217,94.5) ellipse (3.2 and 6.2);
+				% cánh lái ngang ở đuôi (phía gần)
+				\shade[top color=HPmotthan!90!white,bottom color=HPmotthan!75!black,draw=black!85,line width=0.3pt] (184,93.5)--(199,89.6)--(213,92.8)--(213,98)--(200,103.6)--(187.5,104.6) .. controls (185,103.5) and (183.5,101) .. (183.5,98.5)--cycle;
+				\fill[white,opacity=0.1] (186,93.6)--(199,90.6)--(211,93.4)--(199,92.6)--cycle;
+				\draw[HPmotkim!40!HPmotthansang,line width=0.4pt] (184,94.5)--(183.6,98.5) .. controls (183.6,101) and (185,103.4) .. (187.5,104)--(200,103)--(206,100.4);
+				\fill[black!90] (197,91.6) circle (1.1);
+				% chân vịt đồng nhiều cánh
+				\begin{scope}[line width=0.25pt]
+					\shade[left color=HPmotthan!70!black,right color=HPmotthan!60!HPmotdongvang,draw=black!70] (219,94) .. controls (215,91) and (212.5,87.5) .. (213.5,85) .. controls (215,83.5) and (218.5,86) .. (221.5,92.5)--cycle;
+					\shade[left color=HPmotthan!60!HPmotdongvang,right color=HPmotthan!80!black,draw=black!75] (225.5,93) .. controls (226.5,87) and (228.5,81) .. (231,79.3) .. controls (233.2,78.5) and (234,81.5) .. (232.5,86) .. controls (231.5,89.5) and (229.5,92.5) .. (227.5,94.5)--cycle;
+					\shade[top color=HPmotdongvang!80!white,bottom color=HPmotdongvang!45!black,draw=black!65] (227,95) .. controls (230,92) and (234,91.5) .. (236.5,93.5) .. controls (238.5,95.5) and (238,99.5) .. (235,101) .. controls (232,102) and (229,100.5) .. (227,99)--cycle;
+					\shade[left color=HPmotdongvang!40!black,right color=HPmotdongvang!70!white,draw=black!65] (226,100.5) .. controls (229,102) and (232,105) .. (233.5,108.5) .. controls (234.5,111.5) and (232.5,113) .. (230,111.5) .. controls (227,109.5) and (225,105) .. (224,101.5)--cycle;
+					\shade[left color=HPmotdongvang!75!white,right color=HPmotdongvang!40!black,draw=black!65] (221,100.5) .. controls (219.5,104) and (217.5,108.5) .. (216.5,111) .. controls (216,113.2) and (218.5,113.8) .. (220.5,112) .. controls (223,109.5) and (224.5,105) .. (224.5,101.5)--cycle;
+					\shade[top color=HPmotdongvang!85!white,bottom color=HPmotdongvang!45!black,draw=black!70] (213.5,94) .. controls (216,92.8) and (221,93) .. (226,94.5) .. controls (228,95.3) and (228.6,97.5) .. (226.5,99) .. controls (221,100.5) and (216,100.5) .. (213.5,99.5)--cycle;
+					\fill[white,opacity=0.55] (216,95.3) .. controls (219,94.6) and (222,94.8) .. (224.5,95.6) .. controls (222,96.2) and (219,96.2) .. (216,96.3)--cycle;
+				\end{scope}
+				% tháp chỉ huy, cánh lái trên tháp, ống tiềm vọng
+				\foreach \x/\a/\b in {46.6/12.3/20,49.6/10.5/20,54.2/5.5/20,57.4/6/20}{\shade[left color=HPmotthan!95!black,right color=HPmotthan!90!black,middle color=HPmotthansang] (\x-0.8,\b) rectangle (\x+0.8,\a);}
+				\draw[HPmotthansang!80!white,line width=0.35pt] (48,19)--(48,7.5);
+				\draw[HPmotthan,line width=0.6pt] (51,19) .. controls (50.8,14) and (51,11) .. (53.3,8);
+				\shade[left color=HPmotthan!60!HPmotthansang,right color=HPmotthan!85!black,middle color=HPmotthan!90!white,draw=black!85,line width=0.3pt] (40.5,40)--(40.5,21) .. controls (40.5,19.6) and (41.2,19) .. (42.5,19)--(62.5,19) .. controls (63.8,19) and (64.5,19.6) .. (64.5,21)--(64.5,40)--cycle;
+				\fill[white,opacity=0.12] (41.5,21) rectangle (44,39);
+				\draw[black!70,line width=0.2pt] (40.5,24)--(64.5,24);
+				\shade[top color=HPmotthansang,bottom color=HPmotthan!90!black] (23,30.2) .. controls (28,29.3) and (35,29.2) .. (40.5,29.2)--(40.5,31.2) .. controls (35,31.1) and (28,30.9) .. (23,30.6)--cycle;
+				\shade[top color=HPmotthansang,bottom color=HPmotthan!90!black] (64.5,29.6)--(72,30) .. controls (76,30.2) and (78.5,30.5) .. (79.5,30.9) .. controls (78.5,31.4) and (75,31.8) .. (72,31.9)--(64.5,32.3)--cycle;
+				\shade[left color=HPmotthansang,right color=HPmotthan] (18.6,38.5) .. controls (18.6,35.5) and (19,34) .. (19.6,33.6) .. controls (20.3,34) and (20.6,35.5) .. (20.6,38.5)--cycle;
+				\fill[HPmotthan] (84.4,41.5) rectangle (85.4,38.5);
+			\end{tikzpicture}
+		\end{center}
+		Nếu công suất của lò phản ứng hạt nhân trên tàu là $400$~MW thì khối lượng $^{235}_{\phantom{2}92}\text{U}$ cần dùng trong một ngày bằng bao nhiêu kg (làm tròn kết quả đến chữ số hàng phần trăm)?
 		\par
 		\shortans[oly]{1{,}69}
 		\loigiai{
@@ -808,7 +1412,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{14.3\baselineskip}
+	\NeedspaceCau{14.7\baselineskip}
 	\begin{ex}%[VL12-C3-VD]
 		Có hai thanh ray dẫn điện XX$'$ và YY$'$ đặt song song cách nhau $20$~cm trên mặt phẳng nghiêng nằm trong từ trường đều có cảm ứng từ $B=0{,}5$~T. Các đường sức từ có phương vuông góc với mặt phẳng nghiêng và có chiều hướng từ trên xuống dưới. Góc hợp bởi mặt phẳng nghiêng và mặt phẳng nằm ngang bằng $30^\circ$, đầu X và Y được nối với nguồn điện và điện trở $R$ như hình vẽ.
 		% giuhinh
@@ -872,7 +1476,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{6.9\baselineskip}
+	\NeedspaceCau{6.6\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Một khung dây dẫn hình vuông (cạnh $a=10$~cm) gồm $50$ vòng được đặt trong từ trường đều sao cho mặt phẳng khung dây vuông góc với các đường sức từ. Trong khoảng thời gian $0{,}1$~s, cảm ứng từ của từ trường giảm đều từ $B=0{,}5$~T đến giá trị bằng không. Độ lớn suất điện động cảm ứng xuất hiện trong khung dây dẫn trong khoảng thời gian này bằng bao nhiêu V (làm tròn kết quả đến chữ số hàng phần mười)?
 		\par

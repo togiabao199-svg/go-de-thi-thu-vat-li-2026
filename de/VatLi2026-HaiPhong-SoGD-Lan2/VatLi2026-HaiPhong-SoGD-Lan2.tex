@@ -9,10 +9,16 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
-\usetikzlibrary{fadings}% vùng sáng, bóng mờ dần (I.5, I.14)
-% vệt mờ tròn: đậm ở tâm, trong suốt dần tới mép hình, dùng path fading=HPhaimo
+% ===== Khai báo riêng của đề (vẽ lại hình thực tiễn 14/11/2026, Opus 5.5): I.5 cảnh sát giao thông, I.14 sạc không dây
+\usetikzlibrary{fadings}% vệt sáng, bóng mờ dần
+% vệt mờ, gọi bằng path fading=...: HPhaimo (tròn, đậm ở tâm, trong suốt dần tới mép hình); HPhaimep (tròn, đậm đều tới 0,84 bán kính rồi mờ tới mép: bóng đổ đế sạc);
+% HPhaidau (theo chiều ngang, đậm ở mép trái, trong suốt từ khoảng 45% bề rộng: đầu gần màn hình điện thoại, dùng kèm fading angle)
 \tikzfading[name=HPhaimo,inner color=transparent!0,outer color=transparent!100]
-% màu riêng của đề (vẽ lại hình thực tiễn 14/11/2026): I.5 cảnh sát giao thông, I.14 sạc không dây
+\pgfdeclareradialshading{HPhaimepS}{\pgfpoint{0bp}{0bp}}{color(0bp)=(pgftransparent!0); color(21bp)=(pgftransparent!0); color(25bp)=(pgftransparent!100); color(50bp)=(pgftransparent!100)}
+\pgfdeclarefading{HPhaimep}{\pgfuseshading{HPhaimepS}}
+\pgfdeclarehorizontalshading{HPhaidauS}{100bp}{color(0bp)=(pgftransparent!0); color(27bp)=(pgftransparent!0); color(48bp)=(pgftransparent!100); color(100bp)=(pgftransparent!100)}
+\pgfdeclarefading{HPhaidau}{\pgfuseshading{HPhaidauS}}
+% màu câu I.5: trời, lá cây (bóng / nắng), mặt đường (bóng râm / nắng), da (sáng / tối), mũ bảo hiểm, áo vàng kem, chữ CSGT, cầu vai đỏ sẫm
 \definecolor{HPhaitroi}{RGB}{150,198,242}
 \definecolor{HPhaila}{RGB}{50,90,36}
 \definecolor{HPhailasang}{RGB}{170,184,98}
@@ -24,19 +30,14 @@
 \definecolor{HPhaiao}{RGB}{247,239,206}
 \definecolor{HPhaichu}{RGB}{44,54,116}
 \definecolor{HPhaido}{RGB}{128,30,36}
-% mũ bảo hiểm bóng: đổ bóng tròn nhiều nấc (tâm là điểm sáng)
+% mũ bảo hiểm bóng (I.5): đổ bóng tròn nhiều nấc, tâm là điểm sáng, gọi \shade[shading=HPhaimuSh] (tâm) circle (bán kính);
 \pgfdeclareradialshading{HPhaimuSh}{\pgfpoint{0bp}{0bp}}{color(0bp)=(white!90!HPhaimu); color(4bp)=(white!62!HPhaimu); color(9bp)=(HPhaimu!62!white); color(16bp)=(HPhaimu); color(28bp)=(HPhaimu!82!brown!86!black); color(50bp)=(HPhaimu!55!brown!62!black)}
-% vệt bóng mép mờ: đậm đều tới 0,84 bán kính hình rồi mờ dần tới mép (bóng đổ của đế sạc), dùng path fading=HPhaimep
-\pgfdeclareradialshading{HPhaimepS}{\pgfpoint{0bp}{0bp}}{color(0bp)=(pgftransparent!0); color(21bp)=(pgftransparent!0); color(25bp)=(pgftransparent!100); color(50bp)=(pgftransparent!100)}
-\pgfdeclarefading{HPhaimep}{\pgfuseshading{HPhaimepS}}
+% màu câu I.14: thảm vải xám tím, da tay, màn hình (hồng tím, đỏ cam, xanh lam)
 \definecolor{HPhaitham}{RGB}{138,124,134}
 \definecolor{HPhaitay}{RGB}{238,204,194}
 \definecolor{HPhaihong}{RGB}{232,58,142}
 \definecolor{HPhaicam}{RGB}{238,82,62}
 \definecolor{HPhaimanxanh}{RGB}{78,140,226}
-% vệt mờ theo chiều ngang: đậm ở mép trái, trong suốt từ khoảng 45% bề rộng hình (đầu gần màn hình điện thoại), dùng path fading=HPhaidau
-\pgfdeclarehorizontalshading{HPhaidauS}{100bp}{color(0bp)=(pgftransparent!0); color(27bp)=(pgftransparent!0); color(48bp)=(pgftransparent!100); color(100bp)=(pgftransparent!100)}
-\pgfdeclarefading{HPhaidau}{\pgfuseshading{HPhaidauS}}
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT HẢI PHÒNG -- LẦN 2}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -99,7 +100,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{15.6\baselineskip}
+	\NeedspaceCau{15.9\baselineskip}
 	\begin{ex}%[VL12-C3-TH]
 		Trong hình vẽ bên cho biết một cảnh sát giao thông đang dùng súng bắn tốc độ rađa để kiểm tra tốc độ của các phương tiện giao thông trên đường. Sóng phát ra từ súng truyền đi theo hướng Bắc sang Nam. Ở thời điểm $t$, tại một điểm $M$ trên đường truyền sóng, vectơ cảm ứng từ $\vv{B}$ có hướng thẳng đứng từ dưới lên trên thì vectơ cường độ điện trường $\vv{E}$ có hướng
 		% giuhinh
@@ -113,7 +114,7 @@
 		\end{minipage}\hfill
 		\begin{minipage}[c]{0.56\linewidth}
 			\centering
-			\begin{tikzpicture}[x=0.0365cm,y=-0.0365cm,line join=round,line cap=round,font=\footnotesize]
+			\begin{tikzpicture}[x=0.0375cm,y=-0.0375cm,line join=round,line cap=round,font=\footnotesize]
 				\pgfmathsetseed{1405}
 				\begin{scope}
 					\clip (0,0) rectangle (245,167);
@@ -291,9 +292,8 @@
 					\begin{scope}
 						\clip[rounded corners=2pt] (203,98.4)--(208.2,102.6)--(181.2,120.6)--(176.4,116.4)--cycle;
 						\fill[HPhaido] (170,90) rectangle (215,125);
-						\foreach \t [count=\i] in {0.03,0.085,...,1.02}{\pgfmathsetmacro{\cx}{205.6-26.6*\t}\pgfmathsetmacro{\cy}{100.4+18.2*\t}
-							\ifodd\i\def\HPhaimau{white}\else\def\HPhaimau{HPhaichu}\fi
-							\draw[\HPhaimau,line width=0.4pt,opacity=0.75] (\cx-0.8,\cy-2.3)--(\cx+0.8,\cy+2.3);}
+						\foreach \t/\m in {0.03/white,0.14/white,0.25/white,0.36/white,0.47/white,0.58/white,0.69/white,0.8/white,0.91/white,1.02/white,0.085/HPhaichu,0.195/HPhaichu,0.305/HPhaichu,0.415/HPhaichu,0.525/HPhaichu,0.635/HPhaichu,0.745/HPhaichu,0.855/HPhaichu,0.965/HPhaichu}
+							{\draw[\m,line width=0.4pt,opacity=0.75] ($(205.6,100.4)+\t*(-26.6,18.2)+(-0.8,-2.3)$)--++(1.6,4.6);}
 						\fill[white,opacity=0.25] (203,98.4)--(176.4,116.4)--(177.4,117.4)--(204,99.4)--cycle;
 						\fill[black,opacity=0.3] (208.2,102.6)--(181.2,120.6)--(179.4,119.2)--(206.4,101.2)--cycle;
 					\end{scope}
@@ -313,16 +313,16 @@
 					\end{scope}
 					\draw[HPhaidatoi!85!black,line width=0.7pt] (178,86) .. controls (174,78) and (173.5,62) .. (175.5,52) .. controls (176.2,49) and (177,46.5) .. (178,44.5);
 					\fill[black!82!brown] (181,86.6) .. controls (200,85) and (220,82.6) .. (233,79)--(230.5,83.6) .. controls (215,85.6) and (198,87.6) .. (184,88.9)--cycle;
-					\filldraw[fill=HPhaimu!78!brown,draw=HPhaimu!40!black,line width=0.4pt] (181.5,76.6) ellipse (4.9 and 5.7);
-					\fill[white,opacity=0.3] (179.6,72.2) ellipse (1.6 and 1);
+					\filldraw[fill=HPhaimu!55!brown!75!black,draw=HPhaimu!35!black,line width=0.4pt] (181.5,76.6) ellipse (4.9 and 5.7);
+					\fill[white,opacity=0.22] (179.6,72.2) ellipse (1.6 and 1);
 					\fill[black!92] (181.3,76.9) ellipse (3.2 and 4.1);
 					% lưỡi trai kính, dây kính
 					\fill[HPhaichu!40!black] (176.2,47) .. controls (172.5,49.8) and (169,52) .. (167.2,55.6) .. controls (167.4,59.4) and (169.6,61) .. (172.2,60.6) .. controls (174,58.8) and (175.2,56) .. (175.6,53)--cycle;
 					\fill[white,opacity=0.3] (168.8,55.4) .. controls (170.6,53.6) and (172.6,51.8) .. (174.4,50.6)--(174.2,51.5) .. controls (172.6,53) and (170.8,54.6) .. (169.4,56.2)--cycle;
 					\draw[black!75,line width=0.55pt] (168.4,61.6) .. controls (167,65.6) and (167.4,69.6) .. (169.2,73.4);
 					\draw[black!65,line width=0.45pt] (172.2,62.6) .. controls (171.2,66.6) and (171.6,69.6) .. (173,72.6);
-					\node[white,opacity=0.55,font=\fontsize{13.5}{13.5}\selectfont\bfseries,rotate=2,inner sep=0pt] at (204,60.2) {CSGT};
-					\node[HPhaichu,font=\fontsize{13.5}{13.5}\selectfont\bfseries,rotate=2,inner sep=0pt] at (203.7,59.9) {CSGT};
+					\node[white,opacity=0.55,font=\fontsize{13}{13}\selectfont\bfseries,rotate=2,inner sep=0pt] at (204,60.2) {CSGT};
+					\node[HPhaichu,font=\fontsize{13}{13}\selectfont\bfseries,rotate=2,inner sep=0pt] at (203.7,59.9) {CSGT};
 					% cẳng tay trái, nắm tay (gần máy ảnh, ngón cái dựng lên): tô khối trong vùng cắt theo đường bao
 					\begin{scope}
 						\clip (143.5,167) .. controls (144,160) and (145.5,150) .. (147.5,142) .. controls (149,135) and (149.6,128) .. (149.2,122) .. controls (148.8,119.5) and (147.8,117.5) .. (146.6,116) .. controls (145,112) and (144.2,104) .. (144.3,99) .. controls (144.5,95.5) and (146,93.4) .. (148.5,93) .. controls (149.8,92.8) and (150.8,92.7) .. (151.5,92.3) .. controls (151.9,90.6) and (153,89.1) .. (154.8,89) .. controls (156.8,89.1) and (157.7,90.8) .. (158,93) .. controls (158.3,96.5) and (158.8,100) .. (159.8,102.5) .. controls (161,104.5) and (161.4,107.5) .. (161.2,111) .. controls (161,114) and (160.3,116.5) .. (159.9,119) .. controls (159.9,124) and (160.4,130) .. (160.1,136) .. controls (159.8,141) and (158,145.5) .. (155.6,148.5) .. controls (154,152) and (153.4,158) .. (153.6,167)--cycle;
