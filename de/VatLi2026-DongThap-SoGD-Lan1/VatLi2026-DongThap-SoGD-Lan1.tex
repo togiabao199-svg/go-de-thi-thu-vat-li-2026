@@ -9,6 +9,17 @@
 \def\TachCauLG{1}
 \input{preamble-eduzy-v2}
 \input{preamble-vatli-hinh}
+\usetikzlibrary{fadings}% bóng đổ mờ dần (câu III.3)
+% --- Màu riêng của đề (bếp điện câu III.3, tiền tố DT) ---
+\definecolor{DTkinh}{RGB}{8,9,10}% mặt kính đen
+\definecolor{DTkinhsang}{RGB}{64,66,70}% góc sau bên phải mặt kính (phản chiếu, sáng hơn)
+\definecolor{DTdomam}{RGB}{250,26,22}% dây nung đỏ rực
+\definecolor{DTdovua}{RGB}{222,18,16}% dây nung vòng trong (đỏ dịu hơn)
+\definecolor{DTdotoi}{RGB}{150,10,9}% thân dây nung
+\definecolor{DTnenmam}{RGB}{72,7,7}% nền mâm nhiệt (khe giữa các vòng dây)
+\definecolor{DTled}{RGB}{255,38,28}% đèn LED đỏ
+\pgfdeclarehorizontalshading{DTinoxngang}{100bp}{color(0bp)=(black!26);color(28bp)=(black!26);color(39.5bp)=(black!21);color(61bp)=(black!23);color(73.5bp)=(black!31);color(100bp)=(black!31)}% inox: sáng ở giữa, tối dần về hai đầu
+\pgfdeclareverticalshading{DTbong}{100bp}{color(0bp)=(white);color(25bp)=(white);color(35bp)=(black!7);color(48.3bp)=(black!22);color(61.7bp)=(black!45);color(75bp)=(black!76);color(100bp)=(black!76)}% bóng đổ: đậm sát mép, nhạt nhanh
 \begin{document}
 	\khungtieude{ĐỀ THI THỬ THPT SỞ GD\&ĐT ĐỒNG THÁP -- LẦN 1}{Môn Vật lí}{(Đề thi gồm: 18 câu trắc nghiệm, 04 câu đúng-sai, 06 câu trả lời ngắn)}{Thời gian làm bài: 50 phút (không kể thời gian phát đề).}
 
@@ -739,32 +750,150 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{13\baselineskip}
+	\NeedspaceCau{17.5\baselineskip}
 	\begin{ex}%[VL12-C1-VD]
 		Một bếp điện được dùng để đun sôi $1{,}5$ lít nước ở nhiệt độ ban đầu là $30\,^\circ\text{C}$ trong $4{,}6$ phút. Bếp được sử dụng với mạng điện dân dụng ở Việt Nam có biểu thức điện áp là $u=220\sqrt{2}\cos(100\pi t)$ (V). Biết nhiệt dung riêng và khối lượng riêng của nước lần lượt là $4200$~J/(kg.K) và $997~\text{kg/m}^3$. Điện trở của bếp điện là $24{,}2~\Omega$. Hiệu suất của bếp điện là $x\%$. Giá trị của $x$ là bao nhiêu (làm tròn kết quả đến hàng đơn vị)?
 		% giuhinh
 		\begin{center}
-			\begin{tikzpicture}[x=0.0115cm,y=-0.0115cm,line join=round,line cap=round,font=\footnotesize]
-				% khung inox
-				\shade[top color=gray!25,bottom color=gray!60] (2,150)--(418,232)--(420,248)--(4,166)--cycle;
-				\fill[gray!45] (418,232)--(452,88)--(453,102)--(420,248)--cycle;
-				\draw[gray!55!black,very thin] (2,150)--(4,166)--(420,248)--(453,102)--(452,88) (418,232)--(420,248);
-				\foreach \x in {150,156,...,262}{\pgfmathsetmacro{\yt}{150+0.19712*(\x-2)}\draw[black!80,line width=0.9pt] (\x,\yt+3.5)--(\x,\yt+12);}
-				% mặt kính
-				\shade[left color=black!75,right color=black!95] (2,150)--(105,6)--(452,88)--(418,232)--cycle;
-				\draw[gray!60,very thin] (2,150)--(105,6)--(452,88)--(418,232)--cycle;
-				% vùng nấu bên trái (đang nóng)
-				\begin{scope}[shift={(118,74)},rotate=12]
-					\fill[black!60] (0,0) ellipse (74 and 46);
-					\shade[inner color=VLdo!70!yellow,outer color=VLdo!85!black] (0,0) ellipse (66 and 41);
-					\foreach \r in {0.2,0.32,...,0.98}{\draw[VLdo!55!black,very thin] (0,0) ellipse ({66*\r} and {41*\r});}
-					\draw[white,very thin] (0,0) ellipse (74 and 46);
+			\begin{tikzpicture}[x=0.021cm,y=-0.021cm,line join=round,line cap=round,font=\footnotesize]
+				% ===== bóng đổ trên mặt bàn =====
+				\path (0,0) rectangle (455,252);
+				\begin{scope}[transform canvas={rotate around={-11.53:(17,157.6)}}]
+					\shade[shading=DTbong] (17,157.6) rectangle (422.7,172.6);
 				\end{scope}
-				% hai vùng nấu còn lại
-				\draw[gray!70,thin,rotate around={12:(268,54)}] (268,54) ellipse (50 and 30);
-				\draw[gray!70,thin,rotate around={12:(365,130)}] (365,130) ellipse (72 and 45);
-				% bảng điều khiển
-				\foreach \t in {0,0.1,...,1}{\fill[VLdo!80] ({170+140*\t},{158+28*\t}) circle (1.3);}
+				\shade[left color=black!38,right color=white] (414.3,222.6)--(428.5,225)--(426,252)--(414.3,253)--cycle;
+				\fill[white,opacity=0.5,path fading=west] (400,235.4)--(416,238.7)--(416,254)--(400,254)--cycle;
+				\fill[white,path fading=north] (402,243) rectangle (428,254);
+				\fill[white,path fading=east] (12,150) rectangle (48,180);
+				% ===== thân inox: mặt trước =====
+				\shade[shading=DTinoxngang] (15,144.9)--(412,220.9)--(412,238.3)--(17.2,157.9)--cycle;
+				\begin{scope}
+					\clip (15,144.9)--(412,220.9)--(412,238.3)--(17.2,157.9)--cycle;
+					\begin{scope}[transform canvas={rotate around={-11.31:(15,144.6)}}]
+						\fill[black,opacity=0.11,path fading=north] (5,144.6) rectangle (430,159.6);
+					\end{scope}
+				\end{scope}
+				\draw[white,opacity=0.7,line width=0.35pt] (15.6,145)--(411.6,221.4);
+				\draw[black!45,line width=0.35pt] (15.6,147.5)--(17.2,157.6);
+				\draw[black!62,line width=0.6pt] (17.2,157.7)--(412,238.2);
+				% đầu phải của thân
+				\shade[left color=black!25,right color=black!42] (412.2,221.2)--(414.5,221.6)--(414.5,236.6)--(412.2,238.1)--cycle;
+				\draw[black!58,line width=0.45pt] (412,221.2)--(412,238.2);
+				% khe tản nhiệt
+				\foreach \i in {0,...,22}{
+					\pgfmathsetmacro{\xk}{150.6+4.917*\i}
+					\pgfmathsetmacro{\yt}{173.4+0.205*(\xk-150.6)}
+					\pgfmathsetmacro{\yd}{153.84+0.204*\xk-0.3}
+					\fill[black!92] (\xk-1.15,\yd)--(\xk-1.15,\yt+1.15) arc[start angle=180,end angle=360,radius=1.15]--(\xk+1.15,\yd)--cycle;
+					\ifnum\i<22
+						\draw[white,opacity=0.6,line width=0.45pt] (\xk+2.46,\yt+1.1)--(\xk+2.46,\yd-0.9);
+					\fi
+				}
+				% ===== mặt kính =====
+				% mép kính: cạnh vát sáng, bề dày tối
+				\fill[black!88,rounded corners=1.8pt,shift={(0,3.6)}] (-0.1,137.1)--(100.9,5.8)--(452.2,51.3)--(421.9,219.3)--cycle;
+				\draw[black!52,line width=0.4pt] (1.2,138.9) .. controls (2.4,139.6) and (3.6,139.9) .. (5.5,140.2)--(417.6,220.5) .. controls (419.2,220.8) and (420.6,220.6) .. (421.4,219.7);
+				% mặt trên
+				\begin{scope}
+					\clip[rounded corners=1.8pt] (-0.1,137.1)--(100.9,5.8)--(452.2,51.3)--(421.9,219.3)--cycle;
+					\begin{scope}[transform canvas={rotate around={50.7:(212,129.6)}}]
+						\shade[left color=DTkinh,right color=DTkinhsang,middle color=DTkinh] (-48,-130.4) rectangle (472,389.6);
+					\end{scope}
+				\end{scope}
+				\draw[black,line width=0.3pt,rounded corners=1.8pt] (-0.1,137.1)--(100.9,5.8)--(452.2,51.3)--(421.9,219.3)--cycle;
+				\draw[white,opacity=0.13,line width=0.35pt] (104,7.2)--(448.8,51.9);
+				% dấu tam giác cảnh báo, dòng chữ nhỏ (thay bằng vạch mờ)
+				\draw[black!30,line width=0.32pt] (104.6,16.4)--(112.8,16.9)--(110.7,11.4)--cycle;
+				\draw[black!30,line width=0.22pt] (108.3,15.4) .. controls (108.8,14.6) and (108.2,14.2) .. (108.9,13.4) (110.1,15.6) .. controls (110.6,14.8) and (110,14.4) .. (110.7,13.6);
+				\draw[white,opacity=0.3,line width=0.4pt,dash pattern=on 1.6pt off 0.7pt] (115.6,14.6)--(135.6,16.6) (116,17.2)--(128.6,18.4);
+				% ===== vùng nấu trái: mâm nhiệt hồng ngoại đang đỏ =====
+				\draw[black!52,line width=0.42pt,rotate around={12.61:(132.41,77.16)}] (132.41,77.16) ellipse [x radius=60,y radius=39.57];
+				\draw[black!52,line width=0.42pt,rotate around={12.51:(132.48,76.8)}] (132.48,76.8) ellipse [x radius=56.82,y radius=37.32];
+				\begin{scope}[shift={(131.9,76)},rotate=14.8]
+					\fill[DTdomam,opacity=0.22] (0,0) ellipse [x radius=53.4,y radius=35.4];
+					\fill[DTnenmam] (0,0) ellipse [x radius=51.8,y radius=34.3];
+					\fill[black,opacity=0.18] (0,0) ellipse [x radius=14,y radius=9.5];
+					% cuộn dây vòng trong: 11 vòng xoắn, tối dần vào tâm
+					\foreach \a/\b/\m in {30/1470/DTdovua!80!black,1470/2910/DTdovua!93!black,2910/4006/DTdovua}{
+						\draw[DTdotoi,line width=0.56pt] plot[domain=\a:\b,samples=400,variable=\t] ({(0.13+0.64*(\t-30)/3976)*51*cos(\t)},{(0.13+0.64*(\t-30)/3976)*33.7*sin(\t)});
+						\draw[\m,line width=0.56pt,dash pattern=on 0.55pt off 1.15pt] plot[domain=\a:\b,samples=400,variable=\t] ({(0.13+0.64*(\t-30)/3976)*51*cos(\t)},{(0.13+0.64*(\t-30)/3976)*33.7*sin(\t)});
+					}
+					% cuộn dây vòng ngoài: 3 vòng xoắn, sáng nhất
+					\draw[DTdovua,line width=0.68pt] plot[domain=47:1127,samples=300,variable=\t] ({(0.835+0.15*(\t-47)/1080)*51*cos(\t)},{(0.835+0.15*(\t-47)/1080)*33.7*sin(\t)});
+					\draw[DTdomam,line width=0.68pt,dash pattern=on 0.55pt off 1.2pt] plot[domain=47:1127,samples=300,variable=\t] ({(0.835+0.15*(\t-47)/1080)*51*cos(\t)},{(0.835+0.15*(\t-47)/1080)*33.7*sin(\t)});
+				\end{scope}
+				\draw[black!58,opacity=0.85,line width=0.28pt,rotate around={13.4:(132.8,75.8)}] (132.8,75.8) ellipse [x radius=40.8,y radius=27.3];
+				% tâm mâm, que cảm biến nhiệt (thanh tối nằm trên dây nung, có bóng)
+				\fill[black,opacity=0.45,rotate around={14.8:(137.4,75.4)}] (137.4,75.4) ellipse [x radius=8.4,y radius=4.6];
+				\fill[black!90!DTnenmam,rotate around={14.8:(137.4,75.4)}] (137.4,75.4) ellipse [x radius=6.2,y radius=3.1];
+				\fill[black,opacity=0.3] (138.59,77.01)--(170.82,92.43)--(168.74,97.09)--(137.77,78.84)--cycle;
+				\fill[black,opacity=0.45,rounded corners=1pt] (139.82,74.27)--(172.91,87.78)--(173.06,91.35)--(170.29,93.62)--(138.18,77.93)--cycle;
+				\shade[left color=black!96,right color=black!88,rounded corners=0.6pt] (139.41,75.19)--(172.38,88.97)--(172.24,90.99)--(170.82,92.43)--(138.59,77.01)--cycle;
+				\draw[white,opacity=0.1,line width=0.22pt] (139.18,75.69)--(171.97,89.88);
+				% ===== hai vùng nấu từ (vòng chấm kép) =====
+				\begin{scope}[black!12,line width=0.38pt,dash pattern=on 0.16pt off 0.54pt]
+					\draw[rotate around={4.76:(259.49,64.2)}] (259.49,64.2) ellipse [x radius=42.73,y radius=28.9];
+					\draw[rotate around={4.56:(259.48,64.05)}] (259.48,64.05) ellipse [x radius=40.71,y radius=27.29];
+					\draw[rotate around={-4.05:(354.47,119.78)}] (354.47,119.78) ellipse [x radius=59.61,y radius=43.95];
+					\draw[rotate around={-3.82:(354.44,119.59)}] (354.44,119.59) ellipse [x radius=56.88,y radius=42.03];
+				\end{scope}
+				% ===== bảng điều khiển cảm ứng =====
+				% hai đèn LED
+				\foreach \p in {(227,123.3),(236.5,125)}{
+					\fill[DTled,opacity=0.25] \p circle [radius=1.9];
+					\fill[DTled] \p circle [radius=1.15];
+				}
+				% màn hình hiển thị (để trống)
+				\fill[black] (213.21,133.79)--(243.41,139.83)--(239.99,149.01)--(209.79,142.97)--cycle;
+				\draw[black!58,line width=0.28pt,rounded corners=0.4pt] (213.21,133.79)--(243.41,139.83)--(239.99,149.01)--(209.79,142.97)--cycle;
+				\draw[white,opacity=0.1,line width=0.4pt] (213.9,135)--(242.4,140.7);
+				% biểu tượng đỏ hai bên màn hình
+				\begin{scope}[shift={(199.9,137.4)},xslant=0.35,yscale=0.85,DTled]
+					\fill (0,0.2) circle [radius=1.05];
+					\draw[line width=0.28pt] (0.4,-1.9) .. controls (1.4,-2) and (2.1,-1.4) .. (2.1,-0.5) (-0.4,2.3) .. controls (-1.4,2.4) and (-2.1,1.8) .. (-2.1,0.9);
+				\end{scope}
+				\begin{scope}[shift={(253.7,146.5)},xslant=0.35,yscale=0.85,DTled]
+					\fill (0,0) circle [radius=1.05];
+					\draw[line width=0.26pt,opacity=0.75] (0,0) circle [radius=2.5];
+				\end{scope}
+				% nút trừ, nút cộng
+				\begin{scope}[shift={(196,148.6)},xslant=0.35,yscale=0.8]
+					\draw[DTled!85!black,line width=0.38pt] (0,0) circle [radius=3.4];
+					\draw[white,line width=0.45pt] (-1.5,0)--(1.5,0);
+				\end{scope}
+				\fill[white,opacity=0.55] (194,153.7) circle [radius=0.45];
+				\begin{scope}[shift={(254.8,159.6)},xslant=0.35,yscale=0.8]
+					\draw[DTled!85!black,line width=0.38pt] (0,0) circle [radius=3.7];
+					\draw[white,line width=0.45pt] (-1.6,0)--(1.6,0) (0,-1.7)--(0,1.7);
+				\end{scope}
+				% thanh trượt chỉnh công suất: 7 vạch LED cao dần
+				\draw[DTled,line width=0.35pt] (205.2,146.9)--(207.3,147.3);
+				\foreach \i in {0,...,6}{
+					\pgfmathsetmacro{\xv}{205.8+6.48*\i}
+					\pgfmathsetmacro{\yv}{151.4+0.18*(\xv-205.8)}
+					\pgfmathsetmacro{\hv}{1.0+0.33*\i}
+					\fill[DTled] (\xv-2.1,\yv-0.38)--(\xv+2.1,\yv+0.38)--(\xv+2.1+0.35*\hv,\yv+0.38-\hv)--(\xv-2.1+0.35*\hv,\yv-0.38-\hv)--cycle;
+				}
+				% mũi tên và dòng chữ hướng dẫn (thay bằng vạch mờ)
+				\begin{scope}[white,opacity=0.5,line width=0.3pt]
+					\draw (201.5,155.2)--(206.5,156.2) (202.7,154.4)--(201.5,155.2)--(202.5,156.2);
+					\draw (237.6,162.3)--(244.6,163.6) (243.4,162.6)--(244.6,163.6)--(243.2,164.4);
+				\end{scope}
+				\draw[white,opacity=0.4,line width=0.45pt,dash pattern=on 1.8pt off 0.8pt] (209.6,157)--(233.6,161.5);
+				% khoá (ổ khoá) bên trái, hẹn giờ (đồng hồ) bên phải
+				\begin{scope}[shift={(179.6,145.8)},xslant=0.35,yscale=0.85,black!25,line width=0.32pt]
+					\draw[rounded corners=0.6pt] (-2.9,-0.4) rectangle (2.9,3.2);
+					\draw (-1.8,-0.4) .. controls (-1.9,-4.2) and (1.9,-4.2) .. (1.8,-0.4);
+					\fill (0,1.3) circle [radius=0.5];
+				\end{scope}
+				\begin{scope}[shift={(271.9,163.2)},xslant=0.35,yscale=0.85,black!25,line width=0.32pt]
+					\draw (0,0) circle [radius=3.3];
+					\draw (-1.5,-1.4)--(0,0.4)--(1.7,-1.6);
+					\draw (-3.6,-1.6) arc[start angle=200,end angle=290,radius=1.9] (3.6,-1.6) arc[start angle=340,end angle=250,radius=1.9];
+					\draw (-2.1,2.7)--(-2.8,3.8) (2.1,2.7)--(2.8,3.8);
+				\end{scope}
+				% nhãn model ở góc phải (thay bằng vạch mờ)
+				\draw[white,opacity=0.25,line width=0.45pt,dash pattern=on 2.6pt off 0.8pt on 1.4pt off 0.8pt on 3pt off 0.8pt] (373.5,197.8)--(412.5,206.2) (374,203.8)--(410.5,211.6);
 			\end{tikzpicture}
 		\end{center}
 		\shortans[oly]{80}
@@ -774,7 +903,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{4.6\baselineskip}
+	\NeedspaceCau{5\baselineskip}
 	\begin{ex}%[VL12-C4-TH]
 		Cho khối lượng của hạt proton, neutron và hạt nhân deuteron ${}^2_1\text{D}$ lần lượt là $1{,}0073$~amu; $1{,}0087$~amu và $2{,}0136$~amu. Biết $1~\text{amu}=931{,}5~\text{MeV}/c^2$. Năng lượng liên kết riêng của hạt nhân deuteron ${}^2_1\text{D}$ là bao nhiêu MeV/nucleon? Làm tròn kết quả đến hàng phần trăm.
 		\par
@@ -785,7 +914,7 @@
 		}
 	\end{ex}
 
-	\NeedspaceCau{4.9\baselineskip}
+	\NeedspaceCau{4.6\baselineskip}
 	\begin{ex}%[VL12-C1-TH]
 		Nhiệt lượng cần thiết để làm cho $10$~kg nước ở $25\,^\circ\text{C}$ chuyển hoàn toàn thành hơi ở $100\,^\circ\text{C}$ là bao nhiêu MJ (kết quả lấy đến $1$ chữ số thập phân sau dấu phẩy)? Cho nhiệt dung riêng của nước là $4200$~J/(kg.K); nhiệt hóa hơi riêng của nước là $2{,}26\cdot 10^6$~J/kg.
 		\par
