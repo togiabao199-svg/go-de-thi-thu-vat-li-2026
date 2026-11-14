@@ -41,3 +41,27 @@
 
 - Hình thực tiễn (I.1, I.10, I.12, I.17, II.1, II.2, II.3, II.4) gắn `% giuhinh`, vẽ ở mức các lô trước, chờ phiên vẽ lại chi tiết. II.1 lược các nhãn rất nhỏ trên ống ("Nước nóng từ động cơ", "Nước làm mát tới động cơ") và mũi tên dòng chảy trong két.
 - Hình guitar (I.17) dùng lại khung vẽ đàn guitar của đề VatLi2026-NgheAn-SoGD-Lan1 (xoay đứng, tô đỏ).
+
+## Vẽ lại hình thực tiễn (PHIÊN FABLE 14/11/2026)
+
+Vẽ lại cả 8 hình `% giuhinh` theo ảnh gốc phóng to (`pdfimages -png`, phóng 3–8 lần); đồ thị p–V (I.11) và đồ thị F–I (II.3) giữ nguyên. Không đổi lời đề, đáp án, lời giải; nội dung vật lí của hình (chiều quấn dây, cực nguồn, cực nam châm, chiều mũi tên, vị trí P–Q, nhãn) giữ như bản trước. Ảnh so mới ở `so-hinh/` (ảnh gốc lấy từ `pdfimages -png`).
+
+- I.1 (`01-cau-I-1.png`): chuông điện — nút bấm xanh có hai tiếp điểm, lõi nam châm điện có 21 vòng dây, khối tiếp điểm trên, thanh sắt mềm có hai tiếp điểm và lá thép đàn hồi tì vào ốc chỉnh (ốc có khía), búa gõ, chuông dạng vòm có ốc giữa, dây nối lượn như ảnh gốc.
+- I.10 (`02-cau-I-10.png`): nam châm chữ U vẽ lại đúng góc nhìn ảnh gốc (cực S phía sau bên trái, cực N phía trước bên phải, thấy mặt trước dạng chữ U có má cực, vách trong và đáy khe), giá treo nghiêng có gạch chéo, dây bện, tấm kim loại liền (vòng dòng Foucault đỏ) và tấm xẻ rãnh dạng lược ở hai vị trí biên.
+- I.12 (`04-cau-I-12.png`): bàn tay (`\VLbantay`) đặt điện thoại lên đế sạc tròn, điện thoại và đế sạc nhìn phối cảnh, vòng tròn nhỏ nối nét đứt với vùng phóng to; cuộn N_B dạng vành, cuộn N_A dạng ống đồng có hai đầu dây, bốn đường sức.
+- I.17 (`05-cau-I-17.png`): đàn guitar điện vẽ lại chi tiết bằng macro mới `\VLguitar` (thân, mặt gảy, 3 pickup, ngựa đàn, 3 núm, công tắc, lỗ cắm, cần đàn 21 phím, đầu đàn 6 khóa, 6 dây); vùng phóng to rộng hơn để nhãn không đè nét, cuộn dây quấn trên lõi có hai má, hai đầu dây ra.
+- II.1 (`06-cau-II-1.png`): hệ thống làm mát — két nước có lá tản nhiệt, quạt 7 cánh nhìn xuyên qua, nắp két, mũi tên nóng → mát trong két; bơm nước, ống nhôm, van hằng nhiệt, các ống cao su có đai kẹp, ống hơi nước, bình nước phụ trong có nước, quạt và giàn sưởi, các mũi tên gió / khí nóng / nước nóng từ động cơ. Thêm nhãn nhỏ "Nước nóng từ động cơ"; nhãn nhỏ "Nước làm mát tới động cơ" và nhãn "Nước nóng từ động cơ" thứ hai của ảnh gốc không đủ chỗ, chỉ giữ mũi tên. Nhãn "Quạt làm mát", "Bình nước phụ" dời chỗ (có đường chỉ) để không đè hình.
+- II.2 (`07-cau-II-2.png`): sơ đồ bình tích áp vỏ hai lớp, cụm ống ở đỉnh bình (ống nước ra, rơ le áp suất, ống nước vào) theo ảnh gốc; ảnh chụp bình vẽ khối trụ sơn trắng có nắp đen, đường gân, nhãn dán, van nạp khí.
+- II.3 (`08-cau-II-3.png`): cân lực từ — cân điện tử (màn hình để trống), nam châm chữ U với bản cực S phía sau, bản cực N phía trước (lớp trong tô đỏ), đoạn dây PQ có hai đầu bọc cách điện, hai giá đỡ có khối kẹp và thanh ngang, dây nối.
+- II.4 (`09-cau-II-4.png`): mô hình động cơ — hai lõi sắt non hình trụ, cuộn dây đồng quấn giữ đúng chiều quấn bản trước (nét phía trước nghiêng "/", vòng vồng lên ở phía trên nối sang phải), pin có hai cọc (− trái, + phải), hai chổi quét dạng thanh dẹt, cổ góp hai nửa vành có chiều dày, hai đầu khung dây nối vào hai nửa vành. Bỏ một móc dây thừa ở đầu phải cuộn trái và thêm móc đầu tiên ở cuộn phải cho khớp ảnh gốc (không đổi chiều quấn).
+
+Bản đề tăng cỡ hình II.1 (14,4 × 8,1 cm) và II.2 (9,5 × 6,1 cm) để trang 5, 6 không trống quá giới hạn; bản đề 8 trang ĐẠT, bản lời giải 12 trang.
+
+**Đối chiếu ảnh gốc phóng to cho II.4 và II.3 (không đổi gì):**
+
+- II.4: ảnh gốc 994×369 phóng 8 lần. Hai cuộn dây cùng chiều quấn: nét thấy ở mặt trước lõi nghiêng "/", phía trên mỗi nét vồng lên rồi khuất sang phải, phía dưới có móc nằm bên trái chân nét. Dây khung ngoài: cực − (trái) nối sang trái lên đầu trái cuộn trái; đầu phải cuộn trái (phía trên) nối cạnh trên sang đầu trái cuộn phải (phía trên); đầu phải cuộn phải (phía dưới) nối xuống cạnh dưới về chổi quét phải; cực + (phải) nối chổi quét trái. Dòng điện qua cả hai cuộn đi từ đầu phải sang đầu trái, ở mặt trước lõi đi từ trên xuống ⇒ từ trường trong lõi hướng sang phải ⇒ C là cực bắc, D là cực nam; khớp cách đọc đang dùng (a Sai, b Đúng). Trong cổ góp, đầu dây phía A nối nửa vành trái (tì chổi quét trái), khớp mũi tên A → B trên khung. Điểm còn mơ hồ của ảnh gốc: đường dây dưới vẽ liền qua sau hai cọc pin (hiểu là pin mắc nối tiếp trên đoạn đó); chỗ dây dẫn bám vào hai đầu mỗi cuộn vẽ sơ sài — không làm đổi kết luận vì chiều quấn và chiều dòng điện chạy dọc cuộn (phải sang trái) đều rõ.
+- II.3: ảnh gốc phóng 3 lần. Bản cực S (mặt xanh) ở phía sau, bản cực N (mặt ngoài xám có chữ N, lớp trong đỏ) ở phía trước, dây đi giữa hai bản từ P (trái, gần) đến Q (phải, xa) ⇒ B hướng từ trước ra sau, lực từ lên dây PQ khi dòng điện từ P đến Q hướng lên; khớp cách đọc đang dùng (b Đúng, c Sai).
+
+Hình chưa ưng: II.1 — bơm nước và van hằng nhiệt mới ở mức khối kim loại đơn giản (ảnh gốc là chi tiết đúc phức tạp), nhãn "Van hằng nhiệt", "Quạt" sát hình vì chữ `\footnotesize` lớn hơn chữ ảnh gốc; I.10 — chữ S, N trên mặt cực để đứng (ảnh gốc in nghiêng theo mặt), tấm kim loại để màu xám nhôm (ảnh gốc Hình 2 tô xanh).
+
+Macro mới trong file đề: `\VLguitar{x}{y}{tỉ lệ}{góc xoay}{màu thân}` (dùng chung được, có các điểm `(VLguitar-pu1..3)`, `(VLguitar-pu3p)`, `(VLguitar-dau)`, `(VLguitar-than)`); macro riêng `\CMnamchamU`, `\CMgiatreo`, `\CMdaytreo`, `\CMtam`, `\CMthanh`, `\CMvanh`, `\CMdaydong`, `\CMong`, `\CMongkl`.
